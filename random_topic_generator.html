@@ -106,6 +106,35 @@
         }
         .heart-btn:active { transform: scale(1.3); }
 
+        /* ─── Oracle Card ─── */
+        .oracle-card {
+            background: linear-gradient(135deg, rgba(180,150,220,0.18), rgba(255,200,150,0.18));
+            border: 1px solid rgba(180,140,220,0.25);
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .oracle-icon {
+            font-size: 26px;
+            flex-shrink: 0;
+        }
+        .oracle-label {
+            font-size: 10px;
+            color: #9070b0;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+        .oracle-text {
+            font-size: 15px;
+            color: #5a3870;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
         /* ─── Daily Section ─── */
         .date-label {
             font-size: 13px;
@@ -343,6 +372,13 @@
 
 <!-- ── 今日话题 ── -->
 <div class="section active" id="sec-daily">
+    <div class="oracle-card">
+        <div class="oracle-icon">🔮</div>
+        <div>
+            <div class="oracle-label">今日神谕</div>
+            <div class="oracle-text" id="oracle-text">加载中…</div>
+        </div>
+    </div>
     <div class="date-label" id="today-label"></div>
     <div class="topic-card" id="daily-card">
         <div class="topic-type" id="daily-type"></div>
@@ -397,6 +433,7 @@ const START_DATE = '2026-03-23';
 const FAV_KEY = 'diary_topic_favs';
 
 let allData = [];
+let oracleData = [];
 let calYear, calMonth;
 let currentRandomTopic = null;
 let currentDailyTopic = null;
@@ -404,8 +441,15 @@ let selectedCategory = '全部';
 
 // ── Init ──
 async function init() {
-    const res = await fetch('random_topic_generator/data.js');
-    allData = await res.json();
+    const [topicRes, oracleRes] = await Promise.all([
+        fetch('random_topic_generator/data.js'),
+        fetch('dazs/data.js').then(r => r.text())
+    ]);
+    allData = await topicRes.json();
+
+    // Parse oracle data from const answers = [...]
+    const match = oracleRes.match(/const answers\s*=\s*(\[[\s\S]*?\]);/);
+    if (match) oracleData = JSON.parse(match[1]);
 
     document.getElementById('total-count').textContent = allData.length;
     buildFilterChips();
@@ -414,6 +458,7 @@ async function init() {
     calYear = today.getFullYear();
     calMonth = today.getMonth();
 
+    renderOracle();
     renderDaily();
     renderCalendar();
 }
@@ -454,6 +499,15 @@ function switchTab(tab) {
         btn.classList.toggle('active', ['daily','random','fav'][i] === tab);
     });
     if (tab === 'fav') renderFavList();
+}
+
+// ── Oracle ──
+function renderOracle() {
+    if (!oracleData.length) return;
+    const idx = getDayIndex(todayStr());
+    // Use a different offset so oracle ≠ topic index
+    const oracle = oracleData[((idx * 3 + 17) % oracleData.length + oracleData.length) % oracleData.length];
+    document.getElementById('oracle-text').textContent = oracle.message;
 }
 
 // ── Daily ──
