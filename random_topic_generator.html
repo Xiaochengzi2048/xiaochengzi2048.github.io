@@ -111,29 +111,56 @@
             background: linear-gradient(135deg, rgba(180,150,220,0.18), rgba(255,200,150,0.18));
             border: 1px solid rgba(180,140,220,0.25);
             border-radius: 16px;
-            padding: 16px 20px;
+            padding: 18px 20px;
             margin-bottom: 14px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: box-shadow 0.2s;
+        }
+        .oracle-card:hover { box-shadow: 0 4px 18px rgba(160,120,210,0.15); }
+        .oracle-top {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
+            margin-bottom: 8px;
         }
-        .oracle-icon {
-            font-size: 26px;
-            flex-shrink: 0;
-        }
+        .oracle-icon { font-size: 22px; }
         .oracle-label {
             font-size: 10px;
             color: #9070b0;
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin-bottom: 4px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+        }
+        .oracle-hint {
+            font-size: 12px;
+            color: #b090c0;
+            margin-bottom: 8px;
+        }
+        .oracle-text-wrap {
+            text-align: center;
+            min-height: 28px;
         }
         .oracle-text {
-            font-size: 15px;
+            font-size: 17px;
             color: #5a3870;
-            font-weight: 600;
+            font-weight: 700;
             line-height: 1.5;
+            transition: filter 0.4s, opacity 0.4s;
         }
+        .oracle-text.blurred {
+            filter: blur(8px);
+            opacity: 0.4;
+            user-select: none;
+        }
+        .oracle-tap-hint {
+            font-size: 11px;
+            color: #b090c0;
+            margin-top: 6px;
+            text-align: center;
+            transition: opacity 0.3s;
+        }
+        .oracle-tap-hint.gone { display: none; }
 
         /* ─── Daily Section ─── */
         .date-label {
@@ -372,12 +399,16 @@
 
 <!-- ── 今日话题 ── -->
 <div class="section active" id="sec-daily">
-    <div class="oracle-card">
-        <div class="oracle-icon">🔮</div>
-        <div>
-            <div class="oracle-label">今日神谕</div>
-            <div class="oracle-text" id="oracle-text">加载中…</div>
+    <div class="oracle-card" onclick="revealOracle()">
+        <div class="oracle-top">
+            <div class="oracle-icon">🔮</div>
+            <div class="oracle-label">答案之书</div>
         </div>
+        <div class="oracle-hint">默念你的问题，点击揭晓今日答案</div>
+        <div class="oracle-text-wrap">
+            <div class="oracle-text blurred" id="oracle-text">——</div>
+        </div>
+        <div class="oracle-tap-hint" id="oracle-tap-hint">点击揭晓 ✨</div>
     </div>
     <div class="date-label" id="today-label"></div>
     <div class="topic-card" id="daily-card">
@@ -443,13 +474,10 @@ let selectedCategory = '全部';
 async function init() {
     const [topicRes, oracleRes] = await Promise.all([
         fetch('random_topic_generator/data.js'),
-        fetch('dazs/data.js').then(r => r.text())
+        fetch('random_topic_generator/oracle.json')
     ]);
     allData = await topicRes.json();
-
-    // Parse oracle data from const answers = [...]
-    const match = oracleRes.match(/const answers\s*=\s*(\[[\s\S]*?\]);/);
-    if (match) oracleData = JSON.parse(match[1]);
+    oracleData = await oracleRes.json();
 
     document.getElementById('total-count').textContent = allData.length;
     buildFilterChips();
@@ -502,12 +530,20 @@ function switchTab(tab) {
 }
 
 // ── Oracle ──
+let oracleRevealed = false;
+
 function renderOracle() {
     if (!oracleData.length) return;
     const idx = getDayIndex(todayStr());
-    // Use a different offset so oracle ≠ topic index
     const oracle = oracleData[((idx * 3 + 17) % oracleData.length + oracleData.length) % oracleData.length];
     document.getElementById('oracle-text').textContent = oracle.message;
+}
+
+function revealOracle() {
+    if (oracleRevealed) return;
+    oracleRevealed = true;
+    document.getElementById('oracle-text').classList.remove('blurred');
+    document.getElementById('oracle-tap-hint').classList.add('gone');
 }
 
 // ── Daily ──
