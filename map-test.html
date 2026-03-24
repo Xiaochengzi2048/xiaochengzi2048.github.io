@@ -34,7 +34,7 @@ canvas{border-radius:8px}
 </div>
 <script>
 const cv=document.getElementById('cv'),ctx=cv.getContext('2d');
-const W=cv.width,H=cv.height,TW=26,TH=26;
+const W=cv.width,H=cv.height,TW=28,TH=28;
 
 // ── Gather Town bright palette ──
 const P={
@@ -58,18 +58,18 @@ const P={
 // Grid zones
 const _=0,G=1,F=2,A=3,B=4,C=5,LB=6,EX=7,EN=8;
 const MAP=[
-  [G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G],
-  [G,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,G,G],
-  [G,F,A,A,A,A,F,B,B,B,B,F,C,C,C,C,F,F,F,G,G],
-  [G,F,A,A,A,A,F,B,B,B,B,F,C,C,C,C,F,F,F,G,G],
-  [G,F,A,A,A,A,F,B,B,B,B,F,C,C,C,C,F,F,F,G,G],
-  [G,F,A,A,A,A,F,B,B,B,B,F,C,C,C,C,F,F,F,G,G],
-  [G,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,G,G],
-  [G,F,LB,LB,LB,F,EX,EX,EX,EX,EX,EX,F,EN,EN,EN,EN,F,F,G,G],
-  [G,F,LB,LB,LB,F,EX,EX,EX,EX,EX,EX,F,EN,EN,EN,EN,F,F,G,G],
-  [G,F,LB,LB,LB,F,EX,EX,EX,EX,EX,EX,F,EN,EN,EN,EN,F,F,G,G],
-  [G,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,G,G],
-  [G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G],
+  [G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G],
+  [G,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,G],
+  [G,F,A,A,A,A,F,B,B,B,B,F,C,C,C,C,F,G],
+  [G,F,A,A,A,A,F,B,B,B,B,F,C,C,C,C,F,G],
+  [G,F,A,A,A,A,F,B,B,B,B,F,C,C,C,C,F,G],
+  [G,F,A,A,A,A,F,B,B,B,B,F,C,C,C,C,F,G],
+  [G,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,G],
+  [G,F,LB,LB,LB,F,EX,EX,EX,EX,EX,EX,F,EN,EN,EN,EN,G],
+  [G,F,LB,LB,LB,F,EX,EX,EX,EX,EX,EX,F,EN,EN,EN,EN,G],
+  [G,F,LB,LB,LB,F,EX,EX,EX,EX,EX,EX,F,EN,EN,EN,EN,G],
+  [G,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,G],
+  [G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G],
 ];
 
 function rr(x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.lineTo(x+w-r,y);ctx.arcTo(x+w,y,x+w,y+r,r);ctx.lineTo(x+w,y+h-r);ctx.arcTo(x+w,y+h,x+w-r,y+h,r);ctx.lineTo(x+r,y+h);ctx.arcTo(x,y+h,x,y+h-r,r);ctx.lineTo(x,y+r);ctx.arcTo(x,y,x+r,y,r);ctx.closePath();}
