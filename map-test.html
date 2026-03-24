@@ -1,232 +1,325 @@
 <!DOCTYPE html><html><head><meta charset="UTF-8">
 <style>*{margin:0;padding:0}body{background:#1a1a2e;display:flex;align-items:center;justify-content:center;min-height:100vh}</style>
 </head><body>
-<canvas id="cv" width="520" height="360"></canvas>
+<canvas id="cv" width="560" height="380"></canvas>
 <script>
 const cv=document.getElementById('cv'),ctx=cv.getContext('2d');
-const TW=24,TH=24,W=520,H=360;
+const W=cv.width,H=cv.height,TW=26,TH=26;
 
-// Gather Town warm palette
-const PAL={
-  void:'#1a1e2a',
-  wall:'#3a2e24',wallDark:'#2a2018',wallLight:'#4a3c30',
-  wood:'#c8a060',woodAlt:'#bc9858',woodDark:'#a07840',
-  carpet_b:'#3a5a9c',carpet_b2:'#324e8a',  // blue - Hall B
-  carpet_a:'#3a7c48',carpet_a2:'#326840',  // green - Hall A
-  carpet_c:'#9c5a30',carpet_c2:'#8a4e28',  // orange - Hall C
-  stone:'#7a7468',stoneAlt:'#706a60',
-  carpet_lob:'#6a4a9c',carpet_lob2:'#5e4088', // purple - lobby
-  carpet_ex:'#4a6878',carpet_ex2:'#405e6c',   // teal - exhibition
-  table:'#8a6030',tableDark:'#6a4820',tableLight:'#a07840',
-  chair_a:'#2a6040',chair_b:'#2a4080',chair_c:'#804020',
-  plant_pot:'#7a4c20',plant_leaf:'#2a8a20',plant_dark:'#1e6818',
-  screen:'#1a2860',screenGlow:'#4a8ae0',
-  stage_a:'#2a5c34',stage_b:'#1e3870',stage_c:'#703018',
-  rug_b:'#2040a0',rug_b2:'#1a3490',
+// ── Gather Town bright palette ──────────────────────────
+const P={
+  void:'#16181f',
+  grass:'#5a9e48',grass2:'#509040',
+  tree_dark:'#2a6020',tree_mid:'#3a8030',tree_light:'#4a9a40',
+  floor:'#e8dcc8',floor2:'#ddd0b8',
+  wall:'#c8b89a',wallDark:'#b8a888',
+  carpet_a:'#8ec88e',carpet_a2:'#7eba7e',  // green
+  carpet_b:'#8aaee0',carpet_b2:'#7a9ed0',  // blue highlight
+  carpet_c:'#e0c07a',carpet_c2:'#d4b46a',  // amber
+  carpet_lob:'#c4aee0',carpet_lob2:'#b89ed4',  // purple
+  carpet_ex:'#8accc4',carpet_ex2:'#7abcb4',    // teal
+  carpet_en:'#c8c4bc',carpet_en2:'#bcb8b0',
+  desk:'#a07838',deskL:'#b88a48',deskD:'#886028',
+  chair_a:'#2a7a40',chair_b:'#2a50a0',chair_c:'#c05020',
+  mon_frame:'#2a2a38',mon_screen:'#4a80d8',
+  plant_pot:'#8a5a28',plant_leaf:'#3a8a28',plant_l2:'#4aaa38',
+  sofa_orange:'#e07830',sofa_blue:'#4060b0',
+  booth_bg:'#d0e4f0',
 };
 
-// Map grid
-const _=0,A=1,B=2,C=3,CO=4,LB=5,EX=6,EN=7,WL=8;
+// ── MAP: 0=void 1=grass 2=floor 3=carpet_a 4=carpet_b 5=carpet_c 6=lob 7=ex 8=en ──
+const _=0,G=1,F=2,A=3,B=4,C=5,LB=6,EX=7,EN=8;
+const COLS=21,ROWS=14;
 const MAP=[
-  [WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,_],
-  [WL, A, A, A, A,WL, B, B, B, B,WL, C, C, C, C,WL, _, _, _, _,_],
-  [WL, A, A, A, A,WL, B, B, B, B,WL, C, C, C, C,WL, _, _, _, _,_],
-  [WL, A, A, A, A,WL, B, B, B, B,WL, C, C, C, C,WL, _, _, _, _,_],
-  [WL, A, A, A, A,WL, B, B, B, B,WL, C, C, C, C,WL, _, _, _, _,_],
-  [WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL, _, _, _, _,_],
-  [CO,CO,CO,CO,CO,CO,CO,CO,CO,CO,CO,CO,CO,CO,CO,CO, _, _, _, _,_],
-  [WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL, _, _, _, _,_],
-  [WL,LB,LB,LB,WL,WL,EX,EX,EX,EX,EX,EX,WL,WL,EN,EN,EN,WL, _, _,_],
-  [WL,LB,LB,LB,WL,WL,EX,EX,EX,EX,EX,EX,WL,WL,EN,EN,EN,WL, _, _,_],
-  [WL,LB,LB,LB,WL,WL,EX,EX,EX,EX,EX,EX,WL,WL,EN,EN,EN,WL, _, _,_],
-  [WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL, _, _,_],
-  [_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_],
-  [_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_],
-  [_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_],
+  [G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G],
+  [G,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,G,G,G],
+  [G,F,A,A,A,A,F,B,B,B,B,F,C,C,C,C,F,F,G,G,G],
+  [G,F,A,A,A,A,F,B,B,B,B,F,C,C,C,C,F,F,G,G,G],
+  [G,F,A,A,A,A,F,B,B,B,B,F,C,C,C,C,F,F,G,G,G],
+  [G,F,A,A,A,A,F,B,B,B,B,F,C,C,C,C,F,F,G,G,G],
+  [G,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,G,G,G],
+  [G,F,LB,LB,LB,F,EX,EX,EX,EX,EX,EX,F,EN,EN,EN,EN,F,G,G,G],
+  [G,F,LB,LB,LB,F,EX,EX,EX,EX,EX,EX,F,EN,EN,EN,EN,F,G,G,G],
+  [G,F,LB,LB,LB,F,EX,EX,EX,EX,EX,EX,F,EN,EN,EN,EN,F,G,G,G],
+  [G,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,F,G,G,G],
+  [G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G],
+  [G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G],
+  [G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G,G],
 ];
 
-function tile(x,y,c1,c2,r){
-  ctx.fillStyle=(r%2===0)?c1:c2;
-  ctx.fillRect(x,y,TW,TH);
-}
-
+// ── Floor drawing ──────────────────────────────────────
 function drawFloor(){
-  ctx.fillStyle=PAL.void;ctx.fillRect(0,0,W,H);
-  for(let r=0;r<MAP.length;r++)for(let c=0;c<MAP[r].length;c++){
-    const z=MAP[r][c],x=c*TW,y=r*TH,alt=(r+c)%2;
-    if(z===_)continue;
-    if(z===WL){
-      ctx.fillStyle=PAL.wall;ctx.fillRect(x,y,TW,TH);
-      ctx.fillStyle=PAL.wallDark;ctx.fillRect(x+1,y+1,TW-2,TH-2);
-      ctx.fillStyle=PAL.wallLight;ctx.fillRect(x,y,TW,2);ctx.fillRect(x,y,2,TH);
-    } else if(z===A) tile(x,y,PAL.carpet_a,PAL.carpet_a2,alt);
-    else if(z===B) tile(x,y,PAL.carpet_b,PAL.carpet_b2,alt);
-    else if(z===C) tile(x,y,PAL.carpet_c,PAL.carpet_c2,alt);
-    else if(z===CO){
-      // Wood planks - horizontal stripes
-      ctx.fillStyle=(r%2===0)?PAL.wood:PAL.woodAlt;ctx.fillRect(x,y,TW,TH);
-      ctx.fillStyle=PAL.woodDark;ctx.fillRect(x,y+TH-2,TW,1);
-    }
-    else if(z===LB) tile(x,y,PAL.carpet_lob,PAL.carpet_lob2,alt);
-    else if(z===EX) tile(x,y,PAL.carpet_ex,PAL.carpet_ex2,alt);
-    else if(z===EN){
-      ctx.fillStyle=(alt)?PAL.stone:PAL.stoneAlt;ctx.fillRect(x,y,TW,TH);
-      ctx.fillStyle='rgba(0,0,0,.1)';ctx.fillRect(x,y+TH-1,TW,1);ctx.fillRect(x+TW-1,y,1,TH);
-    }
+  // Void + grass base
+  ctx.fillStyle=P.void;ctx.fillRect(0,0,W,H);
+  for(let r=0;r<ROWS;r++)for(let c=0;c<COLS;c++){
+    const z=MAP[r][c],x=c*TW,y=r*TH,alt=(r+c)%2===0;
+    if(z===G){
+      ctx.fillStyle=alt?P.grass:P.grass2;ctx.fillRect(x,y,TW,TH);
+      // Grass texture dots
+      if((r*7+c*3)%5===0){ctx.fillStyle='rgba(0,0,0,.1)';ctx.fillRect(x+4,y+8,2,2);}
+      if((r*3+c*5)%7===0){ctx.fillStyle='rgba(255,255,255,.08)';ctx.fillRect(x+12,y+4,2,3);}
+    } else if(z===F){
+      ctx.fillStyle=alt?P.floor:P.floor2;ctx.fillRect(x,y,TW,TH);
+    } else if(z===A){ctx.fillStyle=alt?P.carpet_a:P.carpet_a2;ctx.fillRect(x,y,TW,TH);}
+    else if(z===B){ctx.fillStyle=alt?P.carpet_b:P.carpet_b2;ctx.fillRect(x,y,TW,TH);}
+    else if(z===C){ctx.fillStyle=alt?P.carpet_c:P.carpet_c2;ctx.fillRect(x,y,TW,TH);}
+    else if(z===LB){ctx.fillStyle=alt?P.carpet_lob:P.carpet_lob2;ctx.fillRect(x,y,TW,TH);}
+    else if(z===EX){ctx.fillStyle=alt?P.carpet_ex:P.carpet_ex2;ctx.fillRect(x,y,TW,TH);}
+    else if(z===EN){ctx.fillStyle=alt?P.carpet_en:P.carpet_en2;ctx.fillRect(x,y,TW,TH);}
   }
+  // Carpet zone borders (subtle inner shadow)
+  [[2,2,4,4,A],[2,7,4,4,B],[2,12,4,4,C]].forEach(([c,r,w,h,z])=>{
+    const col={[A]:'#4a8a50',[B]:'#3a6aaa',[C]:'#aa7020'}[z];
+    ctx.strokeStyle=col+'60';ctx.lineWidth=1.5;
+    ctx.strokeRect(c*TW+.5,r*TH+.5,w*TW-1,h*TH-1);
+  });
 }
 
-function drawFurnitureHall(sc,zone){
-  // sc = start col of this hall (1,6,11)
-  const x0=sc*TW,y0=1*TH;
-  const stageC=zone===A?PAL.stage_a:zone===B?PAL.stage_b:PAL.stage_c;
-  const chairC=zone===A?PAL.chair_a:zone===B?PAL.chair_b:PAL.chair_c;
-  const screenC=zone===B?PAL.screenGlow:zone===A?'#3a8a50':'#d06030';
+// ── Tree helper ────────────────────────────────────────
+function drawTree(x,y){
+  // Trunk
+  ctx.fillStyle='#7a5030';ctx.fillRect(x+5,y+16,6,8);
+  // Shadow
+  ctx.fillStyle='rgba(0,0,0,.15)';ctx.beginPath();ctx.ellipse(x+8,y+22,9,3,0,0,Math.PI*2);ctx.fill();
+  // Canopy layers
+  [[0,12,16],[2,7,14],[4,4,12]].forEach(([dy,size,w])=>{
+    ctx.fillStyle=[P.tree_dark,P.tree_mid,P.tree_light][dy/2]||P.tree_mid;
+    ctx.beginPath();ctx.arc(x+8,y+dy,size/2,0,Math.PI*2);ctx.fill();
+  });
+  ctx.fillStyle=P.tree_light;ctx.beginPath();ctx.arc(x+6,y+5,3,0,Math.PI*2);ctx.fill();
+}
 
-  // Stage platform (back of hall = row 4-5, full width)
-  ctx.fillStyle=stageC;ctx.fillRect(x0+2,4*TH+2,4*TW-4,TH+TH-4);
-  ctx.fillStyle='rgba(255,255,255,.08)';ctx.fillRect(x0+2,4*TH+2,4*TW-4,3);
-  
+// ── Furniture helpers ──────────────────────────────────
+function desk(x,y,w,h,rot){
+  // Table top
+  ctx.fillStyle=P.deskL;ctx.fillRect(x,y,w,3);
+  ctx.fillStyle=P.desk;ctx.fillRect(x,y+3,w,h-3);
+  ctx.fillStyle=P.deskD;ctx.fillRect(x,y+h-2,w,2);ctx.fillRect(x+w-2,y,2,h);
+}
+function monitor(x,y){
+  ctx.fillStyle=P.mon_frame;ctx.fillRect(x,y,18,12);
+  ctx.fillStyle=P.mon_screen;ctx.fillRect(x+1,y+1,16,9);
+  ctx.fillStyle='rgba(255,255,255,.3)';ctx.fillRect(x+2,y+2,5,2);
+  ctx.fillStyle=P.mon_frame;ctx.fillRect(x+7,y+12,4,3);ctx.fillRect(x+4,y+14,10,2);
+}
+function chair(x,y,color){
+  ctx.fillStyle=color;ctx.fillRect(x,y,12,11);
+  ctx.fillStyle='rgba(255,255,255,.25)';ctx.fillRect(x,y,12,3);
+  ctx.fillStyle='rgba(0,0,0,.2)';ctx.fillRect(x,y+9,12,2);
+}
+function plant(x,y){
+  ctx.fillStyle=P.plant_pot;ctx.fillRect(x+3,y+10,8,6);
+  ctx.fillStyle='rgba(0,0,0,.2)';ctx.fillRect(x+3,y+14,8,2);
+  ctx.fillStyle=P.plant_leaf;ctx.beginPath();ctx.arc(x+7,y+7,7,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle=P.plant_l2;ctx.beginPath();ctx.arc(x+5,y+5,4,0,Math.PI*2);ctx.fill();
+  ctx.beginPath();ctx.arc(x+10,y+6,3,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle='rgba(255,255,255,.2)';ctx.beginPath();ctx.arc(x+5,y+4,2,0,Math.PI*2);ctx.fill();
+}
+function roundTable(x,y,r,color){
+  ctx.fillStyle='rgba(0,0,0,.15)';ctx.beginPath();ctx.ellipse(x+3,y+3,r,r*0.7,0,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle=P.deskD;ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle=P.desk;ctx.beginPath();ctx.arc(x,y,r-1,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle=P.deskL;ctx.beginPath();ctx.arc(x-r/3,y-r/3,r/4,0,Math.PI*2);ctx.fill();
+}
+function screen_wall(x,y,w,h,glow){
+  if(glow){ctx.shadowColor='#6090e0';ctx.shadowBlur=8;}
+  ctx.fillStyle='#1a2840';ctx.fillRect(x,y,w,h);
+  ctx.fillStyle='#3060b0';ctx.fillRect(x+1,y+1,w-2,h-2);
+  ctx.fillStyle='rgba(255,255,255,.15)';ctx.fillRect(x+1,y+1,w-2,3);
+  if(glow)ctx.shadowBlur=0;
+}
+
+// ── Draw all furniture ─────────────────────────────────
+function drawFurniture(hlB){
+  // ── HALL A (cols 2-5, rows 2-5) ──
+  // Stage/screen back wall
+  screen_wall(2*TW+2,5*TH+2,4*TW-4,TH-4,false);
+  // 2 rows of 3 desks with chairs
+  [[0,1],[1,1],[2,1],[0,2],[1,2],[2,2]].forEach(([c,r])=>{
+    const x=2*TW+c*(TW+2)+3,y=2*TH+r*(TH+4)+2;
+    chair(x-2,y+10,P.chair_a);
+    desk(x,y,TW-4,TH-6);
+    if((c+r)%2===0){ctx.fillStyle='rgba(100,180,100,.6)';ctx.fillRect(x+2,y+3,8,5);}
+  });
+  // Plants
+  plant(2*TW+1,2*TH); plant(5*TW+4,2*TH);
+
+  // ── HALL B (cols 7-10, rows 2-5) ──
+  screen_wall(7*TW+2,5*TH+2,4*TW-4,TH-4,hlB);
+  // Hall B rug
+  if(hlB){
+    ctx.fillStyle='rgba(60,100,200,.2)';ctx.fillRect(7*TW+4,3*TH,4*TW-8,2*TH);
+    ctx.strokeStyle='rgba(60,100,200,.4)';ctx.lineWidth=1;
+    ctx.strokeRect(7*TW+5,3*TH+1,4*TW-10,2*TH-2);
+  }
+  // Seats
+  [[0,1],[1,1],[2,1],[0,2],[1,2],[2,2]].forEach(([c,r])=>{
+    const x=7*TW+c*(TW+2)+3,y=2*TH+r*(TH+4)+2;
+    chair(x-2,y+10,P.chair_b);
+    desk(x,y,TW-4,TH-6);
+    // More people in Hall B
+    ctx.fillStyle='rgba(80,140,220,.7)';ctx.fillRect(x+2,y+3,8,5);
+  });
   // Podium
-  ctx.fillStyle=PAL.table;ctx.fillRect(x0+TW+TW/2,4*TH+6,TW-4,TH-8);
-  ctx.fillStyle=PAL.tableLight;ctx.fillRect(x0+TW+TW/2,4*TH+6,TW-4,4);
+  ctx.fillStyle=P.deskD;ctx.fillRect(8*TW+8,5*TH-2,TW+4,TH-4);
+  ctx.fillStyle=P.desk;ctx.fillRect(8*TW+8,5*TH-2,TW+4,TH-6);
+  plant(7*TW+1,2*TH); plant(10*TW+4,2*TH);
 
-  // Screen on stage back wall
-  ctx.fillStyle=PAL.screen;ctx.fillRect(x0+4,4*TH+4,3*TW-8,TH-8+TH/2);
-  ctx.fillStyle=screenC+'80';ctx.fillRect(x0+6,4*TH+6,3*TW-12,TH-10+TH/2-2);
-  if(zone===B){ctx.shadowColor='#4e9bff';ctx.shadowBlur=8;}
-  ctx.fillStyle=screenC+'50';ctx.fillRect(x0+6,4*TH+6,3*TW-12,TH-10+TH/2-2);
-  ctx.shadowBlur=0;
+  // ── HALL C (cols 12-15, rows 2-5) ──
+  screen_wall(12*TW+2,5*TH+2,4*TW-4,TH-4,false);
+  [[0,1],[1,1],[2,1],[0,2],[1,2]].forEach(([c,r])=>{
+    const x=12*TW+c*(TW+2)+3,y=2*TH+r*(TH+4)+2;
+    chair(x-2,y+10,P.chair_c);
+    desk(x,y,TW-4,TH-6);
+    if(c%2===0){ctx.fillStyle='rgba(200,150,80,.6)';ctx.fillRect(x+2,y+3,8,5);}
+  });
+  plant(12*TW+1,2*TH); plant(15*TW+4,2*TH);
 
-  // Seat rows (2 rows × 3 seats)
-  for(let row=0;row<2;row++){
-    for(let s=0;s<3;s++){
-      const sx=x0+4+s*TW+s*2;
-      const sy=2*TH+4+row*(TH-2);
-      // Chair
-      ctx.fillStyle=chairC;ctx.fillRect(sx,sy,TW-6,TH-8);
-      ctx.fillStyle='rgba(255,255,255,.12)';ctx.fillRect(sx,sy,TW-6,3);
-      // Seated person dot
-      if(zone===B||(s+row)%2===0){
-        ctx.fillStyle=zone===B?'#90c0ff':'rgba(255,255,255,.4)';
-        ctx.beginPath();ctx.arc(sx+(TW-6)/2,sy+5,4,0,Math.PI*2);ctx.fill();
-      }
-    }
-  }
+  // ── LOBBY (cols 2-4, rows 7-9) ──
+  roundTable(3*TW+8,8*TH+10,14,'#8a6aaa');
+  [0,1,2,3].forEach(i=>{
+    const a=i*Math.PI/2;
+    chair(3*TW+8+Math.cos(a)*18-6,8*TH+10+Math.sin(a)*14-5,'#9a70c0');
+  });
+  plant(4*TW+6,7*TH+2);
+  // Sofa
+  ctx.fillStyle='#9060c0';ctx.fillRect(2*TW+2,9*TH+6,3*TW-4,TH-6);
+  ctx.fillStyle='#a070d0';ctx.fillRect(2*TW+2,9*TH+6,3*TW-4,5);
 
-  // Plants (corners of hall)
-  [[x0+3,1*TH+3],[x0+4*TW-6,1*TH+3]].forEach(([px,py])=>{
-    ctx.fillStyle=PAL.plant_pot;ctx.fillRect(px,py+6,8,6);
-    ctx.fillStyle=PAL.plant_dark;ctx.beginPath();ctx.arc(px+4,py+4,6,0,Math.PI*2);ctx.fill();
-    ctx.fillStyle=PAL.plant_leaf;ctx.beginPath();ctx.arc(px+4,py+3,4,0,Math.PI*2);ctx.fill();
-    ctx.beginPath();ctx.arc(px+1,py+5,3,0,Math.PI*2);ctx.fill();
-    ctx.beginPath();ctx.arc(px+7,py+5,3,0,Math.PI*2);ctx.fill();
+  // ── EXHIBITION (cols 6-11, rows 7-9) ──
+  [[6,7],[8,7],[10,7]].forEach(([c,r],i)=>{
+    const x=c*TW+2,y=r*TH+2;
+    ctx.fillStyle=['#c8e0f4','#c8f0e4','#f4e8c8'][i];
+    ctx.fillRect(x,y,2*TW-4,2*TH+4);
+    ctx.strokeStyle=['#4a80b0','#3a9060','#b08030'][i];ctx.lineWidth=1;
+    ctx.strokeRect(x+.5,y+.5,2*TW-5,2*TH+3);
+    // Counter
+    desk(x+2,y+2*TH-6,2*TW-8,TH/2);
+    monitor(x+4,y+2*TH-16);
+    // Booth person dot
+    ctx.fillStyle=['#3a80d0','#3ab060','#e07820'][i]+'cc';
+    ctx.beginPath();ctx.arc(x+TW,y+TH,5,0,Math.PI*2);ctx.fill();
   });
 
-  // Rug under seats (Hall B only)
-  if(zone===B){
-    ctx.fillStyle=PAL.rug_b+'80';
-    ctx.fillRect(x0+2,2*TH,4*TW-4,2*TH);
-    ctx.strokeStyle=PAL.rug_b2;ctx.lineWidth=1;
-    ctx.strokeRect(x0+3,2*TH+1,4*TW-6,2*TH-2);
-  }
-}
-
-function drawExhibitionBooths(){
-  // 3 booths
-  [[6,8],[8,9],[10,8]].forEach(([c,r],i)=>{
-    const x=c*TW+1,y=r*TH+2;
-    const clr=['#2a4a8a','#1e6030','#7a3018'][i];
-    const lit=['#60a0ff','#60d080','#ff8050'][i];
-    // Table
-    ctx.fillStyle=PAL.table;ctx.fillRect(x,y,TW*1.5,TH-4);
-    ctx.fillStyle=PAL.tableLight;ctx.fillRect(x,y,TW*1.5,4);
-    // Screen on table
-    ctx.fillStyle=clr;ctx.fillRect(x+3,y+4,TW-4,TH-10);
-    ctx.fillStyle=lit+'60';ctx.fillRect(x+4,y+5,TW-6,TH-12);
-    // Person behind booth
-    ctx.fillStyle=lit+'cc';ctx.beginPath();ctx.arc(x+TW*0.75,y+TH+4,4,0,Math.PI*2);ctx.fill();
-  });
-}
-
-function drawLobby(){
-  const x=1*TW,y=8*TH;
-  // Reception desk
-  ctx.fillStyle=PAL.table;ctx.fillRect(x+2,y+2,3*TW-4,TH/2);
-  ctx.fillStyle=PAL.tableLight;ctx.fillRect(x+2,y+2,3*TW-4,4);
-  // Sofa (bottom)
-  ctx.fillStyle='#5a3a80';ctx.fillRect(x+2,y+TH+6,3*TW-4,TH-8);
-  ctx.fillStyle='#6a4a90';ctx.fillRect(x+2,y+TH+6,3*TW-4,4);
-  // Plant
-  ctx.fillStyle=PAL.plant_pot;ctx.fillRect(x+TW*1.2,y+TH*2.1,7,5);
-  ctx.fillStyle=PAL.plant_dark;ctx.beginPath();ctx.arc(x+TW*1.2+3,y+TH*2.1,5,0,Math.PI*2);ctx.fill();
-  ctx.fillStyle=PAL.plant_leaf;ctx.beginPath();ctx.arc(x+TW*1.2+3,y+TH*2.1-1,3,0,Math.PI*2);ctx.fill();
-}
-
-function drawEntrance(){
-  const x=14*TW,y=8*TH;
-  // QR stand
-  ctx.fillStyle='#2a3a50';ctx.fillRect(x+TW,y+4,TW-4,TH*2-8);
-  ctx.fillStyle='rgba(255,255,255,.05)';ctx.fillRect(x+TW,y+4,TW-4,4);
-  // QR pixels
-  ctx.fillStyle='#80c0ff';
-  const qd=4,qx=x+TW+4,qy=y+8;
-  [[0,0],[1,0],[2,0],[0,1],[2,1],[0,2],[1,2],[2,2],[4,0],[5,0],[4,2],[5,2],[4,1],[3,3],[5,3],[3,4],[4,4],[5,4]].forEach(([a,b])=>{
-    ctx.fillRect(qx+a*qd,qy+b*qd,qd-1,qd-1);
-  });
+  // ── ENTRANCE (cols 13-16, rows 7-9) ──
   // Welcome mat
-  ctx.fillStyle='#3a5a4a';ctx.fillRect(x+2,y+TH*2+2,3*TW-4,6);
-  ctx.fillStyle='#4a7a5a';ctx.fillRect(x+4,y+TH*2+3,3*TW-8,2);
+  ctx.fillStyle='#4a7a60';ctx.fillRect(13*TW+4,10*TH-4,4*TW-8,6);
+  ctx.fillStyle='#5a9a70';ctx.fillRect(13*TW+6,10*TH-3,4*TW-12,4);
+  // QR stand
+  ctx.fillStyle=P.desk;ctx.fillRect(15*TW+2,7*TH+2,TW+4,TH+6);
+  ctx.fillStyle=P.deskL;ctx.fillRect(15*TW+2,7*TH+2,TW+4,4);
+  // QR pixels
+  const qx=15*TW+5,qy=7*TH+8,qs=3;
+  ctx.fillStyle='#2a2a3a';
+  [[0,0],[1,0],[2,0],[0,1],[2,1],[0,2],[1,2],[2,2]].forEach(([a,b])=>ctx.fillRect(qx+a*qs,qy+b*qs,qs-1,qs-1));
+  [[4,0],[5,0],[4,1],[4,2],[5,2],[3,3],[5,3],[3,4]].forEach(([a,b])=>ctx.fillRect(qx+a*qs,qy+b*qs,qs-1,qs-1));
+  // Arrow on floor pointing to Hall B
+  ctx.fillStyle='rgba(80,140,220,.35)';ctx.font='bold 14px monospace';ctx.textAlign='center';
+  ctx.fillText('↑ B',15*TW+TW,9*TH+TH/2+4);
 }
 
+// ── Labels ─────────────────────────────────────────────
 function drawLabels(hlB){
   ctx.textAlign='center';
-  // Hall signs (pixel font style)
-  function hallSign(cx,cy,text,sub,clr,glow){
-    if(glow){ctx.shadowColor=clr;ctx.shadowBlur=8;}
-    // Sign board
-    ctx.fillStyle=glow?'#1a2a50':'#2a2018';
-    ctx.beginPath();ctx.roundRect(cx-28,cy-11,56,22,4);ctx.fill();
-    ctx.strokeStyle=clr;ctx.lineWidth=glow?2:1;
-    ctx.beginPath();ctx.roundRect(cx-28,cy-11,56,22,4);ctx.stroke();
-    ctx.shadowBlur=0;
-    ctx.font='bold 8px monospace';ctx.fillStyle=clr;ctx.fillText(text,cx,cy+2);
-    ctx.font='6px monospace';ctx.fillStyle=clr+'99';ctx.fillText(sub,cx,cy+11);
+  function roomLabel(cx,cy,text,clr,hl){
+    ctx.font='bold 8.5px -apple-system,sans-serif';
+    const tw=ctx.measureText(text).width+12;
+    ctx.fillStyle=hl?'rgba(60,120,220,.9)':'rgba(40,40,60,.7)';
+    ctx.beginPath();ctx.roundRect(cx-tw/2,cy-9,tw,16,4);ctx.fill();
+    if(hl){ctx.strokeStyle='#80b0ff';ctx.lineWidth=1;ctx.beginPath();ctx.roundRect(cx-tw/2,cy-9,tw,16,4);ctx.stroke();}
+    ctx.fillStyle=hl?'#fff':'rgba(255,255,255,.8)';
+    ctx.fillText(text,cx,cy+4);
   }
-  hallSign(3*TW,0.5*TH,'HALL A','基础技术',PAL.plant_leaf,false);
-  hallSign(8.5*TW,0.5*TH,hlB?'HALL B ★':'HALL B',hlB?'★ 推荐 · 跨端开发':'跨端开发',PAL.screenGlow,hlB);
-  hallSign(13.5*TW,0.5*TH,'HALL C','生态合作','#e07828',false);
+  roomLabel(4*TW,1.5*TH,'Hall A · 基础技术',P.carpet_a,false);
+  roomLabel(9*TW,1.5*TH,hlB?'★ Hall B · 推荐':'Hall B · 跨端开发',P.carpet_b,hlB);
+  roomLabel(14*TW,1.5*TH,'Hall C · 生态合作',P.carpet_c,false);
 
-  // Corridor floor text
-  ctx.font='6px monospace';ctx.fillStyle='rgba(200,160,96,.35)';
-  ctx.fillText('◀─────── 通道 ───────▶',8*TW,6*TH+TH/2+3);
+  // Corridor floor arrows
+  ctx.fillStyle='rgba(120,100,70,.4)';ctx.font='9px monospace';
+  ctx.fillText('◀ ─ ─  通  道  ─ ─ ▶',9*TW,6*TH+TH/2+3);
 
-  // Bottom zone labels
-  ctx.font='6px monospace';
-  ctx.fillStyle='rgba(160,120,220,.6)';ctx.fillText('大厅',2.5*TW,11*TH-4);
-  ctx.fillStyle='rgba(100,160,180,.6)';ctx.fillText('展览区',9*TW,11*TH-4);
-  ctx.fillStyle='rgba(140,160,180,.6)';ctx.fillText('↑ 入口',15.5*TW,11*TH-4);
+  ctx.font='7px -apple-system,sans-serif';
+  ctx.fillStyle='rgba(100,80,160,.7)';ctx.fillText('休息区',3*TW+8,7*TH-3);
+  ctx.fillStyle='rgba(50,140,130,.7)';ctx.fillText('展览区',9*TW,7*TH-3);
+  ctx.fillStyle='rgba(100,110,130,.7)';ctx.fillText('入口',15*TW,7*TH-3);
 }
 
-function drawMap(hlB){
+// ── Trees (scattered on grass) ─────────────────────────
+function drawTrees(){
+  [[0.2,0.1],[0.2,6.5],[0.2,11.5],[18.5,0.1],[18.5,4],[18.5,8]].forEach(([c,r])=>{
+    drawTree(c*TW,r*TH);
+  });
+}
+
+// ── Pixel sprite character ─────────────────────────────
+function drawSprite(x,y,shirtColor,name,isYou,alpha){
+  ctx.save();ctx.globalAlpha=alpha||1;
+  // Shadow
+  ctx.fillStyle='rgba(0,0,0,.2)';
+  ctx.beginPath();ctx.ellipse(x,y+2,7,3,0,0,Math.PI*2);ctx.fill();
+  // Legs
+  ctx.fillStyle='#2a2a4a';ctx.fillRect(x-4,y-3,4,6);ctx.fillRect(x+1,y-3,4,6);
+  // Body
+  ctx.fillStyle=shirtColor;ctx.fillRect(x-5,y-12,10,10);
+  ctx.fillStyle='rgba(255,255,255,.2)';ctx.fillRect(x-5,y-12,10,3);
+  ctx.fillStyle='rgba(0,0,0,.15)';ctx.fillRect(x-5,y-4,10,2);
+  // Arms
+  ctx.fillStyle=shirtColor;ctx.fillRect(x-8,y-11,3,7);ctx.fillRect(x+5,y-11,3,7);
+  // Neck
+  ctx.fillStyle='#f0c890';ctx.fillRect(x-2,y-14,5,4);
+  // Head
+  ctx.fillStyle='#f0c890';ctx.beginPath();ctx.arc(x,y-18,6,0,Math.PI*2);ctx.fill();
+  // Hair
+  ctx.fillStyle='#3a2818';ctx.beginPath();ctx.arc(x,y-20,5,Math.PI,0);ctx.fill();
+  ctx.fillRect(x-6,y-20,2,5);ctx.fillRect(x+4,y-20,2,4);
+  // Eyes
+  ctx.fillStyle='#1a1a2a';ctx.fillRect(x-3,y-19,2,2);ctx.fillRect(x+1,y-19,2,2);
+
+  // Name tag
+  ctx.font='bold 9px -apple-system,sans-serif';
+  const tw=ctx.measureText(name).width+10;
+  const bx=x-tw/2,by=y-36;
+  ctx.fillStyle=isYou?'rgba(60,100,220,.92)':'rgba(30,30,50,.82)';
+  ctx.beginPath();ctx.roundRect(bx,by,tw,14,4);ctx.fill();
+  ctx.strokeStyle=isYou?'#80aaff':'rgba(200,200,220,.5)';ctx.lineWidth=1;
+  ctx.beginPath();ctx.roundRect(bx,by,tw,14,4);ctx.stroke();
+  ctx.fillStyle='#fff';ctx.fillText(name,x,by+10);
+
+  ctx.restore();
+}
+
+// ── NPC sprites scattered in halls ────────────────────
+function drawNPCs(hlB){
+  const npcColors=['#d04030','#30a060','#e08020','#8030c0','#208080','#c04080'];
+  // Hall A npcs
+  [[2.5,3.5],[4.2,4.2],[3,2.8]].forEach(([c,r],i)=>{
+    drawSprite(c*TW,r*TH,npcColors[i],'',false,0.7);
+  });
+  // Hall B npcs (more people!)
+  [[7.8,3.2],[9.2,3.8],[10.2,2.8],[8.5,4.5],[9.8,4.2]].forEach(([c,r],i)=>{
+    drawSprite(c*TW,r*TH,npcColors[i%6],'',false,0.75);
+  });
+  // Hall C npcs
+  [[12.8,3.5],[14,4]].forEach(([c,r],i)=>{
+    drawSprite(c*TW,r*TH,npcColors[i+3],'',false,0.65);
+  });
+  // Exhibition area
+  [[7.5,8.5],[9.2,8],[11,8.5]].forEach(([c,r],i)=>{
+    drawSprite(c*TW,r*TH,npcColors[i],'',false,0.7);
+  });
+}
+
+// ── Main render ────────────────────────────────────────
+function render(hlB){
   drawFloor();
-  drawFurnitureHall(1,A);
-  drawFurnitureHall(6,B);
-  drawFurnitureHall(11,C);
-  drawExhibitionBooths();
-  drawLobby();
-  drawEntrance();
+  drawTrees();
+  drawFurniture(hlB);
   drawLabels(hlB);
-  // Hall borders
-  ctx.lineWidth=1.5;
-  ctx.strokeStyle='#3a6a40';ctx.strokeRect(1*TW+.5,1*TH+.5,4*TW-1,5*TH-1);
-  if(hlB){ctx.strokeStyle='#5090ff';ctx.shadowColor='#4e9bff';ctx.shadowBlur=12;}
-  else ctx.strokeStyle='#2a4a90';
-  ctx.strokeRect(6*TW+.5,1*TH+.5,4*TW-1,5*TH-1);
-  ctx.shadowBlur=0;
-  ctx.strokeStyle='#7a4a20';ctx.strokeRect(11*TW+.5,1*TH+.5,4*TW-1,5*TH-1);
+  drawNPCs(hlB);
+  // Lukas at entrance
+  drawSprite(15.5*TW,9*TH,'#3060c0','Lukas',true,1);
 }
 
-drawMap(true);
+render(true);
 </script>
 </body></html>
