@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI Builders Digest 🗞️</title>
+    <link>https://xiaochengzi2048.github.io/builders-digest.xml</link>
+    <atom:link href="https://xiaochengzi2048.github.io/builders-digest.xml" rel="self" type="application/rss+xml"/>
+    <description>Daily digest of what top AI builders are saying — builders not influencers. Bilingual EN/ZH.</description>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 24 Mar 2026 11:54:26 +0000</lastBuildDate>
+    <item>
+      <title>AI Builders Digest · 2026-03-24</title>
+      <link>https://www.notion.so/AI-Builders-Digest-2026-03-24-32d941f98904816aa09eff363b022236</link>
+      <guid isPermaLink="true">https://www.notion.so/AI-Builders-Digest-2026-03-24-32d941f98904816aa09eff363b022236</guid>
+      <pubDate>Tue, 24 Mar 2026 11:54:26 +0000</pubDate>
+      <description><![CDATA[<pre style="font-family:sans-serif;white-space:pre-wrap">AI Builders Digest — 2026-03-24
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🐦 X / TWITTER
+
+─────────────────────────────
+Thariq Shihipar — Claude Code @ Anthropic
+─────────────────────────────
+Anthropic acquired a computer use company, and just 4 weeks later shipped computer use in Claude Code. Thariq also flagged that a new capability is currently Desktop-only.
+https://x.com/trq212/status/2036302910498173034
+
+Anthropic 收购了一家 computer use 公司，4 周后就把这个功能集成进了 Claude Code 并上线。Thariq 还提到有一个新能力目前只有 Desktop 版本才有。
+
+─────────────────────────────
+Aaron Levie — CEO @ Box
+─────────────────────────────
+Levie argues that computer use and the ability to write & run code are the "ultimate primitives" for agents to handle more and more knowledge work tasks. Simple but cuts right to the core of why agentic AI is different from chat AI.
+https://x.com/levie/status/2036290915950797314
+
+Levie 的判断：computer use 和代码生成/运行是 AI agent 承接知识工作的两个底层 primitive。这个说法很简洁，但切中了 agentic AI 和 chat AI 的核心区别。
+
+─────────────────────────────
+Alex Albert — Research @ Anthropic
+─────────────────────────────
+Albert highlighted a guest post by physicist Matthew Schwartz on how Claude Opus 4.5 is meaningfully helping science—citing examples of real research tasks being accelerated. He also noted that "the future where I never have to open my laptop is becoming real very fast."
+https://x.com/alexalbert__/status/2036232980059062550
+
+Albert 分享了物理学家 Matthew Schwartz 的文章，讲述 Opus 4.5 如何切实推进科研工作。他本人也感慨，「不需要打开电脑就能完成工作的未来，来得比想象中快得多」。
+
+─────────────────────────────
+Nan Yu — Head of Product @ Linear
+─────────────────────────────
+Nan shared a moment of genuine amazement: Codex picked up on a subtle, oblique reference in a prompt—something a human reviewer might have missed—and acted on it. His point: "sometimes you have to step back and realize how insane this is."
+https://x.com/thenanyu/status/2036095568733143258
+
+Nan 分享了一个真实的「惊了」时刻：Codex 从 prompt 里捕捉到了一个连人类 reviewer 都可能漏掉的暗示，并据此行动。他的感慨：「有时候你需要停下来，意识到这件事有多疯狂。」
+
+─────────────────────────────
+Matt Turck — VC @ FirstMark Capital
+─────────────────────────────
+Turck reflects on how hard it'll be to explain to future generations that there was once a world where people would spend years on something that Claude Code can now do—framing the current moment as genuinely historic.
+https://x.com/mattturck/status/2036182407779365309
+
+Turck 说，很难跟未来的人解释：曾经有一段时间，Claude Code 几分钟能搞定的事，人们要花好几年。他把当下定义为真正的历史性时刻。
+
+─────────────────────────────
+Swyx — Founder / AI researcher
+─────────────────────────────
+Swyx posted an analysis of the "Dreamer x Meta exec hire" and what it signals—timed to the 9-month anniversary of Zuck's "Personal Superintelligence" memo. Worth reading for anyone tracking the big-lab talent wars.
+https://x.com/swyx/status/2036337043475931340
+
+Swyx 分析了「Dreamer x Meta 高管引进」事件，并结合 Zuck「个人超级智能」备忘录发布 9 个月的节点来解读。关注大厂人才争夺战的可以看看。
+
+─────────────────────────────
+Sam Altman — CEO @ OpenAI
+─────────────────────────────
+Altman shared that he loved being on the Helion board and remains "extremely excited" about a future of abundant energy—as Helion moves forward independently.
+https://x.com/sama/status/2036137695605563682
+
+Altman 表示对 Helion 董事会任期回顾满满，对能源充裕的未来依然「极度兴奋」——Helion 将继续独立推进。
+
+─────────────────────────────
+Peter Yang — AI educator (140K readers)
+─────────────────────────────
+Yang called out Anthropic's shipping cadence—"basically shipping every day"—and said it's "set the bar for what AI-native development looks like."
+https://x.com/petergyang/status/2036212646962434395
+
+Yang 点名称赞 Anthropic 的发版节奏——「几乎每天都在发布」——认为这已经为 AI native 产品开发树立了标杆。
+
+─────────────────────────────
+Peter Steinberger — OpenClaw / "ClawFather"
+─────────────────────────────
+Steipete shared his Codex-assisted PR review workflow: let Codex surface issues first, then evaluate clarity and approach. A practical glimpse at how AI is changing code review.
+https://x.com/steipete/status/2036252448399171717
+
+Steipete 分享了他用 Codex 辅助 code review 的工作流：先让 Codex 找问题，再判断问题是否清晰、方案是否合理。是 AI 改变 code review 实践的一个真实案例。
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📅 今日无新播客内容
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+回复「调整设置」可修改推送频率、语言或摘要风格。
+</pre>]]></description>
+    </item>
+  </channel>
+</rss>
