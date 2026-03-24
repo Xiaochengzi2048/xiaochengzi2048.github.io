@@ -97,12 +97,12 @@ function drawFloor(hlB){
     }
   }
   // Borders
-  ctx.strokeStyle=P.ca+'80';ctx.lineWidth=1.5;ctx.strokeRect(2*TW+.5,2*TH+.5,4*TW-1,4*TH-1);
-  if(hlB){ctx.save();ctx.shadowColor='#5090ff';ctx.shadowBlur=12;}
-  ctx.strokeStyle=hlB?'#70a8ff':P.cb+'80';ctx.lineWidth=hlB?2:1.5;
-  ctx.strokeRect(7*TW+.5,2*TH+.5,4*TW-1,4*TH-1);
+  ctx.strokeStyle=P.ca+'70';ctx.lineWidth=1;ctx.strokeRect(2*TW,2*TH,4*TW,4*TH);
+  if(hlB){ctx.save();ctx.shadowColor='#5090ff';ctx.shadowBlur=10;}
+  ctx.strokeStyle=hlB?'#70a8ff':P.cb+'70';ctx.lineWidth=hlB?1.5:1;
+  ctx.strokeRect(7*TW,2*TH,4*TW,4*TH);
   if(hlB)ctx.restore();
-  ctx.strokeStyle=P.cc+'80';ctx.lineWidth=1.5;ctx.strokeRect(12*TW+.5,2*TH+.5,4*TW-1,4*TH-1);
+  ctx.strokeStyle=P.cc+'70';ctx.lineWidth=1;ctx.strokeRect(12*TW,2*TH,4*TW,4*TH);
   // Corridor
   ctx.fillStyle='rgba(150,120,70,.3)';ctx.font='8px monospace';ctx.textAlign='center';
   ctx.fillText('◀ ─  通  道  ─ ▶',9*TW,6*TH+TH/2+3);
