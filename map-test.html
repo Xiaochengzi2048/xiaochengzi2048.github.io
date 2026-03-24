@@ -1,418 +1,232 @@
-<!DOCTYPE html>
-<html><head><meta charset="UTF-8">
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:#0a0e1a;display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:-apple-system,sans-serif}
-.wrap{display:flex;gap:0;background:#111827;border-radius:14px;overflow:hidden;border:1px solid #1e2d48;box-shadow:0 24px 64px rgba(0,0,0,.6);width:860px}
-.story{width:300px;padding:40px 32px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid #1a2238}
-.step-badge{font-size:10px;color:#4e9bff;font-weight:700;letter-spacing:2px;margin-bottom:14px}
-.step-title{font-size:22px;font-weight:800;color:#fff;line-height:1.25;margin-bottom:16px}
-.step-story{font-size:13.5px;color:#9aa3b8;line-height:1.8}
-.stage{flex:1;background:#080c18;display:flex;align-items:center;justify-content:center;position:relative;padding:20px}
-canvas{border-radius:8px;display:block}
-.replay-btn{position:absolute;bottom:16px;right:16px;background:rgba(78,155,255,.15);border:1px solid #4e9bff;color:#4e9bff;padding:6px 14px;border-radius:6px;font-size:12px;cursor:pointer}
-.replay-btn:hover{background:rgba(78,155,255,.3)}
-</style></head>
-<body>
-<div class="wrap">
-  <div class="story">
-    <div class="step-badge">STEP 02</div>
-    <div class="step-title">Lukas 扫码入场</div>
-    <div class="step-story">德国开发者 Lukas 扫了二维码，手机弹出了一张<strong style="color:#fff">活的会场地图</strong>。<br><br>系统读取了他的标签：<strong style="color:#4e9bff">Kotlin · 跨端开发</strong>，自动推荐了 Session B。</div>
-  </div>
-  <div class="stage">
-    <canvas id="cv" width="520" height="360"></canvas>
-    <button class="replay-btn" onclick="startAnim()">↺ 重播</button>
-  </div>
-</div>
-
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<style>*{margin:0;padding:0}body{background:#1a1a2e;display:flex;align-items:center;justify-content:center;min-height:100vh}</style>
+</head><body>
+<canvas id="cv" width="520" height="360"></canvas>
 <script>
-const cv = document.getElementById('cv');
-const ctx = cv.getContext('2d');
-const W = cv.width, H = cv.height;
+const cv=document.getElementById('cv'),ctx=cv.getContext('2d');
+const TW=24,TH=24,W=520,H=360;
 
-// ── GRID ──────────────────────────────
-const TW = 22, TH = 22;
-const COLS = Math.floor(W/TW), ROWS = Math.floor(H/TH); // 23x16
+// Gather Town warm palette
+const PAL={
+  void:'#1a1e2a',
+  wall:'#3a2e24',wallDark:'#2a2018',wallLight:'#4a3c30',
+  wood:'#c8a060',woodAlt:'#bc9858',woodDark:'#a07840',
+  carpet_b:'#3a5a9c',carpet_b2:'#324e8a',  // blue - Hall B
+  carpet_a:'#3a7c48',carpet_a2:'#326840',  // green - Hall A
+  carpet_c:'#9c5a30',carpet_c2:'#8a4e28',  // orange - Hall C
+  stone:'#7a7468',stoneAlt:'#706a60',
+  carpet_lob:'#6a4a9c',carpet_lob2:'#5e4088', // purple - lobby
+  carpet_ex:'#4a6878',carpet_ex2:'#405e6c',   // teal - exhibition
+  table:'#8a6030',tableDark:'#6a4820',tableLight:'#a07840',
+  chair_a:'#2a6040',chair_b:'#2a4080',chair_c:'#804020',
+  plant_pot:'#7a4c20',plant_leaf:'#2a8a20',plant_dark:'#1e6818',
+  screen:'#1a2860',screenGlow:'#4a8ae0',
+  stage_a:'#2a5c34',stage_b:'#1e3870',stage_c:'#703018',
+  rug_b:'#2040a0',rug_b2:'#1a3490',
+};
 
-// Zone types
-const _=0, A=1, B=2, C=3, CO=4, LB=5, EX=6, EN=7;
-const MAP = [
-  [_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_],
-  [_,A,A,A,A,A,_,B,B,B,B,B,_,C,C,C,C,C,_,_,_,_,_],
-  [_,A,A,A,A,A,_,B,B,B,B,B,_,C,C,C,C,C,_,_,_,_,_],
-  [_,A,A,A,A,A,_,B,B,B,B,B,_,C,C,C,C,C,_,_,_,_,_],
-  [_,A,A,A,A,A,_,B,B,B,B,B,_,C,C,C,C,C,_,_,_,_,_],
-  [_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_],
-  [CO,CO,CO,CO,CO,CO,CO,CO,CO,CO,CO,CO,CO,CO,CO,CO,CO,CO,_,_,_,_,_],
-  [_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_],
-  [_,LB,LB,LB,_,_,EX,EX,EX,EX,EX,EX,EX,EX,_,_,EN,EN,EN,_,_,_,_],
-  [_,LB,LB,LB,_,_,EX,EX,EX,EX,EX,EX,EX,EX,_,_,EN,EN,EN,_,_,_,_],
-  [_,LB,LB,LB,_,_,EX,EX,EX,EX,EX,EX,EX,EX,_,_,EN,EN,EN,_,_,_,_],
-  [_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_],
-  [_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_],
-  [_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_],
-  [_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_],
-  [_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_],
+// Map grid
+const _=0,A=1,B=2,C=3,CO=4,LB=5,EX=6,EN=7,WL=8;
+const MAP=[
+  [WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,_],
+  [WL, A, A, A, A,WL, B, B, B, B,WL, C, C, C, C,WL, _, _, _, _,_],
+  [WL, A, A, A, A,WL, B, B, B, B,WL, C, C, C, C,WL, _, _, _, _,_],
+  [WL, A, A, A, A,WL, B, B, B, B,WL, C, C, C, C,WL, _, _, _, _,_],
+  [WL, A, A, A, A,WL, B, B, B, B,WL, C, C, C, C,WL, _, _, _, _,_],
+  [WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL, _, _, _, _,_],
+  [CO,CO,CO,CO,CO,CO,CO,CO,CO,CO,CO,CO,CO,CO,CO,CO, _, _, _, _,_],
+  [WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL, _, _, _, _,_],
+  [WL,LB,LB,LB,WL,WL,EX,EX,EX,EX,EX,EX,WL,WL,EN,EN,EN,WL, _, _,_],
+  [WL,LB,LB,LB,WL,WL,EX,EX,EX,EX,EX,EX,WL,WL,EN,EN,EN,WL, _, _,_],
+  [WL,LB,LB,LB,WL,WL,EX,EX,EX,EX,EX,EX,WL,WL,EN,EN,EN,WL, _, _,_],
+  [WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL,WL, _, _,_],
+  [_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_],
+  [_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_],
+  [_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_,_],
 ];
 
-// Colors
-const FLOOR_BASE = {
-  [_]:'#06080f', [A]:'#0e2b10', [B]:'#091c3e', [C]:'#1c1100',
-  [CO]:'#0d1220', [LB]:'#0c0e26', [EX]:'#0a1422', [EN]:'#0d1320',
-};
-const FLOOR_ALT = {
-  [A]:'#102f13', [B]:'#0b2248', [C]:'#201400',
-  [CO]:'#0f1628', [LB]:'#0f1130', [EX]:'#0c182a', [EN]:'#0f1528',
-};
-const ZONE_BORDER = {
-  [A]:'#184a20', [B]:'#1a3a80', [C]:'#3a2200',
-  [CO]:'#141c2e', [LB]:'#1a1840', [EX]:'#122030', [EN]:'#1a2438',
-};
+function tile(x,y,c1,c2,r){
+  ctx.fillStyle=(r%2===0)?c1:c2;
+  ctx.fillRect(x,y,TW,TH);
+}
 
-// ── DRAW BASE MAP ───────────────────────
-function drawBase(hlB) {
-  ctx.clearRect(0,0,W,H);
-
-  // Background
-  ctx.fillStyle='#06080f';
-  ctx.fillRect(0,0,W,H);
-
-  // Tiles
-  for(let r=0;r<MAP.length;r++) {
-    for(let c=0;c<MAP[r].length;c++) {
-      const z=MAP[r][c];
-      if(z===_) continue;
-      const x=c*TW, y=r*TH;
-      const alt=(r+c)%2===0;
-      ctx.fillStyle = alt?(FLOOR_BASE[z]||'#06080f'):(FLOOR_ALT[z]||FLOOR_BASE[z]||'#06080f');
-      ctx.fillRect(x,y,TW,TH);
-      // tile grid lines
-      ctx.strokeStyle = ZONE_BORDER[z]||'transparent';
-      ctx.lineWidth=0.4;
-      ctx.strokeRect(x+0.5,y+0.5,TW-1,TH-1);
+function drawFloor(){
+  ctx.fillStyle=PAL.void;ctx.fillRect(0,0,W,H);
+  for(let r=0;r<MAP.length;r++)for(let c=0;c<MAP[r].length;c++){
+    const z=MAP[r][c],x=c*TW,y=r*TH,alt=(r+c)%2;
+    if(z===_)continue;
+    if(z===WL){
+      ctx.fillStyle=PAL.wall;ctx.fillRect(x,y,TW,TH);
+      ctx.fillStyle=PAL.wallDark;ctx.fillRect(x+1,y+1,TW-2,TH-2);
+      ctx.fillStyle=PAL.wallLight;ctx.fillRect(x,y,TW,2);ctx.fillRect(x,y,2,TH);
+    } else if(z===A) tile(x,y,PAL.carpet_a,PAL.carpet_a2,alt);
+    else if(z===B) tile(x,y,PAL.carpet_b,PAL.carpet_b2,alt);
+    else if(z===C) tile(x,y,PAL.carpet_c,PAL.carpet_c2,alt);
+    else if(z===CO){
+      // Wood planks - horizontal stripes
+      ctx.fillStyle=(r%2===0)?PAL.wood:PAL.woodAlt;ctx.fillRect(x,y,TW,TH);
+      ctx.fillStyle=PAL.woodDark;ctx.fillRect(x,y+TH-2,TW,1);
+    }
+    else if(z===LB) tile(x,y,PAL.carpet_lob,PAL.carpet_lob2,alt);
+    else if(z===EX) tile(x,y,PAL.carpet_ex,PAL.carpet_ex2,alt);
+    else if(z===EN){
+      ctx.fillStyle=(alt)?PAL.stone:PAL.stoneAlt;ctx.fillRect(x,y,TW,TH);
+      ctx.fillStyle='rgba(0,0,0,.1)';ctx.fillRect(x,y+TH-1,TW,1);ctx.fillRect(x+TW-1,y,1,TH);
     }
   }
-
-  // ── FURNITURE: HALL A ──
-  drawHall(1, false);
-  // ── FURNITURE: HALL B ──
-  drawHall(7, hlB);
-  // ── FURNITURE: HALL C ──
-  drawHall(13, false);
-  // Exhibition booths
-  drawExhibition();
-  // Entrance QR
-  drawEntrance();
-  // Walls (drawn over tiles to seal zones)
-  drawWalls(hlB);
-  // Labels
-  drawLabels(hlB);
 }
 
-function drawHall(startCol, hl) {
-  const sc = startCol;
-  const baseR = 1;
-  const c = hl ? '#4e9bff' : (sc===1?'#4ade80':'#fbbf24');
-  const bg = hl ? '#1a3a6a' : (sc===1?'#1a4a20':'#4a3010');
-  const bgL = hl ? '#0f2550' : (sc===1?'#122e14':'#3a2208');
+function drawFurnitureHall(sc,zone){
+  // sc = start col of this hall (1,6,11)
+  const x0=sc*TW,y0=1*TH;
+  const stageC=zone===A?PAL.stage_a:zone===B?PAL.stage_b:PAL.stage_c;
+  const chairC=zone===A?PAL.chair_a:zone===B?PAL.chair_b:PAL.chair_c;
+  const screenC=zone===B?PAL.screenGlow:zone===A?'#3a8a50':'#d06030';
 
-  // Stage bar (front of hall)
-  ctx.fillStyle = bg;
-  ctx.fillRect(sc*TW+2, baseR*TH+2, 5*TW-4, 10);
-  ctx.fillStyle = hl?'#3a70d0':(sc===1?'#2a6a30':'#6a4a18');
-  ctx.fillRect(sc*TW+2, baseR*TH+2, 5*TW-4, 5);
+  // Stage platform (back of hall = row 4-5, full width)
+  ctx.fillStyle=stageC;ctx.fillRect(x0+2,4*TH+2,4*TW-4,TH+TH-4);
+  ctx.fillStyle='rgba(255,255,255,.08)';ctx.fillRect(x0+2,4*TH+2,4*TW-4,3);
+  
+  // Podium
+  ctx.fillStyle=PAL.table;ctx.fillRect(x0+TW+TW/2,4*TH+6,TW-4,TH-8);
+  ctx.fillStyle=PAL.tableLight;ctx.fillRect(x0+TW+TW/2,4*TH+6,TW-4,4);
 
-  // Screen on back wall
-  ctx.fillStyle = bgL;
-  ctx.fillRect(sc*TW+6, 4*TH+6, 3*TW, 8);
-  ctx.fillStyle = c+'40';
-  ctx.fillRect(sc*TW+7, 4*TH+7, 3*TW-2, 6);
-
-  // Seat rows (2 rows × 4 seats)
-  for(let row=0;row<2;row++) {
-    for(let s=0;s<4;s++) {
-      const sx = sc*TW + 3 + s*24;
-      const sy = 2*TH + 3 + row*15;
-      ctx.fillStyle = bg;
-      ctx.fillRect(sx,sy,9,8);
-      ctx.fillStyle = c+'30';
-      ctx.fillRect(sx+1,sy+1,7,6);
-    }
-  }
-
-  // Plants corners
-  [[sc*TW+3,1*TH+18],[sc*TW+5*TW-5,1*TH+18]].forEach(([px,py])=>{
-    ctx.fillStyle='#1a5a20';
-    ctx.beginPath();ctx.arc(px,py,4,0,Math.PI*2);ctx.fill();
-    ctx.fillStyle='#2a8a30';
-    ctx.beginPath();ctx.arc(px-1,py-2,2,0,Math.PI*2);ctx.fill();
-    ctx.beginPath();ctx.arc(px+2,py-1,1.5,0,Math.PI*2);ctx.fill();
-  });
-
-  // Attendee dots (3-4 small figures in seats)
-  const numPeople = hl ? 6 : 3;
-  ctx.fillStyle = c+'80';
-  for(let i=0;i<numPeople;i++) {
-    const px = sc*TW + 4 + (i%4)*24 + 4;
-    const py = 2*TH + 5 + Math.floor(i/4)*15 + 3;
-    ctx.beginPath();ctx.arc(px,py,3,0,Math.PI*2);ctx.fill();
-  }
-}
-
-function drawExhibition() {
-  const cols=[6,9,12], colors=['#1a3060','#183020','#302010'], lights=['#4e9bff40','#4ade8040','#ff8c4240'];
-  cols.forEach((c,i)=>{
-    const x=c*TW+2, y=8*TH+3;
-    ctx.fillStyle=colors[i];
-    ctx.fillRect(x,y,2*TW-4,2*TH-6);
-    ctx.strokeStyle=['#2a50a0','#2a6030','#5a3020'][i];
-    ctx.lineWidth=1;
-    ctx.strokeRect(x+.5,y+.5,2*TW-5,2*TH-7);
-    // Screen
-    ctx.fillStyle=lights[i];
-    ctx.fillRect(x+4,y+3,2*TW-12,10);
-    // Staff dot
-    ctx.fillStyle=['#4e9bff','#4ade80','#ff8c42'][i]+'99';
-    ctx.beginPath();ctx.arc(x+TW-2,y+2*TH-10,3,0,Math.PI*2);ctx.fill();
-  });
-}
-
-function drawEntrance() {
-  const x=16*TW+2, y=8*TH+2;
-  ctx.fillStyle='#141e2e';
-  ctx.fillRect(x,y,3*TW-4,3*TH-4);
-  // QR icon
-  const qx=x+8,qy=y+6;
-  ctx.fillStyle='#60a5fa60';
-  [[0,0,6,6],[0,8,6,4],[8,0,4,6],[8,8,4,4],[14,0,4,14],[0,14,14,4]].forEach(([a,b,w,h])=>{
-    ctx.fillRect(qx+a,qy+b,w,h);
-  });
-  ctx.strokeStyle='#3a5a70';ctx.lineWidth=1;
-  ctx.strokeRect(x+.5,y+.5,3*TW-5,3*TH-5);
-  // Label
-  ctx.font='6px monospace';ctx.fillStyle='#60a5fa80';ctx.textAlign='center';
-  ctx.fillText('SCAN',x+3*TW/2,y+3*TH-6);
-}
-
-function drawWalls(hlB) {
-  // Outer border of each hall
-  ctx.lineWidth=1.5;
-  ctx.strokeStyle='#224a28';
-  ctx.strokeRect(1*TW+.5,1*TH+.5,5*TW-1,4*TH-1);
-  ctx.strokeStyle= hlB?'#4e9bff':'#1e3a80';
-  if(hlB){ctx.shadowColor='#4e9bff';ctx.shadowBlur=10;}
-  ctx.strokeRect(7*TW+.5,1*TH+.5,5*TW-1,4*TH-1);
+  // Screen on stage back wall
+  ctx.fillStyle=PAL.screen;ctx.fillRect(x0+4,4*TH+4,3*TW-8,TH-8+TH/2);
+  ctx.fillStyle=screenC+'80';ctx.fillRect(x0+6,4*TH+6,3*TW-12,TH-10+TH/2-2);
+  if(zone===B){ctx.shadowColor='#4e9bff';ctx.shadowBlur=8;}
+  ctx.fillStyle=screenC+'50';ctx.fillRect(x0+6,4*TH+6,3*TW-12,TH-10+TH/2-2);
   ctx.shadowBlur=0;
-  ctx.strokeStyle='#5a3a10';
-  ctx.strokeRect(13*TW+.5,1*TH+.5,5*TW-1,4*TH-1);
-}
 
-function drawLabels(hlB) {
-  ctx.textAlign='center';
-
-  // Hall A
-  ctx.font='bold 7px monospace';ctx.fillStyle='#3ade60cc';
-  ctx.fillText('HALL  A',3.5*TW,1*TH-4);
-  ctx.font='6px monospace';ctx.fillStyle='#2a9a4060';
-  ctx.fillText('基础技术',3.5*TW,1*TH+3);
-
-  // Hall B
-  ctx.font='bold 8px monospace';
-  ctx.fillStyle=hlB?'#80c8ff':'#4e9bffaa';
-  ctx.fillText('HALL  B',9.5*TW,1*TH-4);
-  ctx.font='6px monospace';
-  if(hlB){ctx.fillStyle='#4e9bffcc';ctx.fillText('★  跨端开发  ·  推荐',9.5*TW,1*TH+3);}
-  else{ctx.fillStyle='#4e9bff60';ctx.fillText('跨端开发',9.5*TW,1*TH+3);}
-
-  // Hall C
-  ctx.font='bold 7px monospace';ctx.fillStyle='#fbbf24cc';
-  ctx.fillText('HALL  C',15.5*TW,1*TH-4);
-  ctx.font='6px monospace';ctx.fillStyle='#fbbf2460';
-  ctx.fillText('生态合作',15.5*TW,1*TH+3);
-
-  // Corridor arrows
-  ctx.fillStyle='#3a5a7840';ctx.font='8px monospace';
-  ctx.fillText('◁  通 道  ▷',9*TW,6*TH+TH/2+3);
-
-  // Bottom zones
-  ctx.font='6px monospace';
-  ctx.fillStyle='#a78bfa60';ctx.fillText('大厅',2*TW,9*TH+14);
-  ctx.fillStyle='#60a5fa60';ctx.fillText('展 览 区',10*TW,9*TH+14);
-  ctx.fillStyle='#8892a460';ctx.fillText('↑ 入口',17.5*TW,9*TH+14);
-}
-
-// ── AVATAR ──────────────────────────────
-function drawAvatar(x,y,color,emoji,name,alpha,scale) {
-  ctx.save();
-  ctx.globalAlpha=alpha;
-  ctx.translate(x,y);
-  if(scale!==1)ctx.scale(scale,scale);
-  // Glow
-  const g=ctx.createRadialGradient(0,0,2,0,0,16);
-  g.addColorStop(0,color+'66');g.addColorStop(1,color+'00');
-  ctx.fillStyle=g;ctx.beginPath();ctx.arc(0,0,16,0,Math.PI*2);ctx.fill();
-  // Ring
-  ctx.beginPath();ctx.arc(0,0,9,0,Math.PI*2);
-  ctx.fillStyle=color+'33';ctx.fill();
-  ctx.strokeStyle=color;ctx.lineWidth=2;ctx.stroke();
-  // Emoji
-  ctx.font='10px serif';ctx.textAlign='center';ctx.fillStyle='#fff';
-  ctx.fillText(emoji,0,4);
-  // Name tag
-  ctx.font='bold 8px -apple-system,sans-serif';
-  const tw=ctx.measureText(name).width+10;
-  ctx.fillStyle='rgba(10,14,26,.9)';
-  ctx.beginPath();
-  ctx.roundRect(-tw/2,13,tw,13,3);
-  ctx.fill();
-  ctx.strokeStyle=color+'cc';ctx.lineWidth=1;
-  ctx.beginPath();ctx.roundRect(-tw/2,13,tw,13,3);ctx.stroke();
-  ctx.fillStyle=color;ctx.fillText(name,0,23);
-  ctx.restore();
-}
-
-// ── CALLOUT CARD ────────────────────────
-function drawCard(x,y,alpha) {
-  ctx.save();ctx.globalAlpha=alpha;
-  const w=150,h=52;
-  const cx=x-w/2,cy=y-h-20;
-  // Shadow
-  ctx.shadowColor='rgba(0,0,0,.5)';ctx.shadowBlur=16;
-  ctx.fillStyle='#0d1e3e';
-  ctx.beginPath();ctx.roundRect(cx,cy,w,h,8);ctx.fill();
-  ctx.shadowBlur=0;
-  ctx.strokeStyle='#4e9bff';ctx.lineWidth=1.5;
-  ctx.beginPath();ctx.roundRect(cx,cy,w,h,8);ctx.stroke();
-  // Arrow connector
-  ctx.fillStyle='#4e9bff';
-  ctx.beginPath();ctx.moveTo(x-6,cy+h);ctx.lineTo(x+6,cy+h);ctx.lineTo(x,cy+h+10);ctx.closePath();ctx.fill();
-  // Text
-  ctx.font='bold 8px monospace';ctx.fillStyle='#4e9bff';ctx.textAlign='left';
-  ctx.fillText('★  SESSION B  · 推荐',cx+10,cy+16);
-  ctx.font='bold 11px -apple-system,sans-serif';ctx.fillStyle='#fff';
-  ctx.fillText('Kotlin Multiplatform',cx+10,cy+32);
-  ctx.font='9px -apple-system,sans-serif';ctx.fillStyle='#9aa3b8';
-  ctx.fillText('匹配标签: Kotlin · 跨端',cx+10,cy+46);
-  ctx.restore();
-}
-
-// ── SPOTLIGHT EFFECT ────────────────────
-function drawSpotlight(hlX,hlY,hlW,hlH,alpha) {
-  ctx.save();ctx.globalAlpha=alpha;
-  ctx.fillStyle='rgba(0,0,0,0.55)';
-  ctx.fillRect(0,0,W,H);
-  ctx.globalCompositeOperation='destination-out';
-  ctx.fillStyle='rgba(0,0,0,1)';
-  const pad=12;
-  ctx.beginPath();
-  ctx.roundRect(hlX-pad,hlY-pad,hlW+pad*2,hlH+pad*2,8);
-  ctx.fill();
-  ctx.globalCompositeOperation='source-over';
-  ctx.restore();
-}
-
-// ── ANIMATION ───────────────────────────
-// Path: entrance(17,9) → corridor(9,6) → hallB entrance(9,5)
-const PATH = [
-  {c:17.5, r:9.5},  // entrance
-  {c:17.5, r:6.5},  // corridor (go up)
-  {c:9.5,  r:6.5},  // corridor (go left)
-  {c:9.5,  r:4.5},  // hall B
-];
-
-let animFrame=null;
-let startTime=null;
-
-// Timeline (seconds):
-// 0.0–0.8: map fades in
-// 0.8–1.8: spotlight dims others, Hall B glows
-// 1.8–4.0: Lukas walks path
-// 4.0–5.0: card pops up
-
-function lerp(a,b,t){return a+(b-a)*t;}
-function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
-function ease(t){return t<0.5?2*t*t:1-Math.pow(-2*t+2,2)/2;}
-
-function getLukasPos(progress) {
-  // progress 0..1 maps to full path
-  const totalSegs=PATH.length-1;
-  const t=progress*totalSegs;
-  const seg=Math.min(Math.floor(t),totalSegs-1);
-  const segT=ease(t-seg);
-  const a=PATH[seg],b=PATH[seg+1];
-  return {
-    x: lerp(a.c,b.c,segT)*TW,
-    y: lerp(a.r,b.r,segT)*TH,
-  };
-}
-
-function frame(ts) {
-  if(!startTime)startTime=ts;
-  const elapsed=(ts-startTime)/1000;
-
-  // Phase timings
-  const fadeInEnd=0.8;
-  const spotlightEnd=1.8;
-  const walkEnd=4.2;
-  const cardEnd=5.5;
-
-  // 1. Map fade-in alpha
-  const mapAlpha=clamp((elapsed/fadeInEnd),0,1);
-
-  // 2. Base map
-  ctx.globalAlpha=mapAlpha;
-  drawBase(elapsed>fadeInEnd);
-  ctx.globalAlpha=1;
-
-  // 3. Spotlight (dims non-B areas)
-  if(elapsed>fadeInEnd) {
-    const spT=clamp((elapsed-fadeInEnd)/(spotlightEnd-fadeInEnd),0,1);
-    drawSpotlight(7*TW,1*TH,5*TW,4*TH,ease(spT)*0.55);
-  }
-
-  // 4. Walk Lukas
-  if(elapsed>spotlightEnd) {
-    const walkT=clamp((elapsed-spotlightEnd)/(walkEnd-spotlightEnd),0,1);
-    const pos=getLukasPos(walkT);
-    // Footstep trail (faint dots)
-    if(walkT>0.05){
-      for(let i=0;i<8;i++){
-        const tp=getLukasPos(Math.max(0,walkT-i*0.06));
-        ctx.globalAlpha=(0.15-i*0.015)*walkT;
-        ctx.fillStyle='#4e9bff';
-        ctx.beginPath();ctx.arc(tp.x,tp.y,3,0,Math.PI*2);ctx.fill();
+  // Seat rows (2 rows × 3 seats)
+  for(let row=0;row<2;row++){
+    for(let s=0;s<3;s++){
+      const sx=x0+4+s*TW+s*2;
+      const sy=2*TH+4+row*(TH-2);
+      // Chair
+      ctx.fillStyle=chairC;ctx.fillRect(sx,sy,TW-6,TH-8);
+      ctx.fillStyle='rgba(255,255,255,.12)';ctx.fillRect(sx,sy,TW-6,3);
+      // Seated person dot
+      if(zone===B||(s+row)%2===0){
+        ctx.fillStyle=zone===B?'#90c0ff':'rgba(255,255,255,.4)';
+        ctx.beginPath();ctx.arc(sx+(TW-6)/2,sy+5,4,0,Math.PI*2);ctx.fill();
       }
-      ctx.globalAlpha=1;
-    }
-    drawAvatar(pos.x, pos.y, '#4e9bff', '🧑', 'Lukas', 1, 1);
-
-    // 5. Recommendation card
-    if(elapsed>walkEnd) {
-      const cardT=clamp((elapsed-walkEnd)/(cardEnd-walkEnd),0,1);
-      const pos2=getLukasPos(1);
-      const scaleT=ease(cardT);
-      ctx.save();
-      ctx.translate(pos2.x,pos2.y-20);
-      ctx.scale(0.4+scaleT*0.6,0.4+scaleT*0.6);
-      ctx.translate(-pos2.x,-(pos2.y-20));
-      drawCard(pos2.x, pos2.y-10, clamp(cardT*2,0,1));
-      ctx.restore();
     }
   }
 
-  if(elapsed<cardEnd+1) {
-    animFrame=requestAnimationFrame(frame);
+  // Plants (corners of hall)
+  [[x0+3,1*TH+3],[x0+4*TW-6,1*TH+3]].forEach(([px,py])=>{
+    ctx.fillStyle=PAL.plant_pot;ctx.fillRect(px,py+6,8,6);
+    ctx.fillStyle=PAL.plant_dark;ctx.beginPath();ctx.arc(px+4,py+4,6,0,Math.PI*2);ctx.fill();
+    ctx.fillStyle=PAL.plant_leaf;ctx.beginPath();ctx.arc(px+4,py+3,4,0,Math.PI*2);ctx.fill();
+    ctx.beginPath();ctx.arc(px+1,py+5,3,0,Math.PI*2);ctx.fill();
+    ctx.beginPath();ctx.arc(px+7,py+5,3,0,Math.PI*2);ctx.fill();
+  });
+
+  // Rug under seats (Hall B only)
+  if(zone===B){
+    ctx.fillStyle=PAL.rug_b+'80';
+    ctx.fillRect(x0+2,2*TH,4*TW-4,2*TH);
+    ctx.strokeStyle=PAL.rug_b2;ctx.lineWidth=1;
+    ctx.strokeRect(x0+3,2*TH+1,4*TW-6,2*TH-2);
   }
 }
 
-function startAnim() {
-  if(animFrame)cancelAnimationFrame(animFrame);
-  startTime=null;
-  animFrame=requestAnimationFrame(frame);
+function drawExhibitionBooths(){
+  // 3 booths
+  [[6,8],[8,9],[10,8]].forEach(([c,r],i)=>{
+    const x=c*TW+1,y=r*TH+2;
+    const clr=['#2a4a8a','#1e6030','#7a3018'][i];
+    const lit=['#60a0ff','#60d080','#ff8050'][i];
+    // Table
+    ctx.fillStyle=PAL.table;ctx.fillRect(x,y,TW*1.5,TH-4);
+    ctx.fillStyle=PAL.tableLight;ctx.fillRect(x,y,TW*1.5,4);
+    // Screen on table
+    ctx.fillStyle=clr;ctx.fillRect(x+3,y+4,TW-4,TH-10);
+    ctx.fillStyle=lit+'60';ctx.fillRect(x+4,y+5,TW-6,TH-12);
+    // Person behind booth
+    ctx.fillStyle=lit+'cc';ctx.beginPath();ctx.arc(x+TW*0.75,y+TH+4,4,0,Math.PI*2);ctx.fill();
+  });
 }
 
-// Auto-start
-startAnim();
+function drawLobby(){
+  const x=1*TW,y=8*TH;
+  // Reception desk
+  ctx.fillStyle=PAL.table;ctx.fillRect(x+2,y+2,3*TW-4,TH/2);
+  ctx.fillStyle=PAL.tableLight;ctx.fillRect(x+2,y+2,3*TW-4,4);
+  // Sofa (bottom)
+  ctx.fillStyle='#5a3a80';ctx.fillRect(x+2,y+TH+6,3*TW-4,TH-8);
+  ctx.fillStyle='#6a4a90';ctx.fillRect(x+2,y+TH+6,3*TW-4,4);
+  // Plant
+  ctx.fillStyle=PAL.plant_pot;ctx.fillRect(x+TW*1.2,y+TH*2.1,7,5);
+  ctx.fillStyle=PAL.plant_dark;ctx.beginPath();ctx.arc(x+TW*1.2+3,y+TH*2.1,5,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle=PAL.plant_leaf;ctx.beginPath();ctx.arc(x+TW*1.2+3,y+TH*2.1-1,3,0,Math.PI*2);ctx.fill();
+}
+
+function drawEntrance(){
+  const x=14*TW,y=8*TH;
+  // QR stand
+  ctx.fillStyle='#2a3a50';ctx.fillRect(x+TW,y+4,TW-4,TH*2-8);
+  ctx.fillStyle='rgba(255,255,255,.05)';ctx.fillRect(x+TW,y+4,TW-4,4);
+  // QR pixels
+  ctx.fillStyle='#80c0ff';
+  const qd=4,qx=x+TW+4,qy=y+8;
+  [[0,0],[1,0],[2,0],[0,1],[2,1],[0,2],[1,2],[2,2],[4,0],[5,0],[4,2],[5,2],[4,1],[3,3],[5,3],[3,4],[4,4],[5,4]].forEach(([a,b])=>{
+    ctx.fillRect(qx+a*qd,qy+b*qd,qd-1,qd-1);
+  });
+  // Welcome mat
+  ctx.fillStyle='#3a5a4a';ctx.fillRect(x+2,y+TH*2+2,3*TW-4,6);
+  ctx.fillStyle='#4a7a5a';ctx.fillRect(x+4,y+TH*2+3,3*TW-8,2);
+}
+
+function drawLabels(hlB){
+  ctx.textAlign='center';
+  // Hall signs (pixel font style)
+  function hallSign(cx,cy,text,sub,clr,glow){
+    if(glow){ctx.shadowColor=clr;ctx.shadowBlur=8;}
+    // Sign board
+    ctx.fillStyle=glow?'#1a2a50':'#2a2018';
+    ctx.beginPath();ctx.roundRect(cx-28,cy-11,56,22,4);ctx.fill();
+    ctx.strokeStyle=clr;ctx.lineWidth=glow?2:1;
+    ctx.beginPath();ctx.roundRect(cx-28,cy-11,56,22,4);ctx.stroke();
+    ctx.shadowBlur=0;
+    ctx.font='bold 8px monospace';ctx.fillStyle=clr;ctx.fillText(text,cx,cy+2);
+    ctx.font='6px monospace';ctx.fillStyle=clr+'99';ctx.fillText(sub,cx,cy+11);
+  }
+  hallSign(3*TW,0.5*TH,'HALL A','基础技术',PAL.plant_leaf,false);
+  hallSign(8.5*TW,0.5*TH,hlB?'HALL B ★':'HALL B',hlB?'★ 推荐 · 跨端开发':'跨端开发',PAL.screenGlow,hlB);
+  hallSign(13.5*TW,0.5*TH,'HALL C','生态合作','#e07828',false);
+
+  // Corridor floor text
+  ctx.font='6px monospace';ctx.fillStyle='rgba(200,160,96,.35)';
+  ctx.fillText('◀─────── 通道 ───────▶',8*TW,6*TH+TH/2+3);
+
+  // Bottom zone labels
+  ctx.font='6px monospace';
+  ctx.fillStyle='rgba(160,120,220,.6)';ctx.fillText('大厅',2.5*TW,11*TH-4);
+  ctx.fillStyle='rgba(100,160,180,.6)';ctx.fillText('展览区',9*TW,11*TH-4);
+  ctx.fillStyle='rgba(140,160,180,.6)';ctx.fillText('↑ 入口',15.5*TW,11*TH-4);
+}
+
+function drawMap(hlB){
+  drawFloor();
+  drawFurnitureHall(1,A);
+  drawFurnitureHall(6,B);
+  drawFurnitureHall(11,C);
+  drawExhibitionBooths();
+  drawLobby();
+  drawEntrance();
+  drawLabels(hlB);
+  // Hall borders
+  ctx.lineWidth=1.5;
+  ctx.strokeStyle='#3a6a40';ctx.strokeRect(1*TW+.5,1*TH+.5,4*TW-1,5*TH-1);
+  if(hlB){ctx.strokeStyle='#5090ff';ctx.shadowColor='#4e9bff';ctx.shadowBlur=12;}
+  else ctx.strokeStyle='#2a4a90';
+  ctx.strokeRect(6*TW+.5,1*TH+.5,4*TW-1,5*TH-1);
+  ctx.shadowBlur=0;
+  ctx.strokeStyle='#7a4a20';ctx.strokeRect(11*TW+.5,1*TH+.5,4*TW-1,5*TH-1);
+}
+
+drawMap(true);
 </script>
 </body></html>
