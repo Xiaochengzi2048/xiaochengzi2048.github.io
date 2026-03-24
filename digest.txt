@@ -1,0 +1,71 @@
+🗞 AI Builders 日报 · 2026.03.24
+
+
+🐦 X / Twitter
+
+
+① Thariq Shihipar · Claude Code @ Anthropic
+
+Anthropic acquired a computer use company, then shipped the feature in Claude Code just 4 weeks later. Also flagged a new capability currently Desktop-only.
+
+Anthropic 收购了一家 computer use 公司，4 周后直接集成进 Claude Code 上线。还透露有个新能力目前只有 Desktop 版才有。
+
+🔗 x.com/trq212/status/2036302910498173034
+
+
+② Aaron Levie · CEO @ Box
+
+Computer use + the ability to write & run code are the "ultimate primitives" for agents. Simple framing, but cuts right to why agentic AI differs from chat AI.
+
+computer use 和代码生成/运行是 agent 承接知识工作的两个底层 primitive。切中了 agentic AI 和 chat AI 的核心区别。
+
+🔗 x.com/levie/status/2036290915950797314
+
+
+③ Alex Albert · Research @ Anthropic
+
+Highlighted a physicist's post on how Claude Opus 4.5 is accelerating real research. Also: "The future where I never have to open my laptop is becoming real very fast."
+
+分享了物理学家用 Opus 4.5 加速科研的文章。本人感慨：「不需要打开电脑就能完成工作的未来，来得比想象快得多。」
+
+🔗 x.com/alexalbert__/status/2036232980059062550
+
+
+④ Nan Yu · Head of Product @ Linear
+
+Codex picked up a subtle, oblique reference in a prompt that a human reviewer might have missed. His take: "Sometimes you have to step back and realize how insane this is."
+
+Codex 从 prompt 里捕捉到连人类可能漏掉的暗示并据此行动。感慨：「有时候你需要停下来，意识到这有多疯狂。」
+
+🔗 x.com/thenanyu/status/2036095568733143258
+
+
+⑤ Matt Turck · VC @ FirstMark Capital
+
+"Going to be hard to explain to future generations that there was a time when people spent years on something Claude Code can now do."
+
+「很难跟未来的人解释，Claude Code 几分钟搞定的事，曾经要花好几年。」
+
+🔗 x.com/mattturck/status/2036182407779365309
+
+
+⑥ Swyx · AI researcher / founder
+
+Analysis of the Dreamer x Meta exec hire — timed to the 9-month anniversary of Zuck's "Personal Superintelligence" memo. Worth reading for big-lab talent watchers.
+
+分析「Dreamer x Meta 高管引进」事件，结合 Zuck 备忘录 9 个月节点解读。关注大厂人才争夺战的可以看。
+
+🔗 x.com/swyx/status/2036337043475931340
+
+
+⑦ Sam Altman · CEO @ OpenAI
+
+Shared that he loved being on the Helion board and remains "extremely excited" about a future of abundant energy.
+
+对 Helion 任期回顾满满，对能源充裕的未来依然「极度兴奋」。
+
+🔗 x.com/sama/status/2036137695605563682
+
+
+📎 Notion 存档
+notion.so/AI-Builders-Digest-2026-03-24-32d941f98904816aa09eff363b022236
