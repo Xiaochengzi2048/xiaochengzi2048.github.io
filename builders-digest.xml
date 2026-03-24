@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>AI Builders Digest 🗞️</title>
+    <title>AI Builders Digest</title>
     <link>https://xiaochengzi2048.github.io/builders-digest.xml</link>
     <atom:link href="https://xiaochengzi2048.github.io/builders-digest.xml" rel="self" type="application/rss+xml"/>
-    <description>Daily digest of what top AI builders are saying — builders not influencers. Bilingual EN/ZH.</description>
+    <description>Daily AI builders digest · bilingual EN/ZH</description>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 24 Mar 2026 11:54:26 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Mar 2026 11:55:32 +0000</lastBuildDate>
     <item>
       <title>AI Builders Digest · 2026-03-24</title>
       <link>https://www.notion.so/AI-Builders-Digest-2026-03-24-32d941f98904816aa09eff363b022236</link>
       <guid isPermaLink="true">https://www.notion.so/AI-Builders-Digest-2026-03-24-32d941f98904816aa09eff363b022236</guid>
-      <pubDate>Tue, 24 Mar 2026 11:54:26 +0000</pubDate>
-      <description><![CDATA[<pre style="font-family:sans-serif;white-space:pre-wrap">AI Builders Digest — 2026-03-24
+      <pubDate>Tue, 24 Mar 2026 11:55:32 +0000</pubDate>
+      <description><![CDATA[AI Builders Digest — 2026-03-24
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 🐦 X / TWITTER
@@ -93,8 +93,7 @@ Steipete 分享了他用 Codex 辅助 code review 的工作流：先让 Codex �
 📅 今日无新播客内容
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-回复「调整设置」可修改推送频率、语言或摘要风格。
-</pre>]]></description>
+回复「调整设置」可修改推送频率、语言或摘要风格。]]></description>
     </item>
   </channel>
 </rss>
