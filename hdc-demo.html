@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HarmonyOS Developer Experience Platform · Demo</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"PingFang SC",sans-serif;background:#0a0e1a;color:#e8eaf0;min-height:100vh}
+.screen{display:none;min-height:100vh}
+.screen.active{display:flex;flex-direction:column}
+/* HOME */
+#home{align-items:center;justify-content:center;padding:40px 20px;text-align:center}
+.home-title{font-size:28px;font-weight:700;margin-bottom:8px;background:linear-gradient(135deg,#4e9bff,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.home-sub{color:#8892a4;font-size:15px;margin-bottom:48px}
+.demo-cards{display:flex;gap:24px;flex-wrap:wrap;justify-content:center}
+.demo-card{background:#141828;border:1px solid #2a3350;border-radius:16px;padding:32px 28px;width:340px;cursor:pointer;transition:all .3s;text-align:left}
+.demo-card:hover{border-color:#4e9bff;transform:translateY(-4px);box-shadow:0 16px 40px rgba(78,155,255,.15)}
+.card-tag{font-size:11px;font-weight:600;letter-spacing:1.5px;color:#4e9bff;margin-bottom:12px;text-transform:uppercase}
+.card-title{font-size:19px;font-weight:700;margin-bottom:10px;color:#fff}
+.card-desc{font-size:13.5px;color:#8892a4;line-height:1.6;margin-bottom:20px}
+.card-scenes{display:flex;gap:6px;flex-wrap:wrap}
+.scene-tag{font-size:11px;background:#1e2a40;color:#4e9bff;padding:3px 8px;border-radius:20px}
+.card-start{display:inline-block;margin-top:20px;background:#4e9bff;color:#fff;border:none;padding:10px 24px;border-radius:8px;font-size:14px;cursor:pointer;font-weight:600}
+/* DEMO */
+#demo1,#demo2{flex-direction:column}
+.demo-nav{display:flex;align-items:center;justify-content:space-between;padding:16px 32px;border-bottom:1px solid #1e2538}
+.nav-back{background:none;border:1px solid #2a3350;color:#8892a4;padding:6px 16px;border-radius:6px;cursor:pointer;font-size:13px}
+.nav-back:hover{color:#fff;border-color:#4e9bff}
+.nav-title{font-size:14px;color:#8892a4}
+.nav-step{font-size:13px;color:#4e9bff}
+.demo-content{flex:1;display:flex;gap:0;overflow:hidden}
+.story-panel{width:380px;flex-shrink:0;padding:40px 36px;border-right:1px solid #1e2538;display:flex;flex-direction:column;justify-content:center}
+.step-num{font-size:11px;color:#4e9bff;font-weight:600;letter-spacing:1.5px;margin-bottom:16px}
+.step-title{font-size:22px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:16px}
+.step-story{font-size:14px;color:#a0aab8;line-height:1.75}
+.mockup-panel{flex:1;padding:32px;display:flex;align-items:center;justify-content:center;background:#0d1220}
+.demo-footer{padding:20px 32px;border-top:1px solid #1e2538;display:flex;align-items:center;justify-content:space-between}
+.dots{display:flex;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;background:#2a3350;cursor:pointer;transition:all .2s}
+.dot.active{background:#4e9bff;width:20px;border-radius:4px}
+.btn{padding:10px 24px;border-radius:8px;cursor:pointer;font-size:14px;font-weight:600;border:none;transition:all .2s}
+.btn-prev{background:#1e2538;color:#8892a4}
+.btn-prev:hover{color:#fff}
+.btn-next{background:#4e9bff;color:#fff}
+.btn-next:hover{background:#3d8ae8}
+.btn-next:disabled{opacity:.4;cursor:default}
+/* MOCKUPS */
+.mockup{width:100%;max-width:520px;background:#141828;border-radius:12px;border:1px solid #2a3350;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.4)}
+.stat-row{display:flex;gap:16px;padding:24px}
+.stat-box{flex:1;border-radius:10px;padding:20px;text-align:center}
+.stat-box.bad{background:#2a1520;border:1px solid #5a2030}
+.stat-box.good{background:#0a2040;border:1px solid #1a4080}
+.stat-num{font-size:32px;font-weight:800;margin-bottom:4px}
+.stat-num.red{color:#ff4d6d}
+.stat-num.grey{color:#4a5568}
+.stat-num.blue{color:#4e9bff}
+.stat-label{font-size:12px;color:#8892a4}
+.phone-frame{border:3px solid #3a4560;border-radius:24px;overflow:hidden;width:240px;background:#0d1220;box-shadow:0 0 0 8px #1a2030}
+.phone-screen{padding:12px}
+.conf-map{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.hall{border-radius:8px;padding:10px 8px;text-align:center;font-size:11px;font-weight:600;position:relative}
+.hall-a{background:#1e3a2a;color:#4ade80;border:1px solid #2a5a3a}
+.hall-b{background:#1a2e50;color:#60a5fa;border:1px solid #2a4a70}
+.hall-b.rec{border-color:#4e9bff;box-shadow:0 0 12px rgba(78,155,255,.4)}
+.hall-c{background:#2a2010;color:#fbbf24;border:1px solid #4a3a10}
+.hall-lobby{background:#1e1e2e;color:#a78bfa;border:1px solid #3a2a5a}
+.rec-tag{position:absolute;top:-6px;right:-6px;background:#4e9bff;color:#fff;font-size:9px;padding:1px 4px;border-radius:4px}
+.avatar-dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:4px}
+.rec-card{background:#1a2e50;border:1px solid #4e9bff;border-radius:8px;padding:8px 10px;font-size:11px;color:#60a5fa}
+</style>
+
+/* more mockup styles */
+.map-view{position:relative;background:#0d1220;border-radius:10px;padding:16px;height:220px}
+.map-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(3,1fr);gap:4px;height:100%}
+.map-zone{border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:10px;color:#8892a4}
+.zone-a{background:#1a2e20}
+.zone-b{background:#1a2040}
+.zone-c{background:#2a2010}
+.zone-lobby{background:#1e1e2e;grid-column:2/4}
+.avatar{position:absolute;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:9px}
+.av-dot{width:14px;height:14px;border-radius:50%;border:2px solid rgba(255,255,255,.3)}
+.av-blue{background:#4e9bff}
+.av-green{background:#4ade80}
+.av-purple{background:#a78bfa}
+.follow-line{position:absolute;height:2px;background:linear-gradient(90deg,#4e9bff,#4ade80);border-radius:2px;opacity:.7}
+.follow-btn{background:#4e9bff;color:#fff;border:none;padding:5px 12px;border-radius:6px;font-size:11px;cursor:pointer;margin-top:8px}
+.badge-card{padding:20px}
+.av-big{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#4e9bff,#a78bfa);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:10px}
+.badge-row{display:flex;gap:8px;margin-bottom:14px}
+.badge{background:#1e2538;border-radius:8px;padding:8px 10px;font-size:11px;text-align:center;color:#a0aab8}
+.badge.lit{background:#1a2e50;color:#4e9bff;border:1px solid #2a4a70}
+.tweet{background:#0d1220;border-radius:8px;padding:12px;font-size:11px;color:#8892a4;border:1px solid #1e2538}
+.tweet-handle{color:#4e9bff;margin-bottom:4px;font-weight:600}
+.split-view{display:flex;gap:8px;height:220px}
+.split-half{flex:1;border-radius:8px;overflow:hidden;position:relative}
+.physical{background:#141828;border:1px solid #2a3350;padding:10px}
+.online-panel{background:#1a1040;border:1px solid #3a2070;padding:10px}
+.panel-label{font-size:10px;color:#8892a4;margin-bottom:8px;font-weight:600;text-transform:uppercase;letter-spacing:1px}
+.mini-dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin:2px}
+.wave-bubble{background:#4e9bff;color:#fff;border-radius:10px 10px 10px 2px;padding:6px 10px;font-size:16px;display:inline-block;margin:6px 0}
+.realtime-badge{background:#1a2e50;color:#60a5fa;border-radius:12px;padding:3px 8px;font-size:10px}
+.heatmap{padding:16px;height:220px;display:flex;flex-direction:column;gap:8px}
+.hmap-stats{display:flex;gap:12px;margin-bottom:8px}
+.hstat{background:#1e2538;border-radius:8px;padding:8px 12px;flex:1;text-align:center}
+.hstat-num{font-size:18px;font-weight:700;color:#4e9bff}
+.hstat-label{font-size:10px;color:#8892a4}
+.hmap-zones{display:flex;gap:8px;flex:1}
+.hmap-zone{flex:1;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;font-size:11px;font-weight:600}
+.hot{background:radial-gradient(circle,#ff6b35 0%,#c0392b 60%,#7b1a1a 100%);color:#fff}
+.warm{background:#1a2e50;color:#60a5fa}
+.cool{background:#1e2538;color:#8892a4}
+.notif-bar{background:#1a2e50;border:1px solid #2a4a70;border-radius:8px;padding:10px 12px;font-size:11px;color:#60a5fa;display:flex;align-items:center;justify-content:space-between}
+.send-btn{background:#4e9bff;color:#fff;border:none;padding:4px 10px;border-radius:5px;font-size:10px;cursor:pointer}
+.analytics{padding:16px}
+.metric-row{display:flex;gap:10px;margin-bottom:14px}
+.metric{flex:1;background:#141828;border-radius:8px;padding:12px;text-align:center;border:1px solid #2a3350}
+.metric.highlight{border-color:#4e9bff;background:#0d1f3a}
+.metric-num{font-size:22px;font-weight:800;color:#4e9bff;margin-bottom:2px}
+.metric-label{font-size:10px;color:#8892a4}
+.funnel{display:flex;align-items:center;gap:6px;margin-bottom:12px}
+.funnel-step{background:#1e2538;border-radius:6px;padding:6px 10px;font-size:11px;color:#a0aab8;text-align:center}
+.funnel-arrow{color:#4a5568;font-size:14px}
+.funnel-step.f1{color:#4e9bff}
+.funnel-step.f4{color:#ff6b35;background:#2a1510;border-color:#5a2010}
+.pool-list{display:flex;flex-direction:column;gap:6px}
+.pool-item{background:#141828;border-radius:6px;padding:7px 10px;font-size:11px;display:flex;align-items:center;gap:8px;border:1px solid #1e2538}
+.pool-tag{background:#1a2e50;color:#60a5fa;border-radius:10px;padding:2px 7px;font-size:10px}
+.compare-table{width:100%;border-collapse:collapse;font-size:13px}
+.compare-table th{padding:10px 14px;text-align:left;color:#8892a4;font-weight:600;border-bottom:1px solid #1e2538;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+.compare-table td{padding:10px 14px;border-bottom:1px solid #0d1220;vertical-align:middle}
+.compare-table td:first-child{color:#a0aab8}
+.compare-table td.old{color:#ff4d6d}
+.compare-table td.new{color:#4ade80;font-weight:600}
+.next-demo-btn{background:linear-gradient(135deg,#4e9bff,#a78bfa);color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;margin-top:16px;display:block}
+/* Demo 2 mockups */
+.discord-mock{padding:0;display:flex;height:220px}
+.discord-sidebar{width:80px;background:#0d1015;padding:8px;display:flex;flex-direction:column;gap:4px}
+.d-ch{font-size:10px;color:#4a5568;padding:4px 6px;border-radius:4px}
+.d-ch.active{background:#1e2538;color:#8892a4}
+.discord-main{flex:1;display:flex;flex-direction:column}
+.discord-top{background:#0d1220;padding:8px 12px;font-size:11px;color:#4a5568;border-bottom:1px solid #0a0d15;display:flex;justify-content:space-between}
+.online-count{color:#ff4d4d}
+.discord-msgs{flex:1;padding:12px;display:flex;align-items:center;justify-content:center}
+.empty-msg{text-align:center;color:#2a3350}
+.empty-emoji{font-size:32px;margin-bottom:8px}
+.pixel-world{position:relative;background:#0d1220;border-radius:10px;height:220px;overflow:hidden}
+.pw-grid{display:grid;grid-template-columns:repeat(8,1fr);grid-template-rows:repeat(6,1fr);gap:1px;height:100%;padding:4px}
+.pw-cell{border-radius:2px;background:#141828}
+.pw-plaza{background:#1a2030;border-radius:4px}
+.pw-stage{background:#1a2040;border-radius:4px}
+.pw-room{background:#1e1a2e;border-radius:4px}
+.pw-avatar{position:absolute;font-size:18px;display:flex;flex-direction:column;align-items:center;gap:1px}
+.pw-name{font-size:9px;background:rgba(0,0,0,.6);padding:1px 4px;border-radius:3px;color:#e8eaf0;white-space:nowrap}
+.speech-bubble{position:absolute;background:#4e9bff;color:#fff;font-size:10px;padding:5px 8px;border-radius:8px 8px 8px 2px;white-space:nowrap;box-shadow:0 2px 8px rgba(78,155,255,.4)}
+.follow-popup{position:absolute;background:#1a2e50;border:1px solid #4e9bff;border-radius:8px;padding:6px 10px;font-size:10px;color:#60a5fa;display:flex;align-items:center;gap:6px}
+.profile-card{padding:16px;height:220px;overflow:hidden}
+.profile-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.p-av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#f472b6,#a78bfa);display:flex;align-items:center;justify-content:center;font-size:18px}
+.p-name{font-size:14px;font-weight:700;color:#fff}
+.p-handle{font-size:11px;color:#8892a4}
+.progress-bar{background:#1e2538;border-radius:20px;height:8px;margin-bottom:4px}
+.progress-fill{height:100%;border-radius:20px;background:linear-gradient(90deg,#4e9bff,#a78bfa)}
+.progress-label{font-size:11px;color:#8892a4;margin-bottom:10px}
+.badges-row{display:flex;gap:6px;margin-bottom:10px}
+.badge-sm{background:#1e2538;border-radius:6px;padding:5px 8px;font-size:10px;color:#8892a4}
+.badge-sm.lit{background:#1a2e50;color:#60a5fa;border:1px solid #2a4a70}
+.badge-sm.locked{opacity:.4}
+.activity-feed{display:flex;flex-direction:column;gap:5px}
+.af-item{background:#0d1220;border-radius:6px;padding:6px 10px;font-size:11px;color:#8892a4;display:flex;justify-content:space-between}
+.af-pts{color:#4ade80;font-weight:600}
+.stage-view{position:relative;height:220px;background:#0d1220;border-radius:10px;overflow:hidden}
+.stage-platform{position:absolute;bottom:70px;left:50%;transform:translateX(-50%);width:200px;height:50px;background:#1a2040;border-radius:8px;border:1px solid #2a4a80;display:flex;align-items:center;justify-content:center;gap:8px}
+.mic-icon{font-size:18px}
+.stage-title{font-size:10px;color:#60a5fa;text-align:center}
+.audience{position:absolute;bottom:10px;left:0;right:0;display:flex;flex-wrap:wrap;gap:4px;padding:0 20px;justify-content:center}
+.aud-dot{font-size:12px}
+.chat-feed{position:absolute;top:10px;right:10px;width:140px;background:rgba(13,18,32,.85);border-radius:8px;padding:6px;display:flex;flex-direction:column;gap:3px}
+.chat-msg{font-size:9.5px;color:#a0aab8;line-height:1.4}
+.appl-count{position:absolute;top:10px;left:10px;background:#1a2e50;border-radius:8px;padding:4px 8px;font-size:11px;color:#60a5fa}
+.mystery-map{position:relative;height:220px;background:#0d1220;border-radius:10px;overflow:hidden;padding:12px}
+.mm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;height:100%}
+.mm-room{background:#141828;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;font-size:10px;color:#4a5568}
+.mm-room.special{background:#2a1a00;border:1px solid #fbbf24;color:#fbbf24;animation:glow 2s infinite}
+.mm-room.locked{opacity:.5}
+@keyframes glow{0%,100%{box-shadow:0 0 8px rgba(251,191,36,.3)}50%{box-shadow:0 0 20px rgba(251,191,36,.7)}}
+.unlock-overlay{position:absolute;inset:0;background:rgba(10,14,26,.8);display:flex;align-items:center;justify-content:center;border-radius:10px}
+.unlock-badge{background:#2a1a00;border:2px solid #fbbf24;border-radius:12px;padding:12px 20px;text-align:center}
+.unlock-emoji{font-size:28px;margin-bottom:4px}
+.unlock-text{font-size:13px;color:#fbbf24;font-weight:700}
+.circle-room{position:relative;height:220px;background:#0d1220;border-radius:10px;overflow:hidden;padding:12px}
+.circle-inner{position:absolute;inset:20px;border:1px dashed #2a3350;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.lead-av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#fbbf24,#f59e0b);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#1a0a00}
+.circle-avatars{position:absolute;inset:0}
+.c-av{position:absolute;font-size:14px}
+.grant-card{padding:16px;height:220px;display:flex;flex-direction:column;gap:12px}
+.notif-card{background:#0d1f0d;border:1px solid #1a4a1a;border-radius:10px;padding:12px;display:flex;gap:10px}
+.notif-icon{font-size:24px}
+.notif-text{font-size:12px;color:#4ade80;font-weight:600}
+.notif-sub{font-size:11px;color:#8892a4;margin-top:2px}
+.grant-info{background:#141828;border-radius:8px;padding:12px;border:1px solid #2a3350}
+.grant-amount{font-size:20px;font-weight:800;color:#fbbf24;margin-bottom:4px}
+.grant-label{font-size:11px;color:#8892a4}
+.convo-bubble{background:#1a2e50;border-radius:8px;padding:10px;font-size:12px;color:#60a5fa;display:flex;gap:8px;align-items:flex-start}
+.pin-icon{font-size:14px}
+.constellation{position:relative;height:220px;background:#0d1220;border-radius:10px;overflow:hidden}
+.const-node{position:absolute;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff}
+.const-line{position:absolute;background:rgba(78,155,255,.15);height:1px;transform-origin:left center}
+.const-stats{position:absolute;bottom:10px;left:10px;right:10px;display:flex;gap:6px}
+.cstat{flex:1;background:rgba(13,18,32,.85);border-radius:6px;padding:5px;text-align:center}
+.cstat-num{font-size:13px;font-weight:700;color:#4e9bff}
+.cstat-label{font-size:9px;color:#8892a4}
+.const-closing{position:absolute;top:10px;left:0;right:0;text-align:center;font-size:12px;color:#8892a4;font-style:italic}
+</style>
+
+</head>
+<body>
+<!-- HOME -->
+<div id="home" class="screen active">
+  <div style="margin-bottom:20px;padding:28px 32px 0;text-align:left">
+    <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#4e9bff;font-weight:600">Concept Demo</span>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px">
+    <div class="home-title" style="font-size:32px;margin-bottom:12px">HarmonyOS Developer Experience</div>
+    <div class="home-sub" style="max-width:500px;line-height:1.7">用空间感降低海外开发者的参与门槛<br>让每一次互动都成为可追踪的数据</div>
+    <div class="demo-cards">
+      <div class="demo-card" onclick="startDemo(1)">
+        <div class="card-tag">Demo 01</div>
+        <div class="card-title">HarmonyOS DevDay Berlin</div>
+        <div class="card-desc">线下 × 线上融合。一个德国开发者，和一场华为没有团队驻守的海外活动。</div>
+        <div class="card-scenes"><span class="scene-tag">海外活动</span><span class="scene-tag">线上线下融合</span><span class="scene-tag">数据追踪</span></div>
+        <button class="card-start">开始体验 →</button>
+      </div>
+      <div class="demo-card" onclick="startDemo(2)">
+        <div class="card-tag">Demo 02</div>
+        <div class="card-title">HarmonyOS Developer Community</div>
+        <div class="card-desc">纯线上虚拟社区。不是又一个 Discord，是一个开发者想驻留的地方。</div>
+        <div class="card-scenes"><span class="scene-tag">开发者社区</span><span class="scene-tag">游戏化成长</span><span class="scene-tag">贡献者地图</span></div>
+        <button class="card-start">开始体验 →</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- DEMO1 -->
+<div id="demo1" class="screen">
+  <div class="demo-nav">
+    <button class="nav-back" onclick="goHome()">← 返回首页</button>
+    <span class="nav-title">HarmonyOS DevDay Berlin</span>
+    <span class="nav-step" id="d1-step-label">1 / 8</span>
+  </div>
+  <div class="demo-content">
+    <div class="story-panel" id="d1-story"></div>
+    <div class="mockup-panel" id="d1-mockup"></div>
+  </div>
+  <div class="demo-footer">
+    <button class="btn btn-prev" onclick="d1Prev()">← 上一步</button>
+    <div class="dots" id="d1-dots"></div>
+    <button class="btn btn-next" id="d1-next-btn" onclick="d1Next()">下一步 →</button>
+  </div>
+</div>
+<!-- DEMO2 -->
+<div id="demo2" class="screen">
+  <div class="demo-nav">
+    <button class="nav-back" onclick="goHome()">← 返回首页</button>
+    <span class="nav-title">HarmonyOS Developer Community</span>
+    <span class="nav-step" id="d2-step-label">1 / 7</span>
+  </div>
+  <div class="demo-content">
+    <div class="story-panel" id="d2-story"></div>
+    <div class="mockup-panel" id="d2-mockup"></div>
+  </div>
+  <div class="demo-footer">
+    <button class="btn btn-prev" onclick="d2Prev()">← 上一步</button>
+    <div class="dots" id="d2-dots"></div>
+    <button class="btn btn-next" id="d2-next-btn" onclick="d2Next()">下一步 →</button>
+  </div>
+</div>
+
+<script>
+const D1 = [
+  {
+    num:'STEP 01', title:'6万欧，47张名片，0条数据',
+    story:'慕尼黑某大会，华为赞助了展台，两个中国同事守着发传单加 LinkedIn。会后收了 47 张名片，80% 没回音。那次活动花了 6 万欧，留下 0 条可追踪数据。<br><br>现在换一种方式。',
+    mockup:`<div class="mockup"><div class="stat-row">
+      <div class="stat-box bad"><div class="stat-num red">47</div><div class="stat-label">张名片收集</div><div style="font-size:11px;color:#ff4d6d;margin-top:6px">80% 无回音</div></div>
+      <div class="stat-box good" style="background:#1a1a2a;border-color:#2a2a4a"><div class="stat-num grey">0</div><div class="stat-label">可追踪数据</div><div style="font-size:11px;color:#4a5568;margin-top:6px">活动后无从跟进</div></div>
+      </div><div style="padding:0 24px 20px;text-align:center;font-size:12px;color:#4a5568">预算 6 万欧 · 2 人驻守 · 1 周后记忆归零</div></div>`
+  },
+  {
+    num:'STEP 02', title:'Lukas 扫码入场',
+    story:'德国开发者 Lukas 扫了二维码，手机弹出了一张活的会场地图。<br><br>系统读取了他的标签：<strong style="color:#4e9bff">Kotlin · 跨端开发</strong>，自动推荐了 Session B。',
+    mockup:`<div class="mockup" style="padding:16px">
+      <div style="font-size:11px;color:#8892a4;margin-bottom:10px;text-align:center">📱 Lukas 的手机</div>
+      <div style="background:#0d1220;border-radius:12px;padding:12px;border:2px solid #2a3350">
+        <div class="conf-map">
+          <div class="hall hall-a">A 馆<br><span style="font-size:9px">基础技术</span></div>
+          <div class="hall hall-b rec">B 馆<span class="rec-tag">★ 推荐</span><br><span style="font-size:9px">跨端开发</span></div>
+          <div class="hall hall-c">C 馆<br><span style="font-size:9px">生态合作</span></div>
+          <div class="hall hall-lobby"><span class="avatar-dot av-blue" style="width:10px;height:10px;border-radius:50%;background:#4e9bff;display:inline-block"></span>入口</div>
+        </div>
+        <div class="rec-card">★ Session B · Kotlin Multiplatform 实战<br><span style="color:#8892a4">匹配你的标签: Kotlin · 跨端开发</span></div>
+      </div></div>`
+  },
+  {
+    num:'STEP 03', title:'地图上的熟面孔',
+    story:'Lukas 在地图上发现了一个他在 GitHub 上 follow 过的开发者，也要去 B 馆。<br><br>他点了「跟随」——门口两人自然碰面。没有华为撮合，他们自己找到了彼此。',
+    mockup:`<div class="mockup" style="padding:16px">
+      <div style="font-size:11px;color:#8892a4;margin-bottom:8px">📍 实时地图</div>
+      <div class="map-view" style="position:relative;background:#0d1220;border-radius:10px;height:180px;padding:12px">
+        <div style="position:absolute;top:20%;left:30%;display:flex;flex-direction:column;align-items:center;gap:2px">
+          <div style="width:14px;height:14px;border-radius:50%;background:#4e9bff;border:2px solid #fff"></div>
+          <span style="font-size:9px;background:rgba(0,0,0,.7);padding:1px 4px;border-radius:3px">Lukas</span>
+        </div>
+        <div style="position:absolute;top:35%;left:55%;display:flex;flex-direction:column;align-items:center;gap:2px">
+          <div style="width:14px;height:14px;border-radius:50%;background:#4ade80;border:2px solid #fff"></div>
+          <span style="font-size:9px;background:rgba(0,0,0,.7);padding:1px 4px;border-radius:3px">Marco</span>
+          <span style="font-size:8px;color:#4ade80">@github ✓</span>
+        </div>
+        <div style="position:absolute;top:60%;left:45%;background:#1a2040;border:1px solid #4e9bff;border-radius:6px;padding:5px 10px;font-size:10px;color:#60a5fa">📍 共同目的地: B 馆</div>
+        <div style="position:absolute;bottom:8px;right:8px"><button class="follow-btn">跟随 →</button></div>
+      </div></div>`
+  },
+  {
+    num:'STEP 04', title:'路过展台，完成挑战',
+    story:'Lukas 路过华为展台，完成了一个 2 分钟的代码挑战。<br><br>徽章自动挂上了他的头像。他截图发了 Twitter，#HDCBerlin 话题下多了一条真实内容。',
+    mockup:`<div class="mockup"><div class="badge-card">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+        <div class="av-big">👨‍💻</div>
+        <div><div style="font-size:15px;font-weight:700;color:#fff">Lukas M.</div><div style="font-size:11px;color:#8892a4">Berlin, Germany · Kotlin Dev</div></div>
+      </div>
+      <div class="badge-row">
+        <div class="badge lit">🏅 代码挑战者</div>
+        <div class="badge lit">🔵 Session B</div>
+        <div class="badge lit">⭐ 早鸟入场</div>
+      </div>
+      <div class="tweet">
+        <div class="tweet-handle">@lukas_dev</div>
+        <div>Just earned my first badge at #HDCBerlin 🏅 The Kotlin session was 🔥 @HarmonyOS_Dev</div>
+        <div style="margin-top:6px;color:#4a5568">❤️ 23  🔁 8  💬 4</div>
+      </div></div></div>`
+  },
+  {
+    num:'STEP 05', title:'芬兰的 Emily，在家看到了同一张地图',
+    story:'芬兰开发者 Emily 在家打开了同一张地图。她看到线下的人流，实时看到 Session B 正在进行。<br><br>她加入了线上席位，给 Lukas 发了个 👋。Lukas 的手机震动了一下。',
+    mockup:`<div class="mockup" style="padding:12px">
+      <div class="split-view" style="height:200px">
+        <div class="split-half physical">
+          <div class="panel-label">🏛 线下现场</div>
+          <div style="display:flex;flex-wrap:wrap;gap:3px;margin-bottom:8px">
+            ${Array(18).fill(0).map((_,i)=>`<span style="font-size:11px">${['👨','👩','🧑','👦','👧'][i%5]}</span>`).join('')}
+          </div>
+          <div style="font-size:10px;color:#4e9bff">✓ Session B 进行中</div>
+        </div>
+        <div class="split-half online-panel">
+          <div class="panel-label">🌐 线上观众</div>
+          <div style="display:flex;flex-direction:column;align-items:flex-start;gap:6px">
+            <div style="display:flex;align-items:center;gap:6px">
+              <div style="width:28px;height:28px;border-radius:50%;background:#a78bfa;display:flex;align-items:center;justify-content:center;font-size:12px">👩</div>
+              <div><div style="font-size:11px;color:#fff">Emily K.</div><div class="realtime-badge">🔴 实时观看</div></div>
+            </div>
+            <div class="wave-bubble">👋</div>
+            <div style="font-size:10px;color:#a78bfa">→ Lukas 收到了你的招呼</div>
+          </div>
+        </div>
+      </div></div>`
+  },
+  {
+    num:'STEP 06', title:'Mei 在北京，远程看到了这一切',
+    story:'华为运营 Mei 坐在北京办公室。她的屏幕上是一张实时热力图。<br><br>B 馆聚集了大量人流，她推送了一条通知给 C 馆附近的人：「B 馆有惊喜，还有 10 分钟」。',
+    mockup:`<div class="mockup"><div class="heatmap">
+      <div class="hmap-stats">
+        <div class="hstat"><div class="hstat-num">247</div><div class="hstat-label">在场</div></div>
+        <div class="hstat"><div class="hstat-num" style="color:#a78bfa">89</div><div class="hstat-label">线上</div></div>
+        <div class="hstat"><div class="hstat-num" style="color:#ff6b35">1,847</div><div class="hstat-label">互动</div></div>
+      </div>
+      <div class="hmap-zones" style="height:90px">
+        <div class="hmap-zone cool">C 馆<br><span style="font-size:9px">偏冷</span></div>
+        <div class="hmap-zone hot">B 馆<br><span style="font-size:9px;color:rgba(255,255,255,.8)">🔥 聚集</span></div>
+        <div class="hmap-zone warm">A 馆<br><span style="font-size:9px">正常</span></div>
+      </div>
+      <div class="notif-bar">📢 推送给 C 馆附近 37 人：「B 馆有惊喜，还有 10 分钟」<button class="send-btn">发送</button></div>
+    </div></div>`
+  },
+  {
+    num:'STEP 07', title:'活动结束，数据留下来了',
+    story:'活动结束。247 人参与，1847 条互动数据，32 个「深度参与」用户被系统自动打标，进入跟进池。<br><br>一个运营，从北京远程操盘了这场活动。',
+    mockup:`<div class="mockup"><div class="analytics">
+      <div class="metric-row">
+        <div class="metric"><div class="metric-num">247</div><div class="metric-label">参与者</div></div>
+        <div class="metric"><div class="metric-num">1,847</div><div class="metric-label">互动数据</div></div>
+        <div class="metric highlight"><div class="metric-num" style="color:#ff6b35">32</div><div class="metric-label">深度用户</div></div>
+      </div>
+      <div class="funnel" style="margin-bottom:10px">
+        <div class="funnel-step f1">247<br>入场</div><div class="funnel-arrow">→</div>
+        <div class="funnel-step">156<br>挑战</div><div class="funnel-arrow">→</div>
+        <div class="funnel-step">89<br>线上</div><div class="funnel-arrow">→</div>
+        <div class="funnel-step f4">32<br>深度</div>
+      </div>
+      <div style="font-size:10px;color:#8892a4;margin-bottom:6px;font-weight:600;letter-spacing:.5px">跟进池</div>
+      <div class="pool-list">
+        <div class="pool-item">👨‍💻 Lukas M. <span class="pool-tag">KMP 高潜</span><span class="pool-tag">Twitter 活跃</span></div>
+        <div class="pool-item">👩‍💻 Emily K. <span class="pool-tag" style="background:#2a1040;color:#a78bfa;border-color:#4a2080">线上深度</span></div>
+        <div class="pool-item">🧑‍💻 Marco B. <span class="pool-tag">B 馆全程</span></div>
+      </div>
+    </div></div>`
+  },
+  {
+    num:'STEP 08', title:'同一场活动，两种结果',
+    story:'',
+    mockup:`<div class="mockup" style="padding:20px">
+      <table class="compare-table">
+        <tr><th>维度</th><th>传统方式</th><th>新方案</th></tr>
+        <tr><td>预算</td><td class="old">6 万欧</td><td class="new">6 万欧</td></tr>
+        <tr><td>线索质量</td><td class="old">47 张名片 · 80% 无回音</td><td class="new">32 个深度用户自动标记</td></tr>
+        <tr><td>可追踪数据</td><td class="old">0 条</td><td class="new">1,847 条行为数据</td></tr>
+        <tr><td>运营人力</td><td class="old">2 人驻守全程</td><td class="new">1 人远程操盘</td></tr>
+        <tr><td>线上延伸</td><td class="old">无</td><td class="new">89 人实时参与</td></tr>
+      </table>
+      <button class="next-demo-btn" onclick="startDemo(2)">开始 Demo 2 →</button>
+    </div>`
+  }
+];
+
+const D2 = [
+  {
+    num:'STEP 01', title:'2000 人的群，40 个活跃',
+    story:'华为有个 Discord 群，拉了 2000 个海外开发者。<br><br>三个月后活跃不超过 40 人，这 40 人互相认识，不需要华为。',
+    mockup:`<div class="mockup"><div class="discord-mock">
+      <div class="discord-sidebar">
+        <div style="font-size:9px;color:#2a3350;font-weight:700;padding:4px;margin-bottom:4px">CHANNELS</div>
+        <div class="d-ch active"># general</div>
+        <div class="d-ch"># help</div>
+        <div class="d-ch"># showcase</div>
+      </div>
+      <div class="discord-main">
+        <div class="discord-top"><span># general</span><span class="online-count">在线: 38 / 2,000</span></div>
+        <div class="discord-msgs">
+          <div class="empty-msg">
+            <div class="empty-emoji">🌵</div>
+            <div style="font-size:12px;color:#2a3350;margin-bottom:4px">上次消息</div>
+            <div style="font-size:11px;color:#2a3350">3 days ago</div>
+            <div style="font-size:10px;color:#1e2538;margin-top:8px">那 40 个活跃用户互相认识<br>不需要华为</div>
+          </div>
+        </div>
+      </div>
+    </div></div>`
+  },
+  {
+    num:'STEP 02', title:'Priya 进入了虚拟社区',
+    story:'印度开发者 Priya 第一次登录。<br><br>广场里，一个越南开发者走近了她。气泡弹出：<strong style="color:#4e9bff">「你也是做 KMP 的？」</strong><br><br>15 分钟后，他们互相 follow 了。',
+    mockup:`<div class="mockup" style="padding:12px">
+      <div style="font-size:10px;color:#8892a4;margin-bottom:8px;text-align:center">🌏 虚拟广场</div>
+      <div class="pixel-world" style="height:190px">
+        <div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 24px,rgba(78,155,255,.03) 24px,rgba(78,155,255,.03) 25px),repeating-linear-gradient(90deg,transparent,transparent 24px,rgba(78,155,255,.03) 24px,rgba(78,155,255,.03) 25px)"></div>
+        <div style="position:absolute;bottom:30%;left:40%;transform:translateX(-50%)">
+          <div style="font-size:24px">👩</div>
+          <div style="font-size:9px;background:rgba(244,114,182,.2);border:1px solid #f472b6;padding:1px 5px;border-radius:3px;color:#f472b6;white-space:nowrap">Priya 🇮🇳</div>
+        </div>
+        <div style="position:absolute;bottom:30%;left:60%;transform:translateX(-50%)">
+          <div style="font-size:24px">🧑</div>
+          <div style="font-size:9px;background:rgba(74,222,128,.2);border:1px solid #4ade80;padding:1px 5px;border-radius:3px;color:#4ade80;white-space:nowrap">Hung 🇻🇳</div>
+        </div>
+        <div style="position:absolute;bottom:52%;left:43%;background:#4e9bff;color:#fff;font-size:10px;padding:5px 8px;border-radius:8px 8px 8px 2px;white-space:nowrap">你也是做 KMP 的？</div>
+        <div style="position:absolute;top:10px;right:10px;background:#1a2e50;border:1px solid #4e9bff;border-radius:8px;padding:5px 10px;font-size:10px;color:#60a5fa">Follow + Hung 🇻🇳</div>
+        <div style="position:absolute;font-size:14px;top:10%;left:5%">👨</div><div style="position:absolute;font-size:14px;top:22%;left:13%">👩</div><div style="position:absolute;font-size:14px;top:34%;left:21%">🧑</div><div style="position:absolute;font-size:14px;top:46%;left:29%">👨</div><div style="position:absolute;font-size:14px;top:58%;left:37%">👩</div><div style="position:absolute;font-size:14px;top:70%;left:45%">🧑</div>
+      </div></div>`
+  },
+  {
+    num:'STEP 03', title:'第 2 周：贡献开始被看见',
+    story:'Priya 回答了 3 个问题 <strong style="color:#4ade80">+60 分</strong>，写了一篇踩坑文章 <strong style="color:#4ade80">+80 分</strong>。<br><br>头像上多了「答题达人」的标记。她开始有理由每天回来。',
+    mockup:`<div class="mockup"><div class="profile-card">
+      <div class="profile-header">
+        <div class="p-av">👩</div>
+        <div><div class="p-name">Priya S. 🇮🇳</div><div class="p-handle">KMP Developer · 加入 14 天</div></div>
+      </div>
+      <div class="progress-bar"><div class="progress-fill" style="width:28%"></div></div>
+      <div class="progress-label">140 / 500 分 · 距下一成就 360 分</div>
+      <div class="badges-row">
+        <div class="badge-sm lit">🏆 答题达人</div>
+        <div class="badge-sm locked">🔒 贡献者</div>
+        <div class="badge-sm locked">🔒 布道者</div>
+        <div class="badge-sm locked">🔒 精英圈</div>
+      </div>
+      <div class="activity-feed">
+        <div class="af-item"><span>回答: KMP on iOS crash fix</span><span class="af-pts">+60分</span></div>
+        <div class="af-item"><span>文章: ArkUI Layout 踩坑指南</span><span class="af-pts">+80分</span></div>
+        <div class="af-item" style="justify-content:flex-end;color:#4a5568;font-size:10px">排行榜: #12 本周 ↑4</div>
+      </div>
+    </div></div>`
+  },
+  {
+    num:'STEP 04', title:'第 6 周：腼腆的程序员，上台了',
+    story:'Priya 在虚拟舞台上做了 Lightning Talk。<br><br>线下她可能永远不会举手，但在这里——头像站在台上，聊天区滚着弹幕，她说完了。',
+    mockup:`<div class="mockup" style="padding:0;overflow:hidden">
+      <div class="stage-view">
+        <div style="position:absolute;top:8px;left:50%;transform:translateX(-50%);font-size:10px;color:#60a5fa;white-space:nowrap;background:#0d1220;padding:3px 8px;border-radius:4px">🎤 ArkUI实战踩坑 · Lightning Talk</div>
+        <div class="stage-platform">
+          <div style="font-size:22px">👩</div>
+          <div style="font-size:9px;color:#60a5fa;text-align:center">Priya</div>
+        </div>
+        <div class="audience"><span class="aud-dot">👨</span><span class="aud-dot">👩</span><span class="aud-dot">🧑</span><span class="aud-dot">👦</span><span class="aud-dot">👨</span><span class="aud-dot">👩</span><span class="aud-dot">🧑</span><span class="aud-dot">👦</span><span class="aud-dot">👨</span><span class="aud-dot">👩</span><span class="aud-dot">🧑</span><span class="aud-dot">👦</span><span class="aud-dot">👨</span><span class="aud-dot">👩</span><span class="aud-dot">🧑</span><span class="aud-dot">👦</span><span class="aud-dot">👨</span><span class="aud-dot">👩</span><span class="aud-dot">🧑</span><span class="aud-dot">👦</span></div>
+        <div class="chat-feed">
+          <div class="chat-msg">🔥 great talk!</div>
+          <div class="chat-msg">这个问题我也遇到了</div>
+          <div class="chat-msg">slides 能分享吗</div>
+          <div class="chat-msg">👏👏👏</div>
+        </div>
+        <div class="appl-count">👏 128</div>
+      </div></div>`
+  },
+  {
+    num:'STEP 05', title:'500 分，神秘房间开了',
+    story:'Priya 积分到 500。地图上一扇锁着的门亮了起来——<strong style="color:#fbbf24">「专属圈子已解锁」</strong>。<br><br>里面只有 18 人。华为技术 Lead 在里面开小圆桌。',
+    mockup:`<div class="mockup" style="padding:12px">
+      <div class="mystery-map">
+        <div class="mm-grid">
+          <div class="mm-room">讨论室 🔵</div>
+          <div class="mm-room">资源库 📚</div>
+          <div class="mm-room special">✨ 专属圈子 🔓</div>
+          <div class="mm-room locked">🔒</div>
+          <div class="mm-room">广场 🌏</div>
+          <div class="mm-room locked">🔒</div>
+        </div>
+        <div class="unlock-overlay">
+          <div class="unlock-badge">
+            <div class="unlock-emoji">🔓</div>
+            <div class="unlock-text">专属圈子 · 已解锁</div>
+            <div style="font-size:11px;color:#a07020;margin-top:4px">达到 500 分 · 18 人精英圈</div>
+          </div>
+        </div>
+      </div></div>`
+  },
+  {
+    num:'STEP 06', title:'她的反馈被记录了',
+    story:'圆桌上，Priya 提了一个关于 KMP 工具链的问题。<br><br>技术 Lead 记下来了。一周后，她收到了 HarmonyOS Grant 申请邀请。',
+    mockup:`<div class="mockup"><div class="grant-card">
+      <div class="notif-card">
+        <div class="notif-icon">🎉</div>
+        <div><div class="notif-text">恭喜！你收到了 HarmonyOS Developer Grant 邀请</div>
+        <div class="notif-sub">基于你在社区的贡献与技术影响力</div></div>
+      </div>
+      <div class="grant-info">
+        <div class="grant-amount">$5,000</div>
+        <div class="grant-label">开发资助 · 申请截止 30 天后</div>
+      </div>
+      <div class="convo-bubble">
+        <div class="pin-icon">📌</div>
+        <div><span style="color:#a78bfa">HW Tech Lead: </span>「KMP 工具链这个问题很好，我们会跟进」</div>
+      </div>
+    </div></div>`
+  },
+  {
+    num:'STEP 07', title:'这是 3 个月后，华为看到的',
+    story:'不是「2000 人冷群」。<br><br>是一张清晰的贡献者地图：谁在成长，谁是连接者，谁已经准备好合作。<br><br><em style="color:#4a5568">这就是我们想要的社区。</em>',
+    mockup:`<div class="mockup" style="padding:12px">
+      <div class="constellation" style="height:200px">
+        <div class="const-closing">贡献者关系图谱</div>
+        <div class="const-node" style="left:45%;top:40%;width:44px;height:44px;background:#4e9bff22;border:2px solid #4e9bff;color:#4e9bff;font-size:11px;transform:translate(-50%,-50%)">Priya</div><div class="const-node" style="left:25%;top:25%;width:32px;height:32px;background:#4ade8022;border:2px solid #4ade80;color:#4ade80;font-size:11px;transform:translate(-50%,-50%)">Hung</div><div class="const-node" style="left:65%;top:22%;width:28px;height:28px;background:#4ade8022;border:2px solid #4ade80;color:#4ade80;font-size:9px;transform:translate(-50%,-50%)"></div><div class="const-node" style="left:70%;top:55%;width:24px;height:24px;background:#4ade8022;border:2px solid #4ade80;color:#4ade80;font-size:9px;transform:translate(-50%,-50%)"></div><div class="const-node" style="left:20%;top:55%;width:24px;height:24px;background:#60a5fa22;border:2px solid #60a5fa;color:#60a5fa;font-size:9px;transform:translate(-50%,-50%)"></div><div class="const-node" style="left:50%;top:70%;width:20px;height:20px;background:#60a5fa22;border:2px solid #60a5fa;color:#60a5fa;font-size:9px;transform:translate(-50%,-50%)"></div><div class="const-node" style="left:35%;top:65%;width:16px;height:16px;background:#8892a422;border:2px solid #8892a4;color:#8892a4;font-size:9px;transform:translate(-50%,-50%)"></div><div class="const-node" style="left:60%;top:38%;width:16px;height:16px;background:#8892a422;border:2px solid #8892a4;color:#8892a4;font-size:9px;transform:translate(-50%,-50%)"></div><div class="const-node" style="left:80%;top:38%;width:56px;height:56px;background:#fbbf2422;border:2px solid #fbbf24;color:#fbbf24;font-size:11px;transform:translate(-50%,-50%)">★ Lead</div>
+        <div class="const-stats">
+          <div class="cstat"><div class="cstat-num">247</div><div class="cstat-label">活跃贡献者</div></div>
+          <div class="cstat"><div class="cstat-num">4,200</div><div class="cstat-label">月均互动</div></div>
+          <div class="cstat"><div class="cstat-num" style="color:#ff6b35">31</div><div class="cstat-label">高潜待跟进</div></div>
+        </div>
+      </div></div>`
+  }
+];
+
+let d1Current = 0, d2Current = 0;
+
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+function goHome() { showScreen('home'); }
+
+function startDemo(n) {
+  if(n===1){ d1Current=0; renderD1(); showScreen('demo1'); }
+  else { d2Current=0; renderD2(); showScreen('demo2'); }
+}
+
+function renderD1() {
+  const s = D1[d1Current];
+  document.getElementById('d1-story').innerHTML =
+    '<div class="step-num">'+s.num+'</div><div class="step-title">'+s.title+'</div>'+(s.story?'<div class="step-story">'+s.story+'</div>':'');
+  document.getElementById('d1-mockup').innerHTML = s.mockup;
+  document.getElementById('d1-step-label').textContent = (d1Current+1)+' / '+D1.length;
+  const dots = document.getElementById('d1-dots');
+  dots.innerHTML = D1.map((_,i)=>'<div class="dot'+(i===d1Current?' active':'')+'" onclick="d1GoTo('+i+')"></div>').join('');
+  document.getElementById('d1-next-btn').textContent = d1Current===D1.length-1?'完成 ✓':'下一步 →';
+}
+function d1Prev(){ if(d1Current>0){d1Current--;renderD1();} }
+function d1Next(){ if(d1Current<D1.length-1){d1Current++;renderD1();} }
+function d1GoTo(i){ d1Current=i; renderD1(); }
+
+function renderD2() {
+  const s = D2[d2Current];
+  document.getElementById('d2-story').innerHTML =
+    '<div class="step-num">'+s.num+'</div><div class="step-title">'+s.title+'</div>'+(s.story?'<div class="step-story">'+s.story+'</div>':'');
+  document.getElementById('d2-mockup').innerHTML = s.mockup;
+  document.getElementById('d2-step-label').textContent = (d2Current+1)+' / '+D2.length;
+  const dots = document.getElementById('d2-dots');
+  dots.innerHTML = D2.map((_,i)=>'<div class="dot'+(i===d2Current?' active':'')+'" onclick="d2GoTo('+i+')"></div>').join('');
+  document.getElementById('d2-next-btn').textContent = d2Current===D2.length-1?'完成 ✓':'下一步 →';
+}
+function d2Prev(){ if(d2Current>0){d2Current--;renderD2();} }
+function d2Next(){ if(d2Current<D2.length-1){d2Current++;renderD2();} }
+function d2GoTo(i){ d2Current=i; renderD2(); }
+
+document.addEventListener('keydown', e=>{
+  const active = document.querySelector('.screen.active').id;
+  if(active==='demo1'){ if(e.key==='ArrowRight')d1Next(); if(e.key==='ArrowLeft')d1Prev(); }
+  if(active==='demo2'){ if(e.key==='ArrowRight')d2Next(); if(e.key==='ArrowLeft')d2Prev(); }
+});
+</script>
+</body>
+</html>
