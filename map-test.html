@@ -1,157 +1,272 @@
 <!DOCTYPE html>
-<html>
-<head><meta charset="UTF-8"><style>body{background:#0a0e1a;display:flex;gap:20px;padding:20px;}</style></head>
-<body>
-<div id="s2"></div>
-<div id="s3"></div>
+<html><head><meta charset="UTF-8">
+<style>
+body{background:#1a1a2e;display:flex;flex-direction:column;align-items:center;gap:24px;padding:32px;font-family:-apple-system,sans-serif}
+h3{color:#fff;font-size:14px;opacity:.5;margin-bottom:-16px}
+canvas{border-radius:10px;image-rendering:pixelated}
+</style></head><body>
+<h3>Step 2 — Lukas 扫码入场</h3>
+<canvas id="c2" width="484" height="286"></canvas>
+<h3>Step 3 — 地图上的熟面孔</h3>
+<canvas id="c3" width="484" height="286"></canvas>
+
 <script>
-// Map layout 22x13: 0=wall 1=HallA 2=HallB 3=HallC 4=corridor 5=lobby 6=exhibition 7=entrance
+const TW=22, TH=22;
+const COLS=22, ROWS=13;
+
+// Zone IDs
+const W=0,A=1,B=2,C=3,CORR=4,LOB=5,EXHB=6,ENTR=7,VOID=8;
+
 const MAP=[
-[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-[0,1,1,1,1,1,0,2,2,2,2,2,0,3,3,3,3,3,0,0,0,0],
-[0,1,1,1,1,1,0,2,2,2,2,2,0,3,3,3,3,3,0,0,0,0],
-[0,1,1,1,1,1,0,2,2,2,2,2,0,3,3,3,3,3,0,0,0,0],
-[0,1,1,1,1,1,0,2,2,2,2,2,0,3,3,3,3,3,0,0,0,0],
-[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,0,0,0,0],
-[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-[0,5,5,5,0,0,6,6,6,6,6,6,6,6,0,0,0,0,0,0,0,0],
-[0,5,5,5,0,0,6,6,6,6,6,6,6,6,0,0,7,7,7,0,0,0],
-[0,5,5,5,0,0,6,6,6,6,6,6,6,6,0,0,7,7,7,0,0,0],
-[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+  [W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W],
+  [W,A,A,A,A,A,W,B,B,B,B,B,W,C,C,C,C,C,W,W,W,W],
+  [W,A,A,A,A,A,W,B,B,B,B,B,W,C,C,C,C,C,W,W,W,W],
+  [W,A,A,A,A,A,W,B,B,B,B,B,W,C,C,C,C,C,W,W,W,W],
+  [W,A,A,A,A,A,W,B,B,B,B,B,W,C,C,C,C,C,W,W,W,W],
+  [W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W],
+  [CORR,CORR,CORR,CORR,CORR,CORR,CORR,CORR,CORR,CORR,CORR,CORR,CORR,CORR,CORR,CORR,CORR,CORR,VOID,VOID,VOID,VOID],
+  [W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W],
+  [W,LOB,LOB,LOB,W,W,EXHB,EXHB,EXHB,EXHB,EXHB,EXHB,EXHB,EXHB,W,W,ENTR,ENTR,ENTR,W,W,W],
+  [W,LOB,LOB,LOB,W,W,EXHB,EXHB,EXHB,EXHB,EXHB,EXHB,EXHB,EXHB,W,W,ENTR,ENTR,ENTR,W,W,W],
+  [W,LOB,LOB,LOB,W,W,EXHB,EXHB,EXHB,EXHB,EXHB,EXHB,EXHB,EXHB,W,W,ENTR,ENTR,ENTR,W,W,W],
+  [W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W,W],
+  [VOID,VOID,VOID,VOID,VOID,VOID,VOID,VOID,VOID,VOID,VOID,VOID,VOID,VOID,VOID,VOID,VOID,VOID,VOID,VOID,VOID,VOID],
 ];
 
-const ZONE_FILL={'0':'#06090f','1':'#0c2a16','2':'#091d42','3':'#1e1200','4':'#0d1420','5':'#0e0e22','6':'#0a1520','7':'#0d1422'};
-const ZONE_STROKE={'0':'#08090f','1':'#1a5a28','2':'#2a60ff','3':'#5a3a00','4':'#141e30','5':'#201e44','6':'#142840','7':'#1e2e40'};
+// Floor colors (Gather Town warm palette adapted to dark theme)
+const FLOOR={
+  [W]:'#0f1015',[VOID]:'#0a0c12',
+  [A]:'#162d16',[B]:'#0d1e3e',[C]:'#1f1500',
+  [CORR]:'#141820',[LOB]:'#13102a',[EXHB]:'#0e1824',[ENTR]:'#111720',
+};
+const FLOOR2={ // floor pattern variation
+  [A]:'#1a381a',[B]:'#0f2550',[C]:'#291c00',
+  [CORR]:'#181d28',[LOB]:'#17133a',[EXHB]:'#121e2e',[ENTR]:'#151e2e',
+};
+const WALL_CLR='#0a0c12';
 
-const CW=19,CH=15;
-
-function drawMap(canvas, highlight2, lukasXY, marcoXY){
-  const ctx=canvas.getContext('2d');
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  
-  for(let r=0;r<MAP.length;r++){
-    for(let c=0;c<MAP[r].length;c++){
-      const t=String(MAP[r][c]);
-      const x=c*CW, y=r*CH;
-      // Hall B highlight glow
-      if(t==='2' && highlight2){
-        const grad=ctx.createRadialGradient(x+CW/2,y+CH/2,0,x+CW/2,y+CH/2,CW);
-        grad.addColorStop(0,'#0d2558');
-        grad.addColorStop(1,'#091d42');
-        ctx.fillStyle=grad;
-      } else {
-        ctx.fillStyle=ZONE_FILL[t]||'#06090f';
-      }
-      ctx.fillRect(x,y,CW,CH);
-      ctx.strokeStyle=ZONE_STROKE[t]||'#08090f';
-      ctx.lineWidth=0.5;
-      ctx.strokeRect(x+0.5,y+0.5,CW-1,CH-1);
-    }
-  }
-  
-  // Hall B blue border glow
-  if(highlight2){
-    ctx.strokeStyle='#4e9bff';
-    ctx.lineWidth=2;
-    ctx.shadowColor='#4e9bff';
-    ctx.shadowBlur=8;
-    ctx.strokeRect(7*CW+1,1*CH+1,5*CW-2,4*CH-2);
-    ctx.shadowBlur=0;
-  }
-  
-  // Labels
-  ctx.font='bold 9px monospace';
-  ctx.textAlign='center';
-  
-  ctx.fillStyle='#4ade80'; ctx.fillText('HALL A',3*CW+CW/2,2.5*CH+4);
-  ctx.fillStyle='rgba(74,222,128,.5)'; ctx.font='7px monospace';
-  ctx.fillText('基础技术',3*CW+CW/2,3.5*CH);
-  
-  ctx.fillStyle='#60a5fa'; ctx.font='bold 9px monospace';
-  ctx.fillText('HALL B',9.5*CW,2*CH+4);
-  if(highlight2){ctx.fillStyle='#4e9bff';ctx.fillText('★ 推荐',9.5*CW,3.5*CH);}
-  else{ctx.fillStyle='rgba(96,165,250,.5)';ctx.font='7px monospace';ctx.fillText('跨端开发',9.5*CW,3.5*CH);}
-  
-  ctx.fillStyle='#fbbf24'; ctx.font='bold 9px monospace';
-  ctx.fillText('HALL C',15*CW,2.5*CH+4);
-  ctx.fillStyle='rgba(251,191,36,.5)'; ctx.font='7px monospace';
-  ctx.fillText('生态合作',15*CW,3.5*CH);
-  
-  ctx.fillStyle='#a78bfa'; ctx.font='7px monospace';
-  ctx.fillText('大厅',2*CW,9*CH+5);
-  ctx.fillStyle='#60a5fa';
-  ctx.fillText('展览区',9.5*CW,9*CH+5);
-  ctx.fillStyle='#8892a4';
-  ctx.fillText('↑ 入口',17*CW+CW/2,10*CH+5);
-
-  // Corridor label
-  ctx.fillStyle='rgba(96,165,250,.3)'; ctx.font='7px monospace';
-  ctx.fillText('── 通道 ──────────────',9*CW,6*CH+10);
-  
-  // Draw dotted path if both avatars exist
-  if(lukasXY && marcoXY){
-    ctx.setLineDash([3,4]);
-    ctx.strokeStyle='rgba(78,155,255,.4)';
-    ctx.lineWidth=1.5;
-    ctx.beginPath();
-    ctx.moveTo(lukasXY[0]*CW+CW/2, lukasXY[1]*CH+CH/2);
-    ctx.lineTo(marcoXY[0]*CW+CW/2, marcoXY[1]*CH+CH/2);
-    ctx.stroke();
-    ctx.setLineDash([]);
-  }
-  
-  // Draw avatar
-  function drawAvatar(col,row,color,name){
-    const ax=col*CW+CW/2, ay=row*CH+CH/2;
-    // Glow
-    ctx.beginPath();
-    ctx.arc(ax,ay,9,0,Math.PI*2);
-    const g=ctx.createRadialGradient(ax,ay,0,ax,ay,9);
-    g.addColorStop(0,color+'88');
-    g.addColorStop(1,color+'00');
-    ctx.fillStyle=g;
-    ctx.fill();
-    // Dot
-    ctx.beginPath();
-    ctx.arc(ax,ay,5,0,Math.PI*2);
-    ctx.fillStyle=color;
-    ctx.fill();
-    ctx.beginPath();
-    ctx.arc(ax,ay,5,0,Math.PI*2);
-    ctx.strokeStyle='#fff';
-    ctx.lineWidth=1.5;
-    ctx.stroke();
-    // Label bubble
-    ctx.font='bold 8px -apple-system,sans-serif';
-    const tw=ctx.measureText(name).width;
-    const bx=ax-tw/2-4, by=ay-20;
-    ctx.fillStyle='rgba(0,0,0,.75)';
-    ctx.beginPath();
-    ctx.roundRect(bx,by,tw+8,13,3);
-    ctx.fill();
-    ctx.strokeStyle=color;
-    ctx.lineWidth=1;
-    ctx.stroke();
-    ctx.fillStyle=color;
-    ctx.fillText(name,ax,by+9);
-  }
-  
-  if(lukasXY) drawAvatar(lukasXY[0],lukasXY[1],'#4e9bff','Lukas');
-  if(marcoXY) drawAvatar(marcoXY[0],marcoXY[1],'#4ade80','Marco');
+function rr(ctx,x,y,w,h,r){
+  ctx.beginPath();
+  ctx.moveTo(x+r,y);ctx.lineTo(x+w-r,y);ctx.arcTo(x+w,y,x+w,y+r,r);
+  ctx.lineTo(x+w,y+h-r);ctx.arcTo(x+w,y+h,x+w-r,y+h,r);
+  ctx.lineTo(x+r,y+h);ctx.arcTo(x,y+h,x,y+h-r,r);
+  ctx.lineTo(x,y+r);ctx.arcTo(x,y,x+r,y,r);
+  ctx.closePath();
 }
 
-// Step 2: Lukas at entrance
-const c2=document.createElement('canvas');
-c2.width=22*CW; c2.height=13*CH; c2.style.borderRadius='8px';
-document.getElementById('s2').appendChild(c2);
-drawMap(c2, true, [17,9], null);
+function drawFloor(ctx){
+  for(let r=0;r<ROWS;r++){
+    for(let c=0;c<COLS;c++){
+      const z=MAP[r][c];
+      const x=c*TW,y=r*TH;
+      // Checkerboard-ish pattern for floor zones
+      const alt=(r+c)%2===0;
+      ctx.fillStyle=(z===W||z===VOID)?FLOOR[z]:(alt?FLOOR[z]:FLOOR2[z]||FLOOR[z]);
+      ctx.fillRect(x,y,TW,TH);
+      // Subtle pixel border for walls
+      if(z===W){
+        ctx.fillStyle='#14171f';
+        ctx.fillRect(x+1,y+1,TW-2,TH-2);
+      }
+    }
+  }
+  // Hall B highlight glow border
+  ctx.save();
+  ctx.shadowColor='#4e9bff';ctx.shadowBlur=12;
+  ctx.strokeStyle='#3a70ff';ctx.lineWidth=2;
+  ctx.strokeRect(7*TW+1,1*TH+1,5*TW-2,4*TH-2);
+  ctx.shadowBlur=0;ctx.restore();
+  // Hall A border
+  ctx.strokeStyle='#2a6a30';ctx.lineWidth=1.5;
+  ctx.strokeRect(1*TW+0.5,1*TH+0.5,5*TW-1,4*TH-1);
+  // Hall C border
+  ctx.strokeStyle='#6a4a10';ctx.lineWidth=1.5;
+  ctx.strokeRect(13*TW+0.5,1*TH+0.5,5*TW-1,4*TH-1);
+}
 
-// Step 3: Lukas and Marco both heading to Hall B
-const c3=document.createElement('canvas');
-c3.width=22*CW; c3.height=13*CH; c3.style.borderRadius='8px';
-document.getElementById('s3').appendChild(c3);
-drawMap(c3, true, [8,3], [11,2]);
-</script>
-</body></html>
+function drawFurniture(ctx){
+  // ── HALL A: 4 rows of seats + small stage ──
+  // Stage (front, row 1)
+  ctx.fillStyle='#1f4a22';rr(ctx,1*TW+3,1*TH+3,5*TW-6,10,3);ctx.fill();
+  ctx.fillStyle='#2d6a32';ctx.fillRect(1*TW+3,1*TH+3,5*TW-6,10);
+  // Seat rows
+  for(let si=0;si<2;si++){
+    for(let sj=0;sj<4;sj++){
+      ctx.fillStyle='#234d26';
+      ctx.fillRect(1*TW+4+sj*23,2*TH+4+si*14,8,8);
+      ctx.fillStyle='#1a3a1e';ctx.fillRect(1*TW+5+sj*23,2*TH+5+si*14,6,6);
+    }
+  }
+  // Screen on back wall
+  ctx.fillStyle='#1a3d1e';ctx.fillRect(1*TW+8,4*TH+4,40,8);
+  ctx.fillStyle='#4ade8040';ctx.fillRect(1*TW+9,4*TH+5,38,6);
+  // Plants corners
+  ctx.fillStyle='#2d7a30';ctx.beginPath();ctx.arc(1*TW+4,1*TH+18,4,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle='#1f5a22';ctx.beginPath();ctx.arc(1*TW+4,1*TH+18,2,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle='#2d7a30';ctx.beginPath();ctx.arc(5*TW+18,1*TH+18,4,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle='#1f5a22';ctx.beginPath();ctx.arc(5*TW+18,1*TH+18,2,0,Math.PI*2);ctx.fill();
+
+  // ── HALL B: seats + glowing stage + ★ sign ──
+  // Stage glow
+  ctx.save();ctx.shadowColor='#4e9bff';ctx.shadowBlur=8;
+  ctx.fillStyle='#1a3060';rr(ctx,7*TW+3,1*TH+3,5*TW-6,10,3);ctx.fill();
+  ctx.shadowBlur=0;ctx.restore();
+  ctx.fillStyle='#2a50a0';ctx.fillRect(7*TW+3,1*TH+3,5*TW-6,10);
+  // Seat rows
+  for(let si=0;si<2;si++){
+    for(let sj=0;sj<4;sj++){
+      ctx.fillStyle='#1a3060';
+      ctx.fillRect(7*TW+4+sj*23,2*TH+4+si*14,8,8);
+      ctx.fillStyle='#142448';ctx.fillRect(7*TW+5+sj*23,2*TH+5+si*14,6,6);
+    }
+  }
+  // Screen blue glow
+  ctx.fillStyle='#1a3060';ctx.fillRect(7*TW+8,4*TH+4,40,8);
+  ctx.fillStyle='#4e9bff50';ctx.fillRect(7*TW+9,4*TH+5,38,6);
+  // Plants
+  ctx.fillStyle='#2d7a30';ctx.beginPath();ctx.arc(7*TW+4,1*TH+18,4,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle='#1f5a22';ctx.beginPath();ctx.arc(7*TW+4,1*TH+18,2,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle='#2d7a30';ctx.beginPath();ctx.arc(11*TW+18,1*TH+18,4,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle='#1f5a22';ctx.beginPath();ctx.arc(11*TW+18,1*TH+18,2,0,Math.PI*2);ctx.fill();
+
+  // ── HALL C: seats + stage ──
+  ctx.fillStyle='#4a3010';rr(ctx,13*TW+3,1*TH+3,5*TW-6,10,3);ctx.fill();
+  ctx.fillStyle='#5a4018';ctx.fillRect(13*TW+3,1*TH+3,5*TW-6,10);
+  for(let si=0;si<2;si++){
+    for(let sj=0;sj<4;sj++){
+      ctx.fillStyle='#3a2a10';
+      ctx.fillRect(13*TW+4+sj*23,2*TH+4+si*14,8,8);
+      ctx.fillStyle='#2a1e08';ctx.fillRect(13*TW+5+sj*23,2*TH+5+si*14,6,6);
+    }
+  }
+  ctx.fillStyle='#3a2a10';ctx.fillRect(13*TW+8,4*TH+4,40,8);
+  ctx.fillStyle='#fbbf2440';ctx.fillRect(13*TW+9,4*TH+5,38,6);
+  ctx.fillStyle='#2d7a30';ctx.beginPath();ctx.arc(13*TW+4,1*TH+18,4,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle='#1f5a22';ctx.beginPath();ctx.arc(13*TW+4,1*TH+18,2,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle='#2d7a30';ctx.beginPath();ctx.arc(17*TW+18,1*TH+18,4,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle='#1f5a22';ctx.beginPath();ctx.arc(17*TW+18,1*TH+18,2,0,Math.PI*2);ctx.fill();
+
+  // ── EXHIBITION BOOTHS ──
+  const boothColors=['#1a3050','#1a3028','#301a10'];
+  for(let b=0;b<3;b++){
+    const bx=6*TW+4+b*30,by=8*TH+4;
+    ctx.fillStyle=boothColors[b];rr(ctx,bx,by,24,16,3);ctx.fill();
+    ctx.strokeStyle=['#2a50a0','#2a6030','#5a3020'][b];ctx.lineWidth=1;
+    ctx.strokeRect(bx+0.5,by+0.5,23,15);
+    // Screen on booth
+    ctx.fillStyle=['#4e9bff30','#4ade8030','#ff6b3530'][b];
+    ctx.fillRect(bx+4,by+3,16,8);
+  }
+
+  // ── ENTRANCE AREA: QR marker ──
+  ctx.fillStyle='#1e2a38';rr(ctx,16*TW+3,8*TH+4,3*TW-6,3*TH-8,4);ctx.fill();
+  ctx.strokeStyle='#3a5a70';ctx.lineWidth=1;
+  ctx.strokeRect(16*TW+3,8*TH+4,3*TW-6,3*TH-8);
+  // QR icon (tiny squares)
+  const qx=16*TW+10,qy=8*TH+10;
+  ctx.fillStyle='#60a5fa';
+  [[0,0],[0,1],[1,0],[2,2],[1,2],[2,1],[2,0]].forEach(([a,b])=>{
+    ctx.fillRect(qx+a*5,qy+b*5,4,4);
+  });
+}
+
+function drawLabels(ctx, hlB){
+  ctx.textAlign='center';
+  // Hall A
+  ctx.font='bold 8px monospace';ctx.fillStyle='#4ade80';
+  ctx.fillText('HALL A',3.5*TW,1.5*TH-4);
+  ctx.font='6px monospace';ctx.fillStyle='rgba(74,222,128,.5)';
+  ctx.fillText('基础技术',3.5*TW,1.5*TH+5);
+
+  // Hall B
+  ctx.font='bold 9px monospace';
+  ctx.fillStyle=hlB?'#7ab8ff':'#60a5fa';
+  ctx.fillText(hlB?'HALL B  ★':'HALL B',9.5*TW,1.5*TH-4);
+  if(hlB){
+    ctx.font='6px monospace';ctx.fillStyle='#4e9bff';
+    ctx.fillText('★ 推荐：跨端开发',9.5*TW,1.5*TH+5);
+  } else {
+    ctx.font='6px monospace';ctx.fillStyle='rgba(96,165,250,.5)';
+    ctx.fillText('跨端开发',9.5*TW,1.5*TH+5);
+  }
+
+  // Hall C
+  ctx.font='bold 8px monospace';ctx.fillStyle='#fbbf24';
+  ctx.fillText('HALL C',15.5*TW,1.5*TH-4);
+  ctx.font='6px monospace';ctx.fillStyle='rgba(251,191,36,.5)';
+  ctx.fillText('生态合作',15.5*TW,1.5*TH+5);
+
+  // Corridor
+  ctx.font='6px monospace';ctx.fillStyle='rgba(96,165,250,.2)';
+  ctx.fillText('─── 通 道 ────────────────────────────',9*TW,6*TH+TH/2+2);
+
+  // Zone labels bottom
+  ctx.fillStyle='rgba(167,139,250,.5)';ctx.fillText('大厅',2*TW,9*TH+14);
+  ctx.fillStyle='rgba(96,165,250,.4)';ctx.fillText('展览区',10*TW,9*TH+14);
+  ctx.fillStyle='rgba(136,146,164,.5)';ctx.fillText('入口',17.5*TW,9*TH+14);
+}
+
+function drawPath(ctx, pts){
+  if(pts.length<2)return;
+  ctx.save();
+  ctx.setLineDash([4,5]);
+  ctx.strokeStyle='rgba(78,155,255,.5)';
+  ctx.lineWidth=2;
+  ctx.shadowColor='#4e9bff';ctx.shadowBlur=6;
+  ctx.beginPath();
+  pts.forEach(([c,r],i)=>{
+    const x=c*TW+TW/2,y=r*TH+TH/2;
+    i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+  });
+  ctx.stroke();
+  ctx.setLineDash([]);ctx.restore();
+}
+
+function drawAvatar(ctx,col,row,color,emoji,name){
+  const ax=col*TW+TW/2, ay=row*TH+TH/2;
+  // Outer glow
+  const grd=ctx.createRadialGradient(ax,ay,2,ax,ay,14);
+  grd.addColorStop(0,color+'55');grd.addColorStop(1,color+'00');
+  ctx.fillStyle=grd;ctx.beginPath();ctx.arc(ax,ay,14,0,Math.PI*2);ctx.fill();
+  // Shadow
+  ctx.shadowColor='rgba(0,0,0,.6)';ctx.shadowBlur=8;
+  // Circle body
+  ctx.beginPath();ctx.arc(ax,ay,9,0,Math.PI*2);
+  ctx.fillStyle=color+'33';ctx.fill();
+  // Ring
+  ctx.beginPath();ctx.arc(ax,ay,9,0,Math.PI*2);
+  ctx.strokeStyle=color;ctx.lineWidth=2;ctx.stroke();
+  ctx.shadowBlur=0;
+  // Emoji
+  ctx.font='10px serif';ctx.textAlign='center';
+  ctx.fillText(emoji,ax,ay+4);
+  // Name bubble
+  ctx.font='bold 8px -apple-system,sans-serif';
+  const tw=ctx.measureText(name).width;
+  const bw=tw+10, bh=12;
+  const bx=ax-bw/2, by=ay+12;
+  ctx.fillStyle='rgba(15,20,36,.88)';
+  rr(ctx,bx,by,bw,bh,3);ctx.fill();
+  ctx.strokeStyle=color;ctx.lineWidth=1;
+  rr(ctx,bx,by,bw,bh,3);ctx.stroke();
+  ctx.fillStyle=color;ctx.fillText(name,ax,by+bh-2);
+}
+
+function draw(canvasId, hlB, lukas, marco, pathPts){
+  const canvas=document.getElementById(canvasId);
+  const ctx=canvas.getContext('2d');
+  drawFloor(ctx);
+  drawFurniture(ctx);
+  drawLabels(ctx,hlB);
+  if(pathPts) drawPath(ctx,pathPts);
+  if(lukas) drawAvatar(ctx,lukas[0],lukas[1],'#4e9bff','🧑','Lukas');
+  if(marco) drawAvatar(ctx,marco[0],marco[1],'#4ade80','👨','Marco @gh');
+}
+
+// Step 2: Lukas near entrance
+draw('c2', true, [17,9], null, null);
+
+// Step 3: Both heading to Hall B
+draw('c3', true, [8,3], [10,2], [[17,9],[9,6],[9,3]]);
+
+</script></body></html>
