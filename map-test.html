@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><style>body{background:#0a0e1a;display:flex;gap:20px;padding:20px;}</style></head>
+<body>
+<div id="s2"></div>
+<div id="s3"></div>
+<script>
+// Map layout 22x13: 0=wall 1=HallA 2=HallB 3=HallC 4=corridor 5=lobby 6=exhibition 7=entrance
+const MAP=[
+[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+[0,1,1,1,1,1,0,2,2,2,2,2,0,3,3,3,3,3,0,0,0,0],
+[0,1,1,1,1,1,0,2,2,2,2,2,0,3,3,3,3,3,0,0,0,0],
+[0,1,1,1,1,1,0,2,2,2,2,2,0,3,3,3,3,3,0,0,0,0],
+[0,1,1,1,1,1,0,2,2,2,2,2,0,3,3,3,3,3,0,0,0,0],
+[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,0,0,0,0],
+[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+[0,5,5,5,0,0,6,6,6,6,6,6,6,6,0,0,0,0,0,0,0,0],
+[0,5,5,5,0,0,6,6,6,6,6,6,6,6,0,0,7,7,7,0,0,0],
+[0,5,5,5,0,0,6,6,6,6,6,6,6,6,0,0,7,7,7,0,0,0],
+[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+];
+
+const ZONE_FILL={'0':'#06090f','1':'#0c2a16','2':'#091d42','3':'#1e1200','4':'#0d1420','5':'#0e0e22','6':'#0a1520','7':'#0d1422'};
+const ZONE_STROKE={'0':'#08090f','1':'#1a5a28','2':'#2a60ff','3':'#5a3a00','4':'#141e30','5':'#201e44','6':'#142840','7':'#1e2e40'};
+
+const CW=19,CH=15;
+
+function drawMap(canvas, highlight2, lukasXY, marcoXY){
+  const ctx=canvas.getContext('2d');
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  
+  for(let r=0;r<MAP.length;r++){
+    for(let c=0;c<MAP[r].length;c++){
+      const t=String(MAP[r][c]);
+      const x=c*CW, y=r*CH;
+      // Hall B highlight glow
+      if(t==='2' && highlight2){
+        const grad=ctx.createRadialGradient(x+CW/2,y+CH/2,0,x+CW/2,y+CH/2,CW);
+        grad.addColorStop(0,'#0d2558');
+        grad.addColorStop(1,'#091d42');
+        ctx.fillStyle=grad;
+      } else {
+        ctx.fillStyle=ZONE_FILL[t]||'#06090f';
+      }
+      ctx.fillRect(x,y,CW,CH);
+      ctx.strokeStyle=ZONE_STROKE[t]||'#08090f';
+      ctx.lineWidth=0.5;
+      ctx.strokeRect(x+0.5,y+0.5,CW-1,CH-1);
+    }
+  }
+  
+  // Hall B blue border glow
+  if(highlight2){
+    ctx.strokeStyle='#4e9bff';
+    ctx.lineWidth=2;
+    ctx.shadowColor='#4e9bff';
+    ctx.shadowBlur=8;
+    ctx.strokeRect(7*CW+1,1*CH+1,5*CW-2,4*CH-2);
+    ctx.shadowBlur=0;
+  }
+  
+  // Labels
+  ctx.font='bold 9px monospace';
+  ctx.textAlign='center';
+  
+  ctx.fillStyle='#4ade80'; ctx.fillText('HALL A',3*CW+CW/2,2.5*CH+4);
+  ctx.fillStyle='rgba(74,222,128,.5)'; ctx.font='7px monospace';
+  ctx.fillText('基础技术',3*CW+CW/2,3.5*CH);
+  
+  ctx.fillStyle='#60a5fa'; ctx.font='bold 9px monospace';
+  ctx.fillText('HALL B',9.5*CW,2*CH+4);
+  if(highlight2){ctx.fillStyle='#4e9bff';ctx.fillText('★ 推荐',9.5*CW,3.5*CH);}
+  else{ctx.fillStyle='rgba(96,165,250,.5)';ctx.font='7px monospace';ctx.fillText('跨端开发',9.5*CW,3.5*CH);}
+  
+  ctx.fillStyle='#fbbf24'; ctx.font='bold 9px monospace';
+  ctx.fillText('HALL C',15*CW,2.5*CH+4);
+  ctx.fillStyle='rgba(251,191,36,.5)'; ctx.font='7px monospace';
+  ctx.fillText('生态合作',15*CW,3.5*CH);
+  
+  ctx.fillStyle='#a78bfa'; ctx.font='7px monospace';
+  ctx.fillText('大厅',2*CW,9*CH+5);
+  ctx.fillStyle='#60a5fa';
+  ctx.fillText('展览区',9.5*CW,9*CH+5);
+  ctx.fillStyle='#8892a4';
+  ctx.fillText('↑ 入口',17*CW+CW/2,10*CH+5);
+
+  // Corridor label
+  ctx.fillStyle='rgba(96,165,250,.3)'; ctx.font='7px monospace';
+  ctx.fillText('── 通道 ──────────────',9*CW,6*CH+10);
+  
+  // Draw dotted path if both avatars exist
+  if(lukasXY && marcoXY){
+    ctx.setLineDash([3,4]);
+    ctx.strokeStyle='rgba(78,155,255,.4)';
+    ctx.lineWidth=1.5;
+    ctx.beginPath();
+    ctx.moveTo(lukasXY[0]*CW+CW/2, lukasXY[1]*CH+CH/2);
+    ctx.lineTo(marcoXY[0]*CW+CW/2, marcoXY[1]*CH+CH/2);
+    ctx.stroke();
+    ctx.setLineDash([]);
+  }
+  
+  // Draw avatar
+  function drawAvatar(col,row,color,name){
+    const ax=col*CW+CW/2, ay=row*CH+CH/2;
+    // Glow
+    ctx.beginPath();
+    ctx.arc(ax,ay,9,0,Math.PI*2);
+    const g=ctx.createRadialGradient(ax,ay,0,ax,ay,9);
+    g.addColorStop(0,color+'88');
+    g.addColorStop(1,color+'00');
+    ctx.fillStyle=g;
+    ctx.fill();
+    // Dot
+    ctx.beginPath();
+    ctx.arc(ax,ay,5,0,Math.PI*2);
+    ctx.fillStyle=color;
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(ax,ay,5,0,Math.PI*2);
+    ctx.strokeStyle='#fff';
+    ctx.lineWidth=1.5;
+    ctx.stroke();
+    // Label bubble
+    ctx.font='bold 8px -apple-system,sans-serif';
+    const tw=ctx.measureText(name).width;
+    const bx=ax-tw/2-4, by=ay-20;
+    ctx.fillStyle='rgba(0,0,0,.75)';
+    ctx.beginPath();
+    ctx.roundRect(bx,by,tw+8,13,3);
+    ctx.fill();
+    ctx.strokeStyle=color;
+    ctx.lineWidth=1;
+    ctx.stroke();
+    ctx.fillStyle=color;
+    ctx.fillText(name,ax,by+9);
+  }
+  
+  if(lukasXY) drawAvatar(lukasXY[0],lukasXY[1],'#4e9bff','Lukas');
+  if(marcoXY) drawAvatar(marcoXY[0],marcoXY[1],'#4ade80','Marco');
+}
+
+// Step 2: Lukas at entrance
+const c2=document.createElement('canvas');
+c2.width=22*CW; c2.height=13*CH; c2.style.borderRadius='8px';
+document.getElementById('s2').appendChild(c2);
+drawMap(c2, true, [17,9], null);
+
+// Step 3: Lukas and Marco both heading to Hall B
+const c3=document.createElement('canvas');
+c3.width=22*CW; c3.height=13*CH; c3.style.borderRadius='8px';
+document.getElementById('s3').appendChild(c3);
+drawMap(c3, true, [8,3], [11,2]);
+</script>
+</body></html>
