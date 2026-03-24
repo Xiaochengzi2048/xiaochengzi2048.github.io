@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>张晓雨 · Resume</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #f5f4f0;
+    color: #2d2d2d;
+    line-height: 1.65;
+    font-size: 14px;
+  }
+  .page {
+    max-width: 860px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+    overflow: hidden;
+  }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+    color: #fff;
+    padding: 48px 52px 40px;
+  }
+  .header h1 { font-size: 36px; font-weight: 700; letter-spacing: 2px; margin-bottom: 10px; }
+  .header .contact { font-size: 13px; color: rgba(255,255,255,0.7); display: flex; gap: 24px; flex-wrap: wrap; margin-top: 12px; }
+  .header .contact a { color: rgba(255,255,255,0.7); text-decoration: none; }
+  .header .contact a:hover { color: #fff; }
+  .header .tagline {
+    margin-top: 18px;
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.7;
+    max-width: 680px;
+  }
+
+  /* Body */
+  .body { padding: 40px 52px 52px; }
+
+  /* Section */
+  .section { margin-bottom: 36px; }
+  .section-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #888;
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+  }
+
+  /* Job */
+  .job { margin-bottom: 28px; }
+  .job:last-child { margin-bottom: 0; }
+  .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; flex-wrap: wrap; gap: 4px; }
+  .job-company { font-size: 15px; font-weight: 700; color: #1a1a2e; }
+  .job-meta { font-size: 12px; color: #999; }
+  .job-role { font-size: 13px; color: #555; margin-bottom: 12px; }
+
+  /* Sub section */
+  .sub { margin-bottom: 12px; }
+  .sub-title { font-size: 13px; font-weight: 600; color: #0f3460; margin-bottom: 5px; }
+  .sub ul { padding-left: 18px; }
+  .sub ul li { margin-bottom: 5px; font-size: 13.5px; color: #3d3d3d; }
+
+  /* Education */
+  .edu-item { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; flex-wrap: wrap; gap: 4px; }
+  .edu-name { font-size: 14px; font-weight: 600; color: #1a1a2e; }
+  .edu-date { font-size: 12px; color: #999; }
+  .edu-detail { font-size: 13px; color: #555; margin-bottom: 14px; }
+
+  /* Skills */
+  .skill-row { display: flex; gap: 10px; margin-bottom: 8px; align-items: flex-start; }
+  .skill-label { font-size: 12px; font-weight: 600; color: #0f3460; min-width: 90px; padding-top: 2px; }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag {
+    background: #f0f4ff;
+    color: #2d4a8a;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1px solid #d8e4ff;
+  }
+  .tag.highlight { background: #e8f4e8; color: #2d6a2d; border-color: #c0dfc0; }
+
+  /* Print */
+  @media print {
+    body { background: #fff; }
+    .page { box-shadow: none; margin: 0; border-radius: 0; }
+    .header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+
+  @media (max-width: 640px) {
+    .header, .body { padding: 28px 24px; }
+    .header h1 { font-size: 28px; }
+    .job-header { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>张晓雨</h1>
+    <div class="contact">
+      <span>📱 +86 17621618096</span>
+      <span>✉️ Mystica1994@gmail.com</span>
+      <span>📍 上海</span>
+    </div>
+    <div class="tagline">
+      5年云基础设施与AI产品落地经验，深耕企业级市场。具备从客户需求洞察到技术方案设计再到产品落地的全链路能力，
+      熟悉大模型产品体系（AWS Bedrock / Claude / 主流LLM API）及Agent应用场景。
+      文字功底扎实，数据分析能力强，长期使用AI工具重构个人工作流，持续跟踪Agent产品前沿。
+    </div>
+  </div>
+
+  <div class="body">
+
+    <!-- 工作经历 -->
+    <div class="section">
+      <div class="section-title">工作经历</div>
+
+      <!-- AWS 当前 -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-company">Amazon Web Services</span>
+          <span class="job-meta">上海 · 2024.9 至今</span>
+        </div>
+        <div class="job-role">高级客户经理（战略客户）</div>
+
+        <div class="sub">
+          <div class="sub-title">AI 场景定义与产品落地</div>
+          <ul>
+            <li>深入挖掘自动驾驶头部客户 GenAI 业务机会，主导 POC 设计与用例定义；推动 SageMaker/Bedrock 在 AIGC 内容生成、Corner Case 场景挖掘、研发效率提升等场景落地，推动客户从试点走向规模化应用</li>
+            <li>与客户 CTO/VP 共同拆解 AI 研发链路（数据采集→标注→训练→仿真→部署），识别各环节痛点，设计定制化云原生解决方案</li>
+          </ul>
+        </div>
+
+        <div class="sub">
+          <div class="sub-title">解决方案设计与技术产品化</div>
+          <ul>
+            <li>针对 Robotaxi PB 级路测数据处理场景，设计 EC2/EKS + S3/FSx 最优架构，帮助客户实现成本结构优化和研发效率提升</li>
+            <li>主导万级并发仿真平台方案设计，协调解决方案架构师、专业服务团队等多角色推进项目落地</li>
+          </ul>
+        </div>
+
+        <div class="sub">
+          <div class="sub-title">业务洞察与数据驱动</div>
+          <ul>
+            <li>针对 5 家战略客户建立多维度监测体系：追踪整体 Revenue 走势、按小时粒度的消费变动与产品关联、核心业务 workflow 健康度及新产品渗透情况；将异常信号及时转化为主动介入的业务行动</li>
+            <li>以客户数据洞察为基础主导年度 Account Planning，推动内部 SA/ProServe/合作伙伴资源协同，连续两季度获评区域/行业 Top Deal Winner</li>
+          </ul>
+        </div>
+
+        <div class="sub">
+          <div class="sub-title">产品需求发现与跨团队推动</div>
+          <ul>
+            <li>通过消费数据监测发现头部客户 GPU 利用率存在结构性浪费（任务实际仅需半卡或六分之一卡），主动访谈验证需求后协调美国产品团队深度对齐（使用场景 / GPU 与 CPU 利用率 / 核心 workflow / 场景可复制性），推动 EC2 G6f 实例提前在中东区域落地规划，预计覆盖 ARR <strong>500 万–1000 万美元</strong></li>
+          </ul>
+        </div>
+
+        <div class="sub">
+          <div class="sub-title">全球化项目管理</div>
+          <ul>
+            <li>主导 Go-Global 复杂项目，制定多区域基础设施规划，协调全球 GPU/CPU 算力资源分配；协同法务与安全团队解决数据合规问题，确保交付</li>
+            <li>主导多年战略合作协议签订</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Akamai -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-company">Akamai</span>
+          <span class="job-meta">上海 · 2024.4–2024.9</span>
+        </div>
+        <div class="job-role">客户经理</div>
+        <div class="sub">
+          <ul>
+            <li>负责游戏、媒体行业 CDN / 安全 / 云计算产品销售，联合合作伙伴拓展新业务</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- AWS 旧 -->
+      <div class="job">
+        <div class="job-header">
+          <span class="job-company">Amazon Web Services</span>
+          <span class="job-meta">上海 · 2019.7–2023.7</span>
+        </div>
+        <div class="job-role">区域 BD</div>
+
+        <div class="sub">
+          <div class="sub-title">数据驱动的产品策略与 GTM 设计</div>
+          <ul>
+            <li>利用 Salesforce/Tableau 分析东区 4 万+ 客户数据，制定年度区域 GTM 策略；识别细分市场机会，精准指导资源配置，连续两年业绩完成率超 <strong>120%</strong></li>
+          </ul>
+        </div>
+
+        <div class="sub">
+          <div class="sub-title">新兴赛道产品市场验证</div>
+          <ul>
+            <li>聚焦 Ad-Tech、Fintech、游戏赛道，通过 CXO 价值销售验证产品市场契合度；年度新客增长 <strong>105%</strong>，业绩同比增长 <strong>175%</strong></li>
+          </ul>
+        </div>
+
+        <div class="sub">
+          <div class="sub-title">高潜客户识别与规模化培育</div>
+          <ul>
+            <li>从东区数万客户中主动识别高潜标的，验证产品市场契合度；将核心游戏客户从 SMB 培育至东区 Top 5，推动 Aurora/DocumentDB 托管服务深度落地，月营收提升至 XL 量级</li>
+            <li>主策行业市场活动（电商/Web3），实现 <strong>15 倍 ROI</strong>，商机转化率提升 15%</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 教育背景 -->
+    <div class="section">
+      <div class="section-title">教育背景</div>
+      <div class="edu-item">
+        <span class="edu-name">南京大学 · 新闻传播学院 · 研究生（计算传播方向）</span>
+        <span class="edu-date">2017.9–2019.6</span>
+      </div>
+      <div class="edu-detail">CSSCI 核心论文 1 篇；国家奖学金，人民奖学金一等奖 ×2，优秀研究生、优秀毕业生</div>
+
+      <div class="edu-item">
+        <span class="edu-name">南京大学 · 新闻传播学院 · 本科（新闻学）</span>
+        <span class="edu-date">2012.9–2016.6</span>
+      </div>
+      <div class="edu-detail">发起校园媒体《新潮》；国家励志奖学金；研究生支教团支教一年（贵州，2016–2017）</div>
+    </div>
+
+    <!-- 技能 -->
+    <div class="section">
+      <div class="section-title">技能与工具</div>
+
+      <div class="skill-row">
+        <div class="skill-label">AI / LLM</div>
+        <div class="skill-tags">
+          <span class="tag highlight">AWS Bedrock</span>
+          <span class="tag highlight">Claude</span>
+          <span class="tag highlight">Coze</span>
+          <span class="tag highlight">Dify</span>
+          <span class="tag">Kiro</span>
+          <span class="tag">Claude Code</span>
+          <span class="tag">OpenClaw</span>
+          <span class="tag">Prompt Engineering</span>
+          <span class="tag">MCP / Agent工作流</span>
+          <span class="tag">Manus</span>
+        </div>
+      </div>
+
+      <div class="skill-row">
+        <div class="skill-label">云基础设施</div>
+        <div class="skill-tags">
+          <span class="tag highlight">EC2 / EKS</span>
+          <span class="tag highlight">S3 / FSx</span>
+          <span class="tag highlight">SageMaker</span>
+          <span class="tag highlight">Bedrock</span>
+          <span class="tag">云原生架构设计</span>
+        </div>
+      </div>
+
+      <div class="skill-row">
+        <div class="skill-label">数据与分析</div>
+        <div class="skill-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Salesforce</span>
+          <span class="tag">Tableau</span>
+        </div>
+      </div>
+
+      <div class="skill-row">
+        <div class="skill-label">证书</div>
+        <div class="skill-tags">
+          <span class="tag highlight">PMP</span>
+          <span class="tag highlight">AWS SAP</span>
+        </div>
+      </div>
+
+      <div class="skill-row">
+        <div class="skill-label">语言</div>
+        <div class="skill-tags">
+          <span class="tag">中文母语</span>
+          <span class="tag">英文（雅思 6.5，独立支持国际项目）</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
