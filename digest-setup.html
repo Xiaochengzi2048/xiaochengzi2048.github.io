@@ -1,0 +1,54 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Builders Digest · RSS Setup</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0f1117;color:#e8eaf0;font-family:-apple-system,sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.card{background:#1a1f2e;border:1px solid #2a3448;border-radius:16px;padding:32px 28px;max-width:480px;width:100%}
+h1{font-size:20px;font-weight:800;margin-bottom:6px}
+.sub{font-size:13px;color:#6b7a96;margin-bottom:28px}
+.label{font-size:11px;font-weight:700;letter-spacing:1.5px;color:#4e9bff;margin-bottom:8px}
+.url-box{background:#0d1525;border:1px solid #2a4a70;border-radius:10px;padding:14px 16px;font-size:13px;color:#60a5fa;word-break:break-all;margin-bottom:8px;cursor:pointer;transition:background .15s}
+.url-box:active{background:#0a1020}
+.copy-hint{font-size:11px;color:#4a5a74;margin-bottom:28px}
+.steps{display:flex;flex-direction:column;gap:14px;margin-bottom:28px}
+.step{display:flex;gap:12px;align-items:flex-start}
+.num{width:24px;height:24px;border-radius:50%;background:#4e9bff22;border:1px solid #4e9bff;color:#4e9bff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.step-text{font-size:13px;line-height:1.6;color:#c8d0e0}
+.step-text strong{color:#fff}
+.divider{border:none;border-top:1px solid #1e2d48;margin:24px 0}
+.notion-link{display:block;text-align:center;font-size:12px;color:#6b7a96;text-decoration:none}
+.notion-link:hover{color:#9aa3b8}
+.copied{display:none;font-size:11px;color:#4ade80;margin-bottom:28px}
+</style>
+</head><body>
+<div class="card">
+  <h1>🗞️ AI Builders Digest</h1>
+  <div class="sub">每日双语 AI Builder 动态 · 每天 8:30 北京时间更新</div>
+
+  <div class="label">RSS FEED URL</div>
+  <div class="url-box" onclick="copyUrl(this)">https://xiaochengzi2048.github.io/builders-digest.xml</div>
+  <div class="copy-hint" id="copy-hint">点击复制</div>
+  <div class="copied" id="copied">✓ 已复制！</div>
+
+  <div class="label">SHORTCUTS 配置步骤</div>
+  <div class="steps">
+    <div class="step"><div class="num">1</div><div class="step-text">新建 Shortcut → 搜索 <strong>「Get Items from RSS Feed」</strong> → URL 填上方地址</div></div>
+    <div class="step"><div class="num">2</div><div class="step-text">添加 <strong>「Get Details of RSS Item」</strong> → 选 Item 为第一条 → Detail 选 <strong>Body</strong></div></div>
+    <div class="step"><div class="num">3</div><div class="step-text">添加 <strong>「Send Message」</strong> → Content 选上一步输出 → 填收件人微信</div></div>
+    <div class="step"><div class="num">4</div><div class="step-text">去「自动化」→ 每天 <strong>8:35</strong> 触发此 Shortcut</div></div>
+  </div>
+
+  <hr class="divider">
+  <a href="https://www.notion.so/AI-Builders-Digest-2026-03-24-32d941f98904816aa09eff363b022236" class="notion-link" target="_blank">📎 今日存档 → Notion</a>
+</div>
+
+<script>
+function copyUrl(el){
+  navigator.clipboard.writeText('https://xiaochengzi2048.github.io/builders-digest.xml').then(()=>{
+    document.getElementById('copy-hint').style.display='none';
+    document.getElementById('copied').style.display='block';
+    setTimeout(()=>{document.getElementById('copy-hint').style.display='block';document.getElementById('copied').style.display='none';},2000);
+  });
+}
+</script>
+</body></html>
