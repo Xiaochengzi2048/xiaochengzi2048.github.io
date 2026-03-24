@@ -10,11 +10,12 @@
     font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
     background: #f5f4f0;
     color: #2d2d2d;
-    line-height: 1.65;
+    line-height: 1.7;
     font-size: 14px;
+    -webkit-font-smoothing: antialiased;
   }
   .page {
-    max-width: 860px;
+    max-width: 920px;
     margin: 40px auto;
     background: #fff;
     border-radius: 12px;
@@ -36,12 +37,14 @@
     margin-top: 18px;
     font-size: 13.5px;
     color: rgba(255,255,255,0.85);
-    line-height: 1.7;
-    max-width: 680px;
+    line-height: 1.75;
+    max-width: 100%;
+    text-align: justify;
+    text-justify: inter-ideograph;
   }
 
   /* Body */
-  .body { padding: 40px 52px 52px; }
+  .body { padding: 40px 56px 52px; }
 
   /* Section */
   .section { margin-bottom: 36px; }
@@ -68,7 +71,15 @@
   .sub { margin-bottom: 12px; }
   .sub-title { font-size: 13px; font-weight: 600; color: #0f3460; margin-bottom: 5px; }
   .sub ul { padding-left: 18px; }
-  .sub ul li { margin-bottom: 5px; font-size: 13.5px; color: #3d3d3d; }
+  .sub ul li {
+    margin-bottom: 6px;
+    font-size: 13.5px;
+    color: #3d3d3d;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
 
   /* Education */
   .edu-item { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; flex-wrap: wrap; gap: 4px; }
