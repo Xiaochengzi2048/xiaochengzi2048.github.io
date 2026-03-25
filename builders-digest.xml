@@ -6,6 +6,187 @@
     <description>Daily AI builders digest - bilingual EN/ZH</description>
     <language>zh-CN</language>
     <item>
+    <title>AI Builders Digest · 2026-03-25</title>
+    <link>https://www.notion.so/AI-Builders-Digest-2026-03-25-32e941f9890481429b4bccd992cd6e7a</link>
+    <guid>https://www.notion.so/AI-Builders-Digest-2026-03-25-32e941f9890481429b4bccd992cd6e7a</guid>
+    <pubDate>Wed, 25 Mar 2026 00:30:00 +0000</pubDate>
+    <description>AI Builders Digest — March 25, 2026 (Beijing Time)
+
+═══════════════════════════════════════
+X / TWITTER
+═══════════════════════════════════════
+
+─────────────────────────────────────
+Anthropic Researcher Alex Albert
+─────────────────────────────────────
+Anthropic researcher Alex Albert shared a striking data point: theoretical physicist Matthew Schwartz found Claude Opus 4.5 to be roughly at the level of a second-year grad student, and it accelerated his research by 10x. Albert also noted that the future where you never have to open a laptop to get work done is arriving faster than expected.
+https://x.com/alexalbert__/status/2036232980059062550
+https://x.com/alexalbert__/status/2036227208675729687
+
+Anthropic 研究员 Alex Albert 分享了一个令人印象深刻的数据点：理论物理学家 Matthew Schwartz 发现 Claude Opus 4.5 大约达到了二年级研究生的水平，将他的研究速度提升了 10 倍。Albert 还提到，「不需要打开笔记本电脑就能完成工作」的未来正在以超乎预期的速度到来。
+https://x.com/alexalbert__/status/2036232980059062550
+https://x.com/alexalbert__/status/2036227208675729687
+
+─────────────────────────────────────
+Claude Code Engineer Thariq
+─────────────────────────────────────
+Claude Code engineer Thariq dropped a fun stat: Anthropic acquired a computer use company and shipped computer use in Claude Code just 4 weeks later. Computer control is now live in Claude Code Desktop.
+https://x.com/trq212/status/2036302910498173034
+https://x.com/trq212/status/2036199619416178814
+
+Claude Code 工程师 Thariq 透露了一个有趣的细节：Anthropic 收购了一家 computer use 公司，仅 4 周后就在 Claude Code 中上线了电脑控制功能。这项功能目前已在 Claude Code Desktop 版本中正式可用。
+https://x.com/trq212/status/2036302910498173034
+https://x.com/trq212/status/2036199619416178814
+
+─────────────────────────────────────
+Claude (Official)
+─────────────────────────────────────
+The official Claude account announced a major new capability: you can now assign tasks from your phone and come back to finished work on your computer. Claude uses connected apps (Slack, Calendar, etc.) first, and when no connector exists, asks permission to control the app directly on screen. Available on Pro and Max plans.
+https://x.com/claudeai/status/2036195795100123446
+https://x.com/claudeai/status/2036195792101212445
+
+Claude 官方账号宣布了重大新功能：你现在可以在手机上分配任务，回来时电脑上的工作已经完成。Claude 优先使用已连接的 app（Slack、日历等），如果没有对应连接器，会请求权限直接控制屏幕上的应用。功能在 Pro 和 Max 计划中可用。
+https://x.com/claudeai/status/2036195795100123446
+https://x.com/claudeai/status/2036195792101212445
+
+─────────────────────────────────────
+Box CEO Aaron Levie
+─────────────────────────────────────
+Box CEO Aaron Levie argues that computer use and the ability to write and run code on the fly are the ultimate primitives for agents tackling enterprise knowledge work. Most work requires hopping between multiple applications with broad datasets — agents need to traverse these systems to automate any real workflow.
+https://x.com/levie/status/2036290915950797314
+
+Box CEO Aaron Levie 认为，电脑控制能力和即时编写/运行代码的能力是 agent 在企业知识工作中发挥作用的终极基础能力。大多数工作都需要在多个应用之间切换并处理大量数据，agent 必须能够跨越这些系统才能真正实现自动化。
+https://x.com/levie/status/2036290915950797314
+
+─────────────────────────────────────
+YC President &amp; CEO Garry Tan
+─────────────────────────────────────
+YC CEO Garry Tan just submitted his first-ever PR to the Y Combinator internal codebase — a 2,400-line change into a 1.84 million line repo with 14 years of technical debt — using GStack/Conductor. His key insight: GStack&#x27;s skills transfer even to giant, messy production codebases, not just greenfield projects.
+https://x.com/garrytan/status/2036330844516917297
+https://x.com/garrytan/status/2036330296308802012
+
+YC 总裁兼 CEO Garry Tan 刚刚向 Y Combinator 内部代码库提交了他有史以来第一个 PR——在一个拥有 14 年技术债的 184 万行代码库中改动了 2400 行，使用的是 GStack/Conductor。他的核心发现：GStack 的能力不只适用于从零开始的项目，对于庞大、混乱的生产代码库同样有效。
+https://x.com/garrytan/status/2036330844516917297
+https://x.com/garrytan/status/2036330296308802012
+
+─────────────────────────────────────
+OpenAI VP of Science Kevin Weil
+─────────────────────────────────────
+OpenAI VP of Science Kevin Weil highlighted a young astronomer who used AI to analyze massive datasets and identified 1.5 million new celestial objects in space — earning a NASA job offer and a fighter jet ride as a signing bonus. Weil sees this as a sign of AI&#x27;s transformative potential in science.
+https://x.com/kevinweil/status/2036095876628693168
+
+OpenAI 科学副总裁 Kevin Weil 介绍了一位用 AI 分析海量数据集的年轻天文学家，他发现了 150 万个新的天体——NASA 因此向他抛出橄榄枝，还附赠了一次战斗机试飞体验。Weil 认为这正是 AI 在科学领域变革性潜力的体现。
+https://x.com/kevinweil/status/2036095876628693168
+
+─────────────────────────────────────
+FirstMark VC Matt Turck
+─────────────────────────────────────
+FirstMark VC Matt Turck put the Claude Code moment in historical perspective: it&#x27;s going to be hard to explain to future generations that there was once a time when people with an idea would spend years searching for a &quot;technical co-founder.&quot;
+https://x.com/mattturck/status/2036182407779365309
+
+FirstMark 风险投资人 Matt Turck 从历史角度看待 Claude Code 的意义：未来的人们将很难理解，曾经有一个时代，有想法的人需要花费数年时间寻找「技术联合创始人」。
+https://x.com/mattturck/status/2036182407779365309
+
+─────────────────────────────────────
+Linear Head of Product Nan Yu
+─────────────────────────────────────
+Linear&#x27;s head of product Nan Yu shared a remarkable moment: Codex noticed a prompt included a line that obliquely referenced a feature hidden behind a feature flag elsewhere in the app — and flagged it. His question: what percentage of human reviewers would catch this?
+https://x.com/thenanyu/status/2036095568733143258
+
+Linear 产品负责人 Nan Yu 分享了一个令人震惊的瞬间：Codex 发现他的 prompt 里有一行代码隐晦地引用了 app 其他地方被 feature flag 隐藏的功能，并且主动标记了出来。他的问题是：有多少人类 reviewer 能发现这个问题？
+https://x.com/thenanyu/status/2036095568733143258
+
+─────────────────────────────────────
+Swyx (Latent Space / AI Engineer)
+─────────────────────────────────────
+Swyx analyzed the Dreamer x Meta exec hire on the 9-month anniversary of Zuck&#x27;s &quot;Personal Superintelligence&quot; manifesto, touching on Vibes, Manus, and what MSL Apps will have to show by year end. He&#x27;s also taking predictions on what Meta&#x27;s AI lab will acquire next. Separately, he noted a pattern of Latent Space / AI Engineer podcast alumni getting major investment from Scale AI&#x27;s Alexandr Wang and NAT.
+https://x.com/swyx/status/2036337043475931340
+https://x.com/swyx/status/2036205006806982931
+
+Swyx 在 Zuck 发布《Personal Superintelligence》宣言 9 个月纪念日之际，分析了 Dreamer x Meta 高管收购事件，涉及 Vibes、Manus，以及 MSL Apps 到年底要交出什么成绩单。他还在征集关于 Meta AI 实验室下一步会收购谁的预测。另外，他注意到一个规律：Latent Space / AI Engineer 播客的嘉宾频频获得 Scale AI Alexandr Wang 和 NAT 的重磅投资。
+https://x.com/swyx/status/2036337043475931340
+https://x.com/swyx/status/2036205006806982931
+
+─────────────────────────────────────
+Sam Altman (OpenAI CEO)
+─────────────────────────────────────
+Sam Altman announced he is stepping down from the Helion board as OpenAI and Helion begin exploring working together at significant scale. He remains a financial stakeholder in Helion (and will continue to recuse himself from negotiations) but says the governance situation requires the move. He remains very bullish on Helion and the future of abundant energy.
+https://x.com/sama/status/2036137695605563682
+
+Sam Altman 宣布从 Helion 董事会辞职，原因是 OpenAI 和 Helion 开始探索大规模合作。他仍持有 Helion 的财务利益（在谈判中继续回避），但表示治理层面的考量需要他做出这个决定。他对 Helion 和能源丰盛未来的信念丝毫未减。
+https://x.com/sama/status/2036137695605563682
+
+─────────────────────────────────────
+Peter Steinberger (CodexBar / AI Tools)
+─────────────────────────────────────
+Peter Steinberger shared his evolving PR review workflow with Codex: flag issues, assess clarity, ask if this is the best possible fix (95% of the time it isn&#x27;t), then continue discussion before rewriting. He also released CodexBar 0.19.0 with Alibaba Coding Plan support, subscription history charts, and improved Claude stability.
+https://x.com/steipete/status/2036252448399171717
+https://x.com/steipete/status/2036245531522113910
+
+Peter Steinberger 分享了他结合 Codex 的 PR review 工作流：标记问题，判断是否清晰，追问这是否是最佳修复方案（95% 的情况下不是），然后继续讨论再重写。他还发布了 CodexBar 0.19.0，新增阿里云编码计划支持、订阅历史图表和 Claude 稳定性改进。
+https://x.com/steipete/status/2036252448399171717
+https://x.com/steipete/status/2036245531522113910
+
+─────────────────────────────────────
+Every CEO Dan Shipper
+─────────────────────────────────────
+Every CEO Dan Shipper coined a useful nuance: &quot;if you can vibe code it you can vibe fix it — but you can&#x27;t always vibe fix it quickly.&quot; The asymmetry matters as AI-generated codebases grow in complexity.
+https://x.com/danshipper/status/2036146776319680624
+
+Every CEO Dan Shipper 提出了一个有用的观察：&quot;如果能 vibe code，就能 vibe fix——但 vibe fix 不一定很快。&quot;随着 AI 生成的代码库越来越复杂，这种不对称性正在变得重要。
+https://x.com/danshipper/status/2036146776319680624
+
+─────────────────────────────────────
+Replit CEO Amjad Masad
+─────────────────────────────────────
+Replit CEO Amjad Masad highlighted a viral TSA wait time app built entirely on Replit — a neat example of real consumer utility emerging from AI-assisted vibe coding.
+https://x.com/amasad/status/2036272008158433564
+
+Replit CEO Amjad Masad 展示了一款在 Replit 上构建的病毒式传播的 TSA 等待时间 app——这是 AI 辅助 vibe coding 催生真实消费者价值的一个有趣案例。
+https://x.com/amasad/status/2036272008158433564
+
+─────────────────────────────────────
+Peter Yang (Creator Economy / AI Tutorials)
+─────────────────────────────────────
+Creator and AI educator Peter Yang praised Anthropic for shipping basically every day, calling it the bar for what AI-native development looks like. He also reflected on college admissions becoming harder — and why persistence in building beats gatekeepers.
+https://x.com/petergyang/status/2036212646962434395
+
+创作者和 AI 教育者 Peter Yang 盛赞 Anthropic 几乎每天都在发布新功能，称这是 AI 原生开发的标杆。他也分享了关于大学录取竞争加剧的思考——以及为什么坚持构建有人需要的东西终将胜过守门人。
+https://x.com/petergyang/status/2036212646962434395
+
+─────────────────────────────────────
+FPV Ventures Partner Nikunj Kothari
+─────────────────────────────────────
+FPV Ventures partner Nikunj Kothari noted the SF startup bubble in miniature: every conversation circles back to Jevons paradox, Goodhart&#x27;s law, and the bitter lesson. His take: read more history, art, and sci-fi.
+https://x.com/nikunj/status/2036108908532801630
+
+FPV Ventures 合伙人 Nikunj Kothari 观察到旧金山的一个小圈子现象：每次对话都会绕回到 Jevons 悖论、Goodhart 定律和 bitter lesson。他的建议：多读历史、艺术和科幻。
+https://x.com/nikunj/status/2036108908532801630
+
+─────────────────────────────────────
+Google Labs
+─────────────────────────────────────
+Google Labs announced its experimental virtual try-on app Doppl will shut down on April 30, 2026. The underlying virtual try-on technology will live on across Google product listings and image results — another Labs experiment graduating to core product.
+https://x.com/GoogleLabs/status/2036188820128071786
+
+Google Labs 宣布其实验性虚拟试穿 app Doppl 将于 2026 年 4 月 30 日停止运营。底层虚拟试穿技术将继续在 Google 商品列表和图片搜索结果中提供——这是又一个从 Labs 实验毕业进入核心产品的案例。
+https://x.com/GoogleLabs/status/2036188820128071786
+
+═══════════════════════════════════════
+PODCASTS
+═══════════════════════════════════════
+
+No new podcast episodes today.
+
+今日无新播客节目。
+
+═══════════════════════════════════════
+🍊 小橙子 · AI Builders Digest
+Generated: 2026-03-25 (Beijing Time)
+═══════════════════════════════════════
+</description>
+  </item>
+  <item>
       <title>AI Builders Digest - 2026-03-24</title>
       <link>https://www.notion.so/AI-Builders-Digest-2026-03-24-32d941f98904816aa09eff363b022236</link>
       <guid>https://www.notion.so/AI-Builders-Digest-2026-03-24-32d941f98904816aa09eff363b022236</guid>
