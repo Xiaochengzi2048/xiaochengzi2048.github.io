@@ -5,7 +5,191 @@
     <link>https://xiaochengzi2048.github.io</link>
     <description>Daily AI builders digest - bilingual EN/ZH</description>
     <language>zh-CN</language>
-    <item>
+      <item>
+    <title>AI Builders Digest · 2026-03-26</title>
+    <link>https://www.notion.so/AI-Builders-Digest-2026-03-26-32f941f9890481d7a12ef966d0f5af74</link>
+    <guid>https://www.notion.so/AI-Builders-Digest-2026-03-26-32f941f9890481d7a12ef966d0f5af74</guid>
+    <pubDate>Thu, 26 Mar 2026 00:30:00 +0000</pubDate>
+    <description>AI Builders Digest — March 26, 2026
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+X / TWITTER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️ Former Tesla/OpenAI AI Director Andrej Karpathy issued an urgent security warning: the litellm Python package was the victim of a supply chain attack. A simple `pip install litellm` was enough to silently exfiltrate SSH keys, AWS/GCP/Azure credentials, Kubernetes configs, git credentials, environment variables, and all API keys. This is a serious wake-up call for any developer with AI dependencies in their stack.
+https://x.com/karpathy/status/2036487306585268612
+
+⚠️ 前特斯拉/OpenAI AI 总监 Andrej Karpathy 发出紧急安全警告：litellm Python 包遭遇供应链攻击。仅仅执行 `pip install litellm` 就足以悄悄窃取 SSH 密钥、AWS/GCP/Azure 凭证、Kubernetes 配置、git 凭证、环境变量和所有 API key。对于在技术栈中使用 AI 依赖库的开发者来说，这是一记严重的警钟。
+https://x.com/karpathy/status/2036487306585268612
+
+---
+
+OpenAI CEO Sam Altman says AI will help discover new science — including cures for diseases — which he considers the most important long-term lever for improving quality of life. He also acknowledged that AI will present new threats to society. In a lighter moment, he's looking for a single word to describe the feeling of "throwing everything into the model with as much context as possible" — a mood every power user will recognize.
+https://x.com/sama/status/2036488680769241223
+https://x.com/sama/status/2036489823792607273
+
+OpenAI CEO Sam Altman 表示，AI 将帮助发现新科学，包括治愈疾病，他认为这是长期提升人类生活质量最重要的方式。他同时也承认 AI 会给社会带来新威胁。轻松一刻：他想找一个词来描述"把所有东西和尽可能多的上下文一股脑扔给模型"这种感觉——每个重度用户都懂这个心情。
+https://x.com/sama/status/2036488680769241223
+https://x.com/sama/status/2036489823792607273
+
+---
+
+Anthropic's Claude account announced Claude Code's new "auto mode" — now available as a research preview on the Team plan, rolling out to Enterprise and API soon. Instead of making users approve every file write and bash command (or dangerously skipping permissions), auto mode has a classifier review each tool call before execution: safe actions proceed automatically, risky ones get blocked. This is a meaningful step toward agentic AI that's actually production-safe.
+https://x.com/claudeai/status/2036503582166393240
+https://x.com/claudeai/status/2036503583667933400
+https://x.com/claudeai/status/2036503584943034643
+
+Anthropic 的 Claude 官方账号宣布 Claude Code 推出"auto mode"——目前作为研究预览版向 Team 计划开放，Enterprise 和 API 访问即将推出。不再需要用户审批每次文件写入和 bash 命令（也不用危险地跳过权限），auto mode 通过分类器在执行前审查每次工具调用：安全操作自动执行，高风险操作被拦截，Claude 另寻他路。这是 agent AI 走向真正可生产部署的重要一步。
+https://x.com/claudeai/status/2036503582166393240
+https://x.com/claudeai/status/2036503583667933400
+https://x.com/claudeai/status/2036503584943034643
+
+---
+
+Anthropic researcher Alex Albert put it simply: "Goodbye --dangerously-skip-permissions, hello auto mode." The new flag is `--enable-auto-mode`, and you can cycle to it with Shift+Tab. The community has clearly been waiting for this.
+https://x.com/alexalbert__/status/2036510206155432293
+
+Anthropic 研究员 Alex Albert 简洁总结道："再见 --dangerously-skip-permissions，你好 auto mode。"新的启用方式是 `--enable-auto-mode`，按 Shift+Tab 可以切换到该模式。社区显然已经等待这个功能很久了。
+https://x.com/alexalbert__/status/2036510206155432293
+
+---
+
+Thariq, a Claude Code engineer at Anthropic, noted with some irony: "turns out being an AI safety company is useful for when you need to make sure AIs can run safely." He also previewed a Claude Code × Figma livestream on March 31st and teased a feature that currently only works on Teams but is being scaled.
+https://x.com/trq212/status/2036513038983995820
+https://x.com/trq212/status/2036515949617037711
+https://x.com/trq212/status/2036442894777594248
+
+Anthropic Claude Code 工程师 Thariq 带着点讽刺意味说道："原来做 AI 安全公司，在需要确保 AI 能安全运行的时候真的很有用。" 他还预告了 3 月 31 日的 Claude Code × Figma 直播，并透露了一个目前仅限 Teams 版本、正在扩大规模的功能。
+https://x.com/trq212/status/2036513038983995820
+https://x.com/trq212/status/2036515949617037711
+https://x.com/trq212/status/2036442894777594248
+
+---
+
+Box CEO Aaron Levie delivered a pointed observation for software vendors: "If you're building software that can't work fully headlessly in a way that agents want to use, you're not future-proof." He's quoting a company that's already moved off legacy systems with poor, slow, and inconsistent APIs — a preview of what agentic workflows will demand from every SaaS stack.
+https://x.com/levie/status/2036478998667207012
+
+Box CEO Aaron Levie 对软件厂商发出了一个尖锐的警告："如果你构建的软件无法以 agent 期望的方式完全无头运行，那你就没有未来。" 他引用了一家已经从慢速、过时、不一致 API 的遗留系统迁移出去的公司——这预示着 agent 工作流将对每个 SaaS 产品栈提出的要求。
+https://x.com/levie/status/2036478998667207012
+
+---
+
+YC President &amp; CEO Garry Tan pushed back on the "AI will replace developers" framing: "Once you say 'replace developers' it's the wrong ideaspace. Cars didn't replace walking — you still have to walk a little bit AND it let people go to places you can't go to on foot alone." He also teased that AI will make his output 90x what it was in 2013.
+https://x.com/garrytan/status/2036674371855823153
+https://x.com/garrytan/status/2036675789819953347
+
+YC 总裁兼 CEO Garry Tan 反驳了"AI 将取代开发者"的论调："一旦你说'取代开发者'，你的思维框架就错了。汽车没有取代步行——你还是得走一点路，同时它让人们能去靠步行到不了的地方。" 他还暗示 AI 将让他的产出达到 2013 年的 90 倍。
+https://x.com/garrytan/status/2036674371855823153
+https://x.com/garrytan/status/2036675789819953347
+
+---
+
+Vercel CEO Guillermo Rauch shared two sharp signals. First: Vercel now intelligently picks the right hardware for each build, adapting to the new wave of Rust-based compilers (Turbopack, Rolldown) that scale with CPU count. Second and more striking: "Almost every SaaS app inside Vercel has now been replaced with a generated app or agent interface, deployed on Vercel" — covering support, sales, marketing, PM, HR, data viz, design, and video workflows. He's eating his own cooking.
+https://x.com/rauchg/status/2036584870995173678
+https://x.com/rauchg/status/2036447879985037495
+
+Vercel CEO Guillermo Rauch 分享了两个清晰的信号。其一：Vercel 现在能智能选择每次构建的合适硬件，适配以 Turbopack、Rolldown 为代表的新一代 Rust 编译器（这些编译器的性能随 CPU 数量线性扩展）。其二，更震撼：「Vercel 内部几乎每个 SaaS 应用，现在都已被生成式应用或 agent 界面取代，部署在 Vercel 上」——覆盖支持、销售、市场、PM、HR、数据可视化、设计和视频工作流。他正在践行自己的理念。
+https://x.com/rauchg/status/2036584870995173678
+https://x.com/rauchg/status/2036447879985037495
+
+---
+
+Linear Head of Product Nan Yu shared a frank reflection: "I haven't written a PRD by hand, filed an issue through a form, or hand-written any code in months. But the volume of work I'm producing and the quality bar have never been higher." His incentive for making agents work? Simply not wanting to do annoying work anymore.
+https://x.com/thenanyu/status/2036549647267709110
+https://x.com/thenanyu/status/2036631571118084476
+
+Linear 产品负责人 Nan Yu 坦率分享了自己的体会："我已经好几个月没有手写过 PRD、没有通过表单提交过 issue、也没有手写过任何代码了。但我的产出量和质量标准从未像现在这么高。" 他推动 agent 发挥作用的动力？就是不想再做那些烦人的重复工作了。
+https://x.com/thenanyu/status/2036549647267709110
+https://x.com/thenanyu/status/2036631571118084476
+
+---
+
+Roblox Product lead Peter Yang sees AI agents replacing the entire document-driven workflow: specs, designs, issues, roadmaps, strategy docs, spreadsheets — all of it. His hope is that AI handles the paperwork so teams can obsess over the actual end-user product. He also noted with amusement that his Telegram is now entirely composed of chats with AI bots — not a single human conversation.
+https://x.com/petergyang/status/2036621615086309468
+https://x.com/petergyang/status/2036664048700600706
+
+Roblox 产品负责人 Peter Yang 认为 AI agent 将取代整个文档驱动的工作流：需求文档、设计稿、issue、路线图、战略文档、表格——全部。他希望 AI 处理这些文书工作，让团队能专注于真正的用户产品。他还有些好笑地发现，他的 Telegram 现在全是和 AI bot 的对话——没有一个真人。
+https://x.com/petergyang/status/2036621615086309468
+https://x.com/petergyang/status/2036664048700600706
+
+---
+
+FPV Ventures partner Nikunj Kothari turned a security compliance observation into a data project: he scraped the subprocessor lists of 417 companies to map which AI infrastructure is actually being used in production by companies like Notion, Ramp, Brex, Harvey, Perplexity, and Evidence. A rare look at real B2B AI adoption through the lens of legal compliance docs.
+https://x.com/nikunj/status/2036572222081606065
+https://x.com/nikunj/status/2036573898289086895
+
+FPV Ventures 合伙人 Nikunj Kothari 把一个安全合规观察变成了数据项目：他爬取了 417 家公司的 subprocessor（数据处理方）列表，绘制出 Notion、Ramp、Brex、Harvey、Perplexity 等公司在生产环境中实际使用的 AI 基础设施地图。这是通过法律合规文件窥探真实 B2B AI 采用情况的罕见视角。
+https://x.com/nikunj/status/2036572222081606065
+https://x.com/nikunj/status/2036573898289086895
+
+---
+
+Builder and creator Zara Zhang crossed 13K GitHub stars — remarkable for someone who says she "barely knew how GitHub worked" a year ago. She reflected: "Something shifted in January." She's also shipping: frontend-slides now supports deploying decks as shareable URLs and exporting to PDF. Her take: "GitHub is the new Substack. Code is a form of self-expression."
+https://x.com/zarazhangrui/status/2036552689673445847
+https://x.com/zarazhangrui/status/2036590721927618988
+https://x.com/zarazhangrui/status/2036675965003411514
+
+创作者 Zara Zhang 在 GitHub 上累积了 13K+ star——令人印象深刻，尤其是她说自己一年前"几乎不懂 GitHub 怎么用"。她反思道："一月份发生了什么转变。" 与此同时她也在持续输出：frontend-slides 现在支持将演示文稿部署为可分享的 URL，并导出为 PDF。她的观点："GitHub 是新的 Substack，代码是一种自我表达。"
+https://x.com/zarazhangrui/status/2036552689673445847
+https://x.com/zarazhangrui/status/2036590721927618988
+https://x.com/zarazhangrui/status/2036675965003411514
+
+---
+
+South Park Commons GP and ex-Dropbox CTO Aditya Agarwal sees a clear near-term unlock for robotics: "The hardware is ready. We just need to get the software to a point where it is reliable and scalable." He's bullish on the US as the right country to win this.
+https://x.com/adityaag/status/2036426693930291334
+
+South Park Commons GP、前 Dropbox CTO Aditya Agarwal 对机器人领域看到了清晰的近期机遇："硬件已经就绪，我们只需要让软件达到可靠且可扩展的程度。" 他看好美国在这场竞赛中胜出。
+https://x.com/adityaag/status/2036426693930291334
+
+---
+
+swyx (AI Engineer, Latent Space) shared enthusiasm for Devin's ability to catch its own mistakes — a meta-capability he says saves him 3–8x effort daily. He also noted that Sora appears to be "the first casualty of OpenAI's crackdown on Side Quests."
+https://x.com/swyx/status/2036565584515899445
+https://x.com/swyx/status/2036533647659143630
+
+AI 工程师 swyx (Latent Space) 对 Devin 能捕捉自身错误的能力表示赞叹——他说这个元能力每天帮他节省 3-8 倍的工作量。他还指出，Sora 似乎是"OpenAI 打压副业项目的第一个牺牲品"。
+https://x.com/swyx/status/2036565584515899445
+https://x.com/swyx/status/2036533647659143630
+
+---
+
+Google Labs VP Josh Woodward says Google is hiring across Gemini App, Google AI Studio, and Google Labs: "There's never been a more exciting time. The place is pulsating."
+https://x.com/joshwoodward/status/2036513009661780291
+
+Google Labs VP Josh Woodward 表示 Google 正在 Gemini App、Google AI Studio 和 Google Labs 全面招聘："从来没有哪个时刻比现在更令人兴奋，整个地方都在涌动。"
+https://x.com/joshwoodward/status/2036513009661780291
+
+---
+
+FirstMark VC Matt Turck offered a dry observation on the cultural shift around typos: "Typo, before: you did sloppy work! Typo today: you wrote authentic, non-AI generated content! That's awesome."
+https://x.com/mattturck/status/2036488357077717094
+
+FirstMark VC Matt Turck 对打字错误的文化意涵变化做出了一个幽默的观察："以前发现错别字：你太粗心了！今天发现错别字：你写的是真人内容、没有 AI 代劳！太棒了。"
+https://x.com/mattturck/status/2036488357077717094
+
+---
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PODCASTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Latent Space — "There Is No AlphaFold for Materials: AI for Materials Discovery with Heather Kulik"
+https://youtube.com/watch?v=KSCCKCz2x04
+
+The Takeaway: LLMs are surprisingly bad at the precise atomic-level design tasks that materials scientists actually care about — and that gap is exactly where specialized AI models shine.
+
+MIT Chemical Engineering professor Heather Kulik has spent her career at the intersection of AI and materials science, long before it was fashionable. She runs an accelerated discovery lab focused on finding new materials with computational and data-driven methods. The episode is a grounding counterpoint to the hype: where general-purpose LLMs like ChatGPT have "PhD-level Wikipedia knowledge" of chemistry, they consistently fail at tasks like "design me a ligand with exactly 22 atoms" — a trivially precise ask for a working chemist. Kulik's research shows that the real value of AI in materials science isn't replacing chemists, it's surfacing surprising predictions — things a very smart chemist wouldn't have already known. Her group has made major advances in applying machine learning to transition metal complexes and molecular design, using AI not just to speed up known calculations but to find genuinely non-obvious candidates. She's also deeply thoughtful about the workflow of AI-assisted science: how you validate outputs, when to trust predictions, and why "the thing that sounds weird is often the thing worth exploring." For anyone building or investing in scientific AI, this episode is a useful dose of technical nuance from someone who's been doing the hard work for years.
+
+Latent Space ——「材料领域没有 AlphaFold：与 Heather Kulik 探讨 AI 在材料发现中的应用」
+https://youtube.com/watch?v=KSCCKCz2x04
+
+核心洞察：LLM 在材料科学家真正关心的精确原子级设计任务上出奇地差——而这个差距恰恰是专用 AI 模型大放异彩之处。
+
+MIT 化学工程学教授 Heather Kulik 早在这一方向流行之前，就将职业生涯押注于 AI 与材料科学的交叉领域。她的加速发现实验室专注于用计算和数据驱动方法寻找新材料。这期播客是对过度炒作的一次有益校正：通用 LLM 如 ChatGPT 在化学领域有「PhD 水准的维基百科知识」，但在「帮我设计一个恰好含 22 个原子的配体」这种对工作中的化学家来说极其基础的精准任务上，它们却屡屡失败。Kulik 的研究表明，AI 在材料科学中的真正价值不是取代化学家，而是挖掘出让人意外的预测——那些即便是顶尖化学家也未必已知的发现。她的团队在将机器学习应用于过渡金属配合物和分子设计方面取得了重大进展，AI 的作用不仅仅是加速已知的计算，而是找到真正非显而易见的候选方案。她对 AI 辅助科研的工作流程也有深刻思考：如何验证输出、何时信任预测、以及为什么「听起来奇怪的东西往往最值得探索」。对于正在构建或投资科学 AI 的人来说，这期节目是来自多年深耕者的宝贵技术洞见。
+</description>
+  </item>
+  <item>
     <title>AI Builders Digest · 2026-03-25</title>
     <link>https://www.notion.so/AI-Builders-Digest-2026-03-25-32e941f9890481429b4bccd992cd6e7a</link>
     <guid>https://www.notion.so/AI-Builders-Digest-2026-03-25-32e941f9890481429b4bccd992cd6e7a</guid>
@@ -264,5 +448,6 @@ Shared that he loved being on the Helion board and remains &quot;extremely excit
 notion.so/AI-Builders-Digest-2026-03-24-32d941f98904816aa09eff363b022236
 </description>
     </item>
-  </channel>
+
+</channel>
 </rss>
