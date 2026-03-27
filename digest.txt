@@ -5,193 +5,185 @@
 
 ① Andrej Karpathy · AI Researcher & Educator
 
-Karpathy observes a common LLM issue where memory/personalization features become counterproductive — a single past question gets over-weighted and repeatedly surfaced as a "deep interest," suggesting models are trained to over-rely on context window information. He speculates this bias toward using given context, useful during training, becomes a distraction at inference time.
-
-Karpathy 指出，LLM 的个性化记忆功能往往适得其反——一个月前随口问的问题，会被模型反复当成"核心兴趣"提及，显得用力过猛。他推测这源于训练时模型养成了过度依赖 context window 信息的偏好，在推理阶段反而成了干扰。
+Karpathy 指出 LLM 在个性化方面存在一个普遍问题：模型会过度依赖历史对话记录，导致不相关的旧内容反复出现。他推测这源于训练时的偏差——训练阶段的 context 通常与任务高度相关，使模型在推理时养成了过度利用已有信息的习惯。
 
 ---
 
+Karpathy observes a common LLM personalization problem where models over-index on past context, causing irrelevant memories to resurface repeatedly. He theorizes this stems from a training-time bias where context is usually relevant, leading models to over-utilize provided information at test time.
+
 🔗 https://x.com/karpathy/status/2036841069636370467
-🔗 https://x.com/karpathy/status/2036836816654147718
 
 
 ② Swyx · AI Engineer Community Builder
 
-Swyx shares that the AI Engineer World's Fair London event is fully sold out on booths and tickets, yet still not profitable, highlighting the financial challenge of running the first international edition. He thanks sponsors including Google DeepMind and OpenAI, and teases a fun afterparty focused on generative media.
-
-Swyx 透露，AI Engineer 伦敦活动的展位和门票已全部售罄，但活动仍未盈利，首届国际场次的运营压力可见一斑。他感谢了 GDM、OAI 等赞助商，并预告了一场聚焦生成式媒体的派对。
+Swyx 宣布 AI Engineer 峰会将在两周后登陆伦敦，尽管门票和展位已全部售罄，活动仍未实现盈利，GDM 和 OpenAI 等赞助商的支持对维持运营至关重要。他坦诚表示，首届国际 AI Engineer 活动在财务上极具挑战性，团队将其视为前期投入。
 
 ---
+
+Swyx shares that the AI Engineer summit is heading to London in two weeks, with sponsors including GDM and OpenAI keeping the event afloat despite selling out all booths and tickets. He transparently notes the first international AI Engineer event has been financially challenging, with the team treating it as an investment year.
 
 🔗 https://x.com/swyx/status/2036925527441965164
-🔗 https://x.com/swyx/status/2036919167639839193
 
 
-③ Peter Yang · AI Educator & Product @ Roblox
+③ Peter Yang · AI Tutorials & Product @ Roblox
 
-Peter shares a practical AI use case where a Meta VP built an AI skill that reviews documents in his own voice, helping teams avoid the common time-waster of guessing what leadership wants. He also casually mentions vibe-coding his own fitness app while building out his home gym.
-
-Peter 分享了一个实用 AI 案例：Meta 一位 VP 搭建了一个能以自己风格审阅文档的 AI skill，帮助团队减少揣摩上意的时间浪费。他还顺带提到自己边装健身器械边 vibe coding 了一个健身 app。
+Peter Yang 介绍了 Meta 一位 VP 如何构建一个能以自己风格审阅文档的 AI skill，从而解决职场中猜测领导意图这一普遍的时间浪费问题。他还分享了一些个人动态，包括趁着组装深蹲架的机会顺手 vibe coding 了一个健身 app。
 
 ---
 
+Peter Yang writes about how a VP at Meta built an AI skill that reviews documents in the leader's own voice, addressing the common workplace time-waster of trying to predict what leadership wants. He also shares lighter personal updates about building a fitness app while setting up a home squat rack.
+
 🔗 https://x.com/petergyang/status/2037042313361588701
-🔗 https://x.com/petergyang/status/2037029503177023705
 
 
 ④ Nan Yu · Head of Product @ Linear
 
-Nan argues that "design" has drifted too far toward visual execution and lost sight of its original meaning — arranging elements to serve a clear purpose. He uses Instagram's decision to clone Snapchat Stories as an example of tough, purpose-driven product choices with no comfortable middle ground.
-
-Nan 认为"设计"这个词已经过度偏向视觉执行，而忘记了其本质——为达成目标而安排元素。他以 Instagram 复制 Snapchat Stories 为例，说明真正的产品决策往往没有折中选项。
+Linear 产品负责人认为，"设计"的含义已被过度窄化为视觉美学，而其本质应是有目的地解决问题——让各元素服务于明确的目标。他以 Instagram 抄袭 Snapchat Stories 的决策为例，说明某些产品取舍根本没有折中方案。
 
 ---
 
+The Head of Product at Linear argues that "design" has been narrowed to mean visual aesthetics when it should mean purposeful problem-solving — arranging elements toward a clear goal. He uses Instagram's decision to copy Snapchat Stories as an example of hard product trade-offs with no middle-ground option.
+
 🔗 https://x.com/thenanyu/status/2037042617213481410
-🔗 https://x.com/thenanyu/status/2037035153566953870
 
 
 ⑤ Cat Wu · Claude Code @ Anthropic
 
-Cat announces that Claude Code's Auto Mode — which balances autonomy and safety — is now available to Claude for Teams users. The feature, already used daily by most of the Anthropic team, can be enabled via `claude --enable-auto-mode` and toggled with Shift + Tab.
-
-Cat 宣布 Claude Code 的 Auto Mode 现已向 Teams 用户开放，该模式在自主性与安全性之间取得平衡，Anthropic 团队内部已将其作为日常主力工具。通过 `claude --enable-auto-mode` 启用，Shift + Tab 切换模式。
+Cat Wu 宣布 Claude Code 的 Auto Mode 现已向 Claude for Teams 用户开放，这一功能在自主性与安全性之间取得了良好平衡，是 UX 上的重大提升。用户可通过 `claude --enable-auto-mode` 启用，并用 Shift + Tab 切换模式，Anthropic 团队内部已将其作为日常主力工具使用。
 
 ---
+
+Cat Wu announces that Claude Code's Auto Mode is now available for Claude for Teams users, representing a significant UX improvement that balances autonomy and safety. The feature can be enabled with `claude --enable-auto-mode` and toggled via Shift + Tab, and is already used daily by most of the Anthropic team.
 
 🔗 https://x.com/_catwu/status/2036852880624541938
 
 
 ⑥ Thariq · Claude Code @ Anthropic
 
-The Claude Code team announces that iMessage is now available as a channel integration, expanding the ways users can interact with Claude. The session will also be recorded and automatically sent to registered attendees.
-
-Claude Code 团队宣布 iMessage 现已作为新渠道接入，进一步拓展了用户与 Claude 交互的方式。相关活动也将录制，注册用户将自动收到回放链接。
+该开发者宣布 iMessage 现已作为新渠道接入平台，相关文档已上线，注册用户可自动收到活动录像。这似乎与 Claude Code 相关的集成或活动有关。
 
 ---
 
+The developer announces that iMessage is now available as a channel in their platform, with documentation and recorded sessions available for registered users. Details appear to relate to a Claude Code-adjacent integration or event.
+
 🔗 https://x.com/trq212/status/2036959640022638922
-🔗 https://x.com/trq212/status/2036959638646866021
 
 
 ⑦ Amjad Masad · CEO @ Replit
 
-Amasad highlights that apps built with Replit are being accepted by Apple at a high rate, signaling growing platform trust in AI-generated applications.
-
-Amasad 表示，用 Replit 构建的 app 在苹果审核中通过率很高，显示出苹果对 AI 生成应用的信任度正在提升。
+Amasad 指出，苹果对使用 Replit 构建的应用有较高的审核通过率，这表明 AI 辅助开发的应用正在获得 App Store 的认可。
 
 ---
+
+Amasad highlights that Apple is accepting apps built with Replit at a high rate, signaling growing legitimacy for AI-assisted app development on the App Store.
 
 🔗 https://x.com/amasad/status/2037004600893472936
 
 
 ⑧ Guillermo Rauch · CEO @ Vercel
 
-Vercel's CEO argues that every company will become an "AI factory" where tokens are the unit of production, but token-based billing creates complexity unlike traditional SaaS. Vercel's AI Gateway now offers a unified `/v1/report` API to solve metering across models and providers.
-
-Vercel CEO 认为，未来每家公司都将成为以 token 为生产单位的"AI 工厂"，但基于 token 的计费远比传统 SaaS 复杂。Vercel AI Gateway 现推出统一的 `/v1/report` API，解决跨模型、跨供应商的用量追踪问题。
+Vercel CEO 认为，每家公司都将成为以 token 为产出单位的"AI 工厂"，这带来了与传统 SaaS 截然不同的计费和用量追踪难题。Vercel AI Gateway 现推出统一的 `/v1/report` API，可跨模型和服务商统一处理用量计量问题。
 
 ---
+
+Vercel's CEO argues that every company will become an "AI factory" where tokens are the unit of production, creating new billing and metering challenges unlike traditional SaaS. Vercel's AI Gateway now addresses this with a unified `/v1/report` API that handles usage tracking across models and providers.
 
 🔗 https://x.com/rauchg/status/2036963706576527623
 
 
 ⑨ Aaron Levie · CEO @ Box
 
-Box's CEO observes Jevons paradox playing out in real time — as AI dramatically lowers the cost of software development, companies (especially outside tech) are now tackling projects they previously couldn't afford, leading to *more* software usage overall, not less.
-
-Box CEO 指出，杰文斯悖论正在现实中上演：AI 大幅降低了软件开发成本，反而让更多企业（尤其是非科技行业）开始启动以前负担不起的项目，软件总用量不降反升。
+Box CEO 指出，杰文斯悖论正在实时上演：随着 AI 大幅降低软件开发成本，企业——尤其是非科技行业——开始启动以前负担不起的项目。这将推动软件在整个经济体中的全面普及和增量应用。
 
 ---
+
+Box's CEO observes Jevons paradox playing out in real time: as AI dramatically lowers the cost of software development, companies — especially outside tech — are now pursuing projects they previously couldn't afford. This will drive net new software adoption across the entire economy.
 
 🔗 https://x.com/levie/status/2036832183131033977
 
 
 ⑩ Ryo Lu · Design @ Cursor
 
-Cursor's designer argues that as AI agents make it trivially easy to add features, design judgment becomes *more* critical — not less — because the key decisions shift to what should exist, how systems fit together, and how intelligence feels trustworthy. Taste and craft remain irreplaceable.
-
-Cursor 设计师认为，当 AI agent 让新增功能变得轻而易举时，设计判断力反而变得更加重要——核心问题变成了"什么值得存在"、"系统如何协作"以及"智能如何让人信赖"。品味与工艺的价值不会因此消失。
+Cursor 的设计师认为，随着 agent 让功能添加变得更加容易，设计的重要性反而会上升而非下降——设计师的职责从排布像素转变为判断哪些功能值得存在、系统如何协同，以及如何让 AI 让人感到可信和易用。审美、工艺和判断力始终无可替代。
 
 ---
+
+Cursor's designer argues that as agents make adding features easier, design becomes more important, not less — shifting from pixel-pushing to deciding what should exist, how systems fit together, and how AI feels trustworthy and usable. Taste, craft, and judgment remain irreplaceable.
 
 🔗 https://x.com/ryolu_/status/2036886854805709097
 
 
 ⑪ Garry Tan · President & CEO @ YCombinator
 
-Garry emphasizes that in this new AI era, founders must "use tokens aggressively" to create remarkable things, and that token credits are key to making startups accessible regardless of resources. He also shares examples of AI tools (GStack) outperforming competitors in head-to-head comparisons.
-
-Garry 强调，在 AI 新时代，创始人必须"大胆消耗 token"才能创造出真正出色的产品，而 token 额度是降低创业门槛的关键。他也分享了 GStack 在对比测试中胜出的案例。
+Garry Tan 强调，在 AI 时代创始人必须大胆、激进地使用 token 才能构建出真正出色的产品，而 token 额度对于降低 AI 创业门槛至关重要。他还分享了 GStack 在对比测试中胜过 Superpowers 的结果。
 
 ---
 
+Garry Tan emphasizes that founders must use tokens aggressively and "let it rip" to build remarkable things in the AI era, with token credits being key to making AI startups accessible. He also shares competitive comparisons showing GStack outperforming Superpowers.
+
 🔗 https://x.com/garrytan/status/2037055498974093629
-🔗 https://x.com/garrytan/status/2037054022994321725
 
 
 ⑫ Matt Turck · VC @ FirstMark Capital
 
-Matt offers a sharp, humorous take on how VC board roles have evolved — from genuine governance and guidance in 2016, to cheerleading in 2021, to effectively acting as Anthropic and OpenAI sales reps in 2026.
-
-Matt 用一句幽默的话概括了 VC 董事会角色的演变：2016 年是真正的治理顾问，2021 年变成了啦啦队，到 2026 年则成了 Anthropic 和 OpenAI 的销售代表。
+Matt Turck 幽默地描绘了 VC 在董事会角色的演变：2016 年提供治理与指导，2021 年变成啦啦队，到 2026 年则基本成了 Anthropic 和 OpenAI 的销售代表。
 
 ---
+
+Matt Turck humorously charts the evolution of VC board behavior — from governance and guidance in 2016, to cheerleading in 2021, to effectively acting as Anthropic and OpenAI sales reps by 2026.
 
 🔗 https://x.com/mattturck/status/2036747586468499889
 
 
 ⑬ Nikunj Kothari · Partner @ FPV Ventures
 
-Nikunj is co-hosting an exclusive founder dinner in SF on April 7th, with priority given to founders who submit the funniest RSVP responses.
-
-Nikunj 将于 4 月 7 日在旧金山联合主办一场精英创始人晚宴，回复最有趣的创始人将获得优先入场资格。
+Nikunj 将于 4 月 7 日在旧金山联合举办一场高端创始人晚宴，RSVP 回复最有趣的创始人将获得优先入场资格。
 
 ---
 
+Nikunj is co-hosting an exclusive founder dinner in SF on April 7th, with priority given to founders who submit the funniest RSVP responses.
+
 🔗 https://x.com/nikunj/status/2036936135541481923
-🔗 https://x.com/nikunj/status/2036935343199707640
 
 
 ⑭ Peter Steinberger · Co-founder @ OpenClaw
 
-A new OpenClaw beta is live, featuring improved Microsoft Teams integration and OpenWebUI support.
-
-OpenClaw 新测试版已上线，带来了更完善的 Microsoft Teams 集成以及 OpenWebUI 支持。
+Steipete 宣布 OpenClaw 发布新 beta 版本，带来了更完善的 Microsoft Teams 集成以及 OpenWebUI 支持。
 
 ---
+
+Steipete announces a new OpenClaw beta release featuring improved Microsoft Teams integration and OpenWebUI support.
 
 🔗 https://x.com/steipete/status/2036824286988816737
 
 
 ⑮ Dan Shipper · CEO @ Every
 
-Dan teases a major announcement coming from Every, and reflects on how the rules of professional product development are being rewritten — PMs and designers can now ship software as easily as engineers, and products must be built for agents as first-class citizens alongside humans.
-
-Dan 预告 Every 即将有重大消息发布，同时指出产品开发规则正在被彻底改写：PM 和设计师现在可以像工程师一样直接交付软件，产品也必须将 agent 视为与人类同等重要的用户群体。
+Dan Shipper 预告 Every 即将有重大消息发布，并指出专业产品开发的规则正在被实时改写——PM 和设计师现在可以像工程师一样直接交付软件，agent 也正与人类并列成为产品的一等公民。他分享了探讨这一转变的播客链接。
 
 ---
 
+Dan Shipper teases a major announcement coming from Every, and reflects on how the rules of professional product development are being rewritten — with PMs and designers now able to ship software as easily as engineers, and agents becoming first-class citizens alongside humans. He links to podcast episodes exploring this shift.
+
 🔗 https://x.com/danshipper/status/2036923805273129160
-🔗 https://x.com/danshipper/status/2036831785154183190
 
 
 ⑯ Aditya Agarwal · General Partner @ South Park Commons
 
-Aditya shares observations from the Hill Valley Forum, noting that hardtech and deeptech require collaboration between builders, investors, and policymakers — and that all three groups were strongly represented at the event.
-
-Aditya 分享了 Hill Valley Forum 的观察：硬科技和深科技的发展需要创业者、投资人和政策制定者三方协作，而此次活动三方均有充分代表。
+Aditya 分享了参加 Hill Valley Forum 的观察：硬科技和深科技的成功需要创业者、投资人与政策制定者三方协同，这三类人在此次活动中均有强力出席。他认为顶级的演讲嘉宾阵容体现了活动的高水准策划。
 
 ---
+
+Aditya shares observations from the Hill Valley Forum, noting that hardtech and deeptech success requires collaboration between builders, investors, and policymakers — all of whom showed up in force. He highlights the high-quality speaker lineup as a testament to strong curation.
 
 🔗 https://x.com/adityaag/status/2036824253970923925
 
 
 ⑰ Claude · AI Assistant @ Anthropic
 
-Claude announces that work tool integrations — including Figma, Canva, and Amplitude — are now available on mobile, allowing users to explore designs, create slides, and check dashboards from their phones.
+Claude 宣布工作工具集成（包括 Figma、Canva 和 Amplitude）现已登陆移动端，用户可直接在手机上查看设计稿、制作演示文稿和查阅数据看板。
 
-Claude 宣布工作工具集成（包括 Figma、Canva 和 Amplitude）现已登陆移动端，用户可直接在手机上查看设计稿、制作幻灯片和查阅数据看板。
+Claude announces that work tool integrations — including Figma, Canva, and Amplitude — are now available on mobile, enabling users to explore designs, create slides, and check dashboards from their phones.
 
 🔗 https://x.com/claudeai/status/2036850783526719610
 
@@ -201,8 +193,8 @@ Claude 宣布工作工具集成（包括 Figma、Canva 和 Amplitude）现已登
 
 Biology's Waymo Moment: Ginkgo Bioworks' Jason Kelly
 
-Ginkgo Bioworks CEO Jason Kelly argues that AI represents a genuinely transformative moment for biotechnology — unlike the internet or social media, which he dismisses as "back office IT crap" for the industry. Kelly, who bootstrapped the company for six years after founding it straight out of grad school in 2008, describes Ginkgo's core mission as making biology easier to engineer by treating DNA as programmable code. Most notably, Kelly has strategically pivoted away from the AI-driven "design" side of bioengineering (where competitors like Chai Bio and Arc Institute's EVO 2 are active) to focus instead on the physical "testing" infrastructure — making lab compilation and debugging cycles cheaper and faster, including a recent collaboration with OpenAI. He frames this as an engineering problem rather than a science problem, believing it is more predictable and ultimately "renderable to dust" with sufficient resources.
+Ginkgo Bioworks首席执行官Jason Kelly认为，AI对生物技术而言是真正具有变革意义的时刻——与互联网或社交媒体不同，他将后者对生物医药行业的影响斥为"后台IT杂务"。Kelly回顾了Ginkgo在2014年前艰难自力更生六年的历程，直到Sam Altman的一篇博文促成其加入YC，才真正获得资本支持。最值得关注的是，Kelly已将Ginkgo的战略重心从竞争激烈的生物设计端（Chai Bio、Arc Institute等玩家活跃于此）转向更为艰难却少人问津的"测试"端——即自动化并降低DNA编译调试物理流程的成本。他将此定位为工程问题而非科学问题，相信投入足够资源可将其"彻底攻克"，并已与OpenAI合作探索AI辅助实验室工作流程。
 
-Ginkgo Bioworks首席执行官Jason Kelly认为，AI对生物技术而言代表着一个真正具有变革性的时刻——不同于互联网或社交媒体，他将后者对生物技术行业的影响斥为"后台IT杂务"。Kelly于2008年从研究生院毕业后直接创立公司，在获得融资前靠政府补贴和服务业务艰难维持了六年。值得关注的是，他已将战略重心从AI驱动的生物设计端（Chai Bio和Arc Institute的EVO 2等竞争者活跃于此）转向物理"测试"基础设施，致力于降低实验室编译与调试周期的成本、提升速度，并已与OpenAI开展合作。他将此定位为工程问题而非科学问题，认为这更具可预测性，只要投入足够资源，终将彻底攻克。
+Ginkgo Bioworks CEO Jason Kelly argues that AI represents a genuinely transformative moment for biotechnology—unlike the internet or social media, which he dismisses as "back office IT crap" for the industry. Kelly recounts bootstrapping Ginkgo for six years before a Sam Altman blog post led to a YC stint in 2014 that unlocked real capital. Most notably, Kelly has strategically pivoted Ginkgo away from the trendy "design" side of biological engineering (where players like Chai Bio and Arc Institute compete) to focus on the harder, less glamorous "testing" side—automating and cheapening the physical compile-debug cycle of DNA. He frames this as an engineering problem rather than a science problem, believing it can be "rendered to dust" with enough focused resources, and recently partnered with OpenAI to explore AI-assisted lab workflows.
 
 🔗 https://youtube.com/watch?v=g45Alfg7diw
