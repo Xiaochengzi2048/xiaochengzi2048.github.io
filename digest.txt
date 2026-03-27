@@ -1,159 +1,55 @@
-AI Builders Digest — March 27, 2026
-北京时间 2026年3月27日
+🗞 AI Builders 日报 · 2026.03.27
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-X / TWITTER
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━
 
-Former Tesla/OpenAI AI Director Andrej Karpathy flagged a subtle but important UX problem with LLM personalization: memory features are actively distracting models. When a single unrelated fact (e.g. "I like cats") is stored, it tends to bleed into every response — and this pattern appears across all major LLMs, not just one implementation. His observation: "A single question could be the memory about 'I like cats' and suddenly the AI is putting cats in every response." This suggests the industry still hasn't solved contextual relevance in personalization.
-https://x.com/karpathy/status/2036841069636370467
-https://x.com/karpathy/status/2036836816654147718
+**今日重点**
+· Jason Kelly (Ginkgo Bioworks CEO): AI reasoning models paired with robotic labs just beat the state-of-the-art in protein synthesis by 40% — and he thinks this is biology's Waymo moment
+· Jason Kelly: The scientific method itself is about to be industrialized — 100 AI scientists running parallel experiments 24/7, sharing raw data daily, could outcompete human labs without being "smarter"
+· Jason Kelly: All previous tech revolutions (internet, social media) were "back office IT crap" for biotech — AI is the first one that actually changes how the science gets done
 
-Andrej Karpathy（前 Tesla/OpenAI AI 总监）指出了 LLM 个性化中一个微妙但重要的 UX 问题：记忆功能正在干扰模型。当一个不相关的事实（比如"我喜欢猫"）被存储后，它往往会渗透到每一条回复中——而且这个现象几乎出现在所有主流 LLM 上，并非某个具体实现的问题。这说明整个行业在个性化中的"上下文相关性"问题上仍未解决。
-https://x.com/karpathy/status/2036841069636370467
-https://x.com/karpathy/status/2036836816654147718
+━━━━━━━━━━━━━━━━━━━━━━━━
 
----
+📱 X / TWITTER
 
-Vercel CEO Guillermo Rauch made a sharp observation about the economics of AI: "Every company will become an AI factory, wherein the unit of production is the token." But he's not just bullish — he flags the tension this creates: tokens generate usage trails, creating a potential data liability. Companies will need to rethink both their production model and their data governance simultaneously.
-https://x.com/rauchg/status/2036963706576527623
+No tweet activity from tracked builders today.
 
-Vercel CEO Guillermo Rauch 对 AI 经济学作出了一个精准判断："每家公司都将成为 AI 工厂，生产的基本单位是 token。"但他并非只是看多——他同时指出了由此产生的张力：token 会留下使用轨迹，形成潜在的数据责任。企业需要同时重构生产模式和数据治理体系。
-https://x.com/rauchg/status/2036963706576527623
+━━━━━━━━━━━━━━━━━━━━━━━━
 
----
+🎙 PODCASTS
 
-Box CEO Aaron Levie is watching Jevons paradox play out in real time with AI. As AI lowers the cost of knowledge work, companies — especially outside tech — are realizing they can now afford tasks they previously couldn't. Rather than reducing total AI spend, lower costs are expanding overall demand. "Companies are now asking: what else can we do?"
-https://x.com/levie/status/2036832183131033977
-
-Box CEO Aaron Levie 正在实时观察 AI 领域的杰文斯悖论。随着 AI 降低了知识工作的成本，企业——尤其是非科技行业——开始意识到他们现在可以承担以前负担不起的任务。成本下降不但没有减少 AI 总支出，反而在扩大整体需求。"企业们都在问：我们还能做什么？"
-https://x.com/levie/status/2036832183131033977
-
----
-
-YC President & CEO Garry Tan argued that the new era demands aggressive token usage: "You have to use tokens aggressively to create something remarkable." He's essentially saying that the builders who win will be the ones willing to throw compute at problems rather than optimizing for frugality. The cost curve has shifted enough that the constraint is imagination, not tokens.
-https://x.com/garrytan/status/2037055498974093629
-
-YC 总裁兼 CEO Garry Tan 主张，新时代要求积极地使用 token："你必须积极地消耗 token，才能创造出真正出色的东西。"他的意思是：赢家将是那些愿意用算力砸问题的人，而不是那些追求极度节省的人。成本曲线已经下移到足够低——限制你的是想象力，而不是 token。
-https://x.com/garrytan/status/2037055498974093629
-
----
-
-Cat Wu, who works on Claude Code at Anthropic, shared that "Auto mode is a step change improvement in the Claude Code UX, balancing autonomy and safety. Almost everyone on our team uses it now." This is a significant signal — when the team building the product switches to a new mode en masse, it's a meaningful product moment, not just a feature launch.
-https://x.com/_catwu/status/2036852880624541938
-
-Anthropic Claude Code 团队成员 Cat Wu 分享道，"Auto 模式是 Claude Code 用户体验的一次阶跃式提升，在自主性和安全性之间取得了平衡。我们团队几乎所有人现在都在用它。"这是一个重要信号——当打造产品的团队自己集体切换到新模式时，这不只是一个功能发布，而是一个有实质意义的产品时刻。
-https://x.com/_catwu/status/2036852880624541938
-
----
-
-Thariq (Claude Code, Anthropic) announced that iMessage is now available as a channel in Claude Code, alongside a pointer to the docs. This continues Anthropic's push to make Claude Code accessible through more communication surfaces — not just the CLI or web UI.
-https://x.com/trq212/status/2036959638646866021
-
-Anthropic Claude Code 团队的 Thariq 宣布 iMessage 现已作为 Claude Code 的一个新渠道上线，并附上了文档链接。这延续了 Anthropic 让 Claude Code 覆盖更多通信入口的推进方向——不再局限于 CLI 或 Web UI。
-https://x.com/trq212/status/2036959638646866021
-
----
-
-Cursor AI Designer Ryo Lu pushed back on the "AI replaces design" narrative with a nuanced counter: "As agents make it easy to add features, design matters more, not less. The role is no longer just pushing pixels — it's deciding what to build and what not to build." When generating features becomes trivial, curation and judgment become the scarce resource.
-https://x.com/ryolu_/status/2036886854805709097
-
-Cursor AI 设计师 Ryo Lu 用一个细致的反驳回应了"AI 取代设计"的叙事："随着 agent 让添加功能变得容易，设计反而变得更重要，而不是更不重要。这个角色不再只是像素搬运工——而是决定该做什么、不该做什么。"当生成功能变得轻而易举，筛选和判断才是稀缺资源。
-https://x.com/ryolu_/status/2036886854805709097
-
----
-
-Every CEO Dan Shipper articulated the shift happening in product development: "PMs and designers can ship software directly. Engineers can build at 10x speed. The rules of professional product development are being rewritten in real time." He's teasing something big coming from Every tomorrow — worth watching.
-https://x.com/danshipper/status/2036827118915485942
-
-Every CEO Dan Shipper 描述了产品开发正在发生的转变："PM 和设计师可以直接交付软件。工程师的构建速度提升了 10 倍。专业产品开发的规则正在实时被重写。"他还预告 Every 明天将有大动作——值得关注。
-https://x.com/danshipper/status/2036827118915485942
-
----
-
-FirstMark VC Matt Turck offered a sardonic but pointed take on how VC board behavior has evolved: "2016: governance, guidance, support. 2021: cheerleaders. 2026: Anthropic reseller." It's a wry comment on how much VCs now center their value-add narrative around AI tooling access rather than operational expertise.
-https://x.com/mattturck/status/2036747586468499889
-
-FirstMark VC Matt Turck 对 VC 董事会行为的演变作出了一个讽刺而犀利的总结："2016 年：治理、指导、支持。2021 年：啦啦队。2026 年：Anthropic 经销商。"这是对 VC 们如何将自身价值叙事从运营专长转向 AI 工具访问权的辛辣评论。
-https://x.com/mattturck/status/2036747586468499889
-
----
-
-Replit CEO Amjad Masad shared a positive signal for AI-generated apps: Apple appears to be accepting Replit-built apps at a high rate. For anyone betting on vibe coding as a path to app distribution, this is meaningful — the App Store gatekeeping hasn't been a blocker.
-https://x.com/amasad/status/2037004600893472936
-
-Replit CEO Amjad Masad 分享了一个对 AI 生成应用的积极信号：苹果似乎正以较高通过率接受 Replit 构建的应用。对于押注"vibe coding"作为应用分发路径的人来说，这很有意义——App Store 的把关并没有成为障碍。
-https://x.com/amasad/status/2037004600893472936
-
----
-
-Linear Head of Product Nan Yu reflected on the dilution of the word "design": "I really wish we could reclaim design back to meaning 'a plan for arranging elements to accomplish a particular purpose.'" As AI democratizes aesthetics, the original systems-thinking meaning of design becomes more valuable — and more ignored.
-https://x.com/thenanyu/status/2037042617213481410
-
-Linear 产品负责人 Nan Yu 对"设计"这个词被滥用表达了思考："我真的希望我们能重新把'设计'的含义拉回到'为实现特定目的而安排要素的计划'。"随着 AI 让美学民主化，设计最初的系统性思维含义变得更有价值——也更被忽视。
-https://x.com/thenanyu/status/2037042617213481410
-
----
-
-Anthropic's Claude account announced that Claude's work tools (Figma, Canva, Amplitude, and more) are now available on mobile. This is a distribution move — meeting users where they already are and reducing the friction for on-the-go professional workflows.
-https://x.com/claudeai/status/2036850783526719610
-
-Anthropic 的 Claude 官方账号宣布，Claude 的工作工具（Figma、Canva、Amplitude 等）现已在移动端上线。这是一次分发层面的举措——在用户已经活跃的地方迎接他们，降低移动端专业工作流的摩擦。
-https://x.com/claudeai/status/2036850783526719610
-
----
-
-Peter Yang (creator/educator) went from "got a squat rack" to vibe-coding his own fitness app in the same breath — a fun illustration of where we are: building personal software for your own use cases is now as casual as setting up gym equipment.
-https://x.com/petergyang/status/2037029503177023705
-
-Peter Yang（创作者/教育者）在同一条推里从"终于搞了个深蹲架"直接跳到"那就顺手用 vibe coding 做个健身 app 好了"——这是一个有趣的缩影：为自己的需求开发软件，现在已经和安装健身器材一样随意了。
-https://x.com/petergyang/status/2037029503177023705
-
----
-
-South Park Commons GP Aditya Agarwal observed from Hill Valley Forum: "It takes three to tango for hardtech/deeptech: Builders + Investors + Government." The note highlights that deep tech has a different capital and partnership structure than pure software — and that forum brought all three together in the same room.
-https://x.com/adityaag/status/2036824253970923925
-
-South Park Commons 普通合伙人 Aditya Agarwal 从 Hill Valley Forum 带回观察："硬科技/深科技需要三方共舞：创业者 + 投资人 + 政府。"这一点揭示了深科技与纯软件不同的资本和合作结构——而这个论坛将三方汇聚在了同一个房间里。
-https://x.com/adityaag/status/2036824253970923925
-
----
-
-OpenClaw founder Peter Steinberger announced a new OpenClaw beta with better Microsoft Teams integration and OpenWebUI support. For the persistent-agent crowd, Teams is a significant enterprise surface — and OpenWebUI gives a self-hosted chat UI option.
-https://x.com/steipete/status/2036824286988816737
-
-OpenClaw 创始人 Peter Steinberger 宣布了新版 OpenClaw beta，带来了更好的 Microsoft Teams 集成和 OpenWebUI 支持。对于持久 agent 生态来说，Teams 是一个重要的企业级入口——而 OpenWebUI 则提供了一个自托管聊天界面选项。
-https://x.com/steipete/status/2036824286988816737
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-PODCASTS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-🎙 Training Data — "Biology's Waymo Moment: Ginkgo Bioworks' Jason Kelly"
+**Training Data — Biology's Waymo Moment: Ginkgo Bioworks' Jason Kelly**
 https://youtube.com/watch?v=g45Alfg7diw
 
-**The Takeaway:** AI is finally doing something that no previous tech wave could — it's becoming load-bearing infrastructure for biology and pharma, not just back-office IT.
+**The Takeaway:** AI reasoning models running robotic labs can already beat human scientists at experimental design — and the implications for how we fund and run all of science are enormous.
 
-Ginkgo Bioworks CEO Jason Kelly makes a striking argument: every major tech revolution before AI — the internet, social media, mobile — was essentially irrelevant to biotech and biopharma. "Yeah it's nice, we communicate slightly better, whatever — it's just some back-office IT crap." AI is different. For the first time, software is directly interfacing with the core work of biology: reading genomes, designing proteins, automating lab workflows.
+Jason Kelly is the founder and CEO of Ginkgo Bioworks, a company he started straight out of grad school in 2008 with the audacious goal of making biology as programmable as software. After six years of bootstrapping on government grants and a chance encounter with a young Sam Altman at YC, Ginkgo has spent 15 years building both sides of the biology-engineering stack: smarter design tools and cheaper, faster lab automation.
 
-Kelly draws a direct parallel to autonomous vehicles. Just as Waymo spent years building the underlying tech stack before meaningful deployment, biology is now at its own "Waymo moment" — the infrastructure is reaching the threshold where real-world application becomes viable at scale. The bottleneck shifts from "can we do this?" to "how fast can we deploy?"
+The story Kelly tells here is about a recent collaboration with OpenAI that quietly upended his priors. His team handed an AI reasoning model control of a robotic lab and set it loose on a benchmark protein synthesis problem — optimizing "cell-free synthesis," essentially programming cell guts in a test tube to cheaply produce proteins. The model ran 384-well-plate experiments in iterative rounds, got the data back, designed the next set. After four rounds, it beat the Stanford state-of-the-art. After six rounds, it beat it by **40%**.
 
-What makes this compelling for builders: Ginkgo isn't just a biotech company, it's a platform play. They're building the cell programming infrastructure that other companies can build on top of — an AWS analogy for synthetic biology. Kelly sees AI as the unlock that finally makes this platform economically viable, because it dramatically reduces the cost of the design-build-test cycle that is the core loop of all biology work.
+"It can run a lab 24 hours a day. What really let it break through wasn't that it was so smart — it was that it could run experiments. And the question was just could it design them like a scientist could? And the answer was yeah, hell yeah it could."
 
-The counterintuitive insight: the reason prior tech didn't matter to biotech was that the bottleneck was never communication or information management — it was the ability to actually design and manipulate biological systems. AI addresses exactly that bottleneck.
+But the bigger point Kelly makes is structural: modern science is shockingly inefficient. Less than 5% of research budgets go to actual reagents — the chemicals you literally consume doing experiments. The rest is overhead: people, lab space, equipment that sits idle 5 days a week, duplicated across every lab that does similar work. An AI-run robotic lab flips that ratio. You'd budget by reagent cost — usage-based pricing for science. That's a potential 10x increase in data per dollar, even if the AI is no smarter than the humans it replaces.
+
+The vision he sketches: 100 AI scientists pursuing 100 parallel Alzheimer's hypotheses on the same robotic infrastructure, sharing raw experimental data daily (not just published papers every 18 months), cross-pollinating each other's failed results. No incremental tweak — a fundamentally different epistemology for experimental science.
+
+Kelly is emphatic that this is different from every previous tech wave: "All of the previous revolutions in tech — the internet, social media, whatever — have been totally meaningless to biotechnology and biopharma. Not this. This is actually going to change the fundamentals of how we do science."
 
 ---
 
-**要点：** AI 终于做到了以前任何技术浪潮都无法做到的事——它正在成为生物学和医药领域真正的基础设施，而不仅仅是后台 IT 工具。
+*中文版 / Chinese*
 
-Ginkgo Bioworks CEO Jason Kelly 提出了一个令人印象深刻的论点：在 AI 之前，每一次重大技术革命——互联网、社交媒体、移动互联网——对生物科技和生物制药来说基本上都是无关紧要的。"是挺好的，我们沟通稍微顺畅一点，但就这样——不过是些后台 IT 的小把戏。"AI 不同。这是第一次，软件直接介入生物学的核心工作：读取基因组、设计蛋白质、自动化实验室流程。
+**要点：** AI 推理模型驱动机器人实验室，已经能在实验设计上超越人类科学家——而这对整个科学体系的资助和运作方式，意味着一场根本性的颠覆。
 
-Kelly 直接类比了自动驾驶汽车。就像 Waymo 花了多年时间打造底层技术栈，才得以真正部署，生物学现在正处于自己的"Waymo 时刻"——基础设施正在逼近阈值，大规模实际应用变得切实可行。瓶颈从"我们能做到吗？"转移到"我们能多快落地？"
+Jason Kelly 是 Ginkgo Bioworks 的创始人兼 CEO。他 2008 年博士毕业后直接创办了这家公司，目标是让生物学像软件一样可编程。熬过六年政府拨款支撑的艰难岁月，偶遇年轻的 Sam Altman 并入选 YC 后，Ginkgo 用了 15 年时间打磨生物工程的两个核心环节：更聪明的设计工具，以及更快更便宜的实验室自动化。
 
-对创业者来说，这里有个值得关注的视角：Ginkgo 不只是一家生物科技公司，它是一个平台游戏。他们在构建细胞编程基础设施，让其他公司可以在上面搭建业务——类似合成生物学领域的 AWS。Kelly 认为 AI 是最终让这个平台在经济上可行的解锁钥匙，因为它大幅降低了"设计-构建-测试"循环的成本，而这个循环正是所有生物学工作的核心。
+Kelly 讲述的这个故事，来自最近与 OpenAI 的合作，结果出乎他自己意料。他的团队让一个 AI 推理模型接管了机器人实验室，去攻克一个蛋白质合成的基准测试——"无细胞合成"，就是用细胞内部的分子机器在试管里廉价生产蛋白质。模型以 384 孔板为单位迭代实验，拿到数据，设计下一轮方案。四轮之后，超越了斯坦福的最优记录。六轮之后，**超越了 40%**。
 
-反直觉的洞见：以往技术对生物科技无关紧要的原因，并不是因为沟通或信息管理不重要——而是因为真正的瓶颈从来都是：我们能不能实际设计和操控生物系统。AI 恰恰解决的就是这个瓶颈。
+"它能 24 小时运转实验室。真正让它突破的不是有多聪明，而是它能做实验。问题只是它能不能像科学家一样设计实验？答案是：可以，完全可以。"
 
-https://youtube.com/watch?v=g45Alfg7diw
+但 Kelly 更大的论点是关于结构性低效：现代科学在烧钱方式上极度低效。不到 5% 的研究预算用在了真正做实验消耗的试剂上，其余全是开销：人员、实验室场地、各家重复购置的闲置设备。AI 驱动的机器人实验室会颠覆这个比例——你将按试剂成本来预算，这是科学的按量计费模式，每一分钱的数据产出可能提升 10 倍，哪怕 AI 不比人更聪明。
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+他描绘的愿景：100 个 AI 科学家在同一套机器人基础设施上并行推进 100 个阿兹海默症假说，每天共享原始实验数据（而不是等 18 个月后才发一篇论文），彼此的失败结果也能互相启发。这不是渐进式改良，而是实验科学认知方式的根本性变革。
+
+Kelly 的判断非常明确：之前所有的技术革命，互联网、社交媒体，对生物技术和制药行业都无足轻重，不过是些"后台 IT 杂活"。这一次不同——AI 真的会改变科学本身的运作方式。
+
+━━━━━━━━━━━━━━━━━━━━━━━━
