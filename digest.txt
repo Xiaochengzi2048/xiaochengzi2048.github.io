@@ -1,55 +1,192 @@
 🗞 AI Builders 日报 · 2026.03.27
 
-━━━━━━━━━━━━━━━━━━━━━━━━
+─────────────────────────────────
+🐦 X / Twitter
+─────────────────────────────────
 
-**今日重点**
-· Jason Kelly (Ginkgo Bioworks CEO): AI reasoning models paired with robotic labs just beat the state-of-the-art in protein synthesis by 40% — and he thinks this is biology's Waymo moment
-· Jason Kelly: The scientific method itself is about to be industrialized — 100 AI scientists running parallel experiments 24/7, sharing raw data daily, could outcompete human labs without being "smarter"
-· Jason Kelly: All previous tech revolutions (internet, social media) were "back office IT crap" for biotech — AI is the first one that actually changes how the science gets done
+① Andrej Karpathy · AI researcher, ex-Director of AI @ Tesla / ex-Founding Team @ OpenAI
 
-━━━━━━━━━━━━━━━━━━━━━━━━
+LLM personalization has a subtle but real problem: memory systems are too eager to latch on. A single question asked two months ago can turn into a permanent "deep interest" that keeps surfacing — models try too hard to use whatever context they have. Karpathy notes this bias likely originates in training, where most context is relevant to the task, creating an overgeneralization at inference time.
 
-📱 X / TWITTER
+LLM 的个性化记忆功能有个微妙但真实的问题：模型太爱"抓住"每条记忆不放。两个月前问过的一个问题，可能被模型永久标注为你的"深度兴趣"，反复出现在回复里——这种"努力过头"的感觉令人不适。Karpathy 认为这种偏差很可能源于训练阶段：训练时上下文几乎都和任务相关，导致模型在推理时产生了过度泛化。
 
-No tweet activity from tracked builders today.
+🔗 x.com/karpathy/status/2036836816654147718
 
-━━━━━━━━━━━━━━━━━━━━━━━━
+─────────────────────────────────
 
-🎙 PODCASTS
+② Cat Wu · Claude Code Team @ Anthropic
 
-**Training Data — Biology's Waymo Moment: Ginkgo Bioworks' Jason Kelly**
-https://youtube.com/watch?v=g45Alfg7diw
+Claude Code's new Auto mode is now available to Team plan users, and it's a meaningful UX upgrade. It balances autonomy and safety dynamically — nearly everyone on the Anthropic team uses it as their daily driver. Enable it with `claude --enable-auto-mode`, then hit Shift + Tab to enter the mode.
 
-**The Takeaway:** AI reasoning models running robotic labs can already beat human scientists at experimental design — and the implications for how we fund and run all of science are enormous.
+Claude Code 的全新 Auto 模式现已向 Team 计划用户开放，这是一次显著的体验升级。它在自主性与安全性之间动态平衡——Anthropic 内部几乎所有人都把它当作日常主力工具。用 `claude --enable-auto-mode` 开启，再按 Shift + Tab 进入该模式。
 
-Jason Kelly is the founder and CEO of Ginkgo Bioworks, a company he started straight out of grad school in 2008 with the audacious goal of making biology as programmable as software. After six years of bootstrapping on government grants and a chance encounter with a young Sam Altman at YC, Ginkgo has spent 15 years building both sides of the biology-engineering stack: smarter design tools and cheaper, faster lab automation.
+🔗 x.com/_catwu/status/2036852880624541938
 
-The story Kelly tells here is about a recent collaboration with OpenAI that quietly upended his priors. His team handed an AI reasoning model control of a robotic lab and set it loose on a benchmark protein synthesis problem — optimizing "cell-free synthesis," essentially programming cell guts in a test tube to cheaply produce proteins. The model ran 384-well-plate experiments in iterative rounds, got the data back, designed the next set. After four rounds, it beat the Stanford state-of-the-art. After six rounds, it beat it by **40%**.
+─────────────────────────────────
 
-"It can run a lab 24 hours a day. What really let it break through wasn't that it was so smart — it was that it could run experiments. And the question was just could it design them like a scientist could? And the answer was yeah, hell yeah it could."
+③ Thariq · Claude Code Team @ Anthropic
 
-But the bigger point Kelly makes is structural: modern science is shockingly inefficient. Less than 5% of research budgets go to actual reagents — the chemicals you literally consume doing experiments. The rest is overhead: people, lab space, equipment that sits idle 5 days a week, duplicated across every lab that does similar work. An AI-run robotic lab flips that ratio. You'd budget by reagent cost — usage-based pricing for science. That's a potential 10x increase in data per dollar, even if the AI is no smarter than the humans it replaces.
+iMessage is now available as a Claude Code channel — you can connect your Apple Messages directly into your coding workflow. The announcement came with a link to the docs for setup, and Thariq confirmed the launch event will be recorded and sent to registered attendees.
 
-The vision he sketches: 100 AI scientists pursuing 100 parallel Alzheimer's hypotheses on the same robotic infrastructure, sharing raw experimental data daily (not just published papers every 18 months), cross-pollinating each other's failed results. No incremental tweak — a fundamentally different epistemology for experimental science.
+iMessage 现已成为 Claude Code 的一个可接入渠道——你可以直接把苹果消息接入你的编程工作流。相关文档已同步发布，Thariq 也确认发布活动将录制并发送给注册者。
 
-Kelly is emphatic that this is different from every previous tech wave: "All of the previous revolutions in tech — the internet, social media, whatever — have been totally meaningless to biotechnology and biopharma. Not this. This is actually going to change the fundamentals of how we do science."
+🔗 x.com/trq212/status/2036959638646866021
 
----
+─────────────────────────────────
 
-*中文版 / Chinese*
+④ Claude · AI assistant @ Anthropic
 
-**要点：** AI 推理模型驱动机器人实验室，已经能在实验设计上超越人类科学家——而这对整个科学体系的资助和运作方式，意味着一场根本性的颠覆。
+Claude's work tool integrations are now on mobile. You can explore Figma designs, create Canva slides, and check Amplitude dashboards — all from your phone. The rollout extends desktop-grade productivity to wherever you are.
 
-Jason Kelly 是 Ginkgo Bioworks 的创始人兼 CEO。他 2008 年博士毕业后直接创办了这家公司，目标是让生物学像软件一样可编程。熬过六年政府拨款支撑的艰难岁月，偶遇年轻的 Sam Altman 并入选 YC 后，Ginkgo 用了 15 年时间打磨生物工程的两个核心环节：更聪明的设计工具，以及更快更便宜的实验室自动化。
+Claude 的工作工具集成现已登陆移动端。你可以直接在手机上浏览 Figma 设计稿、制作 Canva 幻灯片、查看 Amplitude 仪表盘。这次更新把桌面端的生产力体验延伸到了任何地方。
 
-Kelly 讲述的这个故事，来自最近与 OpenAI 的合作，结果出乎他自己意料。他的团队让一个 AI 推理模型接管了机器人实验室，去攻克一个蛋白质合成的基准测试——"无细胞合成"，就是用细胞内部的分子机器在试管里廉价生产蛋白质。模型以 384 孔板为单位迭代实验，拿到数据，设计下一轮方案。四轮之后，超越了斯坦福的最优记录。六轮之后，**超越了 40%**。
+🔗 x.com/claudeai/status/2036850783526719610
 
-"它能 24 小时运转实验室。真正让它突破的不是有多聪明，而是它能做实验。问题只是它能不能像科学家一样设计实验？答案是：可以，完全可以。"
+─────────────────────────────────
 
-但 Kelly 更大的论点是关于结构性低效：现代科学在烧钱方式上极度低效。不到 5% 的研究预算用在了真正做实验消耗的试剂上，其余全是开销：人员、实验室场地、各家重复购置的闲置设备。AI 驱动的机器人实验室会颠覆这个比例——你将按试剂成本来预算，这是科学的按量计费模式，每一分钱的数据产出可能提升 10 倍，哪怕 AI 不比人更聪明。
+⑤ Aaron Levie · CEO @ Box
 
-他描绘的愿景：100 个 AI 科学家在同一套机器人基础设施上并行推进 100 个阿兹海默症假说，每天共享原始实验数据（而不是等 18 个月后才发一篇论文），彼此的失败结果也能互相启发。这不是渐进式改良，而是实验科学认知方式的根本性变革。
+Jevons paradox is playing out in software right now: as AI makes software cheaper to build, companies aren't cutting their software spend — they're expanding their ambitions. Businesses that previously couldn't afford to tackle certain software projects are now going for them. Levie argues we're entering a phase where software gets used for entirely new categories of work, not just as a cost-reducer.
 
-Kelly 的判断非常明确：之前所有的技术革命，互联网、社交媒体，对生物技术和制药行业都无足轻重，不过是些"后台 IT 杂活"。这一次不同——AI 真的会改变科学本身的运作方式。
+软件领域正在上演 Jevons 悖论：AI 让软件开发成本下降，企业不是减少投入，而是在扩大野心。原来那些因为价格望而却步的软件项目，现在都被提上日程。Levie 认为我们正进入一个新阶段——软件不只是用来降本，而是开始渗透到全新的业务场景。
 
-━━━━━━━━━━━━━━━━━━━━━━━━
+🔗 x.com/levie/status/2036832183131033977
+
+─────────────────────────────────
+
+⑥ Guillermo Rauch · CEO @ Vercel
+
+"Every company will become an AI factory, wherein the unit of production is the token." Tokens introduce usage tracking and billing complexity that's fundamentally different from traditional SaaS. Vercel's new AI Gateway addresses this with a single `/v1/report` API endpoint to handle metering across models and providers — one call to see it all.
+
+"每家公司都将成为 AI 工厂，生产单位是 token。" Token 引入的用量追踪和计费复杂度，与传统 SaaS 截然不同。Vercel 新推出的 AI Gateway 用一个 `/v1/report` API 端点来解决这个问题，跨模型、跨供应商的计量，一次调用搞定。
+
+🔗 x.com/rauchg/status/2036963706576527623
+
+─────────────────────────────────
+
+⑦ Ryo Lu · Designer @ Cursor
+
+As AI agents make it trivially easy to add features, design's role shifts from execution to judgment. It's no longer about pushing pixels — it's about deciding what should exist, how things fit together, how humans stay in control, and how intelligence feels trustworthy. Taste and judgment, says Ryo, have always been the hard part; now they're the only part that matters.
+
+当 AI agent 让"加功能"变得轻而易举，设计师的角色就从执行者变成了判断者。工作不再是推敲像素，而是决定什么应该存在、各部分如何协作、如何让人保持掌控感、以及如何让智能显得可信赖。Ryo 说，品味和判断力一直是最难的那部分——现在它们是唯一重要的部分。
+
+🔗 x.com/ryolu_/status/2036886854805709097
+
+─────────────────────────────────
+
+⑧ Amjad Masad · CEO @ Replit
+
+Replit-built apps are getting a high acceptance rate from Apple's App Store review team, signaling that AI-generated apps are increasingly meeting platform quality standards. For a CEO who's been pushing the "anyone can build software" thesis, this is a meaningful data point.
+
+用 Replit 搭建的应用在苹果 App Store 审核中获得了较高的通过率，这说明 AI 生成的应用正在越来越多地达到平台质量标准。对于一直在推动"人人都能做软件"这一愿景的 CEO 来说，这是一个很有分量的数据点。
+
+🔗 x.com/amasad/status/2037004600893472936
+
+─────────────────────────────────
+
+⑨ Dan Shipper · CEO @ Every
+
+The rules of professional product development are being rewritten. PMs and designers can now ship software as easily as engineers, and software is increasingly built for agents as first-class citizens alongside humans. Shipper is diving into how products get built in this new world — and teasing something big coming from Every.
+
+职业化产品开发的规则正在被重写。PM 和设计师现在可以像工程师一样轻松地交付软件，而软件也越来越多地把 agent 作为与人类并列的一等公民来设计。Shipper 正在深入研究这个新世界中产品是如何被构建的——同时也预告了 Every 即将推出的大动作。
+
+🔗 x.com/danshipper/status/2036827118915485942
+
+─────────────────────────────────
+
+⑩ Garry Tan · President & CEO @ Y Combinator
+
+Garry's message to founders: stop being conservative with tokens. In this new era, using tokens aggressively — combined with genuine taste and agency — is what produces remarkable results. YC is making token credits a core part of startup accessibility, so that founders can let it rip regardless of budget.
+
+Garry 给创业者的忠告：别在 token 上省着用。在这个新时代，大胆地用 token、结合真正的品味和主动性，才能做出令人眼前一亮的东西。YC 正在把 token 积分作为降低创业门槛的核心举措，让创始人不管预算多少都能放开手脚。
+
+🔗 x.com/garrytan/status/2037055498974093629
+
+─────────────────────────────────
+
+⑪ Nan Yu · Head of Product @ Linear
+
+A pointed call to reclaim what "design" actually means: a plan for arranging elements to accomplish a purpose. The field got too obsessed with the arrangement and forgot the purpose. A sharp reminder that in an era where anyone can generate interfaces, intentionality about *why* something exists matters more than ever.
+
+对"设计"本义的一次犀利呼唤：设计是"为实现特定目的而安排要素的计划"。这个领域太执着于排列本身，忘了背后的目的。在任何人都能生成界面的时代，关于"为什么这个东西应该存在"的思考，比以往任何时候都重要。
+
+🔗 x.com/thenanyu/status/2037042617213481410
+
+─────────────────────────────────
+
+⑫ Peter Yang · AI writer & creator
+
+A VP at Meta is using an AI skill called `/exec-review` that reviews documents in the leader's own voice — cutting the biggest time-waster at tech companies, which isn't meetings or Slack, but trying to predict what your leader wants. Yang breaks down how to build a "leader proxy" AI skill for your own team.
+
+Meta 一位 VP 正在使用一个叫 `/exec-review` 的 AI 技能，它能以这位领导的口吻审阅文件——消灭了大公司最大的时间黑洞：不是会议，也不是 Slack，而是猜测领导想要什么。Yang 详解了如何为自己的团队构建一个"领导代理"AI 技能。
+
+🔗 x.com/petergyang/status/2036812870365917284
+
+─────────────────────────────────
+
+⑬ Matt Turck · VC @ FirstMark Capital
+
+A sharp, unsentimental take on the VC board evolution: 2016 was governance and guidance, 2021 was cheerleading, and 2026 is being Anthropic and OpenAI sales reps. A one-liner that says a lot about where the industry's center of gravity has shifted.
+
+对 VC 董事会角色演变的一针见血概括：2016 年是治理和指导，2021 年是啦啦队，2026 年是 Anthropic 和 OpenAI 的销售代表。一句话道尽了行业重心的迁移。
+
+🔗 x.com/mattturck/status/2036747586468499889
+
+─────────────────────────────────
+
+⑭ Peter Steinberger · Founder @ OpenClaw
+
+The latest OpenClaw beta ships with better Microsoft Teams integration and OpenWebUI support — two upgrades that should meaningfully expand how teams connect their AI assistant to enterprise workflows.
+
+最新 OpenClaw beta 版本带来了更好的 Microsoft Teams 集成和 OpenWebUI 支持——这两项升级将显著拓展团队将 AI 助手接入企业工作流的方式。
+
+🔗 x.com/steipete/status/2036824286988816737
+
+─────────────────────────────────
+
+⑮ Swyx · Co-host @ AI Engineer / Writer @ Latent Space
+
+Running the first international AI Engineer conference has been "extremely hard" — even with sold-out booths and tickets, it's not yet profitable. Swyx is being unusually transparent about the economics of running developer conferences, calling year one "an investment." The Clawfather and friends are heading to London in two weeks.
+
+举办首届国际 AI Engineer 大会"极其艰难"——即便展位和门票全部售罄，活动仍未实现盈利。Swyx 罕见地公开披露了开发者大会的运营经济学，把第一年定性为"一项投资"。Clawfather 和朋友们两周后将前往伦敦。
+
+🔗 x.com/swyx/status/2036918746854678830
+
+─────────────────────────────────
+
+⑯ Aditya Agarwal · General Partner @ South Park Commons
+
+Fresh from HillValleyForum, Aditya's takeaway: hardtech and deeptech need all three legs of the stool — builders, investors, and policymakers — working together. When all three show up in force, the energy in the room reflects it. A timely reminder as AI infrastructure debates move deeper into policy territory.
+
+从 HillValleyForum 归来，Aditya 的感悟是：硬科技和深科技需要三条腿同时站稳——创业者、投资人和政策制定者缺一不可。三方齐聚时，现场的能量截然不同。在 AI 基础设施讨论日益向政策领域延伸的当下，这是一个及时的提醒。
+
+🔗 x.com/adityaag/status/2036824253970923925
+
+─────────────────────────────────
+🎙 Podcast
+─────────────────────────────────
+
+Biology's Waymo Moment: Ginkgo Bioworks' Jason Kelly
+Training Data
+
+Jason Kelly, founder and CEO of Ginkgo Bioworks, has spent 18 years trying to make biology programmable. His company just ran an experiment with OpenAI that he believes is the most important result in AI-driven science to date: they gave a reasoning model control of a robotic lab and tasked it with optimizing a protein synthesis process. After six rounds of 384-well-plate experiments — about 30,000 total runs — the model beat Stanford's published state-of-the-art benchmark by 40%. The model wasn't smarter than the scientists. It won because it could run experiments 24/7 and design each next round of tests based on the data from the last.
+
+Kelly's "Waymo moment" analogy is precise: for decades, lab automation was like a subway — high automation, zero flexibility, only useful if your experiment fit the exact route. AI is finally enabling the autonomous car version of the lab: full flexibility, full automation. His vision for what comes next is striking — imagine 100 AI scientists simultaneously pursuing different Alzheimer's hypotheses in one shared robotic lab, sharing raw experimental data with each other *daily* rather than publishing papers every two years. The information sharing advantage alone, he argues, would beat human labs even if the AI were less intelligent.
+
+The economics are equally disruptive. Today, less than 5% of research spending goes to actual reagents — the real cost is lab space, equipment, and people. An autonomous lab flips this ratio toward 90% reagent spend, meaning roughly 10x more data per dollar. Kelly is already selling this vision to the Department of Energy as part of Project Genesis, a White House initiative to double the speed of scientific discovery. His urgency is geopolitical too: three years ago, less than 5% of new drug discoveries came from China. Last quarter, it was 40%.
+
+"All of the previous revolutions in tech have been totally meaningless to biotechnology and biopharma. Not this. This is actually going to change the fundamentals of how we do science."
+
+Jason Kelly 是 Ginkgo Bioworks 的创始人兼 CEO，他花了 18 年时间试图让生物学变得可编程。他的公司刚刚与 OpenAI 合作完成了一项实验，他认为这是迄今为止 AI 驱动科学领域最重要的成果：他们让一个推理模型控制机器人实验室，优化一个蛋白质合成流程。经过六轮共约 3 万次 384 孔板实验，模型将斯坦福发布的最优标杆提升了 40%。模型并不比科学家更聪明——它赢在可以 7×24 小时运行实验，并根据上一轮数据设计下一轮测试。
+
+Kelly 用"Waymo 时刻"来类比实验室自动化的演进：过去几十年，实验室自动化就像地铁——自动化程度高，但零灵活性，只有当你的实验恰好符合既定路线才有用。AI 正在让实验室进入"自动驾驶汽车"时代：既有充分的灵活性，又有完全的自动化。他对未来的设想令人震撼——想象 100 个 AI 科学家在同一个机器人实验室里同时追踪不同的阿尔茨海默症假说，每天互相共享原始实验数据，而不是每两年发一篇论文。他认为，仅凭信息共享这一个优势，AI 实验室就能击败人类实验室——即便 AI 本身并不更聪明。
+
+经济账同样颠覆性。如今，研究经费中不到 5% 用于实际的试剂——真正的成本是实验室空间、仪器和人力。自动化实验室将把这个比例翻转为约 90% 用于试剂，意味着每一美元能产出约 10 倍的数据量。Kelly 已经在向美国能源部推销这个愿景，作为白宫"创世纪计划"的一部分——目标是在未来几年将科学发现的速度提升一倍。他的紧迫感也有地缘政治背景：三年前，中国的新药发现不到全球的 5%；上个季度，这个数字已经是 40%。
+
+"过去所有的技术革命对生物技术和生物制药来说都毫无意义。但这一次不同。这将从根本上改变我们做科学的方式。"
+
+🔗 https://youtube.com/watch?v=g45Alfg7diw
+
+─────────────────────────────────
+📎 Notion 存档
+https://www.notion.so/AI-Builders-Digest-2026-03-27-330941f98904816d8160e11409d53c6a
