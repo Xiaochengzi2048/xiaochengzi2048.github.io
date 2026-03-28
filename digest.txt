@@ -1,203 +1,203 @@
-🗞 AI Builders 日报 · 2026.03.27
+🗞 AI Builders 日报 · 2026.03.28
 
 
 🐦 X / Twitter
 
 ① Andrej Karpathy · AI Researcher & Educator
 
-Karpathy 指出 LLM 个性化记忆功能存在一个普遍缺陷：模型会过度放大过去的单次提问，将其误判为用户的长期兴趣并反复提及。他推测这源于训练阶段模型对 context window 内容的过度依赖，导致在推理时出现偏差。
+Karpathy 回顾了一年前构建 menugen 的经历，指出最难的部分不是写代码本身，而是拼接各种周边服务——支付、身份验证、数据库、安全和域名等。他对这一领域即将到来的改进表示期待，但帖子在关键处被截断，未透露具体内容。
 
 ---
 
-Karpathy observes a common LLM personalization flaw: memory features cause models to over-weight past queries, persistently surfacing old topics as major interests. He theorizes this stems from a training-time bias where context window content is heavily weighted for task relevance, which then misfires at inference time.
+Karpathy reflects on building menugen a year ago, noting the biggest challenge wasn't writing code but assembling the surrounding ecosystem of services — payments, auth, databases, security, and domain names. He expresses excitement about improvements coming to this DevOps-heavy side of indie development, though the post is cut off before revealing what specifically he's looking forward to.
 
-🔗 https://x.com/karpathy/status/2036841069636370467
-
-
-② Swyx · AI Engineer Community Builder
-
-Swyx 透露 AI Engineer World's Fair 伦敦站将在两周后举行，门票和展位已全部售罄，但即便如此活动仍处于亏损状态。他坦言首届国际赛事的运营难度极高，将其定性为必要的前期投入。
-
----
-
-Swyx shares that the AI Engineer World's Fair London event is two weeks away, with booths and tickets fully sold out, but the team is still operating at a loss despite strong sponsor support. He calls out the difficulty of running the first international AI Engineer event and frames it as a necessary first-year investment.
-
-🔗 https://x.com/swyx/status/2036925527441965164
+🔗 https://x.com/karpathy/status/2037200624450936940
 
 
-③ Peter Yang · AI Educator & Product @ Roblox
+② Swyx · Developer & AI Community Builder
 
-Peter Yang 介绍了 Meta 一位 VP 如何构建一个能以自己风格审阅文档的 AI skill，以减少员工揣摩上级意图的时间浪费。他还分享了个人项目，包括借着购置深蹲架的契机用 AI 辅助开发了一款健身 app。
+Swyx 将自己的 2026 年 Mac 配置发布为可复用的 AI skill，并展示了 Claude 如何读取他多年的博客文章，一次性生成配置整个技术栈的 bash 脚本。他感慨道，对那些把一切都记录下来的人来说，这真是个"黄金时代"——这些内容可以直接转化为 AI agent 的可执行指令。
 
 ---
 
-Peter Yang writes about how a VP at Meta built an AI skill that reviews documents in their own voice, aiming to eliminate the common workplace time-waster of trying to guess what leadership wants. He also shares personal projects including vibe-coding a custom fitness app alongside getting a new squat rack.
+Swyx published his 2026 Mac setup as a reusable AI skill, and demonstrated how Claude can consume years of his personal blog posts to auto-generate bash scripts for setting up his entire tech stack in one shot. He reflects that the "golden age" belongs to people who document everything they do, as that content becomes directly actionable training material for AI agents.
 
-🔗 https://x.com/petergyang/status/2037042313361588701
-
-
-④ Nan Yu · Head of Product @ Linear
-
-Linear 产品负责人认为，"设计"这个词已经过于聚焦于视觉元素的排布，而忽视了其本质——为达成目标而规划要素的组合方式。他以 Instagram 抄袭 Snapchat Stories 为例，说明某些战略决策根本没有折中选项。
-
----
-
-The Head of Product at Linear argues that "design" has drifted too far toward visual arrangement and lost sight of its original purpose: planning how elements work together to achieve a goal. He uses Instagram's decision to copy Snapchat Stories as an example of a binary strategic choice with no comfortable middle ground.
-
-🔗 https://x.com/thenanyu/status/2037042617213481410
+🔗 https://x.com/swyx/status/2037410502817841176
 
 
-⑤ Cat Wu · Claude Code @ Anthropic
+③ Josh Woodward · VP @ Google Labs
 
-Cat Wu 宣布 Claude Code 的 Auto Mode 现已向 Claude Teams 用户开放，该模式在自主执行与安全控制之间取得了更好的平衡。用户可通过 `claude --enable-auto-mode` 启用，并使用 Shift + Tab 切换，目前团队内部几乎人人每天都在使用。
+Gemini 推出了两项重要更新：用户现在可以通过设置页面，将其他聊天机器人的记忆和对话记录直接导入 Gemini；同时，Live 功能迎来了最大规模的升级——响应更快、更智能，情感表达更丰富，上下文长度翻倍，由 Gemini 3.1 Flash 驱动，支持 Android 和 iOS。
+ZH: Gemini 推出了两项重要更新：用户现在可以通过设置页面，将其他聊天机器人的记忆和对话记录直接导入 Gemini；同时，Live 功能迎来最大规模升级——响应更快更智能、情感表达更丰富、上下文长度翻倍，由 Gemini 3.1 Flash 驱动，支持 Android 和 iOS。
 
 ---
 
-Cat Wu announces that Claude Code's Auto Mode — which balances autonomy and safety in the coding workflow — is now available to Claude for Teams users. The feature can be enabled via `claude --enable-auto-mode` and toggled with Shift + Tab, and is reportedly used daily by most of the team.
+Gemini has launched two major updates: users can now import memory and chat history from other chatbots directly into Gemini via Settings, and the Live feature has received its biggest upgrade yet — faster and smarter responses, more emotional range, 2x longer context, powered by Gemini 3.1 Flash on both Android and iOS.
 
-🔗 https://x.com/_catwu/status/2036852880624541938
-
-
-⑥ Thariq · Claude Code @ Anthropic
-
-该开发者宣布 Claude Code 新增两项集成：iMessage 现已作为通信渠道上线，平台文档也已正式发布。即将举行的活动将进行录制，并自动发送给注册用户。
-
----
-
-The developer announces two new Claude Code integrations: iMessage is now available as a communication channel, and documentation for the platform has been published. An upcoming session will also be recorded and automatically sent to registrants.
-
-🔗 https://x.com/trq212/status/2036959640022638922
+🔗 https://x.com/joshwoodward/status/2037332341270733259
 
 
-⑦ Amjad Masad · CEO @ Replit
+④ Kevin Weil · VP Science @ OpenAI
 
-Amasad 表示，使用 Replit 构建的 app 在苹果应用商店的过审率很高，说明 AI 辅助生成的应用正在顺利通过 App Store 审核。
+一位名叫 Paul 的用户利用 ChatGPT 和 AlphaFold，为自己患癌的狗设计了个性化 mRNA 疫苗方案。OpenAI 科学副总裁将此视为 AI 加速个性化医疗的缩影，并强调需要尽快让这类工具惠及人类患者，而不仅仅是宠物。
 
 ---
 
-Amasad notes that Apple is showing a high app acceptance rate for apps built with Replit, signaling that AI-generated apps are passing App Store review at strong rates.
+A user named Paul leveraged ChatGPT and AlphaFold to design a personalized mRNA vaccine protocol for his dog's cancer, which OpenAI's VP of Science called a glimpse of AI-accelerated personalized medicine. He emphasized the urgent need to make such tools accessible for human patients, not just pets.
 
-🔗 https://x.com/amasad/status/2037004600893472936
-
-
-⑧ Guillermo Rauch · CEO @ Vercel
-
-Vercel CEO 表示，每家公司终将成为以 token 为生产单位的"AI 工厂"，但基于 token 的计费方式远比传统 SaaS 复杂。Vercel AI Gateway 现已推出统一的 `/v1/report` API，可跨模型和服务商进行用量追踪，一站式解决计量难题。
-
----
-
-Vercel's CEO declares that every company will become an "AI factory" where tokens are the unit of production, but token-based billing creates metering complexity unlike traditional SaaS. Vercel's AI Gateway now addresses this with a unified `/v1/report` API that handles usage tracking across multiple models and providers.
-
-🔗 https://x.com/rauchg/status/2036963706576527623
+🔗 https://x.com/kevinweil/status/2037420429430919674
 
 
-⑨ Aaron Levie · CEO @ Box
+⑤ Peter Yang · Product @ Roblox & AI Educator
 
-Box CEO 指出杰文斯悖论正在现实中上演：AI 大幅降低了软件开发成本，使得大量非科技企业开始启动以前无力承担的项目。这将在整个经济体中催生大量全新的软件需求，而不仅仅是替代现有工作。
+Petergyang 指出了 Spotify 创作者平台的产品倒退问题，包括复制链接按钮被删除，以及定时发布后错误发送"已上线"邮件通知。他还关注到 Anthropic 新推出的"Capybara"系列模型，据称比 Opus 更大、更智能，他称这就是 AGI 的样子。
 
 ---
 
-Box's CEO observes Jevons Paradox playing out in real time: as AI dramatically lowers the cost of building software, companies — especially outside tech — are now taking on projects they previously couldn't afford. This will drive net new software usage across the economy rather than simply substituting existing work.
+Petergyang flagged product regressions in Spotify's creator platform, including a removed copy-link button and misleading "episode is live" email notifications for scheduled content. He also highlighted the emergence of Anthropic's new "Capybara" model series, which is described as larger and more intelligent than Opus, calling it what AGI looks like.
 
-🔗 https://x.com/levie/status/2036832183131033977
-
-
-⑩ Ryo Lu · Design @ Cursor
-
-Cursor 的设计师认为，随着 AI agent 让功能开发变得更加容易，设计的重要性反而在提升而非降低——设计师的工作重心从视觉执行转向决定"什么应该存在"以及如何让人类保持掌控感。品味、工艺与判断力才是设计角色的核心所在。
-
----
-
-The designer at Cursor argues that as AI agents make feature development easier, design becomes more important, not less — shifting from pixel-pushing to deciding what should exist and how humans stay in control. Taste, craft, and judgment are now the core of the design role.
-
-🔗 https://x.com/ryolu_/status/2036886854805709097
+🔗 https://x.com/petergyang/status/2037388468008177682
 
 
-⑪ Garry Tan · President & CEO @ YCombinator
+⑥ Nan Yu · Head of Product @ Linear
 
-YC CEO 鼓励创始人大胆、积极地使用 token，认为在拥有品味和主动性的前提下充分"放开用"才能产出卓越成果。他同时表示，YC 提供的 AI token 额度是降低创业门槛、让更多人平等获得创业机会的重要举措。
+这几条帖子流露出对 Heroku 的复杂情感——既有怀念，也有惋惜，暗示这个平台严重错失了发展机遇，尤其是在 add-on 生态上。言辞间透露出一种遗憾：曾经深受开发者喜爱的工具，就这样浪费了自己最核心的优势。
 
 ---
 
-YC's CEO urges founders to use tokens aggressively and "let it rip," arguing that liberal token usage combined with taste and agency produces remarkable results. He also positions YC's AI token credits as a key tool for making startup access equitable regardless of financial resources.
+The posts reference Heroku with a mix of nostalgia and frustration, suggesting the platform badly mishandled its opportunity — particularly around its add-ons ecosystem. The tone implies that what was once a beloved developer tool fumbled a product-defining advantage.
 
-🔗 https://x.com/garrytan/status/2037055498974093629
-
-
-⑫ Matt Turck · VC @ FirstMark Capital
-
-这位 FirstMark 的 VC 用一句话调侃了董事会成员角色的演变：从治理顾问到啦啦队，再到如今实际上成了 Anthropic 和 OpenAI 的销售代表。这一玩笑折射出 AI 厂商对企业和 VC 生态的深度渗透。
-
----
-
-In a sharp one-liner, the FirstMark VC jokes that VC board members have evolved from governance advisors to cheerleaders and now, in 2026, to de facto sales reps for Anthropic and OpenAI. The quip highlights how deeply AI vendors have penetrated the enterprise and VC ecosystem.
-
-🔗 https://x.com/mattturck/status/2036747586468499889
+🔗 https://x.com/thenanyu/status/2037266220961997138
 
 
-⑬ Nikunj Kothari · Partner @ FPV Ventures
+⑦ Amanda Askell · Philosopher & Ethicist @ Anthropic
 
-这位 FPV 合伙人将于 4 月 7 日在旧金山联合举办一场高端创始人晚宴，目前仍有少量名额开放报名。他表示将优先邀请回复最有趣的创始人参加。
+Askell 认为，远程办公的普及反而可能让那些偏好在办公室工作的员工处境更糟，因为居家办公如今已被默认为合理选项。她还批评科技公司花重金招揽人才，却将他们安置在开放式办公室里，严重影响专注力，并指出提供独立办公室将是极具竞争力的招聘筹码。
 
 ---
 
-The FPV partner is co-hosting an exclusive founder dinner in San Francisco on April 7th with a few remaining spots open. Priority for RSVPs will be given to founders with the funniest responses.
+Askell argues that the shift to remote work may have paradoxically worsened conditions for employees who prefer working in-person, since working from home is now treated as a default viable option. She also critiques tech companies for paying top dollar for talent but housing them in open-plan offices that destroy focus, suggesting private offices would be a powerful talent-poaching tool.
 
-🔗 https://x.com/nikunj/status/2036936135541481923
-
-
-⑭ Peter Steinberger · Co-founder @ OpenClaw
-
-OpenClaw 发布了新版 beta，带来了更完善的 Microsoft Teams 集成以及 OpenWebUI 支持。此次更新进一步拓展了该平台面向企业用户的连接能力。
-
----
-
-A new OpenClaw beta has been released featuring improved Microsoft Teams integration and OpenWebUI support. The update expands the platform's connectivity options for enterprise users.
-
-🔗 https://x.com/steipete/status/2036824286988816737
+🔗 https://x.com/AmandaAskell/status/2037210778198302907
 
 
-⑮ Dan Shipper · CEO @ Every
+⑧ Thariq · Claude Code @ Anthropic
 
-Every CEO 预告次日将有重大发布，并感叹产品开发的规则正在被实时改写——产品经理和设计师如今可以像工程师一样直接交付软件，产品设计也必须将人类用户和 agent 同等视为一等公民。
+Claude Code 团队正在调整工作日高峰时段（太平洋时间早上 5 点至 11 点）的 session 限制，以应对不断增长的需求。约 7% 的用户——尤其是 Pro 用户——会比以前更快触及限制，但每周总配额不变。团队建议将高 token 消耗的后台任务安排到非高峰时段，并表示已通过效率优化部分缓解了影响。
 
 ---
 
-Every's CEO teases a major announcement coming the next day and reflects on how the rules of product development are being rewritten: PMs and designers can now ship software as easily as engineers, and products must be built for both humans and agents as first-class citizens.
+The Claude Code team is adjusting session limits during peak weekday hours (5am–11am PT) to manage growing demand, meaning roughly 7% of users — especially Pro tier — will hit limits sooner than before, though overall weekly allowances remain unchanged. They recommend shifting token-intensive background jobs to off-peak hours and note that efficiency improvements have partially offset the impact.
 
-🔗 https://x.com/danshipper/status/2036923805273129160
+🔗 https://x.com/trq212/status/2037254609455243503
 
 
-⑯ Aditya Agarwal · General Partner @ South Park Commons
+⑨ Amjad Masad · CEO @ Replit
 
-参加 Hill Valley Forum 后，这位 GP 观察到硬科技和深科技的成功需要建设者、投资者和政策制定者三方协同发力，而本次活动三方均有充分参与。他还指出，此次嘉宾阵容质量极高，体现了主办方出色的社群运营能力。
+Replit CEO 在一场会议上与参议员 Josh Hawley 会面，探讨了 vibe-coding 如何推动新一轮美国创业浪潮。他强调，随着这一新兴品类的发展，AI 编程平台必须保持开放，不能设置门槛限制创新。
 
 ---
 
-Following the Hill Valley Forum, this GP observed that hardtech and deeptech success requires all three stakeholders — builders, investors, and policymakers — to be aligned and engaged. He noted the event's high-quality speaker lineup as a reflection of strong community curation by the organizers.
+Replit's CEO met with Senator Josh Hawley at a conference and discussed how vibe-coding could fuel a new wave of American entrepreneurship. He stressed the importance of keeping AI coding platforms open and non-gatekept as this emerging category grows.
 
-🔗 https://x.com/adityaag/status/2036824253970923925
-
-
-⑰ Claude · AI Assistant @ Anthropic
-
-Claude 宣布工作工具集成现已支持移动端，包括 Figma、Canva 和 Amplitude 等。用户现在可以直接在手机上查看设计稿、制作演示文稿并查阅数据看板。
-
-Claude announces that work tool integrations — including Figma, Canva, and Amplitude — are now accessible on mobile. Users can explore designs, create slides, and check dashboards directly from their phones.
-
-🔗 https://x.com/claudeai/status/2036850783526719610
+🔗 https://x.com/amasad/status/2037275196240052724
 
 
+⑩ Guillermo Rauch · CEO @ Vercel
 
-🎙 Podcast
+Vercel 推出了 Sandbox——一个为 AI agent 设计的持久化计算环境，支持跨 session 保存状态，让 agent 能够安装、编写、运行和调试软件。他将持久化计算定位为构建强大 agent 的基础设施，并幽默地将 1961 年发布 CLI 与当今开发实践并列对比。
 
-Biology's Waymo Moment: Ginkgo Bioworks' Jason Kelly
+---
 
-Ginkgo Bioworks首席执行官杰森·凯利认为，AI对生物技术的变革意义是真实深远的——与以往历次技术浪潮不同——因为它能从根本上改变生物工程的方式，而非仅优化后台流程。凯利于2008年创立公司后艰难自营六年，直到2014年通过山姆·阿尔特曼的博客文章获得联系并加入Y Combinator，才真正获得资本支持。他将生物学类比为唯一可与计算机媲美的"编码"系统，DNA如同可编程代码，但其"编译调试"过程是物理性的，成本高昂，仍是关键瓶颈。有别于Chai Bio、Arc Institute等专注AI驱动生物设计的竞争者，Ginkgo已战略性转向"后端"问题——降低实验室测试成本、加速迭代周期，并与OpenAI展开合作，探索AI模型如何推动这一实验室执行层的变革。
+Vercel launched Sandbox, a persistent compute environment for AI agents that allows them to install, write, run, and debug software with state preserved across sessions. He frames persistent compute as fundamental infrastructure for capable agents, drawing a wry parallel between shipping a CLI in 1961 and today.
 
-Ginkgo Bioworks CEO Jason Kelly argues that AI represents a genuinely transformative moment for biotechnology—unlike previous tech waves—because it can fundamentally change how biology is engineered, not just optimize back-office processes. Kelly, who bootstrapped the company for six years after founding it in 2008 before connecting with Sam Altman and joining Y Combinator in 2014, has strategically pivoted Ginkgo's focus away from the AI-driven biological design space (where players like Chai Bio and Arc Institute's EVO 2 compete) and toward the "back-end" problem: making lab testing and iteration cycles cheaper and faster. He frames biology as the only other "coded" system besides computers—where DNA serves as programmable code—but notes that the compile-debug cycle is a physical, expensive process that remains a critical bottleneck. Most recently, Ginkgo has partnered with OpenAI to explore how AI models can accelerate this laboratory execution layer, which Kelly believes is a more tractable engineering problem than the science-heavy design challenge.
+🔗 https://x.com/rauchg/status/2037384491677933811
 
-🔗 https://youtube.com/watch?v=g45Alfg7diw
+
+⑪ Aaron Levie · CEO @ Box
+
+Box 在 OpenAI 的 Codex 中推出了插件，允许用户通过 coding agent 对 Box 中的内容自动化处理工作流，例如批量解析财报文件并提取结构化数据。他同时提醒，自动化知识工作者任务所需的变革管理远比行业预想的复杂，数据散落在遗留系统中、任务缺乏上下文、团队技术成熟度参差不齐，都是不可忽视的挑战。
+
+---
+
+Box launched a plugin within OpenAI's Codex, enabling users to automate workflows over Box content using a coding agent — for example, processing earnings call documents to extract structured data at scale. He also cautioned that automating knowledge worker tasks will require far more change management than the industry anticipates, given legacy systems, missing context, and varying technical maturity across teams.
+
+🔗 https://x.com/levie/status/2037383187245273477
+
+
+⑫ Garry Tan · President & CEO @ YCombinator
+
+Garrytan 正在积极维护一个开源项目，持续合并社区提交的 PR 并快速修复 bug。这几条帖子展示的是他亲力亲为的开发者状态，而非重大产品发布。
+
+---
+
+Garrytan is actively maintaining an open-source project, merging community PRs and shipping bug fixes in rapid succession. The posts suggest a hands-on, developer-mode engagement with a codebase rather than any major product announcement.
+
+🔗 https://x.com/garrytan/status/2037420604643836330
+
+
+⑬ Zara Zhang · Builder & AI Developer
+
+Zarazhangrui 分享道，产品创意不来自刻意思考，而来自"玩"——不断摆弄模型——以及"聊"——与粉丝、用户和创业者保持广泛接触。她还引用了一位创始人的理念："宁愿浪费 token，也不愿浪费时间"，折射出一种极具 AI 原生色彩的工作哲学。
+
+---
+
+Zarazhangrui shares that product ideas don't come from deliberate thinking but from "playing" — tinkering with models — and "talking" — maintaining broad surface area through conversations with followers, users, and founders. She also quotes a founder's maxim: "We'd rather waste tokens than waste time," highlighting a distinctly AI-native operating philosophy.
+
+🔗 https://x.com/zarazhangrui/status/2037254276389757313
+
+
+⑭ Nikunj Kothari · Partner @ FPV Ventures
+
+Nikunj 通过将 Claude Code 与 Google Calendar MCP 和 Ramp CLI 组合使用，仅用 12 分钟就完成了三个月的费用分类，展示了可组合 AI 工具如何消除繁琐的财务行政工作。他还分享了一段反思：给出意见时措辞至关重要，因为人们往往比你预期的更字面地理解那些话。
+
+---
+
+Nikunj used Claude Code with a Google Calendar MCP and Ramp CLI to automate three months of expense categorization in just 12 minutes, showcasing how composable AI tooling can eliminate tedious financial admin work. He also shares a cautionary reflection on how much words matter when giving opinions, noting people often take advice far more literally than intended.
+
+🔗 https://x.com/nikunj/status/2037305617589948818
+
+
+⑮ Peter Steinberger · Builder @ OpenClaw
+
+OpenClaw 正在加速扩展平台集成：Microsoft Teams 的改进已上线，Slack 支持将在数日内推出，Telegram 创始人 Durov 也亲自伸出援手，一位新的维护者加入专门修复流式 API 导致消息重复的问题。这个项目在各大主流消息平台上正快速获得关注。
+
+---
+
+OpenClaw is expanding its platform integrations: Microsoft Teams improvements have already shipped, Slack support is coming within days, and Telegram's Pavel Durov personally offered assistance, with a new maintainer joining to fix a streaming API bug causing message duplicates. The project appears to be gaining momentum across major messaging platforms.
+
+🔗 https://x.com/steipete/status/2037257446859702687
+
+
+⑯ Dan Shipper · CEO @ Every
+
+Danshipper 正在为 Every 即将举办的 Demo Day 活动预热，并对另一个团队的快速发布节奏给予了积极评价。帖子内容较为简短，缺乏实质性细节。
+
+---
+
+Danshipper is promoting Every's upcoming Demo Day event and reacting positively to fast shipping velocity from another team. The posts are light on substantive detail.
+
+🔗 https://x.com/danshipper/status/2037241083113967739
+
+
+⑰ Aditya Agarwal · General Partner @ South Park Commons
+
+Adityaag 分享了与投资人 Elad Gil 在 South Park Commons 的对话，探讨了对硅谷传统智慧的反向观点——包括对"必须有联合创始人"这一说法的质疑，以及"赢才是唯一重要的创业文化"这一核心主张。该对话已在 YouTube 和 Spotify 上线。
+
+---
+
+Adityaag shared a conversation with investor Elad Gil at South Park Commons, covering contrarian takes on Silicon Valley conventional wisdom — including skepticism around the co-founder requirement and the view that winning culture is the only startup culture that matters. The session appears to be available on both YouTube and Spotify.
+
+🔗 https://x.com/adityaag/status/2037234441383248371
+
+
+⑱ Sam Altman · CEO @ OpenAI
+
+Sam Altman 重点介绍了一位名叫 Paul 的用户，他利用 ChatGPT 和其他 LLM，独立为患癌的狗 Rosie 设计了 mRNA 疫苗方案，Altman 称这是他本周最令人振奋的会面。他将此视为 AI 赋能个人、使其具备整个研究机构能力的有力证明。
+
+Sam Altman highlights a user named Paul who used ChatGPT and other LLMs to independently design an mRNA vaccine protocol to treat his dog Rosie's cancer, describing it as the most inspiring meeting of his week. He frames it as a powerful demonstration of AI empowering individuals to act with the research capacity of an entire institute.
+
+🔗 https://x.com/sama/status/2037396826060673188
 
 📎 Notion 存档
-https://notion.so/AI-Builders-Digest-2026-03-27-330941f9890481ab98f5dcb69f65fb81
+https://notion.so/AI-Builders-Digest-2026-03-28-331941f9890481d6959bd8c303226177
