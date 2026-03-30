@@ -1,136 +1,147 @@
-🗞 AI Builders 日报 · 2026.03.29
+🗞 AI Builders 日报 · 2026.03.30
 
 
 🐦 X / Twitter
 
-① Swyx · Founder @ AI Engineer World's Fair
+① Andrej Karpathy · AI Researcher & Educator
 
-Swyx 发现了 create-context-graph 这个工具，只需一条命令就能为 22 个行业领域建立关键实体关系，他计划将其作为社交图谱层集成到自己开发的每个应用中。他还推广了一期 Latent Space 播客，探讨了用"人类身份验证"技术应对 AI 破坏互联网生态的可能性。
-
----
-
-Swyx discovered create-context-graph, a tool that sets up key entity relationships for 22 industry domains in one command, which he's excited to use as a social graph layer across apps he builds. He also promoted a Latent Space podcast episode discussing Proof of Human technology as a potential solution to AI-driven internet degradation.
-
-🔗 https://x.com/swyx/status/2037695506055610768
-
-
-② Josh Woodward · VP @ Google Labs
-
-Joshwoodward 以轻松幽默的方式推广了 Veo 3 的视频生成功能，提醒用户仍可直接在 Gemini 中创作视频内容。
+Karpathy 幽默地分享了一个亲身经历：他花了四小时用 LLM 打磨一篇博文，结果同一个 LLM 在被要求反驳时，把整篇文章的论点彻底推翻。这个小故事揭示了 LLM 的一个核心问题：它能以同样的说服力支持任何立场，让人不禁怀疑它究竟是在表达观点，还是只是在优化"听起来有说服力"这件事本身。
 
 ---
 
-Joshwoodward lightly promoted Veo 3's video generation capabilities through a playful reminder that users can still create videos directly in Gemini.
+Karpathy humorously describes spending 4 hours refining a blog post with LLM assistance, only to have the same LLM convincingly argue the exact opposite position when prompted. The anecdote highlights a fundamental issue with LLMs: they are highly persuasive and can argue any side of a debate with equal conviction, raising questions about whether they form genuine opinions or just optimize for sounding convincing.
 
-🔗 https://x.com/joshwoodward/status/2037674926715605331
-
-
-③ Peter Yang · Product @ Roblox / AI Educator
-
-Petergyang 预告了一期即将发布的播客，嘉宾是 Claude Cowork 功能的设计师，内容涵盖其在 Anthropic 内部的使用方式及开发背后的故事。他还分享了一个实用技巧：通过提炼领导者的决策框架，构建一个能随时模拟高管产品反馈的 AI skill。
-
----
-
-Petergyang teased an upcoming podcast episode featuring the designer behind Claude's Cowork feature, covering how it's used at Anthropic and the story of its creation. He also shared a practical tip on building an AI skill that simulates executive product feedback using a leader's decision-making framework.
-
-🔗 https://x.com/petergyang/status/2037704776331448686
+🔗 https://x.com/karpathy/status/2037921699824607591
 
 
-④ Nan Yu · Head of Product @ Linear
+② Swyx · Developer Relations & Podcaster
 
-Thenanyu 提出了一个值得关注的系统性风险：如果多批 YC 创业公司都依赖同一套工具栈（GStack），它们可能会产生高度相关的失误模式，甚至影响 YC 的筛选偏好，形成一种隐性的选择偏差。
+Swyx 反思了内容和战略中"假等效"的陷阱——把精力平均分配给多个方向，实际上忽视了现实世界中幂律分布的本质。他以扎克伯格的人才决策为反面教材，认为与其广撒网，不如在真正重要的事情上深耕。
 
 ---
 
-Thenanyu raised an interesting concern about systemic risk in startup ecosystems: if multiple YC batches all rely on the same toolstack (GStack), they may share correlated blind spots and biases, potentially skewing both their failures and their admission selection.
+Swyx reflects on the danger of false equivalence in content and strategy, noting that spreading effort equally across multiple initiatives ignores the power law nature of real-world outcomes. He uses Zuckerberg's talent decisions as a cautionary example, arguing it's better to go deep on what truly matters than to spread thin across many things.
 
-🔗 https://x.com/thenanyu/status/2037737596663509363
-
-
-⑤ Aaron Levie · CEO @ Box
-
-Levie 指出，企业实现 AI 自动化的核心瓶颈并非 agent 本身的能力，而是如何为其提供正确的上下文。相比编程场景（代码库天然提供结构化上下文），通用知识工作领域的这一挑战要复杂得多。
-
----
-
-Levie highlighted that the core bottleneck for enterprise AI automation isn't the agents themselves, but getting the right context to them — a challenge that's much harder in general knowledge work than in coding, where the codebase naturally provides structured context.
-
-🔗 https://x.com/levie/status/2037744753073385518
+🔗 https://x.com/swyx/status/2038096302781657462
 
 
-⑥ Garry Tan · President & CEO @ YCombinator
+③ Josh Woodward · VP @ Google Labs
 
-Garrytan 表示自己日常依赖 GStack 的 /plan-eng-review 和 /ship 指令来简化工程流程，并感慨一次关于 Boris 软件开发理念的访谈深刻改变了他自己的构建哲学，让他更加注重快速迭代。
+Joshwoodward 提到某项 Google Labs 新功能获得了不错的早期采用率，并鼓励大家在周末试用。帖子中未提供更多技术细节。
 
 ---
 
-Garrytan shared that he relies on GStack's /plan-eng-review and /ship commands to streamline his engineering workflow, and reflected on how an interview about Boris's approach to software profoundly shifted his own building philosophy toward faster iteration.
+Joshwoodward notes strong early adoption of a recent Google Labs feature and encourages people to try it over the weekend. No additional technical details were shared in the post.
 
-🔗 https://x.com/garrytan/status/2037776210898600402
-
-
-⑦ Zara Zhang · Independent Builder / Developer
-
-Zarazhangrui 提出了一个犀利的洞察：在 AI 辅助工作中，真正的瓶颈是人类的"上下文窗口"而非 AI 的——也就是说，人类的注意力和理解能力已成为新的限制因素。他们还指出，下一代 AI 产品需要认真解决人类易错性与 agent 高可靠性之间的矛盾。
-
----
-
-Zarazhangrui shared a sharp observation: the real bottleneck in AI-assisted work is the human's context window, not the AI's — meaning human attention and comprehension capacity is now the limiting factor. They also noted that next-generation AI products must grapple with reconciling human fallibility with increasingly capable agents.
-
-🔗 https://x.com/zarazhangrui/status/2037661344154124309
+🔗 https://x.com/joshwoodward/status/2037940551400735224
 
 
-⑧ Nikunj Kothari · Partner @ FPV Ventures
+④ Peter Yang · AI Tutorials & Product @ Roblox
 
-Nikunj 尝试了一款名为"intelligence"的 AI 工具，用于分析自己在 X 上的粉丝群体，觉得体验相当不错，甚至表示如果 X 原生提供类似功能，他愿意每月支付 50 美元。
+Petergyang 建议为 Grok 增加一个功能，让用户能直接与自己在 X 上收藏的帖子对话，省去手动翻阅的麻烦。他还指出 X 的界面设计问题：踩踏按钮应该在原帖上也显示出来，而不只是回复，这样才能更有效地过滤掉 AI 生成的垃圾内容。
 
 ---
 
-Nikunj experimented with an AI tool called "intelligence" to analyze his follower base on X, finding it compelling enough that he'd pay $50/month if X built something similar natively.
+Petergyang suggests a feature for Grok that would allow users to chat with all their bookmarked posts on X, rather than scrolling through them manually. He also comments on X's UI, arguing that the downvote button should be visible on original posts — not just replies — to help reduce AI-generated spam in feeds.
 
-🔗 https://x.com/nikunj/status/2037743784210132995
-
-
-⑨ Peter Steinberger · Builder @ OpenClaw
-
-Steipete 宣布了 OpenClaw 的两项重要新功能：支持通过命令召唤并绑定不同 AI agent（如 Codex）接管当前会话；同时 OpenClaw 本身将成为一个 MCP，能够接入比 Anthropic 默认渠道更广泛的消息服务提供商。
-
----
-
-Steipete announced two significant upcoming features for OpenClaw: the ability to spawn and bind different AI agents (like Codex) to take over your current session, and OpenClaw becoming an MCP itself to connect to a broader range of message providers beyond Anthropic's default channel.
-
-🔗 https://x.com/steipete/status/2037725493315707290
+🔗 https://x.com/petergyang/status/2038068968792162594
 
 
-⑩ Dan Shipper · CEO @ Every
+⑤ Nan Yu · Head of Product @ Linear
 
-Danshipper 宣布超过 1200 人参加了 Every 的 Demo Day，并推广了两项重要内容：一套专为 AI 时代设计的复合工程哲学，以及团队成员开发的一款旨在改变 AI 工作方式的插件。
+SKIP
 
 ---
 
-Danshipper announced that over 1,200 people attended Every's demo day, and promoted two key resources: a compound engineering philosophy built for the AI era, and a plugin by a team member designed to change how people work with AI.
+Thenanyu made several brief posts — criticizing TED and Forbes 30 Under 30 as examples of brand self-destruction, sharing a travel photo from Japan, and linking to an unspecified announcement. The posts lack enough substantive content to summarize meaningfully.
 
-🔗 https://x.com/danshipper/status/2037589105417097284
+🔗 https://x.com/thenanyu/status/2038025287955280120
 
 
-⑪ Aditya Agarwal · General Partner @ South Park Commons
+⑥ Amjad Masad · CEO @ Replit
 
-Adityaag 提出了一个反向投资逻辑：创业者不应回避与 AI 模型的正面竞争，而应主动押注那些在 12 到 18 个月内将被填补的能力缺口，将当下模型的短板转化为未来的竞争壁垒。
+Amasad 重新阐述了他"1000倍工程师"的观点：随着 AI 让普通人也能构建应用，顶尖工程师得以将精力集中在更底层的工作上——推进平台能力、拓展技术边界。他认为这正是他四年前预见的未来正在成真。
 
 ---
 
-Adityaag made a contrarian investment argument: instead of avoiding direct competition with AI models, founders should lean into it by betting on specific capability gaps that will close in 12–18 months, turning today's model weaknesses into tomorrow's moat.
+Amasad revisits his "1000x engineer" thesis, arguing that as AI democratizes app-building for everyone, the best engineers are freed to work a layer deeper — advancing platforms and expanding what's technically possible. This shift, in his view, is exactly the future he envisioned four years ago.
 
-🔗 https://x.com/adityaag/status/2037562946423767168
+🔗 https://x.com/amasad/status/2038053670907007165
 
 
-⑫ Sam Altman · CEO @ OpenAI
+⑦ Guillermo Rauch · CEO @ Vercel
 
-Sama 宣布了一项重要基础设施里程碑：OpenAI 与 Oracle 及 Related Digital 合作建设的密歇根州 Stargate 数据中心已完成第一批钢梁架设，项目正式进入实体建设阶段。
+Rauchg 分享了 Vercel 团队在亚利桑那州举办公司年会的花絮，并预告了一项新的文字排版功能即将上线。他还借用经典名言"网络即计算机"改写为"agent 即计算机"，言简意赅地表达了对 AI agent 时代的判断。
 
-Sama announced a major infrastructure milestone: the first steel beams have gone up at OpenAI's Michigan Stargate data center site, built in partnership with Oracle and Related Digital.
+---
 
-🔗 https://x.com/sama/status/2037610000122839116
+Rauchg shared highlights from Vercel's company offsite in Arizona, celebrating the team. He also teased a new text layout feature shipping to Vercel, and made a pithy observation riffing on the classic "the network is the computer" phrase — updating it to "the agent is the computer."
+
+🔗 https://x.com/rauchg/status/2037993361450336714
+
+
+⑧ Aaron Levie · CEO @ Box
+
+SKIP
+
+---
+
+Levie's post contains only a link with no accompanying text or context. There is no substantive content to summarize.
+
+🔗 https://x.com/levie/status/2037928306977509601
+
+
+⑨ Garry Tan · President & CEO @ Y Combinator
+
+Garrytan 以里士满市的案例为据，指出反对 Flock 监控摄像头是一种"精英阶层的奢侈立场"——该市禁用摄像头后车辆盗窃率上升了33%，最终在本地店主的呼吁下市议会撤回了决定。他还简短提到自己的工具 GStack 持续保持每日增长。
+
+---
+
+Garrytan argues that opposing surveillance cameras like Flock is a "luxury belief," citing Richmond's experience where disabling them led to a 33% rise in car thefts before the city council reversed course under pressure from local shopkeepers. He also briefly promotes GStack, his personal tool, noting continued daily growth.
+
+🔗 https://x.com/garrytan/status/2038054087451885747
+
+
+⑩ Zara Zhang · Builder & Developer
+
+Zarazhangrui 提出了一个关键区分：传统互联网产品按设计预期运行就算成功，而真正优秀的 agent 产品应该能做出连创造者都未曾预料到的事情，以惊喜和超预期来定义其价值。他还指出，在 AI 驱动的世界里，人类自身的"上下文窗口"——即我们处理和消化信息的能力——已成为新的瓶颈所在。
+
+---
+
+Zarazhangrui proposes a key distinction between internet-era products and agent products: while traditional products are designed to behave exactly as intended, a truly good agent product should be able to surprise its creator by doing things they never anticipated. He also observes that the human context window — our ability to hold and process information — has become the new limiting constraint in an AI-driven world.
+
+🔗 https://x.com/zarazhangrui/status/2038144755478237654
+
+
+⑪ Nikunj Kothari · Partner @ FPV Ventures
+
+SKIP
+
+---
+
+Nikunj's posts this period are personal in nature — sharing a fun ad recreation, promoting a poker event in SF, and referencing an older blog post about misaligned incentives in financial disclosure. None of the content is directly related to AI building or investing insights.
+
+🔗 https://x.com/nikunj/status/2038123479355318775
+
+
+⑫ Peter Steinberger · Builder @ OpenClaw
+
+Steipete 发布了 MCPorter 0.8.0 版本，这是一个将 MCP 转换为 CLI 的工具，本次更新改进了 OAuth 处理、JSON 输出稳定性、错误处理、对象参数支持以及守护进程可靠性。他还感慨维护成功开源项目所需的心理韧性，指出应对不友好或不了解情况的用户批评是家常便饭。
+
+---
+
+Steipete released MCPorter 0.8.0, an MCP-to-CLI tool, with improvements to OAuth handling, JSON output reliability, error handling, object-valued argument support, and daemon stability. He also reflected on the emotional resilience required when maintaining successful open source projects, noting that dealing with critical or uninformed users is a constant reality.
+
+🔗 https://x.com/steipete/status/2038074759527981416
+
+
+⑬ Dan Shipper · CEO @ Every
+
+Danshipper 转发了一篇文章，暗示 AI 领域出现了重要进展——很可能涉及模型在某关键领域超越人类水平——并评论道"如果你一直在关注，这并不意外"，言下之意是这对圈内人来说早有预兆。由于链接内容不完整，无法提供更具体的摘要。
+
+Danshipper shared an article suggesting a significant development in AI — likely related to models surpassing human-level performance in a key domain — with the comment "not surprising if you're paying attention," implying this was a foreseeable milestone for those closely following the space. The lack of full link context limits a more specific summary.
+
+🔗 https://x.com/danshipper/status/2037897135543161326
 
 📎 Notion 存档
-https://notion.so/AI-Builders-Digest-2026-03-29-332941f9890481e78656e3f78eec901d
+https://notion.so/AI-Builders-Digest-2026-03-30-333941f989048184bd05e733b9dbfcd6
