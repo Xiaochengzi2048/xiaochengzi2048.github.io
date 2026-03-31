@@ -1,147 +1,27 @@
-🗞 AI Builders 日报 · 2026.03.30
+🗞 AI Builders 日报 · 2026.03.31
 
 
 🐦 X / Twitter
 
-① Andrej Karpathy · AI Researcher & Educator
+① Claude · AI Assistant @ Anthropic
 
-Karpathy 幽默地分享了一个亲身经历：他花了四小时用 LLM 打磨一篇博文，结果同一个 LLM 在被要求反驳时，把整篇文章的论点彻底推翻。这个小故事揭示了 LLM 的一个核心问题：它能以同样的说服力支持任何立场，让人不禁怀疑它究竟是在表达观点，还是只是在优化"听起来有说服力"这件事本身。
+Claude Code 现已支持计算机操作功能，Claude 可以直接在 CLI 中打开应用、操作界面并测试自己生成的代码。该功能目前以研究预览版形式向 Pro 和 Max 计划用户开放。
 
----
+Claude has introduced computer use capability in Claude Code, allowing it to open apps, navigate UIs, and test its own builds directly from the CLI. This feature is currently available as a research preview for Pro and Max plan users.
 
-Karpathy humorously describes spending 4 hours refining a blog post with LLM assistance, only to have the same LLM convincingly argue the exact opposite position when prompted. The anecdote highlights a fundamental issue with LLMs: they are highly persuasive and can argue any side of a debate with equal conviction, raising questions about whether they form genuine opinions or just optimize for sounding convincing.
+🔗 https://x.com/claudeai/status/2038663014098899416
 
-🔗 https://x.com/karpathy/status/2037921699824607591
 
 
-② Swyx · Developer Relations & Podcaster
+🎙 Podcast
 
-Swyx 反思了内容和战略中"假等效"的陷阱——把精力平均分配给多个方向，实际上忽视了现实世界中幂律分布的本质。他以扎克伯格的人才决策为反面教材，认为与其广撒网，不如在真正重要的事情上深耕。
+Building Is the Easy Part Now | Mike Krieger on What AI Changed
 
----
+Instagram 联合创始人、现任 Anthropic Labs 产品负责人 Mike Krieger 指出，尽管 AI 已将软件构建本身变得极为轻松——他用 Claude 仅花两小时就重建了 Instagram 前身 Bourbon 的完整功能——但培养产品直觉这一更核心的工作，仍然需要时间积累与真实世界的磨砺。最令人意外的观察是：AI 模型擅长添加功能，却根本不擅长判断该删除什么，导致 AI 加速开发往往产出功能臃肿、缺乏深层判断力的通用产品。他借用两个比喻来阐释这一问题：室内生长、从未经历风吹的树木结构不够强韧；以及被直接丢进电视剧大结局却毫无前情铺垫的观看体验——两者都指向同一个道理：跳过成长阵痛所得到的成果，外表完整却内里空洞。他的核心论断是：AI 时代鲜有爆款消费产品出现，根本原因或许并非构建难度，而是缺乏只有在更慢、更艰难的经历中才能锻造出的产品信念。
 
-Swyx reflects on the danger of false equivalence in content and strategy, noting that spreading effort equally across multiple initiatives ignores the power law nature of real-world outcomes. He uses Zuckerberg's talent decisions as a cautionary example, arguing it's better to go deep on what truly matters than to spread thin across many things.
+Mike Krieger, Instagram co-founder and Anthropic Labs product leader, argues that while AI has made the *building* of software trivially fast—he rebuilt the entire pre-Instagram app Bourbon in two hours using Claude—the harder, irreplaceable work of developing product intuition still requires time and real-world friction. Most surprisingly, he observes that AI models are good at adding features but fundamentally poor at knowing what to cut, meaning AI-accelerated development tends to produce overbuilt, generic products lacking the deep editorial judgment that comes from incremental, user-exposed iteration. He draws on two metaphors: a tree grown indoors without wind that never develops structural strength, and being dropped into a TV finale with no prior character context—both illustrating how skipping the formative struggle produces something that looks complete but isn't truly sound. His broader provocation is that the scarcity of breakout consumer products in the AI era may be explained not by building difficulty, but by a shortage of earned product conviction that only slower, harder experience can forge.
 
-🔗 https://x.com/swyx/status/2038096302781657462
-
-
-③ Josh Woodward · VP @ Google Labs
-
-Joshwoodward 提到某项 Google Labs 新功能获得了不错的早期采用率，并鼓励大家在周末试用。帖子中未提供更多技术细节。
-
----
-
-Joshwoodward notes strong early adoption of a recent Google Labs feature and encourages people to try it over the weekend. No additional technical details were shared in the post.
-
-🔗 https://x.com/joshwoodward/status/2037940551400735224
-
-
-④ Peter Yang · AI Tutorials & Product @ Roblox
-
-Petergyang 建议为 Grok 增加一个功能，让用户能直接与自己在 X 上收藏的帖子对话，省去手动翻阅的麻烦。他还指出 X 的界面设计问题：踩踏按钮应该在原帖上也显示出来，而不只是回复，这样才能更有效地过滤掉 AI 生成的垃圾内容。
-
----
-
-Petergyang suggests a feature for Grok that would allow users to chat with all their bookmarked posts on X, rather than scrolling through them manually. He also comments on X's UI, arguing that the downvote button should be visible on original posts — not just replies — to help reduce AI-generated spam in feeds.
-
-🔗 https://x.com/petergyang/status/2038068968792162594
-
-
-⑤ Nan Yu · Head of Product @ Linear
-
-SKIP
-
----
-
-Thenanyu made several brief posts — criticizing TED and Forbes 30 Under 30 as examples of brand self-destruction, sharing a travel photo from Japan, and linking to an unspecified announcement. The posts lack enough substantive content to summarize meaningfully.
-
-🔗 https://x.com/thenanyu/status/2038025287955280120
-
-
-⑥ Amjad Masad · CEO @ Replit
-
-Amasad 重新阐述了他"1000倍工程师"的观点：随着 AI 让普通人也能构建应用，顶尖工程师得以将精力集中在更底层的工作上——推进平台能力、拓展技术边界。他认为这正是他四年前预见的未来正在成真。
-
----
-
-Amasad revisits his "1000x engineer" thesis, arguing that as AI democratizes app-building for everyone, the best engineers are freed to work a layer deeper — advancing platforms and expanding what's technically possible. This shift, in his view, is exactly the future he envisioned four years ago.
-
-🔗 https://x.com/amasad/status/2038053670907007165
-
-
-⑦ Guillermo Rauch · CEO @ Vercel
-
-Rauchg 分享了 Vercel 团队在亚利桑那州举办公司年会的花絮，并预告了一项新的文字排版功能即将上线。他还借用经典名言"网络即计算机"改写为"agent 即计算机"，言简意赅地表达了对 AI agent 时代的判断。
-
----
-
-Rauchg shared highlights from Vercel's company offsite in Arizona, celebrating the team. He also teased a new text layout feature shipping to Vercel, and made a pithy observation riffing on the classic "the network is the computer" phrase — updating it to "the agent is the computer."
-
-🔗 https://x.com/rauchg/status/2037993361450336714
-
-
-⑧ Aaron Levie · CEO @ Box
-
-SKIP
-
----
-
-Levie's post contains only a link with no accompanying text or context. There is no substantive content to summarize.
-
-🔗 https://x.com/levie/status/2037928306977509601
-
-
-⑨ Garry Tan · President & CEO @ Y Combinator
-
-Garrytan 以里士满市的案例为据，指出反对 Flock 监控摄像头是一种"精英阶层的奢侈立场"——该市禁用摄像头后车辆盗窃率上升了33%，最终在本地店主的呼吁下市议会撤回了决定。他还简短提到自己的工具 GStack 持续保持每日增长。
-
----
-
-Garrytan argues that opposing surveillance cameras like Flock is a "luxury belief," citing Richmond's experience where disabling them led to a 33% rise in car thefts before the city council reversed course under pressure from local shopkeepers. He also briefly promotes GStack, his personal tool, noting continued daily growth.
-
-🔗 https://x.com/garrytan/status/2038054087451885747
-
-
-⑩ Zara Zhang · Builder & Developer
-
-Zarazhangrui 提出了一个关键区分：传统互联网产品按设计预期运行就算成功，而真正优秀的 agent 产品应该能做出连创造者都未曾预料到的事情，以惊喜和超预期来定义其价值。他还指出，在 AI 驱动的世界里，人类自身的"上下文窗口"——即我们处理和消化信息的能力——已成为新的瓶颈所在。
-
----
-
-Zarazhangrui proposes a key distinction between internet-era products and agent products: while traditional products are designed to behave exactly as intended, a truly good agent product should be able to surprise its creator by doing things they never anticipated. He also observes that the human context window — our ability to hold and process information — has become the new limiting constraint in an AI-driven world.
-
-🔗 https://x.com/zarazhangrui/status/2038144755478237654
-
-
-⑪ Nikunj Kothari · Partner @ FPV Ventures
-
-SKIP
-
----
-
-Nikunj's posts this period are personal in nature — sharing a fun ad recreation, promoting a poker event in SF, and referencing an older blog post about misaligned incentives in financial disclosure. None of the content is directly related to AI building or investing insights.
-
-🔗 https://x.com/nikunj/status/2038123479355318775
-
-
-⑫ Peter Steinberger · Builder @ OpenClaw
-
-Steipete 发布了 MCPorter 0.8.0 版本，这是一个将 MCP 转换为 CLI 的工具，本次更新改进了 OAuth 处理、JSON 输出稳定性、错误处理、对象参数支持以及守护进程可靠性。他还感慨维护成功开源项目所需的心理韧性，指出应对不友好或不了解情况的用户批评是家常便饭。
-
----
-
-Steipete released MCPorter 0.8.0, an MCP-to-CLI tool, with improvements to OAuth handling, JSON output reliability, error handling, object-valued argument support, and daemon stability. He also reflected on the emotional resilience required when maintaining successful open source projects, noting that dealing with critical or uninformed users is a constant reality.
-
-🔗 https://x.com/steipete/status/2038074759527981416
-
-
-⑬ Dan Shipper · CEO @ Every
-
-Danshipper 转发了一篇文章，暗示 AI 领域出现了重要进展——很可能涉及模型在某关键领域超越人类水平——并评论道"如果你一直在关注，这并不意外"，言下之意是这对圈内人来说早有预兆。由于链接内容不完整，无法提供更具体的摘要。
-
-Danshipper shared an article suggesting a significant development in AI — likely related to models surpassing human-level performance in a key domain — with the comment "not surprising if you're paying attention," implying this was a foreseeable milestone for those closely following the space. The lack of full link context limits a more specific summary.
-
-🔗 https://x.com/danshipper/status/2037897135543161326
+🔗 https://youtube.com/watch?v=KRv9GpJYrUA
 
 📎 Notion 存档
-https://notion.so/AI-Builders-Digest-2026-03-30-333941f989048184bd05e733b9dbfcd6
+https://notion.so/AI-Builders-Digest-2026-03-31-334941f9890481e9a748c090c00d1918
