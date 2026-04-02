@@ -1,158 +1,126 @@
-🗞 AI Builders 日报 · 2026.04.01
+🗞 AI Builders 日报 · 2026.04.02
 
 
 🐦 X / Twitter
 
-① Andrej Karpathy · AI Researcher & Educator
+① Swyx · AI Engineer & Podcaster
 
-Karpathy 警告称 npm 上最受欢迎的 HTTP 客户端库 axios（每周下载量达 3 亿次）遭到供应链攻击。他在自己的系统中发现了一个来自近期实验的恶意 import，所幸安装的版本未受影响。
-
----
-
-Karpathy flagged a supply chain attack targeting npm's axios library, which has 300 million weekly downloads. He discovered a malicious import on his own system from a recent experiment with Gmail/Google Calendar CLI tools, though his installed version was fortunately unaffected.
-
-🔗 https://x.com/karpathy/status/2038849654423798197
-
-
-② Swyx · AI Engineer & Podcaster
-
-Swyx 指出，"用 ChatGPT 登录"的功能早已通过 Codex app server 实现，相关文档已公开数月。他对大家在重要场合仍在呼吁这一功能感到惊讶，认为只要认真读文档就能找到答案。
+Swyx 注意到一个有趣的数据点：Codex 在三月份的使用量没有增长，引发了对这款 OpenAI 编程工具是否停滞不前的疑问。这一观察暗示开发者采用率或产品势头可能存在问题。
 
 ---
 
-Swyx points out that "Sign in with ChatGPT" functionality already exists via the Codex app server, which has been publicly available for months. He's surprised that people at high-profile events are still asking for this feature when the documentation is already out there.
+Swyx flagged a curious data point showing no growth in Codex usage during March, raising questions about stagnation in one of OpenAI's coding tools. The observation hints at possible concerns around developer adoption or product momentum.
 
-🔗 https://x.com/swyx/status/2038768899915915417
-
-
-③ Josh Woodward · VP @ Google Labs
-
-NotebookLM 与全球历史最悠久的科学学会英国皇家学会合作，推出了名为"富兰克林的科学"的特色笔记本。该笔记本收录了富兰克林的原始论文、信件及同时代史料，是同类产品中的首创。
-
----
-
-NotebookLM launched a new featured notebook called "The Science of Ben Franklin," created in collaboration with The Royal Society, the world's oldest continuously operating scientific academy. The notebook includes Franklin's original papers, letters, and contemporary sources.
-
-🔗 https://x.com/joshwoodward/status/2038825734278639926
+🔗 https://x.com/swyx/status/2039222156815716437
 
 
-④ Peter Yang · AI Educator & Product @ Roblox
+② Kevin Weil · VP Science @ OpenAI
 
-Petergyang 证实 Cursor AI 在中国可以正常使用，支持所有类型的模型，对中国开发者来说是个好消息。
+Kevin 指出，AI 不仅能解决越来越多的开放性数学问题，随着模型的进步，证明过程本身也变得更加优雅。这说明 AI 推理能力的提升不只是数量上的进步，更体现在质量上。
 
 ---
 
-Petergyang confirms that Cursor AI works seamlessly in China with all model types, which is useful information for developers in the region.
+Kevin highlights that AI is not only solving more open mathematical problems, but the proofs themselves are becoming more elegant as models improve. This suggests qualitative improvement in AI reasoning, not just quantitative benchmark gains.
 
-🔗 https://x.com/petergyang/status/2038761330392629479
-
-
-⑤ Cat Wu · Claude Code @ Anthropic
-
-Anthropic 旗下全线产品现已支持 GitHub Enterprise Server，涵盖网页端、iOS、Android 版 Claude Code 及 Code Review 功能。团队欢迎用户试用并提供反馈。
-
----
-
-Anthropic now supports GitHub Enterprise Server across its full product suite, including Claude Code on web, iOS, Android, and Code Review. Users are encouraged to try it out and share feedback.
-
-🔗 https://x.com/_catwu/status/2038723796178526712
+🔗 https://x.com/kevinweil/status/2039200605672284572
 
 
-⑥ Amjad Masad · CEO @ Replit
+③ Nan Yu · Head of Product @ Linear
 
-Replit 与 RevenueCat 完成集成，开发者现在可以直接对在 Replit 上构建的移动应用进行商业变现。
+Linear 的产品负责人发了两条简短但意味深长的帖子——一条重申某个早前观点依然成立，另一条暗示大家应该向 DHH 道歉，可能是指某个被证明正确的技术或行业观点。帖子细节不多，但表达了对非主流观点的认同。
 
 ---
 
-Replit has integrated RevenueCat, enabling developers to monetize mobile apps built on the platform.
+The head of product at Linear shared two brief but pointed posts — one reaffirming a prior stance as still valid, and another suggesting DHH deserves an apology, likely referencing a vindicated technical or industry opinion. The posts are light on detail but signal agreement with contrarian takes.
 
-🔗 https://x.com/amasad/status/2038722068418805875
-
-
-⑦ Guillermo Rauch · CEO @ Vercel
-
-Rauchg 表示，自 Claude Opus 4.5 发布以来，agent 已承担了 Vercel 大部分编程工作，工程模式发生了根本性转变。但他同时强调，LLM 存在固有缺陷和过度自信的问题，"氛围编程"不能用于关键基础设施，团队需严格区分两者的边界。
-
----
-
-Rauchg shares that since Claude Opus 4.5 launched, agents now handle most of Vercel's coding work, marking a significant shift in their engineering approach. However, he emphasizes a clear boundary: "vibing" is fine for experimentation, but mission-critical infrastructure requires stricter discipline given LLMs' known flaws and overconfidence.
-
-🔗 https://x.com/rauchg/status/2038759092442050651
+🔗 https://x.com/thenanyu/status/2039169970278400157
 
 
-⑧ Aaron Levie · CEO @ Box
+④ Thariq · Engineer @ Anthropic (Claude Code)
 
-Levie 认为，在 agent 时代，企业内部有魄力的人才拥有重塑工作流程的巨大机遇。他指出，真正落地 agent 自动化需要扎实的前期工作，包括整理非结构化数据、掌握新工作流，以及从根本上重新思考工作方式。
+SKIP
 
 ---
 
-Levie sees a major opportunity for entrepreneurial talent within organizations to reimagine workflows in an agent-driven world. He notes that effective agent automation requires real groundwork — structuring unstructured data, learning new workflows, and rethinking how work gets done.
+Posts appear to be casual/personal in nature, referencing an in-joke about receiving a snail and a slash command, with no substantive technical or product content.
 
-🔗 https://x.com/levie/status/2038816649927913834
-
-
-⑨ Ryo Lu · Design @ Cursor
-
-Ryolu 回忆起 2005 年前后 Mac 软件那种充满生命感的设计——弹跳的 Dock、灯神效果、Exposé——这些设计不为指标，只因有人真心在乎用户体验。他以此提醒大家：我们做这一切技术，终究是为了人，而不是让人服务于技术。
-
----
-
-Ryolu reflects on how early 2000s Mac software had a sense of soul — the bouncing dock, genie effect, Exposé — not for metrics, but because someone genuinely cared. He ties this back to a reminder that all of this technology should ultimately serve humans, not the other way around.
-
-🔗 https://x.com/ryolu_/status/2038861861047951724
+🔗 https://x.com/trq212/status/2039201699907469344
 
 
-⑩ Garry Tan · CEO @ Y Combinator
+⑤ Amjad Masad · CEO @ Replit
 
-Garrytan 更新了 GStack 上的 /review 功能。其余推文内容较简短，无实质性信息。
+SKIP
 
 ---
 
-Garrytan shipped an improvement to the /review feature on GStack. His other posts are brief reactions without substantive content.
+Posts consist of brief reactions ("Sick!" and "new psyop just dropped") linking to external content without substantive commentary, making it difficult to extract a clear insight or announcement.
 
-🔗 https://x.com/garrytan/status/2038839713491304955
-
-
-⑪ Zara Zhang · Builder & Developer
-
-Zarazhangrui 开发了 Lark CLI，让 Claude Code 和 Codex 能够访问并操作飞书的聊天、日历、会议、文档和表格，使飞书成为最适合 agent 的协作工具。他还优化了已获 2.6K GitHub star 的"Codebase-to-course"项目，提升了 token 效率和稳定性，该项目同样适用于开发者入职培训。
-
----
-
-Zarazhangrui built a Lark CLI that enables Claude Code and Codex to access and operate chats, calendars, meetings, docs, and sheets, making Lark the most agent-friendly collaboration tool available. He also optimized his "Codebase-to-course" project (2.6K GitHub stars) to be more token-efficient and reliable, noting it's useful for both vibe coders learning CS and developer onboarding.
-
-🔗 https://x.com/zarazhangrui/status/2038771778802331817
+🔗 https://x.com/amasad/status/2039214420585492863
 
 
-⑫ Nikunj Kothari · Partner @ FPV Ventures
+⑥ Aaron Levie · CEO @ Box
 
-Nikunj 回忆了 12 年前与一位创始人的初次相遇，对方对打造连接人与人的工具充满热情，令他印象深刻。他将此与另一位创业者对无限创造可能性的执着追求相提并论。
+Aaron Levie 认为，企业 AI agent 真正的瓶颈不在于能力本身，而在于安全性、合规性、治理以及监管兼容性等方面——这些领域目前普遍被忽视。他警告说，业界对自主软件 agent 的乐观情绪，可能与企业实际面临的现实约束严重脱节。
 
 ---
 
-Nikunj shares a personal reflection on meeting a founder 12 years ago who was deeply passionate about building tools that bring people together, drawing a parallel to another builder's vision of infinite creative possibilities.
+Aaron Levie argues that the real bottleneck for enterprise AI agents won't be raw capability, but rather security, compliance, governance, and regulatory compatibility — areas the industry has largely glossed over. He cautions that the current optimism around autonomous software agents may be disconnected from the practical constraints businesses actually face.
 
-🔗 https://x.com/nikunj/status/2038685323077791996
+🔗 https://x.com/levie/status/2039216522028257549
 
 
-⑬ Dan Shipper · CEO @ Every
+⑦ Garry Tan · President & CEO @ YCombinator
 
-Danshipper 批评某公司用含糊措辞掩盖一起严重的隐私漏洞——该漏洞导致用户的私人数据被泄露给同一应用的其他用户。他认为这种回避式沟通"非常非常糟糕"。
+SKIP
 
 ---
 
-Danshipper criticizes a company for using vague language to describe what was clearly a serious privacy bug — one that exposed users' private data to other users of the same app. He finds the evasive communication "really, really bad."
+Posts consist of brief reactions and image shares without substantive written commentary, offering no extractable insight or announcement.
 
-🔗 https://x.com/danshipper/status/2038688359325835436
+🔗 https://x.com/garrytan/status/2039240608435572881
 
 
-⑭ Claude · AI Assistant @ Anthropic
+⑧ Peter Steinberger · AI Builder & OpenClaw Contributor
 
-Claude Code 的 auto mode 现已向 Enterprise 计划用户及 API 用户开放。更新安装后运行 `claude --enable-auto-mode` 即可启用该功能。
+一条简短而讽刺的评论，质疑 DMCA 版权下架请求是否也在被草率或自动化处理——可能是在嘲讽 AI 生成或自动化的法律通知。
 
-Claude Code's auto mode is now available for Enterprise plan users and API users. It can be enabled by updating the install and running `claude --enable-auto-mode`.
+---
 
-🔗 https://x.com/claudeai/status/2038693742094246032
+A brief, sardonic comment questioning whether DMCA takedown requests are now being handled carelessly or automatically — possibly a jab at AI-generated or automated legal notices.
+
+🔗 https://x.com/steipete/status/2039156882041123035
+
+
+⑨ Dan Shipper · CEO @ Every
+
+Dan Shipper 推广 Every 旗下的产品"Proof"，鼓励还没尝试过的用户去体验一下。帖子本身没有提供更多技术细节。
+
+---
+
+Dan Shipper promotes "Proof," a product from Every, encouraging followers who haven't tried it yet to do so. No additional technical detail is provided in the post itself.
+
+🔗 https://x.com/danshipper/status/2039149696166318320
+
+
+⑩ Aditya Agarwal · General Partner @ South Park Commons
+
+Aditya 将 Facebook 早期"在生产环境中修复 bug"的理念，与现代"直接公开源代码"的想法相类比——认为在软件快速迭代的时代，完全开源也许没有听起来那么鲁莽。他并未给出定论，坦承这也可能是个彻底疯狂的想法。
+
+Aditya draws a parallel between early Facebook's "fix bugs in production" philosophy and the modern idea of making source code fully public — arguing that in a world of rapidly evolving software, open-sourcing everything might not be as reckless as it sounds. He leaves the question open, acknowledging it could also be completely unreasonable.
+
+🔗 https://x.com/adityaag/status/2039198010681565665
+
+
+
+🎙 Podcast
+
+Can One Person Build a Billion-Dollar Startup? — The General Intelligence Company of New York
+
+纽约通用智能公司（General Intelligence Company）的创始人 Andrew 正致力于实现他所称的"单人十亿美元公司"愿景——即一名创始人通过分层 AI 管理代理体系运营整个企业。他们的首款产品 Co-founder 已吸引逾 8,000 家初创公司用于自动化运营，但团队意识到单纯的助手工具远不足以支撑这一宏大愿景。此次活动上最令人意外的发布是全新产品 Co-founder CTO——一个完全基于云端的自主工程部门，可自动完成功能开发、浏览器 QA 测试、代码部署及基础设施管理。该产品界面灵感来自《星际争霸》《文明》等策略游戏，将代理编排呈现为实时管理画布而非传统聊天界面。公司将自身定位为"中间管理层"，优先集成 Claude Code、Browserbase 等第三方代理，而非从头重建每项能力。
+
+The General Intelligence Company of New York, founded roughly a year ago, is building toward what founder Andrew calls the "one-person billion-dollar company" — a solo operator running an entire business through a hierarchy of AI manager agents coordinating specialized vertical agents below them. Their first product, Co-founder, gained traction with over 8,000 startups using it to automate operations like email drafting and LinkedIn candidate research, but the team recognized an assistant alone couldn't realize their full vision. Their newest and most surprising reveal — debuted live at this event — is Co-founder CTO, described as the first fully autonomous engineering department in the cloud, capable of building features, running browser-based QA tests, deploying code via Vercel, and managing infrastructure without human intervention. The product's interface is notably inspired by strategy video games like Starcraft and Civilization, treating agent orchestration as a real-time management canvas rather than a chat UI. The company positions itself as a "middle management layer," deliberately integrating third-party agents like Claude Code and Browserbase rather than rebuilding every capability from scratch.
+
+🔗 https://youtube.com/watch?v=rX3CxlGm-00
 
 📎 Notion 存档
-https://notion.so/AI-Builders-Digest-2026-04-01-335941f9890481f29a92e5383a7bbb4b
+https://notion.so/AI-Builders-Digest-2026-04-02-336941f989048126becce293462a5f21
