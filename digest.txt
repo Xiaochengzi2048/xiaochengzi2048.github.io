@@ -1,126 +1,148 @@
-🗞 AI Builders 日报 · 2026.04.02
+🗞 AI Builders 日报 · 2026.04.03
 
 
 🐦 X / Twitter
 
-① Swyx · AI Engineer & Podcaster
+① Swyx · Developer Advocate & Podcaster
 
-Swyx 注意到一个有趣的数据点：Codex 在三月份的使用量没有增长，引发了对这款 OpenAI 编程工具是否停滞不前的疑问。这一观察暗示开发者采用率或产品势头可能存在问题。
-
----
-
-Swyx flagged a curious data point showing no growth in Codex usage during March, raising questions about stagnation in one of OpenAI's coding tools. The observation hints at possible concerns around developer adoption or product momentum.
-
-🔗 https://x.com/swyx/status/2039222156815716437
-
-
-② Kevin Weil · VP Science @ OpenAI
-
-Kevin 指出，AI 不仅能解决越来越多的开放性数学问题，随着模型的进步，证明过程本身也变得更加优雅。这说明 AI 推理能力的提升不只是数量上的进步，更体现在质量上。
+Swyx 引用了肯尼迪登月演讲的经典名言，以此表达对雄心壮志的推崇——正因目标艰难，才更值得追求。他还分享了几个与 AI 相关的链接，涉及他所在社区的内容。
 
 ---
 
-Kevin highlights that AI is not only solving more open mathematical problems, but the proofs themselves are becoming more elegant as models improve. This suggests qualitative improvement in AI reasoning, not just quantitative benchmark gains.
+Swyx shared a motivational quote echoing JFK's Moon speech, framing ambitious goals as worth pursuing precisely because of their difficulty. He also posted a couple of links referencing AI-related content from his affiliated communities.
 
-🔗 https://x.com/kevinweil/status/2039200605672284572
+🔗 https://x.com/swyx/status/2039597048585167265
+
+
+② Peter Yang · Product @ Roblox / AI Educator
+
+Peter 分享了一些个人生活内容，包括上海迪士尼的照片，以及对孩子沉迷短视频现象的感慨。本期没有实质性的 AI 或产品相关内容。
+
+---
+
+Peter shared personal lifestyle content, including photos from a Disneyland Shanghai trip and commentary on kids being addicted to short-form video. No substantive AI or product insights were posted.
+
+🔗 https://x.com/petergyang/status/2039563521885901091
 
 
 ③ Nan Yu · Head of Product @ Linear
 
-Linear 的产品负责人发了两条简短但意味深长的帖子——一条重申某个早前观点依然成立，另一条暗示大家应该向 DHH 道歉，可能是指某个被证明正确的技术或行业观点。帖子细节不多，但表达了对非主流观点的认同。
+Linear 产品负责人介绍了一项新功能，让产品、销售和客服团队无需麻烦工程师，就能直接查询应用的运行逻辑和默认配置。这大大减少了跨团队沟通成本，让非技术人员也能快速获取产品的真实状态。
 
 ---
 
-The head of product at Linear shared two brief but pointed posts — one reaffirming a prior stance as still valid, and another suggesting DHH deserves an apology, likely referencing a vindicated technical or industry opinion. The posts are light on detail but signal agreement with contrarian takes.
+The Head of Product at Linear highlighted a new capability that lets PMs, sales, and support teams query exact app behavior and default settings without needing to ask engineers. This reduces cross-functional bottlenecks and empowers non-technical teammates with direct access to product truth.
 
-🔗 https://x.com/thenanyu/status/2039169970278400157
-
-
-④ Thariq · Engineer @ Anthropic (Claude Code)
-
-SKIP
-
----
-
-Posts appear to be casual/personal in nature, referencing an in-joke about receiving a snail and a slash command, with no substantive technical or product content.
-
-🔗 https://x.com/trq212/status/2039201699907469344
+🔗 https://x.com/thenanyu/status/2039530536050274648
 
 
-⑤ Amjad Masad · CEO @ Replit
+④ Cat Wu · Claude Code @ Anthropic
 
-SKIP
+Anthropic Claude Code 团队成员宣布，Claude Code 现已登陆 iOS 和 Android 版 Claude 移动应用，用户可以随时随地启动想法和任务。会话可以无缝切换到桌面本地 CLI，实现流畅的移动端到电脑端工作流。
 
 ---
 
-Posts consist of brief reactions ("Sick!" and "new psyop just dropped") linking to external content without substantive commentary, making it difficult to extract a clear insight or announcement.
+A Claude Code team member at Anthropic announced that Claude Code is now available on the Claude mobile app for iOS and Android, allowing users to brainstorm and fire off ideas on the go. Sessions can be seamlessly transferred to a local CLI on the desktop, enabling a fluid mobile-to-laptop workflow.
 
-🔗 https://x.com/amasad/status/2039214420585492863
-
-
-⑥ Aaron Levie · CEO @ Box
-
-Aaron Levie 认为，企业 AI agent 真正的瓶颈不在于能力本身，而在于安全性、合规性、治理以及监管兼容性等方面——这些领域目前普遍被忽视。他警告说，业界对自主软件 agent 的乐观情绪，可能与企业实际面临的现实约束严重脱节。
-
----
-
-Aaron Levie argues that the real bottleneck for enterprise AI agents won't be raw capability, but rather security, compliance, governance, and regulatory compatibility — areas the industry has largely glossed over. He cautions that the current optimism around autonomous software agents may be disconnected from the practical constraints businesses actually face.
-
-🔗 https://x.com/levie/status/2039216522028257549
+🔗 https://x.com/_catwu/status/2039421527935033854
 
 
-⑦ Garry Tan · President & CEO @ YCombinator
+⑤ Thariq · Claude Code @ Anthropic
 
-SKIP
+Anthropic Claude Code 团队宣布对渲染器进行实验性重写，采用虚拟视窗技术，新增鼠标支持、底部固定输入框，并带来多项 UX 优化。团队特别强调这不是愚人节玩笑，并欢迎用户反馈。
 
 ---
 
-Posts consist of brief reactions and image shares without substantive written commentary, offering no extractable insight or announcement.
+The Claude Code team at Anthropic announced an experimental rewrite of the Claude Code renderer using a virtual viewport, bringing mouse support, a pinned bottom prompt input, and numerous UX improvements. The team clarified this was not an April Fools joke and invited user feedback on the new experience.
 
-🔗 https://x.com/garrytan/status/2039240608435572881
-
-
-⑧ Peter Steinberger · AI Builder & OpenClaw Contributor
-
-一条简短而讽刺的评论，质疑 DMCA 版权下架请求是否也在被草率或自动化处理——可能是在嘲讽 AI 生成或自动化的法律通知。
-
----
-
-A brief, sardonic comment questioning whether DMCA takedown requests are now being handled carelessly or automatically — possibly a jab at AI-generated or automated legal notices.
-
-🔗 https://x.com/steipete/status/2039156882041123035
+🔗 https://x.com/trq212/status/2039453692592873587
 
 
-⑨ Dan Shipper · CEO @ Every
+⑥ Amjad Masad · CEO @ Replit
 
-Dan Shipper 推广 Every 旗下的产品"Proof"，鼓励还没尝试过的用户去体验一下。帖子本身没有提供更多技术细节。
+Replit CEO 宣布 Agent 4 已将 Replit 打造成类操作系统的平台，用户可以通过"技能"对平台进行无限定制扩展。他还提到，当前时代正处于前所未有的财富快速创造阶段。
 
 ---
 
-Dan Shipper promotes "Proof," a product from Every, encouraging followers who haven't tried it yet to do so. No additional technical detail is provided in the post itself.
+Replit's CEO announced that Agent 4 has transformed Replit into an OS-like platform, enabling endless customization through "skills." He also noted that the current era represents unprecedented rapid wealth creation.
 
-🔗 https://x.com/danshipper/status/2039149696166318320
+🔗 https://x.com/amasad/status/2039552681493336250
 
 
-⑩ Aditya Agarwal · General Partner @ South Park Commons
+⑦ Guillermo Rauch · CEO @ Vercel
 
-Aditya 将 Facebook 早期"在生产环境中修复 bug"的理念，与现代"直接公开源代码"的想法相类比——认为在软件快速迭代的时代，完全开源也许没有听起来那么鲁莽。他并未给出定论，坦承这也可能是个彻底疯狂的想法。
+Vercel CEO 透露，平台注册用户月环比增速已达 52%，较此前的 23% 和 17% 持续加速。这表明 Vercel 正在经历强劲且不断提速的用户增长。
 
-Aditya draws a parallel between early Facebook's "fix bugs in production" philosophy and the modern idea of making source code fully public — arguing that in a world of rapidly evolving software, open-sourcing everything might not be as reckless as it sounds. He leaves the question open, acknowledging it could also be completely unreasonable.
+---
 
-🔗 https://x.com/adityaag/status/2039198010681565665
+Vercel's CEO shared that signups are growing at 52% month-over-month, accelerating from 23% and then 17% in prior periods. This signals strong and rapidly increasing adoption of the Vercel platform.
+
+🔗 https://x.com/rauchg/status/2039493013043626427
+
+
+⑧ Aaron Levie · CEO @ Box
+
+Box CEO 趁愚人节提前预告了一项即将发布的重磅消息，并调侃团队可能会为此不满。目前尚未透露具体内容，但表示"即将到来"。
+
+---
+
+Box's CEO teased an upcoming announcement on April 1st, hinting at something significant coming "very soon" despite joking his team would disapprove of the early reveal. No further details were shared about what the announcement entails.
+
+🔗 https://x.com/levie/status/2039414479084278239
+
+
+⑨ Garry Tan · President & CEO @ YCombinator
+
+YC 总裁公开表态，认为本地 AI 模型的发展对整个生态系统非常有益。他还分享了几个链接，其中一个似乎与愚人节相关。
+
+---
+
+YC's President endorsed local AI models as a very positive development for the ecosystem. He also shared a couple of links, one appearing to reference an April Fools moment.
+
+🔗 https://x.com/garrytan/status/2039573921956327489
+
+
+⑩ Zara Zhang · Builder @ OpenClaw
+
+这位开发者分享了一个新思路：用 OpenClaw 替代传统待办清单——只需把任务发给 agent，它不仅会记录，还会自动执行并每天早上汇报进展。他还推出了"关注 Builder"技能，精心筛选了 25 个顶级 AI 从业者账号和播客，帮助用户跟上 AI 领域的最新动态。
+
+---
+
+The builder shared an insight about replacing traditional to-do lists with OpenClaw — by simply messaging tasks to the agent, it not only logs them but autonomously executes them and sends a morning progress report. They also introduced a "Follow Builders" skill that curates 25 top AI builder accounts and podcasts for staying current in the AI space.
+
+🔗 https://x.com/zarazhangrui/status/2039599038358814961
+
+
+⑪ Peter Steinberger · Developer / Advisor @ OpenClaw
+
+Steipete 表示，编程 agent 中的"计划模式"对有经验的用户来说并非必要，认为它主要是为习惯 Claude 工作流的用户所设计的过渡功能。他建议直接与 agent 自然对话即可。
+
+---
+
+Steipete shared an opinion that "plan mode" in coding agents is unnecessary for experienced users, suggesting it was primarily added for those transitioning from Claude-style workflows. He advocates for simply conversing naturally with your agent instead.
+
+🔗 https://x.com/steipete/status/2039551079621566812
+
+
+⑫ Dan Shipper · CEO @ Every
+
+Every CEO 指出，SaaS 并未消亡，但必须进化为 agent 原生形态，并以 Linear 为例——这款工具成功转型，同时服务人类用户和 AI agent。他还邀请 Linear 联合创始人兼 CEO 上播客，深入探讨了这一转变。
+
+Every's CEO argued that SaaS isn't dead but must evolve to become agent-native, citing Linear as a prime example of a tool that successfully pivoted to serve both humans and AI agents. He featured Linear's cofounder and CEO on his podcast to discuss this transition.
+
+🔗 https://x.com/danshipper/status/2039357945310277717
 
 
 
 🎙 Podcast
 
-Can One Person Build a Billion-Dollar Startup? — The General Intelligence Company of New York
+Mistral: Voxtral TTS, Forge, Leanstral, & Mistral 4 — w/ Pavan Kumar Reddy & Guillaume Lample
 
-纽约通用智能公司（General Intelligence Company）的创始人 Andrew 正致力于实现他所称的"单人十亿美元公司"愿景——即一名创始人通过分层 AI 管理代理体系运营整个企业。他们的首款产品 Co-founder 已吸引逾 8,000 家初创公司用于自动化运营，但团队意识到单纯的助手工具远不足以支撑这一宏大愿景。此次活动上最令人意外的发布是全新产品 Co-founder CTO——一个完全基于云端的自主工程部门，可自动完成功能开发、浏览器 QA 测试、代码部署及基础设施管理。该产品界面灵感来自《星际争霸》《文明》等策略游戏，将代理编排呈现为实时管理画布而非传统聊天界面。公司将自身定位为"中间管理层"，优先集成 Claude Code、Browserbase 等第三方代理，而非从头重建每项能力。
+Mistral发布了Voxtral TTS——一个支持九种语言的30亿参数文本转语音模型，以远低于竞争对手的成本实现了业界领先的性能，底层基于其Ministral基础模型。最令人惊喜的是，该模型采用了一种全新的自研自回归流匹配架构，结合以12.5Hz潜在令牌运行的神经音频编解码器，摒弃了常见的离散深度Transformer方案，转而使用连续潜在表示以获得更高音质。该编解码器被独特地训练为同时支持离散和连续模式，通过流匹配头将带噪潜在向量去噪为80毫秒音频帧，而非自回归地预测离散令牌序列。首席科学家Guillaume Lample与音频研究负责人Pavan Kumar Reddy还探讨了Mistral更广泛的音频路线图，指出拥有数十年专有领域数据的企业客户在使用闭源模型时无法利用这些数据，而Mistral通过开放权重发布正是要弥补这一差距。
 
-The General Intelligence Company of New York, founded roughly a year ago, is building toward what founder Andrew calls the "one-person billion-dollar company" — a solo operator running an entire business through a hierarchy of AI manager agents coordinating specialized vertical agents below them. Their first product, Co-founder, gained traction with over 8,000 startups using it to automate operations like email drafting and LinkedIn candidate research, but the team recognized an assistant alone couldn't realize their full vision. Their newest and most surprising reveal — debuted live at this event — is Co-founder CTO, described as the first fully autonomous engineering department in the cloud, capable of building features, running browser-based QA tests, deploying code via Vercel, and managing infrastructure without human intervention. The product's interface is notably inspired by strategy video games like Starcraft and Civilization, treating agent orchestration as a real-time management canvas rather than a chat UI. The company positions itself as a "middle management layer," deliberately integrating third-party agents like Claude Code and Browserbase rather than rebuilding every capability from scratch.
+Mistral has released Voxtral TTS, a 3B text-to-speech model supporting nine languages that achieves state-of-the-art performance at a fraction of competitors' costs, built atop their Ministral base model. Most surprisingly, the model introduces a novel in-house autoregressive flow-matching architecture combined with a neural audio codec that operates at 12.5Hz latent tokens — eschewing the common discrete depth-transformer approach in favor of continuous latent representations that produce higher audio quality. The codec is uniquely trained to be both discrete and continuous, with a flow-matching head that denoises latents into 80ms audio frames rather than predicting discrete token sequences autoregressively. Chief Scientist Guillaume Lample and audio research lead Pavan Kumar Reddy also discussed Mistral's broader audio roadmap, noting that enterprise customers sitting on decades of proprietary domain data are significantly underserved by closed-source models that cannot access that data — a gap Mistral explicitly aims to fill with open-weight releases.
 
-🔗 https://youtube.com/watch?v=rX3CxlGm-00
+🔗 https://youtube.com/watch?v=SUjA25ijcNs
 
 📎 Notion 存档
-https://notion.so/AI-Builders-Digest-2026-04-02-336941f989048126becce293462a5f21
+https://notion.so/AI-Builders-Digest-2026-04-03-337941f989048117af60e9d6758f9219
