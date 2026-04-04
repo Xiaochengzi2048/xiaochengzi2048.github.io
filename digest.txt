@@ -1,148 +1,137 @@
-🗞 AI Builders 日报 · 2026.04.03
+🗞 AI Builders 日报 · 2026.04.04
 
 
 🐦 X / Twitter
 
-① Swyx · Developer Advocate & Podcaster
+① Andrej Karpathy · AI Researcher & Educator
 
-Swyx 引用了肯尼迪登月演讲的经典名言，以此表达对雄心壮志的推崇——正因目标艰难，才更值得追求。他还分享了几个与 AI 相关的链接，涉及他所在社区的内容。
-
----
-
-Swyx shared a motivational quote echoing JFK's Moon speech, framing ambitious goals as worth pursuing precisely because of their difficulty. He also posted a couple of links referencing AI-related content from his affiliated communities.
-
-🔗 https://x.com/swyx/status/2039597048585167265
-
-
-② Peter Yang · Product @ Roblox / AI Educator
-
-Peter 分享了一些个人生活内容，包括上海迪士尼的照片，以及对孩子沉迷短视频现象的感慨。本期没有实质性的 AI 或产品相关内容。
+Karpathy 正在探索 LLM 的新用途：用它来构建个人知识库，让 LLM 不只是处理代码，而是迭代地整理和存储结构化知识。他进一步设想，未来向前沿 LLM 提一个问题，就能自动召唤一组 LLM 协作，生成一个临时 wiki、进行校验，最终输出完整报告。
 
 ---
 
-Peter shared personal lifestyle content, including photos from a Disneyland Shanghai trip and commentary on kids being addicted to short-form video. No substantive AI or product insights were posted.
+Karpathy is exploring a new use case for LLMs: building personal knowledge bases on research topics, where LLMs iteratively construct and refine structured knowledge rather than just manipulating code. He envisions a natural extension where a single query to a frontier LLM spawns an entire team of LLMs that builds an ephemeral wiki, lints it, and produces a full report — far beyond simple text decoding.
 
-🔗 https://x.com/petergyang/status/2039563521885901091
-
-
-③ Nan Yu · Head of Product @ Linear
-
-Linear 产品负责人介绍了一项新功能，让产品、销售和客服团队无需麻烦工程师，就能直接查询应用的运行逻辑和默认配置。这大大减少了跨团队沟通成本，让非技术人员也能快速获取产品的真实状态。
-
----
-
-The Head of Product at Linear highlighted a new capability that lets PMs, sales, and support teams query exact app behavior and default settings without needing to ask engineers. This reduces cross-functional bottlenecks and empowers non-technical teammates with direct access to product truth.
-
-🔗 https://x.com/thenanyu/status/2039530536050274648
+🔗 https://x.com/karpathy/status/2039808711452246261
 
 
-④ Cat Wu · Claude Code @ Anthropic
+② Swyx · Developer & Podcast Host
 
-Anthropic Claude Code 团队成员宣布，Claude Code 现已登陆 iOS 和 Android 版 Claude 移动应用，用户可以随时随地启动想法和任务。会话可以无缝切换到桌面本地 CLI，实现流畅的移动端到电脑端工作流。
+SKIP
 
 ---
 
-A Claude Code team member at Anthropic announced that Claude Code is now available on the Claude mobile app for iOS and Android, allowing users to brainstorm and fire off ideas on the go. Sessions can be seamlessly transferred to a local CLI on the desktop, enabling a fluid mobile-to-laptop workflow.
+Swyx's posts this round are mostly links and brief reactions — commenting on TBPN selling podcasts and sharing some content without substantive technical insight.
 
-🔗 https://x.com/_catwu/status/2039421527935033854
-
-
-⑤ Thariq · Claude Code @ Anthropic
-
-Anthropic Claude Code 团队宣布对渲染器进行实验性重写，采用虚拟视窗技术，新增鼠标支持、底部固定输入框，并带来多项 UX 优化。团队特别强调这不是愚人节玩笑，并欢迎用户反馈。
-
----
-
-The Claude Code team at Anthropic announced an experimental rewrite of the Claude Code renderer using a virtual viewport, bringing mouse support, a pinned bottom prompt input, and numerous UX improvements. The team clarified this was not an April Fools joke and invited user feedback on the new experience.
-
-🔗 https://x.com/trq212/status/2039453692592873587
+🔗 https://x.com/swyx/status/2039938271871144148
 
 
-⑥ Amjad Masad · CEO @ Replit
+③ Peter Yang · Product @ Roblox, AI Educator
 
-Replit CEO 宣布 Agent 4 已将 Replit 打造成类操作系统的平台，用户可以通过"技能"对平台进行无限定制扩展。他还提到，当前时代正处于前所未有的财富快速创造阶段。
+Petergyang 简短体验了 Cursor 3，认为新界面比之前按钮繁杂的旧版本好用很多，并建议这种简洁的 agent 对话界面应该直接作为默认视图，而不是需要快捷键才能调出。
 
 ---
 
-Replit's CEO announced that Agent 4 has transformed Replit into an OS-like platform, enabling endless customization through "skills." He also noted that the current era represents unprecedented rapid wealth creation.
+Petergyang shared practical tips for visiting Disneyland and briefly reviewed Cursor 3, noting its new interface is a major improvement over the previous cluttered design, suggesting the streamlined agent-focused view should be the default experience.
 
-🔗 https://x.com/amasad/status/2039552681493336250
-
-
-⑦ Guillermo Rauch · CEO @ Vercel
-
-Vercel CEO 透露，平台注册用户月环比增速已达 52%，较此前的 23% 和 17% 持续加速。这表明 Vercel 正在经历强劲且不断提速的用户增长。
-
----
-
-Vercel's CEO shared that signups are growing at 52% month-over-month, accelerating from 23% and then 17% in prior periods. This signals strong and rapidly increasing adoption of the Vercel platform.
-
-🔗 https://x.com/rauchg/status/2039493013043626427
+🔗 https://x.com/petergyang/status/2039898958814974021
 
 
-⑧ Aaron Levie · CEO @ Box
+④ Amjad Masad · CEO @ Replit
 
-Box CEO 趁愚人节提前预告了一项即将发布的重磅消息，并调侃团队可能会为此不满。目前尚未透露具体内容，但表示"即将到来"。
+Replit 正在多线扩张：在盐湖城开设销售办公室，同时推出企业级身份验证和 SEO 审计工具，显示出向企业市场进军的明确意图。
 
 ---
 
-Box's CEO teased an upcoming announcement on April 1st, hinting at something significant coming "very soon" despite joking his team would disapprove of the early reveal. No further details were shared about what the announcement entails.
+Replit is expanding on multiple fronts: opening a sales office in Salt Lake City and launching new enterprise-grade auth and SEO audit tools, signaling a push toward broader enterprise adoption.
 
-🔗 https://x.com/levie/status/2039414479084278239
-
-
-⑨ Garry Tan · President & CEO @ YCombinator
-
-YC 总裁公开表态，认为本地 AI 模型的发展对整个生态系统非常有益。他还分享了几个链接，其中一个似乎与愚人节相关。
-
----
-
-YC's President endorsed local AI models as a very positive development for the ecosystem. He also shared a couple of links, one appearing to reference an April Fools moment.
-
-🔗 https://x.com/garrytan/status/2039573921956327489
+🔗 https://x.com/amasad/status/2039838798671126728
 
 
-⑩ Zara Zhang · Builder @ OpenClaw
+⑤ Aaron Levie · CEO @ Box
 
-这位开发者分享了一个新思路：用 OpenClaw 替代传统待办清单——只需把任务发给 agent，它不仅会记录，还会自动执行并每天早上汇报进展。他还推出了"关注 Builder"技能，精心筛选了 25 个顶级 AI 从业者账号和播客，帮助用户跟上 AI 领域的最新动态。
+Levie 分享了构建 AI agent 的核心心得：必须对架构保持"无情的理性"——随着模型能力不断提升，那些曾经必要的脚手架代码很快就会变成累赘，必须果断丢弃才能充分发挥新模型的性能。
 
 ---
 
-The builder shared an insight about replacing traditional to-do lists with OpenClaw — by simply messaging tasks to the agent, it not only logs them but autonomously executes them and sends a morning progress report. They also introduced a "Follow Builders" skill that curates 25 top AI builder accounts and podcasts for staying current in the AI space.
+Levie shares a key lesson from building AI agents: you must be ruthlessly unsentimental about your architecture, because as models improve, previously necessary scaffolding becomes dead weight and must be discarded to unlock new performance gains.
 
-🔗 https://x.com/zarazhangrui/status/2039599038358814961
+🔗 https://x.com/levie/status/2039931799414194621
 
 
-⑪ Peter Steinberger · Developer / Advisor @ OpenClaw
+⑥ Ryo Lu · Design @ Cursor
 
-Steipete 表示，编程 agent 中的"计划模式"对有经验的用户来说并非必要，认为它主要是为习惯 Claude 工作流的用户所设计的过渡功能。他建议直接与 agent 自然对话即可。
+Ryolu 发布了 Cursor 3，并将其定位为对"黑箱"模式的彻底突破——无论是传统终端还是现有 AI 工具都让用户感到不透明，而 Cursor 3 的设计理念是让一切可见、可控，界面从简入繁，帮助用户保持专注。
 
 ---
 
-Steipete shared an opinion that "plan mode" in coding agents is unnecessary for experienced users, suggesting it was primarily added for those transitioning from Claude-style workflows. He advocates for simply conversing naturally with your agent instead.
+Ryolu announced Cursor 3, framing it as a shift from the "black box" paradigm of both traditional terminals and current AI tools — Cursor 3 is designed to be fully transparent and controllable, starting simple and progressively revealing more tools to keep users in flow.
 
-🔗 https://x.com/steipete/status/2039551079621566812
+🔗 https://x.com/ryolu_/status/2039895634313187619
 
 
-⑫ Dan Shipper · CEO @ Every
+⑦ Garry Tan · President & CEO @ YCombinator
 
-Every CEO 指出，SaaS 并未消亡，但必须进化为 agent 原生形态，并以 Linear 为例——这款工具成功转型，同时服务人类用户和 AI agent。他还邀请 Linear 联合创始人兼 CEO 上播客，深入探讨了这一转变。
+Garrytan 简短地称赞了 Perplexity Computer，认为它相当出色，并分享了一句关于热爱工作的感悟。
 
-Every's CEO argued that SaaS isn't dead but must evolve to become agent-native, citing Linear as a prime example of a tool that successfully pivoted to serve both humans and AI agents. He featured Linear's cofounder and CEO on his podcast to discuss this transition.
+---
 
-🔗 https://x.com/danshipper/status/2039357945310277717
+Garrytan briefly highlights Perplexity Computer as genuinely impressive, and shares a motivational note about loving your work.
+
+🔗 https://x.com/garrytan/status/2039948180977316164
+
+
+⑧ Peter Steinberger · AI Developer & Open Source
+
+Steipete 指出一个令人担忧的趋势：Linux 内核安全邮件列表收到的 AI 生成垃圾报告已从每周 2-3 条激增至 10 条以上，他预测这股"AI 刷量"浪潮将开始压垮开源项目的维护者，最终导致部分项目难以为继。
+
+---
+
+Steipete raises a serious concern: AI-generated "slop" submissions to the Linux kernel security list have surged from 2–3 per week to 10+ per week, and he predicts this trend will start killing some open source projects by drowning maintainers in low-quality AI-generated reports.
+
+🔗 https://x.com/steipete/status/2039948914112209390
+
+
+⑨ Dan Shipper · CEO @ Every
+
+Danshipper 透露 Every 已经内测 Cursor 3.0 一周，并发布了完整的评测报告。他同时对产品界面图标逐步完善感到兴奋，展现出团队积极的开发状态。
+
+---
+
+Danshipper shares that Every has been testing Cursor 3.0 for a week and published a full review. He also expresses excitement about ongoing product progress with icons filling in, signaling active development momentum.
+
+🔗 https://x.com/danshipper/status/2039876581015933226
+
+
+⑩ Sam Altman · CEO @ OpenAI
+
+Sam Altman 公开表态支持 TBPN，称其为他最喜欢的科技节目，并幽默地承认自己偶尔会"配合"他们——用自己的失误给他们提供素材。
+
+---
+
+Sam Altman publicly endorses TBPN as his favorite tech show, expressing support for their independent editorial voice and humorously acknowledging he'll occasionally give them material to work with through his own missteps.
+
+🔗 https://x.com/sama/status/2039773740586918137
+
+
+⑪ Claude · AI Assistant @ Anthropic
+
+Claude 宣布，Claude Cowork 和 Claude Code Desktop 的电脑操控功能（computer use）现已支持 Windows 平台，进一步扩大了其 agent 能力的覆盖范围。
+
+Claude announces that computer use functionality in Claude Cowork and Claude Code Desktop is now available on Windows, expanding platform support for its agentic capabilities.
+
+🔗 https://x.com/claudeai/status/2039836891508261106
 
 
 
 🎙 Podcast
 
-Mistral: Voxtral TTS, Forge, Leanstral, & Mistral 4 — w/ Pavan Kumar Reddy & Guillaume Lample
+How Autonomous Labs Will Transform Scientific Research: Ginkgo Bioworks’ Jason Kelly
 
-Mistral发布了Voxtral TTS——一个支持九种语言的30亿参数文本转语音模型，以远低于竞争对手的成本实现了业界领先的性能，底层基于其Ministral基础模型。最令人惊喜的是，该模型采用了一种全新的自研自回归流匹配架构，结合以12.5Hz潜在令牌运行的神经音频编解码器，摒弃了常见的离散深度Transformer方案，转而使用连续潜在表示以获得更高音质。该编解码器被独特地训练为同时支持离散和连续模式，通过流匹配头将带噪潜在向量去噪为80毫秒音频帧，而非自回归地预测离散令牌序列。首席科学家Guillaume Lample与音频研究负责人Pavan Kumar Reddy还探讨了Mistral更广泛的音频路线图，指出拥有数十年专有领域数据的企业客户在使用闭源模型时无法利用这些数据，而Mistral通过开放权重发布正是要弥补这一差距。
+Ginkgo Bioworks创始人兼CEO杰森·凯利表示，AI是三十年来首个真正从根本上变革生物技术的技术革命——不同于互联网或社交媒体，他将后者对生物技术的影响斥为"后台IT杂务"。公司创立于2008年，艰难自力更生六年后，经山姆·奥特曼牵线加入YC才获得资本支持。Ginkgo早期以"生物铸造厂"为核心产品，致力于将DNA编辑的编译调试周期自动化、规模化。凯利透露了一项重要战略转型：面对Chai Bio、Arc Institute等机构在AI生物设计领域的激烈竞争，Ginkgo已将重心完全转向降低实验室实验的时间与成本，并通过与OpenAI合作探索AI自主驱动实验室流程的可能性——而这一方向在传统生命科学工具企业中仍几乎无人涉足。
 
-Mistral has released Voxtral TTS, a 3B text-to-speech model supporting nine languages that achieves state-of-the-art performance at a fraction of competitors' costs, built atop their Ministral base model. Most surprisingly, the model introduces a novel in-house autoregressive flow-matching architecture combined with a neural audio codec that operates at 12.5Hz latent tokens — eschewing the common discrete depth-transformer approach in favor of continuous latent representations that produce higher audio quality. The codec is uniquely trained to be both discrete and continuous, with a flow-matching head that denoises latents into 80ms audio frames rather than predicting discrete token sequences autoregressively. Chief Scientist Guillaume Lample and audio research lead Pavan Kumar Reddy also discussed Mistral's broader audio roadmap, noting that enterprise customers sitting on decades of proprietary domain data are significantly underserved by closed-source models that cannot access that data — a gap Mistral explicitly aims to fill with open-weight releases.
+Ginkgo Bioworks CEO Jason Kelly argues that AI represents the first technology revolution in 30 years to fundamentally transform biotechnology — unlike the internet or social media, which he dismisses as "back office IT crap" for the industry. Founded in 2008 and bootstrapped for six years before a pivotal YC introduction via Sam Altman, Ginkgo pioneered the concept of "biological foundries" — centralized, automated labs that compress the compile-debug cycle of DNA engineering. Kelly reveals a significant strategic pivot: Ginkgo has stepped back from AI-driven biological design (now crowded with players like Chai Bio and Arc Institute's EVO2) to focus exclusively on making physical lab experimentation faster and cheaper. The company is exploring how AI agents — including through a collaboration with OpenAI — can autonomously operate laboratory workflows, a space Kelly believes remains largely unaddressed by traditional life science tools vendors who lack Silicon Valley's disruptive mindset.
 
-🔗 https://youtube.com/watch?v=SUjA25ijcNs
+🔗 https://www.youtube.com/playlist?list=PLOhHNjZItNnMm5tdW61JpnyxeYH5NDDx8
 
 📎 Notion 存档
-https://notion.so/AI-Builders-Digest-2026-04-03-337941f989048117af60e9d6758f9219
+https://notion.so/AI-Builders-Digest-2026-04-04-338941f9890481ecaf0dce3ea9a890cc
