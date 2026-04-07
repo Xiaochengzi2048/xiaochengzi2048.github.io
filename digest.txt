@@ -1,62 +1,137 @@
-🗞 AI Builders 日报 · 2026.04.06
+🗞 AI Builders 日报 · 2026.04.07
 
 
 🐦 X / Twitter
 
 ① Andrej Karpathy · AI Researcher & Educator
 
-Karpathy 推荐了"Farzapedia"作为基于 LLM 的个人记忆的优秀案例，认为这种显式、可导航的记忆方式优于主流 AI 的模糊个性化路径。他还提出，AI 正在赋能公民监督政府，使政府行为更加透明可问责，这与历史上由政府主导社会透明化的逻辑恰好相反。此外，他推广了"idea file"的概念——在 LLM agent 时代，分享想法本身就已足够，无需附上具体代码。
+Karpathy 注意到 GitHub Gist 上的评论质量明显更高，更有建设性，远比其他平台上的讨论更有价值。他认为这可能与社区氛围、Markdown 格式或缺乏刷流量的动机有关，并打趣说 GitHub 或许可以和 X 竞争。
 
 ---
 
-Karpathy highlighted "Farzapedia" as a strong example of explicit, navigable personal memory built on LLMs, contrasting it with opaque AI personalization approaches. He also shared thoughts on AI enabling citizens to hold governments accountable by making governance more legible — a reversal of the historical norm. Additionally, he reflected on a viral tweet, promoting the concept of an "idea file" where sharing ideas (rather than code) is sufficient in the LLM agent era.
+Karpathy observed that GitHub Gist comments are notably higher quality — more helpful, insightful, and constructive — compared to other platforms, and speculates this may be due to the community, markdown format, or lack of engagement incentives. He's now motivated to post more on Gists and playfully suggests GitHub could compete with X as a discussion platform.
 
-🔗 https://x.com/karpathy/status/2040572272944324650
-
-
-② Aaron Levie · CEO @ Box
-
-Levie 指出，即便是最先进的 AI 模型在实际应用中也难以满足需求，因为每位用户都有独特的工作流程和领域知识，模型无法预先掌握这一切。他还表示，随着模型在工具调用上的能力提升以及 context window 的扩大和稳定，agent 的设计可以更接近人类的实际工作方式，不再需要为弥补模型缺陷而采用各种奇怪的变通方案。
-
----
-
-Levie observed that even the most advanced AI models fall short in practice because every user has unique workflows and domain knowledge that models can't pre-load. He also noted that as models improve at tool use and context windows grow more reliable, agent architecture can now mirror how humans actually work, eliminating the awkward hacks previously needed to compensate for model limitations.
-
-🔗 https://x.com/levie/status/2040650799550722243
+🔗 https://x.com/karpathy/status/2040806346556428585
 
 
-③ Garry Tan · President & CEO @ YCombinator
+② Peter Yang · AI Educator & Product @ Roblox
 
-Garry 分享了 GStack 的最新进展，包括推进"L8 software factory"计划中更智能的自适应代码审查功能，以及合并了 14 个安全漏洞修复，其中一半来自社区贡献。他还号召大家加入其社区行动，共同抵制一项本地政策议题。
+Petergyang 探讨了开源与闭源之争，指出两者可以同时获胜，就像 Android 与 iOS 并存一样。他还引用了 OpenAI Codex 产品负责人的观点：OpenAI 刻意避免中期规划，只专注于八周内的近期目标和长远愿景，因为中间地带太难把握。
 
 ---
 
-Garry shared updates on GStack, including adaptive and smarter code reviews as part of his "L8 software factory" initiative, along with 14 security bug fixes — half contributed by the community. He also promoted a civic effort to fight a local policy issue via his community list.
+Petergyang raises the open source vs. proprietary debate, noting that both can coexist as winners (e.g., Android vs. iOS). He also shares a quote from OpenAI's Codex product lead explaining that OpenAI deliberately avoids medium-term planning, focusing only on near-term (up to 8 weeks) and long-term horizons because the middle ground is too unpredictable.
 
-🔗 https://x.com/garrytan/status/2040667535490863254
+🔗 https://x.com/petergyang/status/2040954866567364758
 
 
-④ Zara Zhang · Builder & Developer
+③ Amjad Masad · CEO @ Replit
 
-分享了一个简洁的提示词技巧：在给模型下达任务后，追问"你有什么问题吗？"，通过让模型主动澄清歧义来提升输出质量。
+Amasad 展示了一个有趣的项目：利用新版 X API 与 Replit 结合，构建了一个 NASA Artemis II 任务的可视化页面，并接入了 X 的实时动态和数据统计。他还向大家送上了复活节祝福。
 
 ---
 
-Shared a concise prompting tip — asking the model "Do you have any questions?" — as a simple technique to surface ambiguities and improve output quality.
+Amasad highlights a fun demo built using the new X API combined with Replit — a NASA Artemis II mission visualization featuring a live X feed and real-time stats. He also wished followers a Happy Easter.
 
-🔗 https://x.com/zarazhangrui/status/2040565939100676382
+🔗 https://x.com/amasad/status/2040918650245578906
+
+
+④ Guillermo Rauch · CEO @ Vercel
+
+Rauchg 分享了 Vercel 如何借助 X 平台持续收集用户反馈，并将其转化为产品迭代的驱动力。他还展示了一个用 v0 构建的月球旗帜物理模拟，AI 一次生成了初始版本，随后经过不断优化完善。
+
+---
+
+Rauchg shared how Vercel uses X to gather continuous user feedback, crediting it as a key driver of product velocity. He also showcased a physics-based flag simulation on the moon built with v0, describing how the AI one-shotted an initial version that was then iteratively improved.
+
+🔗 https://x.com/rauchg/status/2040879055990632715
+
+
+⑤ Aaron Levie · CEO @ Box
+
+Levie 认为 AI agent 更多时候会催生对技能的新需求，而非消灭工作岗位。以软件开发为例，写代码变得更容易，反而会让代码被应用到更多领域，而不是减少开发者的需求。他对 AI 将大规模取代工人的主流叙事提出了质疑。
+
+---
+
+Levie argues that AI agents will more often create new demand for skills rather than eliminate jobs, using software development as an example — making it easier to write code will lead to code being applied in more areas, not fewer developers. He pushes back on the prevailing narrative that AI will simply replace workers at scale.
+
+🔗 https://x.com/levie/status/2040967947275948357
+
+
+⑥ Garry Tan · President & CEO @ YCombinator
+
+Garrytan 发布了几条简短内容，为开源的黄金时代欢呼，呼吁自动驾驶汽车合法化，并转发了一条引发共鸣的观点。内容较为简短，整体体现了他对技术发展和放松监管的乐观态度。
+
+---
+
+Garrytan made several brief posts celebrating open source, advocating for legalizing self-driving cars, and sharing a relatable observation. The posts are light on detail but reflect his general optimism about technology and deregulation.
+
+🔗 https://x.com/garrytan/status/2040981159233134793
+
+
+⑦ Zara Zhang · Builder & Developer
+
+Zarazhangrui 分享了两个见解：一是在 AI 摘要泛滥的时代，逐字阅读长篇原文仍然具有独特价值；二是一个实用的 prompt 技巧——在编写 AGENTS.md 时，让 agent 主动向用户介绍产品功能，从而把 agent 变成一个产品推广者。
+
+---
+
+Zarazhangrui shared two insights: first, that in an age of AI-generated summaries, there is still deep value in reading long-form content word by word. Second, a practical prompt engineering tip — when building agents, include instructions in AGENTS.md to have the agent introduce product features to users, effectively turning the agent into a marketer.
+
+🔗 https://x.com/zarazhangrui/status/2041031588000252279
+
+
+⑧ Nikunj Kothari · Partner @ FPV Ventures
+
+Nikunj 分享了一段美好的个人时光——家人从印度来访，与一支令他振奋的团队签署了投资意向书，还难得地放下 AI 休息了四天。他也简短描述了自己目前的 AI 辅助开发流程，结合 Claude Code 和 Codex 来评估和实现新功能。
+
+---
+
+Nikunj shared a personal life update — a wonderful week with family visiting from India, a term sheet accepted with an exciting new team, and a rare four-day break from AI. He also briefly described his current AI-assisted development workflow using Claude Code and Codex for iterating on new features.
+
+🔗 https://x.com/nikunj/status/2040953390356889646
+
+
+⑨ Peter Steinberger · AI Builder @ OpenClaw
+
+Steipete 发布了几条以复活节为主题的幽默帖子，包括调侃"GPTEESUS 复活"以及声称把情绪"锤"进了 GPT。内容较为娱乐性，没有实质性的技术或产品发布。
+
+---
+
+Steipete shared a series of Easter-themed and humorous posts, including a joke about "GPTEESUS" rising and a claim about beating emotions into GPT. The posts are playful and lack substantive technical or product announcements.
+
+🔗 https://x.com/steipete/status/2040998797921145272
+
+
+⑩ Dan Shipper · CEO @ Every
+
+Danshipper 提示用户在使用 GPT 时应开启"thinking 模式"，并指出不开启时模型表现会明显变差，而开启后体验则好得多。
+
+---
+
+Danshipper shared a tip that "thinking mode" should be enabled when using GPT, noting that without it, the model seems noticeably less capable, but with it enabled, the experience is significantly better.
+
+🔗 https://x.com/danshipper/status/2040901103483490753
+
+
+⑪ Aditya Agarwal · General Partner @ South Park Commons
+
+Adityaag 将急诊室不得拒绝患者就医的法律规定与 LLM 拒绝提供医疗建议的行为作对比，质疑为何 AI 模型被允许拒绝回答与健康相关的问题。
+
+Adityaag draws a pointed analogy between emergency rooms — which cannot legally turn away patients — and LLMs that refuse to provide medical advice, questioning why AI models are permitted to deny users health-related information.
+
+🔗 https://x.com/adityaag/status/2041016861027193239
 
 
 
 🎙 Podcast
 
-AI for Atoms: How Periodic Labs is Revolutionizing Materials Engineering with Co-Founder Liam Fedus
+Moonlake: Causal World Models should be Multimodal, Interactive, and Efficient — with Chris Manning and Fan-yun Sun
 
-ChatGPT联合创造者、前OpenAI后训练副总裁Liam Fedus创立了Periodic Labs，专注于为材料科学和化学构建AI基础模型，将前沿AI技术应用于原子层面的物理世界。值得关注的是，Fedus认为AI革命若不与实体实验直接结合，就无法真正加速科学进步，单靠语言模型远远不够。他拥有物理学背景，曾在Google Brain参与混合专家架构和Transformer时代的早期工作，并指出只有近年来推理能力、测试时推断及智能体工具使用的突破，才使这一物理世界AI愿景在技术上成为可能。他还观察到一个有趣现象：许多AI领军人物都有物理学背景，部分原因是希格斯玻色子发现后，高能物理领域的人才大量转向机器学习。
+Moonlake是由斯坦福NLP领域权威Chris Manning与孙帆云共同创立的初创公司，其核心主张是：当前视觉语言模型本质上仍是语言模型，视觉部分几乎没有发挥真正作用，因此需要通过因果世界模型引入符号结构、物理推理与交互性。最令人意外的发现是：他们在与英伟达研究院合作期间验证了，由世界模型生成的合成交互数据在多模态预训练中可与真实世界数据媲美。与业内主流的纯像素视频生成路线不同，Moonlake押注"结构加规模"策略，将几何、物理、可供性与符号逻辑融入推理链。其核心论点是：迈向具身通用智能的关键在于让模型通过交互数据学习行动的因果后果，而这一需求正呈指数级增长，市场却严重供给不足。
 
-Liam Fedus, a co-creator of ChatGPT and former VP of Post-Training at OpenAI, has founded Periodic Labs to build AI foundation models specifically for materials science and chemistry — essentially applying frontier AI to the physical world of atoms. Surprisingly, Fedus argues that the AI revolution cannot fully accelerate scientific progress until these systems are directly connected to physical experimentation, not just language. Drawing on his physics background and early work at Google Brain (where he contributed to mixture-of-experts architectures and the transformer era), he contends that only recent advances in reasoning, test-time inference, and agentic tool use have made this physical-world AI vision technically feasible. He also notes an interesting pattern: many AI leaders share physics backgrounds, partly due to a post-Higgs-boson talent migration from high-energy physics into machine learning.
+Moonlake, a startup co-founded by Chris Manning (Stanford NLP legend) and Fan-yun Sun, is building causal world models that go beyond video generation by incorporating symbolic structure, physical reasoning, and interactivity — arguing that current vision-language models are essentially just language models with superficial visual input. The most surprising insight is their claim that synthetic interactive data generated by world models can match real-world data quality for multimodal pretraining, which they validated during work with NVIDIA Research. Rather than pursuing pure pixel-level video generation like most competitors, Moonlake bets on a "structure + scale" approach, embedding geometry, physics, affordances, and symbolic logic into reasoning traces. Their core thesis is that on the path to embodied general intelligence, models must learn the causal consequences of actions through interactive data — a demand they say is growing exponentially while the industry remains underserved.
 
-🔗 https://www.youtube.com/@NoPriorsPodcast
+🔗 https://www.youtube.com/@LatentSpacePod
 
 📎 Notion 存档
-https://notion.so/AI-Builders-Digest-2026-04-06-33a941f989048102b620c568b7d65134
+https://notion.so/AI-Builders-Digest-2026-04-07-33b941f98904819ba338e3d994a53bce
