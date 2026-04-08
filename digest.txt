@@ -1,137 +1,83 @@
-🗞 AI Builders 日报 · 2026.04.07
+🗞 AI Builders 日报 · 2026.04.08
 
 
 🐦 X / Twitter
 
-① Andrej Karpathy · AI Researcher & Educator
+① Peter Yang · Product @ Roblox / AI Educator
 
-Karpathy 注意到 GitHub Gist 上的评论质量明显更高，更有建设性，远比其他平台上的讨论更有价值。他认为这可能与社区氛围、Markdown 格式或缺乏刷流量的动机有关，并打趣说 GitHub 或许可以和 X 竞争。
-
----
-
-Karpathy observed that GitHub Gist comments are notably higher quality — more helpful, insightful, and constructive — compared to other platforms, and speculates this may be due to the community, markdown format, or lack of engagement incentives. He's now motivated to post more on Gists and playfully suggests GitHub could compete with X as a discussion platform.
-
-🔗 https://x.com/karpathy/status/2040806346556428585
-
-
-② Peter Yang · AI Educator & Product @ Roblox
-
-Petergyang 探讨了开源与闭源之争，指出两者可以同时获胜，就像 Android 与 iOS 并存一样。他还引用了 OpenAI Codex 产品负责人的观点：OpenAI 刻意避免中期规划，只专注于八周内的近期目标和长远愿景，因为中间地带太难把握。
+在一场关于AI agent与未来工作的对话中，核心观点是：编程能力将逐渐渗透所有知识型工作——AI agent可以完成文档撰写、幻灯片制作、数据分析等任务的前80%，人类只需负责最后20%的精细打磨。他同时批评以token用量衡量生产力的做法，认为这和用代码行数衡量产出一样荒谬。
 
 ---
 
-Petergyang raises the open source vs. proprietary debate, noting that both can coexist as winners (e.g., Android vs. iOS). He also shares a quote from OpenAI's Codex product lead explaining that OpenAI deliberately avoids medium-term planning, focusing only on near-term (up to 8 weeks) and long-term horizons because the middle ground is too unpredictable.
+In a discussion about AI agents and the future of work, the key insight is that coding will increasingly handle all knowledge work — with AI agents completing the first 80% of tasks like docs, slides, and analytics, leaving humans to polish the remaining 20%. He also pushes back on measuring productivity by token usage, calling it as misguided as measuring output by lines of code written.
 
-🔗 https://x.com/petergyang/status/2040954866567364758
-
-
-③ Amjad Masad · CEO @ Replit
-
-Amasad 展示了一个有趣的项目：利用新版 X API 与 Replit 结合，构建了一个 NASA Artemis II 任务的可视化页面，并接入了 X 的实时动态和数据统计。他还向大家送上了复活节祝福。
-
----
-
-Amasad highlights a fun demo built using the new X API combined with Replit — a NASA Artemis II mission visualization featuring a live X feed and real-time stats. He also wished followers a Happy Easter.
-
-🔗 https://x.com/amasad/status/2040918650245578906
+🔗 https://x.com/petergyang/status/2041331383344443795
 
 
-④ Guillermo Rauch · CEO @ Vercel
+② Thariq · Engineer @ Anthropic (Claude Code)
 
-Rauchg 分享了 Vercel 如何借助 X 平台持续收集用户反馈，并将其转化为产品迭代的驱动力。他还展示了一个用 v0 构建的月球旗帜物理模拟，AI 一次生成了初始版本，随后经过不断优化完善。
+Claude Code团队将在太平洋时间下午12点的直播中展示一个尚未发布的新功能。他们同时正在收集MAX 20x套餐提前耗尽token的用户反馈，目标是改进`/usage`界面，提供更详细的使用信息。
 
 ---
 
-Rauchg shared how Vercel uses X to gather continuous user feedback, crediting it as a key driver of product velocity. He also showcased a physics-based flag simulation on the moon built with v0, describing how the AI one-shotted an initial version that was then iteratively improved.
+The Claude Code team is previewing an unreleased feature in an upcoming live demo scheduled for 12pm PT. They are also gathering feedback from users whose MAX 20x plans ran out of tokens unexpectedly, aiming to improve the `/usage` interface with more detailed information.
 
-🔗 https://x.com/rauchg/status/2040879055990632715
-
-
-⑤ Aaron Levie · CEO @ Box
-
-Levie 认为 AI agent 更多时候会催生对技能的新需求，而非消灭工作岗位。以软件开发为例，写代码变得更容易，反而会让代码被应用到更多领域，而不是减少开发者的需求。他对 AI 将大规模取代工人的主流叙事提出了质疑。
-
----
-
-Levie argues that AI agents will more often create new demand for skills rather than eliminate jobs, using software development as an example — making it easier to write code will lead to code being applied in more areas, not fewer developers. He pushes back on the prevailing narrative that AI will simply replace workers at scale.
-
-🔗 https://x.com/levie/status/2040967947275948357
+🔗 https://x.com/trq212/status/2041380183295590471
 
 
-⑥ Garry Tan · President & CEO @ YCombinator
+③ Aaron Levie · CEO @ Box
 
-Garrytan 发布了几条简短内容，为开源的黄金时代欢呼，呼吁自动驾驶汽车合法化，并转发了一条引发共鸣的观点。内容较为简短，整体体现了他对技术发展和放松监管的乐观态度。
+随着AI agent承担越来越多的实际工作，人类的工作重心上移了一个抽象层级——新的核心任务变成了如何向agent下达清晰指令、提供必要上下文，以及在agent偏离目标时及时介入。人类的角色正逐渐从直接执行转变为统筹协调与审查把关。
 
 ---
 
-Garrytan made several brief posts celebrating open source, advocating for legalizing self-driving cars, and sharing a relatable observation. The posts are light on detail but reflect his general optimism about technology and deregulation.
+As AI agents take on more work, human labor shifts up a layer of abstraction — the new job becomes crafting clear instructions for agents, providing the right context, and intervening when they go off track. The role of humans is increasingly about orchestration and review rather than direct execution.
 
-🔗 https://x.com/garrytan/status/2040981159233134793
-
-
-⑦ Zara Zhang · Builder & Developer
-
-Zarazhangrui 分享了两个见解：一是在 AI 摘要泛滥的时代，逐字阅读长篇原文仍然具有独特价值；二是一个实用的 prompt 技巧——在编写 AGENTS.md 时，让 agent 主动向用户介绍产品功能，从而把 agent 变成一个产品推广者。
-
----
-
-Zarazhangrui shared two insights: first, that in an age of AI-generated summaries, there is still deep value in reading long-form content word by word. Second, a practical prompt engineering tip — when building agents, include instructions in AGENTS.md to have the agent introduce product features to users, effectively turning the agent into a marketer.
-
-🔗 https://x.com/zarazhangrui/status/2041031588000252279
+🔗 https://x.com/levie/status/2041347596342460439
 
 
-⑧ Nikunj Kothari · Partner @ FPV Ventures
+④ Garry Tan · President & CEO @ YCombinator
 
-Nikunj 分享了一段美好的个人时光——家人从印度来访，与一支令他振奋的团队签署了投资意向书，还难得地放下 AI 休息了四天。他也简短描述了自己目前的 AI 辅助开发流程，结合 Claude Code 和 Codex 来评估和实现新功能。
+YC的AI Stack计划为开发者提供价值2.5万美元的免费额度，与专注于技能培训的GStack项目有所区分。他同时警示了Claude编程环境中的一个安全漏洞——该漏洞可被利用来窃取Cowork用户文件，最初由安全研究员Johann Rehberger在Cowork上线前披露，目前尚未修复。
 
 ---
 
-Nikunj shared a personal life update — a wonderful week with family visiting from India, a term sheet accepted with an exciting new team, and a rare four-day break from AI. He also briefly described his current AI-assisted development workflow using Claude Code and Codex for iterating on new features.
+YC is offering $25K in free credits through its AI Stack program, separate from GStack which focuses on free skills. He also flagged a security vulnerability in Claude's coding environment that can be exploited to exfiltrate user files from Cowork, originally disclosed by researcher Johann Rehberger before Cowork existed.
 
-🔗 https://x.com/nikunj/status/2040953390356889646
-
-
-⑨ Peter Steinberger · AI Builder @ OpenClaw
-
-Steipete 发布了几条以复活节为主题的幽默帖子，包括调侃"GPTEESUS 复活"以及声称把情绪"锤"进了 GPT。内容较为娱乐性，没有实质性的技术或产品发布。
-
----
-
-Steipete shared a series of Easter-themed and humorous posts, including a joke about "GPTEESUS" rising and a claim about beating emotions into GPT. The posts are playful and lack substantive technical or product announcements.
-
-🔗 https://x.com/steipete/status/2040998797921145272
+🔗 https://x.com/garrytan/status/2041389865426878807
 
 
-⑩ Dan Shipper · CEO @ Every
+⑤ Zara Zhang · Independent Builder / Developer
 
-Danshipper 提示用户在使用 GPT 时应开启"thinking 模式"，并指出不开启时模型表现会明显变差，而开启后体验则好得多。
+他正在利用Fish Audio API生成个性化播客，并计划近期发布相关技能工具。他还强调，在上线AI产品之前，最重要的一步是决定砍掉哪些功能，而不是一味地堆砌新功能。
 
 ---
 
-Danshipper shared a tip that "thinking mode" should be enabled when using GPT, noting that without it, the model seems noticeably less capable, but with it enabled, the experience is significantly better.
+He is experimenting with the Fish Audio API to generate personalized podcasts and plans to release a related skill soon. He also emphasizes that before shipping an AI-powered product, the most important step is deciding what features to cut, not what to add.
 
-🔗 https://x.com/danshipper/status/2040901103483490753
-
-
-⑪ Aditya Agarwal · General Partner @ South Park Commons
-
-Adityaag 将急诊室不得拒绝患者就医的法律规定与 LLM 拒绝提供医疗建议的行为作对比，质疑为何 AI 模型被允许拒绝回答与健康相关的问题。
-
-Adityaag draws a pointed analogy between emergency rooms — which cannot legally turn away patients — and LLMs that refuse to provide medical advice, questioning why AI models are permitted to deny users health-related information.
-
-🔗 https://x.com/adityaag/status/2041016861027193239
+🔗 https://x.com/zarazhangrui/status/2041225124490420239
 
 
+⑥ Nikunj Kothari · Partner @ FPV Ventures
 
-🎙 Podcast
+Anthropic近期营收增长势头惊人，过去三个月新增210亿美元，仅上个月的年化运营收入就增加了110亿美元。这些数字表明Anthropic正以极快速度成长为AI领域举足轻重的商业力量。
 
-Moonlake: Causal World Models should be Multimodal, Interactive, and Efficient — with Chris Manning and Fan-yun Sun
+---
 
-Moonlake是由斯坦福NLP领域权威Chris Manning与孙帆云共同创立的初创公司，其核心主张是：当前视觉语言模型本质上仍是语言模型，视觉部分几乎没有发挥真正作用，因此需要通过因果世界模型引入符号结构、物理推理与交互性。最令人意外的发现是：他们在与英伟达研究院合作期间验证了，由世界模型生成的合成交互数据在多模态预训练中可与真实世界数据媲美。与业内主流的纯像素视频生成路线不同，Moonlake押注"结构加规模"策略，将几何、物理、可供性与符号逻辑融入推理链。其核心论点是：迈向具身通用智能的关键在于让模型通过交互数据学习行动的因果后果，而这一需求正呈指数级增长，市场却严重供给不足。
+Anthropic has seen extraordinary revenue growth, adding $21B in the last three months and $11B in annualized run rate revenue in just the past month. The numbers signal Anthropic's rapid acceleration as a major commercial force in AI.
 
-Moonlake, a startup co-founded by Chris Manning (Stanford NLP legend) and Fan-yun Sun, is building causal world models that go beyond video generation by incorporating symbolic structure, physical reasoning, and interactivity — arguing that current vision-language models are essentially just language models with superficial visual input. The most surprising insight is their claim that synthetic interactive data generated by world models can match real-world data quality for multimodal pretraining, which they validated during work with NVIDIA Research. Rather than pursuing pure pixel-level video generation like most competitors, Moonlake bets on a "structure + scale" approach, embedding geometry, physics, affordances, and symbolic logic into reasoning traces. Their core thesis is that on the path to embodied general intelligence, models must learn the causal consequences of actions through interactive data — a demand they say is growing exponentially while the industry remains underserved.
+🔗 https://x.com/nikunj/status/2041291304387444991
 
-🔗 https://www.youtube.com/@LatentSpacePod
+
+⑦ Dan Shipper · CEO @ Every
+
+他认为AI并不会消除组织层级的必要性——虽然中层管理可能会减少，但专业分工依然至关重要，而基于agent的工作流实际上进一步凸显了层级结构的价值。他的团队还更新了实时AI新闻追踪器，引入新的AI主笔，每30分钟自动发掘并撰写头条报道。
+
+---
+
+He argues that AI does not eliminate the need for organizational hierarchy — while middle management layers may shrink, specialization remains essential, and agent-based workflows actually reinforce the value of hierarchy. The team also updated their real-time AI headline tracker to use a new AI lead writer that finds and publishes top stories every 30 minutes.
+
+🔗 https://x.com/danshipper/status/2041305658054574561
 
 📎 Notion 存档
-https://notion.so/AI-Builders-Digest-2026-04-07-33b941f98904819ba338e3d994a53bce
+https://notion.so/AI-Builders-Digest-2026-04-08-33c941f9890481fdbdb6f8126d0175c5
