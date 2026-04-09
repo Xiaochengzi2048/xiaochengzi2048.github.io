@@ -3,78 +3,65 @@
 🧠 模型
 
 ① Claude Mythos 新模型发布
-Anthropic 正式发布 Claude Mythos Preview，距上一代 Opus 4.6 仅两个月，目前向 Project Glasswing 合作伙伴开放。该模型在关键基准上实现两位数增长，编程与工具调用能力大幅提升，被认为是 AI 行业的重要转折点。levie 和 adityaag 均表示模型能力进步势头强劲，没有任何放缓迹象。
-Anthropic releases Claude Mythos Preview with significant benchmark gains, available to Project Glasswing launch partners.
+Anthropic 正式披露新模型 Claude Mythos Preview，距离 Opus 4.6 发布仅两个月，目前向 Project Glasswing 的合作伙伴开放。Mythos 在关键基准测试上取得两位数增幅，尤其在编程和工具调用能力上表现突出。多位业内人士认为此次发布是 AI 能力进步没有"天花板"的又一有力证明，levie 指出编程 Agent 的生产力提升模式正在向整个知识工作蔓延。
 🔗 https://x.com/alexalbert__/status/2041579950332113155 · https://x.com/levie/status/2041732610179703100 · https://x.com/petergyang/status/2041678988318543908 · https://x.com/adityaag/status/2041771160359375001
 
 🤖 Agent/编程
 
-② Codex 达到 300 万周活跃用户，重置使用限额
-Sam Altman 宣布 Codex 周活跃用户突破 300 万，为庆祝这一里程碑重置使用限额，并承诺此后每增加 100 万用户（直至 1000 万）都将重置一次。这一增长速度体现了 AI 编程工具的强劲势头。
-Codex hits 3M weekly users; OpenAI resets usage limits and will repeat this every million users up to 10M.
+② Codex 用户里程碑与限额重置
+Sam Altman 宣布 Codex 每周活跃用户突破 300 万，为庆祝这一里程碑将重置使用限额，并承诺此后每增加 100 万用户（直至 1000 万）都会重复此举。这一举措旨在激励开发者持续构建。
 🔗 https://x.com/sama/status/2041658719839383945
 
 ③ Claude Code CLI 使用技巧与安全隐患
-Anthropic 团队成员 @_catwu 分享了 Claude Code CLI 的团队最爱功能（/powerup 命令）。同时 Garry Tan 指出一个潜在安全漏洞：虽然 Claude Code 限制了 Write File 工具在工作区外的使用，但代理仍可通过 bash 的 `cat >>` 命令写入文件系统任意位置。
-Claude Code CLI tips shared, while a bash-based sandbox escape vulnerability is flagged — agents can write outside workspace via shell redirection.
+_catwu 分享了团队常用的 Claude Code CLI 功能，可通过 `/powerup` 命令查看。garrytan 则指出一个潜在安全漏洞：Claude Code 虽限制了 Write File 工具在工作区外写入，但 Agent 可通过 bash 的 `cat >>` 命令绕过限制写入文件系统任意位置。
 🔗 https://x.com/_catwu/status/2041655441864978552 · https://x.com/garrytan/status/2041750093414731888
 
-④ CodexBar 0.20 发布，新增多家 Provider
-CodexBar 发布 0.20 版本，新增 Perplexity 和 OpenCode Go 两家 Provider，现已支持 16 家，同时支持免重新登录切换 Codex 账号，并修复了 Claude token/费用重复计算导致的虚高问题。
-CodexBar 0.20 adds Perplexity & OpenCode Go providers, fixes Claude cost inflation from duplicate entries, now tracks 16 providers.
+④ CodexBar 多模型成本追踪工具更新
+CodexBar 发布 0.20 版本，新增 Perplexity 和 OpenCode Go 两个提供商，支持无需重新登录切换 Codex 账号，修复了 Claude token/费用重复计算导致的虚高问题，并优化了费用历史统计方式，目前共追踪 16 个 AI 提供商。
 🔗 https://x.com/steipete/status/2041731877787025448
 
-⑤ Agent 验证效率优化洞察
-trq212 在完成约 10 次用户调研通话及分析大量转录记录后发现，开放式验证步骤会消耗大量 token，却未必能提升输出质量。他计划就如何高效进行 Agent 输出验证撰写深度文章。
-Open-ended agent verification consumes lots of tokens without proportional quality gains — efficient verification strategies are needed.
+⑤ Agent 验证流程中的 token 效率问题
+trq212 在对 Agent 工作流进行约 10 次深度调研后发现，开放式验证流程极易消耗大量 token 却并不能显著提升输出质量。他计划撰文分享如何高效设计验证步骤，避免无效 token 浪费。
 🔗 https://x.com/trq212/status/2041722125510377705
 
 🔒 安全
 
-⑥ "Prompt Injection" 与安全术语命名的重要性
-swyx 引用 Simon Willison 的观点，讨论安全术语命名的自明性差异——"prompt injection"因名称直观而广为人知，而"lethal trifecta"等术语则传播效果有限。清晰的命名对安全概念的普及至关重要。
-Simon Willison highlights how self-evident naming (like "prompt injection") drives security awareness far better than opaque terms.
+⑥ Prompt Injection 命名与认知影响
+swyx 引用 Simon Willison 的观点，讨论"prompt injection"与"lethal trifecta"等安全术语在命名上的自明性差异。术语的直观程度直接影响从业者对安全风险的感知与传播效果。
 🔗 https://x.com/swyx/status/2041739250421436591
 
 🛠 产品/应用
 
-⑦ OpenAI Prism 论文审阅功能上线
-OpenAI 推出 Prism 平台的 Paper Review 功能，定位为严格的技术审稿人而非语法检查器，能检查数学推导、符号、单位、论文结构及图表一致性。该功能由 @hemal 使用 Codex 在数小时内构建完成，现已在 prism.com 上线。
-OpenAI's Prism launches Paper Review — a technical paper reviewer built on Codex that checks math, logic, and cross-section consistency.
+⑦ OpenAI Prism 科研论文审阅工具
+OpenAI 推出 Prism 产品中的 Paper Review 功能，由 Codex 驱动，能像严格的技术审稿人一样检查论文中的数学推导、符号、单位、结构以及图表和章节间的一致性，而非仅做语法检查。该功能由 @hemal 在数小时内构建完成，目前已在 Prism 官网上线，团队正在招募首席设计师。
 🔗 https://x.com/kevinweil/status/2041592093718749659
 
-⑧ Prism 个性化播客 Skill 发布
-Prism 推出个性化播客 Skill，可将任意内容（如会议记录）转化为双 AI 主持的播客节目，并发布为 RSS 订阅源，支持在常用播客 App 中收听。创作者将其用于将会议转录重混为 AI"旁听"评论形式的播客。
-Prism's new Personalized Podcast skill turns any content into a dual-AI-hosted podcast with RSS feed support.
+⑧ Prism 个性化播客技能
+zarazhangrui 介绍了 Prism 平台上的个性化播客技能，可将任意内容（包括会议记录）转化为双 AI 主持的播客节目，并发布为 RSS Feed，支持在常用播客应用中收听。她演示了将自己的会议记录"改编"为 AI 主持人点评对话的有趣用法。
 🔗 https://x.com/zarazhangrui/status/2041736976630739000
 
 📈 商业/观点
 
-⑨ AI Agent 将重塑知识工作生产力
-levie 认为，AI 编程领域已验证的生产力提升模式正在向所有知识工作蔓延——Agent 可以独立工作数分钟乃至数小时后返回完整成果，这标志着从聊天机器人到真正自主 Agent 的质变。
-AI agent productivity gains seen in coding are now spreading to all knowledge work, marking a shift from chatbots to autonomous agents.
-🔗 https://x.com/levie/status/2041732610179703100
-
-⑩ 早期创业者应专注产品而非流量
-nikunj 观察到越来越多早期创始人将精力放在获取曝光和融资上，而非打磨产品和留存率，这种趋势已开始显现负面效果。他建议通过查看更新日志和案例研究来甄别真正有实质的公司。
-Early-stage founders are over-indexing on visibility and fundraising instead of product quality and retention — and it's starting to show.
+⑨ 早期创业者应聚焦产品而非流量
+nikunj 观察到越来越多的早期创始人开始优化曝光度和融资，而非专注于产品打磨和留存率，并指出这一趋势已开始在产品质量上显现问题。他建议通过查看更新日志和案例研究来判断一家公司是否真正在做产品。
 🔗 https://x.com/nikunj/status/2041757065354293760
 
-⑪ YC 演讲：对 AI 创业时代高度乐观
-Vercel CEO rauchg 在 YC 发表演讲后表示，对当前 AI 创业时代比以往任何时候都更加乐观，认为现在是几代人中最好的创业时机，创始人质量极高。
-Vercel's rauchg speaks at YC, calling this the best time in generations to build — bullish on founders and the AI opportunity.
+⑩ YC 演讲：创业黄金时代
+Vercel CEO rauchg 在 YC 演讲后表示对当前创业环境比以往任何时候都更看好，认为现在是数代人中构建公司的最佳城市、最佳时机、最佳机遇。
 🔗 https://x.com/rauchg/status/2041720266154504351
+
+⑪ 设计师转型 PM 的潜力
+thenanyu 指出，设计师和工程师在脱离工具（Figma/IDE）的情况下往往更擅长抽象地思考产品问题，但一旦拿起工具就倾向于直接动手执行而非深入思考需求。他认为更多设计师应该考虑转型做产品经理，因为他们天然具备产品思维。
+🔗 https://x.com/thenanyu/status/2041495924682244275
 
 
 🎙 Podcast
 
 Extreme Harness Engineering for Token Billionaires: 1M LOC, 1B toks/day, 0% human code, 0% human review — Ryan Lopopolo, OpenAI Frontier &amp; Symphony
 
-OpenAI Frontier团队工程师Ryan Lopopolo历时五个月，在从未亲自编写一行代码的情况下，借助Codex CLI智能体构建了一个超过百万行代码的内部生产工具。最令人意外的是，项目初期的一个半月效率比手动开发慢了整整10倍，但这一前期投入最终使团队生产力远超任何单个工程师所能达到的水平。本期播客系统介绍了"harness工程"这一新兴学科——即专门为最大化AI智能体效率而设计代码库、构建系统和工作流程的方法论，而非以人类开发者习惯为优先。一个关键技术洞察是：每一代新模型都要求对代码库进行相应适配，例如当GPT-4.3引入后台Shell功能后，模型对阻塞式脚本的耐心下降，团队因此不得不将整个构建系统重构为一分钟内完成。
+OpenAI Frontier团队工程师Ryan Lopopolo花费五个月时间，在完全不亲自编写任何代码的前提下，借助Codex AI编程工具构建了一个超过百万行代码的内部企业工具。最令人惊讶的是，尽管最初六周的效率比正常开发慢10倍，但坚持让AI代理完成所有工作的策略，最终使整体效率比单个工程师高出10倍。Lopopolo将"harness工程"定义为一种系统性思维方式，要求开发者识别代理的失误点、将复杂任务拆解为更小的模块，并持续优化AI的运行环境——包括将整个构建流水线重构为一分钟内完成，以适应新模型版本的行为变化。该集还揭示了一个关键规律：随着每代模型能力提升，开发者必须主动调整代码库和工具链，以匹配不同模型各自的"工作风格"。
 
-Ryan Lopopolo, an OpenAI engineer on the Frontier team, built a production-grade internal tool exceeding 1 million lines of code over five months without writing a single line of code himself — relying entirely on Codex CLI agents. Most surprisingly, the first month and a half was actually 10x *slower* than working manually, but the upfront investment in building robust agent tooling ultimately made the team far more productive than any individual engineer could be. The episode introduces "harness engineering" as an emerging discipline — the art of structuring codebases, build systems, and workflows specifically to maximize AI agent productivity rather than human developer preferences. A key technical insight was that each new model generation (GPT-4.1 through later versions) required adapting the codebase to match the model's working style, including overhauling the entire build system to complete in under one minute when GPT-4.3's background shell feature made the model less patient with blocking scripts.
-
-🔗 https://www.youtube.com/@LatentSpacePod
+🔍 搜索：Latent Space · Extreme Harness Engineering for Token Billionaires: 1M LOC,
 
 📎 Notion 存档
-https://notion.so/AI-Builders-Digest-2026-04-09-33d941f989048140908ddf869c744e75
+https://notion.so/AI-Builders-Digest-2026-04-09-33d941f98904814d9f4ddbc39542a099
