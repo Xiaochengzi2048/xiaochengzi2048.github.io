@@ -1,203 +1,85 @@
 🗞 AI Builders 日报 · 2026.04.09
 
+🧠 模型
 
-🐦 X / Twitter
+**Claude Mythos 新模型发布**
+Anthropic 正式披露新模型 Claude Mythos Preview，距上一代 Opus 4.6 仅两个月。该模型在关键基准测试上取得两位数的显著提升，目前通过 Project Glasswing 向合作伙伴开放预览。多位业界人士认为此次发布标志着 AI 能力进步没有天花板，尤其在编程与工具调用方向将加速 Agent 化进程。
+Anthropic reveals Claude Mythos Preview with major benchmark gains, available to launch partners via Project Glasswing.
+🔗 https://x.com/alexalbert__/status/2041579950332113155 · https://x.com/levie/status/2041732610179703100 · https://x.com/petergyang/status/2041678988318543908 · https://x.com/adityaag/status/2041771160359375001
 
-① Swyx · Founder & Podcast Host
+🤖 Agent/编程
 
-Swyx 正在参与关于 AI 安全术语的讨论，对比"prompt injection"和"lethal trifecta"这两种命名方式的差异。他对亚马逊的一项新公告感到兴奋并打算亲自尝试，同时也特别提到了一位尚未邀请到播客的 OpenAI 研究员，表示会为其给予应有的认可。
-
----
-
-Swyx is engaging with discussions around AI security terminology, comparing "prompt injection" and "lethal trifecta" as naming conventions. He also expressed excitement about an Amazon announcement he plans to try, and gave credit to an OpenAI researcher he hasn't yet had on his podcast.
-
-🔗 https://x.com/swyx/status/2041739250421436591
-
-
-② Kevin Weil · VP Science @ OpenAI
-
-OpenAI 推出了基于 Codex 构建的"Paper Review"工具，集成在 Prism 平台中，旨在作为严格的学术论文技术审阅者，检查数学推导、符号标注和行文一致性等问题。该功能仅用数小时便完成开发，充分展示了 Codex 的能力，团队目前正在为 Prism 招募首席设计师。
-
----
-
-OpenAI launched "Paper Review," a new AI-powered tool built on Codex within their Prism platform, designed to act as a rigorous technical reviewer for academic papers — checking math, logic, notation, and consistency across sections. The feature was built quickly as a skill in just a few hours, showcasing Codex's capabilities, and OpenAI is actively hiring a lead designer for Prism.
-
-🔗 https://x.com/kevinweil/status/2041592093718749659
-
-
-③ Peter Yang · Product @ Roblox, AI Educator
-
-Peter 对 Anthropic 是否在内部使用 Mythos 模型来支撑其近期惊人的产品迭代速度表达了好奇。他也分享了一条绕湖跑步的个人动态。
-
----
-
-Peter expressed curiosity about whether Anthropic has been using Mythos internally to power their rapid recent product velocity. He also shared a personal note about going for a run around a lake.
-
-🔗 https://x.com/petergyang/status/2041678988318543908
-
-
-④ Nan Yu · Head of Product @ Linear
-
-他指出，设计师和工程师一旦拿到 Figma 或 IDE，往往会跳过抽象思考直接动手执行，而剥夺这些工具反而能促进更好的产品思维。他认为更多设计师应该考虑转型为 PM，因为他们的直觉非常适合这个角色。
-
----
-
-He argues that designers and engineers tend to skip strategic thinking and jump straight into execution when given their tools, and that taking those tools away forces better product thinking. He suggests more designers should consider transitioning into PM roles, as their instincts translate well.
-
-🔗 https://x.com/thenanyu/status/2041495924682244275
-
-
-⑤ Cat Wu · Claude Code @ Anthropic
-
-Cat 为 Claude Code 用户分享了一个使用技巧，推荐使用 `/powerup` 命令来发现团队最喜爱的 CLI 功能。
-
----
-
-Cat shared a tip for Claude Code users, highlighting the `/powerup` command to discover the team's favorite CLI features.
-
-🔗 https://x.com/_catwu/status/2041655441864978552
-
-
-⑥ Thariq · Claude Code @ Anthropic
-
-在完成约十次用户调研通话并查阅相关记录后，他发现 agent 工作流中一个主要的低效环节是在开放式验证上消耗过多 token，而这对输出质量并无实质帮助。他计划就如何高效执行验证撰写更多内容，并将在两周后于旧金山主持一场技术写作工作坊。
-
----
-
-After conducting around ten user research calls and reviewing transcripts, he found that a major inefficiency in agent workflows is spending excessive tokens on open-ended verification that doesn't actually improve output quality. He plans to write more on how to run verification efficiently and is also hosting a technical writing workshop in SF in two weeks.
-
-🔗 https://x.com/trq212/status/2041722125510377705
-
-
-⑦ Guillermo Rauch · CEO @ Vercel
-
-Vercel CEO 在 YCombinator 发表演讲，对当下的创业环境表达了强烈的乐观态度，称这是几代人以来最好的城市、时机和创业机遇。
-
----
-
-Vercel's CEO spoke at YCombinator and shared his bullish sentiment about the current moment for founders, calling it the best city, time, and opportunity to build in generations.
-
-🔗 https://x.com/rauchg/status/2041720266154504351
-
-
-⑧ Alex Albert · Research @ Anthropic
-
-Anthropic 发布了 Claude Mythos Preview，这是继 Claude Opus 4.6 仅两个月后推出的全新模型，目前已向 Project Glasswing 的合作伙伴开放。他表示，Glasswing 可能是他加入 Anthropic 近三年来所见过的 AI 行业中最具深远影响的事件，称其为真正的历史转折点。
-
----
-
-Anthropic unveiled Claude Mythos Preview, a new model released just two months after Claude Opus 4.6, currently available to launch partners in Project Glasswing. He described Glasswing as possibly the most consequential event he has witnessed in the AI industry since joining Anthropic nearly three years ago, calling it a genuine turning point in history.
-
-🔗 https://x.com/alexalbert__/status/2041579950332113155
-
-
-⑨ Aaron Levie · CEO @ Box
-
-Box CEO 认为 Claude Mythos 再次证明了模型能力提升目前没有天花板，在编程和工具使用等关键基准上取得了两位数的显著进步。他相信，AI 编程 agent 带来的生产力提升正在向整个知识工作领域蔓延，agent 将能够自主工作数分钟乃至数小时并返回完整成果。
-
----
-
-Box's CEO sees Claude Mythos as proof that there is no ceiling on model capability progress, citing meaningful double-digit benchmark gains across coding and tool use. He believes the productivity gains seen in AI-powered coding agents are now expanding to all knowledge work, enabling agents to operate autonomously for minutes or hours and return complete work outputs.
-
-🔗 https://x.com/levie/status/2041732610179703100
-
-
-⑩ Ryo Lu · Design @ Cursor
-
-他用简洁诗意的语言描述了一种流畅的 UI 交互体验——没有多余按钮，只需点击、绘制和对话——强调完全沉浸的心流状态。
-
----
-
-He shared a brief, poetic description of a streamlined UI interaction — no extra buttons, just click, draw, and chat — emphasizing a fully immersive flow state experience.
-
-🔗 https://x.com/ryolu_/status/2041564082034372956
-
-
-⑪ Garry Tan · President & CEO @ YCombinator
-
-Garry 发表了三点不同的观察：对雅虎科技差点做对一件事的调侃；对 Claude Code 通过 bash 绕过文件写入限制的安全隐患的担忧；以及一个哲学性感悟——我们正活在"LISP 时代"，代码与数据再度统一，只不过这次是以 Markdown 的形式呈现。
-
----
-
-Garry made three distinct observations: a wry comment about Yahoo Tech nearly getting something right; a security concern about Claude Code's bash access potentially allowing file writes outside its designated workspace; and a philosophical note that we live in "LISPy times" where code and data are once again unified — but expressed in Markdown.
-
-🔗 https://x.com/garrytan/status/2041750093414731888
-
-
-⑫ Zara Zhang · Independent Builder
-
-她推出了一项全新的"个性化播客"技能，可将任意内容（包括会议记录）转化为双 AI 主持人的播客节目，并以 RSS 源发布，方便在任意播客应用收听。她重点介绍了一个有趣的使用场景：让 AI 主持人"偷听"她的对话并加以点评。
-
----
-
-She introduced a new "Personalized Podcast" skill that converts any content — including meeting transcripts — into a podcast with two AI hosts, which can be published as an RSS feed and listened to in any podcast app. The creative use case she highlighted is having AI hosts "eavesdrop" on her conversations and comment on them.
-
-🔗 https://x.com/zarazhangrui/status/2041736976630739000
-
-
-⑬ Nikunj Kothari · Partner @ FPV Ventures
-
-他指出，许多早期创始人已将重心转向曝光度和融资，而忽视了产品质量和用户留存，这一问题正在其产品表现中逐渐显现。他还特别称赞 Varanasi 兄弟是硅谷"最被低估的秘密"。
-
----
-
-He observes that many early-stage founders have shifted focus toward visibility and fundraising at the expense of product quality and user retention, which is increasingly showing in their results. He also gave a shoutout to the Varanasi brothers as Silicon Valley's "greatest secret."
-
-🔗 https://x.com/nikunj/status/2041757065354293760
-
-
-⑭ Peter Steinberger · Independent Builder / OSS Contributor
-
-CodexBar 0.20 正式发布，新增了对 Perplexity 和 OpenCode Go 两个提供商的支持，支持无需重新登录即可切换 Codex 账户，修复了因重复条目导致的 Claude token 和费用虚高问题，并改进了费用历史记录功能——目前已支持 16 个提供商，统一呈现在一个菜单栏应用中。该版本目前正在 Hacker News 上热门排行。
-
----
-
-CodexBar 0.20 was released, adding support for two new providers (Perplexity and OpenCode Go), the ability to switch Codex accounts without re-login, a fix for Claude token and cost inflation from duplicates, and improved cost history tracking — now covering 16 providers in a single menu bar app. The release is also trending on Hacker News.
-
-🔗 https://x.com/steipete/status/2041731877787025448
-
-
-⑮ Dan Shipper · CEO @ Every
-
-Dan 正在预热关于"成为 model 管理者"的相关内容，并分享了一张"OpenClaw 梦境"的可视化图像，暗示有创意性的 AI 主题内容即将发布。他也暗示某件重要的事情即将完成，感叹"差一点了，真是一段疯狂的旅程"。
-
----
-
-Dan is teasing upcoming content around "being a model manager" and sharing a visualization of what "OpenClaw dreams" look like, suggesting creative AI-themed content is in progress. He also hinted at being close to completing something significant with the note "almost there — what a wild ride."
-
-🔗 https://x.com/danshipper/status/2041624900046106907
-
-
-⑯ Aditya Agarwal · General Partner @ South Park Commons
-
-他对新的 Mythos 模型表示由衷的震撼，认为这提醒了所有建设者和投资者：我们正身处一个非凡的历史时刻。他还将当下类比为 Web 2.0 的读写革命时代，认为我们正在经历所有软件的类似变革——任何应用都可以被分叉、重混和定制。
-
----
-
-He expressed genuine awe at the new Mythos model, framing it as a reminder of the extraordinary historical moment for both builders and investors. He also drew a parallel to the Web 2.0 read/write era, arguing we are now living through its equivalent for all software — where any app can be forked, remixed, and customized.
-
-🔗 https://x.com/adityaag/status/2041771160359375001
-
-
-⑰ Sam Altman · CEO @ OpenAI
-
-为庆祝 Codex 每周用户数突破 300 万，OpenAI 宣布重置使用限额以回馈社区。Sam 表示，每新增 100 万用户将持续执行这一操作，直至达到 1000 万用户为止。
-
-To celebrate reaching 3 million weekly Codex users, OpenAI is resetting usage limits as a reward to the community. Sam announced they will continue doing this at every million-user milestone up to 10 million.
-
+**Codex 达 300 万周活跃用户，重置使用限额**
+Sam Altman 宣布 Codex 周活跃用户突破 300 万，为庆祝这一里程碑，OpenAI 即刻重置使用限制，并承诺每增加 100 万用户（上限 1000 万）就重复此操作。这一激励机制旨在鼓励开发者持续构建。
+OpenAI resets Codex usage limits to celebrate 3M weekly users, pledging to repeat this every million users up to 10M.
 🔗 https://x.com/sama/status/2041658719839383945
 
+**Claude Code CLI 使用技巧与安全边界**
+Anthropic 工程师 @_catwu 分享了团队常用的 Claude Code CLI 功能，通过 `/powerup` 命令可快速了解。@garrytan 同时指出一个值得关注的安全细节：Claude Code 的 bash 权限允许通过 `cat >>` 向工作区外的任意文件写入，绕过了 Write File 工具的沙箱限制。
+Claude Code CLI tips shared; Garry Tan notes a sandbox escape: bash access allows writing to any file via `cat >>` outside the workspace.
+🔗 https://x.com/_catwu/status/2041655441864978552 · https://x.com/garrytan/status/2041750093414731888
+
+**CodexBar 0.20 — 多模型成本追踪工具更新**
+CodexBar 发布 0.20 版本，新增 Perplexity 和 OpenCode Go 两个提供商，支持无需重新登录切换 Codex 账户，并修复了 Claude token/成本重复计算导致的虚高问题，现已追踪 16 个 AI 提供商。
+CodexBar 0.20 adds Perplexity and OpenCode Go, fixes Claude cost inflation bugs, now tracking 16 AI providers in one menu bar.
+🔗 https://x.com/steipete/status/2041731877787025448
+
+**Agent 验证中的 token 效率问题**
+trq212 在对多个 Agent 工作流进行深度调研后发现：开放式验证步骤极易消耗大量 token，但并不能实质提升输出质量。他计划专门撰文探讨如何高效设计验证流程，避免资源浪费。
+Open-ended verification in agent workflows burns tokens without improving output quality — efficient verification design is key.
+🔗 https://x.com/trq212/status/2041722125510377705
+
+🔒 安全
+
+**Prompt Injection 命名与安全概念传播**
+swyx 引用 Simon Willison 的观点，对比"prompt injection"和"lethal trifecta"两个安全术语的命名自明性差异，指出好的术语命名对于安全概念的传播和理解至关重要。
+Naming matters in security: "prompt injection" is self-evident while "lethal trifecta" is not — good terminology aids threat communication.
+🔗 https://x.com/swyx/status/2041739250421436591
+
+🛠 产品/应用
+
+**OpenAI Prism — AI 论文审稿工具**
+OpenAI 推出科研产品 Prism，其中"Paper Review"功能由 Codex 驱动，充当严格的技术审稿人，能检查数学推导、符号一致性、单位、结构以及图表与正文的逻辑自洽性。该功能由工程师 @hemal 在数小时内构建完成，目前已在 prism.openai.com 上线，团队正在招聘首席设计师。
+OpenAI launches Prism's Paper Review, a Codex-powered tool that acts as a rigorous technical reviewer for research papers.
+🔗 https://x.com/kevinweil/status/2041592093718749659
+
+**Personalized Podcast Skill — 将任意内容转为播客**
+新推出的 Personalized Podcast Skill 可将任意内容（包括会议记录）转化为双 AI 主持人对话形式的播客，并发布为 RSS feed，支持在常见播客应用中收听。创作者本人已将自己的会议转录用两位 AI"旁听"并评论，探索了内容消费的新形态。
+A new skill converts any content into a two-AI-host podcast with RSS feed support for on-the-go listening.
+🔗 https://x.com/zarazhangrui/status/2041736976630739000
+
+📈 商业/观点
+
+**早期创业者应聚焦产品而非曝光度**
+nikunj 观察到越来越多早阶段创业者将精力放在获取流量和融资上，而非产品打磨和用户留存，并以更新日志和案例研究作为衡量一家公司是否真正在构建产品的简单指标。他认为这种本末倒置的趋势正在显现负面结果。
+Early-stage founders are over-optimizing for visibility and funding instead of product depth and retention — and it's starting to show.
+🔗 https://x.com/nikunj/status/2041757065354293760
+
+**代码即数据的 Markdown 时代与软件可塑性**
+garrytan 指出当前 AI 驱动的开发范式让"代码即数据、数据即代码"重新成立，而载体竟是 Markdown 而非 Lisp。adityaag 延伸这一观点，认为我们正在实现 Web 2.0 时代"软件可读写、可分叉、可定制"的终极愿景。
+AI is making all software forkable and malleable — code-as-data is back, and it's written in Markdown.
+🔗 https://x.com/garrytan/status/2041750093414731888 · https://x.com/adityaag/status/2041771160359375001
+
+**Vercel CEO 在 YC 演讲：看好当下创业机遇**
+Vercel CEO Guillermo Rauch 在 YC 发表演讲，表示比以往任何时候都更看好当前的创业环境，认为现在是数代人中最好的创业时机、最好的城市、最好的机遇窗口。
+Vercel's CEO tells YC founders this is the best time in generations to build, expressing peak bullishness.
+🔗 https://x.com/rauchg/status/2041720266154504351
+
+**设计师转型 PM 的潜力**
+thenanyu 指出设计师和工程师在抽象层面讨论产品问题时表现出色，但一旦拿起工具就容易直接跳入执行而跳过思考。他认为设计师因其产品直觉和系统思维，转型为 PM 往往会非常出色。
+Designers tend to skip strategic thinking once tools are in hand — their product intuition makes them natural PM candidates.
+🔗 https://x.com/thenanyu/status/2041495924682244275
 
 
 🎙 Podcast
 
 Extreme Harness Engineering for Token Billionaires: 1M LOC, 1B toks/day, 0% human code, 0% human review — Ryan Lopopolo, OpenAI Frontier &amp; Symphony
 
-在这期 Latent Space 播客中，OpenAI Frontier 团队的 Ryan Lopopolo 透露，他的团队在五个月内构建了一个超过百万行代码的代码库，全程零人工编码，开发效率约为传统工程方式的十倍。他将"禁止人工写代码"作为强制约束，倒逼团队为智能体搭建完善的工具链和可复用的小型模块。一个出人意料的工程发现是：从早期模型升级到 GPT-4.1 后，Codex harness 新增了后台 Shell 功能，导致模型变得"不耐烦"，团队不得不将整个构建系统从 Makefile 依次换成 Bazel、Turbo，最终定格在 NX，只为将构建时间压缩到一分钟以内。Lopopolo 认为，当前的编程模型已足够强大，与熟练工程师在能力上基本等价，而关键的工程思维在于系统性地识别并消除智能体的失败点，而非退回到人工操作。
+在这期 Latent Space 节目中，OpenAI Frontier 团队的 Ryan Lopopolo 透露，他的团队在五个月内构建了一个超过百万行代码的代码库，全程没有人工编写一行代码，开发效率约为传统工程方式的十倍。Lopopolo 通过 Codex CLI 完全以 AI 代理驱动开发，以此验证 AI 智能体能够完全替代工程师工作输出的核心论点。一个尤为值得关注的细节是：当新版模型引入后台 Shell 功能后，模型对缓慢的构建过程变得缺乏耐心，迫使团队在约一周内将整个构建系统从 Make 迁移至 Bazel、再到 Turbo，最终落定 NX，使构建时间压缩至一分钟以内。Lopopolo 将"harness 工程"——即围绕 AI 编程智能体设计脚手架、工具链和提示词环境的专业能力——定位为一门新兴独立学科，其核心在于系统性地识别智能体的失误点，并逐步建立对各自动化环节的信心。
 
-In this Latent Space episode, Ryan Lopopolo from OpenAI's Frontier team reveals that his team built a million-line codebase over five months without writing a single line of code themselves — and achieved roughly 10x faster development than traditional engineering. Working exclusively with Codex CLI and enforcing a strict "no human code" constraint, Lopopolo treated the limitation as a forcing function to build robust agent tooling and smaller composable building blocks. A surprising engineering insight emerged when upgrading from GPT-4o to later models: behavioral changes in the Codex harness (specifically the introduction of background shells in GPT-4.1) forced a complete build system overhaul — cycling through Make, Bazel, Turbo, and finally NX — just to keep build times under one minute so the agent wouldn't lose patience. Lopopolo argues this experience demonstrates that current coding models and harnesses are sufficiently capable to be "isomorphic" to a skilled engineer, and that the key discipline is systems thinking: identifying where the agent fails and iteratively eliminating those failure points rather than reverting to manual work.
+In this Latent Space episode, Ryan Lopopolo from OpenAI's Frontier team reveals that his team built a million-line codebase over five months without writing a single line of code themselves, achieving roughly 10x faster development than a traditional engineering approach. Working exclusively through the Codex CLI harness, Lopopolo imposed a self-constraint of zero human-written code to prove that AI agents could fully replicate an engineer's output — a thesis he now considers validated. A particularly striking operational detail emerged around model generations: when GPT-4.1 (o3/codex) introduced background shell capabilities, the model became less patient with slow builds, forcing the team to overhaul their entire build system to complete in under one minute, cycling through Make, Bazel, Turbo, and finally NX in roughly a week. Lopopolo frames "harness engineering" — the discipline of designing the scaffolding, tooling, and prompting environment around AI coding agents — as an emerging, distinct craft requiring systems-thinking to identify where agents fail and how to build confidence in each automated layer of the SDLC.
 
 🔗 https://www.youtube.com/@LatentSpacePod
 
 📎 Notion 存档
-https://notion.so/AI-Builders-Digest-2026-04-09-33d941f9890481f4820ce9fedb16d24b
+https://notion.so/AI-Builders-Digest-2026-04-09-33d941f989048141be19fdf3da60d906
