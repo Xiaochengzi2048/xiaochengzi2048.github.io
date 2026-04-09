@@ -1,83 +1,203 @@
-🗞 AI Builders 日报 · 2026.04.08
+🗞 AI Builders 日报 · 2026.04.09
 
 
 🐦 X / Twitter
 
-① Peter Yang · Product @ Roblox / AI Educator
+① Swyx · AI Engineer & Podcaster
 
-在一场关于AI agent与未来工作的对话中，核心观点是：编程能力将逐渐渗透所有知识型工作——AI agent可以完成文档撰写、幻灯片制作、数据分析等任务的前80%，人类只需负责最后20%的精细打磨。他同时批评以token用量衡量生产力的做法，认为这和用代码行数衡量产出一样荒谬。
-
----
-
-In a discussion about AI agents and the future of work, the key insight is that coding will increasingly handle all knowledge work — with AI agents completing the first 80% of tasks like docs, slides, and analytics, leaving humans to polish the remaining 20%. He also pushes back on measuring productivity by token usage, calling it as misguided as measuring output by lines of code written.
-
-🔗 https://x.com/petergyang/status/2041331383344443795
-
-
-② Thariq · Engineer @ Anthropic (Claude Code)
-
-Claude Code团队将在太平洋时间下午12点的直播中展示一个尚未发布的新功能。他们同时正在收集MAX 20x套餐提前耗尽token的用户反馈，目标是改进`/usage`界面，提供更详细的使用信息。
+Swyx 分享了 Simon Willison 关于 AI 安全领域术语命名的讨论，比较了"prompt injection"与"lethal trifecta"两个概念的清晰度差异。他还对亚马逊最新的 AI 相关发布表示期待，并计划亲自尝试。
 
 ---
 
-The Claude Code team is previewing an unreleased feature in an upcoming live demo scheduled for 12pm PT. They are also gathering feedback from users whose MAX 20x plans ran out of tokens unexpectedly, aiming to improve the `/usage` interface with more detailed information.
+Swyx highlighted a discussion by Simon Willison comparing the naming clarity of "prompt injection" versus "lethal trifecta" in AI security. He also expressed excitement about Amazon's latest AI-related announcement and plans to try it out himself.
 
-🔗 https://x.com/trq212/status/2041380183295590471
-
-
-③ Aaron Levie · CEO @ Box
-
-随着AI agent承担越来越多的实际工作，人类的工作重心上移了一个抽象层级——新的核心任务变成了如何向agent下达清晰指令、提供必要上下文，以及在agent偏离目标时及时介入。人类的角色正逐渐从直接执行转变为统筹协调与审查把关。
-
----
-
-As AI agents take on more work, human labor shifts up a layer of abstraction — the new job becomes crafting clear instructions for agents, providing the right context, and intervening when they go off track. The role of humans is increasingly about orchestration and review rather than direct execution.
-
-🔗 https://x.com/levie/status/2041347596342460439
+🔗 https://x.com/swyx/status/2041739250421436591
 
 
-④ Garry Tan · President & CEO @ YCombinator
+② Kevin Weil · VP Science @ OpenAI
 
-YC的AI Stack计划为开发者提供价值2.5万美元的免费额度，与专注于技能培训的GStack项目有所区分。他同时警示了Claude编程环境中的一个安全漏洞——该漏洞可被利用来窃取Cowork用户文件，最初由安全研究员Johann Rehberger在Cowork上线前披露，目前尚未修复。
+OpenAI 科学副总裁宣布推出名为 Paper Review 的新工具，基于 Codex 构建，能像严格的技术审稿人一样检查论文中的数学推导、符号使用、逻辑一致性，以及论文结论是否有数据支撑。该产品作为 Codex 技能快速开发完成，现已上线供用户使用。
 
 ---
 
-YC is offering $25K in free credits through its AI Stack program, separate from GStack which focuses on free skills. He also flagged a security vulnerability in Claude's coding environment that can be exploited to exfiltrate user files from Cowork, originally disclosed by researcher Johann Rehberger before Cowork existed.
+OpenAI's VP of Science announced a new tool called Paper Review, built on Codex, which acts as a rigorous technical reviewer — checking math, derivations, notation, logic consistency, and whether a paper's claims are supported by results. The product was built quickly as a Codex-powered skill and is now live for users to try.
 
-🔗 https://x.com/garrytan/status/2041389865426878807
-
-
-⑤ Zara Zhang · Independent Builder / Developer
-
-他正在利用Fish Audio API生成个性化播客，并计划近期发布相关技能工具。他还强调，在上线AI产品之前，最重要的一步是决定砍掉哪些功能，而不是一味地堆砌新功能。
-
----
-
-He is experimenting with the Fish Audio API to generate personalized podcasts and plans to release a related skill soon. He also emphasizes that before shipping an AI-powered product, the most important step is deciding what features to cut, not what to add.
-
-🔗 https://x.com/zarazhangrui/status/2041225124490420239
+🔗 https://x.com/kevinweil/status/2041592093718749659
 
 
-⑥ Nikunj Kothari · Partner @ FPV Ventures
+③ Peter Yang · AI Educator & Product Lead
 
-Anthropic近期营收增长势头惊人，过去三个月新增210亿美元，仅上个月的年化运营收入就增加了110亿美元。这些数字表明Anthropic正以极快速度成长为AI领域举足轻重的商业力量。
+Peter 对 Anthropic 发布的 Mythos 模型表示关注，好奇 Anthropic 是否已在内部使用该模型来支撑其近期快速的产品发布节奏。他还分享了一条轻松的个人动态，记录了自己绕湖跑步的经历。
 
 ---
 
-Anthropic has seen extraordinary revenue growth, adding $21B in the last three months and $11B in annualized run rate revenue in just the past month. The numbers signal Anthropic's rapid acceleration as a major commercial force in AI.
+Peter commented on Anthropic's Mythos announcement with curiosity about whether the company has been using the model internally to fuel its recent rapid shipping velocity. He also shared a lighthearted personal post about running around a lake.
 
-🔗 https://x.com/nikunj/status/2041291304387444991
+🔗 https://x.com/petergyang/status/2041678988318543908
 
 
-⑦ Dan Shipper · CEO @ Every
+④ Nan Yu · Head of Product @ Linear
 
-他认为AI并不会消除组织层级的必要性——虽然中层管理可能会减少，但专业分工依然至关重要，而基于agent的工作流实际上进一步凸显了层级结构的价值。他的团队还更新了实时AI新闻追踪器，引入新的AI主笔，每30分钟自动发掘并撰写头条报道。
+Linear 产品负责人指出，设计师和工程师在面对问题时往往会直接跳入执行层面，而不是先进行抽象思考。他认为这种思维方式反而让设计师具备成为优秀产品经理的潜质。
 
 ---
 
-He argues that AI does not eliminate the need for organizational hierarchy — while middle management layers may shrink, specialization remains essential, and agent-based workflows actually reinforce the value of hierarchy. The team also updated their real-time AI headline tracker to use a new AI lead writer that finds and publishes top stories every 30 minutes.
+The Head of Product at Linear observed that designers and engineers often default to building immediately when given a problem, rather than thinking through it abstractly first. He argued that this makes designers well-suited to transition into product management roles.
 
-🔗 https://x.com/danshipper/status/2041305658054574561
+🔗 https://x.com/thenanyu/status/2041495924682244275
+
+
+⑤ Cat Wu · Claude Code @ Anthropic
+
+Cat Wu 推荐了 Claude Code CLI 中的 `/powerup` 命令，通过该命令可以了解团队最喜欢的一些鲜为人知的功能，并附上了演示视频。
+
+---
+
+Cat Wu promoted a `/powerup` command in the Claude Code CLI that surfaces the team's favorite lesser-known features. The post was accompanied by a short demo video.
+
+🔗 https://x.com/_catwu/status/2041655441864978552
+
+
+⑥ Thariq · Claude Code @ Anthropic
+
+在完成约 10 次用户调研通话并分析相关记录后，他发现 AI 工作流中开放式的验证步骤往往会消耗大量 token，却不能有效提升输出质量。他计划就如何高效进行验证撰写更多内容，同时宣布将在旧金山举办一场技术写作工作坊。
+
+---
+
+After conducting around 10 user research calls and reviewing additional transcripts, a key finding emerged: open-ended verification in AI workflows can consume a large number of tokens without meaningfully improving output quality. He plans to write more on how to approach verification efficiently, and also announced a technical writing workshop in San Francisco.
+
+🔗 https://x.com/trq212/status/2041722125510377705
+
+
+⑦ Guillermo Rauch · CEO @ Vercel
+
+Vercel CEO 在 Y Combinator 发表演讲，对当前的创业生态表达了强烈的乐观情绪，称赞创始人质量之高，认为当下是几代人难得一遇的创业机会。他比以往更加看好旧金山作为创业中心的地位与时机。
+
+---
+
+Vercel's CEO spoke at Y Combinator and expressed strong optimism about the current startup ecosystem, praising the quality of founders and describing this as a generational opportunity to build. He remains more bullish than ever on San Francisco as the right place and time to build.
+
+🔗 https://x.com/rauchg/status/2041720266154504351
+
+
+⑧ Alex Albert · Research @ Anthropic
+
+Anthropic 研究员 Alex Albert 宣布推出 Claude Mythos Preview，这是继 Claude Opus 4.6 发布仅两个月后推出的新模型，目前已向 Project Glasswing 的合作伙伴开放。他将 Project Glasswing 描述为自己加入 Anthropic 近三年来亲历的 AI 行业中最具历史意义的事件，称其为历史的转折点。
+
+---
+
+Anthropic researcher Alex Albert announced Claude Mythos Preview, a new model released just two months after Claude Opus 4.6, now available to launch partners in Project Glasswing. He described Project Glasswing as possibly the most consequential event he has witnessed in the AI industry since joining Anthropic nearly three years ago, calling it a turning point in history.
+
+🔗 https://x.com/alexalbert__/status/2041579950332113155
+
+
+⑨ Aaron Levie · CEO @ Box
+
+Box CEO 指出，Claude Mythos 再次证明 AI 模型能力的进步并未触顶，各大实验室在关键基准测试上持续取得两位数的显著提升。他强调，AI 编程 agent 带来的生产力跃升正在向更广泛的知识工作领域延伸，agent 能够自主工作数分钟乃至数小时并返回完整的工作成果。
+
+---
+
+Box's CEO highlighted Claude Mythos as proof that AI model capability progress shows no signs of hitting a ceiling, with meaningful double-digit benchmark improvements continuing across labs. He emphasized that the productivity gains seen in AI-powered coding agents are now extending to broader knowledge work, enabling agents to operate autonomously for minutes or hours and return complete work outputs.
+
+🔗 https://x.com/levie/status/2041732610179703100
+
+
+⑩ Ryo Lu · Design @ Cursor
+
+Cursor 的设计师发布了一条简洁的帖子，展示了一种极简的流畅交互方式——点击、绘制、对话，无需多余按钮，强调沉浸式的设计体验，并附上了演示视频。
+
+---
+
+Cursor's designer shared a short, minimalist post showcasing a flow-state UI interaction — click, draw, chat — with no extra buttons, emphasizing seamless in-context design. The post was accompanied by a video demo.
+
+🔗 https://x.com/ryolu_/status/2041564082034372956
+
+
+⑪ Garry Tan · President & CEO @ YCombinator
+
+YC CEO 提出了两个值得关注的技术观察：一是 Claude Code 的 bash 访问权限存在潜在安全漏洞，agent 可能绕过工作区限制向任意文件写入内容；二是当前 AI 时代在理念上呼应了 LISP 的"代码即数据"哲学，只是载体变成了 Markdown。他还对一篇 Yahoo Tech 的文章发表了轻松调侃。
+
+---
+
+YC's CEO made two notable technical observations: first, that Claude Code's bash access creates a potential security gap where agents can write to files outside their workspace; second, that the current AI era echoes LISP's philosophy of "code as data, data as code" — but expressed through Markdown rather than s-expressions. He also shared a lighthearted reaction to a Yahoo Tech article.
+
+🔗 https://x.com/garrytan/status/2041750093414731888
+
+
+⑫ Zara Zhang · Independent Builder
+
+Zara Zhang 推出了一个个性化播客技能，可以将任意内容转换为由两个 AI 主持人主持的播客节目，以 RSS feed 形式发布，可在任意播客应用中收听。她分享了一个有趣的应用场景：将会议记录转化为播客，让 AI 主持人"旁听"对话并发表点评。
+
+---
+
+Zara Zhang introduced a Personalized Podcast skill that converts any content into a podcast hosted by two AI voices, published as an RSS feed listenable in any podcast app. A creative use case she highlighted is remixing meeting transcripts into podcasts where the AI hosts "eavesdrop" on conversations and offer commentary.
+
+🔗 https://x.com/zarazhangrui/status/2041736976630739000
+
+
+⑬ Nikunj Kothari · Partner @ FPV Ventures
+
+FPV Ventures 合伙人警告称，许多早期创始人正将注意力放在曝光度和融资形象上，而非打磨产品和提升用户留存。他建议通过查看公司的更新日志和功能发布频率来判断其是否真正专注于产品，并称赞 Varanasi 兄弟是硅谷被低估的成功案例。
+
+---
+
+FPV Ventures partner cautioned that many early-stage founders are now optimizing for visibility and fundraising optics rather than building solid products with strong retention metrics. He recommends evaluating companies by their changelogs and feature release cadence as a signal of genuine product focus, and also gave a shout-out to the Varanasi brothers as an underrated success story in Silicon Valley.
+
+🔗 https://x.com/nikunj/status/2041757065354293760
+
+
+⑭ Peter Steinberger · Independent AI Builder
+
+Steipete 发布了 CodexBar 0.20，这是一款追踪 16 个 AI 编程工具使用情况和费用的菜单栏应用。新版本新增了对 Perplexity 和 OpenCode Go 的支持，支持无需重新登录即可切换 Codex 账号，修复了 Claude token 和费用因重复条目导致虚高的问题，并改进了费用历史记录的合并逻辑。
+
+---
+
+Steipete released CodexBar 0.20, a menu bar app that tracks AI coding tool usage and costs across 16 providers. New features include support for Perplexity and OpenCode Go, account switching without re-login, a fix for Claude token/cost inflation from duplicate entries, and improved cost history merging.
+
+🔗 https://x.com/steipete/status/2041731877787025448
+
+
+⑮ Dan Shipper · CEO @ Every
+
+Every CEO 神秘地表示某个项目即将完成，并分享了一段关于"OpenClaw 梦境"的趣味可视化内容。他还发布了一条关于"成为 model manager"的简短提示，暗示正在探索 AI 模型管理工作流相关的内容。
+
+---
+
+Every's CEO posted cryptically about being "almost there" on what appears to be a project nearing completion, alongside a playful visualization of what "OpenClaw dreams" look like. He also posted a brief prompt to "be a model manager," suggesting content around AI model management workflows.
+
+🔗 https://x.com/danshipper/status/2041624900046106907
+
+
+⑯ Aditya Agarwal · General Partner @ South Park Commons
+
+South Park Commons 普通合伙人对新发布的 Mythos 模型感到震撼，称其进步之大令人难以置信，并呼吁投资者和创业者共同珍视这一非凡时刻。他还将当下与 Web 2.0 的读写革命相比较，认为 AI 正在让所有软件都变得可分叉、可修改、可定制。
+
+---
+
+South Park Commons GP expressed excitement over the new Mythos model, calling it an "absurd" leap and urging both investors and builders to appreciate the extraordinary nature of this moment. He also drew a parallel between the Web 2.0 read/write era and today's AI-powered ability to fork, remix, and customize all software.
+
+🔗 https://x.com/adityaag/status/2041771160359375001
+
+
+⑰ Sam Altman · CEO @ OpenAI
+
+为庆祝 Codex 周活跃用户突破 300 万，OpenAI 宣布重置使用限额，作为对开发者社区的回馈。Sam Altman 表示，此后每增加 100 万用户都将重置一次，直至达到 1000 万用户为止。
+
+To celebrate reaching 3 million weekly Codex users, OpenAI is resetting usage limits as a gift to the developer community. Sam Altman announced this will happen at every million-user milestone up to 10 million.
+
+🔗 https://x.com/sama/status/2041658719839383945
+
+
+
+🎙 Podcast
+
+Extreme Harness Engineering for Token Billionaires: 1M LOC, 1B toks/day, 0% human code, 0% human review — Ryan Lopopolo, OpenAI Frontier &amp; Symphony
+
+在这期 Latent Space 节目中，OpenAI Frontier 团队的 Ryan Lopopolo 透露，他的团队在五个月内构建了一个超百万行代码的内部代码库，而他本人全程未手写一行代码，最终产出效率约为单人工程师的 10 倍——尽管前一个半月因工具搭建而慢了 10 倍。Lopopolo 将"harness 工程"定义为一门系统性搭建脚手架与任务构件的学科，使 Codex 等 AI 编程智能体能够自主完成完整的软件开发生命周期。一个关键技术细节是：模型行为的变化倒逼基础设施重构——GPT-4.1 引入后台 Shell 后，智能体对长时间构建的耐心下降，团队被迫将整套构建系统从 Make 依次换至 Bazel、Turbo，最终定格 NX，目标是将构建时间压缩到一分钟以内。Lopopolo 认为核心思维转变在于系统性视角：持续定位智能体的失败环节，针对性投入修复，并逐步建立对自动化的信任，让其接管软件开发的每一层。
+
+In this Latent Space episode, Ryan Lopopolo of OpenAI's Frontier team reveals that his team built a million-line internal codebase over five months without writing a single line of code himself, achieving roughly 10x faster output than a solo engineer could manage — despite the first month and a half being 10x *slower* due to tooling investment. Lopopolo describes "harness engineering" as a discipline of systematically building scaffolding and smaller task building blocks that enable AI coding agents like Codex to handle the full software development lifecycle autonomously. A notable technical insight is that model behavior changes forced infrastructure rewrites: GPT-4.1's introduction of background shells made the agent less patient with long-running builds, requiring the team to rebuild their entire build system (cycling through Make, Bazel, Turbo, and finally NX) to complete in under one minute. Lopopolo argues the key mindset shift is systems thinking — constantly diagnosing where the agent fails, investing to fix those failure points, and progressively trusting the automation to own each layer of the SDLC.
+
+🔗 https://www.youtube.com/@LatentSpacePod
 
 📎 Notion 存档
-https://notion.so/AI-Builders-Digest-2026-04-08-33c941f9890481fdbdb6f8126d0175c5
+https://notion.so/AI-Builders-Digest-2026-04-09-33d941f9890481769519d0a459a90696
