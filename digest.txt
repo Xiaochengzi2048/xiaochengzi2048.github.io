@@ -2,66 +2,77 @@
 
 🧠 模型
 
-① Claude Mythos 新模型发布
-Anthropic 正式披露新模型 Claude Mythos Preview，距离 Opus 4.6 发布仅两个月，目前向 Project Glasswing 的合作伙伴开放。Mythos 在关键基准测试上取得两位数增幅，尤其在编程和工具调用能力上表现突出。多位业内人士认为此次发布是 AI 能力进步没有"天花板"的又一有力证明，levie 指出编程 Agent 的生产力提升模式正在向整个知识工作蔓延。
+① Claude Mythos Preview 发布
+Anthropic 正式发布 Claude Mythos Preview，距上一代 Opus 4.6 仅两个月，通过 Project Glasswing 向合作伙伴开放。模型在关键基准测试上实现两位数提升，编程与工具调用能力尤为突出。多位行业观察者认为这标志着 AI 能力跃迁的历史性转折点，模型能力天花板远未到来。
 🔗 https://x.com/alexalbert__/status/2041579950332113155 · https://x.com/levie/status/2041732610179703100 · https://x.com/petergyang/status/2041678988318543908 · https://x.com/adityaag/status/2041771160359375001
 
 🤖 Agent/编程
 
-② Codex 用户里程碑与限额重置
-Sam Altman 宣布 Codex 每周活跃用户突破 300 万，为庆祝这一里程碑将重置使用限额，并承诺此后每增加 100 万用户（直至 1000 万）都会重复此举。这一举措旨在激励开发者持续构建。
+② Codex 突破 300 万周活跃用户，重置用量限制
+Sam Altman 宣布 Codex 周活跃用户突破 300 万，为庆祝这一里程碑，OpenAI 即时重置用量限制，并承诺每增加 100 万用户（直至 1000 万）均会重置一次。这一举措旨在激励开发者持续构建。
 🔗 https://x.com/sama/status/2041658719839383945
 
-③ Claude Code CLI 使用技巧与安全隐患
-_catwu 分享了团队常用的 Claude Code CLI 功能，可通过 `/powerup` 命令查看。garrytan 则指出一个潜在安全漏洞：Claude Code 虽限制了 Write File 工具在工作区外写入，但 Agent 可通过 bash 的 `cat >>` 命令绕过限制写入文件系统任意位置。
-🔗 https://x.com/_catwu/status/2041655441864978552 · https://x.com/garrytan/status/2041750093414731888
+③ Claude Code 安全漏洞 & CLI 使用技巧
+garrytan 指出 Claude Code 的一个潜在安全问题：虽然 Write File 工具被限制在工作区内，但通过 bash 的 `cat >>` 命令可以向工作区外任意文件写入内容，存在绕过沙箱的风险。与此同时，_catwu 分享了团队内部最喜欢的 Claude Code CLI 功能，可通过 `/powerup` 命令获取。
+🔗 https://x.com/garrytan/status/2041750093414731888 · https://x.com/_catwu/status/2041655441864978552
 
-④ CodexBar 多模型成本追踪工具更新
-CodexBar 发布 0.20 版本，新增 Perplexity 和 OpenCode Go 两个提供商，支持无需重新登录切换 Codex 账号，修复了 Claude token/费用重复计算导致的虚高问题，并优化了费用历史统计方式，目前共追踪 16 个 AI 提供商。
+④ CodexBar 0.20 更新
+CodexBar 0.20 发布，新增 Perplexity 和 OpenCode Go 两个提供商，支持免重新登录切换 Codex 账户，修复了因重复请求导致的 Claude token/费用虚高问题，并优化了历史费用统计逻辑。目前已追踪 16 个 AI 提供商，以菜单栏形式呈现。
 🔗 https://x.com/steipete/status/2041731877787025448
 
-⑤ Agent 验证流程中的 token 效率问题
-trq212 在对 Agent 工作流进行约 10 次深度调研后发现，开放式验证流程极易消耗大量 token 却并不能显著提升输出质量。他计划撰文分享如何高效设计验证步骤，避免无效 token 浪费。
+⑤ Agent 验证中 Token 效率问题
+trq212 在进行大量 Agent 工作流访谈和 transcript 分析后发现：开放式验证步骤容易消耗大量 token，但对输出质量的提升十分有限。他计划撰文分享如何高效设计验证流程，避免无效 token 浪费。
 🔗 https://x.com/trq212/status/2041722125510377705
 
 🔒 安全
 
-⑥ Prompt Injection 命名与认知影响
-swyx 引用 Simon Willison 的观点，讨论"prompt injection"与"lethal trifecta"等安全术语在命名上的自明性差异。术语的直观程度直接影响从业者对安全风险的感知与传播效果。
+⑥ Prompt Injection 命名与安全概念讨论
+swyx 引用 Simon Willison 关于安全术语命名的观点，对比"prompt injection"与"lethal trifecta"两个概念在自明性上的差异，指出好的安全概念命名对于传播和理解至关重要。
 🔗 https://x.com/swyx/status/2041739250421436591
 
 🛠 产品/应用
 
-⑦ OpenAI Prism 科研论文审阅工具
-OpenAI 推出 Prism 产品中的 Paper Review 功能，由 Codex 驱动，能像严格的技术审稿人一样检查论文中的数学推导、符号、单位、结构以及图表和章节间的一致性，而非仅做语法检查。该功能由 @hemal 在数小时内构建完成，目前已在 Prism 官网上线，团队正在招募首席设计师。
+⑦ OpenAI Prism — AI 论文审阅工具
+OpenAI 推出 Prism 科研工具，其中 Paper Review 功能由 Codex 驱动，可像严格的技术审稿人一样检查论文的数学推导、符号、单位、结构，以及图表与正文的一致性。该功能由团队成员 @hemal 在数小时内构建完成，目前已在 prism.ai 上线。
 🔗 https://x.com/kevinweil/status/2041592093718749659
 
-⑧ Prism 个性化播客技能
-zarazhangrui 介绍了 Prism 平台上的个性化播客技能，可将任意内容（包括会议记录）转化为双 AI 主持的播客节目，并发布为 RSS Feed，支持在常用播客应用中收听。她演示了将自己的会议记录"改编"为 AI 主持人点评对话的有趣用法。
-🔗 https://x.com/zarazhangrui/status/2041736976630739000
+⑧ Prism 个性化播客技能 & AI 绘图工具
+zarazhangrui 为 Prism 构建了"个性化播客"技能，可将任意内容（如会议记录）转化为双主播 AI 播客，并发布为 RSS 订阅源。ryolu_ 则展示了一款极简 AI 绘图聊天工具，强调无需额外按钮、直接在流程中操作。
+🔗 https://x.com/zarazhangrui/status/2041736976630739000 · https://x.com/ryolu_/status/2041564082034372956
 
 📈 商业/观点
 
-⑨ 早期创业者应聚焦产品而非流量
-nikunj 观察到越来越多的早期创始人开始优化曝光度和融资，而非专注于产品打磨和留存率，并指出这一趋势已开始在产品质量上显现问题。他建议通过查看更新日志和案例研究来判断一家公司是否真正在做产品。
+⑨ AI Agent 将重塑知识工作
+levie 认为 AI Agent 在编程领域的生产力提升正在向所有知识工作蔓延，Agent 将能独立完成数分钟乃至数小时的完整工作任务，而非仅仅充当聊天机器人。adityaag 则将这一趋势类比为 Web 2.0 对网页的改造——所有软件都将变得可 fork、可修改、可混搭。
+🔗 https://x.com/levie/status/2041732610179703100 · https://x.com/adityaag/status/2041771160359375001
+
+⑩ 早期创业者应聚焦产品与留存，而非流量
+nikunj 观察到越来越多早期创业者开始优化曝光量和融资，而非专注于产品打磨和用户留存，认为这是一个值得警惕的趋势。他建议通过查看更新日志和案例研究来判断一家公司是否真正以产品为核心。
 🔗 https://x.com/nikunj/status/2041757065354293760
 
-⑩ YC 演讲：创业黄金时代
-Vercel CEO rauchg 在 YC 演讲后表示对当前创业环境比以往任何时候都更看好，认为现在是数代人中构建公司的最佳城市、最佳时机、最佳机遇。
+⑪ YC 演讲：对当前创业时机极度看好
+Vercel CEO rauchg 在 YC 发表演讲后表示，对当前创业机会比以往任何时候都更加乐观，认为现在是几代人中最好的创业时机，旧金山是最佳城市。
 🔗 https://x.com/rauchg/status/2041720266154504351
-
-⑪ 设计师转型 PM 的潜力
-thenanyu 指出，设计师和工程师在脱离工具（Figma/IDE）的情况下往往更擅长抽象地思考产品问题，但一旦拿起工具就倾向于直接动手执行而非深入思考需求。他认为更多设计师应该考虑转型做产品经理，因为他们天然具备产品思维。
-🔗 https://x.com/thenanyu/status/2041495924682244275
 
 
 🎙 Podcast
 
 Extreme Harness Engineering for Token Billionaires: 1M LOC, 1B toks/day, 0% human code, 0% human review — Ryan Lopopolo, OpenAI Frontier &amp; Symphony
 
-OpenAI Frontier团队工程师Ryan Lopopolo花费五个月时间，在完全不亲自编写任何代码的前提下，借助Codex AI编程工具构建了一个超过百万行代码的内部企业工具。最令人惊讶的是，尽管最初六周的效率比正常开发慢10倍，但坚持让AI代理完成所有工作的策略，最终使整体效率比单个工程师高出10倍。Lopopolo将"harness工程"定义为一种系统性思维方式，要求开发者识别代理的失误点、将复杂任务拆解为更小的模块，并持续优化AI的运行环境——包括将整个构建流水线重构为一分钟内完成，以适应新模型版本的行为变化。该集还揭示了一个关键规律：随着每代模型能力提升，开发者必须主动调整代码库和工具链，以匹配不同模型各自的"工作风格"。
+在这期 Latent Space 节目中，OpenAI Frontier 团队的 Ryan Lopopolo 披露了一个令人惊讶的事实：他在五个月内构建了一个超过百万行代码的内部代码库，却没有亲手写过一行代码，效率大约是单人工程师的 10 倍。他通过 Codex CLI 全程操作，并为自己设立"零人工代码"的硬性约束，以此真实验证 AI 智能体是否能替代工程师的完整工作流。一个关键的工程洞察是：模型版本迭代（如从 GPT-4.1 到后续版本）会导致智能体行为改变，迫使团队重构整个构建系统——从 Make 迁移到 Bazel、再到 Turbo、最终落在 NX——目的只是让构建循环保持在一分钟以内完成。Lopopolo 将"harness 工程"定义为一门新兴学科，其核心是系统性思维：持续定位智能体的失败点，消除这些问题，并逐层建立对自动化流程的信心。
 
-🔍 搜索：Latent Space · Extreme Harness Engineering for Token Billionaires: 1M LOC,
+🔍 搜索：Latent Space · Extreme Harness Engineering for Token Billionaires: 1M LOC, 
+
+
+📚 论文速报
+
+① 单GPU全精度训练120B模型
+MegaTrain demotes the GPU to a transient compute engine, storing all parameters in CPU memory. Pipeline double-buffering breaks the bandwidth bottleneck.
+
+② DISCO扩散模型联合生成序列与3D结构
+Inference-time scaling extends the search into chemical space nature never explored. Office Agents Hit 53–63% Success but 7–23% Unsafe Operations.
+
+🔗 https://ai-brief.liziran.com/en/daily/2026-04-09-single-gpu-120b-video-benchmark-bias.html
 
 📎 Notion 存档
-https://notion.so/AI-Builders-Digest-2026-04-09-33d941f98904814d9f4ddbc39542a099
+https://notion.so/AI-Builders-Digest-2026-04-09-33d941f989048176bf61de168727bb4e
