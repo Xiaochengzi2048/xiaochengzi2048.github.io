@@ -2,56 +2,56 @@
 
 🧠 模型
 
-① Claude Mythos Preview 发布
-Anthropic 正式发布 Claude Mythos Preview，距上一代 Opus 4.6 仅两个月，通过 Project Glasswing 向合作伙伴开放。模型在关键基准测试上实现两位数提升，编程与工具调用能力尤为突出。多位行业观察者认为这标志着 AI 能力跃迁的历史性转折点，模型能力天花板远未到来。
+① Claude Mythos 新模型发布
+Anthropic 正式披露新模型 Claude Mythos Preview，距 Opus 4.6 发布仅两个月，通过 Project Glasswing 向合作伙伴开放。该模型在关键基准上实现两位数大幅提升，尤其在编程和工具调用能力上表现突出。多位业内人士认为这标志着 AI 能力进步的拐点，模型能力天花板远未到来。
 🔗 https://x.com/alexalbert__/status/2041579950332113155 · https://x.com/levie/status/2041732610179703100 · https://x.com/petergyang/status/2041678988318543908 · https://x.com/adityaag/status/2041771160359375001
+
+② Codex 用户突破 300 万，重置使用限额
+OpenAI 的 Codex 每周活跃用户已达 300 万，Sam Altman 宣布为庆祝这一里程碑重置使用限额，并承诺此后每增加 100 万用户都将重置一次，直至 1000 万用户。
+🔗 https://x.com/sama/status/2041658719839383945
 
 🤖 Agent/编程
 
-② Codex 突破 300 万周活跃用户，重置用量限制
-Sam Altman 宣布 Codex 周活跃用户突破 300 万，为庆祝这一里程碑，OpenAI 即时重置用量限制，并承诺每增加 100 万用户（直至 1000 万）均会重置一次。这一举措旨在激励开发者持续构建。
-🔗 https://x.com/sama/status/2041658719839383945
+③ Claude Code CLI 安全沙箱漏洞观察
+Garry Tan 指出 Claude Code 虽然限制了 Write File 工具在工作区外的使用，但 Agent 可通过 bash 的 `cat >>` 命令绕过这一限制，向文件系统任意位置写入文件，暗示存在潜在的沙箱逃逸风险。
+🔗 https://x.com/garrytan/status/2041750093414731888
 
-③ Claude Code 安全漏洞 & CLI 使用技巧
-garrytan 指出 Claude Code 的一个潜在安全问题：虽然 Write File 工具被限制在工作区内，但通过 bash 的 `cat >>` 命令可以向工作区外任意文件写入内容，存在绕过沙箱的风险。与此同时，_catwu 分享了团队内部最喜欢的 Claude Code CLI 功能，可通过 `/powerup` 命令获取。
-🔗 https://x.com/garrytan/status/2041750093414731888 · https://x.com/_catwu/status/2041655441864978552
-
-④ CodexBar 0.20 更新
-CodexBar 0.20 发布，新增 Perplexity 和 OpenCode Go 两个提供商，支持免重新登录切换 Codex 账户，修复了因重复请求导致的 Claude token/费用虚高问题，并优化了历史费用统计逻辑。目前已追踪 16 个 AI 提供商，以菜单栏形式呈现。
-🔗 https://x.com/steipete/status/2041731877787025448
-
-⑤ Agent 验证中 Token 效率问题
-trq212 在进行大量 Agent 工作流访谈和 transcript 分析后发现：开放式验证步骤容易消耗大量 token，但对输出质量的提升十分有限。他计划撰文分享如何高效设计验证流程，避免无效 token 浪费。
+④ Agent 验证效率优化心得
+trq212 在分析大量 Agent 调用记录后发现，开放式验证步骤会消耗大量 token 却并不能显著提升输出质量。他计划撰文分享如何更高效地设计验证流程，避免无效的 token 浪费。
 🔗 https://x.com/trq212/status/2041722125510377705
+
+⑤ CodexBar 0.20 更新发布
+CodexBar 发布 0.20 版本，新增 Perplexity 和 OpenCode Go 两个提供商，支持多账号免重新登录切换，并修复了 Claude token/费用因重复计算而虚高的 bug，目前共追踪 16 家提供商。
+🔗 https://x.com/steipete/status/2041731877787025448
 
 🔒 安全
 
-⑥ Prompt Injection 命名与安全概念讨论
-swyx 引用 Simon Willison 关于安全术语命名的观点，对比"prompt injection"与"lethal trifecta"两个概念在自明性上的差异，指出好的安全概念命名对于传播和理解至关重要。
+⑥ 提示注入命名与安全意识讨论
+swyx 引用 Simon Willison 的观点，探讨安全术语命名的重要性——"提示注入"（prompt injection）与"致命三元组"（lethal trifecta）等术语的自明性差异，直接影响从业者对安全风险的感知和重视程度。
 🔗 https://x.com/swyx/status/2041739250421436591
 
 🛠 产品/应用
 
 ⑦ OpenAI Prism — AI 论文审阅工具
-OpenAI 推出 Prism 科研工具，其中 Paper Review 功能由 Codex 驱动，可像严格的技术审稿人一样检查论文的数学推导、符号、单位、结构，以及图表与正文的一致性。该功能由团队成员 @hemal 在数小时内构建完成，目前已在 prism.ai 上线。
+OpenAI 推出 Prism 平台的 Paper Review 功能，由 Codex 驱动，能像专业技术审稿人一样检查论文中的数学推导、符号一致性、章节逻辑及图表引用等问题。该功能由工程师 @hemal 仅用数小时构建完成，目前已可在 prism.openai.com 试用。
 🔗 https://x.com/kevinweil/status/2041592093718749659
 
-⑧ Prism 个性化播客技能 & AI 绘图工具
-zarazhangrui 为 Prism 构建了"个性化播客"技能，可将任意内容（如会议记录）转化为双主播 AI 播客，并发布为 RSS 订阅源。ryolu_ 则展示了一款极简 AI 绘图聊天工具，强调无需额外按钮、直接在流程中操作。
-🔗 https://x.com/zarazhangrui/status/2041736976630739000 · https://x.com/ryolu_/status/2041564082034372956
+⑧ Prism 个性化播客技能
+zarazhangrui 介绍了 Prism 平台上的个性化播客技能，可将任意内容（如会议记录）转化为双主持人 AI 播客，并生成 RSS feed 订阅，实现在常用播客 App 中收听。她已将自己的会议转录"改编"成 AI 主播点评对话的播客形式。
+🔗 https://x.com/zarazhangrui/status/2041736976630739000
 
 📈 商业/观点
 
-⑨ AI Agent 将重塑知识工作
-levie 认为 AI Agent 在编程领域的生产力提升正在向所有知识工作蔓延，Agent 将能独立完成数分钟乃至数小时的完整工作任务，而非仅仅充当聊天机器人。adityaag 则将这一趋势类比为 Web 2.0 对网页的改造——所有软件都将变得可 fork、可修改、可混搭。
-🔗 https://x.com/levie/status/2041732610179703100 · https://x.com/adityaag/status/2041771160359375001
+⑨ AI Agent 将重塑知识工作生产力
+Levie 认为 AI Agent 在编程领域展现的生产力提升即将蔓延至所有知识工作，标志着从聊天机器人到真正自主完成任务的 Agent 的质变——Agent 可以独立工作数分钟乃至数小时并返回完整成果。
+🔗 https://x.com/levie/status/2041732610179703100
 
-⑩ 早期创业者应聚焦产品与留存，而非流量
-nikunj 观察到越来越多早期创业者开始优化曝光量和融资，而非专注于产品打磨和用户留存，认为这是一个值得警惕的趋势。他建议通过查看更新日志和案例研究来判断一家公司是否真正以产品为核心。
+⑩ 早期创业者应聚焦产品而非流量
+nikunj 观察到早期创始人越来越倾向于优化曝光度和融资，而非专注于产品质量和用户留存。他建议通过查看更新日志或案例研究来判断一家公司是否真正在做实事，而非单看表面热度。
 🔗 https://x.com/nikunj/status/2041757065354293760
 
-⑪ YC 演讲：对当前创业时机极度看好
-Vercel CEO rauchg 在 YC 发表演讲后表示，对当前创业机会比以往任何时候都更加乐观，认为现在是几代人中最好的创业时机，旧金山是最佳城市。
+⑪ YC 演讲：对 AI 创业时代的乐观判断
+Vercel CEO Guillermo Rauch 在 YC 演讲后表示，对当前创业环境比以往任何时候都更加乐观，认为现在是这一代人最佳的创业时机，旧金山正处于历史性机遇窗口中。
 🔗 https://x.com/rauchg/status/2041720266154504351
 
 
@@ -59,20 +59,26 @@ Vercel CEO rauchg 在 YC 发表演讲后表示，对当前创业机会比以往�
 
 Extreme Harness Engineering for Token Billionaires: 1M LOC, 1B toks/day, 0% human code, 0% human review — Ryan Lopopolo, OpenAI Frontier &amp; Symphony
 
-在这期 Latent Space 节目中，OpenAI Frontier 团队的 Ryan Lopopolo 披露了一个令人惊讶的事实：他在五个月内构建了一个超过百万行代码的内部代码库，却没有亲手写过一行代码，效率大约是单人工程师的 10 倍。他通过 Codex CLI 全程操作，并为自己设立"零人工代码"的硬性约束，以此真实验证 AI 智能体是否能替代工程师的完整工作流。一个关键的工程洞察是：模型版本迭代（如从 GPT-4.1 到后续版本）会导致智能体行为改变，迫使团队重构整个构建系统——从 Make 迁移到 Bazel、再到 Turbo、最终落在 NX——目的只是让构建循环保持在一分钟以内完成。Lopopolo 将"harness 工程"定义为一门新兴学科，其核心是系统性思维：持续定位智能体的失败点，消除这些问题，并逐层建立对自动化流程的信心。
+OpenAI Frontier团队的工程师Ryan Lopopolo花费五个月时间，在完全不亲自编写任何代码的情况下，借助Codex AI编程智能体构建了一个超过百万行代码的企业内部工具，开发速度约为传统方式的10倍。然而最初一个半月实际上比手写慢了10倍，团队必须忍受这一阵痛，投入大量精力搭建可复用的基础构建模块，才换来后期爆发式的生产力提升。一个尤为值得关注的技术细节是：当Codex引入后台Shell执行能力后，模型变得不再愿意等待长时间阻塞任务，迫使团队在一周内将构建系统从Make迁移至Bazel，再到Turbo，最终定格于NX，将构建时间压缩至一分钟以内。Lopopolo由此倡导一门名为"harness工程"的新兴学科，要求开发者以系统性思维持续诊断智能体的失误点，并将精力投入自动化脚手架的建设，而非亲自编码。
 
 🔍 搜索：Latent Space · Extreme Harness Engineering for Token Billionaires: 1M LOC, 
 
 
 📚 论文速报
 
-① 单GPU全精度训练120B模型
+① 单GPU全精度训练1200亿参数
 MegaTrain demotes the GPU to a transient compute engine, storing all parameters in CPU memory. Pipeline double-buffering breaks the bandwidth bottleneck.
 
-② DISCO扩散模型联合生成序列与3D结构
-Inference-time scaling extends the search into chemical space nature never explored. Office Agents Hit 53–63% Success but 7–23% Unsafe Operations.
+② 六成视频问题无需观看即可答
+Two independent papers expose models doing reading comprehension instead of video understanding. Filtering text bias and training on less data improves scores by 6.2 points.
+
+③ AI设计酶无需指定催化位点即超越人工
+DISCO uses diffusion models to jointly generate sequences and 3D structures. Inference-time scaling extends the search into chemical space nature never explored.
+
+④ 办公智能体成功率63%但存在违规操作
+Apple's ClawsBench exposes 8 systematic failure modes in high-fidelity multi-service workspaces. Stronger capability does not mean safer behavior.
 
 🔗 https://ai-brief.liziran.com/en/daily/2026-04-09-single-gpu-120b-video-benchmark-bias.html
 
 📎 Notion 存档
-https://notion.so/AI-Builders-Digest-2026-04-09-33d941f989048176bf61de168727bb4e
+https://notion.so/AI-Builders-Digest-2026-04-09-33d941f9890481cba68bdcc6cbea670b
