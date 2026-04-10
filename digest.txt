@@ -1,95 +1,89 @@
-🗞 AI Builders 日报 · 2026.04.09
+🗞 AI Builders 日报 · 2026.04.10
 
 🧠 模型
 
-① Claude Mythos 新模型发布
-Anthropic 正式公布新模型 Claude Mythos Preview，距 Opus 4.6 发布仅两个月，目前向 Project Glasswing 合作伙伴开放。该模型在关键基准测试上实现了两位数的显著提升，尤其在编程和工具调用方面表现突出。多位业内人士认为这是 AI 能力进步无天花板的又一力证，Anthropic 内部将此次发布视为行业历史性转折点。
-🔗 https://x.com/alexalbert__/status/2041579950332113155 · https://x.com/levie/status/2041732610179703100 · https://x.com/petergyang/status/2041678988318543908 · https://x.com/adityaag/status/2041771160359375001
+① AI 模型攻克 Erdős 数学难题
+kevinweil 展示 AI 模型同时解决五个 Erdős 数学问题，并指出随着模型能力提升，证明过程愈发优雅。这是 AI 在高难度数学推理领域持续突破的最新信号。
+🔗 https://x.com/kevinweil/status/2042073869880848481
+
+② Claude 模型自我偏好偏见问题
+steipete 在开发角色评估（character evals）时发现，Claude 在作为评判者时会持续将自己排在第一位，存在明显的自我偏好偏见。他通过从提示词中移除模型名称来规避这一问题，提示此类偏见可能影响基准测试的可靠性。
+🔗 https://x.com/steipete/status/2042019503907717344
 
 🤖 Agent/编程
 
-② Codex 突破 300 万周活跃用户，重置使用限额
-Sam Altman 宣布 Codex 周活跃用户达到 300 万，为庆祝这一里程碑，OpenAI 重置了使用限制。他表示未来每新增 100 万用户将持续重置，直至 1000 万用户。
-🔗 https://x.com/sama/status/2041658719839383945
+③ 用 Claude Code 帮助非技术用户提升工作流效率
+trq212 计划直播使用 Claude Code 与非技术人员协作，探索少量技巧如何大幅提升工作效率，并指出官方文档是被低估的宝贵资源。他希望从熟识的人开始，降低初次合作的尴尬感。
+🔗 https://x.com/trq212/status/2042005754262208708
 
-③ Claude Code 安全沙箱绕过问题
-Garry Tan 指出 Claude Code 存在一个有趣的安全盲点：虽然限制了 Write File 工具在工作区外的使用，但 Agent 仍可通过 bash 的 `cat >>` 命令向文件系统任意位置写入文件。这揭示了以工具级别限制来约束 Agent 行为时，底层 shell 访问权限可能成为绕过路径。
-🔗 https://x.com/garrytan/status/2041750093414731888
+④ 全公司使用 OpenClaws Agent 改变工作方式
+Every 公司 25 名全职员工全部在公司 Slack 中使用 OpenClaws 个人 Agent，成为全球少数深度验证"Agent 改变工作模式"的团队之一。danshipper 与 COO 和产品负责人深度探讨了这一实践经验，提供了难得的企业级 Agent 落地案例。
+🔗 https://x.com/danshipper/status/2041903948873777629
 
-④ CodexBar 0.20 更新：新增供应商与成本追踪
-CodexBar 发布 0.20 版本，新增 Perplexity 和 OpenCode Go 两个提供商，现已支持 16 个 AI 提供商的菜单栏追踪。本次更新修复了 Claude token/成本重复计算导致的虚高问题，并支持无需重新登录切换 Codex 账户。
-🔗 https://x.com/steipete/status/2041731877787025448
-
-⑤ Agent 验证中的 token 效率问题
-经过约 10 次用户访谈和大量转录分析，发现开放式验证（open-ended verification）会消耗大量 token 却不能有效提升输出质量。作者计划撰写文章分享如何高效设计 Agent 验证流程，避免无效消耗。
-🔗 https://x.com/trq212/status/2041722125510377705
-
-🔒 安全
-
-⑥ Prompt Injection 命名与安全概念传播
-swyx 引用 Simon Willison 的观点，探讨安全概念命名的重要性——"prompt injection" 之所以广为人知，部分原因在于其名称直观易懂，而"lethal trifecta"等术语则因命名不够自明而传播受限。清晰的命名对安全概念的普及至关重要。
-🔗 https://x.com/swyx/status/2041739250421436591
+⑤ SPC 团队全员写代码，AI 工具重塑团队协作
+SPC 团队在两个月内从 1-2 人写代码扩展到全员每周写代码，AI 编程工具不仅提升了效率，更深刻改变了团队的协作方式和思维模式。adityaag 引用"你塑造工具，工具也塑造你"，指出这是组织层面的根本性转变。
+🔗 https://x.com/adityaag/status/2041985720706122070
 
 🛠 产品/应用
 
-⑦ OpenAI Prism 论文审阅功能上线
-OpenAI 推出 Prism 平台的 Paper Review 功能，由 Codex 驱动，定位为严格的技术审稿人而非语法检查工具，能检查数学推导、符号标注、单位、结构以及论文结论与结果的一致性。该功能由工程师 @hemal 仅用数小时作为技能模块构建完成，目前已在 prism.openai.com 上线。
-🔗 https://x.com/kevinweil/status/2041592093718749659
+⑥ Claude Managed Agents 正式发布
+Anthropic 推出 Managed Agents，开发者可通过 Claude Console、Claude Code 或 CLI 构建和部署 Agent，无需自托管即可快速上线。Box、Sentry、Vibecode 等合作伙伴已基于此在数周内完成集成，Replit 也借此为独立开发者提供"整支团队"的能力。alexalbert__ 表示这既是周末快速原型的最佳选择，也足够健壮支撑百万级用户产品。
+🔗 https://x.com/alexalbert__/status/2041941720611614786 · https://x.com/levie/status/2041975669928702370 · https://x.com/claudeai/status/2041927700063883281 · https://x.com/amasad/status/2042133509939298511
 
-⑧ Prism 播客技能：将任何内容转化为播客
-开发者推出 Prism 个性化播客技能，可将任何内容（如会议记录）转化为双 AI 主持人的播客节目，并发布为 RSS 订阅源，支持在常见播客应用中收听。创作者已将自己的会议记录混音为 AI 评论节目，展示了 Codex 驱动技能的灵活扩展性。
-🔗 https://x.com/zarazhangrui/status/2041736976630739000
+⑦ Gemini 推出 Notebooks 功能，整合 NotebookLM 能力
+Gemini App 新增 Notebooks 功能，将 NotebookLM 的核心能力直接集成到产品中，免费支持上传 100 个来源文件，并支持对话记录的分类整理。这一更新让 Gemini 从普通 AI 聊天工具升级为更具组织性的"第二大脑"。
+🔗 https://x.com/joshwoodward/status/2041982173402821018
+
+⑧ LLMwiki —— 用 AI 构建个人知识库
+nikunj 受 Karpathy 和 FarzaTV 启发，开源了 LLMwiki 项目，将推文、书签、iMessage/WhatsApp 记录和个人写作作为输入，用 Opus 4.5 全程 vibe coding 生成个人知识库文章。项目已完全开源，前端设计经过精心打磨。
+🔗 https://x.com/nikunj/status/2042021738083766568
 
 📈 商业/观点
 
-⑨ AI Agent 将重塑知识工作生产力
-Box CEO Aaron Levie 指出，编程领域已验证的 AI Agent 生产力提升模式，正在向所有知识工作蔓延。从聊天机器人到能独立工作数分钟乃至数小时并返回完整成果的 Agent，是知识工作效率的质变跃升。
-🔗 https://x.com/levie/status/2041732610179703100
+⑨ AI 订阅模式的可持续性存疑
+petergyang 在深度文章中分析了 Claude Max、ChatGPT Pro 等无限量订阅模式的长期可行性，探讨了 Anthropic 封禁 OpenClaw 访问的原因，以及在 Mac 本地运行模型和中国市场的最新观察。他认为这种"随便用"的订阅定价模式难以长期维持。
+🔗 https://x.com/petergyang/status/2042118898603192489
 
-⑩ 早期创始人过度优化曝光与融资而非产品
-一位投资人观察到，越来越多的早期创始人将精力放在获取关注度和融资上，而非专注于产品打磨和用户留存。他建议通过查看 changelog 和案例研究来判断一家公司是否真正在构建实质性产品，而非只是制造声量。
-🔗 https://x.com/nikunj/status/2041757065354293760
-
-⑪ 当前是 AI 创业的最佳历史时机
-Vercel CEO Guillermo Rauch 在 YC 演讲后表示，对当前创业环境比以往任何时候都更加乐观，认为现在是几代人中最好的创业城市、时机与机遇的交汇点。
-🔗 https://x.com/rauchg/status/2041720266154504351
+⑩ Vercel 押注 Web 是 AI 的天然媒介
+rauchg 认为 Web 是 AI 的天然载体——LLM 精通 Web 技术，浏览器正成为所有人的 IDE，且无需经过 App Store。Vercel 正在为多个 AI 模型提供基础设施，并推出 AI Gateway 解决停机、供应商锁定、密钥管理和训练数据等问题。他主张多强 AI 竞争对人类最有利。
+🔗 https://x.com/rauchg/status/2041957973531226372
 
 
 🎙 Podcast
 
-Extreme Harness Engineering for Token Billionaires: 1M LOC, 1B toks/day, 0% human code, 0% human review — Ryan Lopopolo, OpenAI Frontier &amp; Symphony
+We Gave Every Employee an AI Agent. Here's What Happened.
 
-OpenAI Frontier团队工程师Ryan Lopopolo花费五个月时间，借助Codex AI编程工具构建了一个超过100万行代码的企业内部工具，全程未亲自编写一行代码。最令人意外的是，项目初期一个半月的效率比手动开发慢了10倍，但通过持续搭建完善的智能体工具链，最终实现了整体效率提升10倍。团队还需不断适应每一代新模型的特性变化——例如GPT-4o引入后台Shell功能后，他们被迫将整个构建系统从Make迁移至Bazel，再到Turbo，最终定格于NX，以确保编译时间控制在一分钟以内。Lopopolo强调，AI辅助开发需要"系统性思维"：持续定位智能体的失误环节，将复杂任务拆解为更小的构建模块，而非强行让模型完成超出其能力范围的任务。
+每人媒体公司（Every）为全体员工配备了基于Claude的个人AI代理，效果显著，甚至促使他们推出了自己的托管服务PlusOne。最令人意外的发现是：个人化AI代理会成为用户身份的延伸——同事们会因为信任某人本身，而同样信任其代理的输出。首席运营官Brandon最初只是用他的代理"Zosia"处理家务"电脑杂事"，例如管理外卖订单、支付保姆工资、替妻子搜索问题，但用途很快扩展到工作场景。一个关键转折点是：Brandon在步行28分钟上班途中，让Zosia通过语音电话协助他处理邮件，这充分说明——配置代理并不难，真正的挑战在于将其打磨成真正高效的工作伙伴。
 
-🔍 搜索：Latent Space · Extreme Harness Engineering for Token Billionaires: 1M LOC, 
+🔍 搜索：AI & I by Every · We Gave Every Employee an AI Agent. Here's What Happened.
 
 
 📰 行业速报
 
-① 三大实验室押注：AI产业拒绝接受扩展上限
+① 开发者发现Claude将自身指令归咎于用户
 
-② 开发者质疑谁该守护软件供应链安全
+② 佛州调查OpenAI国安问题
 
-③ 研究者称AI使思维趋同，开发者视之为优势
+③ OpenAI定价百美元测试用户付费意愿
 
-🔗 https://ai-digest.liziran.com/en/digest/2026-04-09-three-labs-double-down-scaling-researchers-warn-ai.html
+🔗 https://ai-digest.liziran.com/en/digest/2026-04-10-developers-catch-claude-quietly-blaming-users-own-commands.html
 
 
 📚 论文速报
 
-① 单GPU全精度训练1200亿参数，比DeepSpeed快1.84倍
-MegaTrain demotes the GPU to a transient compute engine, storing all parameters in CPU memory. Pipeline double-buffering breaks the bandwidth bottleneck.
+① 稳定熵不等于健康推理
+RAGEN-2 exposes "template collapse" in agentic RL: models learn fixed templates for all inputs while entropy looks perfectly fine. Mutual information is the more reliable training signal.
 
-② 40-60%视频问题无需观看视频即可回答
-Two independent papers expose models doing reading comprehension instead of video understanding. Filtering text bias and training on less data improves scores by 6.2 points.
+② Meta想让模型成为计算机
+Neural Computer unifies computation, memory, and I/O inside the model itself. The concept is provocative, but core challenges remain unsolved.
 
-③ AI设计酶无需指定催化位点即超越人工设计
-DISCO uses diffusion models to jointly generate sequences and 3D structures. Inference-time scaling extends the search into chemical space nature never explored.
+③ 隐式推理有深度上限
+Even the largest models top out at 7 latent planning steps. Scaling doesn't break through, which gives experimental backing to CoT monitoring as a safety premise.
 
-④ Office智能体成功率53-63%，但7-23%操作不安全
-Apple's ClawsBench exposes 8 systematic failure modes in high-fidelity multi-service workspaces. Stronger capability does not mean safer behavior.
+④ 难样本未必助益GRPO
+Problems beyond a small model's capacity contribute almost no learning signal. A low-difficulty subset matches full-dataset performance while saving 55% of compute.
 
-🔗 https://ai-brief.liziran.com/en/daily/2026-04-09-single-gpu-120b-video-benchmark-bias.html
+🔗 https://ai-brief.liziran.com/en/daily/2026-04-10-entropy-lies-latent-reasoning-depth-ceiling.html
 
 📎 Notion 存档
-https://notion.so/AI-Builders-Digest-2026-04-09-33d941f989048105b62cfa9c439530a7
+https://notion.so/AI-Builders-Digest-2026-04-10-33e941f9890481dd8ccfe78946b4cc68
