@@ -1,89 +1,83 @@
-🗞 AI Builders 日报 · 2026.04.10
+🗞 AI Builders 日报 · 2026.04.11
 
 🧠 模型
 
-① AI 模型攻克 Erdős 数学难题
-kevinweil 展示 AI 模型同时解决五个 Erdős 数学问题，并指出随着模型能力提升，证明过程愈发优雅。这是 AI 在高难度数学推理领域持续突破的最新信号。
-🔗 https://x.com/kevinweil/status/2042073869880848481
+① Claude Sonnet + Opus 顾问工具提升性能
+Anthropic 推出 Advisor Tool（Beta），允许 Sonnet/Haiku agent 在遇到复杂决策时"打电话给 Opus"获取建议，整个过程在单次 API 请求内完成。评测显示，Sonnet+Opus 顾问组合在 SWE-bench Multilingual 上比单独 Sonnet 高 2.7 个百分点，同时每次任务成本降低 11.9%。petergyang 也观察到目前没有任何模型在 OpenClaw 场景下接近 Opus 的水平。
+🔗 https://x.com/claudeai/status/2042308629940855048 · https://x.com/alexalbert__/status/2042329150086922574 · https://x.com/petergyang/status/2042472016566239320
 
-② Claude 模型自我偏好偏见问题
-steipete 在开发角色评估（character evals）时发现，Claude 在作为评判者时会持续将自己排在第一位，存在明显的自我偏好偏见。他通过从提示词中移除模型名称来规避这一问题，提示此类偏见可能影响基准测试的可靠性。
-🔗 https://x.com/steipete/status/2042019503907717344
+② Google Gemini Lyria 3 音乐模型向用户全面开放
+Google Gemini App 上线 50 天内已生成超过 1 亿首歌曲，为庆祝这一里程碑，音乐模型 Lyria 3 现免费向所有用户开放，每天可生成最多 5 首完整曲目（每首约 3 分钟）。官方表示后续还将推出更多创意模型回复功能。
+🔗 https://x.com/joshwoodward/status/2042318148851188151
 
 🤖 Agent/编程
 
-③ 用 Claude Code 帮助非技术用户提升工作流效率
-trq212 计划直播使用 Claude Code 与非技术人员协作，探索少量技巧如何大幅提升工作效率，并指出官方文档是被低估的宝贵资源。他希望从熟识的人开始，降低初次合作的尴尬感。
-🔗 https://x.com/trq212/status/2042005754262208708
+③ Claude Code 功能更新：Bedrock/Vertex 集成 & Monitor Tool
+Anthropic 已大幅简化 Claude Code 与 AWS Bedrock 及 Google Vertex 的配置流程，降低企业接入门槛。此外，Claude Code 新增 Monitor Tool，可监听开发服务器的实时错误输出，需在 prompt 中显式调用（如"start my dev server and use the MonitorTool to observe for errors"）。
+🔗 https://x.com/_catwu/status/2042345489778331915 · https://x.com/trq212/status/2042335178388103559
 
-④ 全公司使用 OpenClaws Agent 改变工作方式
-Every 公司 25 名全职员工全部在公司 Slack 中使用 OpenClaws 个人 Agent，成为全球少数深度验证"Agent 改变工作模式"的团队之一。danshipper 与 COO 和产品负责人深度探讨了这一实践经验，提供了难得的企业级 Agent 落地案例。
-🔗 https://x.com/danshipper/status/2041903948873777629
+④ Agentic 基础设施成为云计算新方向
+Vercel CEO rauchg 指出，Agentic Infrastructure 是云计算的未来：一方面为 Claude Code、Codex、Cursor 等编程 agent 提供专属基础设施；另一方面支持长时运行、沙箱隔离和 token 分发网络，以部署生产级 agent。shadcn init 每秒被执行一次，印证了新软件创建规模的急剧扩大。
+🔗 https://x.com/rauchg/status/2042358253510963384
 
-⑤ SPC 团队全员写代码，AI 工具重塑团队协作
-SPC 团队在两个月内从 1-2 人写代码扩展到全员每周写代码，AI 编程工具不仅提升了效率，更深刻改变了团队的协作方式和思维模式。adityaag 引用"你塑造工具，工具也塑造你"，指出这是组织层面的根本性转变。
-🔗 https://x.com/adityaag/status/2041985720706122070
+⑤ GBrain：为 OpenClaw/Hermes Agent 提供万级文件记忆
+YC 合伙人 garrytan 开源了 GBrain 工具（MIT 协议），专为 OpenClaw 和 Hermes Agent 设计，可让 agent 对 10,000+ 个 Markdown 文件实现完整的长期记忆召回。项目部署在 Railway 上，安装脚本通用于两种 agent。
+🔗 https://x.com/garrytan/status/2042497872114090069
 
-🛠 产品/应用
-
-⑥ Claude Managed Agents 正式发布
-Anthropic 推出 Managed Agents，开发者可通过 Claude Console、Claude Code 或 CLI 构建和部署 Agent，无需自托管即可快速上线。Box、Sentry、Vibecode 等合作伙伴已基于此在数周内完成集成，Replit 也借此为独立开发者提供"整支团队"的能力。alexalbert__ 表示这既是周末快速原型的最佳选择，也足够健壮支撑百万级用户产品。
-🔗 https://x.com/alexalbert__/status/2041941720611614786 · https://x.com/levie/status/2041975669928702370 · https://x.com/claudeai/status/2041927700063883281 · https://x.com/amasad/status/2042133509939298511
-
-⑦ Gemini 推出 Notebooks 功能，整合 NotebookLM 能力
-Gemini App 新增 Notebooks 功能，将 NotebookLM 的核心能力直接集成到产品中，免费支持上传 100 个来源文件，并支持对话记录的分类整理。这一更新让 Gemini 从普通 AI 聊天工具升级为更具组织性的"第二大脑"。
-🔗 https://x.com/joshwoodward/status/2041982173402821018
-
-⑧ LLMwiki —— 用 AI 构建个人知识库
-nikunj 受 Karpathy 和 FarzaTV 启发，开源了 LLMwiki 项目，将推文、书签、iMessage/WhatsApp 记录和个人写作作为输入，用 Opus 4.5 全程 vibe coding 生成个人知识库文章。项目已完全开源，前端设计经过精心打磨。
-🔗 https://x.com/nikunj/status/2042021738083766568
+⑥ OpenAI Codex 获好评，推出 $100 ChatGPT Pro 新档位
+OpenAI CEO Sam Altman 表示 Codex 获得了大量用户喜爱，因此应用户强烈需求，OpenAI 即将推出 $100/月的 ChatGPT Pro 新订阅档位。
+🔗 https://x.com/sama/status/2042342572958630332
 
 📈 商业/观点
 
-⑨ AI 订阅模式的可持续性存疑
-petergyang 在深度文章中分析了 Claude Max、ChatGPT Pro 等无限量订阅模式的长期可行性，探讨了 Anthropic 封禁 OpenClaw 访问的原因，以及在 Mac 本地运行模型和中国市场的最新观察。他认为这种"随便用"的订阅定价模式难以长期维持。
-🔗 https://x.com/petergyang/status/2042118898603192489
+⑦ AI 能力认知鸿沟正在扩大
+Karpathy 指出，许多人因长期停留在 ChatGPT 免费层而对 AI 能力认知严重滞后，而真正使用最新 agentic 模型的用户则对 AI 理解截然不同；"OpenClaw 时刻"之所以影响巨大，正是因为它首次让大批非技术用户直接体验了最新 agent。Levie 进一步指出，AI 采用呈现"两座城市"格局——大多数用户停留在聊天工具层，少数人已在部署长时运行 agent 执行真实生产任务，后者的生产力差距将越来越大。
+🔗 https://x.com/karpathy/status/2042341482531864741 · https://x.com/levie/status/2042469771275329594
 
-⑩ Vercel 押注 Web 是 AI 的天然媒介
-rauchg 认为 Web 是 AI 的天然载体——LLM 精通 Web 技术，浏览器正成为所有人的 IDE，且无需经过 App Store。Vercel 正在为多个 AI 模型提供基础设施，并推出 AI Gateway 解决停机、供应商锁定、密钥管理和训练数据等问题。他主张多强 AI 竞争对人类最有利。
-🔗 https://x.com/rauchg/status/2041957973531226372
+⑧ Prompting 是高价值长期技能
+trq212 和 levie 均认为"提示工程"不会消亡，而是类似写作或公开演讲的高杠杆沟通技能——本质是向 agent 清晰传达完成任务所需的一切信息。trq212 将其定位为扩大人类与 agent 之间"带宽"的核心能力。
+🔗 https://x.com/trq212/status/2042335178388103559 · https://x.com/levie/status/2042469771275329594
+
+⑨ 软件自动化的真实需求被严重低估
+Levie 认为业界普遍低估了"非传统软件"领域的自动化需求——不是手机上多一个 app，而是为企业全天候自动化各类流程的后台软件。大多数公司此前根本没有能力构建这类软件，AI agent 正在打开这扇门。
+🔗 https://x.com/levie/status/2042469771275329594
 
 
 🎙 Podcast
 
-We Gave Every Employee an AI Agent. Here's What Happened.
+Ep 84: OpenAI’s Chief Scientist on Continual Learning Hype, RL Beyond Code, &amp; Future Alignment Directions
 
-每人媒体公司（Every）为全体员工配备了基于Claude的个人AI代理，效果显著，甚至促使他们推出了自己的托管服务PlusOne。最令人意外的发现是：个人化AI代理会成为用户身份的延伸——同事们会因为信任某人本身，而同样信任其代理的输出。首席运营官Brandon最初只是用他的代理"Zosia"处理家务"电脑杂事"，例如管理外卖订单、支付保姆工资、替妻子搜索问题，但用途很快扩展到工作场景。一个关键转折点是：Brandon在步行28分钟上班途中，让Zosia通过语音电话协助他处理邮件，这充分说明——配置代理并不难，真正的挑战在于将其打磨成真正高效的工作伙伴。
+OpenAI首席科学家Ako Paioki透露，公司正按计划推进目标：在今年9月前实现"研究实习生级别"的AI系统，并在2028年3月前完成全自动化AI研究员的构建，目前OpenAI内部已将Codex工具用于处理大部分编程工作。Paioki将这两个里程碑区分为：系统能够在多大程度上自主运行以及任务的具体程度，但强调"解决对齐问题"这类开放性指令在短期内仍无法实现。数学和物理基准测试因其可验证性和难度的可扩展性，成为模型能力提升的关键参照系，近期在这些领域的突破预示着通用智能的实质性进步。在对齐研究方面，Paioki强调长期核心挑战在于价值观的泛化——即理解模型在陌生情境下会回归哪些默认价值观——并将持续学习定位为当前研究的核心方向，而非被忽视的问题。
 
-🔍 搜索：AI & I by Every · We Gave Every Employee an AI Agent. Here's What Happened.
+🔍 搜索：Unsupervised Learning · Ep 84: OpenAI’s Chief Scientist on Continual Learning Hype, 
 
 
 📰 行业速报
 
-① 开发者发现Claude将自身指令归咎于用户
+① OpenAI游说免责同期首例深度伪造定罪
 
-② 佛州调查OpenAI国安问题
+② 微软悄然移除自家Copilot按键
 
-③ OpenAI定价百美元测试用户付费意愿
+③ 两篇论文挑战RL泛化SFT记忆共识
 
-🔗 https://ai-digest.liziran.com/en/digest/2026-04-10-developers-catch-claude-quietly-blaming-users-own-commands.html
+🔗 https://ai-digest.liziran.com/en/digest/2026-04-11-microsoft-quietly-rips-out-own-copilot-buttons.html
 
 
 📚 论文速报
 
-① 稳定熵不等于健康推理
-RAGEN-2 exposes "template collapse" in agentic RL: models learn fixed templates for all inputs while entropy looks perfectly fine. Mutual information is the more reliable training signal.
+① 微调可让LLM每步输出多词
+MARS needs no architecture changes and no extra parameters. Qwen2.5-7B hits 1.71x wall-clock speedup with near-zero migration cost.
 
-② Meta想让模型成为计算机
-Neural Computer unifies computation, memory, and I/O inside the model itself. The concept is provocative, but core challenges remain unsolved.
+② 图像自编码器崩溃非通道问题
+TC-AE shows the real bottleneck is token utilization. A two-stage compression path fixes it without adding complexity.
 
-③ 隐式推理有深度上限
-Even the largest models top out at 7 latent planning steps. Scaling doesn't break through, which gives experimental backing to CoT monitoring as a safety premise.
+③ 世界模型兼顾空间一致性与实时性
+INSPATIO-WORLD splits the two concerns into separate modules, generating navigable 4D scenes from a single video input.
 
-④ 难样本未必助益GRPO
-Problems beyond a small model's capacity contribute almost no learning signal. A low-difficulty subset matches full-dataset performance while saving 55% of compute.
+④ 扩散模型RL对齐无需全精度
+FP4 for exploration, BF16 for training. Convergence speeds up by up to 4.64x with no quality loss.
 
-🔗 https://ai-brief.liziran.com/en/daily/2026-04-10-entropy-lies-latent-reasoning-depth-ceiling.html
+🔗 https://ai-brief.liziran.com/en/daily/2026-04-11-fine-tune-multi-token-autoencoder-token-collapse.html
 
 📎 Notion 存档
-https://notion.so/AI-Builders-Digest-2026-04-10-33e941f9890481dd8ccfe78946b4cc68
+https://notion.so/AI-Builders-Digest-2026-04-11-33f941f9890481518d1ff99620805d11
