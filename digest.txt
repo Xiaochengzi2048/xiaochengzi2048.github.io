@@ -2,62 +2,58 @@
 
 🤖 Agent/编程
 
-① Claude Code 上下文窗口管理技巧
-Claude Code 的 100 万 token 超长上下文窗口是把双刃剑——虽然支持更复杂任务，但也可能带来上下文污染问题。开发者可通过设置 `CLAUDE_CODE_AUTO_COMPACT_WINDOW` 环境变量（如 40 万 token）来自定义自动压缩阈值，从而更好地管理会话质量。
+① Claude Code 上下文窗口管理最佳实践
+Claude Code 的 100 万 token 上下文窗口是双刃剑——虽然支持更复杂的任务，但也容易造成上下文污染。作者建议通过设置 `CLAUDE_CODE_AUTO_COMPACT_WINDOW=400000` 等参数主动管理会话，并提供了详细的操作指南。
 🔗 https://x.com/trq212/status/2044654705780179011
 
-② Cursor Canvas：为 Agent 构建自定义 UI
-Cursor 推出 `/canvas` 功能，允许开发者为自己的 Agent 构建自定义交互界面，展示了 Agent 工具链正在向更丰富的 UI 层演进。这被视为 Agent 交互未来形态的一个缩影。
+② Cursor /canvas 构建 Agent 自定义界面
+Cursor 新增 `/canvas` 功能，允许开发者为自己的 Agent 构建自定义 UI 界面，展示了 Agent 工具链可视化交互的未来方向。
 🔗 https://x.com/ryolu_/status/2044493859821129992
 
-③ "软件工厂"即产品——Claude Code 驱动设计工具
-Vercel CEO rauchg 展示了用 Claude Code + Three.js + Next.js 构建的"Shader Lab"设计工具，认为未来设计的核心不是某个具体工具，而是每个团队都能用 AI 搭建专属"设计工厂"的能力。"软件工厂本身就是产品"成为新范式。
+③ Claude Code 驱动的"软件工厂"设计工具
+Vercel 创始人 rauchg 展示了用 Claude Code + Three.js + Next.js 构建的 Shader Lab 设计工具，认为未来每个团队都能构建自己的"设计工厂"。他指出"软件工厂本身就是产品"，代表了 AI 驱动开发的新范式。
 🔗 https://x.com/rauchg/status/2044445445636972578
 
-④ 子 Agent 编排与 Boss Agent 架构
-swyx 指出"子 Agent 年"更多是优化问题，而真正的能力挑战在于反向问题：如何构建能够组合、调度和查询下层 Agent 的"Boss Agent"。他表示作为顾问参与设计了 Cog 的新 Spaces 架构。
+④ Subagent 与 Boss Agent 的能力边界
+swyx 指出"subagent 年"本质上是优化问题，而真正的能力挑战在于反向问题：构建能够组合、调度和管理其他 Agent 的"boss agent"。他以自己作为 Cog 顾问参与设计新 Spaces 架构为例说明这一趋势。
 🔗 https://x.com/swyx/status/2044636275375067440
 
 🔒 安全
 
-⑤ OpenClaw 安全加固进展
-OpenClaw（开源 Claude 客户端）经过数千小时迭代，已建立完善的安全体系：支持 Docker/OpenShell 沙箱、白名单机制、逐次执行权限提示，并经过数百名安全研究人员渗透测试。garrytan 也表示基于 git+postgres 的 GBrain 已能良好支持多 Agent 并发，并称"OpenClaw 不安全"的时代已过去。
-🔗 https://x.com/steipete/status/2044482797449150520 · https://x.com/garrytan/status/2044677189896220927
-
-⑥ AI 自动化漏洞挖掘与开源安全度量
-Replit CEO amasad 提出：如果前沿模型（如 Mythos）能全自动发现安全漏洞，GitHub 应该引入类似 Star 的新指标，显示每个开源包被投入了多少 AI 安全计算资源（如"$239M 算力已用于加固此包"），这或将成为开源软件可信度的新标准。
-🔗 https://x.com/amasad/status/2044440298995228816
+⑤ OpenClaw 安全加固进展与 AI 自动化漏洞挖掘
+steipete 介绍了 OpenClaw 经过数千工时迭代后的安全架构，包括 Docker 沙箱、allow-list、mitmproxy 防火墙和 Clawvisor，经数百名安全研究员渗透测试验证。amasad 则提出，随着 Mythos 等模型实现全自动漏洞挖掘，GitHub 应引入类似 Stars 的"安全算力投入"指标，让开源包的安全性可量化。garrytan 也确认 OpenClaw 结合 docker 沙箱和日志代理后已可放心使用。
+🔗 https://x.com/steipete/status/2044482797449150520 · https://x.com/amasad/status/2044440298995228816 · https://x.com/garrytan/status/2044677189896220927
 
 🛠 产品/应用
 
-⑦ Gemini Mac 原生应用发布
-Google 推出了 100% 原生 Swift 开发的 Gemini Mac 客户端，小团队在不到 100 天内构建了超过 100 个功能。该应用响应速度极快，是对用户反馈的直接回应。
+⑥ Gemini Mac 原生应用发布
+Google 推出了 Gemini 的 Mac 原生应用，由小团队在不到 100 天内构建了 100+ 功能。应用采用 100% 原生 Swift 开发，主打极速体验。
 🔗 https://x.com/joshwoodward/status/2044452203596071052
 
-⑧ AnyGen HTML 幻灯片功能
-zarazhangrui 展示了用 AnyGen 的 Frontend Slides 功能制作 HTML 格式幻灯片的体验，认为一旦用 HTML 做过 PPT 就再也回不去传统工具了。同时她也呼吁 AI 从业者应把"玩模型"当作工作的一部分，非功利性的探索往往带来最深刻的洞察。
+⑦ AnyGen HTML 幻灯片功能
+zarazhangrui 展示了 AnyGen 的 Frontend Slides 功能，用 HTML 制作演示幻灯片，认为一旦体验过就无法回到传统工具。同时她也强调，对 AI 从业者而言"玩"模型本身就是工作的一部分，非功利性的探索往往能带来真正的洞察。
 🔗 https://x.com/zarazhangrui/status/2044653928592064541
 
 📈 商业/观点
 
-⑨ Meta AI 战略转折——从 Llama 4 争议到新布局
-swyx 梳理 Meta AI 的叙事弧线：Llama 4 基准争议是"翻牌"，而"河牌"则包括持续扩大招聘、Zuck 亲自入住并与 Alexandr/Nat 同住重新写代码、发布 Opus 级别新模型（无 API、不开源）以及收购 Scale AI 创始人等动作。
+⑧ Meta AI 战略反转与进展
+swyx 梳理了 Meta 在 AI 赛道的叙事弧线：Llama 4 遭遇口碑滑铁卢后，Meta 加大招聘力度，Zuck 亲自搬去与 Alexandr 和 Nat 同住并重新写代码，发布了 Opus 级别的模型（无 API、非开源），并收购了 dps。整体呈现出强烈的反弹信号。
 🔗 https://x.com/swyx/status/2044636275375067440
 
-⑩ AI 将创造更多就业岗位的逻辑
-Box CEO levie 认为 AI 会在很多行业创造更多工作岗位，原因在于：AI 加速了某一环节的产出，但随即会在流程的下一个瓶颈处暴露出新的人力需求。他以法律行业为例说明，更多人询问法律建议反而会带来更多律师需求。
+⑨ AI 将创造更多就业岗位的逻辑
+Box CEO levie 认为，AI 加速了某一环节的产出后，会在流程的其他环节暴露新的人力瓶颈，从而创造新的就业需求。他以法律行业为例：AI 让更多人能负担得起法律服务，但同时也需要更多律师来处理激增的需求。
 🔗 https://x.com/levie/status/2044621545348481285
 
-⑪ Claude Cowork 产品路线图只有一个月
-Anthropic 的 Claude Cowork 产品负责人 Felix Rieseberg 表示，产品路线图只规划一个月，因为 AI 发展速度太快，更长周期的规划毫无意义。核心策略是：快速发布、评估、迭代。
+⑩ Claude Cowork 产品路线图仅规划一个月
+Anthropic 的 Claude Cowork 负责人 Felix Rieseberg 表示，产品路线图只规划一个月，因为 AI 发展速度太快，更长周期的规划毫无意义。核心策略是：快速发布、评估、迭代。
 🔗 https://x.com/mattturck/status/2044534930684719394
 
-⑫ 对 LLM 持怀疑态度者的认知演变
-开发者 adityaag 总结了 LLM 怀疑论者的典型认知路径：从"只是自动补全"到"只适合编程"再到"只适合可验证任务"，每次 LLM 突破一个边界就移动目标。他认为是时候承认 LLM 确实很强大了。
+⑪ LLM 怀疑论者的认知弧线
+adityaag 总结了 LLM 怀疑论者的典型认知演变路径：从"只是自动补全"到"只适合写代码"再到"只适合可验证任务"，每一步退让都在承认 LLM 的能力边界在不断扩张。
 🔗 https://x.com/adityaag/status/2044444065199177748
 
-⑬ Claude 频繁宕机引发关注
-产品人 petergyang 注意到 Claude 几乎每隔一天就会出现服务中断，猜测原因可能是快速发布节奏、算力扩容压力或其他技术问题，引发对 Anthropic 可靠性的讨论。
+⑫ Claude 频繁宕机现象
+petergyang 观察到 Claude 几乎每隔一天就会出现服务中断，猜测可能与 Anthropic 快速发版节奏、计算扩容压力或其他因素有关，引发对头部 AI 服务稳定性的关注。
 🔗 https://x.com/petergyang/status/2044433121580634178
 
 
@@ -65,27 +61,27 @@ Anthropic 的 Claude Cowork 产品负责人 Felix Rieseberg 表示，产品路�
 
 The AI Model Built for What LLMs Can't Do
 
-Logical Intelligence的创始人兼CEO Eve指出，AI行业存在一个关键盲区：部署在芯片设计和代码生成等关键系统中的大语言模型（LLM），其输出结果几乎没有人在严格验证其正确性。她的公司正在构建一种名为能量基模型（EBM）的全新架构——该模型无需token、非自回归，能够同时纵观所有可能的解题路径，从根本上消除了LLM因逐token"猜测"而导致幻觉的结构性缺陷。与LLM输出前完全不透明的黑箱特性不同，EBM允许在处理过程中随时检查模型内部状态，实现一种LLM在架构上无法做到的自对齐与内部验证。Logical Intelligence将这种内部可验证性与Lean4等外式形式化验证工具相结合，构建双重正确性校验机制，同时在计算成本上也远低于为LLM外挂验证器的方案。
+Logical Intelligence创始人Eve指出，LLM由于其自回归、基于令牌的架构，在结构上无法避免幻觉问题，这并非调优所能根本解决的缺陷。她的公司正在构建无令牌架构的能量基础模型（EBM），能够同时评估所有可能的解决路径，而非逐个令牌地"猜测"，从而在模型内部实现自我验证，而不仅依赖昂贵的外部校验器。与LLM直到输出才能检查不同，EBM在处理过程中随时可被审查，实现了内外双重验证。目前该公司以LLM为原型进行开发，同步构建EBM基础设施，重点瞄准代码生成和芯片设计等高风险领域，在这些场景中概率性猜测可能造成真实危害。
 
 🔍 搜索：AI & I by Every · The AI Model Built for What LLMs Can't Do
 
 
 📰 行业速报
 
-① Codex可控Mac浏览网页并记忆历史
+① Codex可控Mac浏览网页记忆历史
 
-② 35B本地模型画鹈鹕胜Opus
+② 35B本地模型画图胜Opus
 
-③ 开发者遭盗刷54000欧Gemini费用
+③ Gemini被盗刷54000欧元
 
 🔗 https://ai-digest.liziran.com/en/digest/2026-04-17-codex-drives-macs-browsers-35b-laptop-model-outdraws-opus-47.html
 
 
 📚 论文速报
 
-① 智能体双模式失败可黑盒量化
+① 智能体双模式失败可量化
 
-② 扩展使上下文子技能反向分化
+② 扩展分裂上下文理解子技能
 Google gives the first scaling law for contextual entrainment across two model families: the largest model resists counterfactual rumors 4x better than the smallest, but gets derailed by irrelevant tokens 2x more often.
 
 ③ MOONSHOT多目标剪枝降困惑度
@@ -93,4 +89,4 @@ Google gives the first scaling law for contextual entrainment across two model f
 🔗 https://ai-brief.liziran.com/en/daily/2026-04-17-agent-errors-scaling-entrainment-pruning.html
 
 📎 Notion 存档
-https://notion.so/AI-Builders-Digest-2026-04-17-345941f989048154ac24efd2a5cfec05
+https://notion.so/AI-Builders-Digest-2026-04-17-345941f989048107a2beebf620e0661a
