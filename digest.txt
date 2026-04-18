@@ -1,92 +1,103 @@
-🗞 AI Builders 日报 · 2026.04.17
+🗞 AI Builders 日报 · 2026.04.18
+
+🧠 模型
+
+① Claude Opus 4.7 正式发布
+Anthropic 正式发布 Claude Opus 4.7，新增 xhigh 努力等级（介于 high 和 max 之间），支持更精细的推理与延迟控制，同时新增 Task Budgets（beta）功能用于长任务成本管理。模型在异步任务执行、UI/文档审美、高清图片处理等方面有显著提升，Claude Code 中默认将 Opus 4.7 的努力等级设为 xhigh。多位开发者表示兴奋，也有人半开玩笑称不得不重写所有代码。
+🔗 https://x.com/claudeai/status/2044785272617939282 · https://x.com/alexalbert__/status/2044788914813292583 · https://x.com/_catwu/status/2044815645699928273 · https://x.com/adityaag/status/2044861137720918371
+
+② OpenAI Codex 大幅升级（computer use + 插件 + 主动学习）
+OpenAI 对 Codex 进行了重大更新，新增 computer use 功能，可在后台并行使用 Mac 上的所有应用而不干扰用户工作，同时支持应用内浏览器、多款新插件以及主动学习建议功能。kevinweil 称其"出乎意料地好"，levie 认为这代表了知识工作者 Agent 形态的下一个跳跃，可执行起草报告、数据室搭建、文档审阅等长任务。
+🔗 https://x.com/sama/status/2044921348540264614 · https://x.com/kevinweil/status/2045004924682195027 · https://x.com/levie/status/2044855448722100720
+
+③ OpenAI 发布 GPT-Rosalind 生命科学前沿模型
+OpenAI 推出首个面向科学研究的前沿模型 GPT-Rosalind，专为生物学、药物发现和转化医学设计，内置化学、蛋白质工程、基因组学等领域知识及相关数据库工具。目前正在开放访问申请，并配套上线 Life Sciences 插件。
+🔗 https://x.com/kevinweil/status/2045004924682195027
 
 🤖 Agent/编程
 
-① Claude Code 上下文窗口管理最佳实践
-Claude Code 的 100 万 token 上下文窗口是双刃剑——虽然支持更复杂的任务，但也容易造成上下文污染。作者建议通过设置 `CLAUDE_CODE_AUTO_COMPACT_WINDOW=400000` 等参数主动管理会话，并提供了详细的操作指南。
-🔗 https://x.com/trq212/status/2044654705780179011
+④ Claude Code 新功能：/ultrareview、auto mode 扩展及使用优化
+Claude Code 新增 /ultrareview 命令，可对代码变更进行深度审查，模拟严格审阅者视角标记问题；auto mode 扩展至 Max 用户，减少长任务中断。团队还建议在 claude.md 中写入测试流程或添加 /verify-app skill，帮助 Opus 4.7 更好地验证自身输出。此外，Anthropic 新增文档"What's New"精选区，并计划开展月度"已发货"网络研讨会。
+🔗 https://x.com/claudeai/status/2044785272617939282 · https://x.com/_catwu/status/2044815645699928273 · https://x.com/trq212/status/2044893587691958320
 
-② Cursor /canvas 构建 Agent 自定义界面
-Cursor 新增 `/canvas` 功能，允许开发者为自己的 Agent 构建自定义 UI 界面，展示了 Agent 工具链可视化交互的未来方向。
-🔗 https://x.com/ryolu_/status/2044493859821129992
+⑤ 构建 eval agent 对主 agent 输出做自动评分
+petergyang 分享了一个实用工作流：构建技能时，额外启动一个独立的 eval agent，对主 agent 的输出做 yes/no 判断；若未全部通过则让主 agent 继续迭代，直到满足标准。目前正在将此模式应用于 YouTube 缩略图和标题的自动优化。
+🔗 https://x.com/petergyang/status/2045007422084051168
 
-③ Claude Code 驱动的"软件工厂"设计工具
-Vercel 创始人 rauchg 展示了用 Claude Code + Three.js + Next.js 构建的 Shader Lab 设计工具，认为未来每个团队都能构建自己的"设计工厂"。他指出"软件工厂本身就是产品"，代表了 AI 驱动开发的新范式。
-🔗 https://x.com/rauchg/status/2044445445636972578
+⑥ Cursor 设计原型环境 Baby Glass + 多模型协作工作流
+Cursor 设计师 ryolu_ 与团队共同开发了名为 Baby Glass 的原型环境，允许设计师在代码中快速构想、混搭和测试创意，复用 Cursor 3 新界面的共享组件。同时分享了自己的多模型协作流程：用 Opus 4.7 规划、Composer 2 构建迭代、Codex/GPT-5.4 攻克难题 bug，全部在 Cursor 中完成。
+🔗 https://x.com/ryolu_/status/2044982132859400342
 
-④ Subagent 与 Boss Agent 的能力边界
-swyx 指出"subagent 年"本质上是优化问题，而真正的能力挑战在于反向问题：构建能够组合、调度和管理其他 Agent 的"boss agent"。他以自己作为 Cog 顾问参与设计新 Spaces 架构为例说明这一趋势。
-🔗 https://x.com/swyx/status/2044636275375067440
+⑦ Agent 后端持久化难题与 Workflow SDK 解决方案
+rauchg 指出构建 agent 和后端最难的问题是持久化——LLM 会宕机、服务会限流、数据库会变慢，这些都是生产环境的真实挑战。他认为 @workflowsdk 是他寻找了十年的"独角兽"解决方案，可以有效应对这些不确定性。
+🔗 https://x.com/rauchg/status/2044858872842826102
 
 🔒 安全
 
-⑤ OpenClaw 安全加固进展与 AI 自动化漏洞挖掘
-steipete 介绍了 OpenClaw 经过数千工时迭代后的安全架构，包括 Docker 沙箱、allow-list、mitmproxy 防火墙和 Clawvisor，经数百名安全研究员渗透测试验证。amasad 则提出，随着 Mythos 等模型实现全自动漏洞挖掘，GitHub 应引入类似 Stars 的"安全算力投入"指标，让开源包的安全性可量化。garrytan 也确认 OpenClaw 结合 docker 沙箱和日志代理后已可放心使用。
-🔗 https://x.com/steipete/status/2044482797449150520 · https://x.com/amasad/status/2044440298995228816 · https://x.com/garrytan/status/2044677189896220927
+⑧ OpenClaw 安全漏洞披露现象的深层含义
+steipete 回应外界对 OpenClaw 存在大量 GHSA 安全公告的批评，认为这不是软件本身不安全，而是整个 AI 工具链安全问题浮出水面的早期信号，预示着更大规模的安全挑战即将到来。
+🔗 https://x.com/steipete/status/2044935917417205796
 
 🛠 产品/应用
 
-⑥ Gemini Mac 原生应用发布
-Google 推出了 Gemini 的 Mac 原生应用，由小团队在不到 100 天内构建了 100+ 功能。应用采用 100% 原生 Swift 开发，主打极速体验。
-🔗 https://x.com/joshwoodward/status/2044452203596071052
+⑨ Replit 新功能：iOS 应用打包、EU 部署、并行 agent 折扣
+Replit CEO amasad 宣布多项新功能：不到 10 美元即可将 Web 应用打包为 iOS 应用；支持部署到欧盟地区；同时推出 50% 折扣，特别适合运行并行 agent 以加速项目进展。
+🔗 https://x.com/amasad/status/2044953138957025707
 
-⑦ AnyGen HTML 幻灯片功能
-zarazhangrui 展示了 AnyGen 的 Frontend Slides 功能，用 HTML 制作演示幻灯片，认为一旦体验过就无法回到传统工具。同时她也强调，对 AI 从业者而言"玩"模型本身就是工作的一部分，非功利性的探索往往能带来真正的洞察。
-🔗 https://x.com/zarazhangrui/status/2044653928592064541
+⑩ GBrain 安全修复、Gemini Live 测试及新技能更新
+garrytan 透露 GBrain 本次推送了大量安全修复，同时对 /ship skill 进行了健壮性改进。此外，他们自行开发了端到端的 Gemini Live 测试方案，即将集成到 GBrain Voice 中并计划开源。
+🔗 https://x.com/garrytan/status/2045023061746004324
+
+⑪ HTML 作为 agent 通用输出格式的趋势
+zarazhangrui 围绕"HTML is eating everything"主题，将其 Frontend Slides GitHub 仓库转化为视频内容，探讨 HTML 对 agent 的重要性——类比 HTML 之于 agent 犹如 HTML 之于互联网。
+🔗 https://x.com/zarazhangrui/status/2044891980178792560
 
 📈 商业/观点
 
-⑧ Meta AI 战略反转与进展
-swyx 梳理了 Meta 在 AI 赛道的叙事弧线：Llama 4 遭遇口碑滑铁卢后，Meta 加大招聘力度，Zuck 亲自搬去与 Alexandr 和 Nat 同住并重新写代码，发布了 Opus 级别的模型（无 API、非开源），并收购了 dps。整体呈现出强烈的反弹信号。
-🔗 https://x.com/swyx/status/2044636275375067440
+⑫ 
+swyx 观察到当前 AI 工程领域存在一个关键分裂：一派是追求快速迭代、大量生成的"slop cannon"风格，另一派是更审慎、注重质量的"grown up"工程风格。他将 AI Engineer 大会的演讲安排（Day 1 vs Day 2）视为对这一分歧的忠实呈现。
+🔗 https://x.com/swyx/status/2044943315938975801
 
-⑨ AI 将创造更多就业岗位的逻辑
-Box CEO levie 认为，AI 加速了某一环节的产出后，会在流程的其他环节暴露新的人力瓶颈，从而创造新的就业需求。他以法律行业为例：AI 让更多人能负担得起法律服务，但同时也需要更多律师来处理激增的需求。
-🔗 https://x.com/levie/status/2044621545348481285
-
-⑩ Claude Cowork 产品路线图仅规划一个月
-Anthropic 的 Claude Cowork 负责人 Felix Rieseberg 表示，产品路线图只规划一个月，因为 AI 发展速度太快，更长周期的规划毫无意义。核心策略是：快速发布、评估、迭代。
-🔗 https://x.com/mattturck/status/2044534930684719394
-
-⑪ LLM 怀疑论者的认知弧线
-adityaag 总结了 LLM 怀疑论者的典型认知演变路径：从"只是自动补全"到"只适合写代码"再到"只适合可验证任务"，每一步退让都在承认 LLM 的能力边界在不断扩张。
-🔗 https://x.com/adityaag/status/2044444065199177748
-
-⑫ Claude 频繁宕机现象
-petergyang 观察到 Claude 几乎每隔一天就会出现服务中断，猜测可能与 Anthropic 快速发版节奏、计算扩容压力或其他因素有关，引发对头部 AI 服务稳定性的关注。
-🔗 https://x.com/petergyang/status/2044433121580634178
+⑬ Anthropic Mythos 发布的商业政治解读
+danshipper 半开玩笑地猜测 Anthropic 的 Mythos 公告可能是一步"四维棋"——通过展示对齐研究的实用性来确保特朗普政府维持与 Anthropic 的合同关系，表示看好。
+🔗 https://x.com/danshipper/status/2044890935637549380
 
 
 🎙 Podcast
 
-The AI Model Built for What LLMs Can't Do
+Notion’s Token Town: 5 Rebuilds, 100+ Tools, MCP vs CLIs and the Software Factory Future — Simon Last &amp; Sarah Sachs of Notion
 
-Logical Intelligence创始人Eve指出，LLM由于其自回归、基于令牌的架构，在结构上无法避免幻觉问题，这并非调优所能根本解决的缺陷。她的公司正在构建无令牌架构的能量基础模型（EBM），能够同时评估所有可能的解决路径，而非逐个令牌地"猜测"，从而在模型内部实现自我验证，而不仅依赖昂贵的外部校验器。与LLM直到输出才能检查不同，EBM在处理过程中随时可被审查，实现了内外双重验证。目前该公司以LLM为原型进行开发，同步构建EBM基础设施，重点瞄准代码生成和芯片设计等高风险领域，在这些场景中概率性猜测可能造成真实危害。
+Notion的AI团队在2022年至2025年间先后四五次重建其智能体产品，早期模型因缺乏可靠的工具调用能力、上下文窗口过短以及推理能力不足而屡屡碰壁，真正的突破直到2024年初Claude Sonnet 3.6/3.7发布后才到来。Simon Last和Sarah Sachs透露，权限建模问题——即如何管理不同共享频道中不同文档的访问权限——与AI本身一样棘手，迫使产品设计多次推倒重来。展望未来，Simon认为编码智能体是"AGI的核心内核"，一切将汇聚于"软件工厂"范式，即通过多智能体协作实现代码开发、调试、审查和维护的全自动化流水线。在工具路线之争上，团队态度务实：同时看好CLI与MCP，倾向于将MCP用于权限管控严格的轻量级窄域智能体，并承诺将Notion的MCP作为企业级知识管理核心战略持续维护。
 
-🔍 搜索：AI & I by Every · The AI Model Built for What LLMs Can't Do
+🔍 搜索：Latent Space · Notion’s Token Town: 5 Rebuilds, 100+ Tools, MCP vs CLIs and
 
 
 📰 行业速报
 
-① Codex可控Mac浏览网页记忆历史
+① 特朗普批评两月后，Anthropic向白宫交付红队模型
 
-② 35B本地模型画图胜Opus
+② Chrome标签与谷歌相册成Gemini默认上下文
 
-③ Gemini被盗刷54000欧元
+③ 凝视眼球，获五次Tinder免费推送
 
-🔗 https://ai-digest.liziran.com/en/digest/2026-04-17-codex-drives-macs-browsers-35b-laptop-model-outdraws-opus-47.html
+🔗 https://ai-digest.liziran.com/en/digest/2026-04-18-anthropic-ships-government-red-team-model-gemini-claims.html
 
 
 📚 论文速报
 
-① 智能体双模式失败可量化
+① 腾讯HY-World 2.0：文图生成3D场景
+It's the open-source answer to closed Marble.
 
-② 扩展分裂上下文理解子技能
-Google gives the first scaling law for contextual entrainment across two model families: the largest model resists counterfactual rumors 4x better than the smallest, but gets derailed by irrelevant tokens 2x more often.
+② 视觉任务的缺陷源于语言端
+Stanford's centroid-replacement probe shows that erasing text information costs 4x more accuracy than erasing visual information across 7 VLMs. A contrastive decode built on that asymmetry gains up to 16.9% per task, no retraining.
 
-③ MOONSHOT多目标剪枝降困惑度
+③ VGF将强化微调重构为最优传输
+Instead of parameterizing the policy, it moves reference-distribution particles along the value gradient, with a transport budget that maps cleanly onto test-time scaling. Clean idea, but only 2 HF upvotes — keep on the watchlist.
 
-🔗 https://ai-brief.liziran.com/en/daily/2026-04-17-agent-errors-scaling-entrainment-pruning.html
+④ 3PT将三相电流先验嵌入残差流
+Hidden vectors are sliced into cyclic channels and aligned block-to-block via Givens rotations. At 123M params, perplexity drops 7.2% over RoPE-only, but N=3 and N=1 are statistically indistinguishable.
+
+🔗 https://ai-brief.liziran.com/en/daily/2026-04-18-tencent-3d-world-vlm-modal-competition.html
 
 📎 Notion 存档
-https://notion.so/AI-Builders-Digest-2026-04-17-345941f989048107a2beebf620e0661a
+https://notion.so/AI-Builders-Digest-2026-04-18-346941f989048176b0bfe9f338d85b42
