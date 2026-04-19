@@ -1,83 +1,74 @@
-🗞 AI Builders 日报 · 2026.04.18
+🗞 AI Builders 日报 · 2026.04.19
 
 🧠 模型
 
-① Claude Opus 4.7 发布与评测
-Anthropic 正式推出 Claude Opus 4.7，早期部分 bug 已修复。多位创作者对其在编程、写作、设计等场景进行了"Vibe Check"评测，整体表现受到好评。mattturck 感叹 Anthropic 近期产品节奏迅猛，接连推出 Claude Code、Skills、Cowork、Design 等。
-🔗 https://x.com/alexalbert__/status/2045165630421364853 · https://x.com/danshipper/status/2045246172022149537 · https://x.com/petergyang/status/2045335553059746259 · https://x.com/mattturck/status/2045211226272129274
+① Claude 4.7 发布 + 多产品落地
+Anthropic 放出 Claude 4.7，同周上线 Claude Design（读代码库生成设计系统）、Claude for Word（Pro/Max 可用）。Anthropic 研究员 Alex Albert 确认昨天用户遇到的 bug 已修复。
+🔗 https://x.com/claudeai/status/2045222254699511855
+
+② Claude Code 黑客松重启，奖池 10 万美元 API 额度
+Anthropic 宣布第二届 Claude Code 黑客松，本周日截止报名，可以和 Claude Code 团队同场作战。
+🔗 https://x.com/claudeai/status/2045248224659644654
+
+③ Matt Turck：Anthropic 一代连发四款工具
+FirstMark 投资人 Matt Turck 点评：Claude Code、Skills、Claude Cowork、Claude Design，一代节奏罕见。
+🔗 https://x.com/mattturck/status/2045211226272129274
 
 🤖 Agent/编程
 
-② Claude Code 黑客马拉松 & Agent 工具讨论
-Anthropic 宣布针对 Opus 4.7 举办新一轮 Claude Code 黑客马拉松，奖池高达 10 万美元 API 积分，报名截止周日。garrytan 吐槽"OpenClaw"（Claude Code 的戏称）会自我修改配置后崩溃，暗示 agent 稳定性仍是痛点。ryolu_ 则总结出最佳 agent 公式：最优 harness + 最优模型 + 跨平台运行，并点名 Cursor。
-🔗 https://x.com/claudeai/status/2045248224659644654 · https://x.com/garrytan/status/2045378112846983496 · https://x.com/ryolu_/status/2045336089867825157
+④ Box CEO：Agent 会把软件用量放大 100 倍
+Box CEO Aaron Levie 连发两条长推，核心观点：Agent 全天候并行运行，会把企业平台的使用量拉到人类根本做不到的规模。以前按席位卖软件，以后靠 Agent 消费量变现——软件价值的上限消失了。
+🔗 https://x.com/levie/status/2045355693050655048
+
+⑤ Cursor 设计师：最好的 Agent = 最佳框架 + 最强模型 + 跑在哪里都行
+Cursor 设计师 Ryo Lu 分享 Cursor Agent 更新，一句话总结了 Agent 产品竞争的三个维度。
+🔗 https://x.com/ryolu_/status/2045336089867825157
 
 🛠 产品/应用
 
-③ Claude Design & Claude for Word 上线
-Anthropic 推出 Claude Design，能读取代码库与设计文件自动生成团队设计系统并保持品牌一致性；Claude for Word 现已向 Pro 和 Max 用户开放，可与 Opus 4.7 配合使用。petergyang 演示了 Claude Design 在视频、幻灯片、网站、移动应用和设计系统五大场景的实际效果。
-🔗 https://x.com/claudeai/status/2045248224659644654 · https://x.com/petergyang/status/2045335553059746259
+⑥ Google 发布 Flow Music（原 ProducerAI）
+Google Labs 把 ProducerAI 改名 Flow Music，独立成站，支持自然语言创作、分享和混音原创音乐。现在 Flow 家族：Flow 做图片视频，Flow Music 做歌曲和播放列表。
+🔗 https://x.com/GoogleLabs/status/2045250788864495874
 
-④ Google Flow Music（原 ProducerAI）正式发布
-ProducerAI 正式更名并升级为 Google Flow Music，作为独立站点上线，用户可通过自然语言提示创作、分享和混音原创音乐，并新增 Remix 功能。这是 Google Flow 家族的最新延伸产品，进一步拓展 AI 音乐创作边界。
-🔗 https://x.com/joshwoodward/status/2045305262362530043 · https://x.com/GoogleLabs/status/2045250788864495874
+⑦ Replit：动画生成 + AI 主动提示应用优化
+Replit CEO Amjad Masad 连发三条，包括新的动画生成能力、AI 主动提示应用可优化项。
+🔗 https://x.com/amasad/status/2045198577941844178
 
 📈 商业/观点
 
-⑤ 企业软件将走向"无头化"，Agent 是核心驱动
-Box CEO levie 指出，未来 agent 使用软件的频率将是人类的 100 倍，企业平台必须走向"无头化"，支持任意 agent 接入，否则将被淘汰。但他同时强调这对平台是利好而非威胁——更多 agent 意味着更多使用场景，商业模式需从按席位收费转向按使用量计费。
-🔗 https://x.com/levie/status/2045355693050655048
-
-⑥ Fintool 被微软收购，AI 金融工具赛道获验证
-天使投资人 nikunj 祝贺早期被投项目 Fintool 团队被微软收购，称其在大模型能力成熟之前就已实现繁重金融推理任务的自动化，是罕见的"产品领先于模型"案例。此次收购被视为 AI 垂直金融工具赛道的重要商业验证。
-🔗 https://x.com/nikunj/status/2045250489189908534
-
-⑦ kevinweil 离开 OpenAI
-kevinweil 宣布今日正式离开 OpenAI，原因是其主导的"OpenAI for Science"项目被拆散并并入其他研究团队。他回顾了从首席产品官到加入研究团队的两年历程，并表示加速科学研究是 AI 最有价值的应用方向之一。
+⑧ OpenAI 首席产品官 Kevin Weil 离职
+Kevin Weil 宣布这是他在 OpenAI 的最后一天，OpenAI for Science 团队被拆散并入各研究组。他表示"加速科学将是 AGI 最震撼人心的成果之一"。
 🔗 https://x.com/kevinweil/status/2045230426210648348
 
-💬 其他
-
-⑧ 写作与 LLM 文本生成的本质区别
-zarazhangrui 指出"写作"与"生成文字"是两回事，文字生成只是写作过程中最不重要的环节，许多人误以为 LLM 因能流畅输出文字就是优秀的写作者，实则忽略了写作背后的思考与结构能力。同时分享了用 HTML 代码而非图像生成模型来做设计图形的实用经验。
+⑨ Zara Zhang：写作 ≠ 生成文字
+Zara Zhang 指出：LLM 擅长生成文字，但生成文字是写作里最不重要的部分。把 LLM 当好作家是一种误解。
 🔗 https://x.com/zarazhangrui/status/2045394997630099922
 
+⑩ Garry Tan 吐槽 AI coding agent 稳定性
+YC CEO Garry Tan 说自己数不清浪费了多少小时——AI agent 给自己的 config 做"脑外科手术"，然后因为改了自己的配置挂掉了。
+🔗 https://x.com/garrytan/status/2045373889044472259
 
 🎙 Podcast
 
-Scaling Global Organizations in the Age of AI with ServiceNow CEO Bill McDermott
-
-ServiceNow首席执行官比尔·麦克德莫特将其商业哲学追溯至16岁时以5500美元买下一家熟食店的经历，他从中悟出：以客户为中心、了解客户需求并精准满足，是决定商业成败的唯一法则。最令人意外的是，他明确主张：若将企业级SaaS平台替换为大型语言模型，综合考虑GPU基础设施、token成本及人力生产力损失后，总体费用将高出十倍，直接挑战了"SaaS末日论"的流行叙事。他表示，早年每天接待500名顾客的服务经历——涵盖蓝领工人、老年人，以及被街机游戏吸引来的年轻人——培养了他领导全球化组织所必需的情商。本期节目由此引出更深层的话题：企业客户真正需要从AI中获得什么，以及ServiceNow未来十年的战略愿景。
-
-🔍 搜索：No Priors · Scaling Global Organizations in the Age of AI with ServiceNo
-
+No Priors: Scaling Global Organizations in the Age of AI — ServiceNow CEO Bill McDermott
+McDermott 从 16 岁买下一家熟食店讲起，核心观点：客户至上是肌肉记忆，不是口号。AI 时代最缺的不是技术，而是人与人的真实连接——AI 是放大人类野心的工具，不是取代的理由。他对变化速度的判断是反直觉的："现在是历史上最慢的，以后只会更快，接受它。"关于企业平台和 LLM 的关系，他估算用 LLM 复刻 ServiceNow 一个应用的成本，是平台本身的 10 倍。
 
 📰 行业速报
 
-① Anthropic向华盛顿交付红队模型
+① Sora 头号推手 Bill Peebles 离职，同周 OpenAI 推出面向药企的 GPT-Rosalind，公司战略从消费创意工具转向生命科学
+② DRAM 供给缺口可能延续到 2027 年，Cerebras 揣着百亿美元订单（含 OpenAI 合同）冲击 IPO
+③ Claude 4.7 新分词器让同等编码任务的 token 成本上涨，"产出量=生产力"的评价逻辑正在被质疑
 
-② Chrome与谷歌相册接入Gemini
-
-③ 凝视眼球，获五次Tinder加速
-
-🔗 https://ai-digest.liziran.com/en/digest/2026-04-18-anthropic-ships-government-red-team-model-gemini-claims.html
-
+🔗 https://ai-digest.liziran.com/zh/digest/2026-04-19-soras-architect-exits-openai-cerebras-files-ipo-10b-backlog
 
 📚 论文速报
 
-① 腾讯HY-World 2.0：文本生成3D场景
-It's the open-source answer to closed Marble.
+① Corpus2Skill（RAG 新范式）：把整个语料库离线编译成分层技能树，Agent 按树结构钻取而非被动接收检索结果，在 WixQA 上超过密集检索、RAPTOR 和 Agentic RAG
+② TRACER（生产日志蒸馏）：用奇偶校验门把 83-100% 流量导向轻量代理模型，"知道自己做不到"被定义为系统最有价值的能力
+③ UniDoc-RL（视觉 RAG）：四阶段 pipeline 压缩成一个联合策略，端到端 RL 训练，三个 benchmark 最高提升 17.7%
+④ RAD-2（自动驾驶）：扩散模型生成候选轨迹 + RL 判别器重排序，碰撞率下降 56%
 
-② 视觉任务的缺陷源于语言侧
-Stanford's centroid-replacement probe shows that erasing text information costs 4x more accuracy than erasing visual information across 7 VLMs. A contrastive decode built on that asymmetry gains up to 16.9% per task, no retraining.
-
-③ VGF将强化微调重构为最优传输
-Instead of parameterizing the policy, it moves reference-distribution particles along the value gradient, with a transport budget that maps cleanly onto test-time scaling. Clean idea, but only 2 HF upvotes — keep on the watchlist.
-
-④ 3PT将三相电流先验注入残差流
-Hidden vectors are sliced into cyclic channels and aligned block-to-block via Givens rotations. At 123M params, perplexity drops 7.2% over RoPE-only, but N=3 and N=1 are statistically indistinguishable.
-
-🔗 https://ai-brief.liziran.com/en/daily/2026-04-18-tencent-3d-world-vlm-modal-competition.html
+🔗 https://ai-brief.liziran.com/en/daily/2026-04-19-skill-tree-rag-log-surrogates.html
 
 📎 Notion 存档
-https://notion.so/AI-Builders-Digest-2026-04-18-346941f9890481e78a0ffa1ccc02bcfa
+https://www.notion.so/AI-Builders-Digest-2026-04-19-347941f98904817682f8df9f72f352a8
