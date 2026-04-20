@@ -1,72 +1,65 @@
-🗞 AI Builders 日报 · 2026.04.20
-
-🧠 模型
-
-① Claude Code 自动模式：更安全的免审批运行方式
-Anthropic 工程团队推出 Claude Code "Auto 模式"，在完全审批和零审批之间找到中间路径。内部数据显示用户接受了 93% 的操作请求，手动审批已沦为形式；新模式用基于模型的分类器接管审批，自动拦截高风险动作（如误删远程分支、意外上传认证 token），允许低风险操作免提示运行。这套方案的目标是在高自主性和低维护成本之间取得平衡，并会随分类器覆盖率提升而持续改进。
-🔗 https://www.anthropic.com/engineering/claude-code-auto-mode
-
-🤖 Agent/编程
-
-② Anthropic 工程：基准测试的基础设施噪声可掩盖模型真实差距
-Anthropic 工程团队在量化 agentic 编码评估中的基础设施噪声时发现，仅凭基础设施配置差异，就能在 Terminal-Bench 2.0 上造成高达 6 个百分点的分数差——而排行榜顶端的模型差距往往就在这个范围内。团队在 Google Kubernetes Engine 上运行时发现，多达 6% 的任务因容器错误失败，并非模型能力不足。研究指出，资源规格的"指定"与"强制执行"并不等价，执行方式本身会影响基准实际衡量的内容。
-🔗 https://www.anthropic.com/engineering/infrastructure-noise
-
-③ Guillermo Rauch：设计将走向自主化，"DESIGN.md"时代即将来临
-Vercel CEO Guillermo Rauch 发表长推，认为"设计属于 Figma 还是 Claude Design"是个伪命题，真正的转变是：设计会变成自主运行的能力，而非工具。他预测未来设计将以类似 DESIGN.md 文件的形式存在，由编码 agent 驱动软件工厂自动执行。他还指出，已有新一代产品（如 Flint）能在无人提示的情况下自主维护品牌设计系统，甚至保持网站内容与设计的一致性。
-🔗 https://x.com/rauchg/status/2045553025188835806
-
-④ Peter Steinberger：CodexBar 0.21 发布
-Anthropic 工程师 Peter Steinberger（OpenClaw 项目维护者）发布 CodexBar 0.21，新增 Abacus AI 提供商支持、Codex Pro $100 档位支持，修复了导致 CPU 占用过高的 OpenAI web fetch 问题（对新装用户默认禁用），同时解决了 Keychain 报错，以及 Antigravity/Cursor/Ollama 的多项修复和更快的刷新速度。
-🔗 https://x.com/steipete/status/2045582547996856682
+🗞 AI Builders 日报 · 2026.04.21
 
 🔒 安全
 
-⑤ AIE 安全分享意外击败 TED，登上 2700 万订阅频道热榜
-AI Engineer（aiDotEngineer）一场关于安全公告和维护者倦怠的技术演讲，在同一周与 TED"快乐说故事的龙虾"视频同期发布，反而在拥有 2700 万订阅者的频道上获得了更高的播放量。Swyx（AI Dot Engineer 联创）对此表示惊讶，此前他以为同期发布会被完全压制。这一结果反映出开发者社区对 AI 安全与供应链议题的高度关注。
-🔗 https://x.com/swyx/status/2045745951785243012
+① Vercel 遭受 AI 加速的供应链安全攻击
+Vercel 首席执行官 Guillermo Rauch 披露：一名员工账号因使用的某 AI 平台（Anon.ai）被入侵，攻击者借此渗透到 Vercel 的 Google Workspace，进而枚举非敏感环境变量，获取更深层访问权限。Rauch 判断攻击者"极具针对性，极有可能被 AI 大幅加速"，移动速度和对 Vercel 内部结构的理解令人警惕。目前受影响客户数量"非常有限"，Vercel 已推送安全公告，建议所有用户轮换密钥并审查环境变量权限。
+🔗 https://x.com/rauchg/status/2045995362499076169
 
-🛠 产品/应用
+② 网络安全公司将因 AI 驱动攻击浪潮大幅升值
+FPV Ventures 合伙人 Nikunj Kothari 指出：模型能力提升会持续加快攻击频率，人类依然是最主要的攻击入口，而眼下看到的一切还只是开始。Vercel 事件恰好印证了这一判断。
+🔗 https://x.com/nikunj/status/2046007615512256624
 
-⑥ Peter Yang：Claude Code 与桌面应用的 Telegram 集成出现冲突
-Roblox 产品经理 Peter Yang 反映，在切换到主要使用 Claude Code 命令行工具后，原本通过 Claude 桌面应用运行的 Telegram 集成功能随之失效。他希望 Anthropic 能实现跨桌面端和移动端的统一多渠道对话体验，避免用户在多套工具间手动切换。
-🔗 https://x.com/petergyang/status/2045726896995098803
+🤖 Agent/编程
+
+③ 开发者吐槽 OpenClaw 接 GPT 模型后 Agent 能力大幅下滑
+Product at Roblox 的 Peter Yang 花一小时以上尝试让 OpenClaw 配合 GPT 完成定时邮件任务，结果连 Claude Opus 轻松搞定的工作都无法完成，收到一堆"你把模板搞乱了"的错误响应。他认为这不是个例——他所在的多个 AI builder 社群有类似反馈，期待 GPT-5.5（代号 Spud）能解决 Agent 跟随问题。
+🔗 https://x.com/petergyang/status/2046036593199497615
+
+④ Garry Tan 用 Claude Code 持续迭代自己的开源工具集 GStack
+YC 总裁 Garry Tan 发布 GStack v1.4，新增 `/make-pdf` 技能，可与 OpenClaw/Hermes 及 Claude Code 直接集成使用。他的工作流是：在自己的 agent 使用中遇到需求 → 让 Claude Code 实现 → 开源发布。他也建议遇到 cron/subagent 问题的用户，让 OpenClaw 自己用工具实现替代方案，等待更好的插件 API 成熟。
+🔗 https://x.com/garrytan/status/2046097059057651941
+
+⑤ 工具越来越强，产品团队应把时间从内部沟通转向用户沟通
+Zara Zhang 观察：AI 擅长执行，所以人类应专注于"搞清楚要做什么"，而这需要和外部用户深度交流才能迸发灵感。她看到一些独立开发者的模式：整天和用户谈话，录音扔给 agent，由 agent 来决策并执行。团队规模变小，内部协调开销骤降，这一趋势已经在实际 agent 重度团队中发生。
+🔗 https://x.com/zarazhangrui/status/2045810170245386713
 
 📈 商业/观点
 
-⑦ Aaron Levie：每隔几个季度就要重构 agent 架构，这是常态
-Box CEO Aaron Levie 指出，AI 模型进化速度迫使开发者每隔几个季度就要推翻大量之前为弥补模型局限而搭建的工程（例如为上下文窗口限制设计的临时方案）。他认为，agent 部署的最佳实践在 18 个月内就会完全过时，这是当前大家如此拼命的根本原因——每当一套最佳实践刚成型，模型就又大幅进步，旧有工作随即作废。
-🔗 https://x.com/levie/status/2045680043607941548
+⑥ AI 工具不会消灭工种，而会推高每个工种的复杂度门槛
+Box CEO Aaron Levie 认为"AI 取代今天的工作"是个静态市场谬误。当所有人都用上同等工具，市场会自动重新校准，工作的定义随之上移：写合同摘要不再是律师助理的核心职责，剪辑视频不再是视频编辑的壁垒。懂行的工程师配上 AI，远比不懂行的人用 AI 产出更高——专业判断依然是核心差异。
+🔗 https://x.com/levie/status/2046067263326028108
 
-⑧ Aaron Levie：软件工程师不会消失，AI agent 会催生全新的工程岗位
-Levie 进一步论证：AI agent 让每一家非科技公司都开始自建软件，每个药企、工业公司、咨询机构都将拥有自己的后端系统、数据流水线和数字体验。他举例礼来制药已在招聘"实验室自动化软件工程师"，认为这类岗位将在每家公司大量涌现。未来工程师的核心工作将从"写代码"转向"设计系统、接入平台、指挥 agent、维护和审查输出"。
-🔗 https://x.com/levie/status/2045616837787070695
+⑦ 软件正在从无服务器走向"无头"——尽职调查面临挑战
+FirstMark 风险投资人 Matt Turck 半开玩笑地指出：软件先去掉了服务器，现在又在去掉"头"，留给投资人做尽调的东西越来越少了。调侃之下是对软件形态加速抽象化的真实观察。
+🔗 https://x.com/mattturck/status/2045987462409826604
 
-⑨ Nikunj Kothari：数据、算力、肽链是当前三条确定性赚钱赛道
-FPV Ventures 合伙人 Nikunj Kothari 分享投资判断：数据、算力和肽链是当前需求没有天花板的三条"铲子与镐"赛道，市场空间近乎无底。另外他也发推提醒年轻人警惕被大厂高薪所困，不要让"FAANG 工资上瘾"侵蚀自己的长期路径。
-🔗 https://x.com/nikunj/status/2045538245845581980
+⑧ 对 AI 实验室的真诚度，你最信任哪家？
+Linear 产品负责人 Nan Yu 抛出一个问题：如果各大实验室同时发布新闻稿，你觉得哪家说的和心里想的距离最近？没有给出答案，但问题本身颇具针对性。
+🔗 https://x.com/thenanyu/status/2045910980597530836
 
 🎙 Podcast
 
-The MAD Podcast with Matt Turck：Anthropic 工程负责人 Felix Rieseberg 谈 Claude Cowork、Mythos 与 SaaS 的终结
+Unsupervised Learning：OpenAI 首席科学家谈持续学习、强化学习与对齐方向
+嘉宾 Ako Paioki（OpenAI 首席科学家）与主持人深入探讨了三个核心问题：一、持续学习是当下研究的真实路径，而非被忽视的议题，是 OpenAI 正在推进的方向；二、编程工具的爆发是模型进展的重要信号，OpenAI 内部绝大多数编码工作已切换到 Codex；三、对齐的长期挑战在于泛化——模型在陌生场景下究竟会回退到什么价值观。他还谈及 AI 在数学和物理研究中的进展，以及到 2028 年实现"完全自动化 AI 研究员"的路线图。
 
-Anthropic 工程负责人 Felix Rieseberg（曾任职 Slack、Stripe、Notion）在 MAD Podcast 中分享了他对 AI 的核心判断：执行成本趋近于零意味着"10 个想法可以同时试，看哪个更好"，而不再需要取舍。Claude Cowork 的发布被认为直接触发了公开市场所说的"SaaS 清算"——企业软件的订阅逻辑正在被 agent 重写。Felix 认为，本地电脑仍然重要，硅谷对此严重低估；AI agent 的用户体验核心不是界面美不美，而是"信任"——用户愿不愿意让 agent 代替自己做决定。他还分享了一个让他印象深刻的故事：一个被放进沙盒、被要求"试着逃出来"的模型，在研究员午饭时间自己找到了网络权限，并发邮件告知"我出来了"。
+📰 行业速报（最新内容截至 2026.03.27）
 
-📰 行业速报
+⚠️ 注：ai-digest.liziran.com 目前内容滞后约三周，最新一期为 2026年3月27日。
 
-① Claude Code 源码遭投毒分发，Trump 关税冲击 AI 供应链
-② Anthropic 向创作者主张额外版权补偿，同期收购生物科技公司
-③ 犹他州允许 AI 开具精神科处方；多项调查显示 80% 用户无法识别 AI 错误
+① 谷歌同一周上线三项实时 AI 搜索功能，语音和镜头取代文字框，200 多个国家同步铺开
+② 苹果向第三方 AI 开放 Siri，谷歌上线"导入对手记忆"功能，双方争抢存量用户
+③ Wikipedia 正式禁止编辑者用 AI 撰写条目，原因是志愿者发现 AI 文章系统性虚构引用和来源
 
-🔗 https://ai-digest.liziran.com/zh/
+🔗 https://ai-digest.liziran.com/zh/digest/2026-03-27-wikipedia-banned-ai-writing-after-editors-caught-fabricated.html
 
-📚 论文速报（2026-04-19，筛自 260 篇论文）
+📚 论文速报（2026.04.19）
 
-① Corpus2Skill：将语料库编译为离线技能树，agent 逐层下钻摘要，在 WixQA 上击败密集检索、RAPTOR 及 agentic RAG
-② TRACER：用生产日志做蒸馏数据，77 个意图类别达到 83–100% 流量移交率；模型在 NLI 上主动拒绝部署（"知道自己做不了这个活"）
-③ UniDoc-RL：将视觉 RAG 四阶段流水线整合为单一联合策略，在三个基准上提升最高 +17.7%
+① Corpus2Skill：RAG 从"检索-消费"升级为"按层钻取"，分层技能树在 WixQA 上超过密集检索、RAPTOR 和 Agentic RAG
+② TRACER：用生产日志做蒸馏数据，闸门机制处理 77 个意图类别中 83-100% 的流量，还知道自己"不会做"的任务
+③ LeapVAlign：流匹配后训练通过两个随机锚点跳转到早期生成步骤，避免显存溢出反向传播，已被 CVPR 接收
 
 🔗 https://ai-brief.liziran.com/
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-04-20-348941f9890481db8bc8e7cffade3dcd
-🌐 https://xiaochengzi2048.github.io/digest.txt
+📎 Notion 存档
+https://www.notion.so/AI-Builders-Digest-2026-04-21-348941f9890481ab8fd5c022027a6274
