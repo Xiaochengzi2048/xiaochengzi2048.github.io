@@ -1,74 +1,94 @@
-🗞 AI Builders 日报 · 2026.04.19
+🗞 AI Builders 日报 · 2026.04.20
 
 🧠 模型
 
-① Claude 4.7 发布 + 多产品落地
-Anthropic 放出 Claude 4.7，同周上线 Claude Design（读代码库生成设计系统）、Claude for Word（Pro/Max 可用）。Anthropic 研究员 Alex Albert 确认昨天用户遇到的 bug 已修复。
-🔗 https://x.com/claudeai/status/2045222254699511855
+① Claude Opus 4.7 发布（Anthropic，4月16日）
+SWE-bench Verified 达 87.6%，GPQA 94.2%，支持 100 万 token 上下文，视觉分辨率提升 3.3 倍，新增 xhigh 推理力度，基准测试 14 项赢 12 项。定价与 4.6 保持不变（$5/$25 per M tokens），是当前公开可用的最强 Claude 版本。
+🔗 https://www.distillintelligence.com/link/u820151/anthropic-releases-claude-opus-4-7
 
-② Claude Code 黑客松重启，奖池 10 万美元 API 额度
-Anthropic 宣布第二届 Claude Code 黑客松，本周日截止报名，可以和 Claude Code 团队同场作战。
-🔗 https://x.com/claudeai/status/2045248224659644654
+② Claude Mythos Preview 被国安局大规模使用
+SWE-bench 93.9%、GPQA Diamond 94.6%，已在每个主流操作系统和浏览器中发现「数千个零日漏洞」。尽管 Anthropic 已被五角大楼列为供应链风险，NSA 和 DoD 仍在广泛使用该模型。开源复现版 OpenMythos（770M 参数，效果媲美 1.3B Transformer）同期发布。
+🔗 https://llm-stats.com/ai-news
 
-③ Matt Turck：Anthropic 一代连发四款工具
-FirstMark 投资人 Matt Turck 点评：Claude Code、Skills、Claude Cowork、Claude Design，一代节奏罕见。
-🔗 https://x.com/mattturck/status/2045211226272129274
+③ OpenAI GPT-Rosalind 生命科学专用模型发布
+OpenAI 发布面向生命科学的专用模型，直接与谷歌在药物研发方向竞争。此前一周 OpenAI 还发布了 GPT-5.4-Cyber，将 AI 安全攻防能力大幅提升。
+🔗 https://www.distillintelligence.com/link/a3143338/openai-launches-ai-model-gpt-rosalind-for-life-sciences-research
+
+④ Meta 发布 Muse Spark，一年内首个主力 AI 模型
+Meta 正式推出 Muse Spark，这是其 AI 团队超大规模投入后的首个里程碑产品，如何把它转化为商业收入仍是待解问题。
+🔗 https://unifuncs.com/s/ZOHYyCqA
 
 🤖 Agent/编程
 
-④ Box CEO：Agent 会把软件用量放大 100 倍
-Box CEO Aaron Levie 连发两条长推，核心观点：Agent 全天候并行运行，会把企业平台的使用量拉到人类根本做不到的规模。以前按席位卖软件，以后靠 Agent 消费量变现——软件价值的上限消失了。
-🔗 https://x.com/levie/status/2045355693050655048
+⑤ Anthropic 在 Claude Code 引入 Routines 功能
+Claude Code 新增可复用的 Routines 能力，进一步完善 coding agent 工作流，开发者生态正在围绕 Claude Code 快速构建。
+🔗 https://www.distillintelligence.com/link/u812106/anthropic-introduces-routines-in-claude-code
 
-⑤ Cursor 设计师：最好的 Agent = 最佳框架 + 最强模型 + 跑在哪里都行
-Cursor 设计师 Ryo Lu 分享 Cursor Agent 更新，一句话总结了 Agent 产品竞争的三个维度。
-🔗 https://x.com/ryolu_/status/2045336089867825157
+⑥ OpenAI 更新 Codex 和 Agents SDK
+Codex 新增插件支持，Agents SDK 重大更新并引入沙箱化能力，企业可以在没有安全风险的情况下构建 AI agent。同期 OpenAI 与 Cloudflare 合作推出 Agent Cloud 基础设施。
+🔗 https://www.distillintelligence.com/link/u821011/openai-releases-major-codex-update
+
+⑦ 论文：Corpus2Skill 让 RAG 从「检索-消费」变为「边走边钻」
+层级技能树方案在 WixQA 上全面超越密集检索、RAPTOR 和 Agentic RAG。技能内化（SKILL0）与 RAG 正面对比，ALFWorld 提升 9.7%，推理时每步上下文不足 500 token——技能学进参数比检索注入更有效。
+🔗 https://ai-brief.liziran.com/en/daily/2026-04-19-corpus2skill-tracer-unidoc-rl-leapalign-rad-2.html
+
+⑧ 论文：TRACER 生产日志变蒸馏数据
+奇偶门处理 77 个意图类别 83-100% 的流量；在 NLI 任务上拒绝部署（「知道自己做不了这个工作」）——这种自我认知能力对生产系统稳定性意义重大。
+🔗 https://ai-brief.liziran.com/
+
+🔒 安全
+
+⑨ Vercel 遭第三方 AI 工具渗透，内部系统被攻破
+ShinyHunters/BreachForums 通过一个被入侵的第三方 AI 工具访问了 Vercel 内部系统。AI 工具的供应链安全正在成为新的攻击面——前一周 Claude Code 已遭投毒分发事件。
+🔗 https://llm-stats.com/ai-news
+
+⑩ NSA 在「供应链风险」标注下照常使用 Anthropic
+五角大楼将 Anthropic 列为供应链风险，NSA 却仍在大量使用 Claude Mythos Preview。这个矛盾折射出政府对 AI 能力的需求已超出其合规框架的边界，监管与实际使用之间的割裂在加剧。
+🔗 https://llm-stats.com/ai-news
+
+⑪ AI 安全工具市场：97% 企业预计今年发生重大 Agent 安全事件
+OpenAI 的 Agents SDK 沙箱化、行业整体对 agent 安全的重视度快速上升。安全调查员借助 AI 工具将事件响应时间从 30 分钟压缩到 2 分钟以内。
+🔗 https://aiagentstore.ai/ai-agent-news/2026-april
 
 🛠 产品/应用
 
-⑥ Google 发布 Flow Music（原 ProducerAI）
-Google Labs 把 ProducerAI 改名 Flow Music，独立成站，支持自然语言创作、分享和混音原创音乐。现在 Flow 家族：Flow 做图片视频，Flow Music 做歌曲和播放列表。
-🔗 https://x.com/GoogleLabs/status/2045250788864495874
+⑫ Google 发布 Gemini 原生 Mac 应用
+Google 正式推出 Gemini 的 macOS 原生客户端，同期还发布了 Gemini 3.1 Flash TTS 模型，在语音合成方向补强。
+🔗 https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts/
 
-⑦ Replit：动画生成 + AI 主动提示应用优化
-Replit CEO Amjad Masad 连发三条，包括新的动画生成能力、AI 主动提示应用可优化项。
-🔗 https://x.com/amasad/status/2045198577941844178
+⑬ Character.AI 发布青少年 AI 伴侣研究
+研究揭示青少年与 AI 伴侣的使用模式，无头服务因个人 AI 普及正变得越来越普遍，Simon Willison 指出这是基础架构层面的新变化。
+🔗 https://llm-stats.com/ai-news
 
 📈 商业/观点
 
-⑧ OpenAI 首席产品官 Kevin Weil 离职
-Kevin Weil 宣布这是他在 OpenAI 的最后一天，OpenAI for Science 团队被拆散并入各研究组。他表示"加速科学将是 AGI 最震撼人心的成果之一"。
-🔗 https://x.com/kevinweil/status/2045230426210648348
+⑭ Anthropic 年化收入突破 300 亿美元，或超越 OpenAI
+有机构浮动 Anthropic 万亿美元估值。与此同时，OpenAI 指责 Anthropic 夸大收入 80 亿美元，双方公开交锋，Altman 与 Amodei 在 AI 峰会现场的僵冷关系引发外界关注。
+🔗 https://www.distillintelligence.com/briefings/ai-leaders-2026-04-17
 
-⑨ Zara Zhang：写作 ≠ 生成文字
-Zara Zhang 指出：LLM 擅长生成文字，但生成文字是写作里最不重要的部分。把 LLM 当好作家是一种误解。
-🔗 https://x.com/zarazhangrui/status/2045394997630099922
+⑮ OpenAI 完成 1220 亿美元融资，估值 8520 亿美元
+融资闭环同时，Qwen 开源了 Qwen3-6-35B-A3B 模型，开源生态持续扩张。OpenAI 还收购了个人金融科技公司 Hiro，押注 AI + 金融场景。
+🔗 https://openai.com
 
-⑩ Garry Tan 吐槽 AI coding agent 稳定性
-YC CEO Garry Tan 说自己数不清浪费了多少小时——AI agent 给自己的 config 做"脑外科手术"，然后因为改了自己的配置挂掉了。
-🔗 https://x.com/garrytan/status/2045373889044472259
+⑯ Palantir Alex Karp 出书推销 AI 武器化，倡议「硬实力」
+Palantir 发布 22 条推文总结 CEO Alex Karp 新书核心观点——AI 武器化与硬实力应用。AI 军事化叙事正从幕后走到台前。
+🔗 https://llm-stats.com/ai-news
 
-🎙 Podcast
+📰 行业速报（来源：ai-digest.liziran.com，最新可用期：4月6日）
 
-No Priors: Scaling Global Organizations in the Age of AI — ServiceNow CEO Bill McDermott
-McDermott 从 16 岁买下一家熟食店讲起，核心观点：客户至上是肌肉记忆，不是口号。AI 时代最缺的不是技术，而是人与人的真实连接——AI 是放大人类野心的工具，不是取代的理由。他对变化速度的判断是反直觉的："现在是历史上最慢的，以后只会更快，接受它。"关于企业平台和 LLM 的关系，他估算用 LLM 复刻 ServiceNow 一个应用的成本，是平台本身的 10 倍。
+① Claude Code 遭供应链攻击，被投毒分发
+② Trump 关税政策开始冲击 AI 芯片供应链
+③ Anthropic 向内容创作者索取额外授权费，同期收购生物科技公司
+🔗 https://ai-digest.liziran.com/zh/digest/2026-04-06-claude-code-supply-chain-attack-trump-tariffs-hit-ai-chips.html
 
-📰 行业速报
+📚 论文速报（来源：ai-brief.liziran.com，4月19日，共筛自260篇）
 
-① Sora 头号推手 Bill Peebles 离职，同周 OpenAI 推出面向药企的 GPT-Rosalind，公司战略从消费创意工具转向生命科学
-② DRAM 供给缺口可能延续到 2027 年，Cerebras 揣着百亿美元订单（含 OpenAI 合同）冲击 IPO
-③ Claude 4.7 新分词器让同等编码任务的 token 成本上涨，"产出量=生产力"的评价逻辑正在被质疑
+① Corpus2Skill：RAG 进化为层级技能树，精度超越 RAPTOR 和 Agentic RAG
+② TRACER：生产日志做蒸馏数据，83-100% 流量由奇偶门接管，可自知能力边界
+③ UniDoc-RL：视觉 RAG 四阶段流水线合并为单一联合策略，三项基准提升 17.7%
+④ LeapAlign：流匹配后训练绕开 OOM 反向传播，CVPR 接收
+⑤ RAD-2：扩散生成候选 + RL 判别器重排序，碰撞率下降 56%
+🔗 https://ai-brief.liziran.com/en/daily/2026-04-19-corpus2skill-tracer-unidoc-rl-leapalign-rad-2.html
 
-🔗 https://ai-digest.liziran.com/zh/digest/2026-04-19-soras-architect-exits-openai-cerebras-files-ipo-10b-backlog
-
-📚 论文速报
-
-① Corpus2Skill（RAG 新范式）：把整个语料库离线编译成分层技能树，Agent 按树结构钻取而非被动接收检索结果，在 WixQA 上超过密集检索、RAPTOR 和 Agentic RAG
-② TRACER（生产日志蒸馏）：用奇偶校验门把 83-100% 流量导向轻量代理模型，"知道自己做不到"被定义为系统最有价值的能力
-③ UniDoc-RL（视觉 RAG）：四阶段 pipeline 压缩成一个联合策略，端到端 RL 训练，三个 benchmark 最高提升 17.7%
-④ RAD-2（自动驾驶）：扩散模型生成候选轨迹 + RL 判别器重排序，碰撞率下降 56%
-
-🔗 https://ai-brief.liziran.com/en/daily/2026-04-19-skill-tree-rag-log-surrogates.html
-
-📎 Notion 存档
-https://www.notion.so/AI-Builders-Digest-2026-04-19-347941f98904817682f8df9f72f352a8
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-04-20-348941f989048140bef2c61a77a4ed48
+🌐 https://xiaochengzi2048.github.io/digest.txt
