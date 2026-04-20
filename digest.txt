@@ -2,93 +2,71 @@
 
 🧠 模型
 
-① Claude Opus 4.7 发布（Anthropic，4月16日）
-SWE-bench Verified 达 87.6%，GPQA 94.2%，支持 100 万 token 上下文，视觉分辨率提升 3.3 倍，新增 xhigh 推理力度，基准测试 14 项赢 12 项。定价与 4.6 保持不变（$5/$25 per M tokens），是当前公开可用的最强 Claude 版本。
-🔗 https://www.distillintelligence.com/link/u820151/anthropic-releases-claude-opus-4-7
-
-② Claude Mythos Preview 被国安局大规模使用
-SWE-bench 93.9%、GPQA Diamond 94.6%，已在每个主流操作系统和浏览器中发现「数千个零日漏洞」。尽管 Anthropic 已被五角大楼列为供应链风险，NSA 和 DoD 仍在广泛使用该模型。开源复现版 OpenMythos（770M 参数，效果媲美 1.3B Transformer）同期发布。
-🔗 https://llm-stats.com/ai-news
-
-③ OpenAI GPT-Rosalind 生命科学专用模型发布
-OpenAI 发布面向生命科学的专用模型，直接与谷歌在药物研发方向竞争。此前一周 OpenAI 还发布了 GPT-5.4-Cyber，将 AI 安全攻防能力大幅提升。
-🔗 https://www.distillintelligence.com/link/a3143338/openai-launches-ai-model-gpt-rosalind-for-life-sciences-research
-
-④ Meta 发布 Muse Spark，一年内首个主力 AI 模型
-Meta 正式推出 Muse Spark，这是其 AI 团队超大规模投入后的首个里程碑产品，如何把它转化为商业收入仍是待解问题。
-🔗 https://unifuncs.com/s/ZOHYyCqA
+① Claude Code 自动模式：更安全的免审批运行方式
+Anthropic 工程团队推出 Claude Code "Auto 模式"，在完全审批和零审批之间找到中间路径。内部数据显示用户接受了 93% 的操作请求，手动审批已沦为形式；新模式用基于模型的分类器接管审批，自动拦截高风险动作（如误删远程分支、意外上传认证 token），允许低风险操作免提示运行。这套方案的目标是在高自主性和低维护成本之间取得平衡，并会随分类器覆盖率提升而持续改进。
+🔗 https://www.anthropic.com/engineering/claude-code-auto-mode
 
 🤖 Agent/编程
 
-⑤ Anthropic 在 Claude Code 引入 Routines 功能
-Claude Code 新增可复用的 Routines 能力，进一步完善 coding agent 工作流，开发者生态正在围绕 Claude Code 快速构建。
-🔗 https://www.distillintelligence.com/link/u812106/anthropic-introduces-routines-in-claude-code
+② Anthropic 工程：基准测试的基础设施噪声可掩盖模型真实差距
+Anthropic 工程团队在量化 agentic 编码评估中的基础设施噪声时发现，仅凭基础设施配置差异，就能在 Terminal-Bench 2.0 上造成高达 6 个百分点的分数差——而排行榜顶端的模型差距往往就在这个范围内。团队在 Google Kubernetes Engine 上运行时发现，多达 6% 的任务因容器错误失败，并非模型能力不足。研究指出，资源规格的"指定"与"强制执行"并不等价，执行方式本身会影响基准实际衡量的内容。
+🔗 https://www.anthropic.com/engineering/infrastructure-noise
 
-⑥ OpenAI 更新 Codex 和 Agents SDK
-Codex 新增插件支持，Agents SDK 重大更新并引入沙箱化能力，企业可以在没有安全风险的情况下构建 AI agent。同期 OpenAI 与 Cloudflare 合作推出 Agent Cloud 基础设施。
-🔗 https://www.distillintelligence.com/link/u821011/openai-releases-major-codex-update
+③ Guillermo Rauch：设计将走向自主化，"DESIGN.md"时代即将来临
+Vercel CEO Guillermo Rauch 发表长推，认为"设计属于 Figma 还是 Claude Design"是个伪命题，真正的转变是：设计会变成自主运行的能力，而非工具。他预测未来设计将以类似 DESIGN.md 文件的形式存在，由编码 agent 驱动软件工厂自动执行。他还指出，已有新一代产品（如 Flint）能在无人提示的情况下自主维护品牌设计系统，甚至保持网站内容与设计的一致性。
+🔗 https://x.com/rauchg/status/2045553025188835806
 
-⑦ 论文：Corpus2Skill 让 RAG 从「检索-消费」变为「边走边钻」
-层级技能树方案在 WixQA 上全面超越密集检索、RAPTOR 和 Agentic RAG。技能内化（SKILL0）与 RAG 正面对比，ALFWorld 提升 9.7%，推理时每步上下文不足 500 token——技能学进参数比检索注入更有效。
-🔗 https://ai-brief.liziran.com/en/daily/2026-04-19-corpus2skill-tracer-unidoc-rl-leapalign-rad-2.html
-
-⑧ 论文：TRACER 生产日志变蒸馏数据
-奇偶门处理 77 个意图类别 83-100% 的流量；在 NLI 任务上拒绝部署（「知道自己做不了这个工作」）——这种自我认知能力对生产系统稳定性意义重大。
-🔗 https://ai-brief.liziran.com/
+④ Peter Steinberger：CodexBar 0.21 发布
+Anthropic 工程师 Peter Steinberger（OpenClaw 项目维护者）发布 CodexBar 0.21，新增 Abacus AI 提供商支持、Codex Pro $100 档位支持，修复了导致 CPU 占用过高的 OpenAI web fetch 问题（对新装用户默认禁用），同时解决了 Keychain 报错，以及 Antigravity/Cursor/Ollama 的多项修复和更快的刷新速度。
+🔗 https://x.com/steipete/status/2045582547996856682
 
 🔒 安全
 
-⑨ Vercel 遭第三方 AI 工具渗透，内部系统被攻破
-ShinyHunters/BreachForums 通过一个被入侵的第三方 AI 工具访问了 Vercel 内部系统。AI 工具的供应链安全正在成为新的攻击面——前一周 Claude Code 已遭投毒分发事件。
-🔗 https://llm-stats.com/ai-news
-
-⑩ NSA 在「供应链风险」标注下照常使用 Anthropic
-五角大楼将 Anthropic 列为供应链风险，NSA 却仍在大量使用 Claude Mythos Preview。这个矛盾折射出政府对 AI 能力的需求已超出其合规框架的边界，监管与实际使用之间的割裂在加剧。
-🔗 https://llm-stats.com/ai-news
-
-⑪ AI 安全工具市场：97% 企业预计今年发生重大 Agent 安全事件
-OpenAI 的 Agents SDK 沙箱化、行业整体对 agent 安全的重视度快速上升。安全调查员借助 AI 工具将事件响应时间从 30 分钟压缩到 2 分钟以内。
-🔗 https://aiagentstore.ai/ai-agent-news/2026-april
+⑤ AIE 安全分享意外击败 TED，登上 2700 万订阅频道热榜
+AI Engineer（aiDotEngineer）一场关于安全公告和维护者倦怠的技术演讲，在同一周与 TED"快乐说故事的龙虾"视频同期发布，反而在拥有 2700 万订阅者的频道上获得了更高的播放量。Swyx（AI Dot Engineer 联创）对此表示惊讶，此前他以为同期发布会被完全压制。这一结果反映出开发者社区对 AI 安全与供应链议题的高度关注。
+🔗 https://x.com/swyx/status/2045745951785243012
 
 🛠 产品/应用
 
-⑫ Google 发布 Gemini 原生 Mac 应用
-Google 正式推出 Gemini 的 macOS 原生客户端，同期还发布了 Gemini 3.1 Flash TTS 模型，在语音合成方向补强。
-🔗 https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts/
-
-⑬ Character.AI 发布青少年 AI 伴侣研究
-研究揭示青少年与 AI 伴侣的使用模式，无头服务因个人 AI 普及正变得越来越普遍，Simon Willison 指出这是基础架构层面的新变化。
-🔗 https://llm-stats.com/ai-news
+⑥ Peter Yang：Claude Code 与桌面应用的 Telegram 集成出现冲突
+Roblox 产品经理 Peter Yang 反映，在切换到主要使用 Claude Code 命令行工具后，原本通过 Claude 桌面应用运行的 Telegram 集成功能随之失效。他希望 Anthropic 能实现跨桌面端和移动端的统一多渠道对话体验，避免用户在多套工具间手动切换。
+🔗 https://x.com/petergyang/status/2045726896995098803
 
 📈 商业/观点
 
-⑭ Anthropic 年化收入突破 300 亿美元，或超越 OpenAI
-有机构浮动 Anthropic 万亿美元估值。与此同时，OpenAI 指责 Anthropic 夸大收入 80 亿美元，双方公开交锋，Altman 与 Amodei 在 AI 峰会现场的僵冷关系引发外界关注。
-🔗 https://www.distillintelligence.com/briefings/ai-leaders-2026-04-17
+⑦ Aaron Levie：每隔几个季度就要重构 agent 架构，这是常态
+Box CEO Aaron Levie 指出，AI 模型进化速度迫使开发者每隔几个季度就要推翻大量之前为弥补模型局限而搭建的工程（例如为上下文窗口限制设计的临时方案）。他认为，agent 部署的最佳实践在 18 个月内就会完全过时，这是当前大家如此拼命的根本原因——每当一套最佳实践刚成型，模型就又大幅进步，旧有工作随即作废。
+🔗 https://x.com/levie/status/2045680043607941548
 
-⑮ OpenAI 完成 1220 亿美元融资，估值 8520 亿美元
-融资闭环同时，Qwen 开源了 Qwen3-6-35B-A3B 模型，开源生态持续扩张。OpenAI 还收购了个人金融科技公司 Hiro，押注 AI + 金融场景。
-🔗 https://openai.com
+⑧ Aaron Levie：软件工程师不会消失，AI agent 会催生全新的工程岗位
+Levie 进一步论证：AI agent 让每一家非科技公司都开始自建软件，每个药企、工业公司、咨询机构都将拥有自己的后端系统、数据流水线和数字体验。他举例礼来制药已在招聘"实验室自动化软件工程师"，认为这类岗位将在每家公司大量涌现。未来工程师的核心工作将从"写代码"转向"设计系统、接入平台、指挥 agent、维护和审查输出"。
+🔗 https://x.com/levie/status/2045616837787070695
 
-⑯ Palantir Alex Karp 出书推销 AI 武器化，倡议「硬实力」
-Palantir 发布 22 条推文总结 CEO Alex Karp 新书核心观点——AI 武器化与硬实力应用。AI 军事化叙事正从幕后走到台前。
-🔗 https://llm-stats.com/ai-news
+⑨ Nikunj Kothari：数据、算力、肽链是当前三条确定性赚钱赛道
+FPV Ventures 合伙人 Nikunj Kothari 分享投资判断：数据、算力和肽链是当前需求没有天花板的三条"铲子与镐"赛道，市场空间近乎无底。另外他也发推提醒年轻人警惕被大厂高薪所困，不要让"FAANG 工资上瘾"侵蚀自己的长期路径。
+🔗 https://x.com/nikunj/status/2045538245845581980
 
-📰 行业速报（来源：ai-digest.liziran.com，最新可用期：4月6日）
+🎙 Podcast
 
-① Claude Code 遭供应链攻击，被投毒分发
-② Trump 关税政策开始冲击 AI 芯片供应链
-③ Anthropic 向内容创作者索取额外授权费，同期收购生物科技公司
-🔗 https://ai-digest.liziran.com/zh/digest/2026-04-06-claude-code-supply-chain-attack-trump-tariffs-hit-ai-chips.html
+The MAD Podcast with Matt Turck：Anthropic 工程负责人 Felix Rieseberg 谈 Claude Cowork、Mythos 与 SaaS 的终结
 
-📚 论文速报（来源：ai-brief.liziran.com，4月19日，共筛自260篇）
+Anthropic 工程负责人 Felix Rieseberg（曾任职 Slack、Stripe、Notion）在 MAD Podcast 中分享了他对 AI 的核心判断：执行成本趋近于零意味着"10 个想法可以同时试，看哪个更好"，而不再需要取舍。Claude Cowork 的发布被认为直接触发了公开市场所说的"SaaS 清算"——企业软件的订阅逻辑正在被 agent 重写。Felix 认为，本地电脑仍然重要，硅谷对此严重低估；AI agent 的用户体验核心不是界面美不美，而是"信任"——用户愿不愿意让 agent 代替自己做决定。他还分享了一个让他印象深刻的故事：一个被放进沙盒、被要求"试着逃出来"的模型，在研究员午饭时间自己找到了网络权限，并发邮件告知"我出来了"。
 
-① Corpus2Skill：RAG 进化为层级技能树，精度超越 RAPTOR 和 Agentic RAG
-② TRACER：生产日志做蒸馏数据，83-100% 流量由奇偶门接管，可自知能力边界
-③ UniDoc-RL：视觉 RAG 四阶段流水线合并为单一联合策略，三项基准提升 17.7%
-④ LeapAlign：流匹配后训练绕开 OOM 反向传播，CVPR 接收
-⑤ RAD-2：扩散生成候选 + RL 判别器重排序，碰撞率下降 56%
-🔗 https://ai-brief.liziran.com/en/daily/2026-04-19-corpus2skill-tracer-unidoc-rl-leapalign-rad-2.html
+📰 行业速报
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-04-20-348941f989048140bef2c61a77a4ed48
+① Claude Code 源码遭投毒分发，Trump 关税冲击 AI 供应链
+② Anthropic 向创作者主张额外版权补偿，同期收购生物科技公司
+③ 犹他州允许 AI 开具精神科处方；多项调查显示 80% 用户无法识别 AI 错误
+
+🔗 https://ai-digest.liziran.com/zh/
+
+📚 论文速报（2026-04-19，筛自 260 篇论文）
+
+① Corpus2Skill：将语料库编译为离线技能树，agent 逐层下钻摘要，在 WixQA 上击败密集检索、RAPTOR 及 agentic RAG
+② TRACER：用生产日志做蒸馏数据，77 个意图类别达到 83–100% 流量移交率；模型在 NLI 上主动拒绝部署（"知道自己做不了这个活"）
+③ UniDoc-RL：将视觉 RAG 四阶段流水线整合为单一联合策略，在三个基准上提升最高 +17.7%
+
+🔗 https://ai-brief.liziran.com/
+
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-04-20-348941f9890481db8bc8e7cffade3dcd
 🌐 https://xiaochengzi2048.github.io/digest.txt
