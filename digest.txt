@@ -1,65 +1,91 @@
-🗞 AI Builders 日报 · 2026.04.21
+🗞 AI Builders 日报 · 2026.04.22
 
-🔒 安全
+🧠 模型
 
-① Vercel 遭受 AI 加速的供应链安全攻击
-Vercel 首席执行官 Guillermo Rauch 披露：一名员工账号因使用的某 AI 平台（Anon.ai）被入侵，攻击者借此渗透到 Vercel 的 Google Workspace，进而枚举非敏感环境变量，获取更深层访问权限。Rauch 判断攻击者"极具针对性，极有可能被 AI 大幅加速"，移动速度和对 Vercel 内部结构的理解令人警惕。目前受影响客户数量"非常有限"，Vercel 已推送安全公告，建议所有用户轮换密钥并审查环境变量权限。
-🔗 https://x.com/rauchg/status/2045995362499076169
+① Claude Cowork 上线实时动态看板功能
+Anthropic 官方账号宣布 Claude 新功能：在 Cowork 模式中可以构建连接用户应用和文件的实时看板，数据随时刷新，版本历史完整保存。所有付费用户现已可用，跨会话持续存在。Dan Shipper 也提到 "Opus 4.7 代码审查做得不错"，暗示 Anthropic 内部有新版本在小范围测试。
+🔗 https://x.com/claudeai/status/2046328619249684989
 
-② 网络安全公司将因 AI 驱动攻击浪潮大幅升值
-FPV Ventures 合伙人 Nikunj Kothari 指出：模型能力提升会持续加快攻击频率，人类依然是最主要的攻击入口，而眼下看到的一切还只是开始。Vercel 事件恰好印证了这一判断。
-🔗 https://x.com/nikunj/status/2046007615512256624
+② Sam Altman 暗示 OpenAI × Apple 深度合作
+山姆·奥特曼（OpenAI CEO）发帖称"蒂姆·库克是传奇，非常感激"，同时转发了一条被内部代号"心灵感应"（Telepathy）的项目公告。按上下文，这很可能是 OpenAI 与苹果深度集成的正式落地，具体功能尚未披露，但热度极高（2.8万赞）。
+🔗 https://x.com/sama/status/2046330082726384051
 
 🤖 Agent/编程
 
-③ 开发者吐槽 OpenClaw 接 GPT 模型后 Agent 能力大幅下滑
-Product at Roblox 的 Peter Yang 花一小时以上尝试让 OpenClaw 配合 GPT 完成定时邮件任务，结果连 Claude Opus 轻松搞定的工作都无法完成，收到一堆"你把模板搞乱了"的错误响应。他认为这不是个例——他所在的多个 AI builder 社群有类似反馈，期待 GPT-5.5（代号 Spud）能解决 Agent 跟随问题。
-🔗 https://x.com/petergyang/status/2046036593199497615
+③ OpenAI Codex 收购 Sky，"真正的电脑使用"开始可用
+Swyx（Latent Space 播客主理人）评论称，Codex 收购 Sky by Software 可能是 OpenAI 过去一年最值的一笔交易。他等待"真正可用的电脑使用"从 2024 年就开始，如今 4o 视觉 + Codex 的组合终于在生产环境中落地了。
+🔗 https://x.com/swyx/status/2046362691606855700
 
-④ Garry Tan 用 Claude Code 持续迭代自己的开源工具集 GStack
-YC 总裁 Garry Tan 发布 GStack v1.4，新增 `/make-pdf` 技能，可与 OpenClaw/Hermes 及 Claude Code 直接集成使用。他的工作流是：在自己的 agent 使用中遇到需求 → 让 Claude Code 实现 → 开源发布。他也建议遇到 cron/subagent 问题的用户，让 OpenClaw 自己用工具实现替代方案，等待更好的插件 API 成熟。
-🔗 https://x.com/garrytan/status/2046097059057651941
+④ Agents 的原生语言是 HTML，不是 XML
+Zara Zhang（前谷歌，开发者工具构建者）发现：让 AI Agent 生成 HTML 幻灯片比生成 XML 幻灯片效果好得多。她认为"Agent 用 HTML 表达自己"——这个观察对于需要 Agent 生成可视化输出的工程师有很强的实践价值。
+🔗 https://x.com/zarazhangrui/status/2046454622852657264
 
-⑤ 工具越来越强，产品团队应把时间从内部沟通转向用户沟通
-Zara Zhang 观察：AI 擅长执行，所以人类应专注于"搞清楚要做什么"，而这需要和外部用户深度交流才能迸发灵感。她看到一些独立开发者的模式：整天和用户谈话，录音扔给 agent，由 agent 来决策并执行。团队规模变小，内部协调开销骤降，这一趋势已经在实际 agent 重度团队中发生。
-🔗 https://x.com/zarazhangrui/status/2045810170245386713
+⑤ Dan Shipper：双 Agent 协作效果更好
+Every 创始人 Dan Shipper 在实验后得出结论：两个 Agent 协同工作比单个 Agent 效果更好。这条推文引发了大量讨论（40 条回复），反映出业内对多 Agent 架构的持续关注。
+🔗 https://x.com/danshipper/status/2046231280430240141
+
+⑥ Aaron Levie：企业需要专职 Agent 工作流负责人
+Box CEO 亚伦·利维指出，从聊天机器人升级到真正自动化流程需要大量工程和组织投入。他建议企业设立专门负责"落地 Agent 自动化"的岗位，而不是让每个员工自行摸索，原因是技术复杂度和侧项目推进模式都行不通。
+🔗 https://x.com/levie/status/2046397816755634340
+
+🔒 安全
+
+⑦ Vercel 发布大规模安全加固：20+ 项产品改进
+Vercel CEO 纪尧姆·劳赫（Guillermo Rauch）宣布在安全事件后，团队已跨 Dashboard 和 CLI 推出 20 余项安全改进，包括更便捷的 MFA 设置、环境变量审计和操作日志。他特别提醒：删除环境变量 ≠ 轮换密钥，轮换必须在对应服务商侧操作，仅在 Vercel 侧删除并不安全。
+🔗 https://x.com/rauchg/status/2046406894269747668
+
+🛠 产品/应用
+
+⑧ gog 0.13 发布：Gmail 转发带注释、Sheets 图表编辑、Slides 缩略图
+彼得·施泰因伯格（Peter Steinberger，OpenClaw 共同创始人）发布 gog 0.13，功能大幅扩展：Gmail 转发可附注释和附件，支持自动回复，Markdown 可直接上传至 Google Docs，还支持辅助日历和更安全的"不发送"控制。一天内获得 702 个赞，41 次转发。
+🔗 https://x.com/steipete/status/2046356596683411924
+
+⑨ wacli 0.6.0：WhatsApp CLI 安全加固版
+同一天，彼得·施泰因伯格还发布了 wacli 0.6.0（WhatsApp 命令行工具），本次主要是安全与稳定性升级：加固 SQLite 存储路径处理、安全化搜索查询、修复媒体同步崩溃、新增 WACLI_STORE_DIR 环境变量。
+🔗 https://x.com/steipete/status/2046375922031321401
+
+⑩ OpenClaw 与腾讯合作提升 Harness 性能
+施泰因伯格透露，腾讯团队主动提供评测数据协助优化 OpenClaw 的 harness 性能，双方还在将改进合并回开源仓库。他特别提到这对不喜欢命令行操作的用户是个好选择。
+🔗 https://x.com/steipete/status/2046259696722465113
+
+⑪ Cursor 在 Cursor 内部上线全新起始界面
+鱼露（Ryo Lu，Cursor 设计负责人）发推展示了 Cursor 的全新起始页设计，配文"我们喜欢清爽的新开始"，暗示 Cursor 在产品体验上持续打磨细节。获 185 赞。
+🔗 https://x.com/ryolu_/status/2046246973783859559
 
 📈 商业/观点
 
-⑥ AI 工具不会消灭工种，而会推高每个工种的复杂度门槛
-Box CEO Aaron Levie 认为"AI 取代今天的工作"是个静态市场谬误。当所有人都用上同等工具，市场会自动重新校准，工作的定义随之上移：写合同摘要不再是律师助理的核心职责，剪辑视频不再是视频编辑的壁垒。懂行的工程师配上 AI，远比不懂行的人用 AI 产出更高——专业判断依然是核心差异。
-🔗 https://x.com/levie/status/2046067263326028108
+⑫ Swyx & Garry Tan：GBrain 插件迁移指南备受关注
+Y Combinator CEO 加里·谭（Garry Tan）发布了一篇关于如何在升级 GBrain 版本时保持配置同步的技术笔记，重点针对 Alphaclaw 但适用于整个 OpenClaw/Hermes 生态。他同时转发了 YC 建议某批人去创业的帖子，暗示新一批有趣的建设者正在涌现。
+🔗 https://x.com/garrytan/status/2046464315918864385
 
-⑦ 软件正在从无服务器走向"无头"——尽职调查面临挑战
-FirstMark 风险投资人 Matt Turck 半开玩笑地指出：软件先去掉了服务器，现在又在去掉"头"，留给投资人做尽调的东西越来越少了。调侃之下是对软件形态加速抽象化的真实观察。
-🔗 https://x.com/mattturck/status/2045987462409826604
-
-⑧ 对 AI 实验室的真诚度，你最信任哪家？
-Linear 产品负责人 Nan Yu 抛出一个问题：如果各大实验室同时发布新闻稿，你觉得哪家说的和心里想的距离最近？没有给出答案，但问题本身颇具针对性。
-🔗 https://x.com/thenanyu/status/2045910980597530836
+⑬ Matt Turck：AI 替代劳动力的"TAM 即劳动力市场"论站不住脚
+FirstMark Capital 合伙人马特·图尔克（Matt Turck）反驳了一个流行观点——"AI 的潜在市场规模等于人类劳动力总量"。他指出，历史上任何劳动力自动化技术，最终服务价格都会跌到边际成本 + 正常利润的水平，不会维持劳动力的价格水平。
+🔗 https://x.com/mattturck/status/2046284478151086178
 
 🎙 Podcast
 
-Unsupervised Learning：OpenAI 首席科学家谈持续学习、强化学习与对齐方向
-嘉宾 Ako Paioki（OpenAI 首席科学家）与主持人深入探讨了三个核心问题：一、持续学习是当下研究的真实路径，而非被忽视的议题，是 OpenAI 正在推进的方向；二、编程工具的爆发是模型进展的重要信号，OpenAI 内部绝大多数编码工作已切换到 Codex；三、对齐的长期挑战在于泛化——模型在陌生场景下究竟会回退到什么价值观。他还谈及 AI 在数学和物理研究中的进展，以及到 2028 年实现"完全自动化 AI 研究员"的路线图。
+No Priors：《代理经济：AI Agent 将如何改造金融系统》（嘉宾：Circle 联合创始人 Jeremy Allaire）
 
-📰 行业速报（最新内容截至 2026.03.27）
+Circle 联合创始人兼 CEO 杰里米·阿莱尔探讨了稳定币与 AI Agent 经济的交汇点。核心观点：AI Agent 将大量进行微支付（以分为单位），现有金融基础设施无法支撑——缺乏全球互操作性、实时性和可编程性。Circle 正在构建 ARC，一个以 USDC 为原生代币、专为机器经济设计的"经济操作系统"，支持确定性结算终结性（数百毫秒内）和隐私原语。他认为未来十年可能出现链上混合人机组织形式，并对双位数 GDP 增长持审慎乐观态度。
+🔗 https://www.youtube.com/watch?v=eyobeqMdbeI
 
-⚠️ 注：ai-digest.liziran.com 目前内容滞后约三周，最新一期为 2026年3月27日。
+---
 
-① 谷歌同一周上线三项实时 AI 搜索功能，语音和镜头取代文字框，200 多个国家同步铺开
-② 苹果向第三方 AI 开放 Siri，谷歌上线"导入对手记忆"功能，双方争抢存量用户
-③ Wikipedia 正式禁止编辑者用 AI 撰写条目，原因是志愿者发现 AI 文章系统性虚构引用和来源
+📰 行业速报（来源：ai-digest.liziran.com，最新内容为 2026-03-27，网站滞后约四周）
+
+① 谷歌同一周上线三项实时 AI 搜索功能，语音和镜头取代文字框，200 多个国家同步铺开，搜索交互方式整体切换
+② 苹果向第三方 AI 开放 Siri，谷歌上线"导入对手记忆"功能，两家争的是同一件事：用户的 AI 记忆入口
+③ Wikipedia 正式禁止编辑者用 AI 撰写条目，志愿者发现 AI 文章系统性虚构引用和来源，事实准确性无法保障
 
 🔗 https://ai-digest.liziran.com/zh/digest/2026-03-27-wikipedia-banned-ai-writing-after-editors-caught-fabricated.html
 
-📚 论文速报（2026.04.19）
+📚 论文速报（来源：ai-brief.liziran.com，最新内容为 2026-04-19，从 260 篇论文中筛选）
 
-① Corpus2Skill：RAG 从"检索-消费"升级为"按层钻取"，分层技能树在 WixQA 上超过密集检索、RAPTOR 和 Agentic RAG
-② TRACER：用生产日志做蒸馏数据，闸门机制处理 77 个意图类别中 83-100% 的流量，还知道自己"不会做"的任务
-③ LeapVAlign：流匹配后训练通过两个随机锚点跳转到早期生成步骤，避免显存溢出反向传播，已被 CVPR 接收
+① Corpus2Skill：检索增强生成从"检索-消费"转向"漫游-深钻"，分层技能树在 WixQA 上超越密集检索、RAPTOR 和智能体式 RAG
+② TRACER：用生产日志作蒸馏数据，拒绝门处理 83-100% 流量，77 个意图类别实现近人工水平，"知道自己做不了"是关键能力
+③ UniDoc-RL：视觉 RAG 的四阶段流程压缩为单一联合策略加分层动作和密集奖励，三项基准提升最高 +17.7%
 
 🔗 https://ai-brief.liziran.com/
 
 📎 Notion 存档
-https://www.notion.so/AI-Builders-Digest-2026-04-21-348941f9890481ab8fd5c022027a6274
+https://www.notion.so/AI-Builders-Digest-2026-04-22-34a941f98904813c9669d299a4febca6
