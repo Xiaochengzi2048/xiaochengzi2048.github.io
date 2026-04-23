@@ -1,91 +1,96 @@
-🗞 AI Builders 日报 · 2026.04.22
+🗞 AI Builders 日报 · 2026.04.23
 
 🧠 模型
 
-① Claude Cowork 上线实时动态看板功能
-Anthropic 官方账号宣布 Claude 新功能：在 Cowork 模式中可以构建连接用户应用和文件的实时看板，数据随时刷新，版本历史完整保存。所有付费用户现已可用，跨会话持续存在。Dan Shipper 也提到 "Opus 4.7 代码审查做得不错"，暗示 Anthropic 内部有新版本在小范围测试。
-🔗 https://x.com/claudeai/status/2046328619249684989
+① Claude Opus 4.7 发布，编程能力大幅跃升
+Anthropic 于 4 月 16 日正式发布 Claude Opus 4.7，在 SWE-bench Verified 上拿到 87.6%，在 GPQA 上达到 94.2%，上下文窗口扩展至 100 万 token，视觉分辨率提升 3.3 倍，新增 xhigh 推理等级。与同价位的 Opus 4.6 对比，在 14 个基准里赢了 12 个。定价 5/25 美元每百万 token。
+🔗 https://llm-stats.com/ai-news
 
-② Sam Altman 暗示 OpenAI × Apple 深度合作
-山姆·奥特曼（OpenAI CEO）发帖称"蒂姆·库克是传奇，非常感激"，同时转发了一条被内部代号"心灵感应"（Telepathy）的项目公告。按上下文，这很可能是 OpenAI 与苹果深度集成的正式落地，具体功能尚未披露，但热度极高（2.8万赞）。
-🔗 https://x.com/sama/status/2046330082726384051
+② Claude Mythos 内测预览，安全原因暂不公开
+Anthropic 同步披露了 Claude Mythos 预览版，SWE-bench Verified 达到 93.9%，GPQA Diamond 94.6%，据报道在所有主流操作系统和浏览器里发现了大量零日漏洞。因安全顾虑目前未全量对外开放。
+🔗 https://llm-stats.com/ai-news
 
 🤖 Agent/编程
 
-③ OpenAI Codex 收购 Sky，"真正的电脑使用"开始可用
-Swyx（Latent Space 播客主理人）评论称，Codex 收购 Sky by Software 可能是 OpenAI 过去一年最值的一笔交易。他等待"真正可用的电脑使用"从 2024 年就开始，如今 4o 视觉 + Codex 的组合终于在生产环境中落地了。
-🔗 https://x.com/swyx/status/2046362691606855700
+③ OpenClaw 2026.4.21 更新，修复插件依赖升级后中断问题
+开发者彼得·施泰因贝格尔（Peter Steinberger）发布了 OpenClaw 2026.4.21 版本，核心修复是 npm 升级后内置插件运行时依赖损坏的问题，并通过 Docker 端到端测试覆盖 Telegram/Discord/Slack 三个渠道，确保升级不再中断。同时回移了 OpenAI Image 2 支持。
+🔗 https://x.com/steipete/status/2046803162590335240
 
-④ Agents 的原生语言是 HTML，不是 XML
-Zara Zhang（前谷歌，开发者工具构建者）发现：让 AI Agent 生成 HTML 幻灯片比生成 XML 幻灯片效果好得多。她认为"Agent 用 HTML 表达自己"——这个观察对于需要 Agent 生成可视化输出的工程师有很强的实践价值。
-🔗 https://x.com/zarazhangrui/status/2046454622852657264
+④ 扎拉·张：让 Claude Code 可视化自身上下文窗口
+前谷歌工程师、构建者扎拉·张（Zara Zhang）发推说，让 Claude Code 生成一个 HTML 来可视化当前上下文窗口的内容，是一种很野的学习方式，引来 204 个点赞。这个小技巧其实是理解大模型上下文管理的直观入口。
+🔗 https://x.com/zarazhangrui/status/2046758723998425433
 
-⑤ Dan Shipper：双 Agent 协作效果更好
-Every 创始人 Dan Shipper 在实验后得出结论：两个 Agent 协同工作比单个 Agent 效果更好。这条推文引发了大量讨论（40 条回复），反映出业内对多 Agent 架构的持续关注。
-🔗 https://x.com/danshipper/status/2046231280430240141
+⑤ 丹·希珀上线 Monologue Notes：Agent 原生语音笔记
+Every 的联合创始人丹·希珀发布 Monologue Notes，支持走路时、开会时、半夜灵感来袭时录音记录，最大亮点是 Agent 原生设计——Agent 可以从任意地方访问你的笔记。
+🔗 https://x.com/danshipper/status/2046643173766697214
 
-⑥ Aaron Levie：企业需要专职 Agent 工作流负责人
-Box CEO 亚伦·利维指出，从聊天机器人升级到真正自动化流程需要大量工程和组织投入。他建议企业设立专门负责"落地 Agent 自动化"的岗位，而不是让每个员工自行摸索，原因是技术复杂度和侧项目推进模式都行不通。
-🔗 https://x.com/levie/status/2046397816755634340
+⑥ 贾里·谭升级 GBrain Minions 作业调度系统
+YC 总裁贾里·谭（Garry Tan）推文称 GBrain Minions（他给自己 Agent 做的作业调度服务器）迎来一次大升级，同时附了一条关于如何让 GBrain 正确地指挥 OpenClaw/Hermes 做任务的经验帖。
+🔗 https://x.com/garrytan/status/2046804979160334433
 
-🔒 安全
+⑦ discrawl 0.3.0 发布，Discord 存档支持 Git 同步
+彼得·施泰因贝格尔还发布了 discrawl 0.3.0，加入了 Git 后端的存档同步功能——Discord 存档可以推到私有仓库，无需每个用户都有 Bot 凭证就能本地查询。另有自动刷新、活动报告等更新。
+🔗 https://x.com/steipete/status/2046748122928263345
 
-⑦ Vercel 发布大规模安全加固：20+ 项产品改进
-Vercel CEO 纪尧姆·劳赫（Guillermo Rauch）宣布在安全事件后，团队已跨 Dashboard 和 CLI 推出 20 余项安全改进，包括更便捷的 MFA 设置、环境变量审计和操作日志。他特别提醒：删除环境变量 ≠ 轮换密钥，轮换必须在对应服务商侧操作，仅在 Vercel 侧删除并不安全。
-🔗 https://x.com/rauchg/status/2046406894269747668
+⑧ 斯怀克斯回顾 Cursor 最早播客访谈
+Swyx 分享了 Latent Space 与 Cursor 联合创始人阿曼·朗格的早期对话录音，彼时 Cursor 只有 5 个人还没找到产品市场契合点——对比今天 SpaceX 出价 600 亿美元要收购 Cursor，反差极大。
+🔗 https://x.com/swyx/status/2046791964759044504
 
 🛠 产品/应用
 
-⑧ gog 0.13 发布：Gmail 转发带注释、Sheets 图表编辑、Slides 缩略图
-彼得·施泰因伯格（Peter Steinberger，OpenClaw 共同创始人）发布 gog 0.13，功能大幅扩展：Gmail 转发可附注释和附件，支持自动回复，Markdown 可直接上传至 Google Docs，还支持辅助日历和更安全的"不发送"控制。一天内获得 702 个赞，41 次转发。
-🔗 https://x.com/steipete/status/2046356596683411924
+⑨ 谷歌 Stitch 引入 DESIGN.md，让 AI 设计有章可循
+谷歌实验室副总裁乔什·伍德沃德（Josh Woodward）对 Stitch 的 DESIGN.md 功能赞不绝口——这个功能让用户可以把设计规范写成文档，让 AI 在生成 UI 时有据可依。Stitch 现已登陆欧洲，并持续服务中小企业用户。
+🔗 https://x.com/joshwoodward/status/2046754179499356594
 
-⑨ wacli 0.6.0：WhatsApp CLI 安全加固版
-同一天，彼得·施泰因伯格还发布了 wacli 0.6.0（WhatsApp 命令行工具），本次主要是安全与稳定性升级：加固 SQLite 存储路径处理、安全化搜索查询、修复媒体同步崩溃、新增 WACLI_STORE_DIR 环境变量。
-🔗 https://x.com/steipete/status/2046375922031321401
+⑩ 山姆·奥特曼晒 ChatGPT Images 2.0 漫画，宣布新 VP 加入
+OpenAI CEO 山姆·奥特曼发推"我们希望你们拥有大量 AI"，晒出 ChatGPT Images 2.0 生成的漫画——他和盖布·纽维尔一起找 GPU。盖布·纽维尔正式加入 OpenAI 担任 VP 引发广泛关注。
+🔗 https://x.com/sama/status/2046752492093165708
 
-⑩ OpenClaw 与腾讯合作提升 Harness 性能
-施泰因伯格透露，腾讯团队主动提供评测数据协助优化 OpenClaw 的 harness 性能，双方还在将改进合并回开源仓库。他特别提到这对不喜欢命令行操作的用户是个好选择。
-🔗 https://x.com/steipete/status/2046259696722465113
-
-⑪ Cursor 在 Cursor 内部上线全新起始界面
-鱼露（Ryo Lu，Cursor 设计负责人）发推展示了 Cursor 的全新起始页设计，配文"我们喜欢清爽的新开始"，暗示 Cursor 在产品体验上持续打磨细节。获 185 赞。
-🔗 https://x.com/ryolu_/status/2046246973783859559
+⑪ Thariq 展示 Claude Code 生活质量改进
+Anthropic Claude Code 团队成员 Thariq 发推展示了一个"生活质量小功能"截图，获 1270 点赞——具体内容未说明，但反响表明这是开发者社区高度期待的体验优化。
+🔗 https://x.com/trq212/status/2046614372311798134
 
 📈 商业/观点
 
-⑫ Swyx & Garry Tan：GBrain 插件迁移指南备受关注
-Y Combinator CEO 加里·谭（Garry Tan）发布了一篇关于如何在升级 GBrain 版本时保持配置同步的技术笔记，重点针对 Alphaclaw 但适用于整个 OpenClaw/Hermes 生态。他同时转发了 YC 建议某批人去创业的帖子，暗示新一批有趣的建设者正在涌现。
-🔗 https://x.com/garrytan/status/2046464315918864385
+⑫ SpaceX 以 100 亿美元合作费换取 600 亿美元收购期权，Cursor 融资轮被叫停
+SpaceX 宣布与 AI 编程工具 Cursor 达成协议：双方将联合开发"世界最佳编程与知识工作 AI"，SpaceX 获得年内以 600 亿美元收购 Cursor 的期权，或支付 100 亿美元合作费。此前 Cursor 正在以 500 亿美元估值推进 20 亿美元融资轮，此举直接将融资按停。Cursor 将接入 SpaceX 的 Colossus 超算（相当于 100 万张英伟达 H100）。TechCrunch 分析指出，这笔交易暴露了 Cursor 与 xAI 各自的短板——两者都缺乏能与 Anthropic、OpenAI 抗衡的自研模型。
+🔗 https://techcrunch.com/2026/04/21/spacex-is-working-with-cursor-and-has-an-option-to-buy-the-startup-for-60-billion/
 
-⑬ Matt Turck：AI 替代劳动力的"TAM 即劳动力市场"论站不住脚
-FirstMark Capital 合伙人马特·图尔克（Matt Turck）反驳了一个流行观点——"AI 的潜在市场规模等于人类劳动力总量"。他指出，历史上任何劳动力自动化技术，最终服务价格都会跌到边际成本 + 正常利润的水平，不会维持劳动力的价格水平。
-🔗 https://x.com/mattturck/status/2046284478151086178
+⑬ Replit 就 BASED 法案出席国会听证，反对大科技公司操控软件市场
+Replit CEO 阿姆贾德·马萨德（Amjad Masad）称，Replit 就"BASED 法案"出席了国会听证，支持打破大科技平台对软件市场的不当控制。这是 AI 创业公司罕见地直接介入平台监管议题。
+🔗 https://x.com/amasad/status/2046762468199071765
+
+⑭ 亚伦·列维：企业落地 AI Agent 的真正门槛是存量技术债
+Box CEO 亚伦·列维（Aaron Levie）发出一条 1100+ 点赞的推文，称企业真正推进 Agent 的阻力在于遗留技术栈改造和碎片化数据，而非模型本身。他认为理解这一点需要"重置对现实世界运作方式的认知"。
+🔗 https://x.com/levie/status/2046805326784319663
+
+⑮ 扎拉·张：Agent 工具多到没活干了
+扎拉·张发了一条颇具共鸣的推文：你有没有过 Agent 和 AI 工具比实际工作量还多的感觉？这折射出开发者社区普遍存在的"工具过载"焦虑。
+🔗 https://x.com/zarazhangrui/status/2046662237306421608
 
 🎙 Podcast
 
-No Priors：《代理经济：AI Agent 将如何改造金融系统》（嘉宾：Circle 联合创始人 Jeremy Allaire）
-
-Circle 联合创始人兼 CEO 杰里米·阿莱尔探讨了稳定币与 AI Agent 经济的交汇点。核心观点：AI Agent 将大量进行微支付（以分为单位），现有金融基础设施无法支撑——缺乏全球互操作性、实时性和可编程性。Circle 正在构建 ARC，一个以 USDC 为原生代币、专为机器经济设计的"经济操作系统"，支持确定性结算终结性（数百毫秒内）和隐私原语。他认为未来十年可能出现链上混合人机组织形式，并对双位数 GDP 增长持审慎乐观态度。
-🔗 https://www.youtube.com/watch?v=eyobeqMdbeI
+AI & I by Every: We Gave Every Employee an AI Agent. Here's What Happened.
+Every 公司全员使用 OpenClaw 个人 Agent 两个月后的真实总结。核心洞察有三：一是每个人的 Agent 会内化主人性格，形成专业化的"平行 Agent 组织图"，R2C2 管代码产品、Montane 管增长、Elle 管客服；二是多 Agent 同处 Slack 频道时会互相学习彼此能力边界，类似 MidJourney 的公开学习效应；三是当前最大挑战是 Agent 不懂"何时闭嘴"，容易触发循环回复烧掉大量 token，以及跨线程的记忆丢失问题。公司还孵化出 PlusOne，让无法自行部署 OpenClaw 的用户一键拥有托管版 Agent。
 
 ---
 
-📰 行业速报（来源：ai-digest.liziran.com，最新内容为 2026-03-27，网站滞后约四周）
+📰 行业速报（ai-digest.liziran.com，最新内容截至 2026-03-27，网站存在约 4 周滞后）
 
-① 谷歌同一周上线三项实时 AI 搜索功能，语音和镜头取代文字框，200 多个国家同步铺开，搜索交互方式整体切换
-② 苹果向第三方 AI 开放 Siri，谷歌上线"导入对手记忆"功能，两家争的是同一件事：用户的 AI 记忆入口
-③ Wikipedia 正式禁止编辑者用 AI 撰写条目，志愿者发现 AI 文章系统性虚构引用和来源，事实准确性无法保障
+① 谷歌同一周上线三项实时 AI 搜索功能，语音和镜头取代文字框，200 多个国家同步铺开
+② 苹果向第三方 AI 打开 Siri，谷歌上线"导入对手记忆"，争夺 AI 入口存量用户
+③ Wikipedia 正式禁止编辑者用 AI 撰写条目，因 AI 文章系统性虚构引用和来源
 
 🔗 https://ai-digest.liziran.com/zh/digest/2026-03-27-wikipedia-banned-ai-writing-after-editors-caught-fabricated.html
 
-📚 论文速报（来源：ai-brief.liziran.com，最新内容为 2026-04-19，从 260 篇论文中筛选）
+📚 论文速报（ai-brief.liziran.com，2026-04-19，筛自 260 篇论文）
 
-① Corpus2Skill：检索增强生成从"检索-消费"转向"漫游-深钻"，分层技能树在 WixQA 上超越密集检索、RAPTOR 和智能体式 RAG
-② TRACER：用生产日志作蒸馏数据，拒绝门处理 83-100% 流量，77 个意图类别实现近人工水平，"知道自己做不了"是关键能力
-③ UniDoc-RL：视觉 RAG 的四阶段流程压缩为单一联合策略加分层动作和密集奖励，三项基准提升最高 +17.7%
+① Corpus2Skill：RAG 换成层级技能树，击败 RAPTOR 和主流 agentic RAG 方案
+② TRACER：生产日志做蒸馏数据，主门控处理 83–100% 流量，覆盖 77 个意图类别，且会主动拒绝不擅长的任务
+③ UniDoc-RL：视觉 RAG 4 阶段流程合并为单一联合策略，三个基准平均提升 17.7%
+④ RAD-2：扩散模型生成候选 + 强化学习重排，比强扩散基线碰撞率下降 56%
 
-🔗 https://ai-brief.liziran.com/
+🔗 https://ai-brief.liziran.com/en/daily/2026-04-19
 
-📎 Notion 存档
-https://www.notion.so/AI-Builders-Digest-2026-04-22-34a941f98904813c9669d299a4febca6
+📓 Notion: https://www.notion.so/AI-Builders-Digest-20260423-34b941f98904811593d2fce440a4678d
+🌐 https://xiaochengzi2048.github.io/digest.txt
