@@ -1,90 +1,98 @@
-🗞 AI Builders 日报 · 2026.04.24
+🗞 AI Builders 日报 · 2026.04.25
 
 🧠 模型
 
-① GPT-Image-2-Thinking 本质是图像 Agent
-Swyx 分析：GPT-Image-2-Thinking 不只是新图像模型，而是一个以搜索和图像合成为工具的 Agent 循环——能自我审查、迭代生成。正因如此，它能一次性搞定二维码、品牌 Logo、人脸合成这类高难度任务，用时也动辄数十分钟。类比 Gemini Flash Vision 用 agentic loop 刷新图像理解基准，Image-2-Thinking 正在对文生图做同样的事。
-🔗 https://x.com/swyx/status/2047140362771132544
+① GPT-5.5 正式发布，编程能力出现质的跳变
+OpenAI 发布 GPT-5.5，多位开发者和产品人反映相比上一代有明显跃升。Box CEO Aaron Levie 表示内测中复杂知识工作评测准确率提升了10个百分点；产品人 Peter Yang 用 F-Zero 测试发现，GPT-5.5 + Codex 是目前唯一能跑出完整可玩游戏的组合；Dan Shipper 指出新模型"写好计划不再犹豫，直接执行"。
+🔗 https://x.com/levie/status/2047387742951313910
+🔗 https://x.com/petergyang/status/2047502885710410159
 
-② Qwen3.5-Omni 开源多模态旗舰上线
-论文揭示：百亿参数 MoE 架构、256K 上下文、覆盖文本/图像/音频。开源多模态模型第一次达到闭源旗舰规模，值得重新评估自部署方案。
-🔗 https://ai-brief.liziran.com/
+② DeepSeek v4 同日发布
+Replit CEO Amjad Masad 宣布 DeepSeek v4 已上线，并借机回击美国政客对"中国蒸馏"的炒作：中国科学家以开放方式分享真正的 AI 突破，与政治叙事无关。
+🔗 https://x.com/amasad/status/2047519635063631914
+
+③ Claude 托管代理记忆功能进入公测
+Anthropic 宣布 Claude Managed Agents 的 Memory 功能开放公测。代理可以跨会话持续学习，记忆以文件形式存储，开发者可通过 API 导出和管理，不与平台绑定。网页端、桌面端、移动端（测试版）全面上线。
+🔗 https://x.com/claudeai/status/2047421844311949513
 
 🤖 Agent/编程
 
-③ Replit：LLM + 静态分析，代码准确率突破 90%
-Amjad Masad（Replit CEO）发布白皮书：在等待自研模型 Mythos 期间，把现有 LLM 与静态分析工具结合，部分场景准确率超 90%。等不了最强模型，先用工程方法榨干现有模型。
-🔗 https://x.com/amasad/status/2047156858214035590
+④ Codex 完成企业级全员部署首次尝试
+Sam Altman 宣布与英伟达合作，首次在一家公司内完成 Codex 全员铺开，效果良好，邀请更多企业申请体验。Swyx 则指出，Codex 应用界面已大幅焕新，"几乎认不出了，感觉应该一开始就叫 Atlas"。
+🔗 https://x.com/sama/status/2047395562501411058
+🔗 https://x.com/swyx/status/2047461691580195310
 
-④ Replit Agent 接入 Gemini Enterprise
-Replit Agent 现可从 Gemini Enterprise 直接调用，企业用户可将 Replit 的编程能力嵌入 Gemini 工作流。
-🔗 https://x.com/amasad/status/2047149103294091301
+⑤ 开发者的最佳编码组合：Claude Opus + Codex + Conductor
+投资人 Nikunj Kothari 分享了自己测试多轮后沉淀的工作流：规划和前端用 Claude Opus，工程实现用 OpenAI Codex，编排用 Conductor Build。在当前模型迭代频繁的环境下，他认为这套组合"至今未被打败"。
+🔗 https://x.com/nikunj/status/2047382587258364204
 
-⑤ ChatGPT Agents 对接 Box MCP，企业知识工作 Agent 化
-Aaron Levie（Box CEO）：ChatGPT Agents 可直接调用任意工具和数据，演示中接入 Box 的 MCP 接口作为企业内容知识库，前后台均可运行。他认为这是软件「无头化」最重要的信号——平台方机会来了，Agent 设计师需求也来了。
-🔗 https://x.com/levie/status/2047028112626749645
-
-⑥ Garry Tan：Agent skills 设计原则——少而大，胜过多而小
-YC CEO 分享实战心得：相关 skill 合并成参数更多的大 skill，而非拆成多个小 skill，这样 resolver 更短、上下文消耗更少，实际效果更好。
-🔗 https://x.com/garrytan/status/2047183884266402275
-
-⑦ Gemini AI Studio 推出对话分支功能
-Josh Woodward（谷歌 Labs/Gemini VP）：对话分支功能已向 20% 用户开放，持续扩大中。用户可在对话中途岔出新分支，告别单线对话限制。
-🔗 https://x.com/joshwoodward/status/2047147030351642914
-
-⑧ Replit Security Agent：自动扫描用户 App 安全漏洞
-Replit 上线安全审查 Agent，主动检测用户发布的 App 并报告问题。
-🔗 https://x.com/amasad/status/2047150876423516384
-
-🔒 安全
-
-⑨ Vercel 安全事故深度复盘：1PB 日志追出跨公司攻击链
-Guillermo Rauch（Vercel CEO）更新调查进展：事故源头来自 Context.ai 遭攻破后扩散的恶意软件，专门搜集 API 密钥，得手后系统性枚举环境变量。Vercel 已联合微软、AWS、Wiz 共同应对，并向其他潜在受害者主动预警。供应链安全问题正在跨公司蔓延。
-🔗 https://x.com/rauchg/status/2047150411170320808
+⑥ Cat Wu（Anthropic PM）在 Lenny's Podcast 分享 Claude Code 敏捷之道
+Cat Wu 接受 Lenny Rachitsky 播客采访，探讨 Claude Code 如何维持产品开发速度，以及 AI 时代产品经理角色的转变。
+🔗 https://x.com/_catwu/status/2047427510091366533
 
 🛠 产品/应用
 
-⑩ 实时 UI 生成：每个像素终将动态生成
-Nikunj Kothari（Railway）：转发实时 UI 生成 demo，评论「只是时间问题」。前端交互范式正在被实时生成重写。
-🔗 https://x.com/nikunj/status/2047024714116419665
+⑦ GPT-5.5 最被低估的部分：不是模型本身
+Swyx 暗示今天发布中最被低估的部分其实并非 GPT-5.5 模型本身（原推文为引用推，未展开具体内容，但点赞量较高，值得追踪）。
+🔗 https://x.com/swyx/status/2047536499999346812
+
+⑧ Garry Tan 将 OpenClaw 定时任务迁移至 GBrain Minions
+YC 总裁 Garry Tan 透露正在把自己的 AI Cron jobs 和子代理从 OpenClaw 迁移到 GBrain Minions，并为 GBrain 新建了结合图搜索+向量搜索+grep 的知识库评测，显示出对私有 AI 基础设施的持续投入。
+🔗 https://x.com/garrytan/status/2047578205528477711
 
 📈 商业/观点
 
-⑪ Ryo Lu：「过度烹饪」——AI 让功能堆砌成本趋零，也让产品失焦
-Cursor 设计师 Ryo Lu 长文：当 AI 让添加成本接近零，没有人说「不」时，产品会变成一堆合理决策的混乱堆砌。真正稀缺的能力是「看穿混乱、只保留核心」，这在 AI 时代反而更难做到。
-🔗 https://x.com/ryolu_/status/2046957675079237668
+⑨ AI 不会让我们工作更少，只会让我们探索更多
+Box CEO Aaron Levie 说：AI 让你可以探索的事情远超以前，结果就是做的事更多了。这与"AI = 减少工作量"的叙事相反——至少目前如此。
+🔗 https://x.com/levie/status/2047540230694350958
 
-⑫ Peter Yang：工艺 > 垃圾，差距在最后 10%
-AI 生成大量内容，但真正让东西脱颖而出的是人类主动介入的最后 10%——应用自己的审美和判断。大多数人懒得做，这才是差异化所在。
-🔗 https://x.com/petergyang/status/2047124883071816189
+⑩ 科技并购热度超越融资，创业的结构性困境加剧
+投资人 Nikunj Kothari 观察：并购公告数量正在赶超融资公告，原因是种子到 A 轮的断裂越来越严重——"从未比现在更容易起步，从未比现在更难拿下 A 轮"。
+🔗 https://x.com/nikunj/status/2047336067972624870
 
-⑬ Dan Shipper：人类是 AI 三明治的「面包」
-Every CEO Dan Shipper 与 Quora GM Kieran Klaassen 对谈：Compound Engineering 四步法（计划/执行/审查/复利）让一个工程师能当五人团队。关键是把踩过的坑写回 repo 让 agent 学习，避免重蹈覆辙。人类在头尾最不可替代：前端设定框架，后端品质把关。
-🔗 https://x.com/danshipper/status/2047027507397005367
+⑪ SF：95%的 AI 价值集中在 4 英里半径内
+Coda 前 CTO Aditya Agarwal 感叹旧金山的怪异：全球最大的计算革命，95% 的价值创造集中在硅谷 4 英里半径内，让局外人很难看懂这座城市。
+🔗 https://x.com/adityaag/status/2047421448449630379
 
-🎙 播客
+⑫ Amanda Askell：身处历史最关键时期的内心重量
+Anthropic 研究员 Amanda Askell 发了一条感性的推文，谈到身处"人类历史最关键时期之一"并从内部感受到全部重量的奇异感。获得 2000+ 点赞，引发广泛共鸣。
+🔗 https://x.com/AmandaAskell/status/2047429629263454377
 
-AI & I（Every）: The AI Sandwich: Where Humans Excel in an AI World
-Quora GM Kieran Klaassen 拆解「复合工程」哲学：AI 工作流中，人类应在「开始」（框架设定、头脑风暴）和「结尾」（品质打磨、感知验证）发力，中间的执行层可以完全托付给模型。他用古典音乐类比：作曲（创意构想）和演出（最终呈现）是人类主场，中间的练习交给机器。核心洞见：真正的风险不是被替代，而是找不到自己在这个流程里的喜悦。
+🎙 Podcast
 
-📰 行业速报
-（ai-digest.liziran.com，最新内容为 2026 年 3 月底，约滞后 4 周）
+Unsupervised Learning × Latent Space 联合播客（第 85 期）：AI 基础设施是否已趋于稳定？
 
-① 谷歌同一周上线三项实时 AI 搜索功能，语音和镜头取代文字框，200 多个国家同步铺开。
-② 苹果向第三方 AI 打开 Siri，谷歌上线「导入对手记忆」功能，双方争夺同一批用户。
-③ Wikipedia 正式禁止编辑者用 AI 撰写条目，原因是发现 AI 文章系统性虚构引用和来源。
+Redpoint 投资人与 Swyx（Latent Space / Cognition）展开年度对话，覆盖以下核心判断：
 
+**AI 编码战争**：Anthropic 凭借 Claude Code 已达到约 25 亿美元 ARR，OpenAI 与 Cursor 各约 20 亿美元，三家公司在不到一年内共同催生了这个市场。市场结构相对稳定，Gemini 和 xAI 尚未真正进入。
+
+**基础设施是否稳定**：Swyx 认同 Agent Harness 层（skills = 带脚本的 Markdown）趋于共识，但记忆/子代理等维度仍在演化。Harrison Chase 的"终于稳了"不一定准确，但"就算不准，随时跟着变就好"。
+
+**2026 的论断**：2025 是编程 Agent 年，2026 是编程 Agent 冲破边界、吃掉其他一切的年——软件吃掉世界，coding agents 吃掉软件，所以 agents 吃掉世界。
+
+**中等规模创业公司的挑战**：替换 SaaS 比想象的难，团队很难对齐"vibe coding 足够了"的判断；基础设施公司面临"当客户流失时走得极其彻底"的风险。
+
+**企业 AI 的真正买家正在变成 Agent**：Vercel CTO 透露，Vercel 管理控制台 60% 的流量已来自机器人。"如果没有 API，对 Agent 来说你就不存在。"
+
+---
+
+📰 行业速报（来自 ai-digest.liziran.com，最新内容截至 3 月 27 日）
+
+① 谷歌同周上线三项实时 AI 搜索功能，语音和镜头取代文字框，200 多个国家同步铺开
+② 苹果向第三方 AI 打开 Siri，谷歌上线"导入对手记忆"——一个补能力短板，一个抢存量用户
+③ Wikipedia 正式禁止编辑者用 AI 撰写条目，志愿者发现 AI 文章系统性虚构引用来源
+
+⚠️ 注：该网站目前更新滞后约四周，最新内容为 3 月 27 日。
 🔗 https://ai-digest.liziran.com/zh/digest/2026-03-27-wikipedia-banned-ai-writing-after-editors-caught-fabricated.html
 
-📚 论文速报
-（ai-brief.liziran.com，2026-04-23，过滤自 72 篇论文）
+📚 论文速报（来自 ai-brief.liziran.com，4 月 23 日，从 72 篇筛选）
 
-① IF-IR：检索器忽略指令是数据问题，不是能力问题——305M 参数编码器通过对比样本和标签反转，在 FollowIR 上提升 45%。
-② ARES：RLHF 的单点故障在奖励模型——将红队测试转向端到端策略-奖励联合修复。
-③ DUALVISION：多模态大模型在雾天、低光、运动模糊场景下表现差——加入红外通道，开源 2.5 万图像和 20.4 万问答标注。
-④ URoPE：统一位置编码用于多视角和 2D-3D 任务——沿相机射线采样三维点，无参数，兼容 RoPE。
+① IF-IR：检索器忽略指令是数据问题而非容量问题——305M 编码器在 FollowIR 上提升 45%，超过更大的通用嵌入
+② ARES：RLHF 奖励模型是单点故障——将红队测试延伸至端到端策略-奖励修复
+③ DUALVISION：多模态大模型在雾霾/低光/运动模糊场景下失效——引入红外通道，开源 2.5 万张红外-可见光图像及 20 万条问答标注
+④ URoPE：多视角/二维到三维任务的统一位置编码——沿相机射线采样三维点，无参数，在新视角合成、目标检测、追踪、深度估计上均有提升
 
 🔗 https://ai-brief.liziran.com/
 
 📎 Notion 存档
-https://www.notion.so/AI-Builders-Digest-2026-04-24-34c941f9890481c2ae45e1231147d3b0
+https://www.notion.so/AI-Builders-Digest-2026-04-25-34d941f98904813b97e9dd0ed77cd403
