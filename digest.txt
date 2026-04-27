@@ -1,88 +1,68 @@
-🗞 AI Builders 日报 · 2026.04.26
-
-🧠 模型
-
-① GPT-5.5 与 GPT-5.5 Pro 正式上线 API
-Sam Altman（奥特曼）宣布 GPT-5.5 和 GPT-5.5 Pro 已面向开发者开放 API 访问。他总结这是"很好的一周"，团队正在全力构建。多位开发者反馈该模型在角色对话和指令理解上有明显提升，Cursor 团队的 Ryo Lu 已完全切换到 GPT-5.5 + Composer 2 组合，称其在智能、速度和成本三者之间达到了最佳平衡。
-🔗 https://x.com/sama/status/2047787124846653895
-
-② GPT-5.5 + Codex 15分钟生成 Star Fox 游戏
-Peter Yang（杨彼得）用 GPT-5.5 和 Codex 在约 15 分钟的 prompting 后生成了一个 Star Fox 风格的游戏，并称 AI 还在自己进行游戏测试。这是对 OpenAI 新一轮模型 + 编程能力的直观展示。
-🔗 https://x.com/petergyang/status/2047882568520102226
+🗞 AI Builders 日报 · 2026.04.27
 
 🤖 Agent/编程
 
-③ Cursor 已切换 GPT-5.5 + Composer 2 双引擎
-Cursor 产品负责人 Ryo Lu 表示已全面迁移到 GPT-5.5 + Composer 2 组合，并透露 /multitask 命令可突破队列限制同时处理多项任务。这标志着 Cursor 正式进入 GPT-5.5 时代。
-🔗 https://x.com/ryolu_/status/2047879353313431649
+① Garry Tan（YC CEO）连发三条推文介绍 GStack 新工具：GBrain v0.22 上线，修复了搜索和检索问题，新增独立的 eval 系统仓库；另外发布 /open-gstack-browser 技能，可以让 Claude Code 直接操控浏览器，实现「边看边敲代码」的 side-by-side 体验。
+🔗 https://x.com/garrytan/status/2048290087318773807
 
-④ Replit 支持一键导入 Vercel 和 Lovable 项目
-Replit 创始人 Amjad Masad 宣布，用户现在可以通过几次点击将 Vercel 或 Lovable 上的应用导入 Replit。这进一步打通了 AI 编程工具生态之间的壁垒。
-🔗 https://x.com/amasad/status/2047747978690232550
+② Peter Steinberger 发布两款工具新版本：Summarize 0.14.0 支持 GPT-5.5 Fast 模式、Reddit 帖子提取和本地 PDF 解析；CodexBar 0.23 新增 Mistral 支持、Claude Designs/Daily Routines 用量统计、GPT-5.5 定价，以及更清晰的界面布局。
+🔗 https://x.com/steipete/status/2048275589224628677
 
-⑤ discrawl 0.6.0 发布：无需登录即可读取 Discord DM
-开发者 Peter Steinberger 发布了 discrawl 0.6.0，核心新功能是可以在不使用自定义登录技巧的情况下读取 Discord DM，降低了被封号风险。
-🔗 https://x.com/steipete/status/2047797210427859450
+③ Sam Altman 转推一条代码生成速度的视频并感叹「怎么能写这么快」，随后补充「前端差一点，但我们的推理能力已经碾压了」，暗示 GPT-5.5 在代码生成速度和推理上的重大提升。
+🔗 https://x.com/sama/status/2048165186482389253
 
-⑥ Vercel 的 AI 工程体系直通 C-suite，成为行业罕见案例
-Swyx 评论称 Vercel 的 AI 工程工作"令人印象深刻"，且直接由高管层推动落地，这种模式在当今仍属少见。他认为这类 C-suite 直驱的 AI 工程文化应该更普遍。
-🔗 https://x.com/swyx/status/2047749587163877668
+④ Peter Yang（Roblox 产品负责人）观察到：用 Codex 陪 7 岁小孩写游戏时，小孩直接问「为什么不能立刻生成一个宠物龙养成游戏？」——这一代人对 AI 的默认期望已经完全不同了。他还注意到在 AI 时代人们越来越难找到高质量的精选技能库，大多数都是「100 个技能自己筛垃圾」。
+🔗 https://x.com/petergyang/status/2048220045726322934
+
+⑤ Swyx 预告将与合作伙伴在 ICML（首尔）之后合作一件「正在烹饪中」的事，具体内容未披露，但建议关注者留出日历空间。
+🔗 https://x.com/swyx/status/2048126046487322835
 
 🛠 产品/应用
 
-⑦ NotebookLM 新增自动标签与分类功能
-谷歌 Google Labs VP Josh Woodward 宣布 NotebookLM 现在可以自动为资料来源添加标签和分类。开发者 Dan Shipper 随即展示了用 NotebookLM 基于一本书一键生成内容的效果，评价为"holy fuckin shit"。
-🔗 https://x.com/joshwoodward/status/2047795981534847413
+⑥ Swyx 和多位工程师都在讨论「代码并不便宜」这个观点——AI 生成了更多代码，但维护、审查、运行这些代码的成本正在上升，工程时间从写代码转移到了审查和调试 AI 输出。
+🔗 https://x.com/swyx/status/2048125100437000512
 
-⑧ Cohere 与 Aleph Alpha 合并：欧洲 AI 主权意志的具象化
-投资人 Matt Turck 点评 Cohere 和 Aleph Alpha 的合并具有深刻意义——当前地缘政治混乱下，欧洲对将核心智能外包给少数美国平台的抵触情绪难以低估。
-🔗 https://x.com/mattturck/status/2047721904438493482
+⑦ Nan Yu（Linear 产品负责人）分享采用节奏判断：站在「出血边缘」的人会不断更换工具和方法；更好的策略是选「相对新但已度过最初混乱期」的东西——比刚发布晚一步，但足够超前。
+🔗 https://x.com/thenanyu/status/2048172709075402787
 
 📈 商业/观点
 
-⑨ Jevons 悖论：AI 提升生产力，反而让公司雇更多人
-Box 创始人 Aaron Levie 引用一位分析师的转变："如果 AI 能让员工更有生产力——这被广泛接受为事实——那么公司会想要尽可能多的高效劳动力单元。这正是我改变看法的关键原因。" Jevons 悖论在 AI 时代值得认真对待。
-🔗 https://x.com/levie/status/2047747142308274645
+⑧ Aaron Levie（Box CEO）认为 AI 正在打破职场经验壁垒：任何人只要有雄心和核心技能，现在就能做到几年前需要大量经验才能做到的事。能抓住这个窗口的个人和公司将大幅领先。
+🔗 https://x.com/levie/status/2048223146063609965
 
-⑩ "今天的热门技能，明天会成为模型的后训练目标"
-Swyx 提出了一个尖锐观察：现在被视为"高价值技能"的能力，往往会成为下一代模型后训练阶段的优化目标，最终被模型内化。这对开发者选择投资方向有重要启示。
-🔗 https://x.com/swyx/status/2047715417867907539
+⑨ Amjad Masad（Replit CEO）提出一个趋势演进：2000年代每家公司都要变互联网公司，2010年代变软件公司，2020年代变 AI 公司，2025 年以后——每家公司都要变网络安全公司。
+🔗 https://x.com/amasad/status/2048265772775162078
 
-⑪ "设计的核心是理解，不是输出"
-设计师 Nan Yu 发文称：设计是一种意图，不是图片或原型；没有意图的输出就是幻觉。他认为在 AI 时代大量"幻觉设计"泛滥，真正的设计思维反而更稀缺。
-🔗 https://x.com/thenanyu/status/2047751915271020920
+⑩ Dan Shipper（Every CEO）写道：「我们观察到的永远不是模型本身，而是模型暴露在我们提问方式下的状态」——一个关于 AI 评测和认知论的深刻洞察。
+🔗 https://x.com/danshipper/status/2048026505461080076
 
-⑫ "任何 AI 都比任何个体人类懂得多，但任何个体人类都学得比 AI 快"
-Every 创始人 Dan Shipper 分享了一句颇具洞察力的判断，引发广泛讨论。这条对比直指 AI 与人类各自的核心优势边界。
-🔗 https://x.com/danshipper/status/2047797874600161334
-
-⑬ 我们正在接近"后提示词"时代
-Dropbox 前 CTO Aditya Agarwal 简短发文："我们正在接近一个后提示词的世界。"这与近期多位创始人关于 AI 接口从 prompt 转向 intent 的讨论方向一致。
-🔗 https://x.com/adityaag/status/2047669585667666321
+⑪ Zara Zhang 分享创作观：坐下来打字不是写作的开始，而是最后一步。80% 的写作已经在脑子里完成了。同理适用于产品设计和工程开发——真正的工作发生在动手之前。
+🔗 https://x.com/zarazhangrui/status/2048101948826751429
 
 🎙 Podcast
 
-No Priors: SAP: Bringing the 'Operating System' of a Company into the AI Era with CTO Philipp Herzig
-SAP CTO Philipp Herzig 在播客中深度拆解了 SAP 的 AI 转型战略。核心观点：企业 AI 采用的真正瓶颈不是模型能力，而是"教 AI 在规模下做正确的事"——从 10 个文档的 RAG POC，到 20000 个 API 的企业集成，复杂度质变。Herzig 预言企业软件正经历三层重构：UI 从静态变为生成式、业务流程从刚性走向 agent 驱动、数据层向统一语义模型融合。他还特别强调：Evals（评估）是 AI 时代的"测试驱动开发"——以前没人写测试，现在不写 evals 就无法构建可靠的企业 AI 产品。
+No Priors: Scaling Global Organizations in the Age of AI with ServiceNow CEO Bill McDermott
+ServiceNow CEO Bill McDermott 在节目中讨论了在 AI 时代管理全球化企业的挑战。他的核心论点是：替换企业平台的隐性成本（人力资本、运行成本、GPU 和 token 费用）加在一起远超表面价格，这个计算方式正在重塑企业软件的竞争格局。AI 正在让平台处理大量原本需要人力的工作，而这部分节省是企业做「留还是换」决策时最被低估的变量。
+🔗 https://www.youtube.com/watch?v=tNNFJa5pUEg
 
 ---
 
-📰 行业速报（来源：ai-digest.liziran.com，最新内容为 2026-03-27，当前约滞后一个月）
+📰 行业速报（ai-digest.liziran.com，最新内容为 2026.03.27）
 
-① 谷歌同一周上线三项实时 AI 搜索功能，语音和镜头取代文字框，200 多个国家同步铺开，搜索交互方式整体切换
-② 苹果向第三方 AI 打开 Siri，谷歌上线"导入对手记忆"功能，双方在争夺同一个用户心智入口
-③ Wikipedia 正式禁止编辑者用 AI 撰写条目，志愿者发现 AI 文章系统性地虚构引用和来源
+① 谷歌同一周上线三项实时 AI 搜索功能，语音和镜头取代文字框，200 多个国家同步铺开，搜索交互方式正在整体切换。
+② 苹果向第三方 AI 打开 Siri，谷歌上线「导入对手记忆」——一个在补能力短板，一个在抢存量用户，争的是同一个东西。
+③ Wikipedia 正式禁止编辑者用 AI 撰写条目，志愿者在巡查中发现 AI 文章系统性地虚构引用和来源，事实准确性无法保障。
 
 🔗 https://ai-digest.liziran.com/zh/digest/2026-03-27-wikipedia-banned-ai-writing-after-editors-caught-fabricated.html
 
-📚 论文速报（来源：ai-brief.liziran.com，最新内容为 2026-04-23）
+📚 论文速报（ai-brief.liziran.com，2026.04.23）
 
-① IF-IR：检索器无视指令的根源在数据而非能力，305M 编码器在 FollowIR 上提升 45%，超越更大的通用嵌入模型
-② ARES：RLHF 奖励模型是最薄弱环节，将红队测试扩展到端到端策略-奖励修复
-③ DUALVISION：多模态大模型在雾天、低光、运动模糊场景中表现失效，添加红外通道后开源 2.5 万图像 + 20.4 万问答标注
-④ URoPE：统一位置编码支持多视角/2D-3D 任务，沿相机射线采样 3D 点，与 RoPE 兼容，无额外参数
+① IF-IR：检索器忽视指令的根因在于训练数据而非模型能力不足——305M 参数编码器通过标签反转对比样本，在 FollowIR 上提升 45%。
+② ARES：将 RLHF 的单点失败（奖励模型）转移到端到端的策略-奖励系统修复机制上。
+③ DUALVISION：多模态大模型在雾天、低光、运动模糊场景下表现差——增加红外通道，开源 2.5 万张红外-RGB 图像和 20.4 万条问答标注。
+④ URoPE：统一多视角/2D-3D 任务的位置编码，无额外参数，与 RoPE 兼容。
 
-🔗 https://ai-brief.liziran.com/en/daily/2026-04-23
+🔗 https://ai-brief.liziran.com/
 
-📎 Notion 存档
-https://www.notion.so/AI-Builders-Digest-2026-04-26-34e941f9890481cd898dfce1a01d4997
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-04-27-34f941f98904818b847dedeca203cef5
+🌐 https://xiaochengzi2048.github.io/digest.txt
