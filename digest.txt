@@ -1,68 +1,83 @@
-🗞 AI Builders 日报 · 2026.04.27
+🗞 AI Builders 日报 · 2026.04.28
+
+🧠 模型
+
+① OpenAI 发布 Claude 代码自动模式（Auto Mode）
+Anthropic 工程团队推出 Claude Code 的 auto mode，用双层分类器替代人工审批：输入层扫描提示注入，输出层在执行前拦截危险操作。在内部 1 万条真实流量中误判率仅 0.4%，但对真实越权行为的漏检率达 17%——团队坦承这是设计取舍，适合从 --dangerously-skip-permissions 迁移的用户，而非高风险基础设施的替代品。
+🔗 https://www.anthropic.com/engineering/claude-code-auto-mode
+
+② Sam Altman：是时候重新设计操作系统和用户界面了
+奥尔特曼在推文中表示，"现在是认真重新思考操作系统和用户界面设计的好时机"，并指出互联网协议应该同等适用于人和 Agent。这条推文获得 1 万次点赞，反映出业界对"人机共用 OS"这一方向的高度关注。
+🔗 https://x.com/sama/status/2048428561481265539
+
+③ Sam Altman 发布 OpenAI 五项核心原则
+奥尔特曼在推文中公开了 OpenAI 的五条指导原则：民主化、赋权、普遍繁荣、韧性、适应性。发布时机恰在 GPT-4.5 受到开发者热烈反响之后，有意强化公司在 AGI 时代的价值叙事。
+🔗 https://x.com/sama/status/2048552677433643427
 
 🤖 Agent/编程
 
-① Garry Tan（YC CEO）连发三条推文介绍 GStack 新工具：GBrain v0.22 上线，修复了搜索和检索问题，新增独立的 eval 系统仓库；另外发布 /open-gstack-browser 技能，可以让 Claude Code 直接操控浏览器，实现「边看边敲代码」的 side-by-side 体验。
-🔗 https://x.com/garrytan/status/2048290087318773807
+④ Guillermo Rauch：编程 Agent 是所有超级智能的基础
+Vercel CEO 拉乌赫发文称，编码能力实质上等同于"对计算机的精通"，而 Agent 的独特之处在于能够检视自身源码、状态和指令，甚至提出对自身的修改。他认为"我无法创造的，我便无法理解"——编程流畅度让模型对所有计算机工作有了更深的理解。
+🔗 https://x.com/rauchg/status/2048523195305902341
 
-② Peter Steinberger 发布两款工具新版本：Summarize 0.14.0 支持 GPT-5.5 Fast 模式、Reddit 帖子提取和本地 PDF 解析；CodexBar 0.23 新增 Mistral 支持、Claude Designs/Daily Routines 用量统计、GPT-5.5 定价，以及更清晰的界面布局。
-🔗 https://x.com/steipete/status/2048275589224628677
+⑤ Peter Steinberger 发布 birdclaw：本地推文存档工具
+Steinberger 开源了 birdclaw，一个将 X 推文存档本地、备份到 GitHub 并支持每日导入书签的工具（因 X API 不完整开放书签接口，通过定时任务绕过）。这条推文获得 727 个点赞，是当日最高互动内容之一。
+🔗 https://x.com/steipete/status/2048626844694421842
 
-③ Sam Altman 转推一条代码生成速度的视频并感叹「怎么能写这么快」，随后补充「前端差一点，但我们的推理能力已经碾压了」，暗示 GPT-5.5 在代码生成速度和推理上的重大提升。
-🔗 https://x.com/sama/status/2048165186482389253
+⑥ Peter Steinberger 发布 wacrawl 0.2.0：加密备份 WhatsApp 存档
+wacrawl 新版本支持将 WhatsApp Desktop 存档加密后推送到 GitHub（age 加密分片），并支持本地拉取解密恢复，为个人数据自主权提供了一个实用工具。
+🔗 https://x.com/steipete/status/2048660875007914176
 
-④ Peter Yang（Roblox 产品负责人）观察到：用 Codex 陪 7 岁小孩写游戏时，小孩直接问「为什么不能立刻生成一个宠物龙养成游戏？」——这一代人对 AI 的默认期望已经完全不同了。他还注意到在 AI 时代人们越来越难找到高质量的精选技能库，大多数都是「100 个技能自己筛垃圾」。
-🔗 https://x.com/petergyang/status/2048220045726322934
+⑦ Peter Steinberger：用 Blacksmith 解决 OpenClaw 测试的 CPU 瓶颈
+Steinberger 分享了将 OpenClaw 本地测试迁移到 Blacksmith 云端的经历，Codex 可以调用最多 32 核实例并发跑测试套件，显著加速了开发迭代。
+🔗 https://x.com/steipete/status/2048630704972443918
 
-⑤ Swyx 预告将与合作伙伴在 ICML（首尔）之后合作一件「正在烹饪中」的事，具体内容未披露，但建议关注者留出日历空间。
-🔗 https://x.com/swyx/status/2048126046487322835
+⑧ Peter Yang：为自己的健身应用构建 MCP Server
+Peter Yang 周末为自己的移动健身应用添加了 MCP 服务器支持，可以通过 Claude/Codex 等获取最新训练数据或更新训练计划。他称"这太好玩了"——体现出 MCP 协议正在被创业者用于打通自有应用与 AI 助手。
+🔗 https://x.com/petergyang/status/2048611053333041158
+
+⑨ Garry Tan：构建个性化 Agent 的三文件体系
+YC 合伙人陈嘉兴分享了他的个人 Agent 文件架构：SOUL.md 定义 Agent 的声音与价值观（约等于"宪法"），USER.md 深度建模用户本人（他的版本约 4000 字），AGENTS.md 是操作规则手册。他强调"越具体越有生命力，通用指令只能产出通用输出"。
+🔗 https://x.com/garrytan/status/2048669695344046090
 
 🛠 产品/应用
 
-⑥ Swyx 和多位工程师都在讨论「代码并不便宜」这个观点——AI 生成了更多代码，但维护、审查、运行这些代码的成本正在上升，工程时间从写代码转移到了审查和调试 AI 输出。
-🔗 https://x.com/swyx/status/2048125100437000512
-
-⑦ Nan Yu（Linear 产品负责人）分享采用节奏判断：站在「出血边缘」的人会不断更换工具和方法；更好的策略是选「相对新但已度过最初混乱期」的东西——比刚发布晚一步，但足够超前。
-🔗 https://x.com/thenanyu/status/2048172709075402787
+⑩ Garry Tan：OpenClaw 知道我的日程，深夜会拒绝回应
+陈嘉兴提到他的 OpenClaw 助手掌握了他的完整日程和健康目标，会在凌晨 12:30 后拒绝响应查询，并点名称赞了 Steinberger 的实现。这个细节展示了个人 AI 在行为约束设计上的可能性。
+🔗 https://x.com/garrytan/status/2048667055424249864
 
 📈 商业/观点
 
-⑧ Aaron Levie（Box CEO）认为 AI 正在打破职场经验壁垒：任何人只要有雄心和核心技能，现在就能做到几年前需要大量经验才能做到的事。能抓住这个窗口的个人和公司将大幅领先。
-🔗 https://x.com/levie/status/2048223146063609965
+⑪ Aaron Levie：AI 时代的"盖尔-曼失忆症"变体
+Box CEO 莱维观察到一种新的认知偏差：人们用 AI 处理自己的工作时，深知最后一公里有多少人工干预；但看别人的工作时，却轻易认为 AI 能完全自动化。他认为这种"只对自己工作有深刻同情"的视角，是目前许多岗位替代预测被高估的重要原因。
+🔗 https://x.com/levie/status/2048576989930619185
 
-⑨ Amjad Masad（Replit CEO）提出一个趋势演进：2000年代每家公司都要变互联网公司，2010年代变软件公司，2020年代变 AI 公司，2025 年以后——每家公司都要变网络安全公司。
-🔗 https://x.com/amasad/status/2048265772775162078
+⑫ Aaron Levie：Agent 时代的两种"过度工作"陷阱
+莱维指出当前从业者普遍超时工作的两个结构性原因：一是 Agent 的杠杆感让人像管理团队一样感到"任何空闲都是浪费"；二是 AI 极大降低了启动成本，导致人们启动了远比以往更多的项目，却在最后 10% 耗费大量时间。他认为这不可持续，但会催生大量从实验升级为正式产品的机会。
+🔗 https://x.com/levie/status/2048537503972684252
 
-⑩ Dan Shipper（Every CEO）写道：「我们观察到的永远不是模型本身，而是模型暴露在我们提问方式下的状态」——一个关于 AI 评测和认知论的深刻洞察。
-🔗 https://x.com/danshipper/status/2048026505461080076
+🎙 播客
 
-⑪ Zara Zhang 分享创作观：坐下来打字不是写作的开始，而是最后一步。80% 的写作已经在脑子里完成了。同理适用于产品设计和工程开发——真正的工作发生在动手之前。
-🔗 https://x.com/zarazhangrui/status/2048101948826751429
+AI & I by Every：《专为 LLM 无法完成之事而生的 AI 模型》
+创始人 Eve（Logical Intelligence CEO）解释了能量基础模型（EBM）与 LLM 的核心区别：EBM 不依赖 token 预测，而是通过能量景观直接建模数据的规律，天然支持可约束、可验证的推理。她认为把所有任务都压进语言空间"感觉真的很不对"，而 EBM 在空间推理、硬件验证、形式化代码生成等任务上有结构性优势。这个模型叫 Kona，正式名称是"带潜变量的能量推理模型"。
+🔗 https://www.youtube.com/watch?v=Q-i8ZSUCtIc
 
-🎙 Podcast
+📰 行业速报（来源：ai-digest.liziran.com，最新内容截至 2026-03-27）
 
-No Priors: Scaling Global Organizations in the Age of AI with ServiceNow CEO Bill McDermott
-ServiceNow CEO Bill McDermott 在节目中讨论了在 AI 时代管理全球化企业的挑战。他的核心论点是：替换企业平台的隐性成本（人力资本、运行成本、GPU 和 token 费用）加在一起远超表面价格，这个计算方式正在重塑企业软件的竞争格局。AI 正在让平台处理大量原本需要人力的工作，而这部分节省是企业做「留还是换」决策时最被低估的变量。
-🔗 https://www.youtube.com/watch?v=tNNFJa5pUEg
+⚠️ 注：该网站当前最新内容为 3 月 27 日，滞后约一个月。
 
----
-
-📰 行业速报（ai-digest.liziran.com，最新内容为 2026.03.27）
-
-① 谷歌同一周上线三项实时 AI 搜索功能，语音和镜头取代文字框，200 多个国家同步铺开，搜索交互方式正在整体切换。
-② 苹果向第三方 AI 打开 Siri，谷歌上线「导入对手记忆」——一个在补能力短板，一个在抢存量用户，争的是同一个东西。
+① 谷歌同一周上线三项实时 AI 搜索功能，语音和镜头取代文字框，200 多个国家同步铺开，搜索正在整体切换交互方式。
+② 苹果向第三方 AI 打开 Siri，谷歌上线"导入对手记忆"——一个在补能力短板，一个在抢存量用户，争的是同一样东西。
 ③ Wikipedia 正式禁止编辑者用 AI 撰写条目，志愿者在巡查中发现 AI 文章系统性地虚构引用和来源，事实准确性无法保障。
-
 🔗 https://ai-digest.liziran.com/zh/digest/2026-03-27-wikipedia-banned-ai-writing-after-editors-caught-fabricated.html
 
-📚 论文速报（ai-brief.liziran.com，2026.04.23）
+📚 论文速报（来源：ai-brief.liziran.com，4 月 27 日，共筛选自 199 篇论文）
 
-① IF-IR：检索器忽视指令的根因在于训练数据而非模型能力不足——305M 参数编码器通过标签反转对比样本，在 FollowIR 上提升 45%。
-② ARES：将 RLHF 的单点失败（奖励模型）转移到端到端的策略-奖励系统修复机制上。
-③ DUALVISION：多模态大模型在雾天、低光、运动模糊场景下表现差——增加红外通道，开源 2.5 万张红外-RGB 图像和 20.4 万条问答标注。
-④ URoPE：统一多视角/2D-3D 任务的位置编码，无额外参数，与 RoPE 兼容。
-
+① TraceElephant：多智能体调试基准；完整执行轨迹将故障归因准确率提升 76%，远超仅看 Agent 输出的方式。
+② HiLight：侧边 Actor 向冻结基础模型输入添加强调标签，学习到的策略可零样本迁移至闭源 API。
+③ RouteLMT：用小模型的 token 表示预测边际增益进行混合路由，替代手调阈值；目前仅在翻译任务上验证。
+④ UniSonate：将 TTS、文字转音乐、文字转音频统一为单一文本指令模型，在 TTS 和 TTM 上达到 SOTA，TTA 仅"具竞争力"。
 🔗 https://ai-brief.liziran.com/
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-04-27-34f941f98904818b847dedeca203cef5
-🌐 https://xiaochengzi2048.github.io/digest.txt
+📎 Notion 存档
+https://www.notion.so/AI-Builders-Digest-2026-04-28-350941f989048150a747d27141715f9c
