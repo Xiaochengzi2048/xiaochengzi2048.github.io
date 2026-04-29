@@ -1,75 +1,108 @@
-🗞 AI Builders 日报 · 2026.04.28
-
-🧠 模型
-
-① Sam Altman：重新思考操作系统和用户界面的时机到了
-语言模型能力已经成熟到足以重塑整个人机交互层。Altman 说「现在是认真重新思考操作系统和 UI 设计的时候了」，同时提到互联网也需要一个人类和 agent 都能平等使用的新协议。这条推是 GPT-5.5 上线后收到 1 万多赞的高能发言。
-🔗 https://x.com/sama/status/2048428561481265539
-
-② Sam Altman：GPT-5.5 收到开发者热情反馈
-GPT-5.5 上线后，Altman 公开表示看到 builder 说工具有用是他「最有成就感的事之一」。同时贴出 OpenAI 五大原则：民主化、赋权、普惠繁荣、韧性和适应性。
-🔗 https://x.com/sama/status/2048554097985593849
+🗞 AI Builders 日报 · 2026.04.29
 
 🤖 Agent/编程
 
-③ Guillermo Rauch：编程 agent 是所有超级智能的基础
-Vercel CEO 发表长推：coding agent 不只是写代码，它掌握 bash、文件系统、安装配置程序的能力，本质上等同于「精通计算机」。更重要的是 self-improvement——coding agent 能检视自身源码、状态、技能、指令，进而提出改进。他认为这是通向通用能力的核心路径。
-🔗 https://x.com/rauchg/status/2048523195305902341
+① Replit「20位构建者，8周，目标：第一笔收入」
+Amjad Masad（Replit 首席执行官）宣布启动加速器项目，20位构建者将在8周内冲刺首笔收入。同时他强调 Replit 在智能体生产隔离上领先超过一年，垂直整合平台优势将持续复利。
+🔗 https://x.com/amasad/status/2048912698583453933
 
-④ Peter Yang：周末用 AI 给健身 app 搭了 MCP 服务器
-Peter Yang 分享：周末改进了自己的移动健身 app，并给它搭了一个 MCP server，这样就能通过 Claude、Codex 等工具直接查询最新训练数据、更新 app 内的训练计划。「这东西太好玩了。」
-🔗 https://x.com/petergyang/status/2048611053333041158
+② Codex 遇 GitHub 限速时直接开浏览器点网页操作
+Peter Steinberger（OpenClaw 联合创始人）分享：Codex 在 GitHub API 限速时主动打开浏览器，在页面上点击操作绕过限制——还顺手在评论框里打字并关闭了 issue。他同时晒出 PR/Issue 管理、远程测试执行、大规模 CI 基础设施的整套方案。
+🔗 https://x.com/steipete/status/2049035044702843053
 
-⑤ Garry Tan：articulate agent 的秘密是三个文件
-Garry Tan 分享构建个人 agent 的方法：核心是三个文件——SOUL.md（agent 的性格、价值观、写作原则）、MEMORY.md（不断更新的知识库）、TASKS.md（当前目标和优先级）。他强调 SOUL.md 不是 system prompt，而是一部「宪法」，越具体越好。
-🔗 https://x.com/garrytan/status/2048669695344046090
+③ GStack 内置 Claude Code，支持 /pair-agent 接管浏览器
+Garry Tan（Y Combinator 总裁）介绍 GStack 已集成 Chromium + Claude Code，输入 /pair-agent 可生成连接字符串，粘贴给 OpenClaw/Hermes 后 agent 即可远程控制浏览器、登录账号并抓取内容。
+🔗 https://x.com/garrytan/status/2049035231903301771
 
-⑥ Peter Steinberger：开源工具 birdclaw——本地化推文存档
-steipete 发布 birdclaw，可以导入自己的推文存档、备份到 GitHub、并通过 job 每天同步 X 书签（因为 API 访问受限）。解决了推文数据不受自己控制的问题。
-🔗 https://x.com/steipete/status/2048626844694421842
+④ Red Hat 把 OpenClaw agent 装进容器
+Red Hat 的 OpenClaw 维护者发布 Tank OS，将 OpenClaw AI agent 容器化运行，目标是让大规模 agent 部署更稳更安全。
+🔗 https://techcrunch.com/2026/04/28/red-hats-openclaw-maintainer-just-made-enterprise-claw-deployments-a-lot-safer/
 
-⑦ Peter Steinberger：Blacksmith 让 Codex 用 32 核 CPU 跑测试
-steipete 在 OpenClaw 的开发中遇到 CPU 瓶颈，切换到 Blacksmith 之后，Codex 可以调用 32 核实例跑测试，效果极好。展示了 AI agent + 弹性计算的实际价值。
-🔗 https://x.com/steipete/status/2048630704972443918
+⑤ 最有经验的 AI 用户只跟一个 agent 对话
+Zara Zhang 观察到，身边最老练的 AI 用户每天只跟一个主 agent 沟通，再由这个 agent 按需分配子任务或召唤子 agent。这种「单一编排层」模式正在成为高级用户的默认工作流。
+🔗 https://x.com/zarazhangrui/status/2049027061768192288
 
-⑧ Peter Steinberger：wacrawl 0.2.0 发布——WhatsApp 加密备份
-wacrawl 新版本支持加密 Git 备份/恢复 WhatsApp Desktop 归档，用 age 加密写入 GitHub 分片，拉取时解密验证并本地恢复。
-🔗 https://x.com/steipete/status/2048660875007914176
+⑥ Lovable 的 vibe-coding 应用上架 iOS 和 Android
+Lovable 把 vibe-coding 搬上手机，开发者可以随时随地生成 web app 和网站。
+🔗 https://techcrunch.com/2026/04/28/lovable-launches-its-vibe-coding-app-on-ios-and-android/
+
+🛠 产品/应用
+
+⑦ OpenAI 正在和联发科、高通、立讯造手机
+分析师郭明錤报告，OpenAI 与联发科、高通、立讯精密合作开发手机，定位是用 AI agent 取代传统 app，此前传闻只涉及一款耳机。
+🔗 https://techcrunch.com/2026/04/27/openai-could-be-making-a-phone-with-ai-agents-replacing-apps/
+
+⑧ Anthropic 把 Claude 接进 Photoshop、Blender、Ableton
+Anthropic 发布 Claude Creative Connectors，让 Claude 直接调用 Adobe Creative Cloud、Affinity、Blender、Ableton、Autodesk 等创意软件，是本月 Claude Design 之后公司第二次切入创意行业。
+🔗 https://www.theverge.com/ai-artificial-intelligence/919648/anthropic-claude-creative-connectors-adobe-blender
+
+⑨ Amazon 商品页加了 AI 语音问答
+Amazon 上线「Join the chat」功能，用户对商品提问后可听到 AI 生成的语音回答。
+🔗 https://techcrunch.com/2026/04/28/amazon-launches-an-ai-powered-audio-qa-experience-on-product-pages/
+
+⑩ Google 在 YouTube 里测 AI 对话式搜索
+Google 把对话式 AI 搜索接入 YouTube，结果同时拉出长视频、Shorts 和文本片段，目前以实验形式推送。
+🔗 https://www.theverge.com/streaming/919441/google-ask-youtube-ai-chatbot-search
+
+⑪ 需要 API/MCP 的产品清单
+Peter Yang（Roblox 产品经理）列出一批亟需开放 API 或 MCP 的服务：Substack、Riverside、各家视频编辑工具、大多数银行（Mercury 除外）、政府网站、医疗门户。言下之意是这些「围墙花园」正在成为 agent 时代的障碍。
+🔗 https://x.com/petergyang/status/2048918016642154698
+
+⑫ 郭明錤：OpenAI 手机定位是「让 AI agent 取代 app」
+（同条，补充背景：这是继耳机传闻之后 OpenAI 硬件野心的进一步升级，供应链已落地中国台湾和大陆。）
+🔗 https://techcrunch.com/2026/04/27/openai-could-be-making-a-phone-with-ai-agents-replacing-apps/
 
 📈 商业/观点
 
-⑨ Aaron Levie：Gell-Mann amnesia 的 AI 版——对自己工作的高估
-Box CEO 观察到一个有趣现象：人们用 AI 做自己的工作时，清楚地看到「最后一公里」有多难；但看别人的工作时，却觉得 AI 马上就能取代那份工作。本质上是对自己所做工作复杂度有深刻体感，而对他人工作的复杂度缺乏感知。
-🔗 https://x.com/levie/status/2048576989930619185
+⑬ 硅谷和全球企业对 AI 的认知差距是史上最大
+Matt Turck（FirstMark Capital 投资人）观察：硅谷在谈「AI 自我加速，agent 包揽一切」，而全球 2000 强企业却在说「两年前花大钱上的 AI 聊天机器人毫无成效，只有工程师觉得 coding AI 有用，agent 让人害怕」。两个阵营的认知从未如此割裂。
+🔗 https://x.com/mattturck/status/2048896617424527499
 
-⑩ Aaron Levie：agent 时代两个造成过劳的微妙因素
-Levie 指出：一、AI 极大放大了边际努力的回报，用工具的人最先感受到这种「复利感」，导致不由自主地投入更多时间；二、决策速度加快，意味着更多决策需要做，而不是更少。AI 让你更高效，但也让你停不下来。
-🔗 https://x.com/levie/status/2048537503972684252
+⑭ AI 独立创始人 Tibo Maker 拆解月入 100 万美元的五条原则
+Peter Yang 整理了 Tibo Maker（Revid 创始人）的五条方法论：第一天就收费验证需求；跟着用户惊喜转向（把视频工具 pivot 成 AI 片段拼接，MRR 涨到 60 万美元+）；定价 50-100 美元过滤闲逛者；月流失率控制在 20% 以下才扩获客；建 100+ 长尾 SEO 落地页。
+🔗 https://x.com/petergyang/status/2048771729821229091
+
+⑮ 「代码便宜了，软件变成新媒体」
+Dan Shipper（Every 首席执行官）提出：当代码生产成本趋零，软件开始具备媒体属性——内容即产品，分发即护城河。他将在 betaworks 活动上公开讨论这个判断。
+🔗 https://x.com/danshipper/status/2048818450915586364
+
+⑯ 创始人离场之后：Dawn 社区正在填补空白
+Nikunj Kothari（FPV Ventures 合伙人）联合发起 Dawn 社区——专门服务「已退出创始人」这个无人照料的群体，首届小型晚宴定于 5 月 19 日在旧金山举行，仅限前创始人参与。
+🔗 https://x.com/nikunj/status/2048900068523266544
+
+⑰ Bevel 3.0：从追踪健康数据到真正懂你
+Aditya Agarwal（South Park Commons 联合创始人，Bevel 联合创始人）发布 Bevel 3.0，定位从「健康追踪与分析工具」升级为「真正理解你、帮你更健康的 AI 伴侣」。
+🔗 https://x.com/adityaag/status/2048868147525222602
+
+🔒 安全
+
+⑱ Mercor 泄露 4 万名 AI 标注员的 4TB 语音样本
+AI 数据标注平台 Mercor 被曝泄露约 4 万名外包标注员的语音数据，总量达 4TB，细节由 Oravys 披露。
+🔗 https://app.oravys.com/blog/mercor-breach-2026
 
 🎙 Podcast
 
-AI & I by Every：《专为 LLM 做不到的事而生的 AI 模型》
-Logical Intelligence 创始人 Eve 介绍能量基础模型（EBM）。核心论点：LLM 是自回归的、基于 token 的，天然适合语言任务，但对空间推理、数据分析等非语言任务极度低效。EBM 不用 token，直接在能量景观上做最小化推理，可以实时检视训练过程（而非训练完才能看），自带约束机制——这对航空、金融等高风险场景至关重要。她认为 AI 被过度绑定在「语言」上，而真实世界的工程、导航、数据分析根本不需要用语言来推理。EBM 不是取代 LLM，而是作为互补层处理 LLM 不擅长的任务。
+Training Data: From SEO to Agent-Led Growth: Profound's James Cadwallader
+ProFound（已服务约 12% 的财富 500 强）联合创始人 James Cadwallader 提出「Agent Led Growth（ALG）」框架：AI agent 已经替代消费者成为品牌的「受众」，营销的对象不再是人而是模型。关键洞察三条：①Gemini 偏爱 YouTube 内容，ChatGPT 偏爱 Reddit/LinkedIn，Claude 正越来越依赖实时网络抓取；②自我服务式对比列表目前仍对 AI 推荐有效，但长期会被模型惩罚；③如果「死亡互联网」在三年内成真，广告经济崩溃，社交媒体将成为人类内容的最后堡垒，各大 AI 实验室或将垂直整合社交平台（如 Grok 与 X 的关系）。
 
-📰 行业速报（2026.04.28）
+---
 
-① OpenAI 与微软删除「触发 AGI 就退出」条款，双方重签合作协议：微软放弃云端独家权，换取更长期收入分成；OpenAI 500 亿美元亚马逊算力订单的法律障碍被清除。
-② Google 内部 600+ 员工联署拒绝五角大楼机密 AI 合同（含 20+ 副总裁），OpenAI 同周拿下 FedRAMP Moderate 联邦合规授权，直接可以进联邦采购流程。
-③ iPhone 主屏、Ubuntu 内核、车企设计室同周被 AI 接管：Skye 要替换 iPhone 整个主屏为 AI 入口；Ubuntu 宣布 apt update 即可内置模型；通用、日产把 AI 接入最早的草图阶段。
-④ 中国监管驳回 Meta 收购 Manus 的交易，即便 Manus 团队已尝试切断中国关联。
-⑤ AlphaGo 核心研究者 David Silver 离开 DeepMind 后完成 11 亿美元融资，估值 51 亿，目标是构建不依赖人类数据的「超级学习者」。
-⑥ OpenAI 开源 Codex 编排规范 Symphony，把 issue tracker 接成持续运行的 agent 系统。
+📰 行业速报（2026.04.29）
 
-🔗 https://ai-digest.liziran.com/zh/digest/2026-04-28-openai-swaps-agi-escape-clause-aws-deal-google-vps-revolt.html
+① Musk 走上证人席，官司真正在审的是 OpenAI 从非营利转营利的合法性——若认定违规，公司 IPO 路径和 Altman 的职位都悬在空中
+② GitHub Copilot 宣布转向按量计费，重度用户月成本可能从 10 美元跳至三位数；同周 HN 热帖追问 Claude Code 生成代码的版权归属
+③ 华盛顿：Google 与五角大楼签下「任何合法用途」AI 合同；布鲁塞尔：欧盟要求 Google 开放安卓默认 AI 助手位置；北京：叫停 Meta 收购 Manus
+
+🔗 https://ai-digest.liziran.com/zh/digest/2026-04-29-musk-tells-court-openais-ipo-puts-humanity-stake.html
 
 📚 论文速报（2026.04.27）
 
-① TraceElephant：多 agent 调试基准测试，完整执行追踪比只看输出将故障归因准确率提升 76%。
-② HiLight：侧边 Actor 给冻结基础模型输入添加强调标签，学到的策略可零样本迁移到闭源 API。
-③ RouteLMT：用小模型 token 表征的边际收益预测替换手工调参的升级阈值，实现自适应路由。
-④ UniSonate：统一 TTS + TTM + TTA 的单文本指令模型，前两项达到 SOTA，音频转文本仍在追赶。
+① TraceElephant：多智能体调试基准，完整执行轨迹让归因准确率比仅看输出提升 76%
+② HiLight：冻结基础模型、用 Side Actor 附加强调标签，零样本适配闭源 API
+③ RouteLMT：用边际增益预测替换手调升级阈值，混合路由效果更稳定
+④ UniSonate：TTS + 文本转音乐 + 文本转音频三合一模型，前两项达 SOTA，音频生成「竞争力尚可」
 
 🔗 https://ai-brief.liziran.com/
 
-📎 Notion 存档
-https://www.notion.so/AI-Builders-Digest-2026-04-28-350941f989048150a747d27141715f9c
+📓 Notion 存档
+https://www.notion.so/AI-Builders-Digest-2026-04-29-351941f9890481929343d02440f98857
