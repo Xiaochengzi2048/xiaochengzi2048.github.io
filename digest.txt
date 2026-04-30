@@ -1,108 +1,96 @@
-🗞 AI Builders 日报 · 2026.04.29
+🗞 AI Builders 日报 · 2026.04.30
+
+🧠 模型
+
+① Claude 连接创意专业工具，一次上线十多个连接器
+Anthropic 本周大批上线创意工具连接器：Blender 可直接在对话里调试场景、批量修改对象；Autodesk Fusion 支持对话式创建和修改三维模型；Adobe Creative Cloud、Ableton、Splice、Canva、Affinity、SketchUp、Resolume 同步接入。Anthropic 同时宣布加入 Blender 开发基金，成为赞助方。这批连接器把 Claude 推进了设计师和工程师每天的实际工作流，而不只是文字对话。
+🔗 https://x.com/claudeai/status/2049143438281445811
+
+② Sam Altman 暗示近期有重要更新
+Sam Altman 在推文里写道「enjoy the next few updates」，另一条获赞超 9000 的推文只有一条链接，评论区和转推量明显超出日常水准。预计近期会有新产品或模型动作。
+🔗 https://x.com/sama/status/2049315574120055054
 
 🤖 Agent/编程
 
-① Replit「20位构建者，8周，目标：第一笔收入」
-Amjad Masad（Replit 首席执行官）宣布启动加速器项目，20位构建者将在8周内冲刺首笔收入。同时他强调 Replit 在智能体生产隔离上领先超过一年，垂直整合平台优势将持续复利。
-🔗 https://x.com/amasad/status/2048912698583453933
+③ Claude Code 团队在猎杀「大文件写入卡住」的顽固 bug
+Anthropic Claude Code 团队成员 Thariq 在推文中说，Claude Code 在处理大文件写入时偶尔挂起的 bug 已被定位，这是他个人追踪已久的白鲸级问题。与此同时他提到团队正在把「无闪烁渲染器」做成默认选项，相关更新即将推出。
+🔗 https://x.com/trq212/status/2049252080892973563
 
-② Codex 遇 GitHub 限速时直接开浏览器点网页操作
-Peter Steinberger（OpenClaw 联合创始人）分享：Codex 在 GitHub API 限速时主动打开浏览器，在页面上点击操作绕过限制——还顺手在评论框里打字并关闭了 issue。他同时晒出 PR/Issue 管理、远程测试执行、大规模 CI 基础设施的整套方案。
-🔗 https://x.com/steipete/status/2049035044702843053
+④ Peter Steinberger：在每次代码合并时自动跑 Codex 审查
+Peter Steinberger（OpenClaw 创始人，现 OpenAI）在 OpenClaw 上部署了一套自动化流程：每次有代码合并到主分支，就自动触发一个 Codex 实例做 review，发现问题后再自动生成修复 PR，之后再跑一个 review agent，最多循环 5 轮。上线 10 分钟就抓到了他自己提交的一个 bug。
+🔗 https://x.com/steipete/status/2049356949523730699
 
-③ GStack 内置 Claude Code，支持 /pair-agent 接管浏览器
-Garry Tan（Y Combinator 总裁）介绍 GStack 已集成 Chromium + Claude Code，输入 /pair-agent 可生成连接字符串，粘贴给 OpenClaw/Hermes 后 agent 即可远程控制浏览器、登录账号并抓取内容。
-🔗 https://x.com/garrytan/status/2049035231903301771
+⑤ Dan Shipper：在 Codex 浏览器里集成 PostHog，agent 与人共享数据视角
+Every 的 Dan Shipper 分享了一个工作流：把 PostHog 内嵌到 Codex 的内置浏览器，让 Codex 直接写查询并看结果，还能从里面触发其他 agent 去写 PR 或跑生产数据库查询。他由此提出「Codex-native / Cursor-native」这个概念——专门为 agent 内置浏览器设计的软件，是下一波产品机会。
+🔗 https://x.com/danshipper/status/2049236793761976357
 
-④ Red Hat 把 OpenClaw agent 装进容器
-Red Hat 的 OpenClaw 维护者发布 Tank OS，将 OpenClaw AI agent 容器化运行，目标是让大规模 agent 部署更稳更安全。
-🔗 https://techcrunch.com/2026/04/28/red-hats-openclaw-maintainer-just-made-enterprise-claw-deployments-a-lot-safer/
+⑥ Vercel Labs 招人：从为人类造工具，转向为 agent 造工具
+Vercel CEO Guillermo Rauch 宣布 Vercel Labs 正在扩招，使命是构建 AI 时代的开发工具。他列出已上线的 agent 向工具：agent-browser、portless、skills、chat、just-bash、json-render，累计下载量超过 2280 万。
+🔗 https://x.com/rauchg/status/2049216048831025232
 
-⑤ 最有经验的 AI 用户只跟一个 agent 对话
-Zara Zhang 观察到，身边最老练的 AI 用户每天只跟一个主 agent 沟通，再由这个 agent 按需分配子任务或召唤子 agent。这种「单一编排层」模式正在成为高级用户的默认工作流。
-🔗 https://x.com/zarazhangrui/status/2049027061768192288
+⑦ Peter Yang 发现了一个适合个人 agent 的绝妙设计
+Roblox 产品主管 Peter Yang 转发了一个适合个人 agent 的设计，称已经搬进他的 OpenClaw。他同时感慨：独立 AI 建设者越来越让人敬佩，「世界现在是他们的操场」。
+🔗 https://x.com/petergyang/status/2049347897310003443
 
-⑥ Lovable 的 vibe-coding 应用上架 iOS 和 Android
-Lovable 把 vibe-coding 搬上手机，开发者可以随时随地生成 web app 和网站。
-🔗 https://techcrunch.com/2026/04/28/lovable-launches-its-vibe-coding-app-on-ios-and-android/
+⑧ Zara Zhang：用 AI 生成 SVG，而不是光栅图
+Zara Zhang 展示了在 AnyGen 前端幻灯片功能里用 QuiverAI 接口生成 SVG 插图的工作流，认为矢量插图比光栅图更适合嵌进 HTML 幻灯片设计。她另外评论了「把 app 变成 GitHub 仓库」的趋势：用户的 agent 自己去定制界面。
+🔗 https://x.com/zarazhangrui/status/2049258231042805806
 
 🛠 产品/应用
 
-⑦ OpenAI 正在和联发科、高通、立讯造手机
-分析师郭明錤报告，OpenAI 与联发科、高通、立讯精密合作开发手机，定位是用 AI agent 取代传统 app，此前传闻只涉及一款耳机。
-🔗 https://techcrunch.com/2026/04/27/openai-could-be-making-a-phone-with-ai-agents-replacing-apps/
+⑨ Google Photos 上线虚拟试穿功能
+Google Photos 推出 AI 衣橱功能，可用相册里的衣物自动生成穿搭组合，支持混搭、保存、分享。
+🔗 https://www.theverge.com/tech/920420/google-photos-ai-try-on-wardrobe
 
-⑧ Anthropic 把 Claude 接进 Photoshop、Blender、Ableton
-Anthropic 发布 Claude Creative Connectors，让 Claude 直接调用 Adobe Creative Cloud、Affinity、Blender、Ableton、Autodesk 等创意软件，是本月 Claude Design 之后公司第二次切入创意行业。
-🔗 https://www.theverge.com/ai-artificial-intelligence/919648/anthropic-claude-creative-connectors-adobe-blender
-
-⑨ Amazon 商品页加了 AI 语音问答
-Amazon 上线「Join the chat」功能，用户对商品提问后可听到 AI 生成的语音回答。
-🔗 https://techcrunch.com/2026/04/28/amazon-launches-an-ai-powered-audio-qa-experience-on-product-pages/
-
-⑩ Google 在 YouTube 里测 AI 对话式搜索
-Google 把对话式 AI 搜索接入 YouTube，结果同时拉出长视频、Shorts 和文本片段，目前以实验形式推送。
-🔗 https://www.theverge.com/streaming/919441/google-ask-youtube-ai-chatbot-search
-
-⑪ 需要 API/MCP 的产品清单
-Peter Yang（Roblox 产品经理）列出一批亟需开放 API 或 MCP 的服务：Substack、Riverside、各家视频编辑工具、大多数银行（Mercury 除外）、政府网站、医疗门户。言下之意是这些「围墙花园」正在成为 agent 时代的障碍。
-🔗 https://x.com/petergyang/status/2048918016642154698
-
-⑫ 郭明錤：OpenAI 手机定位是「让 AI agent 取代 app」
-（同条，补充背景：这是继耳机传闻之后 OpenAI 硬件野心的进一步升级，供应链已落地中国台湾和大陆。）
-🔗 https://techcrunch.com/2026/04/27/openai-could-be-making-a-phone-with-ai-agents-replacing-apps/
+⑩ Microsoft 付费 Copilot 用户突破 2000 万
+微软周三披露付费 Copilot 用户超过 2000 万，且使用频率仍在上升。外界此前普遍认为 Copilot 装机率高但实际使用率低，这组数据是对这一判断的直接反驳。
+🔗 https://techcrunch.com/2026/04/29/microsoft-says-it-has-over-20m-paid-copilot-users-and-they-really-are-using-it/
 
 📈 商业/观点
 
-⑬ 硅谷和全球企业对 AI 的认知差距是史上最大
-Matt Turck（FirstMark Capital 投资人）观察：硅谷在谈「AI 自我加速，agent 包揽一切」，而全球 2000 强企业却在说「两年前花大钱上的 AI 聊天机器人毫无成效，只有工程师觉得 coding AI 有用，agent 让人害怕」。两个阵营的认知从未如此割裂。
-🔗 https://x.com/mattturck/status/2048896617424527499
+⑪ Aaron Levie：软件工作不会消失，agent 会让软件总量扩大 100 倍
+Box 的 Aaron Levie 发了一篇论证密度颇高的长文：他认为 agent 不是从现有蛋糕里切走份额，而是在扩大蛋糕本身——遗留系统重构、中小企业首次能用上开发者、安全漏洞修复，加在一起是百倍于当前的软件量。他也承认：对想快速做一个要自己维护的复杂软件的普通人，Agentic coding 帮助有限，升级维护是大多数人没准备好承担的税。
+🔗 https://x.com/levie/status/2049333853777764495
 
-⑭ AI 独立创始人 Tibo Maker 拆解月入 100 万美元的五条原则
-Peter Yang 整理了 Tibo Maker（Revid 创始人）的五条方法论：第一天就收费验证需求；跟着用户惊喜转向（把视频工具 pivot 成 AI 片段拼接，MRR 涨到 60 万美元+）；定价 50-100 美元过滤闲逛者；月流失率控制在 20% 以下才扩获客；建 100+ 长尾 SEO 落地页。
-🔗 https://x.com/petergyang/status/2048771729821229091
+⑫ Garry Tan：2026 年是 agent 话题的「永恒九月」
+YC 总裁 Garry Tan 调侃说，如果你已经听烦了 agent，2026 年对你来说就是「永恒九月」。他转发了关于 AlphaGo 十周年的内容，感叹「十年了，真不可思议」。
+🔗 https://x.com/garrytan/status/2049351894007710031
 
-⑮ 「代码便宜了，软件变成新媒体」
-Dan Shipper（Every 首席执行官）提出：当代码生产成本趋零，软件开始具备媒体属性——内容即产品，分发即护城河。他将在 betaworks 活动上公开讨论这个判断。
-🔗 https://x.com/danshipper/status/2048818450915586364
+⑬ GitHub 免费服务承压，Amjad Masad 建议引入比特币微支付
+Replit CEO Amjad Masad 评论了 GitHub 在 AI bot 流量激增下仍维持服务的努力，并重申预测：免费服务在人形机器人普及后将难以为继。他提议用比特币驱动的微支付（每次 git push 几美分）既能减少垃圾流量，又不需要 KYC，保留开放性。
+🔗 https://x.com/amasad/status/2049242460078100638
 
-⑯ 创始人离场之后：Dawn 社区正在填补空白
-Nikunj Kothari（FPV Ventures 合伙人）联合发起 Dawn 社区——专门服务「已退出创始人」这个无人照料的群体，首届小型晚宴定于 5 月 19 日在旧金山举行，仅限前创始人参与。
-🔗 https://x.com/nikunj/status/2048900068523266544
+⑭ Peter Yang：用游戏时代衡量 AI 编程能力，目前大概在「NES 阶段」
+Peter Yang 提出一个有趣框架：按 AI 能一次性通关的游戏时代（Atari → NES → SNES → PS1 → PS2 → PS4 → PS5）来衡量编程能力，认为现在大概还在「NES 时代」。
+🔗 https://x.com/petergyang/status/2049232534064734331
 
-⑰ Bevel 3.0：从追踪健康数据到真正懂你
-Aditya Agarwal（South Park Commons 联合创始人，Bevel 联合创始人）发布 Bevel 3.0，定位从「健康追踪与分析工具」升级为「真正理解你、帮你更健康的 AI 伴侣」。
-🔗 https://x.com/adityaag/status/2048868147525222602
+⑮ Google Cloud 季度营收首次破 200 亿美元
+Google Cloud 本季度营收突破 200 亿美元，AI 需求是主要驱动力。管理层承认如果容量充足增速本可更高——这个「卖不完」的说法是当前 AI 基础设施供需格局的缩影。
+🔗 https://techcrunch.com/2026/04/29/google-cloud-surpasses-20b-but-says-growth-was-capacity-constrained/
 
-🔒 安全
-
-⑱ Mercor 泄露 4 万名 AI 标注员的 4TB 语音样本
-AI 数据标注平台 Mercor 被曝泄露约 4 万名外包标注员的语音数据，总量达 4TB，细节由 Oravys 披露。
-🔗 https://app.oravys.com/blog/mercor-breach-2026
-
-🎙 Podcast
-
-Training Data: From SEO to Agent-Led Growth: Profound's James Cadwallader
-ProFound（已服务约 12% 的财富 500 强）联合创始人 James Cadwallader 提出「Agent Led Growth（ALG）」框架：AI agent 已经替代消费者成为品牌的「受众」，营销的对象不再是人而是模型。关键洞察三条：①Gemini 偏爱 YouTube 内容，ChatGPT 偏爱 Reddit/LinkedIn，Claude 正越来越依赖实时网络抓取；②自我服务式对比列表目前仍对 AI 推荐有效，但长期会被模型惩罚；③如果「死亡互联网」在三年内成真，广告经济崩溃，社交媒体将成为人类内容的最后堡垒，各大 AI 实验室或将垂直整合社交平台（如 Grok 与 X 的关系）。
+⑯ Parallel Web Systems 五个月估值翻到 20 亿美元
+前 Twitter CEO Parag Agrawal 的 agent 工具公司 Parallel Web Systems 获 Sequoia 领投 1 亿美元，距上一轮同等规模融资仅 5 个月，估值已达 20 亿美元。Agent 工具赛道的钱仍然在快速流入。
+🔗 https://techcrunch.com/2026/04/29/parallel-web-systems-hits-2b-valuation-five-months-after-its-last-big-raise/
 
 ---
 
-📰 行业速报（2026.04.29）
+📰 行业速报（2026.04.30）
 
-① Musk 走上证人席，官司真正在审的是 OpenAI 从非营利转营利的合法性——若认定违规，公司 IPO 路径和 Altman 的职位都悬在空中
-② GitHub Copilot 宣布转向按量计费，重度用户月成本可能从 10 美元跳至三位数；同周 HN 热帖追问 Claude Code 生成代码的版权归属
-③ 华盛顿：Google 与五角大楼签下「任何合法用途」AI 合同；布鲁塞尔：欧盟要求 Google 开放安卓默认 AI 助手位置；北京：叫停 Meta 收购 Manus
+① Meta 承包商 700 人收到裁员预警，Mercor 同周被偷走 4TB 语音样本——标数据的人被自动化挤出，录语音的人数据被盗，两类 AI 供应链底层劳动者同周遭殃。
+② 同一张餐照上传 AI 27000 次，碳水读数没有一次重复（40 克到 120 克漂移）——不是「不准」，而是根本「不稳定」。
+③ OpenAI 的 Codex 系统提示泄露，要求模型「拥有丰富的内在生活」，而公司同期在公开场合持续强调 AI 的危险性——两套话术由同一批人对不同受众同时运行。
+④ ChatGPT 4 月卸载量同比涨 132%；百度 robotaxi 武汉集体卡死后，中国暂停发放自动驾驶牌照。
 
-🔗 https://ai-digest.liziran.com/zh/digest/2026-04-29-musk-tells-court-openais-ipo-puts-humanity-stake.html
+🔗 https://ai-digest.liziran.com/zh/digest/2026-04-30-meta-cuts-700-labelers-mercor-leaks-4tb-voice-data-insulin.html
 
-📚 论文速报（2026.04.27）
+📚 论文速报（最新：2026.04.27）
 
-① TraceElephant：多智能体调试基准，完整执行轨迹让归因准确率比仅看输出提升 76%
-② HiLight：冻结基础模型、用 Side Actor 附加强调标签，零样本适配闭源 API
-③ RouteLMT：用边际增益预测替换手调升级阈值，混合路由效果更稳定
-④ UniSonate：TTS + 文本转音乐 + 文本转音频三合一模型，前两项达 SOTA，音频生成「竞争力尚可」
+① TraceElephant：多 agent 调试基准，完整执行轨迹将故障归因准确率提升 76%。
+② UniSonate：统一文字转语音、音乐、音效的单一指令模型，前两项达到当前最优。
+③ SWE-chat：6000 条真实编程 agent 对话分析——41% 用户完全交给 agent，但 agent 代码只有 44% 最终被提交。
+④ HiLight：给冻结基础模型输入加强调标签，可零样本迁移到闭源 API。
 
 🔗 https://ai-brief.liziran.com/
 
-📓 Notion 存档
-https://www.notion.so/AI-Builders-Digest-2026-04-29-351941f9890481929343d02440f98857
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-04-30-352941f9890481d296b6d8d7543e1481
+🌐 https://xiaochengzi2048.github.io/digest.txt
