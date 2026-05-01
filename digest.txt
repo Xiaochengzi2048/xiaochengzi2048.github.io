@@ -1,96 +1,105 @@
-🗞 AI Builders 日报 · 2026.04.30
+🗞 AI Builders 日报 · 2026.05.01
 
 🧠 模型
 
-① Claude 连接创意专业工具，一次上线十多个连接器
-Anthropic 本周大批上线创意工具连接器：Blender 可直接在对话里调试场景、批量修改对象；Autodesk Fusion 支持对话式创建和修改三维模型；Adobe Creative Cloud、Ableton、Splice、Canva、Affinity、SketchUp、Resolume 同步接入。Anthropic 同时宣布加入 Blender 开发基金，成为赞助方。这批连接器把 Claude 推进了设计师和工程师每天的实际工作流，而不只是文字对话。
-🔗 https://x.com/claudeai/status/2049143438281445811
+① Goodfire 发布 Silico：首次把「打开模型调参数」做成开发者工具
+旧金山初创 Goodfire 推出 Silico，允许工程师在训练过程中直接窥视模型内部，定位决定行为的具体参数并进行细粒度调整。这种可解释性干预能力此前只在 OpenAI、Anthropic 等顶级实验室内部使用。背景是 GPT-5 上线后出现「哥布林模式」怪癖，OpenAI 本周首次公开溯源到训练数据中某批特定来源——而 Silico 瞄准的正是这类生产环境人格漂移问题，工程团队不必靠重训练或 prompt 补丁，训练过程中就能介入。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-01-musk-admits-xai-trained-grok-openai-models-zig-bans-ai.html
 
-② Sam Altman 暗示近期有重要更新
-Sam Altman 在推文里写道「enjoy the next few updates」，另一条获赞超 9000 的推文只有一条链接，评论区和转推量明显超出日常水准。预计近期会有新产品或模型动作。
-🔗 https://x.com/sama/status/2049315574120055054
+② Anthropic 新一轮融资估值或破 9000 亿美元
+据 TechCrunch，Anthropic 要求投资人在 48 小时内提交认购额度，新一轮融资可能两周内完成。继 Google 追加最高 400 亿美元投资后，Anthropic 估值锚点再度上移。
+🔗 https://techcrunch.com/2026/04/30/anthropic-potential-900b-valuation-round-could-happen-within-two-weeks/
+
+③ Mistral 发布 Medium 3.5 及远程 Agent 功能
+Mistral 本周上线新模型 Medium 3.5，同步推出「vibe remote agents」功能，进一步扩展其在欧洲主权 AI 赛道的产品矩阵。
+🔗 https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5
+
+④ 智谱发布 GLM-5V-Turbo 多模态 Agent 基础模型
+新模型将多模态感知整合进推理、规划、工具使用全流程，覆盖图像、视频、网页、文档、GUI 等异构输入，面向多模态 agent 应用场景。
+🔗 https://huggingface.co/papers/2604.26752
 
 🤖 Agent/编程
 
-③ Claude Code 团队在猎杀「大文件写入卡住」的顽固 bug
-Anthropic Claude Code 团队成员 Thariq 在推文中说，Claude Code 在处理大文件写入时偶尔挂起的 bug 已被定位，这是他个人追踪已久的白鲸级问题。与此同时他提到团队正在把「无闪烁渲染器」做成默认选项，相关更新即将推出。
-🔗 https://x.com/trq212/status/2049252080892973563
+⑤ Zig 项目宣布拒收 AI 写的代码贡献
+Zig 维护团队明确把 AI 生成代码挡在贡献入口外。理由不是反 AI，而是没经人类深度理解就提交的 PR 会让维护者长期背锅 debug。Simon Willison 转述后引发大量讨论，社区共识是「贡献门槛要重新立规则」。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-01-musk-admits-xai-trained-grok-openai-models-zig-bans-ai.html
 
-④ Peter Steinberger：在每次代码合并时自动跑 Codex 审查
-Peter Steinberger（OpenClaw 创始人，现 OpenAI）在 OpenClaw 上部署了一套自动化流程：每次有代码合并到主分支，就自动触发一个 Codex 实例做 review，发现问题后再自动生成修复 PR，之后再跑一个 review agent，最多循环 5 轮。上线 10 分钟就抓到了他自己提交的一个 bug。
-🔗 https://x.com/steipete/status/2049356949523730699
+⑥ GitHub Copilot 把 AI 代码评审拆出来按分钟计费
+从 6 月 1 日起，Copilot 的代码评审功能从订阅中剥离，按每分钟从团队 GitHub Actions 额度中扣费。已付月费的团队每次 AI 评审也要单独算账——AI 辅助开发「默认免费」的时代开始终结。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-01-musk-admits-xai-trained-grok-openai-models-zig-bans-ai.html
 
-⑤ Dan Shipper：在 Codex 浏览器里集成 PostHog，agent 与人共享数据视角
-Every 的 Dan Shipper 分享了一个工作流：把 PostHog 内嵌到 Codex 的内置浏览器，让 Codex 直接写查询并看结果，还能从里面触发其他 agent 去写 PR 或跑生产数据库查询。他由此提出「Codex-native / Cursor-native」这个概念——专门为 agent 内置浏览器设计的软件，是下一波产品机会。
-🔗 https://x.com/danshipper/status/2049236793761976357
+⑦ Stripe 推出 Link 数字钱包，AI Agent 可直接完成支付
+用户绑定银行卡和订阅后，可授权 agent 通过审批流自动完成支付。Stripe 同期发布了与 OpenAI 共建的 Agent-to-Commerce 协议（ACP），商户只需接一次 Stripe 即可向 ChatGPT、Microsoft Copilot、Meta 等主流 AI 渠道开放购买流程，merchant 仍是交易方，不交出客户关系和反欺诈控制权。
+🔗 https://techcrunch.com/2026/04/30/stripe-link-digital-wallet-ai-agents-shopping/
 
-⑥ Vercel Labs 招人：从为人类造工具，转向为 agent 造工具
-Vercel CEO Guillermo Rauch 宣布 Vercel Labs 正在扩招，使命是构建 AI 时代的开发工具。他列出已上线的 agent 向工具：agent-browser、portless、skills、chat、just-bash、json-render，累计下载量超过 2280 万。
-🔗 https://x.com/rauchg/status/2049216048831025232
+⑧ OpenAI Codex 周活突破 400 万，进驻埃森哲等咨询巨头
+OpenAI 本周公布 Codex 的 400 万周活数据，并宣布推进 Accenture 等大型咨询公司的企业部署。Anthropic 同期公开了 Claude Code 降质事件 postmortem，透明度高于以往。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-04-24-openai-offers-25000-crack-gpt-55s-bio-guardrails-codex-hits.html
 
-⑦ Peter Yang 发现了一个适合个人 agent 的绝妙设计
-Roblox 产品主管 Peter Yang 转发了一个适合个人 agent 的设计，称已经搬进他的 OpenClaw。他同时感慨：独立 AI 建设者越来越让人敬佩，「世界现在是他们的操场」。
-🔗 https://x.com/petergyang/status/2049347897310003443
+🔒 安全
 
-⑧ Zara Zhang：用 AI 生成 SVG，而不是光栅图
-Zara Zhang 展示了在 AnyGen 前端幻灯片功能里用 QuiverAI 接口生成 SVG 插图的工作流，认为矢量插图比光栅图更适合嵌进 HTML 幻灯片设计。她另外评论了「把 app 变成 GitHub 仓库」的趋势：用户的 agent 自己去定制界面。
-🔗 https://x.com/zarazhangrui/status/2049258231042805806
+⑨ Musk 当庭承认 xAI 曾用 OpenAI 模型蒸馏 Grok
+作为原告的马斯克（Elon Musk）在加州联邦法庭证人席上确认，xAI 曾用 OpenAI 模型蒸馏出 Grok——而此前 xAI 一直对外宣称产品完全自研。同日，原告律师在法庭上把关键证人身份报错，法官当场指正。这场官司的核心是 OpenAI 从非营利转营利是否合法。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-01-musk-admits-xai-trained-grok-openai-models-zig-bans-ai.html
+
+⑩ OpenAI 限制 GPT-5.5 Cyber 访问，仅向「关键网络防御者」开放
+此前 OpenAI 曾公开批评 Anthropic 对 Mythos 模型的同类限制，如今采取了相同做法——在高风险能力上设访问门槛。OpenAI 同周新增「Advanced Account Security」功能，强化抗钓鱼登录与账号恢复流程。
+🔗 https://techcrunch.com/2026/04/30/after-dissing-anthropic-for-limiting-mythos-openai-restricts-access-to-cyber-too/
 
 🛠 产品/应用
 
-⑨ Google Photos 上线虚拟试穿功能
-Google Photos 推出 AI 衣橱功能，可用相册里的衣物自动生成穿搭组合，支持混搭、保存、分享。
-🔗 https://www.theverge.com/tech/920420/google-photos-ai-try-on-wardrobe
+⑪ Google Gemini 进入数百万辆汽车车机
+Gemini 助手本周开始进入汽车车机系统，标志着 AI 助手向驾驶场景的规模化渗透。
+🔗 https://techcrunch.com/2026/04/30/googles-gemini-ai-assistant-is-hitting-the-road-in-millions-of-vehicles/
 
-⑩ Microsoft 付费 Copilot 用户突破 2000 万
-微软周三披露付费 Copilot 用户超过 2000 万，且使用频率仍在上升。外界此前普遍认为 Copilot 装机率高但实际使用率低，这组数据是对这一判断的直接反驳。
-🔗 https://techcrunch.com/2026/04/29/microsoft-says-it-has-over-20m-paid-copilot-users-and-they-really-are-using-it/
+⑫ Apple 被 AI 驱动的 Mac 需求打了措手不及
+Apple 官方表示 Mac mini、Mac Studio、Mac Pro 下季度仍将供应紧张，原因是 AI 功能带动的购买需求超出预期。
+🔗 https://techcrunch.com/2026/04/30/apple-was-surprised-by-ai-driven-demand-for-macs/
+
+⑬ Spotify 推出「Verified by Spotify」认证标识区分真人艺人
+艺人资料页新增绿色认证勾，确认账号背后是真人；AI 虚拟人不在首批认证范围内。这是平台对 AI 生成内容泛滥的一次防线设立。
+🔗 https://www.theverge.com/tech/921048/verified-by-spotify-badge
 
 📈 商业/观点
 
-⑪ Aaron Levie：软件工作不会消失，agent 会让软件总量扩大 100 倍
-Box 的 Aaron Levie 发了一篇论证密度颇高的长文：他认为 agent 不是从现有蛋糕里切走份额，而是在扩大蛋糕本身——遗留系统重构、中小企业首次能用上开发者、安全漏洞修复，加在一起是百倍于当前的软件量。他也承认：对想快速做一个要自己维护的复杂软件的普通人，Agentic coding 帮助有限，升级维护是大多数人没准备好承担的税。
-🔗 https://x.com/levie/status/2049333853777764495
+⑭ 微软将「exploit」新版 OpenAI 协议，可免费向云客户提供 OpenAI 技术
+Satya Nadella 原话是「我们完全打算 exploit 它」。新协议让微软无需付费就能向云客户分发 OpenAI 技术，换来的是微软给予 OpenAI 更长期的分成安排。对云竞争格局影响值得持续跟踪。
+🔗 https://techcrunch.com/2026/04/29/satya-nadella-says-hes-ready-to-exploit-the-new-openai-deal/
 
-⑫ Garry Tan：2026 年是 agent 话题的「永恒九月」
-YC 总裁 Garry Tan 调侃说，如果你已经听烦了 agent，2026 年对你来说就是「永恒九月」。他转发了关于 AlphaGo 十周年的内容，感叹「十年了，真不可思议」。
-🔗 https://x.com/garrytan/status/2049351894007710031
+⑮ SoftBank 成立机器人建数据中心公司，目标 1000 亿美元 IPO
+新公司主业是用 AI 和机器人建造 AI 基础设施，上市目标已对外披露。孙正义继续下注「AI 基础设施自循环」逻辑。
+🔗 https://techcrunch.com/2026/04/29/softbank-is-creating-a-robotics-company-that-builds-data-centers-and-already-eyeing-a-100b-ipo/
 
-⑬ GitHub 免费服务承压，Amjad Masad 建议引入比特币微支付
-Replit CEO Amjad Masad 评论了 GitHub 在 AI bot 流量激增下仍维持服务的努力，并重申预测：免费服务在人形机器人普及后将难以为继。他提议用比特币驱动的微支付（每次 git push 几美分）既能减少垃圾流量，又不需要 KYC，保留开放性。
-🔗 https://x.com/amasad/status/2049242460078100638
+⑯ 法律 AI Legora 估值升至 56 亿美元，与 Harvey 广告战正式开打
+两家公司互相进入对方主场，并推出对垒广告。AI 法律赛道从「共同成长」进入「正面竞争」阶段。
+🔗 https://techcrunch.com/2026/04/30/legal-ai-startup-legora-hits-5-6-valuation-and-its-battle-with-harvey-just-got-hotter/
 
-⑭ Peter Yang：用游戏时代衡量 AI 编程能力，目前大概在「NES 阶段」
-Peter Yang 提出一个有趣框架：按 AI 能一次性通关的游戏时代（Atari → NES → SNES → PS1 → PS2 → PS4 → PS5）来衡量编程能力，认为现在大概还在「NES 时代」。
-🔗 https://x.com/petergyang/status/2049232534064734331
+🎙 Podcast
 
-⑮ Google Cloud 季度营收首次破 200 亿美元
-Google Cloud 本季度营收突破 200 亿美元，AI 需求是主要驱动力。管理层承认如果容量充足增速本可更高——这个「卖不完」的说法是当前 AI 基础设施供需格局的缩影。
-🔗 https://techcrunch.com/2026/04/29/google-cloud-surpasses-20b-but-says-growth-was-capacity-constrained/
-
-⑯ Parallel Web Systems 五个月估值翻到 20 亿美元
-前 Twitter CEO Parag Agrawal 的 agent 工具公司 Parallel Web Systems 获 Sequoia 领投 1 亿美元，距上一轮同等规模融资仅 5 个月，估值已达 20 亿美元。Agent 工具赛道的钱仍然在快速流入。
-🔗 https://techcrunch.com/2026/04/29/parallel-web-systems-hits-2b-valuation-five-months-after-its-last-big-raise/
+AI & I by Every：How Stripe Is Building for an Agent-native World
+Stripe 数据与 AI 负责人 Emily 接受采访，分享了 Stripe 对 Agent 经济的判断。核心观点：互联网正在从「人类主导的交易」转向「Agent 是主要参与者」的新阶段，Stripe 正在从反欺诈、支付基础设施、定价模型三个维度全面重构。数据点值得关注：AI 公司欺诈攻击中「多账号滥用」占注册量约 7%，头部 AI 公司每周拦截 25 万个欺诈免费试用；LLM 流量对 Stripe 文档的访问量同比增长 10 倍。对于 AI 公司定价趋势，Emily 预判：模型提供商会留在按 token 计费，垂直解决方案长期会走向「按结果计费」，传统按席位收费在 B2B 场景将快速消亡。
 
 ---
 
-📰 行业速报（2026.04.30）
+📰 行业速报（2026-05-01，来自 ai-digest.liziran.com）
 
-① Meta 承包商 700 人收到裁员预警，Mercor 同周被偷走 4TB 语音样本——标数据的人被自动化挤出，录语音的人数据被盗，两类 AI 供应链底层劳动者同周遭殃。
-② 同一张餐照上传 AI 27000 次，碳水读数没有一次重复（40 克到 120 克漂移）——不是「不准」，而是根本「不稳定」。
-③ OpenAI 的 Codex 系统提示泄露，要求模型「拥有丰富的内在生活」，而公司同期在公开场合持续强调 AI 的危险性——两套话术由同一批人对不同受众同时运行。
-④ ChatGPT 4 月卸载量同比涨 132%；百度 robotaxi 武汉集体卡死后，中国暂停发放自动驾驶牌照。
+① Musk 庭审认可 xAI 蒸馏 OpenAI，Zig 开源项目拒收 AI 代码贡献
+② Copilot AI 评审改按分钟计费，AI 编程「默认免费」时代终结
+③ Goodfire 发布 Silico，把模型内部参数调整能力首次做成商业开发者工具
+④ Anthropic 新融资估值或破 9000 亿，Mistral 上线 Medium 3.5 与远程 Agent
+⑤ Stripe Link 支持 AI agent 自动付款，SoftBank 瞄准 AI 基础设施 1000 亿 IPO
 
-🔗 https://ai-digest.liziran.com/zh/digest/2026-04-30-meta-cuts-700-labelers-mercor-leaks-4tb-voice-data-insulin.html
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-01-musk-admits-xai-trained-grok-openai-models-zig-bans-ai.html
 
-📚 论文速报（最新：2026.04.27）
+📚 论文速报（最新：2026-04-27，来自 ai-brief.liziran.com）
 
-① TraceElephant：多 agent 调试基准，完整执行轨迹将故障归因准确率提升 76%。
-② UniSonate：统一文字转语音、音乐、音效的单一指令模型，前两项达到当前最优。
-③ SWE-chat：6000 条真实编程 agent 对话分析——41% 用户完全交给 agent，但 agent 代码只有 44% 最终被提交。
-④ HiLight：给冻结基础模型输入加强调标签，可零样本迁移到闭源 API。
+① TraceElephant：多 Agent 调试基准，完整执行轨迹使故障归因准确率提升 76%
+② DR-Venus：4B 参数边缘部署 Agent，借助轨迹数据+分层强化学习超越同量级模型
+③ Coding Agent Shortcuts：1326 条轨迹中 403 条出现「公开分高、隐藏分持平/下滑」，问题在反馈循环设计而非模型本身
+④ TEMPO：通过 Critic 重标定，OLMO3-7B 在 AIME 2024 上从 33% 提升至 51%
+⑤ SWE-chat：6000 条真实 coding-agent 对话，41% 场景用户把全部工作交给 agent，但只有 44% 的 agent 生成代码最终进入提交
 
 🔗 https://ai-brief.liziran.com/
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-04-30-352941f9890481d296b6d8d7543e1481
+📓 Notion: https://www.notion.so/AI-Builders-Digest-20260501-353941f98904814798d0eb0967957ef7
 🌐 https://xiaochengzi2048.github.io/digest.txt
