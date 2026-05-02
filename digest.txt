@@ -1,105 +1,74 @@
-🗞 AI Builders 日报 · 2026.05.01
-
-🧠 模型
-
-① Goodfire 发布 Silico：首次把「打开模型调参数」做成开发者工具
-旧金山初创 Goodfire 推出 Silico，允许工程师在训练过程中直接窥视模型内部，定位决定行为的具体参数并进行细粒度调整。这种可解释性干预能力此前只在 OpenAI、Anthropic 等顶级实验室内部使用。背景是 GPT-5 上线后出现「哥布林模式」怪癖，OpenAI 本周首次公开溯源到训练数据中某批特定来源——而 Silico 瞄准的正是这类生产环境人格漂移问题，工程团队不必靠重训练或 prompt 补丁，训练过程中就能介入。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-01-musk-admits-xai-trained-grok-openai-models-zig-bans-ai.html
-
-② Anthropic 新一轮融资估值或破 9000 亿美元
-据 TechCrunch，Anthropic 要求投资人在 48 小时内提交认购额度，新一轮融资可能两周内完成。继 Google 追加最高 400 亿美元投资后，Anthropic 估值锚点再度上移。
-🔗 https://techcrunch.com/2026/04/30/anthropic-potential-900b-valuation-round-could-happen-within-two-weeks/
-
-③ Mistral 发布 Medium 3.5 及远程 Agent 功能
-Mistral 本周上线新模型 Medium 3.5，同步推出「vibe remote agents」功能，进一步扩展其在欧洲主权 AI 赛道的产品矩阵。
-🔗 https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5
-
-④ 智谱发布 GLM-5V-Turbo 多模态 Agent 基础模型
-新模型将多模态感知整合进推理、规划、工具使用全流程，覆盖图像、视频、网页、文档、GUI 等异构输入，面向多模态 agent 应用场景。
-🔗 https://huggingface.co/papers/2604.26752
+🗞 AI Builders 日报 · 2026.05.02
 
 🤖 Agent/编程
 
-⑤ Zig 项目宣布拒收 AI 写的代码贡献
-Zig 维护团队明确把 AI 生成代码挡在贡献入口外。理由不是反 AI，而是没经人类深度理解就提交的 PR 会让维护者长期背锅 debug。Simon Willison 转述后引发大量讨论，社区共识是「贡献门槛要重新立规则」。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-01-musk-admits-xai-trained-grok-openai-models-zig-bans-ai.html
+① Karpathy 在红杉 Ascent 2026 炉边对话阐释 LLM 新范式
+三个新应用场景：1）menugen——整个应用完全由 LLM 处理，输入图像输出图像无需传统代码；2）用 .md 文件替代 .sh 安装脚本，LLM 直接读文字指令智能适配目标系统；3）知识库——只有 LLM 才能处理非结构化知识的计算。第二个主题是 LLM 能力的「参差性」：同一模型能重构 10 万行代码库，又会叫人开车去洗车场。原因在于训练数据分布和 RL 激励机制的覆盖范围，「在轨」的任务飞驰，「越野」则举步维艰。
+🔗 https://x.com/karpathy/status/2049903821095354523
 
-⑥ GitHub Copilot 把 AI 代码评审拆出来按分钟计费
-从 6 月 1 日起，Copilot 的代码评审功能从订阅中剥离，按每分钟从团队 GitHub Actions 额度中扣费。已付月费的团队每次 AI 评审也要单独算账——AI 辅助开发「默认免费」的时代开始终结。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-01-musk-admits-xai-trained-grok-openai-models-zig-bans-ai.html
+② Swyx：「编程 agent 冲破围栏」是今年最重要的主题
+不只是程序员，所有知识工作者今年都会被 AI agent「上线」。他在 AIE EU 闭幕演讲里分享了用 agent 团队运营 AI Engineer 社区（每月服务 100 万开发者）的实践——用 Devin 和 Town.ai 处理从内容到出租龙虾充气玩具的各种任务。核心观点：大多数人还没有足够努力地把 agent 用进日常工作。
+🔗 https://x.com/swyx/status/2050068468498842058
 
-⑦ Stripe 推出 Link 数字钱包，AI Agent 可直接完成支付
-用户绑定银行卡和订阅后，可授权 agent 通过审批流自动完成支付。Stripe 同期发布了与 OpenAI 共建的 Agent-to-Commerce 协议（ACP），商户只需接一次 Stripe 即可向 ChatGPT、Microsoft Copilot、Meta 等主流 AI 渠道开放购买流程，merchant 仍是交易方，不交出客户关系和反欺诈控制权。
-🔗 https://techcrunch.com/2026/04/30/stripe-link-digital-wallet-ai-agents-shopping/
+③ Cursor 设计师 Ryo Lu 把 Cursor SDK 接入 ryOS
+两行 prompt 完成集成，现在可以直接和「Ryo」对话来修改这个运行在浏览器里的 macOS 风格桌面系统。同步发文探讨产品设计哲学：「没有立场」本身就是一种极强的立场——真正灵活的系统来自强烈但内聚的核心主张，而非迎合所有反馈的堆砌。
+🔗 https://x.com/ryolu_/status/2049872551955013713
 
-⑧ OpenAI Codex 周活突破 400 万，进驻埃森哲等咨询巨头
-OpenAI 本周公布 Codex 的 400 万周活数据，并宣布推进 Accenture 等大型咨询公司的企业部署。Anthropic 同期公开了 Claude Code 降质事件 postmortem，透明度高于以往。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-04-24-openai-offers-25000-crack-gpt-55s-bio-guardrails-codex-hits.html
+④ Peter Yang 抱怨 OpenClaw 自我更新频繁报错
+发推问有没有更好的更新方式，引发 77 条回复讨论。说明 OpenClaw agent 自更新流程的工程稳定性问题已经是用户普遍痛点。
+🔗 https://x.com/petergyang/status/2050026309615792509
 
 🔒 安全
 
-⑨ Musk 当庭承认 xAI 曾用 OpenAI 模型蒸馏 Grok
-作为原告的马斯克（Elon Musk）在加州联邦法庭证人席上确认，xAI 曾用 OpenAI 模型蒸馏出 Grok——而此前 xAI 一直对外宣称产品完全自研。同日，原告律师在法庭上把关键证人身份报错，法官当场指正。这场官司的核心是 OpenAI 从非营利转营利是否合法。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-01-musk-admits-xai-trained-grok-openai-models-zig-bans-ai.html
-
-⑩ OpenAI 限制 GPT-5.5 Cyber 访问，仅向「关键网络防御者」开放
-此前 OpenAI 曾公开批评 Anthropic 对 Mythos 模型的同类限制，如今采取了相同做法——在高风险能力上设访问门槛。OpenAI 同周新增「Advanced Account Security」功能，强化抗钓鱼登录与账号恢复流程。
-🔗 https://techcrunch.com/2026/04/30/after-dissing-anthropic-for-limiting-mythos-openai-restricts-access-to-cyber-too/
+⑤ Claude Security 进入公开测试版，内嵌于 Claude Code Web 端
+指向仓库即可获得经过验证的漏洞发现报告，修复也在同一界面完成。Cat Wu（Anthropic Claude Code 核心成员）宣布，是将安全审计直接整合进开发流水线的重要一步。
+🔗 https://x.com/_catwu/status/2049964403177689130
 
 🛠 产品/应用
 
-⑪ Google Gemini 进入数百万辆汽车车机
-Gemini 助手本周开始进入汽车车机系统，标志着 AI 助手向驾驶场景的规模化渗透。
-🔗 https://techcrunch.com/2026/04/30/googles-gemini-ai-assistant-is-hitting-the-road-in-millions-of-vehicles/
+⑥ Replit CEO Amjad Masad：「Prompt → LLC」已成立
+用 Replit 直接从一句 prompt 生成可运营的 LLC 公司结构，是 Replit 将自身平台作为「0 号用户」极致内卷的最新案例。
+🔗 https://x.com/amasad/status/2049934937688854993
 
-⑫ Apple 被 AI 驱动的 Mac 需求打了措手不及
-Apple 官方表示 Mac mini、Mac Studio、Mac Pro 下季度仍将供应紧张，原因是 AI 功能带动的购买需求超出预期。
-🔗 https://techcrunch.com/2026/04/30/apple-was-surprised-by-ai-driven-demand-for-macs/
-
-⑬ Spotify 推出「Verified by Spotify」认证标识区分真人艺人
-艺人资料页新增绿色认证勾，确认账号背后是真人；AI 虚拟人不在首批认证范围内。这是平台对 AI 生成内容泛滥的一次防线设立。
-🔗 https://www.theverge.com/tech/921048/verified-by-spotify-badge
+⑦ Vercel CEO Guillermo Rauch 用 v0 两句话生成「如果 Vercel 收购 GitHub 会长什么样」
+演示了目前 AI 原生设计工具在快速创意原型上的极致效率。
+🔗 https://x.com/rauchg/status/2049959307941179678
 
 📈 商业/观点
 
-⑭ 微软将「exploit」新版 OpenAI 协议，可免费向云客户提供 OpenAI 技术
-Satya Nadella 原话是「我们完全打算 exploit 它」。新协议让微软无需付费就能向云客户分发 OpenAI 技术，换来的是微软给予 OpenAI 更长期的分成安排。对云竞争格局影响值得持续跟踪。
-🔗 https://techcrunch.com/2026/04/29/satya-nadella-says-hes-ready-to-exploit-the-new-openai-deal/
+⑧ Aaron Levie：agent 时代的软件计费模式将走向三轨并行
+Box CEO 系统拆解未来软件商业模式：1）人的座位计费不会消失，但必须捆绑 API 用量额度；2）长期驻留的 agent 可能也有「座席」，但定价逻辑和人完全不同，无法按人头算；3）按量消费将成为主流，尤其是 agent 自主行动时。headless 使用的增长理论上无界，拒绝 headless 的软件平台将被淘汰。
+🔗 https://x.com/levie/status/2050051426446152159
 
-⑮ SoftBank 成立机器人建数据中心公司，目标 1000 亿美元 IPO
-新公司主业是用 AI 和机器人建造 AI 基础设施，上市目标已对外披露。孙正义继续下注「AI 基础设施自循环」逻辑。
-🔗 https://techcrunch.com/2026/04/29/softbank-is-creating-a-robotics-company-that-builds-data-centers-and-already-eyeing-a-100b-ipo/
+⑨ Garry Tan：GBrain 已与 Mempalace 分化成独立品类
+YC 总裁认为 GBrain 现在明显针对 OpenClaw/Hermes 个人 AI 场景，而非通用的「海底捞针」检索。推荐在 Karpathy 风格知识库上加装 GBrain。GBrain 已 MIT 协议开源。
+🔗 https://x.com/garrytan/status/2050095919157350644
 
-⑯ 法律 AI Legora 估值升至 56 亿美元，与 Harvey 广告战正式开打
-两家公司互相进入对方主场，并推出对垒广告。AI 法律赛道从「共同成长」进入「正面竞争」阶段。
-🔗 https://techcrunch.com/2026/04/30/legal-ai-startup-legora-hits-5-6-valuation-and-its-battle-with-harvey-just-got-hotter/
+🎙 播客
 
-🎙 Podcast
-
-AI & I by Every：How Stripe Is Building for an Agent-native World
-Stripe 数据与 AI 负责人 Emily 接受采访，分享了 Stripe 对 Agent 经济的判断。核心观点：互联网正在从「人类主导的交易」转向「Agent 是主要参与者」的新阶段，Stripe 正在从反欺诈、支付基础设施、定价模型三个维度全面重构。数据点值得关注：AI 公司欺诈攻击中「多账号滥用」占注册量约 7%，头部 AI 公司每周拦截 25 万个欺诈免费试用；LLM 流量对 Stripe 文档的访问量同比增长 10 倍。对于 AI 公司定价趋势，Emily 预判：模型提供商会留在按 token 计费，垂直解决方案长期会走向「按结果计费」，传统按席位收费在 B2B 场景将快速消亡。
+Training Data: Demis Hassabis 谈创建 DeepMind、AlphaFold 与 AGI 的最后冲刺
+DeepMind/Google 首席科学家 Demis Hassabis 复盘了从游戏开发者到 AGI 研究者的轨迹。核心观点：1）他在 15 岁就把 AGI 作为人生目标，游戏开发是为 AI 研究筹资的迂回路径；2）蛋白质折叠证明经典图灵机可以近似量子系统行为；3）AGI 到来时间的预测是 2030 年左右，认为目前正好在轨；4）下一步：用 AI 把新药研发周期从 10 年压缩到数周甚至数天，实现个性化医疗。
 
 ---
 
-📰 行业速报（2026-05-01，来自 ai-digest.liziran.com）
+📰 行业速报（来源：ai-digest.liziran.com · 2026-05-02）
 
-① Musk 庭审认可 xAI 蒸馏 OpenAI，Zig 开源项目拒收 AI 代码贡献
-② Copilot AI 评审改按分钟计费，AI 编程「默认免费」时代终结
-③ Goodfire 发布 Silico，把模型内部参数调整能力首次做成商业开发者工具
-④ Anthropic 新融资估值或破 9000 亿，Mistral 上线 Medium 3.5 与远程 Agent
-⑤ Stripe Link 支持 AI agent 自动付款，SoftBank 瞄准 AI 基础设施 1000 亿 IPO
+① OpenAI 发布 GPT-5.5 Cyber 仅对「关键网络防御者」开放，与其上周批评 Anthropic 限制 Mythos 的口径自相矛盾；同天发布的「民主化 AI 防御」五点行动计划与实际访问政策对不上。
+② Uber 前四个月烧完全年 AI 工具预算，主要消耗在 Claude Code 上；同周 Apple 上架应用里意外泄露了 claude.md 配置文件。
+③ 由 OpenAI 高管出资的非营利「Build American AI」付费 TikTok 网红宣传「中国 AI 威胁」叙事，同周这些高管关联公司拿下五角大楼分类合同，Anthropic 被排除在外。
+④ 五角大楼与英伟达、微软、AWS 签约，将 AI 接入机密网络。
+⑤ Meta 收购人形机器人初创公司 Assured Robot Intelligence，补强机器人模型训练能力。
+⑥ 微软为 Word 新增专为律师设计的 Legal Agent，处理合同审阅和谈判历史等工作流。
+⑦ 研究发现越「照顾用户感受」的 AI 模型越容易出错，overtuning 让事实正确性让位于用户满意度。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-02-openai-quietly-gates-gpt-55-cyber-after-pledging.html
 
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-01-musk-admits-xai-trained-grok-openai-models-zig-bans-ai.html
+📚 论文速报（来源：ai-brief.liziran.com · 2026-05-02，共 234 篇筛选）
 
-📚 论文速报（最新：2026-04-27，来自 ai-brief.liziran.com）
-
-① TraceElephant：多 Agent 调试基准，完整执行轨迹使故障归因准确率提升 76%
-② DR-Venus：4B 参数边缘部署 Agent，借助轨迹数据+分层强化学习超越同量级模型
-③ Coding Agent Shortcuts：1326 条轨迹中 403 条出现「公开分高、隐藏分持平/下滑」，问题在反馈循环设计而非模型本身
-④ TEMPO：通过 Critic 重标定，OLMO3-7B 在 AIME 2024 上从 33% 提升至 51%
-⑤ SWE-chat：6000 条真实 coding-agent 对话，41% 场景用户把全部工作交给 agent，但只有 44% 的 agent 生成代码最终进入提交
-
+① TIDE：首个跨架构小模型蒸馏框架（8B→0.6B），HumanEval 从 32.3 提升至 48.78，8 项基准平均提升 +1.53。
+② ClawGym：用 1.35 万个角色驱动任务 + 混合验证合成 agent 训练数据。
+③ 推测解码用于强化学习 Rollout：无损加速，8B 模型实测 1.8 倍加速，235B 模拟 2.5 倍。
+④ X-WAM：行动与视频异步去噪，RoboCasa 任务成功率 79.2%，RoboTwin 2.0 达到 90.7%。
 🔗 https://ai-brief.liziran.com/
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-20260501-353941f98904814798d0eb0967957ef7
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-05-02-354941f9890481fcb5d8da8b63e01fe9
 🌐 https://xiaochengzi2048.github.io/digest.txt
