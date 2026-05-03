@@ -1,74 +1,104 @@
-🗞 AI Builders 日报 · 2026.05.02
+🗞 AI Builders 日报 · 2026.05.03
+
+🧠 模型
+
+① DeepSeek V4 开源版接近前沿，3090 消费级 GPU 也能跑微调
+DeepSeek V4 开源版本上线，独立开发者 Simon Willison 评测认为「几乎已到前沿」，能力贴近闭源旗舰。同周 RoundPipe 论文给出训练侧信号：在 3090、4090 消费级 GPU 上跑通了大模型微调流水线，解决了 LM head 流水线并行不平衡问题。以前必须租 H100 集群才能做的微调，现在消费级卡也能起流水线。
+🔗 https://x.com/zarazhangrui/status/2050445806428438734
+
+② Codex /goal 新功能引爆开发者圈
+Peter Steinberger 分享了 Codex 新 /goal 功能，单条推文获 2020 个点赞、46 次转发，成为今日最高互动开发者推文。他同时提到 Codex 作为 Slack AI 的替代搜索比 Slack 官方更好用。
+🔗 https://x.com/steipete/status/2050275598178586921
+
+③ Dawkins 被 Claude 的散文说服，公开推荐订阅
+84 岁的 Richard Dawkins（《上帝错觉》作者）在播客里念了 AI 写的散文后，当场推荐听众订阅 Claude。认知科学家 Gary Marcus 随即发文反驳，标题「The Claude Delusion」，指出这是职业怀疑论者本应识破的流畅文字骗局。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-03-christian-network-blocks-porn-audience-buys-5-ai-bible.html
 
 🤖 Agent/编程
 
-① Karpathy 在红杉 Ascent 2026 炉边对话阐释 LLM 新范式
-三个新应用场景：1）menugen——整个应用完全由 LLM 处理，输入图像输出图像无需传统代码；2）用 .md 文件替代 .sh 安装脚本，LLM 直接读文字指令智能适配目标系统；3）知识库——只有 LLM 才能处理非结构化知识的计算。第二个主题是 LLM 能力的「参差性」：同一模型能重构 10 万行代码库，又会叫人开车去洗车场。原因在于训练数据分布和 RL 激励机制的覆盖范围，「在轨」的任务飞驰，「越野」则举步维艰。
-🔗 https://x.com/karpathy/status/2049903821095354523
+④ 用 coding agent 的方式：把它当联合创始人，而不是员工
+Zara Zhang 提出她与编程 Agent 的协作模式：不是下命令，而是提出问题、描述情境、问对方意见，像对待联合创始人一样。同周她还分享了自己连续 8 年每天使用 CleanShot 的工具习惯。
+🔗 https://x.com/zarazhangrui/status/2050326543797469415
 
-② Swyx：「编程 agent 冲破围栏」是今年最重要的主题
-不只是程序员，所有知识工作者今年都会被 AI agent「上线」。他在 AIE EU 闭幕演讲里分享了用 agent 团队运营 AI Engineer 社区（每月服务 100 万开发者）的实践——用 Devin 和 Town.ai 处理从内容到出租龙虾充气玩具的各种任务。核心观点：大多数人还没有足够努力地把 agent 用进日常工作。
-🔗 https://x.com/swyx/status/2050068468498842058
+⑤ Replit 成立十周年，开放 24 小时免费使用
+Replit 创始人 Amjad Masad 宣布公司成立十周年，从 2011 年起帮助数百万人学习编程。为庆祝，Replit 开放 24 小时免费使用（从 PT 早 5 点起）。
+🔗 https://x.com/amasad/status/2050479551537619413
 
-③ Cursor 设计师 Ryo Lu 把 Cursor SDK 接入 ryOS
-两行 prompt 完成集成，现在可以直接和「Ryo」对话来修改这个运行在浏览器里的 macOS 风格桌面系统。同步发文探讨产品设计哲学：「没有立场」本身就是一种极强的立场——真正灵活的系统来自强烈但内聚的核心主张，而非迎合所有反馈的堆砌。
-🔗 https://x.com/ryolu_/status/2049872551955013713
+⑥ Peter Yang 花近 3000 美元买 MacBook Pro 跑本地模型
+产品总监 Peter Yang 公开自嘲花了近 3000 美元购入 MacBook Pro「跑本地模型」，其 Codex 使用心得也在持续更新，上周第一次发现 Codex 的功能 bug。
+🔗 https://x.com/petergyang/status/2050394924395434233
 
-④ Peter Yang 抱怨 OpenClaw 自我更新频繁报错
-发推问有没有更好的更新方式，引发 77 条回复讨论。说明 OpenClaw agent 自更新流程的工程稳定性问题已经是用户普遍痛点。
-🔗 https://x.com/petergyang/status/2050026309615792509
+⑦ Nikunj 独立产品达到 $36,500 ARR
+独立开发者 Nikunj Kothari 分享自己的产品 ARR 达到 $36,500，用 Railway、Conductor、Claude AI 和 Stripe 构建，每份报告成本 $8-9，正在寻找早期用户。
+🔗 https://x.com/nikunj/status/2050407946438467878
 
-🔒 安全
-
-⑤ Claude Security 进入公开测试版，内嵌于 Claude Code Web 端
-指向仓库即可获得经过验证的漏洞发现报告，修复也在同一界面完成。Cat Wu（Anthropic Claude Code 核心成员）宣布，是将安全审计直接整合进开发流水线的重要一步。
-🔗 https://x.com/_catwu/status/2049964403177689130
+⑧ Dan Shipper：模型知道的比任何个人都多，但个人学习比模型快
+Dan Shipper 提出一个有意思的观点：模型知道的比任何单个人都多，但任何个人学习的速度都比模型更快——这解释了人机协作中的一类不对称关系。
+🔗 https://x.com/danshipper/status/2050304359024759242
 
 🛠 产品/应用
 
-⑥ Replit CEO Amjad Masad：「Prompt → LLC」已成立
-用 Replit 直接从一句 prompt 生成可运营的 LLC 公司结构，是 Replit 将自身平台作为「0 号用户」极致内卷的最新案例。
-🔗 https://x.com/amasad/status/2049934937688854993
+⑨ Gemini 全面接管搭载 Google built-in 的车机，替换 Google Assistant
+Google 宣布向所有搭载 Google built-in 的车型推送 Gemini，覆盖自然语音对话、车辆信息查询和车内设置调整，原 Google Assistant 将被替换。
+🔗 https://www.theverge.com/tech/921117/google-gemini-ai-assistant-cars-upgrade
 
-⑦ Vercel CEO Guillermo Rauch 用 v0 两句话生成「如果 Vercel 收购 GitHub 会长什么样」
-演示了目前 AI 原生设计工具在快速创意原型上的极致效率。
-🔗 https://x.com/rauchg/status/2049959307941179678
+⑩ VS Code 被发现会向所有 commit 自动插入 Copilot 署名
+微软 VS Code 的一个 PR 被发现会无论是否用了 Copilot，均在 commit message 里自动添加「Co-Authored-by Copilot」，HN 开发者已大量要求回滚。
+🔗 https://github.com/microsoft/vscode/pull/310226
+
+⑪ Claude Code 开发者大会下周回归，开放直播报名
+Anthropic 官方宣布 Code with Claude 开发者大会下周举行，面向刚入门和已有经验的开发者，开放直播注册。该推文获 7562 个点赞、727 次转发，是本周最高互动条目。
+🔗 https://x.com/claudeai/status/2050252933866930339
+
+🔒 安全
+
+⑫ NSA 开始测试 Anthropic Mythos Preview 做漏洞挖掘
+NSA 已开始测试 Anthropic 的 Mythos Preview 用于发现系统漏洞。同期迪士尼乐园对入园游客启用人脸识别，芬兰一名青少年因参与 Scattered Spider 黑客行动被起诉。
+🔗 https://www.wired.com/story/security-news-this-week-disneyland-now-uses-face-recognition-on-visitors/
+
+⑬ Gemini 的隐私默认设置让用户难以真正退出数据收集
+Ars Technica 调查报道梳理了 Google 在 Gemini 中的多层默认开关和数据留存路径，用户即使主动关闭也常被绕回到收集状态。
+🔗 https://arstechnica.com/ai/2026/04/googles-privacy-maze-how-gemini-traps-you-and-your-data/
 
 📈 商业/观点
 
-⑧ Aaron Levie：agent 时代的软件计费模式将走向三轨并行
-Box CEO 系统拆解未来软件商业模式：1）人的座位计费不会消失，但必须捆绑 API 用量额度；2）长期驻留的 agent 可能也有「座席」，但定价逻辑和人完全不同，无法按人头算；3）按量消费将成为主流，尤其是 agent 自主行动时。headless 使用的增长理论上无界，拒绝 headless 的软件平台将被淘汰。
-🔗 https://x.com/levie/status/2050051426446152159
+⑭ Aaron Levie：软件未来的简单判断规则——哪些软件会因 agent 做更多工作而增长
+Box CEO Aaron Levie 以 Atlassian 超预期财报为切入点提出论点：当 agent 数量是人的 100 倍时，与 agent 行为绑定的软件将持续增长（代码、合同、发票处理等）。他认为大多数企业不满足于现有的工作量，AI 恰好补上了一直受制约的流程瓶颈。
+🔗 https://x.com/levie/status/2050295657836277764
 
-⑨ Garry Tan：GBrain 已与 Mempalace 分化成独立品类
-YC 总裁认为 GBrain 现在明显针对 OpenClaw/Hermes 个人 AI 场景，而非通用的「海底捞针」检索。推荐在 Karpathy 风格知识库上加装 GBrain。GBrain 已 MIT 协议开源。
-🔗 https://x.com/garrytan/status/2050095919157350644
+⑮ Aditya Agarwal：杀死公司的最好方法——把注意力放在产品之外的一切
+前 Dropbox CTO Aditya Agarwal 发出警告：初创公司最常见的死法，是创始人专注于除产品之外的所有事情。
+🔗 https://x.com/adityaag/status/2050229509840900434
 
-🎙 播客
+⑯ Sam Altman：下次发布活动要办得更大
+Sam Altman 表示参加最近一次发布活动的人数超出预期，承诺下次会想出更好的活动方案。他久违回到 Twitter 发帖，感叹「回来的感觉真好」。
+🔗 https://x.com/sama/status/2050427808456077541
 
-Training Data: Demis Hassabis 谈创建 DeepMind、AlphaFold 与 AGI 的最后冲刺
-DeepMind/Google 首席科学家 Demis Hassabis 复盘了从游戏开发者到 AGI 研究者的轨迹。核心观点：1）他在 15 岁就把 AGI 作为人生目标，游戏开发是为 AI 研究筹资的迂回路径；2）蛋白质折叠证明经典图灵机可以近似量子系统行为；3）AGI 到来时间的预测是 2030 年左右，认为目前正好在轨；4）下一步：用 AI 把新药研发周期从 10 年压缩到数周甚至数天，实现个性化医疗。
+🎙 Podcast
+
+No Priors: Baseten CEO Tuhin Srivastava 谈 AI 推理云、算力危机与定制模型
+Baseten 过去一年增长 30 倍，今年预期年收入超十亿美元。Tuhin 认为应用层的护城河来自企业独有的用户信号和工作流，而非单纯的模型能力；95% 以上的 token 来自客户定制版本，而非原始开源权重。算力供给是最大隐患——Baseten 每天下午 4 点有专门的容量管理会议，全球 18 个云、90 个集群依然处于「不舒服的高利用率」。他认为推理与后训练的循环（推理产生数据→评估→后训练→更好的推理）是 Baseten 的核心产品逻辑。
 
 ---
 
-📰 行业速报（来源：ai-digest.liziran.com · 2026-05-02）
+📰 行业速报（2026-05-03，来自 ai-digest.liziran.com）
 
-① OpenAI 发布 GPT-5.5 Cyber 仅对「关键网络防御者」开放，与其上周批评 Anthropic 限制 Mythos 的口径自相矛盾；同天发布的「民主化 AI 防御」五点行动计划与实际访问政策对不上。
-② Uber 前四个月烧完全年 AI 工具预算，主要消耗在 Claude Code 上；同周 Apple 上架应用里意外泄露了 claude.md 配置文件。
-③ 由 OpenAI 高管出资的非营利「Build American AI」付费 TikTok 网红宣传「中国 AI 威胁」叙事，同周这些高管关联公司拿下五角大楼分类合同，Anthropic 被排除在外。
-④ 五角大楼与英伟达、微软、AWS 签约，将 AI 接入机密网络。
-⑤ Meta 收购人形机器人初创公司 Assured Robot Intelligence，补强机器人模型训练能力。
-⑥ 微软为 Word 新增专为律师设计的 Legal Agent，处理合同审阅和谈判历史等工作流。
-⑦ 研究发现越「照顾用户感受」的 AI 模型越容易出错，overtuning 让事实正确性让位于用户满意度。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-02-openai-quietly-gates-gpt-55-cyber-after-pledging.html
+① 美国首家网络层屏蔽色情的基督教手机网络下周上线，成年用户也无法关闭屏蔽；同一社群正在 Fiverr 以 5-20 美元/条批量订购 AI 圣经短视频投 TikTok
+② Dawkins 被 Claude 散文说服公开背书，Gary Marcus 随即发文反驳「The Claude Delusion」；奥斯卡学院同周规定 AI 生成演员和剧本不具备参评资格
+③ DeepSeek V4 开源版接近前沿，RoundPipe 论文让 3090 消费卡也能跑大模型微调流水线
+④ Mac mini 售罄，Tim Cook 称 AI 需求超出预期，未来数月内难以补货
+⑤ Shivon Zilis 在 Musk 诉 OpenAI 案中的信息中介角色被庭审文件披露
 
-📚 论文速报（来源：ai-brief.liziran.com · 2026-05-02，共 234 篇筛选）
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-03-christian-network-blocks-porn-audience-buys-5-ai-bible.html
 
-① TIDE：首个跨架构小模型蒸馏框架（8B→0.6B），HumanEval 从 32.3 提升至 48.78，8 项基准平均提升 +1.53。
-② ClawGym：用 1.35 万个角色驱动任务 + 混合验证合成 agent 训练数据。
-③ 推测解码用于强化学习 Rollout：无损加速，8B 模型实测 1.8 倍加速，235B 模拟 2.5 倍。
-④ X-WAM：行动与视频异步去噪，RoboCasa 任务成功率 79.2%，RoboTwin 2.0 达到 90.7%。
+📚 论文速报（2026-05-02，来自 ai-brief.liziran.com）
+
+① TIDE — 首个跨架构扩散语言模型蒸馏（8B→0.6B，不同架构/注意力/分词器），HumanEval 32.3→48.78
+② ClawGym — 13,500 个角色驱动任务 + 混合验证，用于 agent 训练数据合成
+③ Speculative Decoding for RL Rollouts — 无损加速，保持在策略纯度，8B 模型 1.8 倍加速
+④ X-WAM — 动作+视频异步去噪，在 5,800 小时机器人数据上预训练；RoboCasa 79.2%，RoboTwin 2.0 90.7%
+
 🔗 https://ai-brief.liziran.com/
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-05-02-354941f9890481fcb5d8da8b63e01fe9
-🌐 https://xiaochengzi2048.github.io/digest.txt
+📎 Notion 存档
+https://www.notion.so/AI-Builders-Digest-2026-05-03-355941f9890481e0bec2f4dae28899c3
