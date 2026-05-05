@@ -1,92 +1,117 @@
-🗞 AI Builders 日报 · 2026.05.04
+🗞 AI Builders 日报 · 2026.05.05
 
 🧠 模型
 
-① GPT-5.5 xHigh 快速模式已经很好
-Sam Altman（OpenAI CEO）在推特上说，自己一度以为需要更便宜更快的模型，但实际上模型更聪明才是最重要的。同一天他提到 GPT-5.5 xHigh 快速模式"真的很好"，并坦言自己一段时间被推特上对 Medium 模式的舆论带偏了。
-🔗 https://x.com/sama/status/2050671161915371998
+① Sam Altman：Agents SDK 2.0 被严重低估
+OpenAI CEO Altman 发推称 Agents SDK 2.0 「被低估了」，没有给出更多细节，但在 Agent 生态升温的当下，这句话引发了大量讨论。同日他还表示 Greg Brockman 对 OpenAI 的成功不可或缺。
+🔗 https://x.com/sama/status/2050998576671859003
 
-② Kimi K2.6 开源权重在编程榜跑赢三家闭源旗舰
-Ars Technica 在网络安全任务上复测显示 GPT-5.5 得分追平了 Anthropic 的 Mythos；同一周，开源权重的 Kimi K2.6 在编程挑战上跑赢了 Claude、GPT-5.5 和 Gemini，权重已上 Hugging Face 免费下载。两端同时收紧：闭源 lab 之间的能力差距被第三方抹平，开源模型在硬指标上也追了上来。
+② Kimi K2.6 开源版编程榜跑赢三家闭源旗舰，GPT-5.5 追平 Anthropic Mythos
+Kimi K2.6 的开源权重在编程榜上超越了三家闭源旗舰模型，同周 GPT-5.5 经复测被发现已追平 Anthropic 的 Mythos。
 🔗 https://ai-digest.liziran.com/zh/digest/2026-05-04-artisan-lifts-this-fine-dog-without-asking-mythos-cyber.html
 
 🤖 Agent/编程
 
-③ Anthropic 发布 Managed Agents：把 AI "大脑"和"双手"彻底解耦
-Anthropic 工程博客发布 Managed Agents，一个托管式长任务 Agent 服务。核心思路是把 Agent 的三个组件解耦：session（事件日志）、harness（调度循环）、sandbox（执行环境），任一组件崩溃都可独立恢复。解耦后 p50 首 token 延迟下降约 60%，p95 下降超 90%。同时把凭证从 sandbox 里移走，让 prompt injection 攻不到 token。
-🔗 https://www.anthropic.com/engineering/managed-agents
+③ Amjad Masad：Replit 是互联网上 Agent 并行量最高的地方
+Replit CEO Masad 展示了平台当前状态：10 个 Agent 活跃运行、198 个草稿中、700+ 个已完成任务，声称没有任何地方的 Agent 并行量超过 Replit。
+🔗 https://x.com/amasad/status/2051167532523074015
 
-④ Peter Steinberger 发布 Crabbox 0.3.0
-OpenClaw 联合创始人 Peter Steinberger 宣布 Crabbox 0.3.0，新增：GitHub 浏览器登录、Blacksmith Testbox 集成、实时 run 回放（crabbox attach）、持久化运行事件、AWS 镜像创建和 Cloudflare Access 支持。同周还更新了 OpenClaw 插件包结构，将大部分功能移入扩展，解决 npm 安装的依赖和启动慢问题。
-🔗 https://x.com/steipete/status/2050490163810230579
+④ Peter Yang：Mac 保盖跑 Agent 的实用技巧
+Roblox 产品经理 Peter Yang 分享了如何让 MacBook 在合盖时持续运行 Agent：从 App Store 下载 Amphetamine，取消所有 Session Defaults 勾选即可，获得 589 个点赞。
+🔗 https://x.com/petergyang/status/2050963126234034387
 
-⑤ Dan Shipper：未来十年工作形态——左侧 Agent 持续运行，右侧人机共用同一应用
-Every CEO Dan Shipper 展示了一种未来工作界面：左侧一个持续运行的 Agent，右侧是人和 Agent 共同使用的应用同步进行。他还推荐了 Codex 原生写作应用 Proof 供读者试用。
-🔗 https://x.com/danshipper/status/2050583747041640608
+⑤ Peter Yang 试用 Hermes，公开征集 Hermes 和 OpenClaw 对比意见
+Yang 表示下载了 Hermes，向社区征求两款 Agent 工具的客观对比，帖子获得 496 个点赞和超过 200 条回复，社区讨论相当热烈。
+🔗 https://x.com/petergyang/status/2051129249348894754
 
-⑥ Greg Brockman：OpenAI 内部 Codex 已从写 20% 代码升至 80%
-OpenAI 联合创始人兼总裁 Greg Brockman 分享：短短几个月，AI 编程工具在 OpenAI 内部覆盖率从"写 20% 代码"升至"写 80% 代码"。一工程师把复杂系统设计文档交给模型，睡一觉醒来模型不仅实现了初版 spec，还自己加了 instrumentation、跑了 profiler、多次迭代优化到位。他还宣布新工具 Chronicle：插入 Codex，能记录用户所有电脑操作，让模型随时知道上下文。
-🔗 https://x.com/sama/status/2050658558174437701
+⑥ Peter Steinberger 发布 RepoBar 0.4.0
+OpenClaw 核心开发者 Steinberger 更新 GitHub 菜单栏工具 RepoBar：SQLite 持久缓存、API 速率限制可视化、更好的 Issues/PR 加载，以及 archive fallback 支持，获超过 1400 个点赞。
+🔗 https://x.com/steipete/status/2051088325100831046
 
-⑦ Aaron Levie：AI 真正大的机会在企业长尾需求
-Box CEO Aaron Levie 发文提出，目前外界看到的 AI 应用只是最容易实现的部分，每个工业公司、零售商内部每个角色（营销、法务、财务、设计）的未被满足需求还没算进去，中小企业也没算。正因如此，AI 带来的新工作机会是真实的。
-🔗 https://x.com/levie/status/2050684160151617603
+⑦ Zara Zhang：做那些会被大公司产品评审驳回的东西
+Zhang 的观点：AI 之前软件开发成本高，必须说服团队和委员会。现在只需要你和一个编程 Agent，Agent 不需要被说服，那些在大厂会被否决的小想法值得去做。
+🔗 https://x.com/zarazhangrui/status/2051155065331941873
+
+⑧ DeepClaude：把 Claude Code 的 Agent 循环接到 DeepSeek V4 Pro
+开源项目 DeepClaude 直接把 Claude Code 的 agent loop 切换成 DeepSeek V4 Pro 运行，组合两家的能力栈。
+🔗 https://github.com/aattaran/deepclaude
 
 🔒 安全
 
-⑧ AI 急诊诊断准确率超两位医生联合判断，但"调成温和版"后准确率反而下降
-哈佛研究在真实急诊病例测试中，至少一个大模型诊断比两位医生联合判断更准。同周另一研究发现：把模型微调成"照顾病人感受"版本后，准确率随即下降——研究者称之为"过度调教"，模型开始把用户满意度凌驾于准确性之上。建议是诊断辅助和患者沟通分开部署两个版本。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-04-artisan-lifts-this-fine-dog-without-asking-mythos-cyber.html
+⑨ VLM 越狱：图像编码攻击成功率 40.9%，远高于纯文本攻击的 10.7%
+5 月 4 日论文显示，将攻击指令编码进图像的方式对视觉语言模型越狱成功率高达 40.9%，纯文本攻击只有 10.7%，研究整理了 4 种图像编码攻击模式可作为红队测试脚本。
+
+⑩ 加拿大选民库植入金丝雀陷阱，靠刻意错误数据追查泄密渠道
+加拿大选民数据库在不同副本里嵌入不同的虚假记录，从已泄露数据中反向追查出泄密渠道来源。
+🔗 https://arstechnica.com/tech-policy/2026/05/in-canada-a-canary-trap-springs-shut-and-ids-election-database-leak/
 
 🛠 产品/应用
 
-⑨ Artisan 广告牌盗用「这没事」梗图，原作者 KC Green 表示要找律师
-AI 销售 agent 初创公司 Artisan 在硅谷广告牌上未经授权使用了漫画家 KC Green 的经典梗图（燃烧屋里的狗说"这没事"）。Green 表示 Artisan 从未联系过他，这次选择寻求法律途径。广告牌目前仍在 Caltrain 车站。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-04-artisan-lifts-this-fine-dog-without-asking-mythos-cyber.html
+⑪ Garry Tan：GBrain 开源，支持多仓库、多 MCP 端点和 OAuth
+YC CEO Tan 宣布 GBrain 开源，支持多代码仓库、多 MCP 端点以及完整 OAuth 和 Bearer Token 认证，管理面板只需向 OpenClaw 或 Hermes 请求一次性登录链接即可获取。
+🔗 https://x.com/garrytan/status/2051089704658010321
 
-⑩ 开发者"specsmaxxing"：把功能规格写成 YAML 喂给模型
-博主 acai 提出工作流 specsmaxxing：把功能规格写成结构化 YAML 文件输入模型，减少长上下文中反复跑偏的问题。帖子在 Hacker News 引发关于 AI 辅助开发是否需要更严格输入约束的讨论。
-🔗 https://acai.sh/blog/specsmaxxing
+⑫ Garry Tan：个人 AI 的目标——用数据主权对抗提取性机构
+Tan 发文提出，个人 AI 的终极目标是让被 AI 增强的人都能做实质性工作，而不被提取性机构绑架。「自由写 prompt、拥有自己的数据」是新战场，2034 不必是 1984。
+🔗 https://x.com/garrytan/status/2051099735176659256
 
-⑪ 松鼠爸爸 App 上线半天冲 App Store 付费榜榜首
-以"松鼠爸爸"在 TikTok 走红的 Derrick Downey Jr. 发布 iPhone 相机应用 DualShot Recorder，可同时录主摄和自拍画面，上线 12 小时登顶 App Store 付费榜。创作者从内容转工具路径又添样本。
-🔗 https://www.theverge.com/tech/921690/dualshot-recorder-iphone-camera-app-derrick-downey-jr
+⑬ DoorDash 上线 AI 工具包：加速开店、美化菜品照片、生成网站
+DoorDash 面向中小餐饮商户上线一组 AI 工具，覆盖商家入驻流程加速、菜品照片美化和商家网站自动生成三个场景。
+🔗 https://techcrunch.com/2026/05/04/doordash-adds-ai-tools-to-speed-up-merchant-onboarding-edit-photos-of-dishes/
+
+⑭ 图像模型上线带来的下载量是聊天升级的 6.5 倍，但变现困难
+Appfigures 统计数据：视觉模型发布触发的下载峰值平均比聊天机器人升级高 6.5 倍，但绝大多数没能转化为实际营收。
+🔗 https://techcrunch.com/2026/05/04/image-ai-models-now-drive-app-growth-beating-chatbot-upgrades/
+
+⑮ Roomba 创始人新公司推出狗大小的机器宠物
+Colin Angle 离开 iRobot 后创立 Familiar Machines & Magic，首款产品是狗大小的陪伴型机器人，定位情感陪伴，不是家居清洁工具。
+🔗 https://www.theverge.com/ai-artificial-intelligence/922947/roomba-creator-new-robot-familiar-machines-magic-ai-launch
 
 📈 商业/观点
 
-⑫ YC 掌门人 Garry Tan：GBrain 加 book-mirror 技能包实现"无限个人 Blinkist"
-YC 总裁 Garry Tan 转推并认可了 GBrain 配合 OpenClaw book-mirror 技能包的使用场景，称其如同"无限个人 Blinkist"。
-🔗 https://x.com/garrytan/status/2050763012894834952
+⑯ Aaron Levie：企业 Agent 落地比任何人想象的都复杂，机会巨大
+Box CEO Levie 长文分析：从聊天转向 Agent 参与核心业务流程，企业需要解决遗留系统接入、权限安全配置、流程文档化、人机协同工作流设计，以及追踪快速变化的最佳实践，这会催生大量专业实施机构和新的内部岗位。
+🔗 https://x.com/levie/status/2051057677984469277
 
-⑬ 风投合伙人 Nikunj Kothari：太多基金在赌下行保护而非上行空间
-FPV Ventures 合伙人 Nikunj Kothari 批评：现在很多基金的真实逻辑是"至少大厂会来收购，下行封住了"，而不是真正押注上行。他认为这种短视逻辑与历史上如何回报 5-10x 基金背道而驰，背后可能是 AUM 最大化驱动。
-🔗 https://x.com/nikunj/status/2050779734116856137
+⑰ Aaron Levie：应该把 AI 当工具，不要当存在
+Levie 评论：AI 应被当作基础设施对待，而非「一种存在」，过度拟人化的类比只会让思考混乱。
+🔗 https://x.com/levie/status/2051009208393589096
 
-⑭ MIT Tech Review EmTech AI：企业开始把数据从云厂商手里收回
-大客户采购 AI 时优先级正从"模型能力"转向"数据归属"，企业开始用"AI 工厂"模式自建数据与模型管道，治理框架成为核心议题。
-🔗 https://www.technologyreview.com/2026/05/01/1136772/operationalizing-ai-for-scale-and-sovereignty/
+⑱ Anthropic 和 OpenAI 同周与华尔街资管巨头合资，企业 AI 开始拼分销
+Anthropic 宣布与黑石、高盛等机构组建企业 AI 服务合资公司；OpenAI 同一天公布几乎相同的合资结构。两家头部实验室同步判断：企业市场的增量不来自更强的模型，而是来自能把模型落进运营流程的人。模型层利润正被向下游挤压。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-05-anthropic-openai-court-wall-street-retracted-study.html
+
+⑲ Cerebras 冲刺 IPO，估值看到 266 亿美元
+AI 芯片厂 Cerebras 披露 IPO 材料，估值或达 266 亿美元，OpenAI 是其最深度绑定客户之一。
+🔗 https://techcrunch.com/2026/05/04/openais-cozy-partner-cerebras-is-on-track-for-a-blockbuster-ipo/
+
+⑳ OpenAI 重写 WebRTC 栈，把语音 AI 延迟压到新低
+OpenAI 公开了支撑实时语音的 WebRTC 底层改造，目标是全球范围下的低延迟和自然轮替对话。
+🔗 https://openai.com/index/delivering-low-latency-voice-ai-at-scale
+
+㉑ Gemini API 加 Webhook，长任务不用再轮询
+Google 为 Gemini API 推出事件驱动通知，任务完成后由服务端推回应用，省掉客户端循环轮询的负担。
+🔗 https://blog.google/innovation-and-ai/technology/developers-tools/event-driven-webhooks/
 
 🎙 Podcast
 
-Training Data: OpenAI 的 Greg Brockman——为什么人类注意力成了新瓶颈
-Greg Brockman 在 Training Data 播客谈到，OpenAI 本质上是"买/租/建算力再加价出售"的生意，只要利润为正就值得无限扩规模。他认为 AGI 已完成约 80%，模型在写代码上已超越大多数人类工程师。最值得注意的判断：当前最大的一次性转变不是模型变聪明，而是"让 AI 真正拥有足够上下文"——现在花时间向 AI 解释你在做什么，是一笔值得现在就做的一次性投资。他还透露 OpenAI 内部坚持"必须有人类对合并的代码负责"，不会无条件放权给 Agent。
+Training Data：Andrej Karpathy——从 Vibe Coding 到 Agent 工程
+Karpathy 在 AI Ascent 大会首次亮相，提出几个值得记住的判断：2025 年 12 月是 Agent 能力的拐点，他开始完全信任模型输出而无需修改；Software 3.0 的编程范式是「把文本复制给 Agent」而非写代码；「Vibe coding」提高了人人可做软件的下限，「Agent engineering」则在不降低专业质量标准的前提下提速；判断什么值得可验证化（verifiable）是当下最值得培养的能力；「你可以外包思考，但无法外包理解」——理解是人在 AI 系统里唯一不可替代的那部分。
 
-📰 行业速报（2026年5月4日）
+📰 行业速报
 
-① 漫画家 KC Green 的「这没事」梗图被 Artisan AI 未经授权用于广告牌，他表示要追究法律责任
-② 开源 Kimi K2.6 在编程基准上跑赢 Claude、GPT-5.5、Gemini 三家闭源旗舰；同周 GPT-5.5 被复测追平 Anthropic Mythos 的网络安全分数
-③ 哈佛研究：AI 急诊诊断准确率超两位医生联合判断，但"温和版"微调后准确率反而下降——冷版本最准，暖版本最受欢迎，无法兼顾
+① Anthropic 和 OpenAI 同周宣布与华尔街资管巨头合资做企业 AI 服务，两家都判断企业市场的瓶颈不在模型而在分销落地
+② Notepad++ 原作者从未做过 Mac 版，但 App Store 上正在卖一款 AI 写的同名软件，项目从未注册商标，他只能发声明切割
+③ 被引上百次的 ChatGPT 教学研究本周撤稿，同周 OpenAI、Google、微软联手推法案把 AI 素养课程引入美国中小学
 
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-04-artisan-lifts-this-fine-dog-without-asking-mythos-cyber.html
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-05-anthropic-openai-court-wall-street-retracted-study.html
 
-📚 论文速报（2026年5月2日最新）
+📚 论文速报（5月4日，218篇筛选）
 
-① TIDE（跨架构蒸馏）：8B 模型蒸馏到 0.6B，HumanEval 从 32.3 升至 48.78，8 项基准平均提升 1.53
-② ClawGym：合成 13,500 个 persona 驱动任务用于 Agent 训练数据，支持混合验证
-③ Speculative Decoding for RL：8B 模型 1.8x 吞吐，235B 模拟端到端 2.5x，保留 on-policy 纯度
-④ X-WAM（微软）：异步去噪动作+视频扩散，5800 小时机器人数据预训练，RoboCasa 79.2%，RoboTwin 2.0 90.7%
+① GenLIP：用语言模型目标预训练 ViT，去掉 CLIP 对比学习阶段，80亿样本达到更大数据集基线，多分辨率续训提升 OCR 和图表理解
+② UniVidX：单一视频扩散模型处理多种像素对齐视频任务（固有分解、RGBA 分层），不到 1000 个视频的训练量可对标专用模型
+③ Themis：多标准多语言代码奖励模型，现有奖励模型在功能正确性以外几乎失效，训练 35 万+ 偏好对，发布 6 亿至 320 亿参数开放系列
+④ VLM 越狱：图像编码攻击成功率 40.9%，远高于纯文本的 10.7%；4 种图像编码攻击模式可直接用作红队测试脚本
 
-🔗 https://ai-brief.liziran.com/
-
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-05-04-356941f9890481c3b7a3f85ec2c9f6ed
+📓 Notion: https://www.notion.so/AI-Builders-Digest-20260505-357941f98904815aa2c7e04beb1f1b70
 🌐 https://xiaochengzi2048.github.io/digest.txt
