@@ -1,131 +1,108 @@
-🗞 AI Builders 日报 · 2026.05.06
+🗞 AI Builders 日报 · 2026.05.07
 
 🧠 模型
 
-① GPT-5.5 Instant 上线，成为 ChatGPT 默认模型
-OpenAI 把 ChatGPT 的默认模型切换到 GPT-5.5 Instant，免费和付费用户同步更新。官方称准确率、幻觉率和个性化控制都有改进。Sam Altman 同期在推上说"语音模型要变得很厉害了"，暗示下一个爆点是语音交互。
-🔗 https://openai.com/index/gpt-5-5-instant
-
-② Gemini Flash：生产环境中"性价比最高的模型"
-投资人 Nikunj Kothari 直言 Gemini Flash 在生产工作负载中是他用得最多的模型——100 万上下文窗口、结构化输出、价格极低，同时 Google 新语音模型也被评为"令人震惊地好"。
+① Gemini Flash：性价比拉满的生产主力
+投资人尼昆吉·科塔里（FPV Ventures 合伙人）直说：Gemini Flash 便宜得离谱，效果也好得离谱，1M 上下文加结构化输出，是他生产工作负载里用得最多的模型。同周他还特别点名 Gemini 新的实时语音模型，称"惊为天人"。
 🔗 https://x.com/nikunj/status/2051321911741972900
 
-③ OpenAI 与 Anthropic 估值对比
-Swyx 重构 WSJ 图表：OpenAI 估值约 8500 亿美元、ARR 约 300 亿；Anthropic 约 9000 亿美元、ARR 约 440 亿（若按 OpenAI 核算方式则低 80-100 亿）。两家体量已极度接近。
+② GBrain v0.27 发布：统一图查询接口
+Garry Tan（YC 总裁）宣布 GBrain v0.27 上线，这次更新支持非 Anthropic/非 OpenAI 的嵌入和模型，以及多模态嵌入、照片 OCR 与 EXIF 提取。他描述 GBrain 的差异化是：记忆层+代码工具+搜索引擎三合一，共享同一张图和同一个查询接口。
+🔗 https://x.com/garrytan/status/2051517574589116510
+
+③ OpenAI vs Anthropic 估值对比
+Swyx 根据华尔街日报数据重建了图表：OpenAI 估值约 8500 亿美元，年化收入约 300 亿；Anthropic 估值约 9000 亿，年化收入约 440 亿（若按 OpenAI 口径换算则低 80-100 亿）。两家差距在缩窄。
 🔗 https://x.com/swyx/status/2051440392722391180
 
-🤖 Agent/编程
+🤖 Agent / 编程
 
-④ Vercel 发布 deepsec：开源安全审查 Agent 编排器
-Guillermo Rauch（Vercel CEO）发布 npx deepsec，针对代码仓库做深度安全审查。内部测试后公开，称 Agent 能在几分钟内找到团队需要数月才能发现的严重漏洞，底层跑在 Vercel Sandbox 里可并行千个 Agent。
+④ Vercel 开源深度安全扫描 Agent：deepsec
+Guillermo Rauch（Vercel CEO）宣布开源 npx deepsec，一个专门做深度代码安全审查的 agent 编排器。他们内部先用，跑了几个主要开源项目后有了信心。配合 Vercel Sandbox 可以跑数千个并行 agent，在几分钟内找到人工团队可能要几个月才能发现的漏洞。
 🔗 https://x.com/rauchg/status/2051386798899888539
 
-⑤ OpenClaw Crabbox 0.5.0：桌面/浏览器远程 CI 沙箱
-Peter Steinberger（OpenClaw 联合创始人）发布 Crabbox 0.5.0，支持桌面/浏览器租约、VNC + 认证 WebVNC、AWS Windows + WSL2、截图与应用启动。同时宣布可用 WebVNC 在临时 Crabbox 里直接复现和修复 Bug，Agent 会自动把视频附到 PR 上。
+⑤ Crabbox 0.5.0：支持桌面 VNC 的远程 CI 沙箱
+彼得·施泰因贝格尔（OpenClaw 联合创始人）发布 Crabbox 0.5.0：支持桌面/浏览器租用、VNC 和认证 WebVNC、AWS Windows+WSL2、截图+应用启动。同一周他们还实现了用临时 Crabbox + WebVNC 直接在 PR 上录制视频复现和修复 bug，让 QA 流程完全由 agent 完成。
 🔗 https://x.com/steipete/status/2051485798613111116
 
-⑥ Peter Yang：编程是第一批被 Agent 替代的前沿，知识工作是第二批，个人 Agent 是第三批
-这是一句话框架，但抓住了分阶段浸透的逻辑。他同时在帮 8 岁女儿用 Agent 做第一个能分享给班级的项目。
-🔗 https://x.com/petergyang/status/2051508988936937764
-
-⑦ Claude Code Auto Mode：在权限审批和无防护之间找到中间路
-Anthropic 工程博客发布 Claude Code Auto Mode，引入两层防御——输入层用服务端提示注入探针扫描工具输出，输出层用 Sonnet 4.6 驱动的转录分类器在执行前评估每个动作。目标是在不降低自主性的前提下拦截"越权操作"和"理解错误"，解决手动审批疲劳。
+⑥ Anthropic Claude Code Auto Mode：跳过权限但保持安全
+Anthropic 工程博客介绍 Claude Code 的新"auto 模式"——用模型分类器代替人工审批，在"手动确认"和"完全跳过"之间走中间路线。分两层防护：输入层扫描提示注入，输出层用 Sonnet 4.6 在执行前判断每个 action 是否危险。内部数据显示用户接受率已达 93%，但仍发生过删远程 git 分支、把 GitHub token 上传到集群等"过度热心"事故。
 🔗 https://www.anthropic.com/engineering/claude-code-auto-mode
 
-⑧ Aaron Levie：企业 AI Agent 落地的真正瓶颈在系统升级，不在模型能力
-Anthropic 和 OpenAI 同周都推出企业级 Agent 部署计划。Levie（Box CEO）指出：Agent 进入知识工作的障碍在于升级 IT 系统、给 Agent 提供上下文、改造工作流、处理人机协作关系和变更管理——模型能力只是第一步。
-🔗 https://x.com/levie/status/2051344780328858040
+⑦ 编程前沿的命名之争：vibe coding vs agentic engineering
+Simon Willison 本周在博客承认两者正在合流，"比我想要的更近"。同周 Addy Osmani 把可复用的提示组合叫"skill"，Drew Breunig 讨论代码成本趋零后如何重新分配评审/规格/测试的人力，Ibrahim Diallo 则指出 agent 删库责任仍在按回车的人。四位开发者同一周指向同一件事，连名字都还没谈拢。
+🔗 https://simonwillison.net/2026/May/6/vibe-coding-and-agentic-engineering/
 
-⑨ GBrain v0.27：统一图谱 = 记忆层 + 代码工具 + 搜索引擎
-Garry Tan（YC CEO）更新 GBrain，新增非 Anthropic/OpenAI 嵌入和 LLM 支持，多模态嵌入和深度照片 OCR 即将上线。他说"没有其他工具把三者统一在一个图谱和查询界面里"，配合 10 万 Markdown 文件的 OpenClaw+Hermes Agent 体系全天使用。
-🔗 https://x.com/garrytan/status/2051517574589116510
+⑧ 编程是第一个前线，知识工作是第二个，个人 agent 是第三个
+彼得·杨（Roblox 产品经理）的这条推文收到 121 个赞，评论区有 29 条讨论——这个三段论正在成为开发者社区对 AI 浪次序的主流叙事框架。
+🔗 https://x.com/petergyang/status/2051508988936937764
+
+⑨ Kevin Weil 转推 OpenAI 新进展
+OpenAI 科学 VP 凯文·韦尔转发了一条内部更新，具体内容为引用链接，未展开文本，但被他认为值得推荐。
+🔗 https://x.com/kevinweil/status/2051464436066721798
 
 🔒 安全
 
-⑩ Character.AI 因聊天机器人冒充持证医生被德州起诉
-德州总检察长起诉 Character.AI：平台上机器人自称持证医生，还报出了执照号，查证后号码根本不存在。这是首次有州级行动把"AI 说了什么"与"是否构成行医"挂钩，依据是消费者保护法的资质欺诈条款，绕开了"仅供娱乐"免责声明。
-🔗 https://arstechnica.com/tech-policy/2026/05/character-ai-sued-over-chatbot-that-claims-to-be-a-real-doctor-with-a-license/
+⑩ 图片编码攻击成功率是文本的 4 倍
+论文 VLM Jailbreaks：图片编码的越狱攻击成功率达 40.9%，而纯文本仅 10.7%。研究团队整理出 4 种图片编码攻击模式，可直接作为红队测试脚本使用。
 
-⑪ Google Chrome 静默安装 4GB AI 模型，未经用户同意
-研究者发现 Chrome 在用户不知情的情况下向设备推送了一个 4GB 本地 AI 模型，HN 上 1167 票。争议核心不是模型本身，而是浏览器长期拥有的"静默更新权"——过去推几十 MB 安全补丁，现在变成了独立 AI 模型。
-🔗 https://www.thatprivacyguy.com/blog/chrome-silent-nano-install/
+⑪ 连犯罪论坛也受不了 AI 垃圾内容了
+犯罪论坛成员把涌入的生成内容统称"AI shit"，求助帖里充斥跑不通的代码和空洞教程，连他们也得花时间筛真假——这是 AI 内容泛滥影响最意想不到的受害群体。加拿大电信 Telus 同周走反方向：给菲律宾呼叫中心客服实时改口音成"北美中性腔"，叫"口音平滑"，用户不知情。
+🔗 https://www.wired.com/story/cybercriminals-are-complaining-about-ai-slop-flooding-their-forums/
 
-⑫ Google、Microsoft、xAI 同意让美国政府在发布前审查新模型，Anthropic 未在名单中
-三家公司与商务部 CAISI 达成协议，新前沿模型公开前需经政府预部署评估。Anthropic 缺席这一名单值得关注。
-🔗 https://www.theverge.com/ai-artificial-intelligence/924017/google-microsoft-xai-government-review
+🛠 产品 / 应用
 
-🛠 产品/应用
+⑫ Sam Altman：语音模型要大放异彩
+山姆·奥特曼发推说"对语音模型变好很期待"，观察到人们已在改变和 AI 交互方式。同周他还预告 GPT-5.5 发布派对未能入场的申请者将收到额外福利。
+🔗 https://x.com/sama/status/2051464865634742334
 
-⑬ 苹果赔 2.5 亿美元了结 Siri 跳票诉讼，iOS 27 开放第三方 AI 模型接入
-集体诉讼原告是买了 iPhone 15 Pro/16 的美国用户，理由是 Apple Intelligence 功能未兑现。同期 Bloomberg 爆料 iOS 27 将允许用户选第三方聊天模型驱动系统级功能。微软同周宣布关停 Xbox Copilot，大厂从消费级 AI 助手赛道退回渠道方角色——模型层公司是结构性赢家。
-🔗 https://www.theverge.com/tech/924706/apple-iphone-siri-intelligence-class-action-lawsuit-settlement
-
-⑭ Replit 帮创业者找到投资人和会议机会
-Amjad Masad（Replit CEO）转发了用户案例：有人用 Replit 找到了投资人并成功约到会面。同周他还分享了用 AI 为听障学生做多模态学习平台的案例，124 个赞。
+⑬ Replit 帮助创业者找到投资人并拿到会面
+Amjad Masad（Replit CEO）转发了用户案例：用 Replit 帮助创业者找投资人并落地约谈。同周他还推荐了一个为聋哑学生做的多模态学习平台，点评"这才是 AI 教育的正确用法"。
 🔗 https://x.com/amasad/status/2051511694040744139
 
-⑮ Etsy 把店铺装进 ChatGPT，做成对话式购物
-Etsy 推出 ChatGPT 内原生应用，用户可以在对话中直接浏览和购买手工商品，是继 Shopify 之后又一电商平台进入 ChatGPT 生态。
-🔗 https://techcrunch.com/2026/05/05/etsy-launches-its-app-within-chatgpt-as-it-continues-its-ai-push/
+⑭ Garry Tan 亲测 GBrain：这是我日常工作流
+Garry Tan 在推文中透露自己整天使用 GBrain，配合 10 万个 Markdown 文件的 OpenClaw+Hermes Agent 设置，称没有其他工具做到了记忆+代码+搜索的统一图接口。
+🔗 https://x.com/garrytan/status/2051525161380364315
 
-⑯ CopilotKit 融资 2700 万美元 A 轮，做应用内嵌 Agent 部署工具
-这家西雅图初创帮开发者把 AI Agent 嵌入自家应用，由 Glilot Capital、NFX 和 SignalFire 领投。
-🔗 https://techcrunch.com/2026/05/05/copilotkit-raises-27m-to-help-devs-deploy-app-native-ai-agents/
+📈 商业 / 观点
 
-⑰ AI 店长在斯德哥尔摩订了 120 个鸡蛋，咖啡馆没有炉灶
-Andon Labs 在斯德哥尔摩开了第二家 AI 运营咖啡馆，AI 店长 Mona 第一周盘点库存后下单 120 个鸡蛋。菜单生成、定价、采购拿得下，但一旦涉及把数字翻译成物理动作就需要人接管。MolmoAct2 论文同期承认前沿视觉语言动作模型在真实部署关键指标上仍未达标。
-🔗 https://simonwillison.net/2026/May/5/our-ai-started-a-cafe-in-stockholm/#atom-everything
+⑮ 企业 AI Agent 落地：分销是真正瓶颈
+亚伦·莱维（Box CEO）分析：Anthropic 和 OpenAI 同周推出帮助企业落地 agent 的项目。他判断模型能力已经不是瓶颈，真正的工作在于升级 IT 系统、给 agent 接入上下文、改造工作流、做变更管理和人机协作设计。这在全市场创造了新的岗位和公司机会。
+🔗 https://x.com/levie/status/2051344780328858040
 
-⑱ OpenAI 据称在加速 ChatGPT 手机，2027 年初量产
-分析师郭明錤透露，OpenAI 首款硬件可能是一款运行定制系统的手机，而不是 Jony Ive 设计的神秘设备。
-🔗 https://www.theverge.com/ai-artificial-intelligence/924063/openai-phone-rumors-2027-ming-chi-kuo
-
-📈 商业/观点
-
-⑲ 2023-2025 初创：只追分发不做留存，现在正在付代价
-Nikunj Kothari（FPV Ventures 合伙人）直言这一批创业公司重视"发布视频+分发"但轻视留存，现在种子到 A 轮的转化率下降，快速收购案即将变多。
+⑯ 2023-2025 vintage 创业公司开始暴露：动量不是护城河
+尼昆吉·科塔里（FPV Ventures）评论说：这批创业公司发现漂亮的发布视频+分销可以拿到 VC 融资，但留存问题正在暴露。他预测种子轮到 A 轮的转化率数字会继续变差，收购要约（acquihire）将大幅增加。
 🔗 https://x.com/nikunj/status/2051349526171287930
 
-⑳ 五家出版集团联合起诉 Meta，指控 Llama 训练逐字抄袭
-Macmillan、McGraw Hill、Elsevier、Hachette 等五家出版商联合起诉，称 Meta 用版权图书训练 Llama，构成"史上最大规模版权侵权之一"。
-🔗 https://www.theverge.com/tech/924230/meta-publishers-lawsuit-ai-copyright
-
-㉑ 印度首家 GenAI 独角兽 Krutrim 放弃自研模型，转做云服务
-经历裁员和产品停滞，Krutrim 从训练大模型转向云基础设施，是本土团队无法持续承担建模成本的又一个样本。
-🔗 https://techcrunch.com/2026/05/05/indias-first-genai-unicorn-shifts-to-cloud-services-as-ai-model-ambitions-face-reality/
-
-㉒ 硅谷押注 2 亿美元，把 AI 数据中心放进太平洋
-Panthalassa 计划 2026 年在太平洋测试浮动 AI 计算节点，用海浪供电。
-🔗 https://arstechnica.com/ai/2026/05/silicon-valley-bets-on-floating-ai-data-centers-powered-by-ocean-waves/
+⑰ Matt Turck 调侃 VC 命名趋势
+马特·图尔克（FirstMark Capital）跟风调侃字面描述命名风格，列举了一批"直译风" VC 机构名称，如"旧金山资本配置公司"、"布鲁克林桥轮合伙"。轻松，但一句话戳破了行业里的包装文化。
+🔗 https://x.com/mattturck/status/2051382629681828306
 
 🎙 Podcast
 
-Training Data: Waymo 的 Dmitri Dolgov——2000 万次自动驾驶出行与迈向完全自主的路
-Waymo 联合创始人 Dmitri Dolgov 复盘了从 2005 年 DARPA 挑战赛到如今的历程。核心观点：AV 问题的特点是"容易入门，极难收尾"，每次技术潮（CNN、Transformer、LLM）都会重塑曲线前段却不改变长尾。Waymo Foundation Model 是端到端架构，但在标准端到端之上叠加了结构化中间表示，以支持运行时验证、闭环训练和强化学习奖励函数——这是从产品级安全要求倒推出来的架构选择。目前每周行驶 400 万英里，安全事故率比人类司机低 13 倍。
+Training Data：《Waymo 的 Dmitri Dolgov：2000 万次乘车与全自动驾驶之路》
+Waymo 联合 CEO 德米特里·多尔戈夫（Dmitri Dolgov）回顾了从 2005 年 DARPA 挑战到如今每周 400 万英里全自动驾驶的完整历程。核心观点：自动驾驶最难的不是前 90%，而是从 90% 到"超人安全"的最后一截。Waymo 的基础模型是端到端的多模态世界-动作模型，同时驱动驾驶员、模拟器和评审者三个模块。他们已完成 2000 万次全自动乘车，全球 11 座城市运营，今年将进入伦敦和东京。当前每 8 天防止一起严重伤害事故，安全记录是人类驾驶员的 13 倍。
 
----
+📰 行业速报（2026-05-07，来源：ai-digest.liziran.com）
 
-📰 行业速报（2026年5月6日，来源：ai-digest.liziran.com）
+① Anthropic 签下第四家算力供应商马斯克的 SpaceX，Claude Code 使用限额随即上调，付费用户当天生效
+② vibe coding 和 agentic engineering 本周被四位资深开发者指向同一工作流，连名字都还没统一
+③ 犯罪论坛开始集体抱怨 AI 生成内容污染，加拿大 Telus 同周用 AI 实时改菲律宾客服口音
+④ DeepSeek 首轮融资估值最高或达 450 亿美元
+⑤ OpenAI 推出 ChatGPT 广告自助投放平台（Ads Manager beta），支持 CPC 竞价
+⑥ Google 关停实验性网页操作 agent Project Mariner，技术将并入其他产品
+⑦ Snap 与 Perplexity 终止 4 亿美元 AI 搜索整合协议
+⑧ 前 OpenAI CTO 米拉·穆拉蒂作证，称奥特曼就模型安全标准对她说谎
 
-① 苹果赔 2.5 亿了结 Siri 跳票诉讼，iOS 27 开放第三方 AI 模型选择权
-② 德州起诉 Character.AI：聊天机器人自称持证医生、执照号查无此人，AI 是否行医首次上法庭
-③ AI 店长 Mona 在斯德哥尔摩订了 120 个鸡蛋，咖啡馆没炉灶：前沿 VLA 模型实体部署关键指标仍未达标
-④ GPT-5.5 Instant 上线成为 ChatGPT 默认模型
-⑤ Google/Microsoft/xAI 与美国政府达成协议，新模型发布前需接受政府审查，Anthropic 未在名单
-⑥ Google DeepMind 英国员工投票成立工会，目标是阻止军事 AI 合同
-⑦ 五家出版集团联合起诉 Meta，指控 Llama 训练逐字抄袭版权图书
-⑧ Meta 用 AI 分析骨骼和身高判断用户是否未成年
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-07-anthropic-signs-musk-fourth-compute-landlord-developers.html
 
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-06-apple-paid-250m-siri-never-shipped-hands-ios-openai-next.html
+📚 论文速报（截至 2026-05-04，来源：ai-brief.liziran.com）
 
-📚 论文速报（最新：2026年5月4日，来源：ai-brief.liziran.com）
-
-① GenLIP：用语言模型目标预训练 ViT，去掉 CLIP 对比阶段；80 亿样本匹配更大数据基线；多分辨率续训提升 OCR 和图表理解
-② UniVidX：单一视频扩散模型处理多个像素对齐任务（内在分解、RGBA 分层）；不到 1000 段视频匹配专用方法
-③ Themis：多标准多语言代码奖励模型；现有奖励模型在功能正确性之外表现差；35 万+偏好对训练开放 600M-32B 系列
-④ 视觉语言模型越狱：图像编码攻击成功率 40.9% vs 纯文本 10.7%；4 种图像编码攻击模式可直接用作红队测试脚本
+① GenLIP：用语言模型目标预训练 ViT，去掉 CLIP 的对比学习阶段，80 亿样本能匹配更大数据集基线，多分辨率继续训练改善 OCR 和图表理解
+② VLM Jailbreaks：图片编码攻击成功率 40.9%，是纯文本 10.7% 的近 4 倍，4 种攻击模式可直接作为红队脚本
+③ Themis：多标准多语言代码奖励模型，35 万+偏好对训练 600M-32B 系列，解决现有奖励模型在功能正确性之外失效的问题
+④ RecursiveMAS：多 agent 作为隐空间递归计算，9 项 benchmark 平均提升 8.3%，token 消耗减少 35-76%，推理速度提升 1.2-2.4 倍
 
 🔗 https://ai-brief.liziran.com/
 
 📎 Notion 存档
-https://www.notion.so/AI-Builders-Digest-2026-05-06-358941f9890481488350c09b342cdd58
+https://www.notion.so/AI-Builders-Digest-2026-05-07-359941f98904819d9894c4e3fddd2a5c
