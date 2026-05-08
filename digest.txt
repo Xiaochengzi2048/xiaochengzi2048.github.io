@@ -1,108 +1,57 @@
-🗞 AI Builders 日报 · 2026.05.07
+🗞 AI Builders 日报 · 2026.05.08
 
-🧠 模型
+🤖 Agent/编程
 
-① Gemini Flash：性价比拉满的生产主力
-投资人尼昆吉·科塔里（FPV Ventures 合伙人）直说：Gemini Flash 便宜得离谱，效果也好得离谱，1M 上下文加结构化输出，是他生产工作负载里用得最多的模型。同周他还特别点名 Gemini 新的实时语音模型，称"惊为天人"。
-🔗 https://x.com/nikunj/status/2051321911741972900
+① Claude Code创始人：编程已被"解决"，手机跑着几百个Agent是日常
+Anthropic Claude Code的创建者Boris Cherny在Sequoia活动上分享，他本人100%用AI写代码，每天提交几十个PR，记录是一天150个。他手机上常时有5-10个会话在跑，夜间有数千个Agent并行处理深度任务。他主推的新功能是/loop——让Claude用cron把自己调度起来，循环监控PR状态、修复CI、每30分钟从Twitter聚合用户反馈。Anthropic内部所有SQL和代码全由模型生成，连Slack上各人的Claude也互相发消息协调工作进展。
+🔗 https://x.com/zarazhangrui/status/2052277868319916402
 
-② GBrain v0.27 发布：统一图查询接口
-Garry Tan（YC 总裁）宣布 GBrain v0.27 上线，这次更新支持非 Anthropic/非 OpenAI 的嵌入和模型，以及多模态嵌入、照片 OCR 与 EXIF 提取。他描述 GBrain 的差异化是：记忆层+代码工具+搜索引擎三合一，共享同一张图和同一个查询接口。
-🔗 https://x.com/garrytan/status/2051517574589116510
+② Anthropic的Claude Code新功能：Outcomes（质量评审）和Dreaming（自我记忆提炼）
+Claude官方账号发布两项新Agent能力。Outcomes让用户写评分标准，由独立grader检验输出是否达标，Agent迭代直到通过，支持webhook通知。Dreaming则让Agent自动回顾历史session、提炼使用模式，形成可持久化的记忆，帮助Agent随时间"学习"。可申请内测。
+🔗 https://x.com/claudeai/status/2052067400690851842
 
-③ OpenAI vs Anthropic 估值对比
-Swyx 根据华尔街日报数据重建了图表：OpenAI 估值约 8500 亿美元，年化收入约 300 亿；Anthropic 估值约 9000 亿，年化收入约 440 亿（若按 OpenAI 口径换算则低 80-100 亿）。两家差距在缩窄。
-🔗 https://x.com/swyx/status/2051440392722391180
+③ 「写代码将成为新的识字率」——Boris Cherny的印刷机类比
+Boris Cherny在活动上用14世纪印刷机做类比：印刷机出现前，欧洲只有10%的人识字，五十年内出版量超过过去千年总和，识字率最终攀升到70%。他预判软件开发会走同样的路，而且速度快得多。会计师将成为写会计软件最合适的人，因为懂业务比懂编程更难。
+🔗 https://x.com/zarazhangrui/status/2052277868319916402
 
-🤖 Agent / 编程
+📈 商业/观点
 
-④ Vercel 开源深度安全扫描 Agent：deepsec
-Guillermo Rauch（Vercel CEO）宣布开源 npx deepsec，一个专门做深度代码安全审查的 agent 编排器。他们内部先用，跑了几个主要开源项目后有了信心。配合 Vercel Sandbox 可以跑数千个并行 agent，在几分钟内找到人工团队可能要几个月才能发现的漏洞。
-🔗 https://x.com/rauchg/status/2051386798899888539
+④ Dario：Anthropic今年使用量和营收增长80倍，要继续买算力
+Peter Yang在Sequoia活动上现场记录Dario和Daniela的发言。核心数据：今年早些时候使用量和营收实现了80倍增长。Dario表示将持续获取尽可能多的算力。另一个值得关注的判断："模型今天的智能提升，在Agent和Claude Code场景里比在聊天机器人场景里更明显，要想清楚下一个大事情是什么。"
+🔗 https://x.com/petergyang/status/2052117599744672195
 
-⑤ Crabbox 0.5.0：支持桌面 VNC 的远程 CI 沙箱
-彼得·施泰因贝格尔（OpenClaw 联合创始人）发布 Crabbox 0.5.0：支持桌面/浏览器租用、VNC 和认证 WebVNC、AWS Windows+WSL2、截图+应用启动。同一周他们还实现了用临时 Crabbox + WebVNC 直接在 PR 上录制视频复现和修复 bug，让 QA 流程完全由 agent 完成。
-🔗 https://x.com/steipete/status/2051485798613111116
-
-⑥ Anthropic Claude Code Auto Mode：跳过权限但保持安全
-Anthropic 工程博客介绍 Claude Code 的新"auto 模式"——用模型分类器代替人工审批，在"手动确认"和"完全跳过"之间走中间路线。分两层防护：输入层扫描提示注入，输出层用 Sonnet 4.6 在执行前判断每个 action 是否危险。内部数据显示用户接受率已达 93%，但仍发生过删远程 git 分支、把 GitHub token 上传到集群等"过度热心"事故。
-🔗 https://www.anthropic.com/engineering/claude-code-auto-mode
-
-⑦ 编程前沿的命名之争：vibe coding vs agentic engineering
-Simon Willison 本周在博客承认两者正在合流，"比我想要的更近"。同周 Addy Osmani 把可复用的提示组合叫"skill"，Drew Breunig 讨论代码成本趋零后如何重新分配评审/规格/测试的人力，Ibrahim Diallo 则指出 agent 删库责任仍在按回车的人。四位开发者同一周指向同一件事，连名字都还没谈拢。
-🔗 https://simonwillison.net/2026/May/6/vibe-coding-and-agentic-engineering/
-
-⑧ 编程是第一个前线，知识工作是第二个，个人 agent 是第三个
-彼得·杨（Roblox 产品经理）的这条推文收到 121 个赞，评论区有 29 条讨论——这个三段论正在成为开发者社区对 AI 浪次序的主流叙事框架。
-🔗 https://x.com/petergyang/status/2051508988936937764
-
-⑨ Kevin Weil 转推 OpenAI 新进展
-OpenAI 科学 VP 凯文·韦尔转发了一条内部更新，具体内容为引用链接，未展开文本，但被他认为值得推荐。
-🔗 https://x.com/kevinweil/status/2051464436066721798
-
-🔒 安全
-
-⑩ 图片编码攻击成功率是文本的 4 倍
-论文 VLM Jailbreaks：图片编码的越狱攻击成功率达 40.9%，而纯文本仅 10.7%。研究团队整理出 4 种图片编码攻击模式，可直接作为红队测试脚本使用。
-
-⑪ 连犯罪论坛也受不了 AI 垃圾内容了
-犯罪论坛成员把涌入的生成内容统称"AI shit"，求助帖里充斥跑不通的代码和空洞教程，连他们也得花时间筛真假——这是 AI 内容泛滥影响最意想不到的受害群体。加拿大电信 Telus 同周走反方向：给菲律宾呼叫中心客服实时改口音成"北美中性腔"，叫"口音平滑"，用户不知情。
-🔗 https://www.wired.com/story/cybercriminals-are-complaining-about-ai-slop-flooding-their-forums/
-
-🛠 产品 / 应用
-
-⑫ Sam Altman：语音模型要大放异彩
-山姆·奥特曼发推说"对语音模型变好很期待"，观察到人们已在改变和 AI 交互方式。同周他还预告 GPT-5.5 发布派对未能入场的申请者将收到额外福利。
-🔗 https://x.com/sama/status/2051464865634742334
-
-⑬ Replit 帮助创业者找到投资人并拿到会面
-Amjad Masad（Replit CEO）转发了用户案例：用 Replit 帮助创业者找投资人并落地约谈。同周他还推荐了一个为聋哑学生做的多模态学习平台，点评"这才是 AI 教育的正确用法"。
-🔗 https://x.com/amasad/status/2051511694040744139
-
-⑭ Garry Tan 亲测 GBrain：这是我日常工作流
-Garry Tan 在推文中透露自己整天使用 GBrain，配合 10 万个 Markdown 文件的 OpenClaw+Hermes Agent 设置，称没有其他工具做到了记忆+代码+搜索的统一图接口。
-🔗 https://x.com/garrytan/status/2051525161380364315
-
-📈 商业 / 观点
-
-⑮ 企业 AI Agent 落地：分销是真正瓶颈
-亚伦·莱维（Box CEO）分析：Anthropic 和 OpenAI 同周推出帮助企业落地 agent 的项目。他判断模型能力已经不是瓶颈，真正的工作在于升级 IT 系统、给 agent 接入上下文、改造工作流、做变更管理和人机协作设计。这在全市场创造了新的岗位和公司机会。
-🔗 https://x.com/levie/status/2051344780328858040
-
-⑯ 2023-2025 vintage 创业公司开始暴露：动量不是护城河
-尼昆吉·科塔里（FPV Ventures）评论说：这批创业公司发现漂亮的发布视频+分销可以拿到 VC 融资，但留存问题正在暴露。他预测种子轮到 A 轮的转化率数字会继续变差，收购要约（acquihire）将大幅增加。
-🔗 https://x.com/nikunj/status/2051349526171287930
-
-⑰ Matt Turck 调侃 VC 命名趋势
-马特·图尔克（FirstMark Capital）跟风调侃字面描述命名风格，列举了一批"直译风" VC 机构名称，如"旧金山资本配置公司"、"布鲁克林桥轮合伙"。轻松，但一句话戳破了行业里的包装文化。
-🔗 https://x.com/mattturck/status/2051382629681828306
+⑤ Garry Tan：YC正在投一类像Pulp Fiction里"清道夫"角色的创业公司
+YC总裁Garry Tan转发并类比，称某类AI创业公司像《低俗小说》里的"The Wolf"（Harvey Keitel饰演的专业救场者）——高效、专业、解决别人搞砸的局。没有多余信息，但信号指向YC对"AI专业服务/纠错层"赛道的看好。
+🔗 https://x.com/garrytan/status/2052007711601291602
 
 🎙 Podcast
 
-Training Data：《Waymo 的 Dmitri Dolgov：2000 万次乘车与全自动驾驶之路》
-Waymo 联合 CEO 德米特里·多尔戈夫（Dmitri Dolgov）回顾了从 2005 年 DARPA 挑战到如今每周 400 万英里全自动驾驶的完整历程。核心观点：自动驾驶最难的不是前 90%，而是从 90% 到"超人安全"的最后一截。Waymo 的基础模型是端到端的多模态世界-动作模型，同时驱动驾驶员、模拟器和评审者三个模块。他们已完成 2000 万次全自动乘车，全球 11 座城市运营，今年将进入伦敦和东京。当前每 8 天防止一起严重伤害事故，安全记录是人类驾驶员的 13 倍。
+Training Data：Anthropic's Boris Cherny: Coding's Printing Press Moment
+Boris Cherny在Sequoia主办的活动上接受访谈，描述了Claude Code从"出道即滞销"到指数增长的完整路径。关键转折是Opus 4发布的那一刻，此后随每个新模型持续加速。他最反常识的观点：product harness的重要性会随模型变强而下降，最终模型本身就能"做正确的事"，所有今天的安全机制（prompt injection防护、静态命令校验、human-in-the-loop）都会变得多余。另一个值得关注的信号：他提到"子团队"即将上线，这是在/loop和/batch基础上更进一步的多Agent并发编排能力。
 
-📰 行业速报（2026-05-07，来源：ai-digest.liziran.com）
+---
 
-① Anthropic 签下第四家算力供应商马斯克的 SpaceX，Claude Code 使用限额随即上调，付费用户当天生效
-② vibe coding 和 agentic engineering 本周被四位资深开发者指向同一工作流，连名字都还没统一
-③ 犯罪论坛开始集体抱怨 AI 生成内容污染，加拿大 Telus 同周用 AI 实时改菲律宾客服口音
-④ DeepSeek 首轮融资估值最高或达 450 亿美元
-⑤ OpenAI 推出 ChatGPT 广告自助投放平台（Ads Manager beta），支持 CPC 竞价
-⑥ Google 关停实验性网页操作 agent Project Mariner，技术将并入其他产品
-⑦ Snap 与 Perplexity 终止 4 亿美元 AI 搜索整合协议
-⑧ 前 OpenAI CTO 米拉·穆拉蒂作证，称奥特曼就模型安全标准对她说谎
+📰 行业速报（2026-05-08）
 
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-07-anthropic-signs-musk-fourth-compute-landlord-developers.html
+① OpenAI发布升级语音模型，推理+翻译+转录首次合入同一realtime会话，搭配Parloa和Uber两份企业部署样板，把语音打包成完整的Agent栈。
+② OpenAI总裁Brad Lightcap私人日记被Musk律师当庭朗读，其中写有"听起来很贪婪"，同周ChatGPT官宣开始测试广告。
+③ 主板销量今年崩超25%，ASUS预计少卖500万块，代工先进制程产能被AI数据中心客户整批锁定，消费级芯片组份额被挤压。
+④ DeepMind公布AlphaEvolve落地清单，在Google基础设施、数学问题、芯片设计等领域给出具体收益数字。
+⑤ Perplexity桌面Agent（Personal Computer）向所有Mac用户开放，可直接在本地操作浏览器和应用。
 
-📚 论文速报（截至 2026-05-04，来源：ai-brief.liziran.com）
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-08-openai-ships-reasoning-voice-api-asus-loses-five-million.html
 
-① GenLIP：用语言模型目标预训练 ViT，去掉 CLIP 的对比学习阶段，80 亿样本能匹配更大数据集基线，多分辨率继续训练改善 OCR 和图表理解
-② VLM Jailbreaks：图片编码攻击成功率 40.9%，是纯文本 10.7% 的近 4 倍，4 种攻击模式可直接作为红队脚本
-③ Themis：多标准多语言代码奖励模型，35 万+偏好对训练 600M-32B 系列，解决现有奖励模型在功能正确性之外失效的问题
-④ RecursiveMAS：多 agent 作为隐空间递归计算，9 项 benchmark 平均提升 8.3%，token 消耗减少 35-76%，推理速度提升 1.2-2.4 倍
+---
+
+📚 论文速报（2026-05-08，600篇过滤）
+
+① T2PO：多轮Agent RL崩溃不是信用分配问题，而是模型不确定性没有被利用，用自身不确定度触发"思考/重采样"，在WebShop、ALFWorld等任务上有提升，已被ICML接收。
+② 元认知是事实性瓶颈：模型不知道自己不知道什么，校准后的不确定度是隐藏的控制层。
+③ PhysicianBench医疗Agent评测：100个真实会诊、商业EHR系统，最佳Agent首轮通过率仅46%，最佳开源模型19%。
+④ MotionCache：视频生成逐像素缓存去噪步骤，SkyReels-V2加速6.28倍，MAGI-1仅1.64倍。
+⑤ WeightFormer：把Attention重写为MLP，设计目标从"近似softmax"变成"预测好的参数"。
 
 🔗 https://ai-brief.liziran.com/
 
-📎 Notion 存档
-https://www.notion.so/AI-Builders-Digest-2026-05-07-359941f98904819d9894c4e3fddd2a5c
+📓 Notion: https://www.notion.so/AI-Builders-Digest--2026-05-08-35a941f9890481989809d49a939d01eb
+🌐 https://xiaochengzi2048.github.io/digest.txt
