@@ -1,57 +1,105 @@
-🗞 AI Builders 日报 · 2026.05.08
+🗞 AI Builders 日报 · 2026.05.09
+
+🧠 模型
+
+① Claude 正式接入 Microsoft Office 全家桶
+Claude for Excel、PowerPoint 和 Word 全面上线付费套餐，Outlook 进入公测。Claude 在不同应用间切换时可以保留完整对话上下文，实现跨 Office 应用的一致体验。这是 Anthropic 进入企业桌面生产力场景的最重要一步。
+🔗 https://x.com/claudeai/status/2052445786651168849
+
+② Claude Mythos 帮 Firefox 团队一个月修复了超过过去 15 个月的安全漏洞总量
+Anthropic 研究员亚历克斯·阿尔伯特分享：借助 Claude Mythos Preview，Firefox 团队在四月修复的安全漏洞数量超过了过去 15 个月的总和。Mozilla 安全研究员描述发现量为「a wealth of high-severity bugs」，浏览器端首次大批量披露 Mythos 的安全能力产出。
+🔗 https://x.com/alexalbert__/status/2052468573516513762
+
+③ Sam Altman：让开发者「宝可梦进化成超级英雄」，比替代他们酷多了
+山姆·奥特曼在推文中表态，帮软件开发者进化提升比试图替代他们更有意思——并且强调如今一个真正优秀的人能做到的事情已经令人难以置信。同时分享了一项 OpenAI 帮助企业加固自身安全的举措。
+🔗 https://x.com/sama/status/2052485051812909530
 
 🤖 Agent/编程
 
-① Claude Code创始人：编程已被"解决"，手机跑着几百个Agent是日常
-Anthropic Claude Code的创建者Boris Cherny在Sequoia活动上分享，他本人100%用AI写代码，每天提交几十个PR，记录是一天150个。他手机上常时有5-10个会话在跑，夜间有数千个Agent并行处理深度任务。他主推的新功能是/loop——让Claude用cron把自己调度起来，循环监控PR状态、修复CI、每30分钟从Twitter聚合用户反馈。Anthropic内部所有SQL和代码全由模型生成，连Slack上各人的Claude也互相发消息协调工作进展。
-🔗 https://x.com/zarazhangrui/status/2052277868319916402
+④ AlphaEvolve 从论文走进 DeepMind 生产线，跑通业务、基础设施、科学三条线
+同一个 Gemini 驱动的演化编码 Agent，DeepMind 已将其接入三个性质完全不同的内部领域：业务流程优化、基础设施效率提升和科学算法研究。它不是靠迭代新模型实现的，而是同一套演化架构接管不同问题定义。AlphaEvolve 押注的是 Agent 能持续扩展新任务边界，而非模型版本迭代。
+🔗 https://deepmind.google/blog/alphaevolve-impact/
 
-② Anthropic的Claude Code新功能：Outcomes（质量评审）和Dreaming（自我记忆提炼）
-Claude官方账号发布两项新Agent能力。Outcomes让用户写评分标准，由独立grader检验输出是否达标，Agent迭代直到通过，支持webhook通知。Dreaming则让Agent自动回顾历史session、提炼使用模式，形成可持久化的记忆，帮助Agent随时间"学习"。可申请内测。
-🔗 https://x.com/claudeai/status/2052067400690851842
+⑤ OpenAI 定义了 Codex 进企业合规栈的最低门槛
+OpenAI 一口气发布三份材料：Codex 内部运行手册、客户 Simplex 落地案例、企业 B2B 研究报告。核心是 Agent 接入企业的合规架构——Linux 命名空间隔离、敏感操作走审批、外网默认关闭、Agent 行为单独建遥测层。现有零信任和代码审计体系并不覆盖 Agent 专属遥测，企业得为 Agent 额外建一层访问控制。
+🔗 https://openai.com/index/running-codex-safely
 
-③ 「写代码将成为新的识字率」——Boris Cherny的印刷机类比
-Boris Cherny在活动上用14世纪印刷机做类比：印刷机出现前，欧洲只有10%的人识字，五十年内出版量超过过去千年总和，识字率最终攀升到70%。他预判软件开发会走同样的路，而且速度快得多。会计师将成为写会计软件最合适的人，因为懂业务比懂编程更难。
-🔗 https://x.com/zarazhangrui/status/2052277868319916402
+⑥ Cursor 设计师：从想法到合并请求，全程在 Cursor 里完成
+Cursor 设计师廖睿展示了完整的「从想法到 merge」工作流视频，全部在 Cursor 内完成。展示了编码工具作为设计师日常工具的真实使用场景。
+🔗 https://x.com/ryolu_/status/2052496872586272802
+
+⑦ Peter Steinberger：OpenClaw 多 Agent 互相委托，Molty 学会了派发定时任务
+OpenClaw 创始人彼得·斯坦伯格分享，两个 Agent 现在可以互相对话，其中 Molty 已经学会了向另一个 Agent 委托定时任务（cron jobs）。同时他表示 GPT 5.5 配合 /goal 指令用于规划大型重构项目效果很好，可以端对端运行并通过测试。
+🔗 https://x.com/steipete/status/2052630190346457301
+
+⑧ Garry Tan 发布 GStack v1.28，GBrain 新增瘦客户端模式
+YC 总裁 Garry Tan 的 GStack 工具套件更新至 v1.28：GStack 浏览器支持下载文件，可在无头 Linux 容器中带反机器人检测运行。GBrain 新增瘦客户端模式，Claude Code 或 Hermes 等次级 Agent 不必运行自己的 MCP 服务器，直接通过 MCP 接入 GBrain 即可。
+🔗 https://x.com/garrytan/status/2052629679572701455
+
+⑨ Dan Shipper：AI 平台战争将至，Anthropic 正把 API 变成完整云基础设施
+Every 创始人丹·希珀和克里安·克拉森录制播客分析：xAI 算力协议、托管 Agent 趋势，以及 Anthropic 为什么正在把 API 改造成面向开发者的完整云基础设施——AI 平台战争正在逼近。
+🔗 https://x.com/danshipper/status/2052501376195080381
+
+🔒 安全
+
+⑩ Swyx：注意这类钓鱼攻击，他自己差点被骗了
+Swyx 分享了一次险些成功的钓鱼攻击案例，附上截图提醒关注者注意类似手法，链接已获125个点赞，被认为有实际警示价值。
+🔗 https://x.com/swyx/status/2052599553283813788
+
+🛠 产品/应用
+
+⑪ 前 Google Gemini 产品负责人 Madhu 宣布离职
+Madhu Guru 在推文中宣布离开谷歌。他参与了从零开始建立两条业务线——搜索广告和 Gemini，指出三年前 OpenAI 和 Anthropic 领先时，团队做了竞争所需的一切。离职公告获得超过1000个点赞。
+🔗 https://x.com/realmadhuguru/status/2052490869320946037
+
+⑫ Replit CEO：史上最病毒式请愿，托管在 Replit 上
+Replit CEO 阿姆贾德·马沙德分享，一份被称为「史上最病毒式请愿」的网络请愿书就托管在 Replit 上（内容与姆巴佩有关，Replit 对请愿内容本身无立场）。获得超过1000个点赞，展示了 Replit 作为快速部署平台的真实影响力。
+🔗 https://x.com/amasad/status/2052478595277467703
+
+⑬ 万物皆像素，将在 Reactor World 上实时生成
+FPV Ventures 合伙人尼昆吉·科塔里分享了一段视觉演示，表示每一个像素都将实时生成，并将很快在 Reactor World 上实现。
+🔗 https://x.com/nikunj/status/2052461083282350121
 
 📈 商业/观点
 
-④ Dario：Anthropic今年使用量和营收增长80倍，要继续买算力
-Peter Yang在Sequoia活动上现场记录Dario和Daniela的发言。核心数据：今年早些时候使用量和营收实现了80倍增长。Dario表示将持续获取尽可能多的算力。另一个值得关注的判断："模型今天的智能提升，在Agent和Claude Code场景里比在聊天机器人场景里更明显，要想清楚下一个大事情是什么。"
-🔗 https://x.com/petergyang/status/2052117599744672195
+⑭ Aaron Levie：AI 让一件事变容易，就意味着对所有人都变容易，差异化随之转移
+Box CEO 亚伦·列维分享观点：当 AI 让软件开发变容易时，竞争压力会把资源逼向新的差异化领域。能在更快速度下优化自身业务的公司将脱颖而出，机会在于找到 AI 最终无法替代的价值之所在。
+🔗 https://x.com/levie/status/2052566788236509254
 
-⑤ Garry Tan：YC正在投一类像Pulp Fiction里"清道夫"角色的创业公司
-YC总裁Garry Tan转发并类比，称某类AI创业公司像《低俗小说》里的"The Wolf"（Harvey Keitel饰演的专业救场者）——高效、专业、解决别人搞砸的局。没有多余信息，但信号指向YC对"AI专业服务/纠错层"赛道的看好。
-🔗 https://x.com/garrytan/status/2052007711601291602
+⑮ 「AI 内容正在杀死社区」HN 797 赞，OpenAI 同周讲隐私保护
+一篇题为「AI 内容正在杀死在线社区」的博客顶上 HN 首页，收获797分和692条评论。同周 OpenAI 官博发文讲 ChatGPT 如何在保护隐私的前提下从对话中学习。两端错位清晰：社区端讲输出端的内容洪流，公司端讲输入端的合规控制。
+🔗 https://rmoff.net/2026/05/06/ai-slop-is-killing-online-communities/
+
+⑯ Cloudflare 裁员 1100 人，同季营收创历史新高
+CEO 马修·普林斯直接把裁员理由挂上 AI 效率提升，被砍的主要是客服岗位。同季度 Cloudflare 营收创下历史新高——这是 AI 替代人工带动降本提效的典型案例，也是行业现实。
+🔗 https://techcrunch.com/2026/05/08/cloudflare-says-ai-made-1100-jobs-obsolete-even-as-revenue-hit-a-record-high/
 
 🎙 Podcast
 
-Training Data：Anthropic's Boris Cherny: Coding's Printing Press Moment
-Boris Cherny在Sequoia主办的活动上接受访谈，描述了Claude Code从"出道即滞销"到指数增长的完整路径。关键转折是Opus 4发布的那一刻，此后随每个新模型持续加速。他最反常识的观点：product harness的重要性会随模型变强而下降，最终模型本身就能"做正确的事"，所有今天的安全机制（prompt injection防护、静态命令校验、human-in-the-loop）都会变得多余。另一个值得关注的信号：他提到"子团队"即将上线，这是在/loop和/batch基础上更进一步的多Agent并发编排能力。
+MAD Podcast with Matt Turck：OpenAI 董事会成员 Zico Kolter 谈前沿 AI 的真实风险
+卡内基梅隆大学机器学习系主任、OpenAI 董事会成员兼安全与安全委员会主席兹科·科尔特与马特·图尔克深入对话。核心观点：OpenAI 的安全委员会可以在认为必要时延迟模型发布；更大的模型不会自动变得更安全；AI 系统的全部复杂性源自训练数据而非架构本身，整套代码可能只有两三百行 Python。
 
 ---
 
-📰 行业速报（2026-05-08）
+📰 行业速报（ai-digest.liziran.com · 2026-05-09）
 
-① OpenAI发布升级语音模型，推理+翻译+转录首次合入同一realtime会话，搭配Parloa和Uber两份企业部署样板，把语音打包成完整的Agent栈。
-② OpenAI总裁Brad Lightcap私人日记被Musk律师当庭朗读，其中写有"听起来很贪婪"，同周ChatGPT官宣开始测试广告。
-③ 主板销量今年崩超25%，ASUS预计少卖500万块，代工先进制程产能被AI数据中心客户整批锁定，消费级芯片组份额被挤压。
-④ DeepMind公布AlphaEvolve落地清单，在Google基础设施、数学问题、芯片设计等领域给出具体收益数字。
-⑤ Perplexity桌面Agent（Personal Computer）向所有Mac用户开放，可直接在本地操作浏览器和应用。
+① AlphaEvolve 落地 DeepMind 三条业务线，同一 Agent 架构跑通业务/基础设施/科学
+② OpenAI 发布 Codex 企业运行手册 + 客户案例，定义 Agent 进合规栈的完整门槛
+③ HN「AI 内容正在杀死社区」获797分，OpenAI 同周发文讲 ChatGPT 如何学习世界
+④ Cloudflare 裁员 1100 人，CEO 明确归因 AI 效率替代，同季营收历史新高
+⑤ Musk 诉讼庭审披露：微软高管曾担心 OpenAI 转向 Amazon 会「砸 Azure 招牌」
+⑥ Mozilla 用 Anthropic Mythos 扫出 Firefox 大批高危漏洞，浏览器安全审计被 AI 重写
 
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-08-openai-ships-reasoning-voice-api-asus-loses-five-million.html
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-09-alphaevolve-optimizes-deepmind-within-openais-codex-stack.html
 
----
+📚 论文速报（ai-brief.liziran.com · 2026-05-08）
 
-📚 论文速报（2026-05-08，600篇过滤）
-
-① T2PO：多轮Agent RL崩溃不是信用分配问题，而是模型不确定性没有被利用，用自身不确定度触发"思考/重采样"，在WebShop、ALFWorld等任务上有提升，已被ICML接收。
-② 元认知是事实性瓶颈：模型不知道自己不知道什么，校准后的不确定度是隐藏的控制层。
-③ PhysicianBench医疗Agent评测：100个真实会诊、商业EHR系统，最佳Agent首轮通过率仅46%，最佳开源模型19%。
-④ MotionCache：视频生成逐像素缓存去噪步骤，SkyReels-V2加速6.28倍，MAGI-1仅1.64倍。
-⑤ WeightFormer：把Attention重写为MLP，设计目标从"近似softmax"变成"预测好的参数"。
+① T²PO：多轮 Agent 强化学习中的不稳定性并非信用分配问题，而是模型自我不确定性导致，用不确定性触发重采样可显著提升稳定性（已被 ICML 接收）
+② PhysicianBench：基于真实电子健康档案的医疗 Agent 评测，最优闭源模型 pass@1 仅 46%，最优开源仅 19%，医疗 Agent 距实用还很远
+③ MotionCache：视频生成的像素级缓存方案，在 SkyReels-V2 上实现 6.28 倍加速
+④ WeightFormer：将注意力机制重写为参数预测 MLP，设计目标从「近似 softmax」转为「预测好参数」
 
 🔗 https://ai-brief.liziran.com/
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest--2026-05-08-35a941f9890481989809d49a939d01eb
-🌐 https://xiaochengzi2048.github.io/digest.txt
+📎 Notion 存档
+https://www.notion.so/AI-Builders-Digest-2026-05-09-35b941f9890481fdb755fc5e5993cce5
