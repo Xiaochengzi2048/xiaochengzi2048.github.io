@@ -1,105 +1,78 @@
-🗞 AI Builders 日报 · 2026.05.09
+🗞 AI Builders 日报 · 2026.05.10
 
 🧠 模型
 
-① Claude 正式接入 Microsoft Office 全家桶
-Claude for Excel、PowerPoint 和 Word 全面上线付费套餐，Outlook 进入公测。Claude 在不同应用间切换时可以保留完整对话上下文，实现跨 Office 应用的一致体验。这是 Anthropic 进入企业桌面生产力场景的最重要一步。
-🔗 https://x.com/claudeai/status/2052445786651168849
+① Claude Mythos 自主性基准碾压全场
+Anthropic 研究员 Alex Albert 披露，提前提供给 METR 评测的 Claude Mythos 早期快照，在 80% 成功率标准下的时间跨度超过次优模型两倍以上。这是迄今最强的自主能力信号，也直接印证了 Anthropic 把 Mythos 限制给少数用户的理由。
+🔗 https://x.com/alexalbert__/status/2052899864493830590
 
-② Claude Mythos 帮 Firefox 团队一个月修复了超过过去 15 个月的安全漏洞总量
-Anthropic 研究员亚历克斯·阿尔伯特分享：借助 Claude Mythos Preview，Firefox 团队在四月修复的安全漏洞数量超过了过去 15 个月的总和。Mozilla 安全研究员描述发现量为「a wealth of high-severity bugs」，浏览器端首次大批量披露 Mythos 的安全能力产出。
-🔗 https://x.com/alexalbert__/status/2052468573516513762
-
-③ Sam Altman：让开发者「宝可梦进化成超级英雄」，比替代他们酷多了
-山姆·奥特曼在推文中表态，帮软件开发者进化提升比试图替代他们更有意思——并且强调如今一个真正优秀的人能做到的事情已经令人难以置信。同时分享了一项 OpenAI 帮助企业加固自身安全的举措。
-🔗 https://x.com/sama/status/2052485051812909530
+② Garry Tan：128GB 苹果笔记本跑百万上下文窗口编程智能体
+YC 总裁 Garry Tan 发推称正在下载一个本地模型，百万 token 上下文窗口配上可用的编程智能体能力全部运行在 128GB 苹果笔记本上，令他震惊。本地 AI 的能力拐点正在悄然到来。
+🔗 https://x.com/garrytan/status/2052996691586932783
 
 🤖 Agent/编程
 
-④ AlphaEvolve 从论文走进 DeepMind 生产线，跑通业务、基础设施、科学三条线
-同一个 Gemini 驱动的演化编码 Agent，DeepMind 已将其接入三个性质完全不同的内部领域：业务流程优化、基础设施效率提升和科学算法研究。它不是靠迭代新模型实现的，而是同一套演化架构接管不同问题定义。AlphaEvolve 押注的是 Agent 能持续扩展新任务边界，而非模型版本迭代。
-🔗 https://deepmind.google/blog/alphaevolve-impact/
+③ "HTML 是新 Markdown"：Claude Code 输出约束实验刷屏
+Anthropic Claude Code 工程师 Thariq 发布博文《Using Claude Code: The Unreasonable Effectiveness of HTML》，核心结论：把 Claude Code 的输出格式约束为 HTML，原型开发能力会暴增。这条推文获得 8700 个赞、671 转发，Simon Willison 转发后挂上 HN 头版拿到 396 分，评论区围绕"为什么是 HTML"激烈讨论。
+🔗 https://x.com/trq212/status/2052811606032269638
 
-⑤ OpenAI 定义了 Codex 进企业合规栈的最低门槛
-OpenAI 一口气发布三份材料：Codex 内部运行手册、客户 Simplex 落地案例、企业 B2B 研究报告。核心是 Agent 接入企业的合规架构——Linux 命名空间隔离、敏感操作走审批、外网默认关闭、Agent 行为单独建遥测层。现有零信任和代码审计体系并不覆盖 Agent 专属遥测，企业得为 Agent 额外建一层访问控制。
-🔗 https://openai.com/index/running-codex-safely
+④ Steipete：给 Codex 的技能越多，提示词写得越少
+OpenClaw 创始人 Peter Steinberger 分享了一个反直觉结论：通过给 Codex 添加更多技能（skills），需要手写的提示词反而越来越少。获 541 个赞，触动了大量正在用 agent 框架的开发者。
+🔗 https://x.com/steipete/status/2052971550966440251
 
-⑥ Cursor 设计师：从想法到合并请求，全程在 Cursor 里完成
-Cursor 设计师廖睿展示了完整的「从想法到 merge」工作流视频，全部在 Cursor 内完成。展示了编码工具作为设计师日常工具的真实使用场景。
-🔗 https://x.com/ryolu_/status/2052496872586272802
+⑤ Zara Zhang：用 OpenAI Realtime 2 API 构建 YouTube 实时副驾驶
+开发者 Zara Zhang 演示了一个浏览器扩展：智能体跟你一起看 YouTube，随时可以用语音提问，智能体能区分 YouTube 音频和你的声音，不会混淆指令。Realtime 2 API 的多路音频能力令她称之为"黑魔法"。
+🔗 https://x.com/zarazhangrui/status/2052977849267892339
 
-⑦ Peter Steinberger：OpenClaw 多 Agent 互相委托，Molty 学会了派发定时任务
-OpenClaw 创始人彼得·斯坦伯格分享，两个 Agent 现在可以互相对话，其中 Molty 已经学会了向另一个 Agent 委托定时任务（cron jobs）。同时他表示 GPT 5.5 配合 /goal 指令用于规划大型重构项目效果很好，可以端对端运行并通过测试。
-🔗 https://x.com/steipete/status/2052630190346457301
-
-⑧ Garry Tan 发布 GStack v1.28，GBrain 新增瘦客户端模式
-YC 总裁 Garry Tan 的 GStack 工具套件更新至 v1.28：GStack 浏览器支持下载文件，可在无头 Linux 容器中带反机器人检测运行。GBrain 新增瘦客户端模式，Claude Code 或 Hermes 等次级 Agent 不必运行自己的 MCP 服务器，直接通过 MCP 接入 GBrain 即可。
-🔗 https://x.com/garrytan/status/2052629679572701455
-
-⑨ Dan Shipper：AI 平台战争将至，Anthropic 正把 API 变成完整云基础设施
-Every 创始人丹·希珀和克里安·克拉森录制播客分析：xAI 算力协议、托管 Agent 趋势，以及 Anthropic 为什么正在把 API 改造成面向开发者的完整云基础设施——AI 平台战争正在逼近。
-🔗 https://x.com/danshipper/status/2052501376195080381
+⑥ Garry Tan：个人软件时代即将到来
+YC 总裁 Garry Tan 转发了一篇文章，配文"个人软件即将到来"。随着 AI 编程能力不断降低门槛，真正属于个人的定制软件将成为现实，而不再是企业软件的精简版。
+🔗 https://x.com/garrytan/status/2052998537344856459
 
 🔒 安全
 
-⑩ Swyx：注意这类钓鱼攻击，他自己差点被骗了
-Swyx 分享了一次险些成功的钓鱼攻击案例，附上截图提醒关注者注意类似手法，链接已获125个点赞，被认为有实际警示价值。
-🔗 https://x.com/swyx/status/2052599553283813788
-
-🛠 产品/应用
-
-⑪ 前 Google Gemini 产品负责人 Madhu 宣布离职
-Madhu Guru 在推文中宣布离开谷歌。他参与了从零开始建立两条业务线——搜索广告和 Gemini，指出三年前 OpenAI 和 Anthropic 领先时，团队做了竞争所需的一切。离职公告获得超过1000个点赞。
-🔗 https://x.com/realmadhuguru/status/2052490869320946037
-
-⑫ Replit CEO：史上最病毒式请愿，托管在 Replit 上
-Replit CEO 阿姆贾德·马沙德分享，一份被称为「史上最病毒式请愿」的网络请愿书就托管在 Replit 上（内容与姆巴佩有关，Replit 对请愿内容本身无立场）。获得超过1000个点赞，展示了 Replit 作为快速部署平台的真实影响力。
-🔗 https://x.com/amasad/status/2052478595277467703
-
-⑬ 万物皆像素，将在 Reactor World 上实时生成
-FPV Ventures 合伙人尼昆吉·科塔里分享了一段视觉演示，表示每一个像素都将实时生成，并将很快在 Reactor World 上实现。
-🔗 https://x.com/nikunj/status/2052461083282350121
+⑦ Amanda Askell：对齐研究的正向愿景
+Anthropic 哲学家兼伦理研究员 Amanda Askell 发文指出，对齐研究不只是关于"防止坏行为"，更重要的是给模型和训练过程一个诚实而积极的愿景——让 AI 成为什么、为什么这样做。她表示对这个方向的未来感到兴奋。
+🔗 https://x.com/AmandaAskell/status/2052928572810256748
 
 📈 商业/观点
 
-⑭ Aaron Levie：AI 让一件事变容易，就意味着对所有人都变容易，差异化随之转移
-Box CEO 亚伦·列维分享观点：当 AI 让软件开发变容易时，竞争压力会把资源逼向新的差异化领域。能在更快速度下优化自身业务的公司将脱颖而出，机会在于找到 AI 最终无法替代的价值之所在。
-🔗 https://x.com/levie/status/2052566788236509254
+⑧ Aaron Levie（Box 创始人）：企业智能体的 token 预算管理将成为大问题
+Box 创始人 Aaron Levie 观察到一个新趋势：大企业开始把 token 用量当成正式预算项目来管理，就像分配人力或营销费用一样。智能体能做越来越长的任务，跨团队的 token 分配将成为真实的运营决策，而非技术问题。
+🔗 https://x.com/levie/status/2052903105256382679
 
-⑮ 「AI 内容正在杀死社区」HN 797 赞，OpenAI 同周讲隐私保护
-一篇题为「AI 内容正在杀死在线社区」的博客顶上 HN 首页，收获797分和692条评论。同周 OpenAI 官博发文讲 ChatGPT 如何在保护隐私的前提下从对话中学习。两端错位清晰：社区端讲输出端的内容洪流，公司端讲输入端的合规控制。
-🔗 https://rmoff.net/2026/05/06/ai-slop-is-killing-online-communities/
+⑨ Matt Turck（FirstMark）：AI 智能体的定价逻辑不一定纯粹按消耗量
+VC 投资人 Matt Turck 指出，智能体定价未必会走纯消耗（token 计量）模式。企业智能体需要身份、角色、授权、预算、审计日志等能力，听起来更像"席位（seat）定价"——只不过不是人类席位，而是智能体席位。
+🔗 https://x.com/mattturck/status/2052839798063112303
 
-⑯ Cloudflare 裁员 1100 人，同季营收创历史新高
-CEO 马修·普林斯直接把裁员理由挂上 AI 效率提升，被砍的主要是客服岗位。同季度 Cloudflare 营收创下历史新高——这是 AI 替代人工带动降本提效的典型案例，也是行业现实。
-🔗 https://techcrunch.com/2026/05/08/cloudflare-says-ai-made-1100-jobs-obsolete-even-as-revenue-hit-a-record-high/
+⑩ Dan Shipper（Every 创始人）：Milken 会议的人比 AI 圈子落后三到四个月
+Every 创始人 Dan Shipper 在 Milken 全球会议后发帖：台上讨论的 AI 话题明显滞后，而 Codex 再过几个月就会让所有人惊呼。他认为这种时间差是一个投资机会。
+🔗 https://x.com/danshipper/status/2052865144066097217
 
 🎙 Podcast
 
-MAD Podcast with Matt Turck：OpenAI 董事会成员 Zico Kolter 谈前沿 AI 的真实风险
-卡内基梅隆大学机器学习系主任、OpenAI 董事会成员兼安全与安全委员会主席兹科·科尔特与马特·图尔克深入对话。核心观点：OpenAI 的安全委员会可以在认为必要时延迟模型发布；更大的模型不会自动变得更安全；AI 系统的全部复杂性源自训练数据而非架构本身，整套代码可能只有两三百行 Python。
+AI & I by Every：Claude 平台团队揭秘构建逻辑
+Anthropic Claude 平台产品负责人 Angela 和工程负责人 Caitlin 接受 Every 采访，揭示了平台演进的完整逻辑。核心观点：多数人以为"最难的是提示词工程"，实际上把原型推上生产环境的基础设施才是真正的墙——这也是 Claude Managed Agents 诞生的原因。她们还预判未来的平台将向更高阶抽象演进：由 Claude 自己决定应该使用哪个模型、如何启动子智能体，用户不再需要手动配置智能体架构。团队希望把 Slack bot、多智能体协作等场景做成一键部署的体验。
+🔗 https://www.youtube.com/watch?v=lLypHkIVLqc
 
 ---
 
-📰 行业速报（ai-digest.liziran.com · 2026-05-09）
+📰 行业速报（来源：ai-digest.liziran.com · 2026-05-10）
 
-① AlphaEvolve 落地 DeepMind 三条业务线，同一 Agent 架构跑通业务/基础设施/科学
-② OpenAI 发布 Codex 企业运行手册 + 客户案例，定义 Agent 进合规栈的完整门槛
-③ HN「AI 内容正在杀死社区」获797分，OpenAI 同周发文讲 ChatGPT 如何学习世界
-④ Cloudflare 裁员 1100 人，CEO 明确归因 AI 效率替代，同季营收历史新高
-⑤ Musk 诉讼庭审披露：微软高管曾担心 OpenAI 转向 Amazon 会「砸 Azure 招牌」
-⑥ Mozilla 用 Anthropic Mythos 扫出 Firefox 大批高危漏洞，浏览器安全审计被 AI 重写
+① Nvidia 砸 400 亿美元股权投资锁定 AI 大客户（OpenAI 等），SpaceX 同周宣布在德州投 550 亿美元自建芯片厂，Intel 股价一年涨 490% 被押注"美国第二家先进制程代工厂"。三家用三种相反的方式押注同一个 GPU 瓶颈。
+https://techcrunch.com/2026/05/09/nvidia-has-already-committed-40b-to-equity-ai-deals-this-year/
 
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-09-alphaevolve-optimizes-deepmind-within-openais-codex-stack.html
+② 美国立法者考虑禁止陪儿童睡前的 AI 玩具；OpenAI 同周上线 ChatGPT 可信联系人（Trusted Contact），侦测到自残信号时通知家人。两条路径——立法禁令 vs. 企业自管——同周亮相，应对 AI 进入亲密空间的治理难题。
+https://openai.com/index/introducing-trusted-contact-in-chatgpt
 
-📚 论文速报（ai-brief.liziran.com · 2026-05-08）
+③ 两篇实测帖同周霸 HN 头版：一篇讲约束 Claude Code 输出为 HTML 的反直觉效果（396 分），一篇是数学家 Gowers 详细记录用 ChatGPT 5.5 Pro 解决真实专业问题的过程（579 分），合计 600+ 条评论，均不讨论跑分，只谈方法论。
+https://ai-digest.liziran.com/zh/digest/2026-05-10-three-companies-place-40b-55b-490-bets-same-ai-chip.html
 
-① T²PO：多轮 Agent 强化学习中的不稳定性并非信用分配问题，而是模型自我不确定性导致，用不确定性触发重采样可显著提升稳定性（已被 ICML 接收）
-② PhysicianBench：基于真实电子健康档案的医疗 Agent 评测，最优闭源模型 pass@1 仅 46%，最优开源仅 19%，医疗 Agent 距实用还很远
-③ MotionCache：视频生成的像素级缓存方案，在 SkyReels-V2 上实现 6.28 倍加速
-④ WeightFormer：将注意力机制重写为参数预测 MLP，设计目标从「近似 softmax」转为「预测好参数」
+📚 论文速报（来源：ai-brief.liziran.com · 2026-05-08）
 
+① T²PO（ICML 接收）：多轮智能体强化学习的崩溃不是信用分配问题，而是要用模型自身的不确定性触发重采样，在 WebShop、ALFWorld、Search QA 上显著改善稳定性。
+② PhysicianBench：100 个真实 EHR 医疗咨询场景，平均每次任务调用 27 个工具；最佳闭源模型通过率 46%，最佳开源模型仅 19%。医疗智能体离临床可用仍有很大距离。
+③ MotionCache：像素级视频生成缓存，按帧差异为每个像素分配去噪步数；在 SkyReels-V2 上实现 6.28 倍加速，在 MAGI-1 上仅 1.64 倍，差异揭示了不同视频生成架构的缓存友好度差别。
 🔗 https://ai-brief.liziran.com/
 
 📎 Notion 存档
-https://www.notion.so/AI-Builders-Digest-2026-05-09-35b941f9890481fdb755fc5e5993cce5
+https://www.notion.so/AI-Builders-Digest-20260510-35c941f9890481aba0ddd022273f65f6
