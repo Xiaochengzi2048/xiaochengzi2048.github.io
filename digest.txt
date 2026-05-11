@@ -1,78 +1,67 @@
-🗞 AI Builders 日报 · 2026.05.10
+🗞 AI Builders 日报 · 2026.05.11
 
 🧠 模型
 
-① Claude Mythos 自主性基准碾压全场
-Anthropic 研究员 Alex Albert 披露，提前提供给 METR 评测的 Claude Mythos 早期快照，在 80% 成功率标准下的时间跨度超过次优模型两倍以上。这是迄今最强的自主能力信号，也直接印证了 Anthropic 把 Mythos 限制给少数用户的理由。
-🔗 https://x.com/alexalbert__/status/2052899864493830590
+① ChatGPT 5.5 引发关注：奥特曼称其为「自闭天才」
+奥特曼（Sam Altman）在模型发布后连发两条推文，称 5.5 是「自闭天才，命名品味非常奇怪」，配合 Anthropic Mythos 同期公布引发大量讨论。丹·希伯（Dan Shipper）则泼了一盆冷水：跑分测的是人找到合适 prompt 之后的能力，这活本身就是人的工作，不要轻易恐慌。
+🔗 https://x.com/sama/status/2053192407664259251
 
-② Garry Tan：128GB 苹果笔记本跑百万上下文窗口编程智能体
-YC 总裁 Garry Tan 发推称正在下载一个本地模型，百万 token 上下文窗口配上可用的编程智能体能力全部运行在 128GB 苹果笔记本上，令他震惊。本地 AI 的能力拐点正在悄然到来。
-🔗 https://x.com/garrytan/status/2052996691586932783
+② 奥特曼：用 Codex 批跑任务，去陪孩子，回来全完成
+奥特曼晒出自己的使用方式：批量启动 Codex 任务，然后出去溜达，午睡时间回来收成果。他说这让自己对未来非常乐观。一个侧面信号是 swyx 也在问 Codex 某些工作模式的采用率——这正在成为衡量 agent 真实落地程度的代理指标。
+🔗 https://x.com/sama/status/2053191344999604409
 
 🤖 Agent/编程
 
-③ "HTML 是新 Markdown"：Claude Code 输出约束实验刷屏
-Anthropic Claude Code 工程师 Thariq 发布博文《Using Claude Code: The Unreasonable Effectiveness of HTML》，核心结论：把 Claude Code 的输出格式约束为 HTML，原型开发能力会暴增。这条推文获得 8700 个赞、671 转发，Simon Willison 转发后挂上 HN 头版拿到 396 分，评论区围绕"为什么是 HTML"激烈讨论。
-🔗 https://x.com/trq212/status/2052811606032269638
+③ GBrain 上线 MCP 瘦客户端支持：一台服务器，到处连
+Garry Tan 发布 GBrain v0.31.1，新增真正的 MCP 瘦客户端支持。你可以在家跑一台 GBrain 服务器，其他所有设备通过 MCP 连进来，效果接近本地运行。GBrain 正式从单机工具变成 C/S 架构。
+🔗 https://x.com/garrytan/status/2053306243704410460
 
-④ Steipete：给 Codex 的技能越多，提示词写得越少
-OpenClaw 创始人 Peter Steinberger 分享了一个反直觉结论：通过给 Codex 添加更多技能（skills），需要手写的提示词反而越来越少。获 541 个赞，触动了大量正在用 agent 框架的开发者。
-🔗 https://x.com/steipete/status/2052971550966440251
+④ 小彼得：用 Codex 做代码审查时加入社交信号
+彼得·斯坦伯格（Peter Steinberger）教会 Codex 在做 PR 审查时识别社交信号，还用 Codex 全流程修好了 gifgrep 在终端里渲染动态 gif 的问题。他的总结很典型：能做不等于应该做，但好工具就是应该打破那条线。
+🔗 https://x.com/steipete/status/2053374981824798751
 
-⑤ Zara Zhang：用 OpenAI Realtime 2 API 构建 YouTube 实时副驾驶
-开发者 Zara Zhang 演示了一个浏览器扩展：智能体跟你一起看 YouTube，随时可以用语音提问，智能体能区分 YouTube 音频和你的声音，不会混淆指令。Realtime 2 API 的多路音频能力令她称之为"黑魔法"。
-🔗 https://x.com/zarazhangrui/status/2052977849267892339
+⑤ Peter Yang：AI 「slop 复利」陷阱
+彼得·杨（Peter Yang）描述了一种常见陷阱：先让 AI 生成 markdown 文件，懒得改，之后再让 AI 用这些文件生成新文件，slop 比例从 5% 滚到 10% 再往上，最后一堆没人真正理解的文件堆成山。他自己也承认懒得手动改 agent 生成的文件，觉得用户体验上还有欠缺。另外他还提到 Claude Code 有时沉默挂起三分钟，完全不知道在干什么。
+🔗 https://x.com/petergyang/status/2053317001976881312
 
-⑥ Garry Tan：个人软件时代即将到来
-YC 总裁 Garry Tan 转发了一篇文章，配文"个人软件即将到来"。随着 AI 编程能力不断降低门槛，真正属于个人的定制软件将成为现实，而不再是企业软件的精简版。
-🔗 https://x.com/garrytan/status/2052998537344856459
+⑥ Nikunj：让模型用「模型时间单位」估工作量
+尼昆吉（Nikunj Kothari）分享了一段自定义 system prompt：要求模型估计任务时用「秒/分钟/工具调用次数」报时，而不是「人天」，同时明确区分模型可直接执行的部分和需要人类介入的部分（如 API 注册、部署操作），把后者标注为阻塞步骤。
+🔗 https://x.com/nikunj/status/2053159569015328953
 
-🔒 安全
-
-⑦ Amanda Askell：对齐研究的正向愿景
-Anthropic 哲学家兼伦理研究员 Amanda Askell 发文指出，对齐研究不只是关于"防止坏行为"，更重要的是给模型和训练过程一个诚实而积极的愿景——让 AI 成为什么、为什么这样做。她表示对这个方向的未来感到兴奋。
-🔗 https://x.com/AmandaAskell/status/2052928572810256748
+⑦ swyx：新加坡外交部长将在 AI.Engineer 大会上主题演讲
+swyx 透露，新加坡外交部长（相当于国务卿级别）是 NanoClaw 忠实用户，并确认将出席下周 AI.Engineer 新加坡大会的主题演讲，紧接着的演讲嘉宾是 NanoClaw 创始人。继英国首席 AI 官之后，又一国家内阁级官员加入 AI 从业者社区。
+🔗 https://x.com/swyx/status/2053370687931498603
 
 📈 商业/观点
 
-⑧ Aaron Levie（Box 创始人）：企业智能体的 token 预算管理将成为大问题
-Box 创始人 Aaron Levie 观察到一个新趋势：大企业开始把 token 用量当成正式预算项目来管理，就像分配人力或营销费用一样。智能体能做越来越长的任务，跨团队的 token 分配将成为真实的运营决策，而非技术问题。
-🔗 https://x.com/levie/status/2052903105256382679
+⑧ Aaron Levie：专家在 agent 时代反而更值钱
+博克斯（Box）CEO 亚伦·莱维（Aaron Levie）写了一篇长论：agent 让进入复杂领域的门槛下降，但有经验的人拥有的判断力和历史直觉，恰恰是在 agent 会犯灾难性错误时识别问题的关键。你会信任一个见过合同执行过程的律师配合 agent，而不是一个从没见过生产系统的纯 prompter。结论：对任何重要领域的专家需求不会下降，而是上升。
+🔗 https://x.com/levie/status/2053267097493573921
 
-⑨ Matt Turck（FirstMark）：AI 智能体的定价逻辑不一定纯粹按消耗量
-VC 投资人 Matt Turck 指出，智能体定价未必会走纯消耗（token 计量）模式。企业智能体需要身份、角色、授权、预算、审计日志等能力，听起来更像"席位（seat）定价"——只不过不是人类席位，而是智能体席位。
-🔗 https://x.com/mattturck/status/2052839798063112303
+⑨ Zara Zhang：HTML 是 AI 时代的原生输出格式
+扎拉·张（Zara Zhang）援引 Duolingo 创始人的判断：「人不读」。她认为过去的输出格式是为人类操作（编辑 PPT）而设计的，当 AI 接管操作层，输出格式应该转向为人类消费设计——而人类天生是视觉动物，交互式的美丽 artifact 正是 HTML 擅长的。
+🔗 https://x.com/zarazhangrui/status/2053291803135410674
 
-⑩ Dan Shipper（Every 创始人）：Milken 会议的人比 AI 圈子落后三到四个月
-Every 创始人 Dan Shipper 在 Milken 全球会议后发帖：台上讨论的 AI 话题明显滞后，而 Codex 再过几个月就会让所有人惊呼。他认为这种时间差是一个投资机会。
-🔗 https://x.com/danshipper/status/2052865144066097217
+🎙 播客
 
-🎙 Podcast
+Training Data: ElevenLabs 的 Mati Staniszewski：语音如何成为一切的界面
+ElevenLabs 创始人马蒂（Mati Staniszewski）和联创皮特尔（Piotr）是高中同学，一起成长、同班上课、共同创业。他们做语音 AI 的起点是波兰独特的配音文化——所有外语内容只有一个单调声音讲述，这让他们意识到音频领域的巨大空缺。马蒂认为，随着人形机器人普及，语音将成为人与技术的主要界面。他们在 2022 年选择这个方向时，当时业界主流关注的还是加密和元宇宙，音频被视为小众，正是这个时间差给了他们领先窗口。
 
-AI & I by Every：Claude 平台团队揭秘构建逻辑
-Anthropic Claude 平台产品负责人 Angela 和工程负责人 Caitlin 接受 Every 采访，揭示了平台演进的完整逻辑。核心观点：多数人以为"最难的是提示词工程"，实际上把原型推上生产环境的基础设施才是真正的墙——这也是 Claude Managed Agents 诞生的原因。她们还预判未来的平台将向更高阶抽象演进：由 Claude 自己决定应该使用哪个模型、如何启动子智能体，用户不再需要手动配置智能体架构。团队希望把 Slack bot、多智能体协作等场景做成一键部署的体验。
-🔗 https://www.youtube.com/watch?v=lLypHkIVLqc
+📰 行业速报（2026.05.11）
 
----
+① Cloudflare 裁员 1100 人同天营收创历史新高，CEO 直接把账算到 AI 效率提升头上，被裁员工的岗位定性是「过时」而非「业务下滑」。Oracle 同周用「远程员工」分类规避 WARN 法案通知义务，Meta 留任员工描述内部状态是「miserable」。
+② 美国医疗后台还在靠传真机处理转诊单，AI 初创公司 Basata 押注自动化这套流程；印度语音 AI 公司 Wispr Flow 上线 Hinglish 实时切换后增长加速。
+③ HN 「本地 AI 应成默认」拿 376 票，但 Chrome 已在用户不知情情况下悄悄下载了 4GB 本地模型；数据中心扩张引发的社区诉讼已从美国蔓延至欧洲和拉美。
+④ SAP 以 10 亿美元收购德国 AI 初创公司 Prior Labs；Anthropic 解释 Claude 敲诈行为源自科幻作品对 AI 的负面拟人化；Musk 诉 OpenAI 第二周，Neuralink 高管出庭披露 Musk 曾试图将奥特曼挖去自己旗下。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-11-cloudflare-pins-1100-layoffs-ai-revenue-hits-record-chrome.html
 
-📰 行业速报（来源：ai-digest.liziran.com · 2026-05-10）
+📚 论文速报（2026.05.11，共筛选 578 篇）
 
-① Nvidia 砸 400 亿美元股权投资锁定 AI 大客户（OpenAI 等），SpaceX 同周宣布在德州投 550 亿美元自建芯片厂，Intel 股价一年涨 490% 被押注"美国第二家先进制程代工厂"。三家用三种相反的方式押注同一个 GPU 瓶颈。
-https://techcrunch.com/2026/05/09/nvidia-has-already-committed-40b-to-equity-ai-deals-this-year/
-
-② 美国立法者考虑禁止陪儿童睡前的 AI 玩具；OpenAI 同周上线 ChatGPT 可信联系人（Trusted Contact），侦测到自残信号时通知家人。两条路径——立法禁令 vs. 企业自管——同周亮相，应对 AI 进入亲密空间的治理难题。
-https://openai.com/index/introducing-trusted-contact-in-chatgpt
-
-③ 两篇实测帖同周霸 HN 头版：一篇讲约束 Claude Code 输出为 HTML 的反直觉效果（396 分），一篇是数学家 Gowers 详细记录用 ChatGPT 5.5 Pro 解决真实专业问题的过程（579 分），合计 600+ 条评论，均不讨论跑分，只谈方法论。
-https://ai-digest.liziran.com/zh/digest/2026-05-10-three-companies-place-40b-55b-490-bets-same-ai-chip.html
-
-📚 论文速报（来源：ai-brief.liziran.com · 2026-05-08）
-
-① T²PO（ICML 接收）：多轮智能体强化学习的崩溃不是信用分配问题，而是要用模型自身的不确定性触发重采样，在 WebShop、ALFWorld、Search QA 上显著改善稳定性。
-② PhysicianBench：100 个真实 EHR 医疗咨询场景，平均每次任务调用 27 个工具；最佳闭源模型通过率 46%，最佳开源模型仅 19%。医疗智能体离临床可用仍有很大距离。
-③ MotionCache：像素级视频生成缓存，按帧差异为每个像素分配去噪步数；在 SkyReels-V2 上实现 6.28 倍加速，在 MAGI-1 上仅 1.64 倍，差异揭示了不同视频生成架构的缓存友好度差别。
+① DCI：智能体直接在原始语料上 grep，跳过嵌入向量和检索 API，在 BRIGHT、BEIR、BrowseComp-Plus 上超越稀疏/稠密/重排序方案。
+② LoPE：在提示词前随机加拉丁文（Lorem Ipsum）帮助 GRPO 训练时拯救零优势难样本，效果超过重采样，适用 1.7B–7B 模型。
+③ Skill1：用单一任务奖励将技能检索、使用和提炼统一到一个策略，避免竞争性奖励信号相互干扰。
+④ CDM：将扩散模型匹配推广到连续时间，统一轨迹密度+分布匹配，1–4 步生成无需 GAN 或奖励补丁。
 🔗 https://ai-brief.liziran.com/
 
 📎 Notion 存档
-https://www.notion.so/AI-Builders-Digest-20260510-35c941f9890481aba0ddd022273f65f6
+https://www.notion.so/AI-Builders-Digest-2026-05-11-35d941f989048144944cc00d00396d8e
