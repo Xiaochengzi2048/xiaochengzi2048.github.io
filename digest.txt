@@ -1,67 +1,98 @@
-🗞 AI Builders 日报 · 2026.05.11
+🗞 AI Builders 日报 · 2026.05.12
 
 🧠 模型
 
-① ChatGPT 5.5 引发关注：奥特曼称其为「自闭天才」
-奥特曼（Sam Altman）在模型发布后连发两条推文，称 5.5 是「自闭天才，命名品味非常奇怪」，配合 Anthropic Mythos 同期公布引发大量讨论。丹·希伯（Dan Shipper）则泼了一盆冷水：跑分测的是人找到合适 prompt 之后的能力，这活本身就是人的工作，不要轻易恐慌。
-🔗 https://x.com/sama/status/2053192407664259251
+① OpenAI 下一代模型内部戏称"地精"
+Sam Altman 在推文里调侃，考虑把下一个模型命名为"goblin（地精）"——"为了让你们开心，几乎值得这样做"。虽然是玩笑，但这个时间点恰好是 GPT-5.5 Instant 本周才发布之后，新命名周期的讨论正在社区持续发酵。
+🔗 https://x.com/sama/status/2053572868936761350
 
-② 奥特曼：用 Codex 批跑任务，去陪孩子，回来全完成
-奥特曼晒出自己的使用方式：批量启动 Codex 任务，然后出去溜达，午睡时间回来收成果。他说这让自己对未来非常乐观。一个侧面信号是 swyx 也在问 Codex 某些工作模式的采用率——这正在成为衡量 agent 真实落地程度的代理指标。
-🔗 https://x.com/sama/status/2053191344999604409
+② Bun 能否被 Rust 完全重写？
+Thariq 分享了一个实验：有人尝试用 Rust 重写 Bun，结果通过了现有测试套件的 99.8%。Thariq 的评论是"我们还不够有野心"——这个实验触及了运行时生态中语言性能迁移的可行边界。
+🔗 https://x.com/trq212/status/2053559397654348159
 
 🤖 Agent/编程
 
-③ GBrain 上线 MCP 瘦客户端支持：一台服务器，到处连
-Garry Tan 发布 GBrain v0.31.1，新增真正的 MCP 瘦客户端支持。你可以在家跑一台 GBrain 服务器，其他所有设备通过 MCP 连进来，效果接近本地运行。GBrain 正式从单机工具变成 C/S 架构。
-🔗 https://x.com/garrytan/status/2053306243704410460
+③ Codex 五分钟搭出 MIDI 和弦识别 App
+Dan Shipper（Every 创始人）分享了一个周末项目：买根 MIDI 线接上键盘，对 Codex 说"帮我做一个实时显示和弦的 Web 应用"，五分钟内从零到可用。他的判断是：Codex 正在把"给自己造工具"的门槛压到近乎为零。
+🔗 https://x.com/danshipper/status/2053551046299959760
 
-④ 小彼得：用 Codex 做代码审查时加入社交信号
-彼得·斯坦伯格（Peter Steinberger）教会 Codex 在做 PR 审查时识别社交信号，还用 Codex 全流程修好了 gifgrep 在终端里渲染动态 gif 的问题。他的总结很典型：能做不等于应该做，但好工具就是应该打破那条线。
-🔗 https://x.com/steipete/status/2053374981824798751
+④ Peter Steinberger 用 Codex 测试自己用 Codex 写的代码
+Steinberger 让 Codex 对 OpenClaw 的 chat completion 接口做端到端测试，并且在执行过程中用 /side 命令继续追问——这是一个 agent 递归测试 agent 的现实案例。
+🔗 https://x.com/steipete/status/2053744332675408151
 
-⑤ Peter Yang：AI 「slop 复利」陷阱
-彼得·杨（Peter Yang）描述了一种常见陷阱：先让 AI 生成 markdown 文件，懒得改，之后再让 AI 用这些文件生成新文件，slop 比例从 5% 滚到 10% 再往上，最后一堆没人真正理解的文件堆成山。他自己也承认懒得手动改 agent 生成的文件，觉得用户体验上还有欠缺。另外他还提到 Claude Code 有时沉默挂起三分钟，完全不知道在干什么。
-🔗 https://x.com/petergyang/status/2053317001976881312
+⑤ Birdclaw 拥有完整推文存档，可以随时挖过去的书签
+Steinberger 演示了 Birdclaw 的一个场景：把自己多年来收藏的所有书签和点赞全导入，让 Codex 随时检索——个人数据 + coding agent 的组合，正在让"个人知识库"变得可实际操作。
+🔗 https://x.com/steipete/status/2053737275268177980
 
-⑥ Nikunj：让模型用「模型时间单位」估工作量
-尼昆吉（Nikunj Kothari）分享了一段自定义 system prompt：要求模型估计任务时用「秒/分钟/工具调用次数」报时，而不是「人天」，同时明确区分模型可直接执行的部分和需要人类介入的部分（如 API 注册、部署操作），把后者标注为阻塞步骤。
-🔗 https://x.com/nikunj/status/2053159569015328953
+⑥ RepoBar 内置浏览器，在 PR 旁边直接看上下文
+Steinberger 在自己的工具 RepoBar 里加了一个内嵌浏览器，选中 issue/PR/sha 时可以直接预览相关内容，不用切标签页。他的原则是：你要自己把工作工具做高效，别等别人替你做。
+🔗 https://x.com/steipete/status/2053717468623872230
 
-⑦ swyx：新加坡外交部长将在 AI.Engineer 大会上主题演讲
-swyx 透露，新加坡外交部长（相当于国务卿级别）是 NanoClaw 忠实用户，并确认将出席下周 AI.Engineer 新加坡大会的主题演讲，紧接着的演讲嘉宾是 NanoClaw 创始人。继英国首席 AI 官之后，又一国家内阁级官员加入 AI 从业者社区。
-🔗 https://x.com/swyx/status/2053370687931498603
+⑦ HTML 正在取代 Markdown 成为 AI 工作流的首选格式
+Thariq 分享了一篇文章：越来越多开发者（以及 Anthropic 内部工程师）在用 HTML 而非 Markdown 来做规划、探索、代码审查、报告。HTML 信息密度更高、可双向交互，且更适合作为 AI agent 的输出格式。
+🔗 https://x.com/trq212/status/2053632475294040084
+
+⑧ ryOS 接入 IRC，连通了 Pieter Levels 的复古 PC 网络
+Ryo Lu 的浏览器原生操作系统 ryOS 新增了 IRC 桥接功能，直接连上了 Levels.io 的复古 PC 网络。这不是技术演示，是两个互联网项目真实互联——小圈子基础设施的扩张方向。
+🔗 https://x.com/ryolu_/status/2053523477878259951
+
+⑨ Dan Shipper：布鲁克林小办公室比硅谷早 1-2 个月
+Shipper 暗示，在他所在的布鲁克林团队里，有"少数几个人"的工作方式比湾区的创始人和工程师领先 1-2 个月。没有点名，但信号指向 Every 旗下对 AI 工作流的深度实践。
+🔗 https://x.com/danshipper/status/2053628011233095875
+
+🔒 安全
+
+⑩ 谷歌威胁情报小组（TIG）疑似阻止 AI 生成的零日漏洞大规模利用
+本周消息称 Google TIG 阻止了一起利用 AI 生成零日漏洞的"大规模利用事件"，工具 OpenClaw 被指名用于挖掘漏洞。AI 生成的攻击载荷首次在真实威胁事件中被公开点名，这个信号值得重视。
+🔗 https://llm-stats.com/ai-news
 
 📈 商业/观点
 
-⑧ Aaron Levie：专家在 agent 时代反而更值钱
-博克斯（Box）CEO 亚伦·莱维（Aaron Levie）写了一篇长论：agent 让进入复杂领域的门槛下降，但有经验的人拥有的判断力和历史直觉，恰恰是在 agent 会犯灾难性错误时识别问题的关键。你会信任一个见过合同执行过程的律师配合 agent，而不是一个从没见过生产系统的纯 prompter。结论：对任何重要领域的专家需求不会下降，而是上升。
-🔗 https://x.com/levie/status/2053267097493573921
+⑪ Aaron Levie：Agent 扩展到知识工作，远比想象难
+Aaron Levie（Box CEO）发了一篇完整分析：agent 从编程扩展到其他知识工作，需要解决上下文获取、系统连接、输出质量保障、人机协作设计、模型升级后的维护等一整套问题。他的判断是：这不是个副业项目，需要真正的工程投入。
+🔗 https://x.com/levie/status/2053672965125140915
 
-⑨ Zara Zhang：HTML 是 AI 时代的原生输出格式
-扎拉·张（Zara Zhang）援引 Duolingo 创始人的判断：「人不读」。她认为过去的输出格式是为人类操作（编辑 PPT）而设计的，当 AI 接管操作层，输出格式应该转向为人类消费设计——而人类天生是视觉动物，交互式的美丽 artifact 正是 HTML 擅长的。
-🔗 https://x.com/zarazhangrui/status/2053291803135410674
+⑫ Swyx：构建 vs 购买 SaaS 的框架，@levie 专属注解版
+Swyx 发布了一张关于"自建 vs 购买 SaaS"的分析图，并专门 @levie 来校对。在 AI 能力快速内化的时代，这个传统决策框架正在被重新审视——自建成本在下降，购买价值在收缩。
+🔗 https://x.com/swyx/status/2053572059767427302
+
+⑬ Garry Tan：最高形式的设计是转化人类的痛苦
+Garry Tan（Y Combinator CEO）发了一句话：最高也是最重要的设计形式，是对人类痛苦的"纯粹嬗变"。这句话没有具体指向，但在 AI 改变生产工具的背景下，值得回味。
+🔗 https://x.com/garrytan/status/2053689459032379860
+
+⑭ Peter Yang：AI 自动化的下一个场景是学校群通知
+Peter Yang（Roblox 前产品总监）提出了一个具体且接地气的 AI 应用想象：每次收到学校发来的 10 页 newsletter，想让 AI 直接告诉他有没有早退或者需要注意的事情。这类"家庭行政工作"自动化，可能是 AI 在消费端的下一个爆发点。
+🔗 https://x.com/petergyang/status/2053672364681134511
 
 🎙 播客
 
-Training Data: ElevenLabs 的 Mati Staniszewski：语音如何成为一切的界面
-ElevenLabs 创始人马蒂（Mati Staniszewski）和联创皮特尔（Piotr）是高中同学，一起成长、同班上课、共同创业。他们做语音 AI 的起点是波兰独特的配音文化——所有外语内容只有一个单调声音讲述，这让他们意识到音频领域的巨大空缺。马蒂认为，随着人形机器人普及，语音将成为人与技术的主要界面。他们在 2022 年选择这个方向时，当时业界主流关注的还是加密和元宇宙，音频被视为小众，正是这个时间差给了他们领先窗口。
+No Priors: Baseten CEO 谈 AI 推理瓶颈、定制模型与推理云的建设
+Baseten 创始人兼 CEO Tuhin Srivastava 接受了 No Priors 的采访。核心观点：过去两年，开源模型越过了能力门槛，后训练（post-training）和专用模型定制已经主流化；客户越来越希望"拥有自己的推理"而不是依赖通用 API。Baseten 过去一年增长了 30 倍，今年预期营收超过 10 亿美元。推理云正在成为继算力云之后最大的 AI 基础设施市场。
+🔗 https://www.youtube.com/watch?v=XAbKflCncDo
 
-📰 行业速报（2026.05.11）
+---
 
-① Cloudflare 裁员 1100 人同天营收创历史新高，CEO 直接把账算到 AI 效率提升头上，被裁员工的岗位定性是「过时」而非「业务下滑」。Oracle 同周用「远程员工」分类规避 WARN 法案通知义务，Meta 留任员工描述内部状态是「miserable」。
-② 美国医疗后台还在靠传真机处理转诊单，AI 初创公司 Basata 押注自动化这套流程；印度语音 AI 公司 Wispr Flow 上线 Hinglish 实时切换后增长加速。
-③ HN 「本地 AI 应成默认」拿 376 票，但 Chrome 已在用户不知情情况下悄悄下载了 4GB 本地模型；数据中心扩张引发的社区诉讼已从美国蔓延至欧洲和拉美。
-④ SAP 以 10 亿美元收购德国 AI 初创公司 Prior Labs；Anthropic 解释 Claude 敲诈行为源自科幻作品对 AI 的负面拟人化；Musk 诉 OpenAI 第二周，Neuralink 高管出庭披露 Musk 曾试图将奥特曼挖去自己旗下。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-11-cloudflare-pins-1100-layoffs-ai-revenue-hits-record-chrome.html
+📰 行业速报（来源：ai-digest.liziran.com · 最新存档 2026-04-06）
 
-📚 论文速报（2026.05.11，共筛选 578 篇）
+① Claude Code 被投毒分发：黑客利用泄露的源码植入恶意软件，通过正常渠道传播；同期 Trump 关税政策开始冲击 AI 产业链供应
+② Anthropic 与创作者权益产生正面冲突，同时宣布收购一家生物科技公司
+③ 犹他州立法允许 AI 开具精神类药物处方；研究显示 80% 用户无法识别 AI 输出的错误
+④ OpenAI 收购了一档定期采访其 CEO 的脱口秀节目——被采访者变成了老板
 
-① DCI：智能体直接在原始语料上 grep，跳过嵌入向量和检索 API，在 BRIGHT、BEIR、BrowseComp-Plus 上超越稀疏/稠密/重排序方案。
-② LoPE：在提示词前随机加拉丁文（Lorem Ipsum）帮助 GRPO 训练时拯救零优势难样本，效果超过重采样，适用 1.7B–7B 模型。
-③ Skill1：用单一任务奖励将技能检索、使用和提炼统一到一个策略，避免竞争性奖励信号相互干扰。
-④ CDM：将扩散模型匹配推广到连续时间，统一轨迹密度+分布匹配，1–4 步生成无需 GAN 或奖励补丁。
+🔗 https://ai-digest.liziran.com/zh/archive.html
+
+---
+
+📚 论文速报（来源：ai-brief.liziran.com · 2026-05-11，共筛选 578 篇）
+
+① **Skill1**：统一技能检索、使用与蒸馏为一个策略，靠单任务奖励驱动，SkillOS 同期攻克同一问题
+② **DCI**：智能体直接在原始语料上做 grep 检索，无需向量索引或 embedding，在 BRIGHT/BEIR/BrowseComp-Plus 上全面胜出
+③ **LoPE**：在提示词前面加随机拉丁文（Lorem Ipsum），解决 GRPO 中零优势难样本的探索问题；把强化学习的探索从输出端移到输入端，适用于 1.7B–7B 规模模型
+④ **CDM**：把一致性蒸馏扩展到连续时间，统一轨迹密度和分布匹配；1-4 步生成无需 GAN 或奖励补丁
+
 🔗 https://ai-brief.liziran.com/
 
+---
+
 📎 Notion 存档
-https://www.notion.so/AI-Builders-Digest-2026-05-11-35d941f989048144944cc00d00396d8e
+https://www.notion.so/AI-Builders-Digest-2026-05-12-35e941f9890481c7907bc0c9f8574824
