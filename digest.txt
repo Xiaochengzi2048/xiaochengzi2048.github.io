@@ -1,98 +1,67 @@
-🗞 AI Builders 日报 · 2026.05.12
-
-🧠 模型
-
-① OpenAI 下一代模型内部戏称"地精"
-Sam Altman 在推文里调侃，考虑把下一个模型命名为"goblin（地精）"——"为了让你们开心，几乎值得这样做"。虽然是玩笑，但这个时间点恰好是 GPT-5.5 Instant 本周才发布之后，新命名周期的讨论正在社区持续发酵。
-🔗 https://x.com/sama/status/2053572868936761350
-
-② Bun 能否被 Rust 完全重写？
-Thariq 分享了一个实验：有人尝试用 Rust 重写 Bun，结果通过了现有测试套件的 99.8%。Thariq 的评论是"我们还不够有野心"——这个实验触及了运行时生态中语言性能迁移的可行边界。
-🔗 https://x.com/trq212/status/2053559397654348159
+🗞 AI Builders 日报 · 2026.05.13
 
 🤖 Agent/编程
 
-③ Codex 五分钟搭出 MIDI 和弦识别 App
-Dan Shipper（Every 创始人）分享了一个周末项目：买根 MIDI 线接上键盘，对 Codex 说"帮我做一个实时显示和弦的 Web 应用"，五分钟内从零到可用。他的判断是：Codex 正在把"给自己造工具"的门槛压到近乎为零。
-🔗 https://x.com/danshipper/status/2053551046299959760
+① Claude Code 正式支持云端多 Agent 管控
+Cat Wu（Anthropic Claude Code 核心团队）宣布 `claude agents` 命令上线，在终端启动一个控制面板，可统一管理所有本地及云端 Claude Code 进程。在任意命令行会话里按 `←` 箭头就能把该 session 注册进控制面板，方便从根代码目录集中调度多路 Agent。
+🔗 https://x.com/_catwu/status/2053999857799672111
 
-④ Peter Steinberger 用 Codex 测试自己用 Codex 写的代码
-Steinberger 让 Codex 对 OpenClaw 的 chat completion 接口做端到端测试，并且在执行过程中用 /side 命令继续追问——这是一个 agent 递归测试 agent 的现实案例。
-🔗 https://x.com/steipete/status/2053744332675408151
+② Claude Code 云端版公开征求反馈
+Cat Wu 发文，Claude Code 的云端版本已覆盖桌面端（云选项）、iOS 和 Android 三端。官方正在举办 Office Hours，邀请开发者就使用体验直接提交意见，产品团队会一对一回应。
+🔗 https://x.com/_catwu/status/2053873949646405879
 
-⑤ Birdclaw 拥有完整推文存档，可以随时挖过去的书签
-Steinberger 演示了 Birdclaw 的一个场景：把自己多年来收藏的所有书签和点赞全导入，让 Codex 随时检索——个人数据 + coding agent 的组合，正在让"个人知识库"变得可实际操作。
-🔗 https://x.com/steipete/status/2053737275268177980
+③ Karpathy：让 LLM 输出 HTML，直接浏览器查看效果更好
+Andrej Karpathy 分享了一个实用技巧：在提示末尾加上"请把回答组织成 HTML 格式"，然后在浏览器里打开生成文件，可视化效果明显优于纯文本。他认为音频是人类偏好的 AI 输入方式，但 HTML/幻灯片输出是信息展示的更优出口。
+🔗 https://x.com/karpathy/status/2053872850101285137
 
-⑥ RepoBar 内置浏览器，在 PR 旁边直接看上下文
-Steinberger 在自己的工具 RepoBar 里加了一个内嵌浏览器，选中 issue/PR/sha 时可以直接预览相关内容，不用切标签页。他的原则是：你要自己把工作工具做高效，别等别人替你做。
-🔗 https://x.com/steipete/status/2053717468623872230
+🧠 模型
 
-⑦ HTML 正在取代 Markdown 成为 AI 工作流的首选格式
-Thariq 分享了一篇文章：越来越多开发者（以及 Anthropic 内部工程师）在用 HTML 而非 Markdown 来做规划、探索、代码审查、报告。HTML 信息密度更高、可双向交互，且更适合作为 AI agent 的输出格式。
-🔗 https://x.com/trq212/status/2053632475294040084
+④ Swyx：ThinkMachines 在实时推理基准上"完爆"谷歌和 OpenAI
+Swyx（AI 研究员与创业者）转发并评论称 ThinkMachines 团队的演示"直接重新定义了'实时'的含义"，认为这是对 Google DeepMind 和 OpenAI 实时推理能力的重大超越。原帖带有视频演示。
+🔗 https://x.com/swyx/status/2053960011748098462
 
-⑧ ryOS 接入 IRC，连通了 Pieter Levels 的复古 PC 网络
-Ryo Lu 的浏览器原生操作系统 ryOS 新增了 IRC 桥接功能，直接连上了 Levels.io 的复古 PC 网络。这不是技术演示，是两个互联网项目真实互联——小圈子基础设施的扩张方向。
-🔗 https://x.com/ryolu_/status/2053523477878259951
+🛠 产品/应用
 
-⑨ Dan Shipper：布鲁克林小办公室比硅谷早 1-2 个月
-Shipper 暗示，在他所在的布鲁克林团队里，有"少数几个人"的工作方式比湾区的创始人和工程师领先 1-2 个月。没有点名，但信号指向 Every 旗下对 AI 工作流的深度实践。
-🔗 https://x.com/danshipper/status/2053628011233095875
-
-🔒 安全
-
-⑩ 谷歌威胁情报小组（TIG）疑似阻止 AI 生成的零日漏洞大规模利用
-本周消息称 Google TIG 阻止了一起利用 AI 生成零日漏洞的"大规模利用事件"，工具 OpenClaw 被指名用于挖掘漏洞。AI 生成的攻击载荷首次在真实威胁事件中被公开点名，这个信号值得重视。
-🔗 https://llm-stats.com/ai-news
+⑤ Amanda Askell：Claude 宪法有声书上线，可收听 AI 价值观规范
+Anthropic 哲学家兼伦理学家 Amanda Askell 宣布，她与 Joe 联合录制的"Claude 宪法"有声书现已公开。这本书完整朗读了 Claude 的价值对齐规范文档，本人正在开发倍速播放选项。
+🔗 https://x.com/AmandaAskell/status/2054010971765805486
 
 📈 商业/观点
 
-⑪ Aaron Levie：Agent 扩展到知识工作，远比想象难
-Aaron Levie（Box CEO）发了一篇完整分析：agent 从编程扩展到其他知识工作，需要解决上下文获取、系统连接、输出质量保障、人机协作设计、模型升级后的维护等一整套问题。他的判断是：这不是个副业项目，需要真正的工程投入。
-🔗 https://x.com/levie/status/2053672965125140915
+⑥ Kevin Weil 高度评价一条产品洞察
+OpenAI 首席产品官 Kevin Weil 转发了来自 Rob Duncan（@tdrobbo）的一篇产品思考，称其为"黄金级内容"。未附更多说明，但 Weil 的背书指向一篇值得关注的产品观点文章。
+🔗 https://x.com/kevinweil/status/2054063509869306204
 
-⑫ Swyx：构建 vs 购买 SaaS 的框架，@levie 专属注解版
-Swyx 发布了一张关于"自建 vs 购买 SaaS"的分析图，并专门 @levie 来校对。在 AI 能力快速内化的时代，这个传统决策框架正在被重新审视——自建成本在下降，购买价值在收缩。
-🔗 https://x.com/swyx/status/2053572059767427302
+⑦ Peter Yang：大家都爱"发货"的感觉
+产品博主 Peter Yang 发了一张图片，配文"结果发现人人都喜欢 ship 东西"，反映 AI 时代开发者对快速产出/发布的普遍热情。
+🔗 https://x.com/petergyang/status/2054036027791294696
 
-⑬ Garry Tan：最高形式的设计是转化人类的痛苦
-Garry Tan（Y Combinator CEO）发了一句话：最高也是最重要的设计形式，是对人类痛苦的"纯粹嬗变"。这句话没有具体指向，但在 AI 改变生产工具的背景下，值得回味。
-🔗 https://x.com/garrytan/status/2053689459032379860
+🎙 Podcast
 
-⑭ Peter Yang：AI 自动化的下一个场景是学校群通知
-Peter Yang（Roblox 前产品总监）提出了一个具体且接地气的 AI 应用想象：每次收到学校发来的 10 页 newsletter，想让 AI 直接告诉他有没有早退或者需要注意的事情。这类"家庭行政工作"自动化，可能是 AI 在消费端的下一个爆发点。
-🔗 https://x.com/petergyang/status/2053672364681134511
-
-🎙 播客
-
-No Priors: Baseten CEO 谈 AI 推理瓶颈、定制模型与推理云的建设
-Baseten 创始人兼 CEO Tuhin Srivastava 接受了 No Priors 的采访。核心观点：过去两年，开源模型越过了能力门槛，后训练（post-training）和专用模型定制已经主流化；客户越来越希望"拥有自己的推理"而不是依赖通用 API。Baseten 过去一年增长了 30 倍，今年预期营收超过 10 亿美元。推理云正在成为继算力云之后最大的 AI 基础设施市场。
-🔗 https://www.youtube.com/watch?v=XAbKflCncDo
+No Priors: Amex Global Business Travel——全球首例 AI 主导私有化交易
+Long Lake Management 联合创始人兼 CEO Alex Taubman 分享了如何利用 AI 工具完成对 Amex 全球商旅业务的私有化收购案。这是史上首起由 AI 驱动的大规模企业私有化案例，Taubman 详细描述了 AI 在尽职调查、财务建模和决策支持环节的实际角色，以及传统 PE 流程被 AI 重构的具体路径。
+发布日期：2026 年 5 月 11 日
 
 ---
 
-📰 行业速报（来源：ai-digest.liziran.com · 最新存档 2026-04-06）
+📰 行业速报（来源：ai-digest.liziran.com，最新条目截至 2026 年 4 月 6 日）
 
-① Claude Code 被投毒分发：黑客利用泄露的源码植入恶意软件，通过正常渠道传播；同期 Trump 关税政策开始冲击 AI 产业链供应
-② Anthropic 与创作者权益产生正面冲突，同时宣布收购一家生物科技公司
-③ 犹他州立法允许 AI 开具精神类药物处方；研究显示 80% 用户无法识别 AI 输出的错误
-④ OpenAI 收购了一档定期采访其 CEO 的脱口秀节目——被采访者变成了老板
+① Claude Code 遭投毒包分发，Anthropic 官方确认供应链攻击事件（4 月 6 日）
+② 犹他州通过法案允许 AI 开具精神科处方药；研究显示 80% 用户无法识别 AI 错误（4 月 4 日）
+③ OpenAI 宣布收购脱口秀节目（该节目曾多次采访其 CEO），利益冲突引发讨论（4 月 3 日）
+④ 微软将 Copilot 标注为"仅供娱乐"，随后继续正常推出产品版本（4 月 2 日）
+⑤ Claude Code 完整源码泄露；OpenAI 融资空间因估值压力收窄（4 月 1 日）
 
 🔗 https://ai-digest.liziran.com/zh/archive.html
 
----
+📚 论文速报（来源：ai-brief.liziran.com，最新期：2026 年 5 月 11 日，共筛选 578 篇）
 
-📚 论文速报（来源：ai-brief.liziran.com · 2026-05-11，共筛选 578 篇）
-
-① **Skill1**：统一技能检索、使用与蒸馏为一个策略，靠单任务奖励驱动，SkillOS 同期攻克同一问题
-② **DCI**：智能体直接在原始语料上做 grep 检索，无需向量索引或 embedding，在 BRIGHT/BEIR/BrowseComp-Plus 上全面胜出
-③ **LoPE**：在提示词前面加随机拉丁文（Lorem Ipsum），解决 GRPO 中零优势难样本的探索问题；把强化学习的探索从输出端移到输入端，适用于 1.7B–7B 规模模型
-④ **CDM**：把一致性蒸馏扩展到连续时间，统一轨迹密度和分布匹配；1-4 步生成无需 GAN 或奖励补丁
+① DCI：Agent 直接对原始语料库做 grep 检索，跳过向量索引和检索 API，在 BRIGHT/BEIR/BrowseComp-Plus 上全面超越稀疏/稠密/重排方案
+② LoPE：在提示前添加随机拉丁文（Lorem Ipsum），比重采样更有效地拯救 GRPO 中零收益的难样本（适用 1.7B–7B 模型），将强化学习探索从输出端前移至输入端
+③ CDM：将 DMD 推广到连续时间域，统一轨迹密度与分布匹配，无需 GAN 或奖励补丁即可实现 1–4 步生成
+④ Skill1：通过单一任务奖励统一技能检索、使用和蒸馏，避免多奖励信号互相干扰
 
 🔗 https://ai-brief.liziran.com/
 
----
-
 📎 Notion 存档
-https://www.notion.so/AI-Builders-Digest-2026-05-12-35e941f9890481c7907bc0c9f8574824
+https://www.notion.so/AI-Builders-Digest-2026-05-13-35f941f9890481579041de4af4357c68
