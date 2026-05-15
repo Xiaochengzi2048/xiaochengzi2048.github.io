@@ -1,99 +1,93 @@
-🗞 AI Builders 日报 · 2026.05.14
+🗞 AI Builders 日报 · 2026.05.15
 
 🧠 模型
 
-① GPT-5.5 Instant 成为默认模型，幻觉率降低一半
-OpenAI 将 GPT-5.5 Instant 升级为 ChatGPT 所有用户的默认模型，高风险任务幻觉率比上一版下降 52.5%。与此同时 GPT-5.5 API 正向企业客户滚动开放，另有安全专项版本 GPT-5.5-Cyber 在网络安全团队中小范围预览。OpenAI 当前年化收入已达 250 亿美元。
-🔗 https://www.distillintelligence.com/briefings/ai-leaders-2026-05-08
-
-② 谷歌 Android 发布会抢在 I/O 前一周拉满预期
-谷歌 5 月 12 日举办"Android Show"，正式推出 Gemini Intelligence 品牌——在 Android 手机、手表、车机、眼镜、笔记本上跑跨应用多步代理（比如读菜谱自动下单买菜）。同步宣布与华硕、戴尔、惠普、联想、宏碁合作打造"Googlebooks"AI 原生笔记本，秋季上市。谷歌 I/O 2026 定于 5 月 19-20 日，官方自称"史上 AI 含量最高"。
-🔗 https://techcrunch.com/2026/05/12/everything-google-announced-at-its-android-show-from-googlebooks-to-vibe-coded-widgets/
-
-③ Claude Opus 4.7 在华尔街发布，附带 10 个金融 Agent
-Anthropic 在与摩根大通联合举办的活动上推出 Claude Opus 4.7，并配套上线 10 个面向金融场景的 AI 代理（能写投资备忘、做信贷分析），可通过 Claude Code 和 Claude 托管代理插件使用。Claude Sonnet 4.6 同期被评为真实世界代理基准测试第一名。
-🔗 https://releasebot.io/updates/anthropic/claude
-
-④ Grok 4.3 API 上线，百万上下文窗口
-xAI 发布 Grok 4.3 API，支持百万 token 上下文窗口，官方称代理工具调用排名全球第一，并上线写实图像生成接口。同期传出 xAI 将与 X 整合并以"SpaceXAI"品牌重组的消息。
-🔗 https://www.distillintelligence.com/briefings/ai-leaders-2026-05-08
-
-⑤ Mistral 发布 1280 亿参数旗舰模型
-Mistral 推出迄今最大模型 Mistral 128B，并在 Le Chat 中上线异步云端编程的"Work"代理模式。Mistral 完成新一轮融资后估值约 140 亿美元，荷兰光刻巨头 ASML 为最大股东，是欧洲最具代表性的前沿 AI 公司。
-🔗 https://aitoolsrecap.com/Blog/MayNews2026.aspx
+① Anthropic 推出 Claude 托管智能体「做梦」功能
+Anthropic 发布托管智能体（Managed Agents）重大更新，新增「梦境（Dreaming）」功能：智能体会定期复盘过往会话、提炼记忆模式，让自身随时间自我改进。同步上线的还有成果评估（Outcomes）、多智能体编排、以及 Webhook 支持。这意味着 AI 智能体从"单次任务执行"升级为"持续自我进化的系统"。
+🔗 https://claude.com/blog/new-in-claude-managed-agents
 
 🤖 Agent/编程
 
-⑥ Claude Code 推出"自动模式"，在权限安全上找到中间路
-Anthropic 工程团队发布博客，介绍 Claude Code 新增的 Auto Mode：用模型分类器代替人工审批——既不是每步都弹窗确认（93% 的确认其实是无效点击），也不是完全跳过权限检查。该模式专门用于拦截"越权行为"（如误删远程分支、上传 GitHub Token 到内部集群）。文中提到这类问题已有内部事故记录在案，Claude Opus 4.6 系统卡中也有详细说明。
-🔗 https://www.anthropic.com/engineering/claude-code-auto-mode
+② xAI 发布 Grok Build 命令行编程智能体（公测版）
+xAI 发布了 Grok Build 的早期公测版，这是一个面向专业开发者的命令行编程智能体，对标 Anthropic 的 Claude Code 和 OpenAI 的 Codex。支持计划模式、并行子智能体、直接集成代码仓库，首批向超级 Grok Heavy 订阅用户开放（首月 99 美元，原价 299 美元）。AI 编程工具竞争进入白热化阶段。
+🔗 https://www.theverge.com/ai-artificial-intelligence/930802/xai-launches-an-early-beta-of-its-agentic-cli-for-grok
 
-⑦ Anthropic 租下 SpaceX Colossus 超算，22 万张 GPU 上线
-Anthropic 确认租用马斯克旗下 SpaceX 的 Colossus 1 超算，新增逾 300 兆瓦算力和 22 万张英伟达 GPU。随即宣布 Claude Code 在 Pro、Max、团队和企业各档次的速率限制全线翻倍。另有 15 亿美元企业服务合资公司（与黑石、高盛合作）及 Akamai 18 亿美元云合同同步曝光。
-🔗 https://aitoolsrecap.com/Blog/ai-news-may-10-2026
-
-⑧ 谷歌"涂鸦"主页小组件：用自然语言生成安卓桌面组件
-谷歌在 Android Show 上演示了"Vibe-coded Widgets"——用户用自然语言描述需求，Gemini 直接生成定制化主屏幕组件。Chrome 安卓版同步集成 Gemini，可对页面内容提问；Gboard Rambler 则用 Gemini 做语音转文字的后处理清洗。
-🔗 https://9to5google.com/2026/05/12/the-android-show-2026/
-
-🔒 安全
-
-⑨ 美国政府与科技巨头签署 AI 预发布审查协议
-特朗普政府改变立场，商务部与微软、谷歌、xAI 等达成新协议，要求主要实验室在新前沿模型发布前接受政府预审。这是美国 AI 治理的重大转向，意味着前沿模型上市前要经政府过目。
-🔗 https://www.nytimes.com/2026/05/04/technology/trump-ai-models.html
+③ OpenAI 部署公司：花 40 亿美元和麦肯锡抢饭碗
+OpenAI 宣布成立 OpenAI 部署公司（Deployment Company），投资规模 40 亿美元，由 TPG 和 Tomoro 联合出资，专门提供企业 AI 落地咨询服务，直接挑战麦肯锡、埃森哲等传统咨询巨头。讽刺的是：传统咨询公司自己参与出资，相当于为自己的替代者埋单。
+🔗 https://openai.com/index/openai-launches-the-deployment-company/
 
 🛠 产品/应用
 
-⑩ Meta 发布 Muse Spark，同期泄露内部 AI 个人助理"Hatch"
-Meta 于 5 月 9 日推出创意 AI 产品 Muse Spark。同期内部"Hatch"个人 AI 代理和 Instagram AI 购物工具遭泄露。Meta 还在测试用 AI 骨骼结构分析识别未成年用户。作家斯科特·图罗代表出版商对 Meta Llama 4 训练数据提起诉讼。
-🔗 https://aitoolsrecap.com/Blog/MayNews2026.aspx
+④ Google 发布"谷歌本"（Googlebook）和安卓 AI 新品牌
+在 I/O 预热发布会"Android Show"上，谷歌宣布停用 Chromebook 品牌，推出全新 AI 原生笔记本"Googlebook"，内置"双杠发光条"设计，首批机型将于 2026 年秋上市。同时发布"Gemini Intelligence"品牌，统一覆盖手机、平板、手表、汽车和眼镜等全线安卓设备的 AI 功能。
+🔗 https://9to5google.com/2026/05/12/googlebooks-announcement/
 
-⑪ OpenAI 实时语音 API 新增三款模型
-OpenAI 上线三款新的实时语音模型：GPT-Realtime-2（推理型）、GPT-Realtime-Whisper（转录型）、GPT-Realtime-Translate（翻译型）。ChatGPT Excel 和谷歌表格插件同步发布，广告管理器测试版在美国扩大，Pacvue 和 Kepler 成为首批代理合作伙伴。
-🔗 https://jls42.org/en/news/ia-actualites-06-may-2026
-
-⑫ OpenAI 与微软独家合作到期，模型进驻 AWS Bedrock
-OpenAI 与微软的独家合作协议到期，OpenAI 模型现已可在 AWS Bedrock 上使用。另有消息称 OpenAI 和苹果正在洽谈允许用户在多个 AI 模型间自由切换。
-🔗 https://www.distillintelligence.com/briefings/ai-leaders-2026-05-08
+⑤ Anthropic 上线小企业版 Claude，接入 PayPal/QuickBooks 等主流工具
+Anthropic 正式推出 Claude for Small Business，整合了 QuickBooks、PayPal、HubSpot、Canva、DocuSign、谷歌 Workspace 等小企业常用工具。同步与 PayPal 合作推出免费"AI 能力"培训课程，并启动 10 城巡回路演（首站芝加哥）。这是 Anthropic 在企业端从大客户向中小企业下沉的明确信号。
+🔗 https://www.anthropic.com/news/claude-for-small-business
 
 📈 商业/观点
 
-⑬ Anthropic 年收入增长 80 倍，估值冲刺 9000 亿美元
-Anthropic CEO 达里奥·阿莫代（Dario Amodei）披露，一季度收入同比增长 80 倍，年化收入达 440 亿美元，并于 5 月初超越 OpenAI 成为收入最高的 AI 公司。年消费超百万美元的客户从两年前的约 12 家增至 500 多家，主要驱动力是 Claude Code 和与摩根大通联合开发的金融代理。新一轮融资估值目标 9000 亿美元。
-🔗 https://aitoolsrecap.com/Blog/ai-news-may-11-2026
+⑥ Anthropic 商业采用率首次超越 OpenAI，整体 AI 采用破 50%
+Ramp 月度 AI 指数显示：Anthropic 在美国企业中的采用率达 34.4%，首次超越 OpenAI（32.3%），同比近翻 4 倍，主要驱动力是 Claude Code 在企业开发中的强劲表现。整体 AI 采用率也首次突破 50%（50.6%）。这是 Anthropic 相对于 OpenAI 的历史性转折点。
+🔗 https://techcrunch.com/2026/05/13/anthropic-now-has-more-business-customers-than-openai-according-to-ramp-data/
 
-⑭ Anthropic 被踢出五角大楼合同，诉诸法院后获胜
-五角大楼与 SpaceX、OpenAI、谷歌、微软等签署 AI 合同，唯独将 Anthropic 排除在外——理由是特朗普政府将其列为"供应链风险"。Anthropic 拒绝提供用于自主武器和大规模监控的 Claude，并在旧金山和华盛顿同时起诉，加州联邦法官已裁定阻止政府排除行为。阿莫代与白宫幕僚长会谈后，双方称"富有成效"。
-🔗 https://aitoolsrecap.com/Blog/ai-news-may-11-2026
+⑦ Anthropic 洽谈以逾 3 亿美元收购 OpenAI/谷歌 SDK 供应商 Stainless
+据报道，Anthropic 正与 Stainless 进行深度谈判，后者是 OpenAI、谷歌、Meta 等公司官方 SDK（Python/TypeScript/Go 等语言版本）的开发商。收购价可能超过 3 亿美元。一旦成交，Anthropic 将掌控竞争对手依赖的核心开发者工具链，战略意义极为深远。
+🔗 https://www.theinformation.com/articles/anthropic-talks-buy-developer-tools-startup-used-openai-google
 
-⑮ 马斯克诉阿尔特曼庭审：穆拉蒂作证称阿尔特曼撒谎
-马斯克与 OpenAI/山姆·阿尔特曼（Sam Altman）之间的诉讼庭审持续发酵：前首席技术官米拉·穆拉蒂（Mira Murati）作证称阿尔特曼就新模型安全标准对其撒谎；格雷格·布罗克曼（Greg Brockman）日记作为证据呈庭；检方指控阿尔特曼制造"混乱和不信任"。马斯克的动机被披露为"用 OpenAI 控制权资助火星城市"，OpenAI 与 Anthropic 曾有过接近合并的谈判也随之曝光。
-🔗 https://www.distillintelligence.com/briefings/ai-leaders-2026-05-08
+⑧ Anthropic 据报以近 9000 亿美元估值寻求融资 300 亿美元
+彭博社和纽约时报同日报道：Anthropic 正在讨论新一轮融资，规模至少 300 亿美元，估值超过 9000 亿美元，较今年 2 月的 380 亿美元估值提升逾 2.4 倍。首席执行官达里奥·阿莫代伊（Dario Amodei）披露年化收入达 300 亿美元，预计年增长 80 倍。谷歌和亚马逊此前已分别承诺注资 400 亿和 250 亿美元。
+🔗 https://www.bloomberg.com/news/articles/2026-05-12/anthropic-in-talks-to-raise-30-billion-at-900-billion-valuation
+
+⑨ OpenAI 首席执行官阿尔特曼出庭作证，马斯克诉讼进入尾声
+萨姆·阿尔特曼（Sam Altman）5 月 12 日在奥克兰联邦法庭出庭，回应马斯克关于"盗取慈善机构"的指控，并透露马斯克曾寻求独控 OpenAI、甚至试图将其并入特斯拉。5 月 13 日为庭审最后一个完整证词日。案件走向将对 AI 行业公司治理产生重要影响。
+🔗 https://www.cnbc.com/2026/05/12/openai-trial-updates-sam-altman-set-to-testify-in-musk-suit.html
+
+⑩ Isomorphic Labs 完成 21 亿美元 B 轮，押注 AI 药物发现
+谷歌 DeepMind 分拆公司 Isomorphic Labs 完成 21 亿美元 B 轮融资，由 Thrive Capital 领投，谷歌风投跟投，是欧洲生物科技史上最大融资之一，也是 AI 药物发现领域有史以来最大单笔。资金将用于推进基于阿尔法折叠（AlphaFold）技术的 AI 药物设计引擎，并将候选药物推进临床试验。
+🔗 https://www.reuters.com/legal/litigation/google-backed-isomorphic-raises-21-billion-scale-ai-driven-drug-discovery-2026-05-12/
+
+⑪ Peter Yang：AI 裁员公告模版泛滥，真相是成本削减，不是"转型"
+Peter Yang（拥有 14 万订阅者的 AI 实操博主）发推指出，当下科技公司"因 AI 而裁员"的公告已成为固定套路——用"AI 改变了我们的工作方式"掩盖纯粹的成本削减动机。这种话术正在透支员工和公众的信任，值得警惕。
+🔗 https://x.com/petergyang/status/2054569893060809151
+
+⑫ Nikunj Kothari：VC 已成"共识资本"，真正的创始人不需要这些信号
+Nikunj Kothari（FPV Ventures 合伙人）批评当前风险资本行业：大多数 VC 只在市场验证后才跟进，已失去发现真正早期机会的意愿和能力。他认为真正为使命而创业的创始人不依赖这些"共识资本"，这也侧面说明了当前 VC 生态的困境。
+🔗 https://x.com/nikunj/status/2054599845214650442
 
 🎙 播客
 
-Training Data（红杉资本出品）：Waymo 联合创始人——2000 万次出行与自动驾驶的长期主义
-Waymo 联合创始人德米特里·多尔戈夫（Dmitri Dolgov）在红杉峰会分享近 20 年打磨自动驾驶的心路历程。他强调：自动驾驶不是算法问题，是"量产可靠性"问题，要在最坏的天气和最复杂城市场景中持续积累数据。Waymo 已完成 2000 万次商业载客，日活用户覆盖现场嘉宾大半。他认为短期全无人化驾驶的关键瓶颈不是技术，而是监管和规模化运营效率。
+Training Data：「Suno 创始人 Mikey Shulman：人人都可以创作音乐」
+要点：在 Suno 出现之前，音乐创作几乎只属于极少数人，其余 80 亿人口都只是消费者。Suno 彻底改变了这一格局——平台上 90% 的用户每天都在创作内容，而且创作本身就是目的，而非为了发布或传播。Mikey 认为，创作带来的满足感本身就是娱乐，这是音乐消费方式的根本性转变。对于 AI 音乐版权争议，他的立场是：技术赋能人人创作的权利，远比保护旧有版权秩序更重要。
+🔗 https://www.youtube.com/watch?v=Jq3BIGz4vXQ
 
-📰 行业速报（ai-digest.liziran.com，最新更新至 2026 年 4 月）
+━━━━━━━━━━━━━━━━━━━━━━━
 
-① Claude Code 遭投毒分发，特朗普关税波及 AI 供应链（4 月 6 日）
-② Anthropic 向内容创作者追加付款要求，同期收购一家生物科技公司（4 月 5 日）
-③ 犹他州立法允许 AI 开具精神科处方药，研究显示 80% 用户无法识别 AI 错误（4 月 4 日）
-④ OpenAI 收购了一档定期采访其 CEO 的脱口秀节目（4 月 3 日）
-⑤ 微软将 Copilot 标注为"仅供娱乐"后继续推向市场（4 月 2 日）
-⑥ Claude Code 完整源码通过 npm 包意外泄露（4 月 1 日）
+📰 行业速报（截至 2026 年 4 月 6 日，来源：ai-digest.liziran.com）
+
+① Claude Code 遭投毒分发，供应链安全再度告急
+② Anthropic 因 AI 收益问题向内容创作者索取额外付款，同时收购生物科技公司
+③ OpenAI 收购采访过自家 CEO 的脱口秀节目，媒体与 AI 的边界持续模糊
+④ 微软将 Copilot 标注为"仅供娱乐"后继续正常发布，监管态度耐人寻味
+⑤ 黄仁勋公开宣称 AGI 已实现，研究界集体公开反对
+⑥ 谷歌开始替媒体改写标题，内容生态控制权悄然转移
 
 🔗 https://ai-digest.liziran.com/zh/archive.html
 
-📚 论文速报（ai-brief.liziran.com，2026 年 5 月 13 日，296 篇过滤）
+━━━━━━━━━━━━━━━━━━━━━━━
 
-① GCWM：几何冲突可预测持续微调时的遗忘，在 Qwen3 系列上超越无数据基线
-② KV 驱逐新思路：可学习全局预算驱逐策略超越全量缓存，将键值缓存重新定义为"信号过滤"
-③ ROMA：多模态大模型在生产环境模糊图像上性能显著下降，修复方案是第二次前向传播加教师强制
-④ Metal-Sci：苹果芯片大模型内核基准测试，10 个科学任务 + 屋顶线适配度评估 + 进化搜索
+📚 论文速报（2026 年 5 月 13 日，来源：ai-brief.liziran.com）
+
+① GCWM（Qwen3 实测）：用几何冲突理论解释并控制持续微调中的"灾难性遗忘"，无需回放数据即可防止新知识覆盖旧能力
+② ROMA：专门解决多模态模型在模糊/受损图片上强化学习微调时的奖励中毒问题，在 7 个基准上提升约 2.4%
+③ Soohak 数学基准：64 位数学家手工出题 439 道研究级难题，GPT-5 仅得 26.4%，Gemini-3-Pro 最高 30.4%，LLM 数学能力距真正研究级仍有巨大差距
+④ DCI 检索智能体：不用向量索引，直接用终端工具（grep/文件读取）搜索原始语料，在多个基准上超越传统稠密/稀疏检索方法
+⑤ LoPE：在 GRPO 训练中，向提示词前面加一段拉丁乱码可以显著缓解"零优势问题"，解锁更多推理探索路径——这个发现既反直觉又有效
 
 🔗 https://ai-brief.liziran.com/
 
+━━━━━━━━━━━━━━━━━━━━━━━
+
 📎 Notion 存档
-https://www.notion.so/AI-Builders-Digest-2026-05-14-360941f9890481f3a9c8db2bc547eef0
+https://www.notion.so/AI-Builders-Digest-2026-05-15-361941f9890481a5a8c4c7331e66fa65
