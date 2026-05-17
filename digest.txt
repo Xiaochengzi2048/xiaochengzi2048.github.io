@@ -1,119 +1,101 @@
-🗞 AI Builders 日报 · 2026.05.16
-
-🧠 模型
-
-① Codex 登陆 ChatGPT 手机端
-Sam Altman（OpenAI 首席执行官）宣布 Codex 正式进入 ChatGPT 移动端（iOS/Android）。最初 Codex 只有桌面版，手机版让开发者可以远程连接到运行 Codex 的机器，随时查看输出、审批改动、启动新任务。和 Anthropic 的 Claude Code 正面竞争进入白热化。
-🔗 https://x.com/sama/status/2055034461591588916
-
-② OpenAI 重组，Greg Brockman 统管全部产品，全押 Agent
-Sam Altman 同日发推提及一系列内部变化，内部备忘录明确今年战略"全押 AI Agent"，Greg Brockman 正式接管所有产品线。这是 OpenAI 本轮从工具到 Agent 平台转型的最直接信号。
-🔗 https://x.com/sama/status/2055034714231345475
-
-③ xAI 正式退役旧版 Grok，全面切换到 Grok 4.3
-5 月 15 日，xAI 退役多个旧版 Grok 模型，所有流量统一走 Grok 4.3——支持无/低/中/高四档推理强度。同期上线的还有语音 API（Grok Voice Think Fast 1.0）、自定义声音克隆、以及更高画质的图像生成 API。
-🔗 https://docs.x.ai/developers/migration/may-15-retirement
+🗞 AI Builders 日报 · 2026.05.17
 
 🤖 Agent/编程
 
-④ "新模型一发，一年的脚手架作废了"
-Aaron Levie（Box 创始人）转了一张截图，配文：花一年搭好的 agent 脚手架，模型一更新全部废掉。这条推 592 赞、39 转，评论区热烈——这是当下 agent 工程师最真实的痛点：模型迭代比工程积累快。
-🔗 https://x.com/levie/status/2055136119969529993
+① OpenAI Codex 进入"极限创始人模式"，变身"Mac 上的智能 Excel"
+Swyx（Shawn Wang）现场看了 Gabriel Chua 演示，直呼 Codex 三个月内已完全脱胎换骨。他把这个版本形容为"Mac 上的 agentic Excel"，并感叹开发团队完全进入了创始人极限冲刺状态。Codex 路线图的部分暗示也在 OpenAI 一场主旨演讲中意外曝光。
+🔗 https://x.com/swyx/status/2055494400252481687
 
-⑤ Replit iOS App 重新上架，可以免费接入 vibe-coded 的外部网站
-Amjad Masad（Replit 首席执行官）宣布和苹果谈妥，App 在下架 4 个月后重新上线。同时推出新功能：在 Replit 之外 vibe-code 的网站，可以直接导入并免费获得对应移动端 App。
-🔗 https://x.com/amasad/status/2055185058282226146
-🔗 https://x.com/amasad/status/2055097107758076254
+② Nikunj：AI Agent 已能自主遍历 2000 条数据库记录并修 Bug
+Nikunj Kothari 分享了一次震撼体验：一个 agent 自主扫描了整个 2000+ 行的数据库，修复了所有商品图片问题和由不同协作者引入的前端 Bug，整个过程无需人工干预。他感叹"给了正确的工具，/goal 就是 AGI"。
+🔗 https://x.com/nikunj/status/2055426430654439485
 
-⑥ Vercel AI CLI：终端里直接渲染图片
-Guillermo Rauch（Vercel 创始人）演示了新工具：在终端运行 `npx ai-cli image '描述'`，可以直接渲染图片，背后走 Vercel AI Gateway，打通了 image/video/text 等多种模型。
-🔗 https://x.com/rauchg/status/2054989456189648918
+③ steipete 发布 clawpatch 0.1.0：让 AI 自动审查并修复代码库
+Peter Steinberger 上线了 clawpatch 0.1.0。这个工具把代码库映射为语义功能切片，逐一检查 Bug 和质量问题，并明确记录修复尝试和验证结果。他还分享了自己因 AI 开发支出被人质疑的经历，并解释自己的终极目标是搞清楚"未来的软件该怎么构建"。
+🔗 https://x.com/steipete/status/2055405041843052792
 
-⑦ Peter Steinberger 给 Codex 装上了 code review 技能
-Peter Steinberger 分享了他的工作流：给 discrawl 加了一个新功能（存储媒体），让 Codex 先完成任务，再用自己写的 codex review skill 验收——测了一圈发现 Codex 还是会循环卡死。
-🔗 https://x.com/steipete/status/2055203470941061600
+④ xAI 发布 Grok Build CLI，正式加入 AI 编程 Agent 赛道
+xAI 推出首款 AI 编程 Agent Grok Build，目前仅对 SuperGrok Heavy 订阅用户（每月 300 美元）开放早期测试。产品内置"计划模式"，用户可在执行前审阅并批准编码方案。这是 xAI 在 Anthropic Claude Code 和 OpenAI Codex 上线逾一年后的正式入场。
+🔗 https://x.com/rauchg/status/2055491454307582454
 
-⑧ Dan Shipper：理发师聊 Codex，AI 使用已经扩散到非技术人群
-Dan Shipper（Every 创始人）在理发店里发现理发师在用 Claude 跑加密交易策略，旁边椅子上的人公司刚买了 1300 个 Claude 席位。这条观察说明 2026 年 AI 渗透速度已远超行业预期。
-🔗 https://x.com/danshipper/status/2055030691180503152
+⑤ Dan Shipper：OpenClaw 很强，但作为平台极难依赖
+Every 的 Dan Shipper 深度复盘了基于 OpenClaw 搭建 agent 即服务平台的尝试。核心结论是 OpenClaw 非常强大，但迭代极快，平台稳定性成为最大挑战。他同时放话"Codex 原生应用是未来"。
+🔗 https://x.com/danshipper/status/2055347527457886336
 
-⑨ Dan Shipper：让组织变成 Agent 公司，关键在领导层自己用不用
-Dan Shipper 分享了他的结论：判断一家公司能否成功推 Agent 转型，最强的先行指标是领导层自己是否每天在用 Codex 或 Claude Code。他正在和头部公司的管理层私下合作。
-🔗 https://x.com/danshipper/status/2055015466054410400
-
-⑩ Zara Zhang 5/23 在旧金山办 Agent Context 管理主题活动
-Zara Zhang（前红杉分析师、AI builder）正在思考如何为 Agent 管理和精选上下文。5 月 23 日将在旧金山联合主办活动，格式是 5 分钟快闪 demo，分享真实 Agent 工作流。
-🔗 https://x.com/zarazhangrui/status/2054981832408760782
+⑥ Guillermo Rauch：精通 Agent 管理 × 扎实基础 = 无可匹敌
+Vercel CEO Guillermo Rauch 发出高赞推文：如果你既能出色地管理 agent，又对底层基础有深刻理解，你将无可撼动。他强调，新时代对"工匠精神"的需求不减反增，能力标准只是在演变，不是在消失。此推文获得近 1900 个点赞。
+🔗 https://x.com/rauchg/status/2055278852931530784
 
 🛠 产品/应用
 
-⑪ ChatGPT 接入银行账户，仅限美国 Pro 用户
-OpenAI 上线个人金融功能预览版，通过 Plaid 接入真实银行账户和券商账户，让 ChatGPT 能看到余额和交易记录后给出财务建议。门槛是：Pro 订阅 + 美国身份。监管定性（投资顾问还是信息服务）仍未明确。
-🔗 https://openai.com/index/personal-finance-chatgpt/
+⑦ ChatGPT 上线个人财务功能，Peter Yang 担忧隐私保护
+OpenAI 为美国 Pro 用户推出 ChatGPT 财务功能，接入超过 12000 家金融机构，由 Plaid 提供数据服务，底层模型为 GPT-5.5。Peter Yang 体验后表示"功能很棒"，但已关闭"为所有人改进模型"选项，因为他不希望个人财务数据被用于训练。他指出目前没有"仅为我使用"的选项。
+🔗 https://x.com/petergyang/status/2055450577094738018
 
-⑫ Sea Limited 把 Codex 铺到全工程团队
-东南亚科技巨头 Sea Limited 宣布在全部工程团队部署 OpenAI Codex，CPO 撰文解释：用 Codex 加速亚洲市场 AI-native 软件开发，这是他们面向 AI 时代的战略押注。
-🔗 https://openai.com
+⑧ Vercel 为 Agent 部署加上企业级 SSO 防护
+Guillermo Rauch 宣布 Vercel 支持将 agent 生成的应用部署在 Okta 等 SSO 系统保护之后，哪怕是生产环境也能形成安全的"内部互联网"。这让 v0、Codex、Claude 等工具生成的应用在企业环境中有了正式的安全边界。
+🔗 https://x.com/rauchg/status/2055440326765244742
 
-⑬ Gradium AI：9 个月创业公司，第三方 TTS 评测全面超过 OpenAI、ElevenLabs
-Matt Turck（FirstMark Capital 创始人）分享：他投资的 Gradium AI 在第三方语音 TTS 基准测试上已超越 OpenAI、ElevenLabs、Cartesia 和 Deepgram。
-🔗 https://x.com/mattturck/status/2055029555455222199
+⑨ Andon Labs 让四大 AI 模型各自运营一档自主电台
+初创公司 Andon Labs 让 Claude、ChatGPT、Gemini 和 Grok 各自独立运营一档由 agent 自主播出的电台节目，探索 AI 在媒体内容生产上的自主化边界。
 
-⑭ Google 把"操纵 AI 搜索结果"写进垃圾内容政策
-Google 正式将试图操控 AI Overview 和 AI Mode 搜索结果的行为定义为 spam，明确写入搜索质量政策。Google I/O 预计 5 月 19-20 日发布全新 Gemini 模型。
-🔗 https://theverge.com
+⑩ steipete 看好 Svelte：比 React 更少坑，Codex 也更擅长处理
+Peter Steinberger 最近用 Svelte 做了几个项目，发现它是一个比 React 陷阱更少、复杂度更低的替代方案，而且 Codex 对 Svelte 的处理效果也出人意料地好。
+🔗 https://x.com/steipete/status/2055402519841411165
 
 📈 商业/观点
 
-⑮ "有一整批公司正陷在 AI 精神错乱里"
-HashiCorp 创始人 Mitchell Hashimoto 发推说他相信现在有一大批公司深陷 AI psychosis：董事会把"AI 转型"当 KPI 压下来，工程师被迫先上线再说。这条推冲上 HN 前排，工程师们纷纷讲述自家公司的故事。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-16-chatgpt-reads-us-pro-users-bank-accounts-three-benchmarks
+⑪ Aaron Levie：AI 不是软件，要用"前线部署工程"模式
+Box CEO Aaron Levie 分享了一个深刻判断：AI 和软件的本质不同在于，软件交付后是稳定的，而 AI 需要持续演化和调整。他认为"前线部署工程师"（forward deployed engineer）模式才能真正发挥 AI 的价值，这也是 OpenAI 新成立的 Deployment Company 背后的核心逻辑。
+🔗 https://x.com/levie/status/2055501840419328286
 
-⑯ Nikunj Kothari：有数据护城河的大公司，要么开放要么死
-Nikunj Kothari 判断：所有有数据壁垒的大公司正在意识到必须走"headless"路线——把系统对 Agent 开放。如果只为人类守住入口，在 Agent 市场面前价值可能缩水 100 倍。
-🔗 https://x.com/nikunj/status/2054924517135540320
+⑫ Aaron Levie："无头软件"是未来
+Aaron Levie 分享了一个关于"无头软件"（Headless software）的论断，认为未来软件将不再以界面为核心，而是以 API 和 agent 可调用能力为中心。这篇文章获得了 250+ 点赞。
+🔗 https://x.com/levie/status/2055357619888595271
 
-⑰ Peter Yang：AI 黑客松变了，一半时间都在等 Agent 跑完
-Peter Yang（前 Roblox 产品总监）在黑客松现场发推：现在参加 AI 黑客松，大家都在等 Agent 跑完，节奏已经和以前完全不一样了。307 赞，引发大量共鸣。
-🔗 https://x.com/petergyang/status/2055093015304396986
+⑬ Madhu Guru：AI 时代，产品经理需要发明打法，而不是执行剧本
+Madhu Guru 观察到，过去二十年训练出来的产品经理习惯执行固定打法，而 AI 时代要求从零发明新方法。他认为这是一代人正在经历的结构性困境：过去有效的方法论在 AI 面前系统性失效。
+🔗 https://x.com/realmadhuguru/status/2055414865146327088
 
-⑱ Aaron Levie：AI 正在模糊职能边界，所有人要重新定义自己的工作
-Aaron Levie 观察：AI 让每个人都能轻易延伸进别人的职能领域，当前正处于一个角色边界被打乱的时期。整个社会需要重新定义"这些工作在 Agent 时代是什么样的"。
-🔗 https://x.com/levie/status/2055143231625818554
+⑭ 新加坡估计未来两年将有 13 亿 AI Agent 在国内运行
+Swyx 在一场活动上听到新加坡 AI 政务负责人的预测：该国在未来两年将部署约 13 亿个 AI Agent，同时正在构建国家级 MCP 网关。
+🔗 https://x.com/swyx/status/2055470634331750588
 
-⑲ Swyx：博客死于"团队"署名，个人所有权带来真正的问责
-Swyx 发推：博客死于"某某团队出品"而非个人署名。有了个人所有权，才有个人问责。这是对 AI 内容泛滥背景下内容可信度的直接回应。
-🔗 https://x.com/swyx/status/2055079344632926603
+⑮ Anthropic 与盖茨基金会达成 2 亿美元合作，聚焦全球卫生与教育
+Anthropic 和比尔及梅琳达·盖茨基金会宣布四年期 2 亿美元合作，将通过 Claude 推动全球医疗健康、K-12 教育和小农农业领域的 AI 普及，覆盖美国、撒哈拉以南非洲和印度，并将用于脊髓灰质炎和 HPV 疫苗/疗法研发。
+🔗 https://www.anthropic.com/news/gates-foundation-partnership
+
+⑯ Anthropic 被报道正在洽谈以 9500 亿美元估值融资
+据报道，Anthropic 正在谈判新一轮融资，估值将达 9500 亿美元，是今年 2 月 3800 亿美元估值的 2.5 倍。CEO Dario Amodei 披露公司年化收入已达 300 亿美元，本年有望增长 80 倍。
+🔗 https://www.nytimes.com/2026/05/12/technology/anthropic-funding-950-billion-valuation.html
+
+⑰ Altman 在庭审中被律师质疑"说谎与自我交易"历史
+在马斯克诉 Altman 案第三周，律师在陪审团面前反复追问 Sam Altman 在与 OpenAI 有业务往来的多家公司中的个人投资，并将其定性为系统性"说谎与自我交易"行为。这是 AI 行业核心人物的可信度第一次交由普通陪审员裁决。
 
 🎙 Podcast
 
-The MAD Podcast with Matt Turck: Why Every AI Agent Needs Its Own Computer | Ivan Burazin (Daytona)
-Ivan Burazin 是 Daytona（agent 沙箱基础设施初创公司）的 CEO，这期播客从第一原理出发探讨：为什么 Agent 需要自己的电脑？Ivan 的核心论点是：每个 Agent 至少需要一个沙箱，有时候需要多个——就像知识工作者必须有电脑才能工作。当他尝试让 Claude 直接访问公司银行账户时，发现这个假设根本行不通；必须给 Agent 配备独立的机器。他还拆解了完整的 Agent 技术栈：模型、沙箱、工具、MCP、记忆、编排，以及为什么 Daytona 最终放弃 Kubernetes 自己写调度器。
-🔗 https://www.youtube.com/watch?v=kMXJrzAa5fM
+Unsupervised Learning（Redpoint）: Ep 86 — 杨立昆谈离开 Meta、打破大语言模型范式，以及为何辛顿是错的
+杨立昆（Yann LeCun）接受采访，首次系统阐述了他离开 Meta 的原因：公司战略全面转向大语言模型，他的世界模型（JEPA 架构）研究失去了内部优先级。他强调，大语言模型不是通往人类级智能的路径，因为它们既无法预测行动后果，也无法进行搜索式规划。他创立的新公司 Ami Labs 专注于通过联合嵌入预测架构（JEPA）构建真正理解物理世界的 AI，核心技术为表征空间预测配合显式正则化防止坍塌（最新论文：LE World Model）。他还为开源 Llama 2 正名：这是他在 Meta 期间最重要的贡献之一，当时他力排法务和政策部门的反对，推动了开源决定。
 
 📰 行业速报
 
-① ChatGPT 上线个人金融功能（仅限美国 Pro 用户），通过 Plaid 接入真实银行和券商账户
-② 三篇 Agent 记忆基准测试论文同日落地 HuggingFace，STALE / MemLens / MemEye 从三个维度全部给出负面结论
-③ OpenAI 内部重组，Greg Brockman 接管全部产品线，战略全押 AI Agent
-④ Anthropic 宣布与 PwC 扩大合作，PwC 将用 Claude 为客户构建技术并重塑企业职能
-⑤ Sea Limited 把 Codex 铺到全工程团队，加速亚洲市场 AI-native 开发
-⑥ YouTube 对全体成年用户开放 deepfake AI 相似面孔检测
-⑦ Google 将操控 AI 搜索结果定义为 spam，写入搜索垃圾内容政策
-⑧ arXiv 开始封禁充斥 AI 生成内容、作者明显未核查输出的论文作者
-⑨ Runway 押注视频生成是通往 World Model 的路径
-⑩ 美国商务部 CAISI 宣布将对新前沿模型进行上市前评估
+① Poop AI 创始人主动向媒体兜售 15 万张用户大便照片，暴露 AI 医健应用的隐私暗面
+② CTF 安全竞赛宣告"场景已死"：前沿模型能在比赛开放数分钟内自动解题，限时排名失效；arXiv 同期封禁上传 AI 垃圾论文的账号
+③ Altman 在证人席被追问投资利益冲突，OpenAI 同时宣布内部重组，将全部产品业务集中交由 Brockman 管理，全面押注 AI Agent
+④ OpenAI 与马耳他政府合作，为全体公民开通 ChatGPT Plus，首次按国家整建制推送付费产品
+⑤ Isomorphic Labs（DeepMind 的药物发现子公司）完成 21 亿美元 B 轮融资，由 Thrive Capital 领投
 
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-16-chatgpt-reads-us-pro-users-bank-accounts-three-benchmarks
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-17-stool-app-founder-tried-selling-150000-user-photos-ctf
 
-📚 论文速报（5 月 13 日，296 篇筛选）
+📚 论文速报（2026.05.17，共筛选 652 篇）
 
-① GCWM：用几何冲突预测持续微调的遗忘，在 Qwen3 0.6B–14B 上超越无数据基线
-② KV Eviction：可学习全局预算的 KV 驱逐策略超越全缓存，把 KV cache 重新定义为信号过滤问题
-③ ROMA：生产环境模糊图片使多模态大模型 RL rollout 奖励中毒，修复方案用第二次前向传播+教师强制
-④ Metal-Sci：Apple Silicon LLM kernel benchmark，覆盖 10 个科学任务，基于 roofline 分析 + 进化搜索
+① SU-01：反向困惑度课程学习 + 两阶段强化学习，30B 模型在 IMO 和 IPhO 竞赛中达到金牌水准
+② SDAR：将自蒸馏降级为门控辅助，在 ALFWorld、WebShop、Search-QA 上比 GRPO 提升 7-10 个百分点
+③ Orthrus：双架构共享单一 KV 缓存，无损推理速度最高提升 7.8 倍
+④ Warp-as-History：用相机诱导的变形帧作为伪历史帧，让冻结模型在零样本情况下跟随轨迹
+⑤ PyRAG：将多跳推理写成可执行 Python 代码，让运行时而非模型自身来捕获推理错误
 
 🔗 https://ai-brief.liziran.com/
 
 📎 Notion 存档
-https://www.notion.so/AI-Builders-Digest-2026-05-16-362941f98904815b8e58c9a59f420bc7
+https://www.notion.so/AI-Builders-Digest-2026-05-17-363941f98904817ca0c8ee001bca522d
