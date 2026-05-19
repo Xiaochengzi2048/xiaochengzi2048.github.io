@@ -1,87 +1,117 @@
-🗞 AI Builders 日报 · 2026.05.18
+🗞 AI Builders 日报 · 2026.05.19
 
 🧠 模型
 
-① Sam Altman 宣布 ChatGPT 图像功能 2.0 登陆印度，已产生超过 10 亿张图像
-印度用户高速爆发，Sam Altman 亲自发推称赞"awesome to see"，显示 ChatGPT 的图像生成能力在非西方市场的强劲增长势头。
+① GPT-5.5 Instant 成为 ChatGPT 默认模型
+OpenAI 将 GPT-5.5 Instant 升为 Free/Plus/Pro 三档默认模型，AIME 2025 数学从 65.4 提升到 81.2，多模态 MMMU-Pro 从 69.2 升至 76。新增记忆功能，可搜索历史对话、上传文件和 Gmail 来个性化回复。
 🔗 https://x.com/sama/status/2056165722804654196
 
-② xAI 发布 Grok 4.3，带来百万 token 上下文窗口和 Agent 电脑控制能力
-Grok 4.3 已上线 xAI API、微软 Azure AI Foundry 和甲骨文云，支持写代码、装依赖、生成文件等 Agent 能力（"Grok Computer"功能层），定价 $1.25/M 输入、$2.50/M 输出。
-🔗 https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-grok-4-3-on-microsoft-foundry-latest-generation-agentic-capabilities/4517096
-
-③ Google I/O 2026 明天（5月19日）开幕，Gemini 4.0、Android XR 眼镜等重磅产品即将亮相
-Peter Yang 预告"Google 这周准备了很多干货"，谷歌 I/O 2026 主题演讲将于北京时间5月20日凌晨1点开始，预期发布 Gemini 4.0、安卓 XR 眼镜（三星/Warby Parker/Gentle Monster 等合作）和 Aluminium OS（替代 ChromeOS 的安卓桌面版）。
+② Google I/O 2026 发布 Gemini 4、安卓 XR 眼镜、新操作系统
+Google 在 5 月 19 日 I/O 大会上集中发布：旗舰模型 Gemini 4.0（更强推理和 Workspace 集成）、统一文本/图片/视频的 Gemini Omni、与三星/Warby Parker/Gentle Monster 等合作的安卓 XR 智能眼镜，以及替代 ChromeOS 的新 Aluminium OS。Peter Yang 提前放话「我那些在 Google 的朋友已经在做大事了」。
 🔗 https://x.com/petergyang/status/2056210471917912140
+
+③ 英国 AI 安全研究所：Claude Mythos 和 GPT-5.5 均能开发真实浏览器漏洞
+英国 AISI 评估报告显示，Claude Mythos 在 10 次尝试中有 3 次完成 32 步企业网络攻击，GPT-5.5 完成 2 次；GPT-5.5 还解决了一道逆向工程题。Claude Mythos 目前仅向约 50 个机构开放，GPT-5.5 已面向广泛付费用户。报告被视为前沿模型进攻性 AI 能力的重要警示。
+🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-19-2026
+
+④ Mistral CEO 在法国议会点名 Claude Mythos 是国家安全威胁
+Mistral AI CEO Arthur Mensch 在法国议会委员会作证时，直接点名 Claude Mythos 对法国军事代码库构成风险："一旦外国 AI 扫描并绘制了你的军事代码库，就无法撤销。" 他同时区分了能力风险和依赖风险，后者"几乎不可逆"。这是首次有大型 AI CEO 在政府听证中公开点名竞争对手特定模型为国家安全风险。
+🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-19-2026
 
 🤖 Agent/编程
 
-④ Thariq（Claude Code 产品负责人）在新加坡开发者活动上同时拿两台笔记本"双持"出场
-Claude Code 团队负责人 Thariq 出席新加坡开发者活动，发推戏称"双持"笔记本，引发 AI 编程社区热议。
-🔗 https://x.com/trq212/status/2056145415867937182
+⑤ Vercel 发布 Zero — 专为 AI 编程助手设计的编程语言
+Vercel CEO Guillermo Rauch 发布 Zero（v0.1.1，Apache-2.0），这是一门为 Claude Code、Cursor 等 AI 编程工具优化的编程语言：编译器报错以结构化 JSON 输出（而非人类可读文本），编译产物小于 10KB，函数必须显式声明副作用。发布 24 小时内获得超过 900 个 GitHub Star。
+🔗 https://x.com/rauchg/status/2056201218540904667
 
-⑤ Nikunj 展示用 claude --dangerously-skip-permissions 给代码库加"aura"的效果
-Nikunj Kothari（FPV Ventures 合伙人）分享 Claude Code 的大胆用法：跳过权限限制，让 AI 自由优化代码库并"加点氛围感"，截图引发共鸣。
+⑥ Nikunj：用 claude --dangerously-skip-permissions 让 AI 优化代码库并加点「气场」
+FPV Ventures 合伙人 Nikunj Kothari 分享了一个 Claude Code 工作流：直接跑 /goal improve the codebase for performance and add a bit of aura，让模型自主改进代码库。这个用法获得 50 赞，评论区好奇「气场」到底改了什么。
 🔗 https://x.com/nikunj/status/2056014576215601431
 
-⑥ Garry Tan 力推 ZeroEntropy：处理12万条 Markdown 个人知识库，性能排第一
-Garry Tan（YC 总裁）在个人 AI 场景测试中，ZeroEntropy 在处理他的 12 万条 Markdown 笔记时拿下最高分，超越了其他检索方案。
-🔗 https://x.com/garrytan/status/2056122508550738223
+⑦ Podcast：Claude Code 能成为你的第二大脑
+Every 旗下「AI & I」播客本期主题：如何把 Claude Code 作为第二大脑使用。讨论了 AI 辅助记忆、工作流整合与个人知识管理的结合实践。
+🔗 https://www.youtube.com/watch?v=in7i-EVDDlk
 
-⑦ Swyx 谈 Agent Excel：把侧边栏展开就是主界面
-Swyx 在讨论 Agent Excel 功能时指出，这类产品的本质就是把 AI 侧边栏扩展成主体界面，揭示了下一代办公软件的交互范式转变方向。
-🔗 https://x.com/swyx/status/2056201387172843800
+🛠 产品/应用
+
+⑧ Sam Altman：ChatGPT 图像功能在印度创造超 10 亿张图片
+OpenAI CEO Sam Altman 宣布 ChatGPT Images 2.0 在印度已生成超过 10 亿张图片，表示看到这一数字很振奋。
+🔗 https://x.com/sama/status/2056165722804654196
+
+⑨ OpenAI 确认推出「超级应用」——ChatGPT + Codex + Atlas 浏览器合并
+OpenAI 公开确认将 ChatGPT（9 亿周活用户）、Codex（400 万周活）和 Atlas 浏览器整合为单一桌面超级应用，由 Codex CEO Thibault Sottiaux 领导统一产品团队，Greg Brockman 主导整合工作。目标是在潜在 2026 年 IPO 前将普通用户转化为付费高频用户。
+🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-19-2026
+
+⑩ ChatGPT 接入银行账户——个人理财功能上线（美国 Pro 用户）
+OpenAI 为 ChatGPT Pro 用户（美国）上线银行账户连接功能，接入 12000 多家金融机构（Chase、Fidelity、Schwab、Robinhood、美运），支持消费看板、投资组合查看、订阅追踪和自然语言财务问答。由 4 月收购的金融科技初创公司 Hiro 提供技术支持，仅读取权限，不能转账或交易。
+🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-19-2026
+
+⑪ Anthropic 收购给 OpenAI/Google 做 SDK 的 Stainless
+Stainless 是一家 2022 年成立的纽约公司，专门帮 OpenAI、Google、Cloudflare 自动化生成多语言客户端 SDK。Anthropic 本周将其收购。这意味着 Anthropic 在开发者接入层上做了卡位——开发者安装 SDK 时对一家 API 的第一印象，现在归 Anthropic 所有。收购金额未披露。
+🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-19-2026
+
+⑫ PwC 全球部署 Claude——3 万名美国专业人员将获认证
+PwC 将 Claude Code 和 Claude Cowork 推广至全球，与 Anthropic 联合成立卓越中心，新设基于 Claude 的财务官办公室业务组。实际成效：保险核保从 10 周压缩到 10 天，安全任务减少最多 70% 时间。
+🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-18-2026
 
 📈 商业/观点
 
-⑧ Aaron Levie：AI 时代就业结构暂时错位，但基础知识更重要
-Box CEO Aaron Levie 发表两条高赞推文：一条说 CS 毕业生面对的是旧岗位收缩、新岗位兴起的"暂时错位"，一条强调 AI 会让人误以为不需要深入某个领域，但基本功比以往任何时候都更重要（425赞、53转发）。
+⑬ Musk 起诉 OpenAI 和 Altman 败诉——陪审团两小时一致裁决
+联邦陪审团用不到两小时裁定 Musk 对 OpenAI 和 Sam Altman 的全部诉求不成立（诉讼时效已过）。Musk 曾主张 OpenAI 偏离非营利使命，要求法院介入公司方向。走出法庭的 Altman 赢了官司，但庭审期间双方互相攻击可信度的细节仍让公众对两边都持保留态度。
+🔗 https://www.nytimes.com/2026/05/18/technology/elon-musk-lawsuit-openai-sam-altman.html
+
+⑭ Anthropic 估值冲击 9000 亿美元——筹资 300 亿
+Anthropic 正在接近完成一轮由 Sequoia、Dragoneer、Greenoaks、Altimeter 联合领投的 300 亿美元融资，估值超过 9000 亿（对比 2 月时的 3800 亿）。预计 5 月底完成，将超越 OpenAI 3 月时的 8520 亿估值，成为估值最高的私人 AI 公司。
+🔗 https://www.theinformation.com/briefings/anthropic-picks-co-leads-900-billion-valuation-funding-round
+
+⑮ Aaron Levie：CS 学生面临岗位转型，基础知识仍是核心
+Box CEO Aaron Levie 发帖指出 CS 毕业生的职业走向正在改变——从加入大厂做 C 端软件，转向理解 AI 能做什么、不能做什么并与之协作。他同时坚持：「有 AI 加持的专家，永远比有 AI 加持的新手更强。」
 🔗 https://x.com/levie/status/2056051851439857933
 
-⑨ Garry Tan：AI 将让某个20多岁的年轻人打败 Ken Griffin 的整个对冲基金帝国
-Garry Tan 回应对冲基金大佬 Ken Griffin 关于 AI 的悲观言论，称他没认清"天花板已经提高"的现实——AI+人类+计算机协同的团队很快将超越旧式精英操作。（707赞，49转发）
+⑯ Garry Tan：AI 时代不要降成本，要烧开海洋
+YC 总裁 Garry Tan 回应对冲基金大佬 Ken Griffin 关于 AI 会降低劳动力成本的观点：「某个 20 多岁的年轻人会用 AI-人类-电脑协作组合打败他的整个操作，因为他只盯着降成本。烧开海洋，不要只砍成本。」
 🔗 https://x.com/garrytan/status/2056123737544757733
 
-⑩ Zara Zhang：建东西难度被高估，获得注意力才是真正的挑战
-构建者们普遍高估了"做出产品"的难度，却严重低估了"赢得用户注意力"的挑战。这条观点推文获129赞、8次转发。
-🔗 https://x.com/zarazhangrui/status/2056132881630826952
+⑰ Meta「Avocado」模型再次推迟，据报可能临时授权谷歌 Gemini
+Meta 旗舰新模型 Avocado 预计 6 月发布，内部测试显示性能位于 Gemini 2.5 和 3.0 之间，低于 GPT-5.5 和 Claude Opus 4.7。Meta 管理层据报讨论了临时授权 Google Gemini 的方案。与此同时 Meta Llama 路线转变为闭源策略，由前 Scale AI 创始人 Alexandr Wang 主导。
+🔗 https://www.trendingtopics.eu/meta-delays-avocado-ai-model-again-might-even-license-gemini-from-google/
 
-⑪ Nikunj：独角兽员工期权陷阱——估值分段发放导致行权价被动翻倍
-最近一批独角兽公司员工面临"三重打击"：1) 分段估值下行权价>2倍，2) 二级市场流动性极差，3) 估值虚高。这是当前创业公司人才激励机制的系统性问题。
-🔗 https://x.com/nikunj/status/2056125669466333672
+⑱ Isomorphic Labs（DeepMind 拆分）完成 21 亿美元 B 轮融资
+AlphaFold 商业化公司 Isomorphic Labs 完成由 Thrive Capital 领投的 21 亿美元 B 轮，是有史以来最大的 AI 药物发现融资，也是 biotech 史上第二大融资（仅次于 Altos Labs）。公司 2021 年由 Demis Hassabis 创立，2024 年凭借 AlphaFold 获诺贝尔奖。
+🔗 https://www.forbes.com/sites/amyfeldman/2026/05/13/isomorphic-labs-21-billion-fundraise-is-the-biggest-bet-yet-on-ai-drug-discovery/
 
-⑫ Anthropic 融资谈判中，估值或超9000亿美元，将超越 OpenAI
-Anthropic 正在推进至少 300 亿美元的新一轮融资，由 Sequoia、Dragoneer、Greenoaks、Altimeter 联合领投，估值或超 9000 亿美元，将超越 OpenAI 3月的 8520 亿美元估值。谷歌已承诺最高 400 亿美元算力支持，亚马逊承诺最高 250 亿美元。
-🔗 https://www.nytimes.com/2026/05/12/technology/anthropic-funding-950-billion-valuation.html
-
-⑬ Aditya Agarwal：用 AI 写了一天代码，然后周末去看人类踢球和跳舞——不担心意义消失
-Aditya Agarwal（South Park Commons 普通合伙人）说：用 AI 写代码是工具，看人类运动和艺术是意义所在，两者并不冲突。
-🔗 https://x.com/adityaag/status/2056015684145127612
+⑲ Zara Zhang：低估了「赢得用户注意力」有多难
+Builder Zara Zhang 写道：「人们总是高估构建一件东西有多难，却低估了做出来之后赢得用户注意力有多难。」这条推文获得 129 赞、8 转推。
+🔗 https://x.com/zarazhangrui/status/2026-05-17T22:00:54.000Z
 
 🎙 Podcast
 
-AI & I by Every: Claude Code Can Be Your Second Brain
-Noah Breyer 用家里的服务器搭了一套极客系统：把 Obsidian 笔记库架在上面，再跑 Claude Code，这样他可以直接从手机上思考、研究、写作甚至写代码。Claude Code 在这套系统里充当真正的"第二大脑"——会主动提出尖锐问题、从整个笔记库和网络拉取资料，还维护一个持续更新的学习日志和最佳想法记录。这集展示了 AI 辅助知识工作的一种真实落地范式。
+AI & I by Every：Claude Code 能成为你的第二大脑
+Every 的 AI & I 播客探讨了如何把 Claude Code 用作「第二大脑」，涵盖 AI 辅助记忆管理、工作流整合以及个人知识库实践。播客强调：AI 工具在深度个人化知识管理场景下的潜力远未被充分开发。
+🔗 https://www.youtube.com/watch?v=in7i-EVDDlk
 
 📰 行业速报
 
-① 亚利桑那大学毕业典礼，前 Google CEO Eric Schmidt 演讲提到 AI 时，毕业生数次发出嘘声——入门级岗位收缩引发年轻一代公开反对情绪
-② Anthropic 与比尔及梅琳达·盖茨基金会签署4年2亿美元合作，聚焦全球卫生健康（脊髓灰质炎、HPV、子痫等）的 AI 应用
-③ Mira Murati 的 Thinking Machines Lab 正式亮相，主打"协作型 AI"定位
-④ OpenAI 联合创始人 Igor Babuschkin 正在为新 AI 初创公司 River AI 融资最高10亿美元，估值最高50亿美元
-⑤ PwC 与 Anthropic 扩大合作，全球数十万专业人士将使用 Claude，保险承保周期从10周压缩至10天
+① Musk 起诉 OpenAI 全面败诉，陪审团两小时一致裁决驳回全部诉求
+② Anthropic 收购 SDK 工具公司 Stainless（OpenAI、Google、Cloudflare 均是其客户）
+③ Hacker News 同周两篇高赞文章拆穿「采购 AI = 生产力提升」的说法
+④ NVIDIA Vera CPU 首批送达 Anthropic、OpenAI 等三大 AI 实验室
+⑤ OpenAI 与 Dell 合作将 Codex 部署进企业本地机房
+⑥ SandboxAQ 把药物发现模型接入 Claude，非 PhD 用户无需写代码可直接调用
+⑦ Bug Bounty 平台被 AI 生成的漏洞报告淹没，运营方称不见尽头
+⑧ CiteVQA 新基准：多模态模型答对了，引用的段落却是错的
 
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-18-graduating-seniors-boo-eric-schmidt-every-time-he-mentions
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-19-jury-rejects-musks-claims-against-altman-anthropic-seizes
 
-📚 论文速报（5月17日，共652篇过滤）
+📚 论文速报（5月17日，筛选自652篇）
 
-① SU-01：逆困惑度课程 SFT + 两阶段 RL，30B-A3B 骨干模型通过国际数学奥林匹克和物理奥林匹克金牌级别题目
-② SDAR：将自蒸馏降级为门控辅助模块，在 ALFWorld、WebShop、Search-QA 上比 GRPO 高出 7-10 个点
-③ Orthrus：双架构共享一个 KV Cache，声称零损失推理同时实现最高 7.8 倍加速
-④ PyRAG：将多跳推理写成可执行 Python，运行时自动捕获错误，替代模型自检
-⑤ Warp-as-History：将相机诱导扭曲作为伪历史帧，冻结模型在零样本情况下跟随轨迹
+① SU-01：反向困惑度课程微调 + 两阶段 RL，在 30B-A3B 模型上通过 IMO 和 IPhO 金牌
+② SDAR：将自蒸馏降级为门控辅助，在 ALFWorld/WebShop/Search-QA 上比 GRPO 高 7-10 分
+③ Orthrus：双架构共享同一 KV 缓存，声称无损推理且最高提速 7.8 倍
+④ Warp-as-History：用相机运动 warp 作为伪历史帧，冻结模型可零样本跟随轨迹
+⑤ PyRAG：将多跳推理写成可执行 Python，由运行时（而非模型）捕获错误
 
-🔗 https://ai-brief.liziran.com
+🔗 https://ai-brief.liziran.com/
 
-📎 Notion 存档
-https://www.notion.so/AI-Builders-Digest-2026-05-18-364941f9890481112a301c34ea246f552
+📓 Notion 存档
+https://www.notion.so/AI-Builders-Digest-2026-05-19-365941f98904810f96eaf7543511696e
