@@ -1,117 +1,101 @@
-🗞 AI Builders 日报 · 2026.05.19
+🗞 AI Builders 日报 · 2026.05.20
 
 🧠 模型
 
-① GPT-5.5 Instant 成为 ChatGPT 默认模型
-OpenAI 将 GPT-5.5 Instant 升为 Free/Plus/Pro 三档默认模型，AIME 2025 数学从 65.4 提升到 81.2，多模态 MMMU-Pro 从 69.2 升至 76。新增记忆功能，可搜索历史对话、上传文件和 Gmail 来个性化回复。
-🔗 https://x.com/sama/status/2056165722804654196
+① Claude Design 双倍 Token 上限
+Anthropic 官方宣布，Claude Design 所有套餐的 token 上限提升至原来的两倍，覆盖所有付费计划。这对依赖长上下文生成任务的用户是实质性的升级。
+🔗 https://x.com/claudeai/status/2056460045756309820
 
-② Google I/O 2026 发布 Gemini 4、安卓 XR 眼镜、新操作系统
-Google 在 5 月 19 日 I/O 大会上集中发布：旗舰模型 Gemini 4.0（更强推理和 Workspace 集成）、统一文本/图片/视频的 Gemini Omni、与三星/Warby Parker/Gentle Monster 等合作的安卓 XR 智能眼镜，以及替代 ChromeOS 的新 Aluminium OS。Peter Yang 提前放话「我那些在 Google 的朋友已经在做大事了」。
-🔗 https://x.com/petergyang/status/2056210471917912140
+② ChatGPT 最新更新大幅提升，Sam Altman 公开点赞
+山姆·奥特曼（OpenAI CEO）表示 ChatGPT 最近更新后体验"好太多了"，为团队公开背书。GPT-5.5 Instant 已成为默认模型，AIME 2025 数学基准从 65.4 升至 81.2，MMMU-Pro 从 69.2 升至 76，同时新增跨对话记忆功能。
+🔗 https://x.com/sama/status/2056435834333934051
 
-③ 英国 AI 安全研究所：Claude Mythos 和 GPT-5.5 均能开发真实浏览器漏洞
-英国 AISI 评估报告显示，Claude Mythos 在 10 次尝试中有 3 次完成 32 步企业网络攻击，GPT-5.5 完成 2 次；GPT-5.5 还解决了一道逆向工程题。Claude Mythos 目前仅向约 50 个机构开放，GPT-5.5 已面向广泛付费用户。报告被视为前沿模型进攻性 AI 能力的重要警示。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-19-2026
-
-④ Mistral CEO 在法国议会点名 Claude Mythos 是国家安全威胁
-Mistral AI CEO Arthur Mensch 在法国议会委员会作证时，直接点名 Claude Mythos 对法国军事代码库构成风险："一旦外国 AI 扫描并绘制了你的军事代码库，就无法撤销。" 他同时区分了能力风险和依赖风险，后者"几乎不可逆"。这是首次有大型 AI CEO 在政府听证中公开点名竞争对手特定模型为国家安全风险。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-19-2026
+③ Cursor Composer 2.5 正式上线
+Ryo Lu（Cursor 产品负责人）宣布 Composer 2.5 发布，定位"前沿智能 + 极致效率"，并预告更多功能即将推出。
+🔗 https://x.com/ryolu_/status/2056417715448156276
 
 🤖 Agent/编程
 
-⑤ Vercel 发布 Zero — 专为 AI 编程助手设计的编程语言
-Vercel CEO Guillermo Rauch 发布 Zero（v0.1.1，Apache-2.0），这是一门为 Claude Code、Cursor 等 AI 编程工具优化的编程语言：编译器报错以结构化 JSON 输出（而非人类可读文本），编译产物小于 10KB，函数必须显式声明副作用。发布 24 小时内获得超过 900 个 GitHub Star。
-🔗 https://x.com/rauchg/status/2056201218540904667
+④ 与长期运行 Agent 保持同步的实战分享
+Thariq（工程师）分享了在 Code with Claude 节目中讨论的长期运行 Agent 状态管理心得——核心思路是在 spec 实施过程中维护一份 implementation-notes.html，让模型在遭遇歧义时有结构化的出口来记录决策，同时保持用户知情。该方法在 X 上迅速传播。
+🔗 https://x.com/trq212/status/2056418157305454805
 
-⑥ Nikunj：用 claude --dangerously-skip-permissions 让 AI 优化代码库并加点「气场」
-FPV Ventures 合伙人 Nikunj Kothari 分享了一个 Claude Code 工作流：直接跑 /goal improve the codebase for performance and add a bit of aura，让模型自主改进代码库。这个用法获得 50 赞，评论区好奇「气场」到底改了什么。
-🔗 https://x.com/nikunj/status/2056014576215601431
+⑤ Aaron Levie：Agent 最大挑战是给对上下文
+Box CEO 亚伦·莱维指出，Agent 失败的最常见原因不在模型能力，而在于"如何给 Agent 一个受约束的、恰当的上下文"。这一判断适用于所有类型的 Agent，而不仅限于编程 Agent。
+🔗 https://x.com/levie/status/2056574979236409521
 
-⑦ Podcast：Claude Code 能成为你的第二大脑
-Every 旗下「AI & I」播客本期主题：如何把 Claude Code 作为第二大脑使用。讨论了 AI 辅助记忆、工作流整合与个人知识管理的结合实践。
-🔗 https://www.youtube.com/watch?v=in7i-EVDDlk
+⑥ Garry Tan 的 GBrain 内存系统快速迭代中
+Garry Tan 开源了 GBrain 的评测基准和测试集，并邀请任何内存系统跑相同评测后共同发布结果。与此同时，GBrain 正在高速修复 bug——一次 bug fix 合并了 22 个社区 PR 和 14 个 issue。
+🔗 https://x.com/garrytan/status/2056571771965538501
+
+⑦ Vercel Firewall 全面免费开放
+Vercel CEO 纪尧姆·劳赫宣布，所有防火墙功能（包括 DDoS 防护和自定义规则）对所有用户免费，Vercel 承担所有防火墙的计算和网络成本。对依赖 Vercel 部署 AI 应用的开发者来说，这是直接降本。
+🔗 https://x.com/rauchg/status/2056549825018310707
+
+⑧ Peter Yang：Anthropic 如何构建下一代 Claude
+彼得·杨整理了与 Anthropic 模型负责人 Alex Albert 对话的五大要点：模型和运行环境需要协同设计；不同部署平台的适配策略不同；Claude 的性格和价值观是刻意构建而非偶然浮现的。
+🔗 https://x.com/petergyang/status/2056381822733595090
 
 🛠 产品/应用
 
-⑧ Sam Altman：ChatGPT 图像功能在印度创造超 10 亿张图片
-OpenAI CEO Sam Altman 宣布 ChatGPT Images 2.0 在印度已生成超过 10 亿张图片，表示看到这一数字很振奋。
-🔗 https://x.com/sama/status/2056165722804654196
+⑨ Claude 即将登陆伦敦，举办深度演示活动
+Anthropic 官方宣布，Claude 团队将在明天（伦敦时间）举办线下活动，包括深度演示和与产品团队的对话。
+🔗 https://x.com/claudeai/status/2056328149940543808
 
-⑨ OpenAI 确认推出「超级应用」——ChatGPT + Codex + Atlas 浏览器合并
-OpenAI 公开确认将 ChatGPT（9 亿周活用户）、Codex（400 万周活）和 Atlas 浏览器整合为单一桌面超级应用，由 Codex CEO Thibault Sottiaux 领导统一产品团队，Greg Brockman 主导整合工作。目标是在潜在 2026 年 IPO 前将普通用户转化为付费高频用户。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-19-2026
-
-⑩ ChatGPT 接入银行账户——个人理财功能上线（美国 Pro 用户）
-OpenAI 为 ChatGPT Pro 用户（美国）上线银行账户连接功能，接入 12000 多家金融机构（Chase、Fidelity、Schwab、Robinhood、美运），支持消费看板、投资组合查看、订阅追踪和自然语言财务问答。由 4 月收购的金融科技初创公司 Hiro 提供技术支持，仅读取权限，不能转账或交易。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-19-2026
-
-⑪ Anthropic 收购给 OpenAI/Google 做 SDK 的 Stainless
-Stainless 是一家 2022 年成立的纽约公司，专门帮 OpenAI、Google、Cloudflare 自动化生成多语言客户端 SDK。Anthropic 本周将其收购。这意味着 Anthropic 在开发者接入层上做了卡位——开发者安装 SDK 时对一家 API 的第一印象，现在归 Anthropic 所有。收购金额未披露。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-19-2026
-
-⑫ PwC 全球部署 Claude——3 万名美国专业人员将获认证
-PwC 将 Claude Code 和 Claude Cowork 推广至全球，与 Anthropic 联合成立卓越中心，新设基于 Claude 的财务官办公室业务组。实际成效：保险核保从 10 周压缩到 10 天，安全任务减少最多 70% 时间。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-18-2026
+⑩ Dan Shipper：Every 将推出 Codex 完整使用指南
+丹·希普尔（Every 创始人）预告即将在 Every 发布一份 Codex 完整使用指南，可提前注册获得通知。
+🔗 https://x.com/danshipper/status/2056431972138815842
 
 📈 商业/观点
 
-⑬ Musk 起诉 OpenAI 和 Altman 败诉——陪审团两小时一致裁决
-联邦陪审团用不到两小时裁定 Musk 对 OpenAI 和 Sam Altman 的全部诉求不成立（诉讼时效已过）。Musk 曾主张 OpenAI 偏离非营利使命，要求法院介入公司方向。走出法庭的 Altman 赢了官司，但庭审期间双方互相攻击可信度的细节仍让公众对两边都持保留态度。
-🔗 https://www.nytimes.com/2026/05/18/technology/elon-musk-lawsuit-openai-sam-altman.html
+⑪ Musk 诉 Altman 案陪审团两小时裁定败诉
+联邦陪审团一致裁定马斯克败诉，这场关于"谁有资格决定 AI 走向"的控制权争夺就此落幕。裁定移除了 OpenAI IPO 的一大法律障碍，但外界对 AI 公司治理透明度的质疑并未平息。马斯克表示将上诉。
+🔗 https://techcrunch.com/2026/05/18/elon-musk-has-lost-his-lawsuit-against-sam-altman-and-openai/
 
-⑭ Anthropic 估值冲击 9000 亿美元——筹资 300 亿
-Anthropic 正在接近完成一轮由 Sequoia、Dragoneer、Greenoaks、Altimeter 联合领投的 300 亿美元融资，估值超过 9000 亿（对比 2 月时的 3800 亿）。预计 5 月底完成，将超越 OpenAI 3 月时的 8520 亿估值，成为估值最高的私人 AI 公司。
-🔗 https://www.theinformation.com/briefings/anthropic-picks-co-leads-900-billion-valuation-funding-round
+⑫ Anthropic 收购 SDK 供应商 Stainless
+Stainless 曾为 OpenAI、谷歌、Cloudflare 提供多语言 SDK 自动化维护服务。Anthropic 将 SDK 供应链纳入自身控制，把竞争战线推到开发者接入层，SDK 的质量决定开发者对 API 的第一印象。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-19-jury-rejects-musks-claims-against-altman-anthropic-seizes.html
 
-⑮ Aaron Levie：CS 学生面临岗位转型，基础知识仍是核心
-Box CEO Aaron Levie 发帖指出 CS 毕业生的职业走向正在改变——从加入大厂做 C 端软件，转向理解 AI 能做什么、不能做什么并与之协作。他同时坚持：「有 AI 加持的专家，永远比有 AI 加持的新手更强。」
-🔗 https://x.com/levie/status/2056051851439857933
+⑬ Anthropic 估值或超 9000 亿美元，接近完成 300 亿美元融资
+据报道，Anthropic 正在完成一轮由红杉等主导的 300 亿美元融资，估值超过 9000 亿美元，将超越 OpenAI 成为全球最高估值的 AI 私有公司。
+🔗 https://www.cnbc.com/2026/04/29/anthropic-weighs-raising-funds-at-900b-valuation-topping-openai.html
 
-⑯ Garry Tan：AI 时代不要降成本，要烧开海洋
-YC 总裁 Garry Tan 回应对冲基金大佬 Ken Griffin 关于 AI 会降低劳动力成本的观点：「某个 20 多岁的年轻人会用 AI-人类-电脑协作组合打败他的整个操作，因为他只盯着降成本。烧开海洋，不要只砍成本。」
-🔗 https://x.com/garrytan/status/2056123737544757733
+⑭ Google I/O 2026：Gemini 3.5 Flash、Spark 个人 Agent 全面发布
+谷歌在 I/O 大会上宣布 Gemini 3.5 Flash 全球上线（速度提升 12 倍）、Spark 24/7 个人 AI Agent 下周美国推出、Android XR 智能眼镜预计秋季上市约 379–499 美元、谷歌 AI Ultra 订阅从 250 美元降至 100 美元。Demis Hassabis 宣称"AGI 就在几年之内"。
+🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-20-2026
 
-⑰ Meta「Avocado」模型再次推迟，据报可能临时授权谷歌 Gemini
-Meta 旗舰新模型 Avocado 预计 6 月发布，内部测试显示性能位于 Gemini 2.5 和 3.0 之间，低于 GPT-5.5 和 Claude Opus 4.7。Meta 管理层据报讨论了临时授权 Google Gemini 的方案。与此同时 Meta Llama 路线转变为闭源策略，由前 Scale AI 创始人 Alexandr Wang 主导。
-🔗 https://www.trendingtopics.eu/meta-delays-avocado-ai-model-again-might-even-license-gemini-from-google/
-
-⑱ Isomorphic Labs（DeepMind 拆分）完成 21 亿美元 B 轮融资
-AlphaFold 商业化公司 Isomorphic Labs 完成由 Thrive Capital 领投的 21 亿美元 B 轮，是有史以来最大的 AI 药物发现融资，也是 biotech 史上第二大融资（仅次于 Altos Labs）。公司 2021 年由 Demis Hassabis 创立，2024 年凭借 AlphaFold 获诺贝尔奖。
-🔗 https://www.forbes.com/sites/amyfeldman/2026/05/13/isomorphic-labs-21-billion-fundraise-is-the-biggest-bet-yet-on-ai-drug-discovery/
-
-⑲ Zara Zhang：低估了「赢得用户注意力」有多难
-Builder Zara Zhang 写道：「人们总是高估构建一件东西有多难，却低估了做出来之后赢得用户注意力有多难。」这条推文获得 129 赞、8 转推。
-🔗 https://x.com/zarazhangrui/status/2026-05-17T22:00:54.000Z
+⑮ 黄仁勋：AI 算力需求"抛物线式"上涨
+英伟达 CEO 黄仁勋表示，Vera Rubin NVL72 将 Agent 推理每 token 成本降至十分之一，Agent 沙盒比传统 CPU 快 50 倍，已有 5000 家企业在 Dell AI Factories 上运行工作流，首批 Vera CPU 已交付 Anthropic、OpenAI、SpaceX AI 和 Oracle Cloud。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-19-jury-rejects-musks-claims-against-altman-anthropic-seizes.html
 
 🎙 Podcast
 
-AI & I by Every：Claude Code 能成为你的第二大脑
-Every 的 AI & I 播客探讨了如何把 Claude Code 用作「第二大脑」，涵盖 AI 辅助记忆管理、工作流整合以及个人知识库实践。播客强调：AI 工具在深度个人化知识管理场景下的潜力远未被充分开发。
-🔗 https://www.youtube.com/watch?v=in7i-EVDDlk
+Latent Space: The Secrets of Claude's Platform From the Team Who Built It
+深度解读 Anthropic 平台团队的设计哲学：模型和运行环境需要协同设计，不同部署场景需要不同的适配策略；Claude 的个性和价值观并非偶发，而是通过训练和架构刻意构建的；平台层的可靠性（memory、tools、connectors）正在成为决定用户留存的关键因素，而不仅仅是基础模型能力本身。
+🔗 https://www.youtube.com/watch?v=lLypHkIVLqc
+
+---
 
 📰 行业速报
 
-① Musk 起诉 OpenAI 全面败诉，陪审团两小时一致裁决驳回全部诉求
-② Anthropic 收购 SDK 工具公司 Stainless（OpenAI、Google、Cloudflare 均是其客户）
-③ Hacker News 同周两篇高赞文章拆穿「采购 AI = 生产力提升」的说法
-④ NVIDIA Vera CPU 首批送达 Anthropic、OpenAI 等三大 AI 实验室
-⑤ OpenAI 与 Dell 合作将 Codex 部署进企业本地机房
-⑥ SandboxAQ 把药物发现模型接入 Claude，非 PhD 用户无需写代码可直接调用
-⑦ Bug Bounty 平台被 AI 生成的漏洞报告淹没，运营方称不见尽头
-⑧ CiteVQA 新基准：多模态模型答对了，引用的段落却是错的
+① Musk 诉 Altman 案陪审团仅用两小时一致裁定败诉，OpenAI IPO 法律障碍清除
+② Anthropic 收购 SDK 供应商 Stainless，将开发者接入基础设施纳入自身控制
+③ Google I/O：Gemini 3.5 Flash 全球上线，AI Ultra 订阅降价至 100 美元/月，Spark 个人 Agent 下周发布
+④ 英伟达首批 Vera CPU 交付 Anthropic/OpenAI/SpaceX AI，agentic 推理成本降至十分之一
+⑤ OpenAI 超级应用确认：ChatGPT + Codex + Atlas 三合一桌面应用正在整合中
+⑥ ChatGPT 新增个人财务功能，连接 12000+ 金融机构，只读不操作
+⑦ AI 安全警报：英国 AISI 发现 Claude Mythos 和 GPT-5.5 可完成真实企业网络渗透攻击
 
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-19-jury-rejects-musks-claims-against-altman-anthropic-seizes
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-19-jury-rejects-musks-claims-against-altman-anthropic-seizes.html
 
-📚 论文速报（5月17日，筛选自652篇）
+📚 论文速报（2026-05-19，共筛选 228 篇）
 
-① SU-01：反向困惑度课程微调 + 两阶段 RL，在 30B-A3B 模型上通过 IMO 和 IPhO 金牌
-② SDAR：将自蒸馏降级为门控辅助，在 ALFWorld/WebShop/Search-QA 上比 GRPO 高 7-10 分
-③ Orthrus：双架构共享同一 KV 缓存，声称无损推理且最高提速 7.8 倍
-④ Warp-as-History：用相机运动 warp 作为伪历史帧，冻结模型可零样本跟随轨迹
-⑤ PyRAG：将多跳推理写成可执行 Python，由运行时（而非模型）捕获错误
+① RLVR"不可学"样本：部分困难样本在 rollout 正确时仍无法被学习，奖励曲线靠简单子集拉升
+② 推理优势的稀疏性：基础模型与推理模型的差距集中在约 8% 的 token，主要在早期规划节点
+③ 单模型红队失效：同时查询多个前沿模型，任何弱环节都可输出有害内容，成功率达 100%
+④ Meta Mask2Token：把分割掩码直接对齐到 VLLM 特征空间，参数量仅 1/8，在 LVIS 上超越 SOTA
 
 🔗 https://ai-brief.liziran.com/
 
-📓 Notion 存档
-https://www.notion.so/AI-Builders-Digest-2026-05-19-365941f98904810f96eaf7543511696e
+📎 Notion 存档
+https://www.notion.so/AI-Builders-Digest-2026-05-20-366941f98904815183e0ebee357eb2d1
