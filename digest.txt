@@ -1,101 +1,101 @@
-🗞 AI Builders 日报 · 2026.05.20
+🗞 AI Builders 日报 · 2026.05.21
 
 🧠 模型
 
-① Claude Design 双倍 Token 上限
-Anthropic 官方宣布，Claude Design 所有套餐的 token 上限提升至原来的两倍，覆盖所有付费计划。这对依赖长上下文生成任务的用户是实质性的升级。
-🔗 https://x.com/claudeai/status/2056460045756309820
+① Karpathy 加入 Anthropic 预训练团队
+前 OpenAI 联创、特斯拉 AI 负责人 Andrej Karpathy 宣布正式加入 Anthropic，加入其预训练团队，负责人是 Nick Joseph。他将组建一支新的内部小组，专注于用 Claude 加速预训练研究。Karpathy 说："我认为未来几年是 LLM 前沿最关键的时期，很难想象还有比这更好的地方了。"此前他经营 AI 教育创业公司 Eureka Labs 约两年，他表示未来还会继续推进教育方向的工作。
+🔗 https://x.com/karpathy/status/2056753169888334312
 
-② ChatGPT 最新更新大幅提升，Sam Altman 公开点赞
-山姆·奥特曼（OpenAI CEO）表示 ChatGPT 最近更新后体验"好太多了"，为团队公开背书。GPT-5.5 Instant 已成为默认模型，AIME 2025 数学基准从 65.4 升至 81.2，MMMU-Pro 从 69.2 升至 76，同时新增跨对话记忆功能。
-🔗 https://x.com/sama/status/2056435834333934051
+② Gemini 3.5 Flash 发布：专为 Agent 打造的新旗舰模型
+Google 在 I/O 大会发布 Gemini 3.5 Flash，明确定位为 Agent 任务和长流程工作，而非聊天。在 MMMU-Pro（多模态）得分 83.6%，Terminal-Bench（代理编程）得分 76.2%，Toolathon（真实任务）得分 56.5%，性能大幅超越 Gemini 3 Flash。Aaron Levie（Box CEO）在内部评测中测得 Gemini 3.5 Flash 在复杂文档任务上提升了 12 个百分点。
+🔗 https://x.com/levie/status/2056804573449474527
 
-③ Cursor Composer 2.5 正式上线
-Ryo Lu（Cursor 产品负责人）宣布 Composer 2.5 发布，定位"前沿智能 + 极致效率"，并预告更多功能即将推出。
-🔗 https://x.com/ryolu_/status/2056417715448156276
+③ Gemini Omni Flash：Google 第一个"世界模型"
+Google 在 I/O 发布 Gemini Omni Flash，号称首个 Omni 多模态模型，支持视频生成、音频、图像与文本的统一处理，具备 Veo 级别的物理理解能力，结合 Gemini 的推理能力，已在 Gemini App 中上线。
+🔗 https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni/
 
 🤖 Agent/编程
 
-④ 与长期运行 Agent 保持同步的实战分享
-Thariq（工程师）分享了在 Code with Claude 节目中讨论的长期运行 Agent 状态管理心得——核心思路是在 spec 实施过程中维护一份 implementation-notes.html，让模型在遭遇歧义时有结构化的出口来记录决策，同时保持用户知情。该方法在 X 上迅速传播。
-🔗 https://x.com/trq212/status/2056418157305454805
+④ Claude Managed Agents 新功能：自托管沙箱 + MCP 隧道
+Anthropic 宣布 Claude Managed Agents 两项重要更新：支持在企业自有环境内运行沙箱（self-hosted sandboxes），以及连接私有 MCP 服务器（MCP tunnels）。这意味着代码执行和数据访问都可以留在企业内部安全边界内，解决了此前大企业不敢把代码发出去的顾虑。Claude 官方账号称："沙箱和服务一起运行在你企业已建立的安全边界内。"
+🔗 https://x.com/claudeai/status/2056645493493575681
 
-⑤ Aaron Levie：Agent 最大挑战是给对上下文
-Box CEO 亚伦·莱维指出，Agent 失败的最常见原因不在模型能力，而在于"如何给 Agent 一个受约束的、恰当的上下文"。这一判断适用于所有类型的 Agent，而不仅限于编程 Agent。
-🔗 https://x.com/levie/status/2056574979236409521
+⑤ Vercel Sandbox × Claude Managed Agents 正式集成
+Vercel 的沙箱产品已正式 GA，提供给 AI Agent 使用的隔离 Linux 微虚拟机，支持完整文件系统、Shell 和网络访问，专门针对 AI Agent 执行不可信代码的场景。Vercel CEO Guillermo Rauch 宣布与 Claude Managed Agents 深度集成。v0、Blackbox AI、RooCode 等产品都已接入。
+🔗 https://x.com/rauchg/status/2056734559048536070
 
-⑥ Garry Tan 的 GBrain 内存系统快速迭代中
-Garry Tan 开源了 GBrain 的评测基准和测试集，并邀请任何内存系统跑相同评测后共同发布结果。与此同时，GBrain 正在高速修复 bug——一次 bug fix 合并了 22 个社区 PR 和 14 个 issue。
-🔗 https://x.com/garrytan/status/2056571771965538501
+⑥ Google I/O：Project Genie 大幅更新，Street View 打底生成真实世界
+Google Labs 发布 Project Genie 重大更新，现在可以用 Google Maps Street View 的实景数据为起点来生成世界模拟，还支持在个人图书馆管理创作内容并对外分享。这是世界模型研究迈向"接地气"现实的重要一步。
+🔗 https://x.com/GoogleLabs/status/2056872996988756228
 
-⑦ Vercel Firewall 全面免费开放
-Vercel CEO 纪尧姆·劳赫宣布，所有防火墙功能（包括 DDoS 防护和自定义规则）对所有用户免费，Vercel 承担所有防火墙的计算和网络成本。对依赖 Vercel 部署 AI 应用的开发者来说，这是直接降本。
-🔗 https://x.com/rauchg/status/2056549825018310707
+⑦ Cursor / Composer 2.5 成为 AI 编程全流程首选
+Cursor 工程师 Ryo Lu 分享工作流：他现在规划、开发、调试全程使用 Composer 2.5，尤其在 UI 工作和 Design Mode 上配合流畅。同日还宣布 Cursor 接入 Jira，可以直接从 Jira 工单出发驱动编程任务。
+🔗 https://x.com/ryolu_/status/2056892527626817935
 
-⑧ Peter Yang：Anthropic 如何构建下一代 Claude
-彼得·杨整理了与 Anthropic 模型负责人 Alex Albert 对话的五大要点：模型和运行环境需要协同设计；不同部署平台的适配策略不同；Claude 的性格和价值观是刻意构建而非偶然浮现的。
-🔗 https://x.com/petergyang/status/2056381822733595090
+⑧ Swyx 分享四阶段 AI SDLC 框架
+Swyx 整理了他认为 AI 开发的四个阶段：维持约 50 个测试 + 写入记忆让 AI 自动做视觉检查；分拆并编辑大型文档结构；以及两个待续阶段。他还注意到"Contextual 被 Windsurf 化了"——指 OpenAI/Google 大手笔买单工具链，独立小厂面临压力。
+🔗 https://x.com/swyx/status/2056877529991205072
+
+⑨ Devin 建造者 Scott Wu：用 Claude 让每个工程团队构建软件提速 10 倍
+Claude 官方介绍了 Cognition 创始人 Scott Wu 的故事。他的团队正在用 Claude 打造 Devin，目标是让每一个工程团队的软件开发速度提升 10 倍。这是 Anthropic "Problem Solvers" 系列的首期内容。
+🔗 https://x.com/claudeai/status/2056805728774402428
 
 🛠 产品/应用
 
-⑨ Claude 即将登陆伦敦，举办深度演示活动
-Anthropic 官方宣布，Claude 团队将在明天（伦敦时间）举办线下活动，包括深度演示和与产品团队的对话。
-🔗 https://x.com/claudeai/status/2056328149940543808
+⑩ Gemini Spark：24 小时不间断的个人 AI Agent
+Google Labs 的 Josh Woodward 发布 Gemini Spark，一款 7×24 小时主动运转的个人 AI Agent，能主动管理任务、帮你打理数字生活，全程由用户指挥。本周开放给受信任测试者，下周向美国 Google AI Ultra 订阅用户开放公测。
+🔗 https://x.com/joshwoodward/status/2056873495116845485
 
-⑩ Dan Shipper：Every 将推出 Codex 完整使用指南
-丹·希普尔（Every 创始人）预告即将在 Every 发布一份 Codex 完整使用指南，可提前注册获得通知。
-🔗 https://x.com/danshipper/status/2056431972138815842
+⑪ Google AlphaEvolve + ERA：用 AI 做计算发现
+Google Labs 发布了"计算发现"工具组合，由 AlphaEvolve 驱动的 Agent 自动生成并评估数千个代码变体，以极短时间内挖掘新模型和算法。属于 AI 用于加速 AI 研究本身的典型案例。
+🔗 https://x.com/GoogleLabs/status/2056812957775142985
 
 📈 商业/观点
 
-⑪ Musk 诉 Altman 案陪审团两小时裁定败诉
-联邦陪审团一致裁定马斯克败诉，这场关于"谁有资格决定 AI 走向"的控制权争夺就此落幕。裁定移除了 OpenAI IPO 的一大法律障碍，但外界对 AI 公司治理透明度的质疑并未平息。马斯克表示将上诉。
-🔗 https://techcrunch.com/2026/05/18/elon-musk-has-lost-his-lawsuit-against-sam-altman-and-openai/
+⑫ Sam Altman：OpenAI 向每家 YC 批次创业公司投入价值 200 万美元的 Token
+Sam Altman 宣布 OpenAI 将向当前 YC 批次（约 169 家公司）的每家初创公司投资价值 200 万美元的 OpenAI Token，换取股权（通过无上限 SAFE）。他称这一策略为"tokenmaxxing"——鼓励创业公司大量使用 AI Token 来构建产品。YC 合伙人称这是"全场最亮的时刻"。
+🔗 https://x.com/sama/status/2056933166875857290
 
-⑫ Anthropic 收购 SDK 供应商 Stainless
-Stainless 曾为 OpenAI、谷歌、Cloudflare 提供多语言 SDK 自动化维护服务。Anthropic 将 SDK 供应链纳入自身控制，把竞争战线推到开发者接入层，SDK 的质量决定开发者对 API 的第一印象。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-19-jury-rejects-musks-claims-against-altman-anthropic-seizes.html
+⑬ Sam Altman：OpenAI 推出 1-3 年算力预购，帮助企业锁定容量
+Sam Altman 表示随着模型越来越强，世界将长期处于算力短缺状态，因此 OpenAI 开始提供 1 至 3 年算力预购折扣，帮助客户锁定容量，同时帮助 OpenAI 自身做更好的规划。他形容这是"双赢"。
+🔗 https://x.com/sama/status/2056827105401614656
 
-⑬ Anthropic 估值或超 9000 亿美元，接近完成 300 亿美元融资
-据报道，Anthropic 正在完成一轮由红杉等主导的 300 亿美元融资，估值超过 9000 亿美元，将超越 OpenAI 成为全球最高估值的 AI 私有公司。
-🔗 https://www.cnbc.com/2026/04/29/anthropic-weighs-raising-funds-at-900b-valuation-topping-openai.html
+⑭ Aaron Levie：Token 成本将成为企业 AI 的核心议题
+Box CEO Aaron Levie 在与多位世界 500 强 CIO 的晚宴后分享，Token 成本已经是最激烈的讨论话题。各家正在混合使用不同策略但没有人觉得找到了正确答案：有人做成本分摊，有人收紧模型使用权限，有人转向轻量模型。
+🔗 https://x.com/levie/status/2056965292753146019
 
-⑭ Google I/O 2026：Gemini 3.5 Flash、Spark 个人 Agent 全面发布
-谷歌在 I/O 大会上宣布 Gemini 3.5 Flash 全球上线（速度提升 12 倍）、Spark 24/7 个人 AI Agent 下周美国推出、Android XR 智能眼镜预计秋季上市约 379–499 美元、谷歌 AI Ultra 订阅从 250 美元降至 100 美元。Demis Hassabis 宣称"AGI 就在几年之内"。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-20-2026
+⑮ Nikunj Kothari：AI 正从助手走向同事，再走向自主工作者
+Nikunj Kothari 认为，即便是在湾区这种已经深度"AI 化"的圈子里，很少有人真正意识到：AI 已经从助手进化到同事，而自主工作者的阶段近在眼前。虽然"自主性"目前还不够可靠，但框架和模型能力正在把我们推向那个时代。
+🔗 https://x.com/nikunj/status/2056865808832397344
 
-⑮ 黄仁勋：AI 算力需求"抛物线式"上涨
-英伟达 CEO 黄仁勋表示，Vera Rubin NVL72 将 Agent 推理每 token 成本降至十分之一，Agent 沙盒比传统 CPU 快 50 倍，已有 5000 家企业在 Dell AI Factories 上运行工作流，首批 Vera CPU 已交付 Anthropic、OpenAI、SpaceX AI 和 Oracle Cloud。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-19-jury-rejects-musks-claims-against-altman-anthropic-seizes.html
+⑯ Garry Tan：Tokenmaxxing 确认，GBrain 或是微软当年 WinFS 的现代实现
+YC 合伙人 Garry Tan 转发了 Altman 的 tokenmaxxing 内容表示确认，并提了一个历史有趣的类比：他 2003-2005 年在微软时曾参与 WinFS 项目（智能文件系统，最终失败），如今 LLM 可能让这个愿景以 GBrain 的形式重新实现。
+🔗 https://x.com/garrytan/status/2056976600294650266
 
 🎙 Podcast
 
-Latent Space: The Secrets of Claude's Platform From the Team Who Built It
-深度解读 Anthropic 平台团队的设计哲学：模型和运行环境需要协同设计，不同部署场景需要不同的适配策略；Claude 的个性和价值观并非偶发，而是通过训练和架构刻意构建的；平台层的可靠性（memory、tools、connectors）正在成为决定用户留存的关键因素，而不仅仅是基础模型能力本身。
-🔗 https://www.youtube.com/watch?v=lLypHkIVLqc
-
----
+Training Data：《从零重建企业 IT：Serval 创始人 Jake Stauch》
+Jake Stauch 是 Serval 的创始人兼 CEO，Serval 被定位为"AI 原生的 ServiceNow"。本期核心观点：自动化的门槛必须低于手动操作，企业才会真正用起来；他们没有 SE 和 SDR 岗位，销售靠 AI 实时回答产品问题；最大挑战不是技术，而是跨大组织的协调和决策效率。最有意思的洞察：企业内个人想要 Agent 自主权，而 IT 部门想要控制权，这一张力正在变成新的"影子 IT"现象。
 
 📰 行业速报
 
-① Musk 诉 Altman 案陪审团仅用两小时一致裁定败诉，OpenAI IPO 法律障碍清除
-② Anthropic 收购 SDK 供应商 Stainless，将开发者接入基础设施纳入自身控制
-③ Google I/O：Gemini 3.5 Flash 全球上线，AI Ultra 订阅降价至 100 美元/月，Spark 个人 Agent 下周发布
-④ 英伟达首批 Vera CPU 交付 Anthropic/OpenAI/SpaceX AI，agentic 推理成本降至十分之一
-⑤ OpenAI 超级应用确认：ChatGPT + Codex + Atlas 三合一桌面应用正在整合中
-⑥ ChatGPT 新增个人财务功能，连接 12000+ 金融机构，只读不操作
-⑦ AI 安全警报：英国 AISI 发现 Claude Mythos 和 GPT-5.5 可完成真实企业网络渗透攻击
+① 马斯克诉 Altman 案，陪审团两小时内一致判马斯克败诉，历时两年的控制权之争以法庭失利告终
+② Anthropic 收购 Stainless —— 为 OpenAI、Google、Cloudflare 制作 SDK 的公司，将开发者工具链纳入自身掌控
+③ 两篇 HN 爆款文章反驳"AI = 提效"：瓶颈在评审、对齐和决策，代码加速并不等于整体加速
+④ NVIDIA Vera CPU 完成首批交付，客户包括 Anthropic、OpenAI、SpaceX AI 和 Oracle Cloud
+⑤ Bug Bounty 平台遭 AI 生成报告刷屏，运营者称"AI 垃圾"正在摧毁漏洞奖励项目
 
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-19-jury-rejects-musks-claims-against-altman-anthropic-seizes.html
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-19-jury-rejects-musks-claims-against-altman-anthropic-seizes
 
-📚 论文速报（2026-05-19，共筛选 228 篇）
+📚 论文速报（5 月 19 日，筛选自 228 篇论文）
 
-① RLVR"不可学"样本：部分困难样本在 rollout 正确时仍无法被学习，奖励曲线靠简单子集拉升
-② 推理优势的稀疏性：基础模型与推理模型的差距集中在约 8% 的 token，主要在早期规划节点
-③ 单模型红队失效：同时查询多个前沿模型，任何弱环节都可输出有害内容，成功率达 100%
-④ Meta Mask2Token：把分割掩码直接对齐到 VLLM 特征空间，参数量仅 1/8，在 LVIS 上超越 SOTA
+① "不可学样本"在 RLVR 中的问题：即使最终给出正确答案，某些难样本永远不会被学习，奖励曲线只靠简单样本子集提升
+② 推理优势来自稀疏 Token：基础模型与推理模型的差距集中在约 8% 的 Token 上，发生在早期规划决策处
+③ 单模型红队已不够用：同时对多个前沿模型提问能找到薄弱环节，成功率可达 100%
+④ Meta Mask2Token：将 Mask 直接对齐到 VLLM 特征空间，参数量仅为原来的 1/8，在 LVIS 上超越此前最优
+⑤ HAD（3D 重建）：用前向新视图网络做交叉验证，以像素分辨率遮蔽不可靠像素
 
 🔗 https://ai-brief.liziran.com/
 
 📎 Notion 存档
-https://www.notion.so/AI-Builders-Digest-2026-05-20-366941f98904815183e0ebee357eb2d1
+https://www.notion.so/367941f9890481e0bc8fdcc28e05ffd9
