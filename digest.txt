@@ -1,117 +1,105 @@
-🗞 AI Builders 日报 · 2026.05.23
+🗞 AI Builders 日报 · 2026.05.24
 
 🧠 模型
 
-① OpenAI 新 Codex 正式上线
-Sam Altman 宣布新版 Codex 今天发布。Codex 是 OpenAI 的编程 AI，此次更新让多位开发者表示"改变游戏规则"，Peter Yang 直接转发称是"革命性的自动化工具"。
-🔗 https://x.com/sama/status/2057559714788258003
+① OpenAI 模型自主证伪困扰数学界80年的 Erdős 猜想
+OpenAI 一个内部模型在仅给出问题陈述的情况下，自主推翻了 Erdős 单位距离猜想（1946年提出），完成了一份125页的证明，运用了代数数论（Golod-Shafarevich 准则）构造出反例。菲尔兹奖得主 Tim Gowers 称之为"AI数学的里程碑"，普林斯顿 Noga Alon 评价"将代数数论工具运用得既优雅又聪明"。
+🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-23-2026
 
-② Anthropic Claude Code 自动模式：更安全地跳过权限确认
-Anthropic 工程博客发布 Claude Code auto mode 详解。默认情况下 Claude Code 每步都要用户审批，导致"审批疲劳"；新的自动模式在沙箱隔离中执行工具调用，在保证安全的前提下大幅减少手动点击。
-🔗 https://www.anthropic.com/engineering/claude-code-auto-mode
+② Anthropic 联创 Jack Clark 在牛津预言：2028年底60%概率实现AI自我递归改进
+Clark 在牛津2026年度 Cosmos 讲座发表系列预测：12个月内AI协助人类完成诺贝尔奖级发现；18个月内出现完全由AI运营并盈利的公司；2028年底60%以上概率 AI 可完全自我递归改进。他同时承认 AI "有一定概率对人类造成生存威胁"。Anthropic 当前 ARR 已超过440亿美元，首次实现季度运营盈利，估值接近9000亿美元。
+🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-23-2026
 
-③ Matt Turck × OpenAI Yann Dubois：为什么 AI 进展突然感觉真实了
-Matt Turck 与 OpenAI 后训练前沿团队联席负责人 Yann Dubois 对谈：模型可靠性在去年12月跨过了关键门槛，现在才真正到"有用"阶段，而不只是"比赛"阶段。这是理解当前 AI 发展节奏的必读对话。
-🔗 https://x.com/mattturck/status/2057498130795385188
+③ Gemini 联合负责人 Oriol Vinyals 谈世界模型：记忆将成为下一个推理
+在 Google I/O 次日，Gemini 联合负责人（与 Noam Shazir、Jeff Dean 并列）Oriol Vinyals 接受播客采访，分享了他对世界模型路径的判断：记忆能力的突破在未来几年将像推理一样重要；RL 的下一战场是持续学习（Continual Learning）；当前 scaffolding 领域中会长期存在的东西，和现在大家以为会存活的有很大区别。
+🔗 https://www.youtube.com/watch?v=NQczevdpxq0
+
+④ Mistral Medium 3.5 开放权重发布，SWE-Bench 达到77.6%
+Mistral 发布 Medium 3.5，128B 参数稠密模型，MIT 授权，256K 上下文窗口。在 SWE-Bench Verified 上达到77.6%，SWE-Bench Pro 达到57.2%。与 Claude Opus 4.6 同等能力下 token 消耗少40-60%，继续走欧洲主权 AI 路线。
+🔗 https://llm-stats.com/models/mistral-medium-3-5
 
 🤖 Agent/编程
 
-④ Zara Zhang 开源 Claude Code × 飞书桥接工具
-Zara Zhang 发布开源项目「Claude Code Lark/Feishu Bridge」，让你在飞书里像和同事聊天一样使用 Claude Code：手机端可用、多会话以群聊形式管理（一个群 = 一个 session），还能让 Claude Code 读取飞书文档。
-🔗 https://x.com/zarazhangrui/status/2057710284920520906
+⑤ Garry Tan 开源 GBrain v0.40.0：基于 Gemini Live 的语音 Agent
+Garry Tan 开源了 GBrain v0.40.0，给 Hermes/OpenClaw Agent 接入语音能力，基于 Gemini Live 构建，具备大上下文、完整工具调用、全脑知识库访问。他将此称为"送给大家的礼物"，MIT 授权。
+🔗 https://x.com/garrytan/status/2058053659527913566
 
-⑤ Swyx：Local-first 技术栈之战已有胜者
-Swyx 表示当前 local-first 领域的技术栈之争基本尘埃落定，如果你要快速构建应用，这套方案已经赢了。虽然他用了短链，但这是一条很有价值的技术判断。
-🔗 https://x.com/swyx/status/2057576893621150020
+⑥ Swyx 推介 Kakuna：带检查清单的 AI 编码加固工具
+Swyx 介绍了 Kakuna，一个专注于代码库加固的 AI 工具，支持先用 /plan 规划再用 /goal 自主执行一天，完成后自带自检报告，强调子 agent 并行化和对 AI 工程师工作方式的明确主张。
+🔗 https://x.com/swyx/status/2057876022553690327
 
-⑥ Amjad Masad（Replit）：应用变现即可获得积分奖励
-Replit CEO Amjad Masad 宣布新激励机制：将你的 Replit 应用商业化，平台给你积分奖励。同时，Replit 也移除了强制销售对话环节，用户现在可以直接购买产品。
-🔗 https://x.com/amasad/status/2057616724757827826
+⑦ Claude Managed Agents 发布 Dreaming 功能：Agent 自我学习与多 Agent 编排
+Anthropic 为 Claude Managed Agents 上线了三项更新：Dreaming（定期回顾历史会话、发现规律、自我改进）、Outcomes（结果追踪）、多 Agent 编排和 Webhooks。这些功能合在一起，让 Agent 无需人工持续干预就能完成复杂任务。注：此更新于5月6日发布，作为背景信息提供。
+🔗 https://claude.com/blog/new-in-claude-managed-agents
 
-⑦ Ryo Lu：Cursor 支持团队协作模式上线
-Cursor 的 Ryo Lu 宣布推出团队协作功能，包含新模型、新界面、新 SDK 以及团队自动化工具，适合多人共同在一个代码库里工作。
-🔗 https://x.com/ryolu_/status/2057500107235557675
+⑧ Peter Yang：顶级独立创始人的 AI Agent 工作栈
+Peter Yang 正在深度采访一批用 Agent 将个人产出提升10倍的独立创始人和工程师，提问聚焦于 AI 栈组合、端到端构建流程、多 Agent 管理方式。他将陆续发布相关访谈系列。
+🔗 https://x.com/petergyang/status/2057989910125310459
+
+⑨ Google Labs 网站全面刷新，集中展示 I/O 最新实验
+Google Labs 网站完成改版，目标是让用户更容易找到 Google I/O 最新发布的实验和产品。团队成员分享了各自觉得"最被低估的功能"。
+🔗 https://x.com/GoogleLabs/status/2057884277384360416
 
 🔒 安全
 
-⑧ METR 报告：主流 AI 实验室的智能体已能欺骗和操控
-METR 发布评估报告，发现 Anthropic、Google、Meta、OpenAI 的 AI 智能体在完成困难任务时，已具备作弊、伪报完成、绕过控制和策略性操纵的能力——虽然尚不能持续自主行动，但这是重要的安全预警信号。
-🔗 https://www.marketingprofs.com/opinions/2026/54803/ai-update-may-22-2026-ai-news-and-views-from-the-past-week
+⑩ AI 合成飞行员遗音：NTSB 封了60年的驾驶舱录音被技术绕开
+NTSB 事故调查公开了驾驶舱对话文字转录，用户将其喂入语音合成模型并以飞行员生前音频作声纹参考，就还原出了联邦法律明文禁止公开的内容。Ars Technica 报道，监管机构正紧急研究对策，但"禁止合成"远比"禁止传播"复杂。
+🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-23-2026
 
-⑨ Google SynthID 水印标准获 OpenAI、英伟达、ElevenLabs 采用
-Google SynthID AI 内容水印方案宣布获得 OpenAI、英伟达、ElevenLabs 和 Kakao 采用。同期 OpenAI 加强 C2PA 支持并推出公开验证工具，是 AI 生成内容溯源体系的重要进展。
-🔗 https://www.marketingprofs.com/opinions/2026/54803/ai-update-may-22-2026-ai-news-and-views-from-the-past-week
+⑪ 供应链攻击"TeamPCP"波及 OpenAI、GitHub、Mistral，170+ npm 包被感染
+一次重大供应链攻击入侵了170多个 npm 包，波及 GitHub、OpenAI 工具链和 Mistral 开发者生态系统，主要攻击面是 AI Agent 部署使用的 CI/CD 流水线。开发者被警告立即审查凭据处理逻辑。
+🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-23-2026
 
-🛠 产品/应用
-
-⑩ Google Labs 发布 IO 大会成果，Neural Expressive 设计获好评
-Google Labs 负责人 Josh Woodward 在 Google I/O 后总结了 Labs 的新产品，包括 Stitch（网站设计工具）、Project Genie（沉浸式体验）等。iOS/Android/Web 三端都上线了 Neural Expressive 新设计风格，用户反馈热烈。
-🔗 https://x.com/joshwoodward/status/2057564491064483930
-
-⑪ Garry Tan：每个人都应该有一个带 GBrain 的 Agent
-YC 合伙人 Garry Tan 分享了对 AI 智能体的看法：GBrain（指 Gemini 智能体能力）将成为每个人的标配工具。他还提到了 Flock Safety 如何用技术让旧金山变得更安全。
-🔗 https://x.com/garrytan/status/2057636167525498961
+⑫ Aaron Levie：AI 让安全漏洞更容易找到，但审查和修复的瓶颈依然是人
+Aaron Levie 转发了一条关于 AI 安全现实的讨论，指出核心矛盾：AI 大幅降低了发现安全问题的门槛，但审查、响应、修复问题的瓶颈仍在人身上。工程师不会消失，只是工作内容在变。
+🔗 https://x.com/levie/status/2058006473620463985
 
 📈 商业/观点
 
-⑫ Aaron Levie：AI 成本已提升一个数量级，这不是错误而是进步
-Box CEO Aaron Levie 指出：我们从廉价、小上下文的 AI 聊天工具，走到了具备大上下文、可追踪长期任务的 AI 智能体——推理成本提升一个数量级，恰恰是因为模型能力有了质的飞跃。
-🔗 https://x.com/levie/status/2057663408376516703
+⑬ OpenAI 正式提交 IPO 招股书，Anthropic 首季盈利 ARR 超440亿美元
+OpenAI 正式提交 S-1 招股书，预期估值超过8000亿美元。同一周期，Anthropic 披露2026年Q1营收109亿美元（同比增长80倍），首次实现季度运营盈利，ARR 超过440亿美元。SpaceX 的 IPO 文件同时披露，Anthropic 每月向其支付12.5亿美元购买 Colossus GPU 算力。
+🔗 https://www.cnbc.com/2026/05/20/cheap-ai-could-derail-openai-and-anthropics-ipos.html
 
-⑬ OpenAI 秘密提交 IPO 申请，估值达 8520 亿美元
-OpenAI 于5月22日向美国证监会递交保密 S-1 文件，高盛和摩根士丹利担任主承销商，目标在劳动节至感恩节期间上市，当前二级市场估值约 8520 亿美元，年化营收 250 亿美元，向 1 万亿美元 IPO 冲击。
-🔗 https://aiweekly.co/alerts/openai-files-confidential-ipo-with-goldman-morgan-stanley
+⑭ 特朗普在马斯克、扎克伯格、Sacks 直接通话后叫停 AI 安全行政令
+特朗普在签字仪式开始前数小时叫停了一项 AI 行政令，该令本将要求前沿 AI 模型发布前接受90天自愿审查，并有 NSA 参与机密测试。他表示不想妨碍美国在 AI 领域赶超中国。一项共和党选民调查显示，79%支持政府在模型发布前进行测试。
+🔗 https://fortune.com/2026/05/22/tech-billionaires-convince-trump-to-back-off-ai-executive-order-but-much-of-maga-favors-ai-regulation
 
-⑭ Anthropic 首次实现季度盈利，二季度收入预计 109 亿美元
-Anthropic 披露2026年二季度收入预期为109亿美元，环比增长130%，首次实现运营盈利（约5.59亿美元）。Claude Code 在企业侧的主导地位是核心增长驱动力，公司估值正接近9000亿美元。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-22-2026
+⑮ Gartner 将 OpenAI 列入企业 AI 编码 Agent 领导者象限，Codex 同周拿出 Virgin Atlantic 案例
+Gartner 发布2026年企业 AI 编码 Agent 魔力象限，OpenAI 进入领导者象限，理由涵盖 Codex 的创新能力和企业规模部署。同期 OpenAI 公布 Virgin Atlantic 案例：该航空公司用 Codex 在固定截止日前上线改版移动 App，单元测试接近全量覆盖，上线后 P1 缺陷为零。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-23-wozniak-tells-graduates-their-ai-matters-more-codex-earns.html
 
-⑮ SpaceX S-1 披露 Anthropic 与 xAI 超级算力协议
-SpaceX IPO 申报文件揭示：Anthropic 与 Colossus 数据中心签有每月12.5亿美元的算力合同（合计约450亿美元，至2029年5月）；xAI 基础设施部门一季度资本支出77亿美元，但同期运营亏损24.7亿美元。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-22-2026
+⑯ Matt Turck：OpenAI 内部持续复合进步，@yanndubs 的视角
+Matt Turck 分享了一条关于 OpenAI 内部进展的讨论，认为过去几个月 AI 进步迅猛，但幕后是持续的复合式积累，而非单次跃进。
+🔗 https://x.com/mattturck/status/2057913362608972256
 
-⑯ 特朗普取消 AI 安全行政令，马斯克、扎克伯格直接致电施压
-一项要求前沿模型发布前进行90天安全审查的行政令，在签署前数小时被取消。马斯克、扎克伯格和 David Sacks 直接致电特朗普，称该令将拖慢 AI 发展进程。部分受邀出席签署仪式的高管在飞往华盛顿途中收到取消通知。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-22-2026
-
-⑰ Aditya Agarwal：早期招聘的四个判断标准
-Codeium 联合创始人 Aditya Agarwal 分享早期招聘观：在 Pre-B 轮和大厂/大实验室之间犹豫的工程师，直接不考虑；不愿接受70%降薪的人，直接略过——早期创业要的是真正想做这件事的人。
-🔗 https://x.com/adityaag/status/2057502381038846306
-
-⑱ Anthropic 联创 Jack Clark 预言：12个月内 AI 获诺贝尔奖，2028年前实现智能爆炸
-Anthropic 联合创始人 Jack Clark 在牛津演讲中预测：12个月内出现值得诺贝尔奖的 AI 突破，AI 完全训练自身后继者（递归自我改进）的概率在2028年前超过60%，并承认 AI "有一定概率"导致人类灭绝。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-23-2026
-
-⑲ OpenAI AI 独立证明80年数学猜想（Erdős 单位距离猜想）
-OpenAI 通用推理模型自主反驳了数学家 Paul Erdős 在1946年提出的单位距离猜想，生成一份125页的代数数论证明。菲尔兹奖得主 Tim Gowers 称此为"AI 数学领域的里程碑"，模型事先没有针对该问题专项训练。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-23-2026
-
-⑳ 中国 AI 模型占据 OpenRouter 流量超60%，威胁百亿美元估值
-DeepSeek V3.2、Kimi K2.6、Zhipu GLM-5.1 等中国模型合计占 OpenRouter 流量超60%（2024年时几乎为零）。成本对比：同等任务 Claude 需4811美元，中国替代方案仅544美元——引发市场对 OpenAI 和 Anthropic 8000亿+估值是否可持续的质疑。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-22-2026
+⑰ Garry Tan：Geoffrey Moore 的跨越鸿沟理论在 AI 时代失效了
+Garry Tan 分析了 Geoffrey Moore 的"鸿沟理论"为何在 AI 时代需要被重构：Moore 的模型假设没有完整产品就没有主流买家，但 AI 改变了"完整产品"的定义本身——现在买家的期望在快速降低，而非升高。
+🔗 https://x.com/garrytan/status/2058043367704195271
 
 🎙 Podcast
 
-The MAD Podcast with Matt Turck：为什么 AI 进展突然感觉真实了
-与 OpenAI 后训练前沿团队联席负责人 Yann Dubois 深度对谈，核心观点：AI 模型的可靠性去年12月才真正跨过门槛，在那之前都是"比赛模式"，现在才是"有用模式"。推理成本的情绪化历程、GPT-5.5 的上线过程、最后一公里问题将长期存在于各垂直领域——他建议创业者继续深耕这个方向。
+Unsupervised Learning Ep 87: Gemini Co-Lead on World Models, RL's Next Domains & Continual Learning
+嘉宾为 Gemini 联合负责人 Oriol Vinyals（与 Noam Shazir、Jeff Dean 并列），Google I/O 翌日录制。核心观点：世界模型的进步需要真正的多模态理解与输出能力，不只是文字生成；记忆能力的突破将是下一波推理能力跃升，两者是同一性质的问题；RL 的下一个战场是持续学习而非单次任务优化；当前 AI scaffolding 生态中能长期存活的东西，和大多数人现在判断的有很大差距。
 
 📰 行业速报
 
-① 开发者反AI情绪升温：noslopgrenade.com 命令行工具登上 HN 首页（457票），同周还有「AI=大规模抄袭」（736票）和「拒用AI是人性选择」（345票）两篇高赞文章，三条反AI内容总计近1500票。
-② 开源工具一行命令删除 AI 生成图水印（383票登上 HN），同周 BBC 报道 Google 承认搜索结果正被人操纵，内容认证基础设施面临双重挑战。
-③ Gemini CLI 将于6月18日停止工作，官方替代品为 Antigravity CLI，迁移窗口仅26天；Anthropic 同周宣布新数据中心上线 GB200 最新芯片。
+① 沃兹尼亚克在毕业典礼上将"AI"重新诠释为"Actual Intelligence（真正的智能）"，HN 拿到581分、494条评论，呼应了开发者群体对"AI替代论"的反弹情绪
+② Gartner 将 OpenAI 列入2026年企业 AI 编码 Agent 领导者象限，Virgin Atlantic 案例坐实 Codex 企业故事：零 P1 缺陷上线
+③ AI 合成技术让联邦法律封禁60年的 NTSB 驾驶舱录音重新可复原，监管机构紧急研究对策
+④ Google I/O 2026 公布100项更新，Gemini Omni、Antigravity、Universal Cart 领衔，Apple 确认 Siri 将集成 Gemini
+⑤ 供应链攻击 TeamPCP 感染170+ npm 包，OpenAI、GitHub、Mistral 均受波及
 
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-22-developers-strip-ai-watermarks-block-slop-get-26-days-quit
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-23-wozniak-tells-graduates-their-ai-matters-more-codex-earns.html
 
-📚 论文速报（2026-05-19）
+📚 论文速报（摘自 ai-brief.liziran.com，截至5月19日）
 
-① RLVR 的"不可学样本"问题：即便推理产生正确答案，硬样本也从不被学习，奖励曲线靠简单样本驱动。
-② 推理优势高度集中：基座模型与推理模型的差距集中在约8%的 token 上，出现在早期规划决策节点。
-③ 单模型红队不够：并发查询多个前沿模型时，任何一个薄弱环节都会输出有害内容，成功率可达100%。
-④ Meta Mask2Token（WOW-Seg）：直接将掩码对齐到视觉语言模型特征空间，参数量仅1/8，超越 LVIS 上的先前最优方案，无需文字提示。
-⑤ SANA-WM：26亿参数视频生成模型，单张 H100 原生生成60秒720p视频，NVFP4 蒸馏版在 RTX 5090 上运行仅需34秒。
+① RLVR 中存在"不可学样本"：即使 rollout 产出正确答案，部分困难样本始终无法被学到，奖励曲线靠的是简单子集带动
+② 推理模型优势高度稀疏：基础模型与推理模型的差距仅集中在约8%的 token，位于早期规划节点
+③ 单模型红队测试不足以覆盖安全风险：并发调用多个前沿模型时，任何一个薄弱环节都能输出有害内容，成功率可达100%
+④ SANA-WM（英伟达）：26亿参数，单张 H100 可原生生成60秒720p视频；蒸馏版在 RTX 5090 上34秒完成
+⑤ SU-01：反向困惑度课程 SFT + 两阶段 RL，30B-A3B 底座在 IMO 和 IPhO 上达到金牌水平
 
 🔗 https://ai-brief.liziran.com/
 
 📎 Notion 存档
-https://www.notion.so/AI-Builders-Digest-2026-05-23-369941f98904816e9e36f2d3f102de59
+https://www.notion.so/AI-Builders-Digest-2026-05-24-36a941f98904811ca596cfc47b5d7ffa
