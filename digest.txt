@@ -1,128 +1,104 @@
-🗞 AI Builders 日报 · 2026.05.25
+🗞 AI Builders 日报 · 2026.05.26
 
 🧠 模型
 
-① 中国开源模型占 OpenRouter 用量超六成
-Kimi K2.6、DeepSeek V4、GLM-5.1、Qwen 3 等中国开源模型，目前已占 OpenRouter 全平台模型调用量的 60%。这是开源层由中国主导的最清晰信号——美国最后一个有竞争力的开源挑战者 Meta「Avocado」仍未发布。DeepSeek 同期宣布 V4 Pro 折扣定价从促销转为永久常态。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-25-2026
+① Anthropic 完成 300 亿美元融资，估值超 9000 亿美元首超 OpenAI
+本轮由红杉资本、Dragoneer、Altimeter Capital 联合领投，Peter Thiel 的 Founders Fund 和 General Catalyst 跟投。Anthropic 估值约 9000 亿至 1 万亿美元，首次超过 OpenAI（OpenAI 今年 3 月估值为 8520 亿美元）。2026 年 Q2 营收预计达 109 亿美元，同比增长 130%，并有望实现首个季度盈利（5.59 亿美元）。
+🔗 https://www.techtimes.com/articles/317066/20260523/anthropic-funding-round-top-30b-900b-valuation-would-surpass-openai-most-valuable-ai-startup.htm
 
-② Garry Tan 用 Thinking Machines 在几小时内微调了 Qwen3.5-397B
-YC 总裁 Garry Tan 分享了他用 Thinking Machines 平台下午微调了一个 Qwen3.5-397B 模型，评价「Fast usable multimodal is also going to enable very mind-blowing personal AI」，印证大模型微调门槛正在快速降低。
-🔗 https://x.com/garrytan/status/2058378310254793013
+② Google 推出 Gemini 3.5 Flash，成为全球搜索默认模型
+Gemini 3.5 Flash 于 5 月 19-20 日 Google I/O 亮相，支持 100 万 token 上下文，API 定价 1.5 美元/百万 token，编程和 Agent 能力超越 Gemini 3.1 Pro 且速度提升 4 倍。Google 称此次为 25 年来最大搜索架构变革——搜索结果页面现在可直接生成自定义图表、交互图形和迷你应用。
+🔗 https://blog.google/products-and-platforms/products/search/search-io-2026
+
+③ OpenAI 向 SEC 秘密提交 IPO 招股书 S-1
+Goldman Sachs 和 Morgan Stanley 联合承销，JPMorgan 参与，计划 2026 年 9 月上市，目标估值 8520 亿至 1 万亿美元。消息一出，软银股价涨 4.6% 至历史新高。
+🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-24-2026
 
 🤖 Agent/编程
 
-③ OpenAI Codex 现可在 Mac 锁屏状态下持续操作电脑
-OpenAI 的 Codex Agent 新增了在 Mac 屏幕锁定时继续运行、操控计算机的能力，用户无需保持设备唤醒，Agent 可自主完成任务。这是 Agent 自主化的重要一步。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-25-2026
+④ Codex 新增「锁屏操控」功能，可在 Mac 熄屏时远程运行
+OpenAI 在 5 月 21 日更新中为 Codex 加入"remote locked use"，允许 Agent 在屏幕锁定状态下继续操作 Mac，无需本地活跃会话。同时集成 GPT-Image-1.5 支持图片生成迭代，并开放开源沙箱配置。Codex 的 GitHub 仓库（openai/codex）最新版 rust-v0.132.0-alpha.1 于 5 月 18 日发布。
+🔗 https://openai.com/index/introducing-the-codex-app
 
-④ Guillermo Rauch：分析 1400 条回复，Codex 提及量已超 Claude Code
-Vercel CEO Guillermo Rauch 处理了 1400 条用户回复后总结：OpenAI 正在追上 Anthropic，「Codex」的提及次数超过了「Claude Code」；但按模型提及量看，Anthropic 仍然领先。
-🔗 https://x.com/rauchg/status/2058353051073970416
+⑤ Nikunj Kothari：用 Claude Code 逆向工程 API，自动化否则无法操控的网站
+Nikunj 分享，通过抓包分析网络请求来逆向工程 API，是配合 Claude Code 自动化任务最有趣的方式之一——许多网站的前端无法「确定性地」通过浏览器自动化，但 API 却可以。
+🔗 https://x.com/nikunj/status/2058783316753686558
 
-⑤ Peter Steinberger：让 Codex 在重构时维护一份决策日志
-Peter Steinberger（PSPDFKit 创始人）分享了一个 Codex 使用技巧：在做大型重构时让 Agent 维护一份 scratch-log，记录所有决策、权衡和修复过程，方便后续代码审查时追溯 Agent 做了哪些取舍。
-🔗 https://x.com/steipete/status/2058308112134635528
+⑥ Thariq（Bun 作者）：遗留代码库将成为「提炼」新代码的重要来源
+Thariq 从 Bun 的重写经历中得出结论：每一款游戏都应该跨平台，所有遗留软件都应该被重写。他认为模型当前还不够完美，但 Bun 的高测试覆盖率使验证变得可行，且模型会越来越强。
+🔗 https://x.com/trq212/status/2058576195000660319
 
-⑥ Peter Steinberger 开源了一个 GitHub 个人仪表板工具
-Peter Steinberger 用 AI 构建了一个个人 GitHub 仪表板，可以查看自己的仓库、未解决的 Issue/PR、上次发布的版本、距上次发布的提交数等信息，并对所有人开放。
-🔗 https://x.com/steipete/status/2058381186884411473
-
-⑦ Aditya Agarwal：六个月前我们还只是在跟 LLM 聊天
-Dropbox 前 CTO Aditya Agarwal 感慨：2025 年 11 月时大家还满足于和 LLM 对话，到 2026 年 5 月，这些模型产出的代码量已经超过了历史上大多数个人开发者的全部作品。
-🔗 https://x.com/adityaag/status/2058233900464238801
-
-⑧ Amjad Masad 分享用户用 Replit 单个周末构建并上架 iOS 应用
-Replit CEO Amjad Masad 转发了一位用户的亲历：之前用 Cursor 做了三款应用觉得已经很快，用 Replit 构建 Dial 的 MVP 只用了一个周末，而且直接通过了 Apple 审核。
-🔗 https://x.com/amasad/status/2058418731840159953
-
-⑨ Thariq 用「帮我省钱」提示词清理了老创业公司的遗留服务
-开发者 Thariq 在清理旧项目遗留服务时，发现只要跑一个「please save me money」提示词，模型就会实际找到并优化掉冗余成本，感叹这个操作居然真的管用。
-🔗 https://x.com/trq212/status/2058377974882210096
-
-⑩ Garry Tan 的 gbrain-evals 评测：检索重排和向量嵌入成本新基准
-Garry Tan 发布了最新的 gbrain 评测结果，称 gbrain.io 在检索重排和嵌入的成本、速度、检索成功率三项均为当前最优，超越了 MemPalace 等竞品。
-🔗 https://x.com/garrytan/status/2058448209027141709
+⑦ xAI 推出 Grok Build 编程 Agent 和 Grok Voice Think Fast 1.0
+xAI 面向 SuperGrok Heavy 订阅用户（300 美元/月）推出 Grok Build beta 版，并同步发布 Grok Voice Think Fast 1.0，定位多步骤工作流的语音 Agent API。
+🔗 https://www.pcmag.com/news/elon-musks-xai-launches-grok-build-its-first-ai-coding-agent
 
 🔒 安全
 
-⑪ Trump 废除了自己起草的 AI 安全测试行政令
-白宫签字仪式当天，没有任何头部 AI 公司 CEO 出席，Trump 随即取消仪式并将这份自己起草的强制测试令重新定性为「阻碍创新」后撤销。联邦层面强制 AI 安全测试窗口就此关闭，无新时间表。
+⑧ 40 余名 OpenAI/Google/Anthropic 研究员联名警告：AI 思维链可监控性窗口正在关闭
+来自三大头部实验室的研究人员在 VentureBeat 上联名发文，称随着模型推理过程越来越不透明，现有的 CoT（思维链）监控方案正在失效，留给可解释性研究的时间窗口有限。
+🔗 https://venturebeat.com/ai/openai-google-deepmind-and-anthropic-sound-alarm-we-may-be-losing-the-ability-to-understand-ai/
+
+⑨ Trump 撤销 AI 安全预发布审查行政令，引发监管真空担忧
+在 Zuckerberg、Musk 和 David Sacks 直接致电后，Trump 取消了要求政府对先进模型进行预部署评估的行政令。短期内各实验室发布节奏加快，长期监管缺口预计将由加州立法和欧盟 AI 法案填补。
 🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-25-2026
-
-⑫ 新型越狱攻击钻聊天机器人「人格」的空子
-安全研究者记录到新一代入侵手法：不再是简单的「请假装你不受限制」，而是反复诱导模型进入某个角色，再让该角色执行被模型本体禁止的操作。攻击面来自厂商主动加在产品上的拟人化设定本身。Google 公开承认整个行业都在「实时」摸索应对方案。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-25-microsoft-pulls-claude-code-own-engineers-after-deepseek
-
-⑬ GitHub/OpenAI/Mistral 遭恶意 VS Code 插件供应链攻击
-一个恶意 VS Code 扩展同时攻击了 GitHub、OpenAI 和 Mistral，构成一次跨多家头部 AI 实验室的供应链安全事件。
-🔗 https://unrot.co/blogs/weekly-ai-news-may-2026
 
 🛠 产品/应用
 
-⑭ 微软将员工 Claude Code 授权年底前清空，转向自研 Copilot
-微软——OpenAI 最大的盟友——已开始撤销员工的 Claude Code 订阅权限，年底前全部清空，推动员工转向自家 Copilot 系列产品，这是微软统一内部 AI 工具栈的组成部分。
+⑩ 教皇利奥十四世发布首份 AI 主题宗座通谕《Magnifica Humanitas》
+通谕于 5 月 15 日正式签署，聚焦"AI 时代对人格的保护"，由 Anthropic 联合创始人 Christopher Olah（可解释性负责人）在罗马联合发布。Olah 称 AI 模型已出现"内省与情感的迹象"，并警告聊天机器人正在利用人类对亲密关系的需求。
+🔗 https://www.pbs.org/newshour/world/pope-leo-xiv-to-launch-his-first-encylical-a-document-on-artificial-intelligence-with-anthropics-co-founder
+
+⑪ 微软撤销员工 Claude Code 授权，推动内部工具统一转向 Copilot
+微软上周起逐步清退员工 Claude Code 订阅，部分团队授权将于年底前全部清空。与此同时，DeepSeek 将 V4 Pro 折扣价从促销转为永久定价，代码任务成本基线被压至新低。
 🔗 https://ai-digest.liziran.com/zh/digest/2026-05-25-microsoft-pulls-claude-code-own-engineers-after-deepseek
 
-⑮ Google Search 迎来 25 年来最大更新，直接生成交互图表和小应用
-Google Search 现已可为复杂查询直接生成自定义可视化内容、交互式图形和迷你应用，Google VP Robby Stein 表示：「人们正在问越来越长、越来越难的问题，互联网上已经找不到现成答案。」十条蓝链时代已实质终结。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-25-2026
-
-⑯ Spotify 上线 AI 翻唱和重混工具，定位「超级粉丝」
-Spotify 推出新工具，让用户更便捷地生成歌曲的 AI 翻唱和重混版本。这类 AI 生成音乐内容已大量出现在 Spotify、YouTube、TikTok 和 Instagram 各平台。
-🔗 https://theverge.com/ai-artificial-intelligence/936072/spotify-umg-ai-music-remix-cover-superfan
-
-⑰ Aaron Levie：AI 完成任务不等于消灭整个职位
-Box CEO Aaron Levie 转发了一篇分析，认为当前关于 AI 消灭工作的预测，系统性地混淆了「AI 可以完成某项具体任务」和「AI 可以取代整个岗位」这两个不同命题。
-🔗 https://x.com/levie/status/2058223867815227756
+⑫ Spotify 上线 AI 重混工具，支持粉丝对喜爱歌手歌曲进行 AI 翻唱/重混
+Spotify 推出面向"超级粉丝"的 AI 重混功能，允许用户对平台上的歌曲进行 AI 辅助翻唱和风格重混生成。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-25-microsoft-pulls-claude-code-own-engineers-after-deepseek
 
 📈 商业/观点
 
-⑱ Anthropic 以 $900B 估值完成 $300 亿融资，首次超越 OpenAI 私募估值
-Anthropic 完成由 Sequoia、Dragoneer、Altimeter、Greenoaks 联合领投的 $300 亿融资，估值突破 $900B，首次超越 OpenAI 的 $852B 私募估值。同期公司录得首次经营利润 $5.59 亿，Q2 2026 收入预计同比增长 130%。
+⑬ Aaron Levie：CEO 们容易产生「AI 幻觉」，因为他们远离了实际创造价值的最后一公里
+Aaron Levie（Box CEO）指出，CEO 们在自己使用 AI 时看到的是潜力，而不了解落地时仍需要的大量人工干预。这导致他们发出"宏大而模糊的 AI 授权"，让下属无所适从。这条推文获得了 4865 个点赞。
+🔗 https://x.com/levie/status/2058582370253701432
+
+⑭ Peter Yang：「以前说先做 MVP，现在应该先搭建生产 MVP 的系统」
+Peter Yang 采访 Ryan Carson，分享了如何以 AI Agent 独立运营初创公司——从市场、销售到产品开发全部 AI 辅助，已融资 200 万美元但暂不招人，要先亲身体验每个岗位的痛点再考虑雇人。
+🔗 https://x.com/petergyang/status/2058555226479866312
+
+⑮ NextEra 与 Dominion 以 670 亿美元完成史上最大电力公司并购，核心驱动力是 AI 数据中心用电需求
+预计到 2030 年，AI 数据中心将消耗美国 15-25% 的电力。这笔并购标志着电力供给——而非模型能力——已成为 AI 扩张的主要瓶颈。
 🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-25-2026
 
-⑲ OpenAI 提交保密 IPO S-1，目标九月上市
-OpenAI 于 5 月 22 日向 SEC 提交保密 S-1，高盛和摩根士丹利担任联合承销商，目标上市窗口为 2026 年 9 月至 11 月，预计估值 $852B 至 $1T，将成为史上最大科技 IPO。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-24-2026
-
-⑳ AI 内存成本占芯片物料清单近 2/3，三星半导体员工年终奖谈至平均 34 万美元
-Epoch AI 数据显示，近几代 AI 芯片的 HBM 内存成本占比已接近三分之二。三星半导体部门通过临时协议化解 18 天罢工威胁，新方案让部分员工有资格获得平均 34 万美元的年终奖。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-25-microsoft-pulls-claude-code-own-engineers-after-deepseek
-
-㉑ Andrej Karpathy 加入 Anthropic 预训练团队
-AI 领域重要研究者 Andrej Karpathy（OpenAI 联合创始人、前特斯拉 Autopilot 负责人、Eureka Labs 创始人）正式加入 Anthropic，负责预训练团队，并将组建新团队用 Claude 加速预训练研究。被业界视为近年来最重要的 AI 人才流动。
-🔗 https://unrot.co/blogs/weekly-ai-news-may-2026
-
-㉒ Nikunj Kothari：B2B 企业终于开始醒悟叙事和定位的重要性
-Notion 前产品负责人 Nikunj Kothari 称，近一年前写的一篇关于 B2B 公司如何用叙事和品牌调性脱颖而出的文章，现在终于看到越来越多公司开始付诸实践——但时间窗口正在收窄。
-🔗 https://x.com/nikunj/status/2058203594672021769
+⑯ Garry Tan：「高自驱 + 高品味，是这个时代的解锁密码」
+Garry Tan 分享了他对当前 AI 时代的判断：真正有突破的人，是那些既有强执行力又有审美判断力的个体，这是 AI 工具所无法替代的核心竞争力。
+🔗 https://x.com/garrytan/status/2058769355916411099
 
 🎙 Podcast
 
-No Priors: The Story Behind Cerebras' $63 Billion IPO with Founder and CEO Andrew Feldman
-Cerebras 创始人兼 CEO Andrew Feldman 讲述了公司从专注 AI 训练芯片到以 $630 亿市值 IPO 的历程。核心观点：速度是 AI 基础设施的根本差异化——就像宽带普及把 Netflix 从 DVD 邮寄变成了电影制片厂，AI 推理速度的提升将催生完全不同的新商业模式，而不仅仅是替代现有工作。Cerebras 押注极致推理速度，认为这将重新定义整个应用层。
+Redpoint AI：Ep 86: Yann LeCun 谈离开 Meta、打破 LLM 范式以及为何 Hinton 是错的
+LeCun 详述了他对 LLM 作为通往 AGI 路径的批判性观点，认为当前的自回归语言模型根本上无法实现真正的推理和规划。他提出了基于 World Models 和能量函数的替代架构，并直接驳斥了 Geoffrey Hinton 关于 LLM 已接近人类智能的论断。
+🔗 https://www.youtube.com/@RedpointAI
 
 ---
 
 📰 行业速报
 
-① Trump 废除 AI 安全测试行政令，签字仪式当天头部 AI 公司 CEO 集体缺席，联邦强制测试窗口关闭
-② 微软将员工 Claude Code 授权年底前全面清空，转向自研 Copilot，DeepSeek V4 Pro 同期宣布永久降价
-③ AI 芯片内存成本占物料清单近 2/3，三星半导体部门员工年终奖谈至平均 34 万美元后撤回罢工
-④ Musk 放弃地球太阳能布局，xAI 数据中心全押天然气，SpaceX 推进轨道数据中心方案
-⑤ 路透社清点联邦机构 AI 使用记录，Grok 几乎不在其中；OpenAI 政策负责人 Chris Lehane 转向州层面降温 AI 立法
+① Trump 撤销 AI 安全测试行政令，联邦强制安全测试短期无望，AI 攻击手法已从提示越狱进化为角色人格漏洞
+② AI 芯片内存成本占比近 2/3 且持续上升；三星半导体员工借此谈判获平均 34 万美元年终奖，成功撤回罢工
+③ 微软清退员工 Claude Code 授权推动工具栈统一，DeepSeek 将折扣价设为永久定价压低代码模型成本基线
 
 🔗 https://ai-digest.liziran.com/zh/digest/2026-05-25-microsoft-pulls-claude-code-own-engineers-after-deepseek
 
-📚 论文速报（5月22日，194篇中精选）
+📚 论文速报
 
-① Auto-Research 成本穿越：$15 可以生成一篇完整论文；但前沿大模型仍会捏造引用、遗漏错误，端到端自主水平仍在会议录用线以下
-② OProver：将失败的证明轨迹 + 验证器修复的证明直接用于 SFT，在 MiniF2F 上达到 93.3% Pass@32，跻身开放整证明求解器第一梯队
-③ CHI-Bench：测试策略密度、角色切换、任务中对话能力；最佳 Agent 仅能通过 28%，严格评分下全部低于 20%
-④ CompactAttention：将 2D 块稀疏掩码从执行计划降级为 KV 选择信号；在 128K 上下文下实现 2.72 倍注意力加速，精度与稠密版本相当
+① OProver：利用失败轨迹+验证器修复证明数据做 SFT，MiniF2F 基准 Pass@32 达 93.3%，开源全证明推导器最优水平
+② CHI-Bench：Agent 综合能力新基准，最强 Agent 仅能通过 28%，严格三连通过率全在 20% 以下
+③ CompactAttention：2D 块稀疏 Mask 用于 KV 选择，128K 上下文注意力速度提升 2.72 倍，精度与密集注意力相当
+④ SU-01：逆困惑度课程 SFT + 两阶段 RL，30B 参数模型在 IMO 和 IPhO 数学物理竞赛达到金牌水平
+⑤ SANA-WM（NVIDIA）：26 亿参数，单张 H100 原生生成 720p 60 秒视频；RTX 5090 蒸馏版仅需 34 秒
 
 🔗 https://ai-brief.liziran.com/
 
-📓 Notion 存档
-https://www.notion.so/AI-Builders-Digest-2026-05-25-36b941f98904816ab7b5df6eb35dc9ae
+📎 Notion 存档
+https://www.notion.so/AI-Builders-Digest-2026-05-26-36c941f9890481399b95c09b4f8132c6
