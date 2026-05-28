@@ -1,124 +1,139 @@
-🗞 AI Builders 日报 · 2026.05.26
+🗞 AI Builders 日报 · 2026.05.28
 
 🧠 模型
 
-① Yann LeCun 离开 Meta，创立 AMI 实验室，押注世界模型超越大语言模型
-LeCun 在 Unsupervised Learning 播客中详解离开 Meta 的原因：公司全面转向大语言模型后，他主导的 JEPA 世界模型项目在内部失去优先级。他创立的 AMI（Advanced Machine Intelligence）聚焦 JEPA 架构和世界模型，核心观点是大语言模型无法预测行动后果、无法做规划，因此不是通向类人智能的路径。他提到最新论文 "Le World Model" 值得关注，采用 SIGREG 显式正则化解决表征坍塌问题。
-🔗 https://www.youtube.com/@RedpointAI
+① Thariq: the basic trick to using Claude Code for non-technical work is to put a bunch of files in a folder and tell it can write scripts + make HTML
+🔗 https://x.com/trq212/status/2059363113963540788
 
-② OpenAI 的 AI 解决 80 年未解的 Erdős 数学难题
-OpenAI 宣布其 AI 系统解决了 Paul Erdős 提出、悬而未决约 80 年的数学问题，是目前 AI 在纯数学研究领域取得的最重要突破之一，标志着 AI 推理能力进入可解决开放性数学猜想的新阶段。
-🔗 https://sub.thursdai.news/p/thursdai-may-21-google-io-26-recap
+① Zara Zhang: How my own usage of coding agents has changed in the past month:
+1. Moved from the terminal to the Codex/Claude Code desktop apps. The Codex Mac app is especially great. Now I rarely open the terminal
+2. Transitioned from mostly Claude Code to 50-50 Claude Code and Codex. Codex feels like a very reliable engineer; Claude Code is a better PM and designer with good communication skills
 
-③ Google 在 I/O 2026 发布 Gemini 3.5 Flash，押注规模化分发
-Gemini 3.5 Flash 定位为更快、更便宜的版本，优先在 Search、YouTube、Gmail、Android 等产品中大规模部署，而非追求 benchmark 第一。Adobe、Canva 和 CapCut 同步宣布接入 Gemini，支持专业创作工具内的 AI 内容生成。
-🔗 https://sub.thursdai.news/p/thursdai-may-21-google-io-26-recap
+So I go to Codex if I already have a defined task and just need it to work; I go to Claude Code if I don't yet know what I want and just wanna brainstorm/prototype
+🔗 https://x.com/zarazhangrui/status/2059354487823978586
 
-④ OpenAI Codex 新增自主 Agent 能力：Mac 锁屏时仍可在后台运行
-Codex 重大升级：可以在 Mac 屏幕锁定的状态下自主操控电脑，不再需要用户保持活跃会话。这意味着 AI Agent 可以作为真正独立运行的数字工作者，而不只是交互式辅助工具。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-25-2026
+① Zara Zhang: Frontend Slides skill now has 19k stars on GitHub ✨
 
----
+I upgraded it with a new design brain: it can now pull from my Beautiful HTML Templates library, pick a visual direction, and generate slides using that template’s design language
+
+Also new: 
+- Works better with coding agents beyond Claude Code - Export to webpage or PDF for easy sharing 
+- Inline slide editing 
+- Fixed 16:9 deck stage to avoid overflow, cropping, and weird responsive chaos
+
+Try now: https://t.co/CiQpficxcD
+🔗 https://x.com/zarazhangrui/status/2059338915023393161
 
 🤖 Agent/编程
 
-⑤ 构建者观点：AI Agent 时代，遗留代码库将成为蒸馏源
-Thariq（Bun 联合创始人）在 Bun 被 AI 重写后总结：遗留代码库是把代码"蒸馏"成新形态的宝贵原料，每个游戏都应跨平台、所有遗留软件都应重写——模型正越来越接近能做到这一点的能力边界。他也指出目前模型尚未完全达标，但 Bun 的高测试覆盖率让可验证性极强。
-🔗 https://x.com/trq212/status/2058576195000660319
+① Peter Steinberger: autoreview is the most impactful skill I've added to my stack (next to https://t.co/SEj2XRpaD1). It automatically reviews your code before landing a PR.
 
-⑥ 用 Claude Code 逆向工程网站 API，实现自动化操作
-Nikunj 分享实践：通过抓取网络请求逆向工程 API，是利用 Claude Code 实现任务自动化最有趣的方式之一。大量网站无法通过传统确定性方式导航，这种方法绕开了限制。他本周还做了一个旅行 CLI 产品，基于积分帮用户规划旅行。
-🔗 https://x.com/nikunj/status/2058783316753686558
+Finds so many edge cases.
+Sometimes it runs for hours.
 
-⑦ Zara Zhang：OpenAI Codex 已开源
-OpenAI 正在变得更加开放——Codex 已是开源项目，不少人还没意识到这一点。
-🔗 https://x.com/zarazhangrui/status/2058604604422815832
+https://t.co/zbUjIS2e1i
+🔗 https://x.com/steipete/status/2059453909819654554
 
----
+② Amjad Masad: Honored to receive a medal from his Majesty King Abdullah II for Distinction on Jordan’s 80th Independence Day.
 
-🔒 安全
+It’s been an incredibly journey building @Replit, starting from Jordan more than 15 years ago, and then helping accelerate the field of agentic AI globally. https://t.co/BKE14jsaRe
+🔗 https://x.com/amasad/status/2059518682825392525
 
-⑧ Trump 撤销 AI 安全测试行政令，联邦监管真空扩大
-Trump 将自己起草的 AI 安全测试令贴上"阻碍创新"标签后撤销，签字当天无一家 AI 公司 CEO 出席。Google 公开承认整个行业都在实时摸索安全方案，没有成熟防御体系。同时安全攻击面已从提示词注入进化到利用模型的"拟人化人格设定"本身作为攻击入口。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-25-microsoft-pulls-claude-code-own-engineers-after-deepseek
+③ Aaron Levie: A meaningful portion of enterprises I talk to outside of Silicon Valley generally are looking to hire while also adopting agents. 
 
-⑨ 梵蒂冈发布史上首份 AI 教皇通谕，与 Anthropic Chris Olah 联合发布
-教皇利奥十四世于 5 月 25 日发布题为《Magnifica Humanitas》（伟大的人性）的通谕，聚焦 AI 时代的人类尊严保护。通谕由 Anthropic 联合创始人 Chris Olah 共同发布，恰好签于 Leo XIII《劳动通谕》135 周年当日。梵蒂冈选择与 Anthropic 而非 Google 或 OpenAI 合作，被业界解读为对安全优先立场的背书。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-25-2026
+There’s a huge wave of technical and engineering talent needed inside originations, building software or acting as FDEs for agents. And as AI drives efficiency in areas like the customer lifecycle, companies are leaning in even more heavily to client-facing jobs.
 
----
+In a world where AI did everything for you with no human oversight needed, maybe we’d be having a different conversation. But that’s not how AI works. 
 
-🛠 产品/应用
+Even for the areas that have the most automation potential, agents are automating tasks, not whole jobs. As they automate tasks, the agents need to be steered, their work reviewed, the outputs incorporated and more. All of this is requiring people to do the work.
 
-⑩ 微软撤销员工 Claude Code 订阅授权，推向自家 Copilot 工具栈
-微软上周开始清除员工的 Claude Code 访问权限，部分团队订阅将于年底前全部撤销，同步将开发者引导至 GitHub Copilot 生态。这标志着企业 IT 部门开始收回开发者对第三方 AI 工具的自主选择权，平台锁定效应加速。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-25-microsoft-pulls-claude-code-own-engineers-after-deepseek
+And for the areas that have less automation potential, companies are freeing up dollars from efficiency gains elsewhere to hire in those areas now. 
 
-⑪ DeepSeek V4 将折扣定价转为永久常态
-DeepSeek 宣布 V4 Pro 的低价策略从限时促销转为永久定价，代码任务成本大幅低于西方模型且无截止日期。结合 OpenRouter 数据：中国开源模型（Kimi K2.6、DeepSeek V4、GLM-5.1、Qwen 3）已占平台流量 60% 以上，开放权重模型阵营已由中国实验室领跑。
-🔗 https://www.siliconrepublic.com/machines/chinas-deepseek-unveils-long-awaited-v4-ai-model
+Yes, maybe AI lets you respond to front line support tickets automatically, but the companies (instead of just dropping the profit to the bottom line) will go and invest in new areas of sales and customer success that will add more differentiation for clients.
 
-⑫ Google 搜索 25 年来最大改版：页面内动态生成迷你应用
-Google 在搜索结果页直接生成自定义交互图表和迷你应用，面向"没有任何网页能直接回答的复杂长问题"。Google VP Robby Stein 表示用户提问已变得更长更难，"10 条蓝链时代"正式终结，SEO 策略随之转向 AI Overview 引用优化。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-25-2026
+Companies don’t remain static. They automating tasks where they can and free up dollars to move onto the next thing that matters.
+🔗 https://x.com/levie/status/2059482349977653619
 
----
+④ Peter Steinberger: Also extracted our image-logic into a separate library. Especially useful if you want to ensure small hacked images don't explode your process.
+
+Rastermill - Portable image processing for Node agents. Uses Wasm+Rust to be fast.
+
+https://t.co/YW6iCQZX4V
+🔗 https://x.com/steipete/status/2059423344961671290
+
+⑤ Matt Turck: The biggest mindf*ck scenario in AI: things don’t change that much.  Both doomers and accelerationists turn out to be wrong.  We are all more productive.  Agents deliver automation in the enterprise.  Some important scientific discoveries are made.  All great.  But that’s it.
+🔗 https://x.com/mattturck/status/2059411493196529751
 
 📈 商业/观点
 
-⑬ Anthropic 完成 300 亿美元融资，估值超 9000 亿美元，首次超越 OpenAI
-Anthropic 正式完成由 Sequoia、Dragoneer、Greenoaks、Altimeter 联合领投的 300 亿美元融资，估值超 9000 亿美元，首次超过 OpenAI 的 852 亿美元估值。支撑这一估值的是实质性业务数据：Q2 营收预计达 109 亿美元、公司首次季度经营盈利、Q1 营收环比增长 130%，年化运营率已达 300 亿美元。
-🔗 https://www.theinformation.com/briefings/anthropic-picks-co-leads-900-billion-valuation-funding-round
+⑨ Amjad Masad: Back in Jordan doing my favorite thing — drifting! First time in a pro drift car. https://t.co/9ifXxcofoC
+🔗 https://x.com/amasad/status/2059393192395432172
 
-⑭ OpenAI 向 SEC 秘密递交 IPO 招股说明书
-OpenAI 约于 5 月 22 日向美国证券交易委员会秘密提交 IPO 申请，高盛和摩根士丹利担任承销商，目标在 2026 年 Q4 或更早上市，潜在估值超过 1 万亿美元。在此之前，OpenAI 刚赢得对 Elon Musk 的诉讼，扫清了机构承销商面前的一大风险。
-🔗 https://www.axios.com/2026/05/20/openai-ipo-spacex-musk
+⑩ Guillermo Rauch: Feedback is a gift. Critical feedback doubly so.
+🔗 https://x.com/rauchg/status/2059444220956491937
 
-⑮ CEO 们的 AI 狂热与执行鸿沟
-Aaron Levie（Box CEO）犀利指出：CEO 群体特别容易陷入 AI 精神错乱，因为他们离实际执行层够远，用 AI 把玩时只看到惊喜，看不到最后一公里仍需人完成的工作。Madhu Guru 进一步补充：许多高管已习惯"远程管理"，缺乏亲自动手使用 AI 的肌肉，导致他们发出笼统、不精确的 AI 指令，效果南辕北辙。
-🔗 https://x.com/levie/status/2058582370253701432
+⑪ Sam Altman: 🛫 https://t.co/NARtaDr0wJ
+🔗 https://x.com/sama/status/2059492605634007125
 
-⑯ Peter Yang：先建造构建 MVP 的系统，再构建 MVP 本身
-Peter Yang 在播客中采访了用 AI Agent 一人运营初创公司的 Ryan Carson，核心观点：过去说"先做 MVP"，现在应该先搭建"生成 MVP 的系统"。Yang 自己也刚完成 200 万美元种子轮融资，但暂时不打算招人，想先亲自感受每个岗位的痛点。
-🔗 https://x.com/petergyang/status/2058555226479866312
+⑫ Garry Tan: Founders must stop trying to building 2010-era businesses with 2026-era technology. 
 
-⑰ NextEra 与 Dominion 670 亿美元合并，AI 算力电力危机浮现
-美国史上最大公用事业并购案，直接驱动力是 AI 数据中心的电力需求激增。AI 数据中心预计到 2030 年消耗美国全部电力的 15–25%，电力供给正在成为与芯片供给同等重要的 AI 扩展瓶颈。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-may-25-2026
+Don't try to rebuild Foursquare or Yelp. 
 
----
+Don't try to recreate Basecamp by 37 Signals with $10/mo SaaS pricing. 
 
-🎙 Podcast
+Don't underprice! If it works it's worth a lot more.
 
-Unsupervised Learning：Yann LeCun 谈离开 Meta、打破大语言模型范式，以及为何 Hinton 是错的
-LeCun 详述为何大语言模型不是通向类人智能的路径：它们无法预测行动后果，也无法通过搜索/优化来规划行动序列。他披露了 Meta 内部的组织变化：LLAMA 项目压力极大导致 GenAI 部门保守化，而 FAIR 与产品团队的"阻抗失配"使研究成果无法顺利转化。他建议在读博士的人不要研究大语言模型——资源不够，也做不出独特贡献。最新创业方向 AMI 采用 SIGREG 显式正则化来解决 JEPA 世界模型的表征坍塌问题，论文 "Le World Model" 值得精读。
+Don't be tempted to become "Tech enabled PE" with revenue tricks. 
 
----
+The rules of tech changed with AI. Play the new game.
+🔗 https://x.com/garrytan/status/2059521656532721964
 
-📰 行业速报（2026-05-25）
+⑬ Peter Steinberger: All the deps around opus are old or terrible, so vibed my own and replaced octoscript and opus-native.
 
-① Trump 撤销 AI 安全测试行政令，联邦层面短期内不会强制安全测试，Google 公开承认行业没有成熟防御方案
-② AI 芯片成本结构重塑：内存（HBM）在物料成本中占比接近 2/3，三星员工年终奖达 34 万美元是上游利润传导的直接体现
-③ 微软撤销员工 Claude Code 授权，DeepSeek V4 将低价定为永久常态，企业工具生态加速分化
-④ Musk xAI 数据中心全押天然气，Grok 在联邦采购记录中几乎缺席
-⑤ Spotify 上线 AI 重混翻唱工具，Google AI 搜索摘要进一步侵蚀原始网页流量
+Performance of modern wasm on node/V8 is ~equivalent to native. 
 
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-25-microsoft-pulls-claude-code-own-engineers-after-deepseek
+Your claw now automatically takes meetings notes and you can talk to it in meetings.
 
----
+https://t.co/K0uXTLCuYt
+🔗 https://x.com/steipete/status/2059422568352714981
 
-📚 论文速报（截至 2026-05-22）
+⑭ Thariq: - image or video editing? write scripts
+- finances, tax work, etc? put in PDFs, write scripts, output HTML
+- medical advice? put in PDFs + data, output HTML 
+- filling out paperwork? write scripts
+- creating a report? write HTML
+- making plans? write HTML
+🔗 https://x.com/trq212/status/2059363115146395965
 
-① OProver：用失败轨迹+验证器修复的证明做 SFT，MiniF2F 达到 93.3% Pass@32，是开放整证明器的顶级水准
-② CHI-Bench：测试策略密度、角色切换、任务中对话的新基准，最好的 Agent 只过了 28%，严格通过率不到 20%
-③ CompactAttention：把 2D 块稀疏掩码从执行计划降级为 KV 选择信号，128K 上下文场景注意力速度提升 2.72×
-④ Flash-GRPO（字节）：把多步 GRPO 折叠成单步，大幅降低 14B 视频对齐训练成本
-⑤ PUMA Early Exit：轻量冗余检测器在 5 个长推理模型上节省 26.2% Token 而不损失准确率
-⑥ SANA-WM：单张 H100 生成 60 秒 720p 世界模型视频，RTX 5090 上仅需 34 秒
+⑮ Claude: https://t.co/3zGmkffKOx
+🔗 https://x.com/claudeai/status/2059292343723819160
+
+⑯ Claude: https://t.co/mZdWx3DhAO
+🔗 https://x.com/claudeai/status/2059292345800048714
+
+⑰ Thariq: getting it access to data is important too, add in the gmail, google calendar, etc. connectors
+
+but I think people underestimate how much context they have in files
+🔗 https://x.com/trq212/status/2059363116316598739
+
+⑱ Claude: What are you building?
+🔗 https://x.com/claudeai/status/2059292347678986251
+
+📰 行业速报
+
+① Trump撤销自己起草的AI安全令，取消AI安全测试联邦授权。
+② 三星员工年终奖平均涨至34万美元，HBM芯片成本占AI芯片成本的三分之二。
+③ 微软撤销员工对Anthropic Claude Code的访问权限，改推内部Copilot工具。
+
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-25-microsoft-pulls-claude-code-own-engineers-after-deepseek.html
+
+📚 论文速报
+
+① Auto-Research Cost Curve Crossed: 15美元能生成完整论文，但前沿LLM仍存幻觉问题。
+② OProver: 反向轨迹+验证器修复的SFT方案达MiniF2F 93.3%通过率，开源整体证明中领先。
+③ CompactAttention: 稀疏注意力掩码加速实现2.72倍性能提升，在128K上下文保持密集精度。
+④ Lance (字节跳动): 双流MoE统一多模态，理解和生成共享上下文但独立专家路径。
 
 🔗 https://ai-brief.liziran.com/
 
----
-
-📎 Notion 存档
-https://www.notion.so/AI-Builders-Digest-2026-05-26-36c941f9890481399b95c09b4f8132c6
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-05-28-36e941f9890481a0a0bffe23f298953f
