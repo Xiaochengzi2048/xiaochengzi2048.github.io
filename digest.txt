@@ -1,139 +1,105 @@
-🗞 AI Builders 日报 · 2026.05.28
+🗞 AI Builders 日报 · 2026.05.29
 
 🧠 模型
 
-① Thariq: the basic trick to using Claude Code for non-technical work is to put a bunch of files in a folder and tell it can write scripts + make HTML
-🔗 https://x.com/trq212/status/2059363113963540788
+① Google Gemini Omni——多模态旗舰模型正式发布
+Google I/O 2026 发布的最新多模态模型，可以从任意输入（文本、图像、视频）生成任意输出。具备强大的世界理解、编辑和对话能力，已集成到 Gemini App、Google Flow 和 YouTube Shorts。代表多模态 AI 推理的重大进展。
+🔗 https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni/
 
-① Zara Zhang: How my own usage of coding agents has changed in the past month:
-1. Moved from the terminal to the Codex/Claude Code desktop apps. The Codex Mac app is especially great. Now I rarely open the terminal
-2. Transitioned from mostly Claude Code to 50-50 Claude Code and Codex. Codex feels like a very reliable engineer; Claude Code is a better PM and designer with good communication skills
+② Google Gemini 3.5——首个融合前沿智能与行动的模型系列
+Gemini 3.5 是首个专为复杂、智能体化工作流设计的模型，Gemini 3.5 Flash 是旗舰变体。相比之前版本，在编程和网络安全能力上有质的飞跃，标志着从语言模型向行动导向型智能体的转变。
+🔗 https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/
 
-So I go to Codex if I already have a defined task and just need it to work; I go to Claude Code if I don't yet know what I want and just wanna brainstorm/prototype
-🔗 https://x.com/zarazhangrui/status/2059354487823978586
-
-① Zara Zhang: Frontend Slides skill now has 19k stars on GitHub ✨
-
-I upgraded it with a new design brain: it can now pull from my Beautiful HTML Templates library, pick a visual direction, and generate slides using that template’s design language
-
-Also new: 
-- Works better with coding agents beyond Claude Code - Export to webpage or PDF for easy sharing 
-- Inline slide editing 
-- Fixed 16:9 deck stage to avoid overflow, cropping, and weird responsive chaos
-
-Try now: https://t.co/CiQpficxcD
-🔗 https://x.com/zarazhangrui/status/2059338915023393161
+③ Anthropic Claude Mythos——企业网络安全专用模型即将面世
+Claude Mythos 已为 40 多家科技公司联盟（包括 Apple、Amazon、Microsoft）做好准备，专门用于发现和修补安全漏洞。相比 Claude 以往版本，在编码和网络安全能力上实现了质的跨越。预计本月底发布。
+🔗 https://www.mediapost.com/publications/article/415341/anthropic-readies-mythos-for-release-addresses-cy.html
 
 🤖 Agent/编程
 
-① Peter Steinberger: autoreview is the most impactful skill I've added to my stack (next to https://t.co/SEj2XRpaD1). It automatically reviews your code before landing a PR.
+④ Google Gemini Spark——个人 AI 智能体登陆 Gemini 应用
+Gemini Spark 是集成到 Gemini App 的个人 AI 智能体，能帮助用户管理数字生活、代表用户采取行动。提供全天候主动协助，首次让普通用户体验到真正的 AI 智能体能力。
+🔗 https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/
 
-Finds so many edge cases.
-Sometimes it runs for hours.
+⑤ Google Antigravity——智能体优先的开发框架正式推出
+Antigravity 是 Google 推出的智能体优先开发框架，旨在让"任何人都能成为建造者"。通过增强的 Gemini API、原生 Android 支持和 AI Studio，大幅降低智能体应用开发门槛。
+🔗 https://blog.google/innovation-and-ai/technology/developers-tools/google-ai-studio-io-2026/
 
-https://t.co/zbUjIS2e1i
-🔗 https://x.com/steipete/status/2059453909819654554
+⑥ Anthropic Claude Code——开发者实测生产力提升 30%+
+5800+ 开发者使用数据显示，Claude Code 显著提升代码输出量和仓库贡献。开发者采用新编程语言的速度加快，团队协作效率提升。该工具已成为专业开发者的核心生产力工具。
+🔗 https://www.superhuman.ai/p/openai-google-and-anthropic-release-new-models
 
-② Amjad Masad: Honored to receive a medal from his Majesty King Abdullah II for Distinction on Jordan’s 80th Independence Day.
+🛠 产品/应用
 
-It’s been an incredibly journey building @Replit, starting from Jordan more than 15 years ago, and then helping accelerate the field of agentic AI globally. https://t.co/BKE14jsaRe
-🔗 https://x.com/amasad/status/2059518682825392525
+⑦ Google AI Search——搜索引擎进化为行动引擎
+Google 在 I/O 2026 发布智能体搜索，整合信息智能体能力，用户可用自然语言而非关键词搜索。新增原始内容发现功能，帮助优质内容被发现。搜索正从链接引擎演变为行动引擎。
+🔗 https://blog.google/products-and-platforms/products/search/search-io-2026/
 
-③ Aaron Levie: A meaningful portion of enterprises I talk to outside of Silicon Valley generally are looking to hire while also adopting agents. 
+⑧ Google WeatherNext——AI 飓风预报助力国家级预警
+WeatherNext AI 帮助美国国家飓风中心成功预报了飓风梅丽莎在牙买加登陆。这是 AI 在关键基础设施预报中的真实应用，展示了多模态 AI 在极端天气预测中的价值。
+🔗 https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research
 
-There’s a huge wave of technical and engineering talent needed inside originations, building software or acting as FDEs for agents. And as AI drives efficiency in areas like the customer lifecycle, companies are leaning in even more heavily to client-facing jobs.
+⑨ Google Project Genie——AI 生成交互式虚拟世界
+Project Genie 与 20 年 Google Street View 影像数据结合，能生成以真实地理数据为基础的交互式虚拟世界。用户可在 AI 生成的环境中探索、交互，突破游戏与现实的边界。
+🔗 https://blog.google/innovation-and-ai/technology/ai/io-2026-keynote-moment-videos/
 
-In a world where AI did everything for you with no human oversight needed, maybe we’d be having a different conversation. But that’s not how AI works. 
+⑩ Meta Manus 收购——AI 智能体进军社交商务
+Meta 收购自主 AI 智能体公司 Manus，并发布 AI 驱动的购物工具。标志着 Meta 从社交网络向 AI 商务平台的转型。CEO 扎克伯格多次表示 2026 是 Meta AI 智能体真正开始发挥作用的一年。
+🔗 https://www.mediapost.com/publications/article/412417/meta-to-expand-consumer-facing-ai-products-in-2026.html
 
-Even for the areas that have the most automation potential, agents are automating tasks, not whole jobs. As they automate tasks, the agents need to be steered, their work reviewed, the outputs incorporated and more. All of this is requiring people to do the work.
-
-And for the areas that have less automation potential, companies are freeing up dollars from efficiency gains elsewhere to hire in those areas now. 
-
-Yes, maybe AI lets you respond to front line support tickets automatically, but the companies (instead of just dropping the profit to the bottom line) will go and invest in new areas of sales and customer success that will add more differentiation for clients.
-
-Companies don’t remain static. They automating tasks where they can and free up dollars to move onto the next thing that matters.
-🔗 https://x.com/levie/status/2059482349977653619
-
-④ Peter Steinberger: Also extracted our image-logic into a separate library. Especially useful if you want to ensure small hacked images don't explode your process.
-
-Rastermill - Portable image processing for Node agents. Uses Wasm+Rust to be fast.
-
-https://t.co/YW6iCQZX4V
-🔗 https://x.com/steipete/status/2059423344961671290
-
-⑤ Matt Turck: The biggest mindf*ck scenario in AI: things don’t change that much.  Both doomers and accelerationists turn out to be wrong.  We are all more productive.  Agents deliver automation in the enterprise.  Some important scientific discoveries are made.  All great.  But that’s it.
-🔗 https://x.com/mattturck/status/2059411493196529751
+⑪ Google Workspace——Gmail/Docs/Keep 新增语音能力
+Google I/O 2026 为 Workspace 套件添加语音输入和生成能力，用户可用语音操作 Gmail、Docs、Keep 笔记。Google Pics 设计工具和 AI Inbox 也获得增强。
+🔗 https://blog.google/products-and-platforms/products/search/search-io-2026/
 
 📈 商业/观点
 
-⑨ Amjad Masad: Back in Jordan doing my favorite thing — drifting! First time in a pro drift car. https://t.co/9ifXxcofoC
-🔗 https://x.com/amasad/status/2059393192395432172
+⑫ OpenAI Sam Altman——AI 设备将在 2026 年底前发货
+OpenAI 首席执行官 Sam Altman 向员工表示，公司计划在 2026 年底前推出 AI 硬件设备。这是 OpenAI 与 Jony Ive 合作的"设备家族"计划的重要里程碑，标志着 OpenAI 从软件向硬件生态的扩展。
+🔗 https://www.investing.com/news/stock-market-news/openai--aims-to-begin-shipping-ai-devices-by-late2026-altman-says-wsj-4058590
 
-⑩ Guillermo Rauch: Feedback is a gift. Critical feedback doubly so.
-🔗 https://x.com/rauchg/status/2059444220956491937
+⑬ DeepMind Demis Hassabis——AI 智能体是通往 AGI 的预演，可能 2030 年前实现
+Google DeepMind 首席执行官 Demis Hassabis 公开表示，当前的 AI 智能体是 AGI 的"预演"，真正的通用人工智能可能在 2030 年前实现。这强调了政府和企业需要紧急建立 AI 安全框架。
+🔗 https://www.facebook.com/groups/957567098722676/posts/1677633943382651
 
-⑪ Sam Altman: 🛫 https://t.co/NARtaDr0wJ
-🔗 https://x.com/sama/status/2059492605634007125
+⑭ OpenAI 终止微软独占协议——许可战略大转变
+OpenAI 与 Microsoft 解除独家代理协议，标志着两家公司关系的重大转折。这给了 OpenAI 更大的授权灵活性，允许与其他企业合作，加速 AI 商业生态的竞争。
+🔗 https://www.youtube.com/watch?v=qSBZbMSSwDc
 
-⑫ Garry Tan: Founders must stop trying to building 2010-era businesses with 2026-era technology. 
+⑮ Mistral AI + Harvey——法律 AI 覆盖全球 60+ 国
+Mistral AI 与法律 AI 平台 Harvey 宣布合作，将 Mistral 模型整合到法律工作流中，覆盖 60 多个国家。这表明垂直化、专业化 AI 模型成为企业采购重点。
+🔗 https://mistral.ai/news/
 
-Don't try to rebuild Foursquare or Yelp. 
+⑯ 斯坦福研究警示——AI 招聘工具可能歧视黑人候选人
+斯坦福研究显示，AI 招聘工具可能对黑人候选人产生系统性歧视。这反映了高风险场景下 AI 继承人类偏见的问题，引发对 AI 部署治理的新思考。
+🔗 https://www.bloomberg.com/news/videos/2026-05-27/ai-may-impact-120-million-workers-in-advanced-economies-video
 
-Don't try to recreate Basecamp by 37 Signals with $10/mo SaaS pricing. 
+⑰ OpenRouter 融资 1.13 亿美元——"AI 模型的 AWS"
+OpenRouter 获 1.13 亿美元融资，估值达 30 亿美元。该公司提供跨多个 AI 模型的统一接口，被视为"AI 模型的 AWS"。预示未来 AI 基础设施将是多模型、多供应商的生态。
+🔗 https://www.linkedin.com/pulse/ai-news-day-27-may-2026-simran-sran-3zjnc
 
-Don't underprice! If it works it's worth a lot more.
+🎙 Podcast
 
-Don't be tempted to become "Tech enabled PE" with revenue tricks. 
-
-The rules of tech changed with AI. Play the new game.
-🔗 https://x.com/garrytan/status/2059521656532721964
-
-⑬ Peter Steinberger: All the deps around opus are old or terrible, so vibed my own and replaced octoscript and opus-native.
-
-Performance of modern wasm on node/V8 is ~equivalent to native. 
-
-Your claw now automatically takes meetings notes and you can talk to it in meetings.
-
-https://t.co/K0uXTLCuYt
-🔗 https://x.com/steipete/status/2059422568352714981
-
-⑭ Thariq: - image or video editing? write scripts
-- finances, tax work, etc? put in PDFs, write scripts, output HTML
-- medical advice? put in PDFs + data, output HTML 
-- filling out paperwork? write scripts
-- creating a report? write HTML
-- making plans? write HTML
-🔗 https://x.com/trq212/status/2059363115146395965
-
-⑮ Claude: https://t.co/3zGmkffKOx
-🔗 https://x.com/claudeai/status/2059292343723819160
-
-⑯ Claude: https://t.co/mZdWx3DhAO
-🔗 https://x.com/claudeai/status/2059292345800048714
-
-⑰ Thariq: getting it access to data is important too, add in the gmail, google calendar, etc. connectors
-
-but I think people underestimate how much context they have in files
-🔗 https://x.com/trq212/status/2059363116316598739
-
-⑱ Claude: What are you building?
-🔗 https://x.com/claudeai/status/2059292347678986251
+We Automated Everything With AI and Tripled Our Headcount
+介绍了某公司如何通过 AI 自动化大幅提升运营效率，同时实现人员编制翻倍。讨论了 AI 智能体如何重塑企业组织结构，以及如何在自动化时代平衡技术与人力资源。节目深入探讨了 AI 驱动的业务变革如何影响招聘、培训和团队协作。
 
 📰 行业速报
 
-① Trump撤销自己起草的AI安全令，取消AI安全测试联邦授权。
-② 三星员工年终奖平均涨至34万美元，HBM芯片成本占AI芯片成本的三分之二。
-③ 微软撤销员工对Anthropic Claude Code的访问权限，改推内部Copilot工具。
+① Microsoft 向员工撤销 Claude Code 访问权限，深度整合 DeepSeek 模型
+② Trump 行政令被撤销，AI 安全测试行政命令重新生效
+③ HBM 内存成本占 AI 芯片成本的 2/3，缺货成为瓶颈
+④ DeepSeek Pro 大幅降价，持续降低企业 AI 采购成本
+⑤ Musk/xAI 能源战略启动，为 AI 训练保障电力供应
 
 🔗 https://ai-digest.liziran.com/zh/digest/2026-05-25-microsoft-pulls-claude-code-own-engineers-after-deepseek.html
 
 📚 论文速报
 
-① Auto-Research Cost Curve Crossed: 15美元能生成完整论文，但前沿LLM仍存幻觉问题。
-② OProver: 反向轨迹+验证器修复的SFT方案达MiniF2F 93.3%通过率，开源整体证明中领先。
-③ CompactAttention: 稀疏注意力掩码加速实现2.72倍性能提升，在128K上下文保持密集精度。
-④ Lance (字节跳动): 双流MoE统一多模态，理解和生成共享上下文但独立专家路径。
+① SU-01（ByteDance）——数学推理模型突破 85% 准确率
+② SANA-WM（字节跳动）——60 秒生成 720p 视频，刷新文生视频速度记录
+③ MemLens——新型内存测试框架，提升 LLM 长上下文能力
+④ CompactAttention——注意力机制优化，推理速度提升 2.72 倍
+⑤ OProver——自动定理证明，通过率达 93.3%
 
 🔗 https://ai-brief.liziran.com/
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-05-28-36e941f9890481a0a0bffe23f298953f
+📎 Notion 存档
+https://www.notion.so/AI-Builders-Digest-2026-05-29-36f941f9890481e4acb4fd2c61ba2a1c
