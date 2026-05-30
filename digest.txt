@@ -1,105 +1,121 @@
-🗞 AI Builders 日报 · 2026.05.29
+🗞 AI Builders 日报 · 2026.05.30
+
 
 🧠 模型
 
-① Google Gemini Omni——多模态旗舰模型正式发布
-Google I/O 2026 发布的最新多模态模型，可以从任意输入（文本、图像、视频）生成任意输出。具备强大的世界理解、编辑和对话能力，已集成到 Gemini App、Google Flow 和 YouTube Shorts。代表多模态 AI 推理的重大进展。
-🔗 https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni/
+① Matt Turck: A day in the life of a VC in 2026: 9am: Board meeting. My main value-add is aggressively pushing for Anthropic/OpenAI usage in non-engineering functions. Briefly ponder how I became an SDR for foundat
+🔗 https://x.com/mattturck/status/2060136766238028213
 
-② Google Gemini 3.5——首个融合前沿智能与行动的模型系列
-Gemini 3.5 是首个专为复杂、智能体化工作流设计的模型，Gemini 3.5 Flash 是旗舰变体。相比之前版本，在编程和网络安全能力上有质的飞跃，标志着从语言模型向行动导向型智能体的转变。
-🔗 https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/
+① Garry Tan: Have to report: Opus 4.8 is fucking awesome with OpenClaw It's much more clear about its fixes, what it's thinking, and how it works with you to fix problems.
+🔗 https://x.com/garrytan/status/2060387204774633720
 
-③ Anthropic Claude Mythos——企业网络安全专用模型即将面世
-Claude Mythos 已为 40 多家科技公司联盟（包括 Apple、Amazon、Microsoft）做好准备，专门用于发现和修补安全漏洞。相比 Claude 以往版本，在编码和网络安全能力上实现了质的跨越。预计本月底发布。
-🔗 https://www.mediapost.com/publications/article/415341/anthropic-readies-mythos-for-release-addresses-cy.html
+① Guillermo Rauch: Vercel CLI as a self-updating binary with zero external dependencies. Our CLI is one of the key interfaces enabling the 'cloud for agents'. This solves a huge bottleneck, as we ship changes to our CLI
+🔗 https://x.com/rauchg/status/2060105470460010993
+
 
 🤖 Agent/编程
 
-④ Google Gemini Spark——个人 AI 智能体登陆 Gemini 应用
-Gemini Spark 是集成到 Gemini App 的个人 AI 智能体，能帮助用户管理数字生活、代表用户采取行动。提供全天候主动协助，首次让普通用户体验到真正的 AI 智能体能力。
-🔗 https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/
+① Peter Yang: Google's free 5-day AI Agents course is back, and this time it's all about vibe coding with agents. The last one had 1.5M learners. Here's what the course covers: → Day 1: Agents + vibe coding. Build 
+🔗 https://x.com/petergyang/status/2060149158615609474
 
-⑤ Google Antigravity——智能体优先的开发框架正式推出
-Antigravity 是 Google 推出的智能体优先开发框架，旨在让"任何人都能成为建造者"。通过增强的 Gemini API、原生 Android 支持和 AI Studio，大幅降低智能体应用开发门槛。
-🔗 https://blog.google/innovation-and-ai/technology/developers-tools/google-ai-studio-io-2026/
+① Peter Steinberger: “clanker” is not a slur. “vibe coding” is.
+🔗 https://x.com/steipete/status/2060371944168358250
 
-⑥ Anthropic Claude Code——开发者实测生产力提升 30%+
-5800+ 开发者使用数据显示，Claude Code 显著提升代码输出量和仓库贡献。开发者采用新编程语言的速度加快，团队协作效率提升。该工具已成为专业开发者的核心生产力工具。
-🔗 https://www.superhuman.ai/p/openai-google-and-anthropic-release-new-models
+① Garry Tan: The "we will upgrade the dependencies later" excuse just died. When AI makes library upgrades nearly free, staying current stops being a luxury and becomes the default. Tech debt was always a tooling 
+🔗 https://x.com/garrytan/status/2060461897594683861
+
+① Zara Zhang: People use the term “AI psychosis” half-jokingly but I’d actually be very interested in seeing some studies on the effect of heavy AI usage on human psychology Like does constant context switching bet
+🔗 https://x.com/zarazhangrui/status/2060435594334130467
+
 
 🛠 产品/应用
 
-⑦ Google AI Search——搜索引擎进化为行动引擎
-Google 在 I/O 2026 发布智能体搜索，整合信息智能体能力，用户可用自然语言而非关键词搜索。新增原始内容发现功能，帮助优质内容被发现。搜索正从链接引擎演变为行动引擎。
-🔗 https://blog.google/products-and-platforms/products/search/search-io-2026/
+① Nikunj Kothari: If you are seeing revenue explode for application startups, it's because a lot of them are trying to get into the token path as quickly as possible.. Margins are a different story though 🙃
+🔗 https://x.com/nikunj/status/2060420902521835905
 
-⑧ Google WeatherNext——AI 飓风预报助力国家级预警
-WeatherNext AI 帮助美国国家飓风中心成功预报了飓风梅丽莎在牙买加登陆。这是 AI 在关键基础设施预报中的真实应用，展示了多模态 AI 在极端天气预测中的价值。
-🔗 https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research
+① Peter Yang: If you enjoyed this, sign up for free to my newsletter to get my best AI and product guides. Join 110,000+ subscribers here:
+🔗 https://x.com/petergyang/status/2060254968968569062
 
-⑨ Google Project Genie——AI 生成交互式虚拟世界
-Project Genie 与 20 年 Google Street View 影像数据结合，能生成以真实地理数据为基础的交互式虚拟世界。用户可在 AI 生成的环境中探索、交互，突破游戏与现实的边界。
-🔗 https://blog.google/innovation-and-ai/technology/ai/io-2026-keynote-moment-videos/
-
-⑩ Meta Manus 收购——AI 智能体进军社交商务
-Meta 收购自主 AI 智能体公司 Manus，并发布 AI 驱动的购物工具。标志着 Meta 从社交网络向 AI 商务平台的转型。CEO 扎克伯格多次表示 2026 是 Meta AI 智能体真正开始发挥作用的一年。
-🔗 https://www.mediapost.com/publications/article/412417/meta-to-expand-consumer-facing-ai-products-in-2026.html
-
-⑪ Google Workspace——Gmail/Docs/Keep 新增语音能力
-Google I/O 2026 为 Workspace 套件添加语音输入和生成能力，用户可用语音操作 Gmail、Docs、Keep 笔记。Google Pics 设计工具和 AI Inbox 也获得增强。
-🔗 https://blog.google/products-and-platforms/products/search/search-io-2026/
 
 📈 商业/观点
 
-⑫ OpenAI Sam Altman——AI 设备将在 2026 年底前发货
-OpenAI 首席执行官 Sam Altman 向员工表示，公司计划在 2026 年底前推出 AI 硬件设备。这是 OpenAI 与 Jony Ive 合作的"设备家族"计划的重要里程碑，标志着 OpenAI 从软件向硬件生态的扩展。
-🔗 https://www.investing.com/news/stock-market-news/openai--aims-to-begin-shipping-ai-devices-by-late2026-altman-says-wsj-4058590
+① Peter Steinberger: No LLMs for finding bugs even?
+🔗 https://x.com/steipete/status/2060358460831682895
 
-⑬ DeepMind Demis Hassabis——AI 智能体是通往 AGI 的预演，可能 2030 年前实现
-Google DeepMind 首席执行官 Demis Hassabis 公开表示，当前的 AI 智能体是 AGI 的"预演"，真正的通用人工智能可能在 2030 年前实现。这强调了政府和企业需要紧急建立 AI 安全框架。
-🔗 https://www.facebook.com/groups/957567098722676/posts/1677633943382651
+① Dan Shipper: Extremely smart take on the tokenmaxxing panic and why it won’t last:
+🔗 https://x.com/danshipper/status/2060382815821209801
 
-⑭ OpenAI 终止微软独占协议——许可战略大转变
-OpenAI 与 Microsoft 解除独家代理协议，标志着两家公司关系的重大转折。这给了 OpenAI 更大的授权灵活性，允许与其他企业合作，加速 AI 商业生态的竞争。
-🔗 https://www.youtube.com/watch?v=qSBZbMSSwDc
+① Guillermo Rauch: Docker inside ▲ Sandbox live 𝚗𝚘𝚠
+🔗 https://x.com/rauchg/status/2060443982342357032
 
-⑮ Mistral AI + Harvey——法律 AI 覆盖全球 60+ 国
-Mistral AI 与法律 AI 平台 Harvey 宣布合作，将 Mistral 模型整合到法律工作流中，覆盖 60 多个国家。这表明垂直化、专业化 AI 模型成为企业采购重点。
-🔗 https://mistral.ai/news/
+① Garry Tan: The craziest thing every business can do in 2026 is just zap the rocks more and make more money
+🔗 https://x.com/garrytan/status/2060443383752282360
 
-⑯ 斯坦福研究警示——AI 招聘工具可能歧视黑人候选人
-斯坦福研究显示，AI 招聘工具可能对黑人候选人产生系统性歧视。这反映了高风险场景下 AI 继承人类偏见的问题，引发对 AI 部署治理的新思考。
-🔗 https://www.bloomberg.com/news/videos/2026-05-27/ai-may-impact-120-million-workers-in-advanced-economies-video
+① Amjad Masad: Generate images, video, audio and remix them. Draw something and make it real. Point-click edit, move things around, drag them, drop them. Invite a friend and cook some marketing, websites, or art. Al
+🔗 https://x.com/amasad/status/2060122956429472027
 
-⑰ OpenRouter 融资 1.13 亿美元——"AI 模型的 AWS"
-OpenRouter 获 1.13 亿美元融资，估值达 30 亿美元。该公司提供跨多个 AI 模型的统一接口，被视为"AI 模型的 AWS"。预示未来 AI 基础设施将是多模型、多供应商的生态。
-🔗 https://www.linkedin.com/pulse/ai-news-day-27-may-2026-simran-sran-3zjnc
+① Peter Steinberger: Since many folks misunderstood my comment - this is about the domain. At least that was the main rename-drama I had. Content is fine.
+🔗 https://x.com/steipete/status/2060369325895094607
+
+① Swyx: met with @ACM_President today! we awarded Industry Spotlights at @CAISconf, and all posters and OpEx talks will be presenting at @aiDotEngineer next month more AIE x ACM collaboration incoming! wonder
+🔗 https://x.com/swyx/status/2060148078754267426
+
+① Dan Shipper: few
+🔗 https://x.com/danshipper/status/2060120406074249394
+
+① Dan Shipper: Adam Hater’s gonna hate
+🔗 https://x.com/danshipper/status/2060106606327533789
+
+① Nikunj Kothari: Every week, like clockwork.. Them: How did you get your followers? Me: Idk man, I just write and post my shower thoughts consistently.  Them: Do you ragebait? Me: No Them: Do you reply a lot? Me: Not 
+🔗 https://x.com/nikunj/status/2060363468595761636
+
+① Josh Woodward: A bird flies out of your laptop:
+🔗 https://x.com/joshwoodward/status/2060443102507302948
+
+① Peter Yang: Noob YouTuber question:  How do you arrange your prompter (@elgato) and monitor so that you can easily look back and forth between the two during a recording? Pics welcome.  Also anyone in the Bay Are
+🔗 https://x.com/petergyang/status/2060212719916384290
+
+① Josh Woodward: 20 environments, 20 jobs:
+🔗 https://x.com/joshwoodward/status/2060443100703842527
+
+① Swyx: @HamiltonMusical ok this thing is going RSI WTF
+🔗 https://x.com/swyx/status/2060111215226237380
+
+① Josh Woodward: Bring your photo roll to life:
+🔗 https://x.com/joshwoodward/status/2060443097302208937
+
+① Nan Yu: pretty sure investors view it as an elon company
+🔗 https://x.com/thenanyu/status/2060452026765500662
+
+① Nan Yu: …yet
+🔗 https://x.com/thenanyu/status/2060358981340524589
+
 
 🎙 Podcast
 
-We Automated Everything With AI and Tripled Our Headcount
-介绍了某公司如何通过 AI 自动化大幅提升运营效率，同时实现人员编制翻倍。讨论了 AI 智能体如何重塑企业组织结构，以及如何在自动化时代平衡技术与人力资源。节目深入探讨了 AI 驱动的业务变革如何影响招聘、培训和团队协作。
+The MAD Podcast with Matt Turck: State of Enterprise AI 2026: Aaron Levie on Tokenmaxxing, Rise of Headless, and AI-Proofing Your Job
 
 📰 行业速报
 
-① Microsoft 向员工撤销 Claude Code 访问权限，深度整合 DeepSeek 模型
-② Trump 行政令被撤销，AI 安全测试行政命令重新生效
-③ HBM 内存成本占 AI 芯片成本的 2/3，缺货成为瓶颈
-④ DeepSeek Pro 大幅降价，持续降低企业 AI 采购成本
-⑤ Musk/xAI 能源战略启动，为 AI 训练保障电力供应
+① Microsoft 调整 Claude Code 订阅政策，收回员工权限
+
+② DeepSeek V4 Pro 永久降价 75%，引发全球 AI 价格战
+
+③ 三星半导体工人经过 18 天罢工威胁后获得 34 万美元年终奖
 
 🔗 https://ai-digest.liziran.com/zh/digest/2026-05-25-microsoft-pulls-claude-code-own-engineers-after-deepseek.html
 
+
 📚 论文速报
 
-① SU-01（ByteDance）——数学推理模型突破 85% 准确率
-② SANA-WM（字节跳动）——60 秒生成 720p 视频，刷新文生视频速度记录
-③ MemLens——新型内存测试框架，提升 LLM 长上下文能力
-④ CompactAttention——注意力机制优化，推理速度提升 2.72 倍
-⑤ OProver——自动定理证明，通过率达 93.3%
+① OProver (CMU): 证明生成 93.3% 通过率
+
+② CompactAttention (ByteDance): 128K 上下文 2.72x 推理加速
+
+③ PUMA (MIT): 早期退出机制削减 26.2% token，无精度损失
 
 🔗 https://ai-brief.liziran.com/
 
-📎 Notion 存档
-https://www.notion.so/AI-Builders-Digest-2026-05-29-36f941f9890481e4acb4fd2c61ba2a1c
+
+📓 Notion 存档
+https://www.notion.so/AI-Builders-Digest-2026-05-30-370941f9-8904-81e0-8063-c7a6dafb9771
