@@ -1,121 +1,117 @@
-🗞 AI Builders 日报 · 2026.05.30
-
+🗞 AI Builders 日报 · 2026.05.31
 
 🧠 模型
 
-① Matt Turck: A day in the life of a VC in 2026: 9am: Board meeting. My main value-add is aggressively pushing for Anthropic/OpenAI usage in non-engineering functions. Briefly ponder how I became an SDR for foundat
-🔗 https://x.com/mattturck/status/2060136766238028213
+① Salesforce published a detailed writeup on going agentic…
+Salesforce published a detailed writeup on going agentic with Claude Code. A couple things jumped out.
 
-① Garry Tan: Have to report: Opus 4.8 is fucking awesome with OpenClaw It's much more clear about its fixes, what it's thinking, and how it works with you to fix problems.
-🔗 https://x.com/garrytan/status/2060387204774633720
+A migration they'd scoped at 231 days shipped in 13. One PR delivered 21 endpoints at 100% test …
+🔗 https://x.com/bcherny/status/2060390852619272526
 
-① Guillermo Rauch: Vercel CLI as a self-updating binary with zero external dependencies. Our CLI is one of the key interfaces enabling the 'cloud for agents'. This solves a huge bottleneck, as we ship changes to our CLI
-🔗 https://x.com/rauchg/status/2060105470460010993
+① Do you still trust benchmarks or do you
+Do you still trust benchmarks or do you just listen to your friends? What makes you try a new model?
+🔗 https://x.com/thsottiaux/status/2060563528596287874
 
+① The teams seeing the biggest wins from AI…
+The teams seeing the biggest wins from AI are completely changing how they work, not speeding up what they already do. What steps can you delete, what handoffs go away, what can an agent just own end …
+🔗 https://x.com/bcherny/status/2060390855383400729
 
 🤖 Agent/编程
 
-① Peter Yang: Google's free 5-day AI Agents course is back, and this time it's all about vibe coding with agents. The last one had 1.5M learners. Here's what the course covers: → Day 1: Agents + vibe coding. Build 
-🔗 https://x.com/petergyang/status/2060149158615609474
+① I looked at a number today on a…
+I looked at a number today on a codex dashboard and it made me happy. More news about the number soon. 👀
 
-① Peter Steinberger: “clanker” is not a slur. “vibe coding” is.
-🔗 https://x.com/steipete/status/2060371944168358250
+Thanks to everyone who keeps adopting codex. We are still early. So early.
+🔗 https://x.com/thsottiaux/status/2060565265906290786
 
-① Garry Tan: The "we will upgrade the dependencies later" excuse just died. When AI makes library upgrades nearly free, staying current stops being a luxury and becomes the default. Tech debt was always a tooling 
-🔗 https://x.com/garrytan/status/2060461897594683861
+① The world is more fun with codex glasses
+The world is more fun with codex glasses https://t.co/HYgxSCdaks
+🔗 https://x.com/thsottiaux/status/2060529970523603099
 
-① Zara Zhang: People use the term “AI psychosis” half-jokingly but I’d actually be very interested in seeing some studies on the effect of heavy AI usage on human psychology Like does constant context switching bet
-🔗 https://x.com/zarazhangrui/status/2060435594334130467
+① Quality went up alongside output. Even with more…
+Quality went up alongside output. Even with more PRs shipping, total incidents dropped 5%. They built security guardrails and quality standards into the agentic workflow itself.
 
+Productivity vs quali…
+🔗 https://x.com/bcherny/status/2060390853835726946
 
 🛠 产品/应用
 
-① Nikunj Kothari: If you are seeing revenue explode for application startups, it's because a lot of them are trying to get into the token path as quickly as possible.. Margins are a different story though 🙃
-🔗 https://x.com/nikunj/status/2060420902521835905
+① The app layer couldn’t get a better advertisement…
+The app layer couldn’t get a better advertisement than a company spending $500M to build their own version of it. Obviously lots of nuance here that can’t be captured in the headline, but this should …
+🔗 https://x.com/levie/status/2060525104384418271
 
-① Peter Yang: If you enjoyed this, sign up for free to my newsletter to get my best AI and product guides. Join 110,000+ subscribers here:
-🔗 https://x.com/petergyang/status/2060254968968569062
+① Always fun to see what it's like for…
+Always fun to see what it's like for someone to go through the @ycombinator interview process.. 
 
+SO happy for this kid, and excited to meet the upcoming batch! https://t.co/bHQExvHD4Q
+🔗 https://x.com/nikunj/status/2060580468781953169
 
 📈 商业/观点
 
-① Peter Steinberger: No LLMs for finding bugs even?
-🔗 https://x.com/steipete/status/2060358460831682895
+① I smell a takedown in 3...2...1 https://t.co/KfxM4Dp0Qh
+I smell a takedown in 3...2...1 https://t.co/KfxM4Dp0Qh
+🔗 https://x.com/steipete/status/2060294413377519808
 
-① Dan Shipper: Extremely smart take on the tokenmaxxing panic and why it won’t last:
-🔗 https://x.com/danshipper/status/2060382815821209801
+① Couldn’t be more excited to have Vince on…
+Couldn’t be more excited to have Vince on board. 🦞 
 
-① Guillermo Rauch: Docker inside ▲ Sandbox live 𝚗𝚘𝚠
-🔗 https://x.com/rauchg/status/2060443982342357032
+Very few people understand the new ways, how software is built. He gets it. https://t.co/6MmfCVHGLW
+🔗 https://x.com/steipete/status/2060306947035832628
 
-① Garry Tan: The craziest thing every business can do in 2026 is just zap the rocks more and make more money
-🔗 https://x.com/garrytan/status/2060443383752282360
+① A founder kept saying "if only we had…
+A founder kept saying "if only we had money we'd do X."
 
-① Amjad Masad: Generate images, video, audio and remix them. Draw something and make it real. Point-click edit, move things around, drag them, drop them. Invite a friend and cook some marketing, websites, or art. Al
-🔗 https://x.com/amasad/status/2060122956429472027
+Money is not the fire. Money is gasoline you pour on a fire that already exists.
 
-① Peter Steinberger: Since many folks misunderstood my comment - this is about the domain. At least that was the main rename-drama I had. Content is fine.
-🔗 https://x.com/steipete/status/2060369325895094607
+You don't have a funding problem. You have a "people don't wa…
+🔗 https://x.com/garrytan/status/2060600088079356292
 
-① Swyx: met with @ACM_President today! we awarded Industry Spotlights at @CAISconf, and all posters and OpEx talks will be presenting at @aiDotEngineer next month more AIE x ACM collaboration incoming! wonder
-🔗 https://x.com/swyx/status/2060148078754267426
+① extremely sick https://t.co/aV3SISsMbv
+extremely sick https://t.co/aV3SISsMbv
+🔗 https://x.com/danshipper/status/2060487621915152571
 
-① Dan Shipper: few
-🔗 https://x.com/danshipper/status/2060120406074249394
+① Anti Asian racism alive and well in University
+Anti Asian racism alive and well in University of California admissions https://t.co/iZuW7HE9nl
+🔗 https://x.com/garrytan/status/2060582680216084925
 
-① Dan Shipper: Adam Hater’s gonna hate
-🔗 https://x.com/danshipper/status/2060106606327533789
+① Multilingual is now "ridiculously easy": https://t.co/UHrcm4Fxg6
+Multilingual is now "ridiculously easy":
+https://t.co/UHrcm4Fxg6
+🔗 https://x.com/joshwoodward/status/2060443093825094091
 
-① Nikunj Kothari: Every week, like clockwork.. Them: How did you get your followers? Me: Idk man, I just write and post my shower thoughts consistently.  Them: Do you ragebait? Me: No Them: Do you reply a lot? Me: Not 
-🔗 https://x.com/nikunj/status/2060363468595761636
+① Virtue signalers who don’t actually care about the…
+Virtue signalers who don’t actually care about the outcomes for the students of the UC system really should have had no part in the UC Regents
 
-① Josh Woodward: A bird flies out of your laptop:
-🔗 https://x.com/joshwoodward/status/2060443102507302948
+Unfortunately they have damaged beautiful institution an…
+🔗 https://x.com/garrytan/status/2060586945491931202
 
-① Peter Yang: Noob YouTuber question:  How do you arrange your prompter (@elgato) and monitor so that you can easily look back and forth between the two during a recording? Pics welcome.  Also anyone in the Bay Are
-🔗 https://x.com/petergyang/status/2060212719916384290
-
-① Josh Woodward: 20 environments, 20 jobs:
-🔗 https://x.com/joshwoodward/status/2060443100703842527
-
-① Swyx: @HamiltonMusical ok this thing is going RSI WTF
-🔗 https://x.com/swyx/status/2060111215226237380
-
-① Josh Woodward: Bring your photo roll to life:
-🔗 https://x.com/joshwoodward/status/2060443097302208937
-
-① Nan Yu: pretty sure investors view it as an elon company
-🔗 https://x.com/thenanyu/status/2060452026765500662
-
-① Nan Yu: …yet
-🔗 https://x.com/thenanyu/status/2060358981340524589
-
-
-🎙 Podcast
-
-The MAD Podcast with Matt Turck: State of Enterprise AI 2026: Aaron Levie on Tokenmaxxing, Rise of Headless, and AI-Proofing Your Job
+① Turn your car into a Lamborghini: https://t.co/P02mdWU4Km
+Turn your car into a Lamborghini:
+https://t.co/P02mdWU4Km
+🔗 https://x.com/joshwoodward/status/2060443095527989413
 
 📰 行业速报
 
-① Microsoft 调整 Claude Code 订阅政策，收回员工权限
+① Anthropic 完成 $65B 融资，估值升至 $965B（超越 OpenAI），成全球最高估值 AI 创业公司；Claude Opus 4.8 发布，性能提升 8.6%，并支持动态推理等级与自动缓存。
+② Google I/O 发布「Gemini for Science」科学平台，整合 AlphaFold、AlphaGenome、30+ 生物数据库，3M+ 研究者使用；CEO Demis Hassabis 宣布 AGI 时间点或可提前至 2029。
+③ OpenAI 向法庭披露 2026 年计算支出约 $50B，历史增长 1667 倍（从 2017 年 $30M），未来投入承诺超 $1.4T；准备提交 IPO 申请。
+④ Meta 进行大规模 AI 转向重组，全球裁员 8000 人，转任 7000 人进入 4 个新 AI 单位；推出专业级 M365 Copilot 设计与企业 AI 工作流。
+⑤ Mistral 与 BMW、Airbus 签署制造业 AI 伙伴关系；发布「Vibe」agent 处理长期任务；收购 Koyeb 构建专有计算基础设施，挑战 OpenAI 独立性。
+⑥ DeepSeek V4-Pro 宣布永久降价 75%，激化价格竞争；与小米合作将尖端 AI 成本压低至美国实验室的 1%。
 
-② DeepSeek V4 Pro 永久降价 75%，引发全球 AI 价格战
-
-③ 三星半导体工人经过 18 天罢工威胁后获得 34 万美元年终奖
-
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-25-microsoft-pulls-claude-code-own-engineers-after-deepseek.html
-
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-30-anthropic-shipped-opus-48-heaviest-users-were-writing
 
 📚 论文速报
 
-① OProver (CMU): 证明生成 93.3% 通过率
-
-② CompactAttention (ByteDance): 128K 上下文 2.72x 推理加速
-
-③ PUMA (MIT): 早期退出机制削减 26.2% token，无精度损失
+① MinWM（论文）：视频扩散模型实时可控世界模型全栈框架，支持低延迟、流式生成、因果关联。
+② Gamma-World（论文）：多 agent 交互式世界环境，支持多个玩家/机器人同时独立可控交互。
+③ YoCausal（论文）：通过视频倒放生成反事实样本，用"违反预期"范式检验视频模型因果推理能力。
+④ MiniMax-M2（开源）：230B 专家混合模型，支持自调试，单 GPU 推理。
+⑤ LocateAnything（论文）：视觉语言模型在 Hugging Face 达 91 分，并行边界框解码技术。
+⑥ Maestro（论文）：4B 协调器模型，在多基准上超越 GPT-5 和 Gemini 2.5 Pro。
 
 🔗 https://ai-brief.liziran.com/
 
+📓 Notion: https://www.notion.so/AI Builders Digest-2026-05-31-371941f98904817c8d93f02fb4d9a17c
 
-📓 Notion 存档
-https://www.notion.so/AI-Builders-Digest-2026-05-30-370941f9-8904-81e0-8063-c7a6dafb9771
+🌐 https://xiaochengzi2048.github.io/digest.txt
