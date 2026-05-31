@@ -1,117 +1,45 @@
 🗞 AI Builders 日报 · 2026.05.31
-
 🧠 模型
+① Boris Cherny：Salesforce published a detailed writeup on going agentic with Claude Code. A couple things jumped out.
 
-① Salesforce published a detailed writeup on going agentic…
-Salesforce published a detailed writeup on going agentic with Claude Code. A couple things jumped out.
-
-A migration they'd scoped at 231 days shipped in 13. One PR delivered 21 endpoints at 100% test …
-🔗 https://x.com/bcherny/status/2060390852619272526
-
-① Do you still trust benchmarks or do you
-Do you still trust benchmarks or do you just listen to your friends? What makes you try a new model?
-🔗 https://x.com/thsottiaux/status/2060563528596287874
-
-① The teams seeing the biggest wins from AI…
-The teams seeing the biggest wins from AI are completely changing how they work, not speeding up what they already do. What steps can you delete, what handoffs go away, what can an agent just own end …
-🔗 https://x.com/bcherny/status/2060390855383400729
+A migration they'd scoped at 231 days shipped in 13. One PR delivered 21 endpoints at 100% test coverage.🔗 https://x.com/bcherny/status/2060390852619272526
+② Thibault Sottiaux：Do you still trust benchmarks or do you just listen to your friends? What makes you try a new model?🔗 https://x.com/thsottiaux/status/2060563528596287874
 
 🤖 Agent/编程
+③ Thibault Sottiaux：I looked at a number today on a codex dashboard and it made me happy. More news about the number soon. 👀
 
-① I looked at a number today on a…
-I looked at a number today on a codex dashboard and it made me happy. More news about the number soon. 👀
+Thanks to everyone who keeps adopting codex. We are still early. So early.🔗 https://x.com/thsottiaux/status/2060565265906290786
+④ Thibault Sottiaux：The world is more fun with codex glasses https://t.co/HYgxSCdaks🔗 https://x.com/thsottiaux/status/2060529970523603099
+⑤ Boris Cherny：The teams seeing the biggest wins from AI are completely changing how they work, not speeding up what they already do. What steps can you delete, what handoffs go away, what can an agent just own end to end. Great to see Salesforce go this deep. Shoutout to Srini, @Benioff & team.
 
-Thanks to everyone who keeps adopting codex. We are still early. So early.
-🔗 https://x.com/thsottiaux/status/2060565265906290786
+Full writeup: htt🔗 https://x.com/bcherny/status/2060390855383400729
+⑥ Boris Cherny：Quality went up alongside output. Even with more PRs shipping, total incidents dropped 5%. They built security guardrails and quality standards into the agentic workflow itself.
 
-① The world is more fun with codex glasses
-The world is more fun with codex glasses https://t.co/HYgxSCdaks
-🔗 https://x.com/thsottiaux/status/2060529970523603099
-
-① Quality went up alongside output. Even with more…
-Quality went up alongside output. Even with more PRs shipping, total incidents dropped 5%. They built security guardrails and quality standards into the agentic workflow itself.
-
-Productivity vs quali…
-🔗 https://x.com/bcherny/status/2060390853835726946
-
-🛠 产品/应用
-
-① The app layer couldn’t get a better advertisement…
-The app layer couldn’t get a better advertisement than a company spending $500M to build their own version of it. Obviously lots of nuance here that can’t be captured in the headline, but this should …
-🔗 https://x.com/levie/status/2060525104384418271
-
-① Always fun to see what it's like for…
-Always fun to see what it's like for someone to go through the @ycombinator interview process.. 
-
-SO happy for this kid, and excited to meet the upcoming batch! https://t.co/bHQExvHD4Q
-🔗 https://x.com/nikunj/status/2060580468781953169
+Productivity vs quality is sometimes framed as a tradeoff. They're not seeing it.🔗 https://x.com/bcherny/status/2060390853835726946
 
 📈 商业/观点
-
-① I smell a takedown in 3...2...1 https://t.co/KfxM4Dp0Qh
-I smell a takedown in 3...2...1 https://t.co/KfxM4Dp0Qh
-🔗 https://x.com/steipete/status/2060294413377519808
-
-① Couldn’t be more excited to have Vince on…
-Couldn’t be more excited to have Vince on board. 🦞 
-
-Very few people understand the new ways, how software is built. He gets it. https://t.co/6MmfCVHGLW
-🔗 https://x.com/steipete/status/2060306947035832628
-
-① A founder kept saying "if only we had…
-A founder kept saying "if only we had money we'd do X."
+⑦ Aaron Levie：The app layer couldn’t get a better advertisement than a company spending $500M to build their own version of it. Obviously lots of nuance here that can’t be captured in the headline, but this should make you very bullish on software. https://t.co/laysmOjyo7🔗 https://x.com/levie/status/2060525104384418271
+⑧ Garry Tan：A founder kept saying "if only we had money we'd do X."
 
 Money is not the fire. Money is gasoline you pour on a fire that already exists.
 
-You don't have a funding problem. You have a "people don't wa…
-🔗 https://x.com/garrytan/status/2060600088079356292
+You don't have a funding problem. You have a "people don't want it yet" problem. Go make the first fire.🔗 https://x.com/garrytan/status/2060600088079356292
 
-① extremely sick https://t.co/aV3SISsMbv
-extremely sick https://t.co/aV3SISsMbv
-🔗 https://x.com/danshipper/status/2060487621915152571
+🎙 播客
+: Building an AI Guardian for Enterprise with Onyx Security CEO Maxim Bar Kogan
 
-① Anti Asian racism alive and well in University
-Anti Asian racism alive and well in University of California admissions https://t.co/iZuW7HE9nl
-🔗 https://x.com/garrytan/status/2060582680216084925
-
-① Multilingual is now "ridiculously easy": https://t.co/UHrcm4Fxg6
-Multilingual is now "ridiculously easy":
-https://t.co/UHrcm4Fxg6
-🔗 https://x.com/joshwoodward/status/2060443093825094091
-
-① Virtue signalers who don’t actually care about the…
-Virtue signalers who don’t actually care about the outcomes for the students of the UC system really should have had no part in the UC Regents
-
-Unfortunately they have damaged beautiful institution an…
-🔗 https://x.com/garrytan/status/2060586945491931202
-
-① Turn your car into a Lamborghini: https://t.co/P02mdWU4Km
-Turn your car into a Lamborghini:
-https://t.co/P02mdWU4Km
-🔗 https://x.com/joshwoodward/status/2060443095527989413
 
 📰 行业速报
-
-① Anthropic 完成 $65B 融资，估值升至 $965B（超越 OpenAI），成全球最高估值 AI 创业公司；Claude Opus 4.8 发布，性能提升 8.6%，并支持动态推理等级与自动缓存。
-② Google I/O 发布「Gemini for Science」科学平台，整合 AlphaFold、AlphaGenome、30+ 生物数据库，3M+ 研究者使用；CEO Demis Hassabis 宣布 AGI 时间点或可提前至 2029。
-③ OpenAI 向法庭披露 2026 年计算支出约 $50B，历史增长 1667 倍（从 2017 年 $30M），未来投入承诺超 $1.4T；准备提交 IPO 申请。
-④ Meta 进行大规模 AI 转向重组，全球裁员 8000 人，转任 7000 人进入 4 个新 AI 单位；推出专业级 M365 Copilot 设计与企业 AI 工作流。
-⑤ Mistral 与 BMW、Airbus 签署制造业 AI 伙伴关系；发布「Vibe」agent 处理长期任务；收购 Koyeb 构建专有计算基础设施，挑战 OpenAI 独立性。
-⑥ DeepSeek V4-Pro 宣布永久降价 75%，激化价格竞争；与小米合作将尖端 AI 成本压低至美国实验室的 1%。
-
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-30-anthropic-shipped-opus-48-heaviest-users-were-writing
+① Anthropic 达成 965 亿美元估值，成全球最具价值的 AI 公司；Claude Opus 4.8 发布，幻觉率降低 4 倍
+② SpaceX IPO 路演定于 6 月 8 日，预计上市时间 6 月 18-30 日；集成 xAI 的 Colossus 数据中心支撑 40 亿美元/月的 Anthropic 计算合约
+③ Meta 全球推出分层 AI 订阅计划，Plus 版 7.99 美元/月起，并推出 Instagram/Facebook 和 WhatsApp 的订阅服务
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-31-
 
 📚 论文速报
-
-① MinWM（论文）：视频扩散模型实时可控世界模型全栈框架，支持低延迟、流式生成、因果关联。
-② Gamma-World（论文）：多 agent 交互式世界环境，支持多个玩家/机器人同时独立可控交互。
-③ YoCausal（论文）：通过视频倒放生成反事实样本，用"违反预期"范式检验视频模型因果推理能力。
-④ MiniMax-M2（开源）：230B 专家混合模型，支持自调试，单 GPU 推理。
-⑤ LocateAnything（论文）：视觉语言模型在 Hugging Face 达 91 分，并行边界框解码技术。
-⑥ Maestro（论文）：4B 协调器模型，在多基准上超越 GPT-5 和 Gemini 2.5 Pro。
-
+① MiniMax-M2（中文 MoE）：230B 参数，9.8B 活跃，能自我调试训练和修改架构
+② Google Gemini Embedding 2：统一视频、音频、图像、文本嵌入空间，多项检索排行榜冠军
+③ PiD：消费级 GPU 可在 1 秒内渲染 2048 分辨率图像，像素扩散 + 超分辨率一步完成
 🔗 https://ai-brief.liziran.com/
 
-📓 Notion: https://www.notion.so/AI Builders Digest-2026-05-31-371941f98904817c8d93f02fb4d9a17c
-
-🌐 https://xiaochengzi2048.github.io/digest.txt
+📎 Notion 存档
+https://www.notion.so/AI-Builders-Digest-2026-05-31-371941f98904817c8d93f02fb4d9a17c
