@@ -1,45 +1,63 @@
-🗞 AI Builders 日报 · 2026.05.31
+🗞 AI Builders 日报 · 2026.06.01
+
 🧠 模型
-① Boris Cherny：Salesforce published a detailed writeup on going agentic with Claude Code. A couple things jumped out.
 
-A migration they'd scoped at 231 days shipped in 13. One PR delivered 21 endpoints at 100% test coverage.🔗 https://x.com/bcherny/status/2060390852619272526
-② Thibault Sottiaux：Do you still trust benchmarks or do you just listen to your friends? What makes you try a new model?🔗 https://x.com/thsottiaux/status/2060563528596287874
+① Anthropic 发布 Claude Opus 4.8
+Claude Opus 4.8 带来三项核心升级：动态工作流支持多 Agent 协作、快速模式性能提升 2.5 倍、代码质量提升 75%。同时推出「工作强度」调节（高/中/低），让用户自主控制推理深度。定价保持不变，继续与 Opus 4.7 持平。
+🔗 https://www.anthropic.com/news/claude-opus-4-8
 
-🤖 Agent/编程
-③ Thibault Sottiaux：I looked at a number today on a codex dashboard and it made me happy. More news about the number soon. 👀
+② Google DeepMind 推出 Gemini 3.5
+新版本为下一代边界模型，专为复杂多步 Agent 工作流优化。同步推出 Gemini Omni，扩展多模态能力。DeepMind CEO Demis Hassabis 在 Google I/O 表示 AGI 时间线为 2030 年左右。
+🔗 https://deepmind.google/blog
 
-Thanks to everyone who keeps adopting codex. We are still early. So early.🔗 https://x.com/thsottiaux/status/2060565265906290786
-④ Thibault Sottiaux：The world is more fun with codex glasses https://t.co/HYgxSCdaks🔗 https://x.com/thsottiaux/status/2060529970523603099
-⑤ Boris Cherny：The teams seeing the biggest wins from AI are completely changing how they work, not speeding up what they already do. What steps can you delete, what handoffs go away, what can an agent just own end to end. Great to see Salesforce go this deep. Shoutout to Srini, @Benioff & team.
+③ Mistral 发布 Vibe Agent 重塑工作流
+将 Le Chat 升级为统一 Vibe AI Agent，集成 Google Workspace、Outlook、SharePoint、Slack、GitHub。新增 VS Code 插件和 CLI 模式，支持远程编码和 PR 管理。企业客户已包括空客、宝马、ASML。
+🔗 https://mistral.ai/news/vibe-agent
 
-Full writeup: htt🔗 https://x.com/bcherny/status/2060390855383400729
-⑥ Boris Cherny：Quality went up alongside output. Even with more PRs shipping, total incidents dropped 5%. They built security guardrails and quality standards into the agentic workflow itself.
+🔒 安全
 
-Productivity vs quality is sometimes framed as a tradeoff. They're not seeing it.🔗 https://x.com/bcherny/status/2060390853835726946
+④ OpenAI 发布 Frontier Governance 框架
+OpenAI 提出《前沿治理框架》，从系统风险评估、第三方评估基金、利益相关方参与三方面建议，为 AGI 级别能力的模型监管制定标准。同步推出选举保护措施 2026，应对恶意使用风险。
+🔗 https://openai.com/news
+
+🛠 产品/应用
+
+⑤ Mistral 启动巴黎数据中心建设
+10 MW 推理设施位于法国埃松省莱于利斯，Q3 2026 目标上线。同步收购 Emmi 公司，获得物理 AI 能力。标志 Mistral 向欧洲数据主权位置扩张。
+🔗 https://futurumgroup.com/insights/mistral-ai-shifts-to-full-stack-strategy-with-vibe-and-industrial-ai
 
 📈 商业/观点
-⑦ Aaron Levie：The app layer couldn’t get a better advertisement than a company spending $500M to build their own version of it. Obviously lots of nuance here that can’t be captured in the headline, but this should make you very bullish on software. https://t.co/laysmOjyo7🔗 https://x.com/levie/status/2060525104384418271
-⑧ Garry Tan：A founder kept saying "if only we had money we'd do X."
 
-Money is not the fire. Money is gasoline you pour on a fire that already exists.
+⑥ Anthropic 融资 65 亿美元，估值升至 965 亿
+Series H 融资刷新私募融资纪录，估值已超 OpenAI 的 852 亿（3 月融资时估值）。Q1 营收 48 亿，Q2 同比增长 130% 预计达 109 亿。Claude Code 产生 10 亿美元年化收入，目前已升至 25 亿+。
+🔗 https://octagonai.co/news/anthropic-ipo-news-2026-05-29
 
-You don't have a funding problem. You have a "people don't want it yet" problem. Go make the first fire.🔗 https://x.com/garrytan/status/2060600088079356292
+⑦ OpenAI IPO 进展：年底前上市目标不变
+OpenAI 基础设施支出持续扩张，Stargate 项目涉及英国、阿联酋、挪威、密歇根多地部署。同步推进社会安全网政策提案，应对 AI 驱动的经济转变。IPO 估值预计在 850 亿美元以上。
+🔗 https://www.openai.com
 
-🎙 播客
-: Building an AI Guardian for Enterprise with Onyx Security CEO Maxim Bar Kogan
+🎙 Podcast
 
+Unsupervised Learning 第 87 期：Gemini 联合主导者谈世界模型、强化学习下一个前沿和持续学习
+Google DeepMind 研究员深度讨论世界模型在强化学习中的应用，以及如何通过持续学习实现更灵活的 Agent 适应能力。
 
 📰 行业速报
-① Anthropic 达成 965 亿美元估值，成全球最具价值的 AI 公司；Claude Opus 4.8 发布，幻觉率降低 4 倍
-② SpaceX IPO 路演定于 6 月 8 日，预计上市时间 6 月 18-30 日；集成 xAI 的 Colossus 数据中心支撑 40 亿美元/月的 Anthropic 计算合约
-③ Meta 全球推出分层 AI 订阅计划，Plus 版 7.99 美元/月起，并推出 Instagram/Facebook 和 WhatsApp 的订阅服务
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-31-
+
+① Anthropic 估值升至 965 亿美元，刷新私募融资纪录（Series H）
+② Claude Opus 4.8 上线，代码质量提升 75%，推理速度快 2.5 倍
+③ Mistral Vibe Agent 融合企业生产力工具，客户已含全球 500 强
+
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-31-anthropic-raises-65-billion-passes-openai-endava-cuts.html
 
 📚 论文速报
-① MiniMax-M2（中文 MoE）：230B 参数，9.8B 活跃，能自我调试训练和修改架构
-② Google Gemini Embedding 2：统一视频、音频、图像、文本嵌入空间，多项检索排行榜冠军
-③ PiD：消费级 GPU 可在 1 秒内渲染 2048 分辨率图像，像素扩散 + 超分辨率一步完成
+
+① MiniMax-M2：中文混合专家模型实现自主演进
+② LocateAnything：VLM 精确定位任意目标的边界框检测
+③ PiD：快速图像生成突破，单张图像生成耗时 <1 秒
+④ BonaFide：评估 AI 模型输出忠实性的新基准
+⑤ Gated DeltaNet-2：线性注意力机制刷新效率记录
+
 🔗 https://ai-brief.liziran.com/
 
-📎 Notion 存档
-https://www.notion.so/AI-Builders-Digest-2026-05-31-371941f98904817c8d93f02fb4d9a17c
+📓 Notion 存档
+https://www.notion.so/AI-Builders-Digest-20260601-372941f98904819fb2c6ccc777b4cfe9
