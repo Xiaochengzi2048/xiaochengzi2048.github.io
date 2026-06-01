@@ -1,63 +1,38 @@
-🗞 AI Builders 日报 · 2026.06.01
+🗞 AI 日报 · 2026.06.01
 
-🧠 模型
+📰 今日速报
 
-① Anthropic 发布 Claude Opus 4.8
-Claude Opus 4.8 带来三项核心升级：动态工作流支持多 Agent 协作、快速模式性能提升 2.5 倍、代码质量提升 75%。同时推出「工作强度」调节（高/中/低），让用户自主控制推理深度。定价保持不变，继续与 Opus 4.7 持平。
+① Anthropic估值超越OpenAI，获650亿美元Series H融资
+Anthropic完成650亿美元融资，估值逼近1万亿美元，正式成为硅谷估值最高的私有AI公司，年收入从约100亿美元涨至470亿美元。Claude Code的商业成功是主要驱动力。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-05-31-anthropic-raises-65-billion-passes-openai-endava-cuts.html
+
+② OpenAI客户案例：Agent正在重塑组织结构
+Braintrust、Endava等企业通过OpenAI Agent技术实现流程优化，工程师从编码转向审核，需求分析周期从数周压缩至数小时。这表明Agent不仅在辅助开发，而是在重新定义中间管理层的职能。
+🔗 https://openai.com/index/ai-redefining-work
+
+③ Claude Opus 4.8发布：强化诚实性，出错时主动认错
+Anthropic发布Claude Opus 4.8，重点改进模型的诚实度——当无法支撑结论时会明确表示，避免给出虚假或无根据的陈述。USAMO数学基准达96.7%，在SWE-bench Pro上超越GPT-5.5。
 🔗 https://www.anthropic.com/news/claude-opus-4-8
 
-② Google DeepMind 推出 Gemini 3.5
-新版本为下一代边界模型，专为复杂多步 Agent 工作流优化。同步推出 Gemini Omni，扩展多模态能力。DeepMind CEO Demis Hassabis 在 Google I/O 表示 AGI 时间线为 2030 年左右。
-🔗 https://deepmind.google/blog
-
-③ Mistral 发布 Vibe Agent 重塑工作流
-将 Le Chat 升级为统一 Vibe AI Agent，集成 Google Workspace、Outlook、SharePoint、Slack、GitHub。新增 VS Code 插件和 CLI 模式，支持远程编码和 PR 管理。企业客户已包括空客、宝马、ASML。
-🔗 https://mistral.ai/news/vibe-agent
-
-🔒 安全
-
-④ OpenAI 发布 Frontier Governance 框架
-OpenAI 提出《前沿治理框架》，从系统风险评估、第三方评估基金、利益相关方参与三方面建议，为 AGI 级别能力的模型监管制定标准。同步推出选举保护措施 2026，应对恶意使用风险。
-🔗 https://openai.com/news
-
-🛠 产品/应用
-
-⑤ Mistral 启动巴黎数据中心建设
-10 MW 推理设施位于法国埃松省莱于利斯，Q3 2026 目标上线。同步收购 Emmi 公司，获得物理 AI 能力。标志 Mistral 向欧洲数据主权位置扩张。
-🔗 https://futurumgroup.com/insights/mistral-ai-shifts-to-full-stack-strategy-with-vibe-and-industrial-ai
-
-📈 商业/观点
-
-⑥ Anthropic 融资 65 亿美元，估值升至 965 亿
-Series H 融资刷新私募融资纪录，估值已超 OpenAI 的 852 亿（3 月融资时估值）。Q1 营收 48 亿，Q2 同比增长 130% 预计达 109 亿。Claude Code 产生 10 亿美元年化收入，目前已升至 25 亿+。
-🔗 https://octagonai.co/news/anthropic-ipo-news-2026-05-29
-
-⑦ OpenAI IPO 进展：年底前上市目标不变
-OpenAI 基础设施支出持续扩张，Stargate 项目涉及英国、阿联酋、挪威、密歇根多地部署。同步推进社会安全网政策提案，应对 AI 驱动的经济转变。IPO 估值预计在 850 亿美元以上。
-🔗 https://www.openai.com
-
-🎙 Podcast
-
-Unsupervised Learning 第 87 期：Gemini 联合主导者谈世界模型、强化学习下一个前沿和持续学习
-Google DeepMind 研究员深度讨论世界模型在强化学习中的应用，以及如何通过持续学习实现更灵活的 Agent 适应能力。
-
-📰 行业速报
-
-① Anthropic 估值升至 965 亿美元，刷新私募融资纪录（Series H）
-② Claude Opus 4.8 上线，代码质量提升 75%，推理速度快 2.5 倍
-③ Mistral Vibe Agent 融合企业生产力工具，客户已含全球 500 强
-
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-31-anthropic-raises-65-billion-passes-openai-endava-cuts.html
+快讯：
+• Mistral完成巴黎峰会战略转向，从单纯模型商转向完整AI栈（算力+平台+企业产品） — 🔗 https://mistral.ai/news/ai-now-summit-2026
+• GitHub Copilot改按token计费，开发者批评"成本不可预测"，引发强烈反弹 — 🔗 https://github.blog/changelog
+• Meta发布AI可穿戴硬件新品类（AI挂坠） — 🔗 https://about.meta.com/news/ai
+• 软银投资法国数据中心最多750亿欧元，目标新增5GW容量 — 🔗 https://group.softbank/en/news/press/20260531
 
 📚 论文速报
 
-① MiniMax-M2：中文混合专家模型实现自主演进
-② LocateAnything：VLM 精确定位任意目标的边界框检测
-③ PiD：快速图像生成突破，单张图像生成耗时 <1 秒
-④ BonaFide：评估 AI 模型输出忠实性的新基准
-⑤ Gated DeltaNet-2：线性注意力机制刷新效率记录
+① Gamma-World：多人交互式世界模型实现24FPS实时运行
+研究团队设计排列对称编码（Simplex Rotary Agent Encoding）和线性注意机制（Sparse Hub Attention），使多Agent共享空间的计算成本从二次方降低到线性。学生模型蒸馏后可在24FPS实时运行，从2人训练泛化到4人场景。
+🔗 https://arxiv.org/abs/2605.28816
 
-🔗 https://ai-brief.liziran.com/
+② MiniMax-M2：自我进化的230B MoE Agent模型
+MiniMax发布M2.7检查点，具备自我调试和修改自身训练架构的能力。229.9B总参数、9.8B活跃参数的设计用于Agent工作。Forge强化学习框架解耦训练、推理、Agent执行，兼容白箱和黑箱Agent。
+🔗 https://arxiv.org/abs/2605.26494
 
-📓 Notion 存档
-https://www.notion.so/AI-Builders-Digest-20260601-372941f98904819fb2c6ccc777b4cfe9
+③ MemTrace：诊断Agent记忆管道故障，性能提升7.62%
+研究提出内存进化图框架，可逐层追踪信息丢失和检索不匹配，将其作为优化信号驱动提示词纠正。在实际任务中端到端性能提升最高7.62%。
+🔗 https://arxiv.org/abs/2605.28732
+
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-06-01-372941f9-8904-819f-b2c6-ccc777b4cfe9
+🌐 https://xiaochengzi2048.github.io/digest.txt
