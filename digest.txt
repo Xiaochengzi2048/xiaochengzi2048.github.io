@@ -1,38 +1,37 @@
-🗞 AI 日报 · 2026.06.01
+🗞 AI 日报 · 2026.06.02
 
 📰 今日速报
 
-① Anthropic估值超越OpenAI，获650亿美元Series H融资
-Anthropic完成650亿美元融资，估值逼近1万亿美元，正式成为硅谷估值最高的私有AI公司，年收入从约100亿美元涨至470亿美元。Claude Code的商业成功是主要驱动力。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-05-31-anthropic-raises-65-billion-passes-openai-endava-cuts.html
+① Anthropic 机密提交 IPO，成为估值最高 AI 公司
+Anthropic 在 6 月 1 日以机密方式向美国 SEC 提交了首次公开募股（IPO）的初稿登记声明。这家公司在最新融资中达到了 9,650 亿美元的估值，首次超过 OpenAI 的 8,520 亿美元估值。Anthropic 报告称 Q2 2026 年化营收约 470 亿美元，并实现了首个季度运营利润约 5.59 亿美元。IPO 可能最早在 2026 年秋季进行。
+🔗 https://www.nytimes.com/2026/06/01/technology/anthropic-ipo.html
 
-② OpenAI客户案例：Agent正在重塑组织结构
-Braintrust、Endava等企业通过OpenAI Agent技术实现流程优化，工程师从编码转向审核，需求分析周期从数周压缩至数小时。这表明Agent不仅在辅助开发，而是在重新定义中间管理层的职能。
-🔗 https://openai.com/index/ai-redefining-work
+② GitHub Copilot 改用 token 计费，用户月费报价飙升至 750 美元
+从 6 月 1 日起，GitHub Copilot 从固定订阅改为 token 计费模式。重度用户报称月费从 29 美元飙升至约 750 美元，主要因为高级推理模型成本是标准模型的 10-50 倍。这一改变引发了社交媒体批评浪潮。微软同时宣布将推出更便宜的自研编码模型。
+🔗 https://www.buildfastwithai.com/blogs/ai-news-today-june-1-2026
 
-③ Claude Opus 4.8发布：强化诚实性，出错时主动认错
-Anthropic发布Claude Opus 4.8，重点改进模型的诚实度——当无法支撑结论时会明确表示，避免给出虚假或无根据的陈述。USAMO数学基准达96.7%，在SWE-bench Pro上超越GPT-5.5。
-🔗 https://www.anthropic.com/news/claude-opus-4-8
+③ Google 在 I/O 2026 发布 Gemini 3.5 Flash 和 Omni 模型
+Google DeepMind 发布了 Gemini 3.5 系列，Gemini 3.5 Flash 成为 Gemini 应用和 Google 搜索 AI 模式的默认模型。同时推出了新的 Gemini Omni 多模态世界模型，支持视频生成。Google 还降低了 Gemini Ultra 订阅价格，并推出了 Gemini Enterprise Agent Platform。
+🔗 https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/
 
-快讯：
-• Mistral完成巴黎峰会战略转向，从单纯模型商转向完整AI栈（算力+平台+企业产品） — 🔗 https://mistral.ai/news/ai-now-summit-2026
-• GitHub Copilot改按token计费，开发者批评"成本不可预测"，引发强烈反弹 — 🔗 https://github.blog/changelog
-• Meta发布AI可穿戴硬件新品类（AI挂坠） — 🔗 https://about.meta.com/news/ai
-• 软银投资法国数据中心最多750亿欧元，目标新增5GW容量 — 🔗 https://group.softbank/en/news/press/20260531
+• Cognition 的 Devin AI agent 在新融资中达到 260 亿美元估值，年化营收 4.92 亿美元，同比增长 1,230%
+• Apollo 和 Blackstone 宣布 360 亿美元 AI 芯片基础设施债务融资，Broadcom 担保最大部分
+• SoftBank 在法国承诺 75 亿欧元用于 AI 数据中心，是欧洲最大单笔 AI 基础设施投资
+• xAI 发布 Composer 2.5 和开发者工具，推进企业级 AI 编码竞争
 
 📚 论文速报
 
-① Gamma-World：多人交互式世界模型实现24FPS实时运行
-研究团队设计排列对称编码（Simplex Rotary Agent Encoding）和线性注意机制（Sparse Hub Attention），使多Agent共享空间的计算成本从二次方降低到线性。学生模型蒸馏后可在24FPS实时运行，从2人训练泛化到4人场景。
-🔗 https://arxiv.org/abs/2605.28816
-
-② MiniMax-M2：自我进化的230B MoE Agent模型
-MiniMax发布M2.7检查点，具备自我调试和修改自身训练架构的能力。229.9B总参数、9.8B活跃参数的设计用于Agent工作。Forge强化学习框架解耦训练、推理、Agent执行，兼容白箱和黑箱Agent。
+① MiniMax-M2：中文 230B MoE，仅 9.8B 参数激活，能自我调试训练流程和重写脚手架
 🔗 https://arxiv.org/abs/2605.26494
 
-③ MemTrace：诊断Agent记忆管道故障，性能提升7.62%
-研究提出内存进化图框架，可逐层追踪信息丢失和检索不匹配，将其作为优化信号驱动提示词纠正。在实际任务中端到端性能提升最高7.62%。
-🔗 https://arxiv.org/abs/2605.28732
+② CPT（协作并行思考）：推理分支在训练时共享中间发现，无需额外训练即可提升竞赛数学准确率
+🔗 https://arxiv.org/abs/2605.27030
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-06-01-372941f9-8904-819f-b2c6-ccc777b4cfe9
+③ AKBE：教会模型何时该用工具何时该用内部知识，工具调用减少 18%，工具效率提升 25%
+🔗 https://arxiv.org/abs/2605.26952
+
+④ MUSE-Autoskill：Agent 技能全生命周期管理，跨任务携带经验，通过单元测试自我修复
+🔗 https://arxiv.org/abs/2605.27366
+
+📓 Notion: https://www.notion.so/AI-Builders-Digest-20260602-373941f9-8904-818e-9a3c-d912b2bb16d5
 🌐 https://xiaochengzi2048.github.io/digest.txt
