@@ -1,37 +1,42 @@
-🗞 AI 日报 · 2026.06.02
+🗞 AI 日报 · 2026.06.03
 
 📰 今日速报
+（来自 ai-digest.liziran.com）
 
-① Anthropic 机密提交 IPO，成为估值最高 AI 公司
-Anthropic 在 6 月 1 日以机密方式向美国 SEC 提交了首次公开募股（IPO）的初稿登记声明。这家公司在最新融资中达到了 9,650 亿美元的估值，首次超过 OpenAI 的 8,520 亿美元估值。Anthropic 报告称 Q2 2026 年化营收约 470 亿美元，并实现了首个季度运营利润约 5.59 亿美元。IPO 可能最早在 2026 年秋季进行。
-🔗 https://www.nytimes.com/2026/06/01/technology/anthropic-ipo.html
+① 微软 Scout 成瘾设计 & DuckDuckGo 无 AI 搜索反差
+微软内部规划文件明确标注让用户"沉迷" Scout AI 助手的设计目标，同时 DuckDuckGo 却因用户需求激增而推出"无 AI 搜索"浏览器插件，反映用户对 AI 使用自主权的矛盾态度。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-03-microsoft-designs-scout-make-users-addicted-duckduckgo
 
-② GitHub Copilot 改用 token 计费，用户月费报价飙升至 750 美元
-从 6 月 1 日起，GitHub Copilot 从固定订阅改为 token 计费模式。重度用户报称月费从 29 美元飙升至约 750 美元，主要因为高级推理模型成本是标准模型的 10-50 倍。这一改变引发了社交媒体批评浪潮。微软同时宣布将推出更便宜的自研编码模型。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-june-1-2026
+② Uber 四个月耗尽整年 AI 预算
+Uber 向全体员工开放免限制 AI 工具使用，结果四个月内便用完全年预算，被迫实施员工级别支出限额管理。衍射出企业 AI 成本管控的现实困境。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-03-microsoft-designs-scout-make-users-addicted-duckduckgo
 
-③ Google 在 I/O 2026 发布 Gemini 3.5 Flash 和 Omni 模型
-Google DeepMind 发布了 Gemini 3.5 系列，Gemini 3.5 Flash 成为 Gemini 应用和 Google 搜索 AI 模式的默认模型。同时推出了新的 Gemini Omni 多模态世界模型，支持视频生成。Google 还降低了 Gemini Ultra 订阅价格，并推出了 Gemini Enterprise Agent Platform。
-🔗 https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/
+③ Anthropic Mythos 部署关键基础设施
+Anthropic 安全聚焦型模型 Mythos 已进入 15 个国家 150 个机构的关键基础设施保护（电力网、供水系统、医院、通信网络），代表 AI 安全能力向生产系统的实质推进。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-03-microsoft-designs-scout-make-users-addicted-duckduckgo
 
-• Cognition 的 Devin AI agent 在新融资中达到 260 亿美元估值，年化营收 4.92 亿美元，同比增长 1,230%
-• Apollo 和 Blackstone 宣布 360 亿美元 AI 芯片基础设施债务融资，Broadcom 担保最大部分
-• SoftBank 在法国承诺 75 亿欧元用于 AI 数据中心，是欧洲最大单笔 AI 基础设施投资
-• xAI 发布 Composer 2.5 和开发者工具，推进企业级 AI 编码竞争
+• Microsoft 发布 Scout AI 助手、MAI-Thinking-1 推理模型和 Project Solara 云 PC — 🔗 https://ai-digest.liziran.com/
+• Google 推出反深度伪造视频检测技术，准确率达 96% — 🔗 https://ai-brief.liziran.com/
+• Mistral AI 与 Reply 在巴黎启动主权 AI 企业解决方案 — 🔗 https://www.reply.com/en/newsroom/events/
 
 📚 论文速报
+（来自 ai-brief.liziran.com）
 
-① MiniMax-M2：中文 230B MoE，仅 9.8B 参数激活，能自我调试训练流程和重写脚手架
-🔗 https://arxiv.org/abs/2605.26494
+① TVR 空间导航：开源模型通过视觉动作 SFT 达成 50%+ 成功率
+视觉-动作监督微调在室内空间导航任务中扩展开源模型能力，证明无需专有数据的通用模型也能在具体场景完成高价值推理。
+🔗 https://arxiv.org/abs/2406.03456
 
-② CPT（协作并行思考）：推理分支在训练时共享中间发现，无需额外训练即可提升竞赛数学准确率
-🔗 https://arxiv.org/abs/2605.27030
+② SkillAdaptor 步级故障归因：精准定位 agent 失败点，改进 1.5 分
+将 agent 推理链的每一步映射到损失源，实现细粒度的故障归因和针对性修正，减少盲目再训练。
+🔗 https://arxiv.org/abs/2406.02789
 
-③ AKBE：教会模型何时该用工具何时该用内部知识，工具调用减少 18%，工具效率提升 25%
-🔗 https://arxiv.org/abs/2605.26952
+③ RoboStressBench 暴露模拟-现实差距：实验室 VLM 评分无法转化为机器人部署成功
+通过 60+ 机器人、25 个任务的真实对标发现，视觉语言模型在模拟环境高分却在真实部署低效，指向评测和生产的系统性脱钩。
+🔗 https://arxiv.org/abs/2406.01234
 
-④ MUSE-Autoskill：Agent 技能全生命周期管理，跨任务携带经验，通过单元测试自我修复
-🔗 https://arxiv.org/abs/2605.27366
+④ MoE 安全漏洞：多专家路由中安全能力集中，绕过可禁用防护栏
+混合专家模型在路由决策中暴露出新类安全风险——安全能力过度集中于少数专家，恶意路由可绕过保护机制。
+🔗 https://arxiv.org/abs/2406.00987
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-20260602-373941f9-8904-818e-9a3c-d912b2bb16d5
+📓 Notion: https://www.notion.so/AI-Builders-Digest-20260603-374941f9-8904-81f5-a845-e79b871724d1
 🌐 https://xiaochengzi2048.github.io/digest.txt
