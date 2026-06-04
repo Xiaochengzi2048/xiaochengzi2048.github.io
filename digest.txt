@@ -1,42 +1,41 @@
-🗞 AI 日报 · 2026.06.03
+🗞 AI 日报 · 2026.06.04
 
 📰 今日速报
-（来自 ai-digest.liziran.com）
 
-① 微软 Scout 成瘾设计 & DuckDuckGo 无 AI 搜索反差
-微软内部规划文件明确标注让用户"沉迷" Scout AI 助手的设计目标，同时 DuckDuckGo 却因用户需求激增而推出"无 AI 搜索"浏览器插件，反映用户对 AI 使用自主权的矛盾态度。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-03-microsoft-designs-scout-make-users-addicted-duckduckgo
+① Anthropic 服务轨道与合作伙伴中心正式上线
+Anthropic 于 6 月 3 日发布 Claude 合作伙伴网络重大升级，包含 Services Track（服务履行追踪）和 Partner Hub（伙伴生态中心）两大功能。Q1 2026 季度末 Claude ARR 达到 300 亿美元，环比增长 80 倍。Claude Code 产品在 9 个月内实现 25 亿美元 ARR，成为历史上增长最快的软件产品之一。40000 多家企业申请合作，10000 多名认证顾问已上线。Anthropic 于 6 月 1 日向 SEC 秘密提交 S-1 IPO 申请。
+🔗 https://www.anthropic.com/news/services-track-partner-hub
 
-② Uber 四个月耗尽整年 AI 预算
-Uber 向全体员工开放免限制 AI 工具使用，结果四个月内便用完全年预算，被迫实施员工级别支出限额管理。衍射出企业 AI 成本管控的现实困境。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-03-microsoft-designs-scout-make-users-addicted-duckduckgo
+② Meta 发布企业级 AI 业务代理，进军智能工作流市场
+Meta 在伦敦 WhatsApp Conversations 大会上推出 AI Business Agent，已在 WhatsApp、Messenger 和 Instagram 全球上线。该代理能够自主处理日历预约、销售交易、FAQ 回答、销售线索筛选，以及包含支付处理的订单下达。Meta 同步成立企业解决方案团队，部署前沿工程师直接服务大客户，与 Anthropic 方法论相似。已有 100 万多家企业在使用早期版本的聊天机器人。
+🔗 https://www.reuters.com/business/meta-launches-enterprise-focused-ai-business-agent-automate-daily-operations-2026-06-03
 
-③ Anthropic Mythos 部署关键基础设施
-Anthropic 安全聚焦型模型 Mythos 已进入 15 个国家 150 个机构的关键基础设施保护（电力网、供水系统、医院、通信网络），代表 AI 安全能力向生产系统的实质推进。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-03-microsoft-designs-scout-make-users-addicted-duckduckgo
+③ Google 推出搜索代理，将搜索从查询转变为持续监控与自动行动
+Google I/O 2026 宣布夏季推出 Search Agents 套件。Information Agents 可 24/7 后台运行，持续监控网络变化（公寓租赁、商品发售、市场监测）。Agentic Booking 支持复杂预订需求，Google 可代表用户直接致电商家洽谈。Gemini 3.5 Flash 成为新默认模型，已覆盖 10 亿月活用户。AI Ultra 月费从 $250 降至 $200。
+🔗 https://blog.google/products-and-platforms/products/search/search-io-2026
 
-• Microsoft 发布 Scout AI 助手、MAI-Thinking-1 推理模型和 Project Solara 云 PC — 🔗 https://ai-digest.liziran.com/
-• Google 推出反深度伪造视频检测技术，准确率达 96% — 🔗 https://ai-brief.liziran.com/
-• Mistral AI 与 Reply 在巴黎启动主权 AI 企业解决方案 — 🔗 https://www.reply.com/en/newsroom/events/
+• OpenAI 企业营收占比达 40%，S-1 IPO 申请预计数周内提交。已与 Bain、McKinsey 等 19 家全球咨询公司建立部署伙伴关系。
+🔗 https://blog.mean.ceo/open-ai-news-june-2026
+
+• SpaceX 与 xAI 完成 1.25 万亿美元全股票合并，联合提交迄今历史最大规模 IPO 秘密申请。Grok 4 计划 7 月 4 日后发布。
+🔗 https://www.fintechweekly.com/magazine/articles/spacex-ipo-xai-valuation-ai-layer-rebuild-2026
+
+• Mistral AI 一周内发布相当于 OpenAI 6 年的模型数量。正在法国巴黎附近建造 1.4 GW GPU 集群以支持欧洲计算主权。
+🔗 https://brief.bismarckanalysis.com/p/ai-2026-mistral-will-rise-as-compute
 
 📚 论文速报
-（来自 ai-brief.liziran.com）
 
-① TVR 空间导航：开源模型通过视觉动作 SFT 达成 50%+ 成功率
-视觉-动作监督微调在室内空间导航任务中扩展开源模型能力，证明无需专有数据的通用模型也能在具体场景完成高价值推理。
-🔗 https://arxiv.org/abs/2406.03456
+① Gamma-World: 多智能体可在共享空间同步发出命令，通过置换对称编码和线性注意力实现线性成本复杂度。蒸馏学生版本在 24 FPS 运行。
+🔗 https://arxiv.org/abs/2605.28816
 
-② SkillAdaptor 步级故障归因：精准定位 agent 失败点，改进 1.5 分
-将 agent 推理链的每一步映射到损失源，实现细粒度的故障归因和针对性修正，减少盲目再训练。
-🔗 https://arxiv.org/abs/2406.02789
+② DenoiseRL: 模型从失败前缀中恢复，以失败本身作为优化信号。在数学推理基准上稳定超越在线强化学习基线。
+🔗 https://arxiv.org/abs/2605.28421
 
-③ RoboStressBench 暴露模拟-现实差距：实验室 VLM 评分无法转化为机器人部署成功
-通过 60+ 机器人、25 个任务的真实对标发现，视觉语言模型在模拟环境高分却在真实部署低效，指向评测和生产的系统性脱钩。
-🔗 https://arxiv.org/abs/2406.01234
+③ GEM: 具身视觉语言模型在预训练中增加深度图生成任务，将空间与物理先验通过生成监督编码。仿真和真机测试均有提升。
+🔗 https://arxiv.org/abs/2605.28548
 
-④ MoE 安全漏洞：多专家路由中安全能力集中，绕过可禁用防护栏
-混合专家模型在路由决策中暴露出新类安全风险——安全能力过度集中于少数专家，恶意路由可绕过保护机制。
-🔗 https://arxiv.org/abs/2406.00987
+④ MemTrace: 将内存管道分解为可执行的「内存演化图」，逐层归因信息丢失与检索不匹配。属性信号驱动提示纠正，任务端到端改进最高 7.62%。
+🔗 https://arxiv.org/abs/2605.28732
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-20260603-374941f9-8904-81f5-a845-e79b871724d1
+📓 Notion: https://www.notion.so/AI-Builders-Digest-20260604-375941f989048199924cd8a8f2c758f7
 🌐 https://xiaochengzi2048.github.io/digest.txt
