@@ -1,41 +1,35 @@
-🗞 AI 日报 · 2026.06.04
+🗞 AI 日报 · 2026.06.05
 
 📰 今日速报
+（最新产业动态，June 3-5）
 
-① Anthropic 服务轨道与合作伙伴中心正式上线
-Anthropic 于 6 月 3 日发布 Claude 合作伙伴网络重大升级，包含 Services Track（服务履行追踪）和 Partner Hub（伙伴生态中心）两大功能。Q1 2026 季度末 Claude ARR 达到 300 亿美元，环比增长 80 倍。Claude Code 产品在 9 个月内实现 25 亿美元 ARR，成为历史上增长最快的软件产品之一。40000 多家企业申请合作，10000 多名认证顾问已上线。Anthropic 于 6 月 1 日向 SEC 秘密提交 S-1 IPO 申请。
-🔗 https://www.anthropic.com/news/services-track-partner-hub
+① 微软Build大会发布AI基础设施全栈
+微软推出MAI-Thinking-1推理模型，在多项基准测试中与Claude Sonnet 4.6性能相当；同时推出Aion本地SLM、Scout跨应用AI Agent框架、Mayo Clinic健康AI模型等；与AMD、Intel、NVIDIA等联合推出MRC Network Protocol开放标准，用于大规模AI训练可靠性。
+🔗 https://www.buildfastwithai.com/blogs/ai-news-today-june-3-2026
 
-② Meta 发布企业级 AI 业务代理，进军智能工作流市场
-Meta 在伦敦 WhatsApp Conversations 大会上推出 AI Business Agent，已在 WhatsApp、Messenger 和 Instagram 全球上线。该代理能够自主处理日历预约、销售交易、FAQ 回答、销售线索筛选，以及包含支付处理的订单下达。Meta 同步成立企业解决方案团队，部署前沿工程师直接服务大客户，与 Anthropic 方法论相似。已有 100 万多家企业在使用早期版本的聊天机器人。
-🔗 https://www.reuters.com/business/meta-launches-enterprise-focused-ai-business-agent-automate-daily-operations-2026-06-03
-
-③ Google 推出搜索代理，将搜索从查询转变为持续监控与自动行动
-Google I/O 2026 宣布夏季推出 Search Agents 套件。Information Agents 可 24/7 后台运行，持续监控网络变化（公寓租赁、商品发售、市场监测）。Agentic Booking 支持复杂预订需求，Google 可代表用户直接致电商家洽谈。Gemini 3.5 Flash 成为新默认模型，已覆盖 10 亿月活用户。AI Ultra 月费从 $250 降至 $200。
+② 谷歌AI Mode突破10亿月活，启动信息agent和预约功能
+Google搜索AI Mode月活跃用户达10亿，环比增长翻倍；推出24/7背景网页监测agent、AI自动致电商家预约功能（今年夏季）、生成式搜索UI等创新，Personal Intelligence功能扩展至98种语言和~200个国家地区。
 🔗 https://blog.google/products-and-platforms/products/search/search-io-2026
 
-• OpenAI 企业营收占比达 40%，S-1 IPO 申请预计数周内提交。已与 Bain、McKinsey 等 19 家全球咨询公司建立部署伙伴关系。
-🔗 https://blog.mean.ceo/open-ai-news-june-2026
+③ Anthropic秘密IPO申报，估值超越OpenAI
+Anthropic于6月1日秘密申报IPO，当前估值达900亿美元+，已超过OpenAI的730亿美元；年化收入超47亿美元，成为增速最快的AI企业独角兽候选，IPO预计年内完成。
+🔗 https://www.nytimes.com/2026/06/01/technology/anthropic-ipo.html
 
-• SpaceX 与 xAI 完成 1.25 万亿美元全股票合并，联合提交迄今历史最大规模 IPO 秘密申请。Grok 4 计划 7 月 4 日后发布。
-🔗 https://www.fintechweekly.com/magazine/articles/spacex-ipo-xai-valuation-ai-layer-rebuild-2026
-
-• Mistral AI 一周内发布相当于 OpenAI 6 年的模型数量。正在法国巴黎附近建造 1.4 GW GPU 集群以支持欧洲计算主权。
-🔗 https://brief.bismarckanalysis.com/p/ai-2026-mistral-will-rise-as-compute
+• 特朗普签署AI创新安全令，推行30天自愿审查机制 — 🔗 https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security
+• 美国政府AI监管扩展，与Google、Microsoft、xAI新签协议 — 🔗 https://www.cnbc.com/2026/05/05/ai-oversight-trump-google-microsoft-xai.html
+• Mistral AI投入€4B建设欧洲数据中心，对标AI主权战略 — 🔗 https://www.youtube.com/watch?v=325gGv0eWV8
 
 📚 论文速报
+（AI前沿研究，来自arxiv）
 
-① Gamma-World: 多智能体可在共享空间同步发出命令，通过置换对称编码和线性注意力实现线性成本复杂度。蒸馏学生版本在 24 FPS 运行。
-🔗 https://arxiv.org/abs/2605.28816
+① Context Masking in Search Agents：陈旧观测删除在检索agent中遵循倒U曲线，强检索+中等规模模型最高收益
+🔗 https://arxiv.org/abs/2606.00408
 
-② DenoiseRL: 模型从失败前缀中恢复，以失败本身作为优化信号。在数学推理基准上稳定超越在线强化学习基线。
-🔗 https://arxiv.org/abs/2605.28421
+② Harness-1状态外部化：将证据链接和验证记录从策略网络移至环境，20B子agent精准率+11.4分
+🔗 https://arxiv.org/abs/2606.02373
 
-③ GEM: 具身视觉语言模型在预训练中增加深度图生成任务，将空间与物理先验通过生成监督编码。仿真和真机测试均有提升。
-🔗 https://arxiv.org/abs/2605.28548
+③ OpenWebRL：4B参数网页Agent仅用400条初始轨迹即实现与闭源模型相当的性能，全部代码和模型开源
+🔗 https://arxiv.org/abs/2605.13245
 
-④ MemTrace: 将内存管道分解为可执行的「内存演化图」，逐层归因信息丢失与检索不匹配。属性信号驱动提示纠正，任务端到端改进最高 7.62%。
-🔗 https://arxiv.org/abs/2605.28732
-
-📓 Notion: https://www.notion.so/AI-Builders-Digest-20260604-375941f989048199924cd8a8f2c758f7
+📓 Notion: https://www.notion.so/AI-Builders-Digest-·-2026-06-05-376941f9-8904-8191-8962-e9b3660e1baf
 🌐 https://xiaochengzi2048.github.io/digest.txt
