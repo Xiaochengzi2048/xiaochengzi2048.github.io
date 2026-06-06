@@ -1,35 +1,41 @@
-🗞 AI 日报 · 2026.06.05
+🗞 AI 日报 · 2026.06.06
 
 📰 今日速报
-（最新产业动态，June 3-5）
 
-① 微软Build大会发布AI基础设施全栈
-微软推出MAI-Thinking-1推理模型，在多项基准测试中与Claude Sonnet 4.6性能相当；同时推出Aion本地SLM、Scout跨应用AI Agent框架、Mayo Clinic健康AI模型等；与AMD、Intel、NVIDIA等联合推出MRC Network Protocol开放标准，用于大规模AI训练可靠性。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-june-3-2026
+① OpenAI 一边发能推理基因组的生物模型，一边赶在同周发布生物防御计划
+OpenAI 同步发布 GPT-Rosalind 增强版本（医学化学分析、基因组分析、实验流程理解）和生物防御行动计划。行业信号：AI 模型能力爆炸式增长迫使防守方也加速部署防御措施。意义在于将生物安全问题从研究层面拉到了产品层面。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-06-openai-sharpens-biology-model-publishes-plan-contain.html
 
-② 谷歌AI Mode突破10亿月活，启动信息agent和预约功能
-Google搜索AI Mode月活跃用户达10亿，环比增长翻倍；推出24/7背景网页监测agent、AI自动致电商家预约功能（今年夏季）、生成式搜索UI等创新，Personal Intelligence功能扩展至98种语言和~200个国家地区。
-🔗 https://blog.google/products-and-platforms/products/search/search-io-2026
+② Anthropic 与 SpaceX 达成算力合作，获得 300+ MW 算力和 22 万张 GPU
+Anthropic 从 SpaceX Colossus 数据中心获得 300+ 兆瓦（22 万+ NVIDIA GPU）。同时双倍提升 Claude Code 使用限额，Pro/Max 用户峰值不再限流。这笔交易反映出：(1) Anthropic 正式跃升为与 OpenAI/Google 同级的基础设施玩家；(2) 计算力正在成为 AI 竞争的首要瓶颈，而非算法。
+🔗 https://www.anthropic.com/news/higher-limits-spacex
 
-③ Anthropic秘密IPO申报，估值超越OpenAI
-Anthropic于6月1日秘密申报IPO，当前估值达900亿美元+，已超过OpenAI的730亿美元；年化收入超47亿美元，成为增速最快的AI企业独角兽候选，IPO预计年内完成。
-🔗 https://www.nytimes.com/2026/06/01/technology/anthropic-ipo.html
+③ Anthropic 向 SEC 秘密提交 S-1 IPO 招股书
+Anthropic 在 6 月 1 日向美国 SEC 提交保密版 S-1 招股书，启动首次公开募股程序。意义：2026 年正式成为 AI 公司 IPO 元年，Anthropic 作为第一梯队代表入场。
+🔗 https://decodethefuture.org/en/anthropic-s1-ipo-filing-explained
 
-• 特朗普签署AI创新安全令，推行30天自愿审查机制 — 🔗 https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security
-• 美国政府AI监管扩展，与Google、Microsoft、xAI新签协议 — 🔗 https://www.cnbc.com/2026/05/05/ai-oversight-trump-google-microsoft-xai.html
-• Mistral AI投入€4B建设欧洲数据中心，对标AI主权战略 — 🔗 https://www.youtube.com/watch?v=325gGv0eWV8
+• Meta 发布开源感知语言模型 (PLM) 用于高级视觉推理任务
+🔗 https://www.linkedin.com/posts/daily5minnews_newsupdate-dailynews-currentevents-activity-7326036064278564864-Kv9d
+
+• 白宫发布 NSPM-11 总统备忘录，推进 AI 创新与安全议程，重点支持美国 AI 基础设施和教育计划
+🔗 https://www.whitehouse.gov/presidential-actions/2026/06/
+
+• xAI 与 Mistral 和 Cursor 探讨战略合作，计划与 OpenAI/Anthropic 在 AI 编码领域竞争
+🔗 https://custommapposter.com/article/elon-musk-s-xai-partnering-with-cursor-and-mistral-to-challenge-ai-giants/13380
 
 📚 论文速报
-（AI前沿研究，来自arxiv）
 
-① Context Masking in Search Agents：陈旧观测删除在检索agent中遵循倒U曲线，强检索+中等规模模型最高收益
-🔗 https://arxiv.org/abs/2606.00408
+① NVIDIA Cosmos 3：跨模态混合专家模型，统一处理语言、图像、视频、音频和动作
+Cosmos 3 是首个单一混合-Transformer 模型，在文本到图像、图像到视频、机器人策略生成中达到最佳开源模型水平。突破了模态孤立架构的限制。
+🔗 https://arxiv.org/abs/2606.00651
 
-② Harness-1状态外部化：将证据链接和验证记录从策略网络移至环境，20B子agent精准率+11.4分
-🔗 https://arxiv.org/abs/2606.02373
+② KVarN：方差归一化解决长解码中 KV 缓存量化的累积误差问题
+通过跨时间步的 token 尺度异常值归一化，实现无需校准的 2-bit KV 量化 SOTA，已在 vLLM 中实现。解决了 inference 效率的核心瓶颈。
+🔗 https://arxiv.org/abs/2606.00828
 
-③ OpenWebRL：4B参数网页Agent仅用400条初始轨迹即实现与闭源模型相当的性能，全部代码和模型开源
-🔗 https://arxiv.org/abs/2605.13245
+③ "语言模型需要睡眠"：通过蒸馏和合成数据自演习将上下文信息写回权重
+机制包含知识回写和遗忘避免双重约束。为长期记忆问题提供了新的思路方向。
+🔗 https://arxiv.org/abs/2606.02437
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-·-2026-06-05-376941f9-8904-8191-8962-e9b3660e1baf
+📓 Notion: https://www.notion.so/AI-Builders-Digest-20260606-377941f9-8904-81b6-88c7-f2a1a2d4c462
 🌐 https://xiaochengzi2048.github.io/digest.txt
