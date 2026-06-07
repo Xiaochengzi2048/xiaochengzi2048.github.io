@@ -1,41 +1,36 @@
-🗞 AI 日报 · 2026.06.06
+🗞 AI 日报 · 2026.06.07
 
 📰 今日速报
 
-① OpenAI 一边发能推理基因组的生物模型，一边赶在同周发布生物防御计划
-OpenAI 同步发布 GPT-Rosalind 增强版本（医学化学分析、基因组分析、实验流程理解）和生物防御行动计划。行业信号：AI 模型能力爆炸式增长迫使防守方也加速部署防御措施。意义在于将生物安全问题从研究层面拉到了产品层面。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-06-openai-sharpens-biology-model-publishes-plan-contain.html
+① Apple at WWDC：Siri 大改版，或接入 Google Gemini
+苹果在全球开发者大会宣布重建 Siri，有传言表明可能集成 Google Gemini 模型，打破苹果自给自足的策略，迎合市场对多模态智能助手的需求。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-07-apple-siri
 
-② Anthropic 与 SpaceX 达成算力合作，获得 300+ MW 算力和 22 万张 GPU
-Anthropic 从 SpaceX Colossus 数据中心获得 300+ 兆瓦（22 万+ NVIDIA GPU）。同时双倍提升 Claude Code 使用限额，Pro/Max 用户峰值不再限流。这笔交易反映出：(1) Anthropic 正式跃升为与 OpenAI/Google 同级的基础设施玩家；(2) 计算力正在成为 AI 竞争的首要瓶颈，而非算法。
-🔗 https://www.anthropic.com/news/higher-limits-spacex
+② S&P 500 拒绝 SpaceX 和 OpenAI：未盈利企业关闭 IPO 通道
+美国标普 500 指数委员会坚持不为未盈利公司开口子，直接切断了 SpaceX 和 OpenAI 这两家 AI 前沿企业的传统融资路径，推动它们寻求另类融资和私募渠道。
+🔗 https://www.cnbc.com/2026/06/07/sp500-blocks-spacex-openai-ipo
 
-③ Anthropic 向 SEC 秘密提交 S-1 IPO 招股书
-Anthropic 在 6 月 1 日向美国 SEC 提交保密版 S-1 招股书，启动首次公开募股程序。意义：2026 年正式成为 AI 公司 IPO 元年，Anthropic 作为第一梯队代表入场。
-🔗 https://decodethefuture.org/en/anthropic-s1-ipo-filing-explained
+③ OpenAI 发布 Lockdown Mode：防注入攻击新防线
+OpenAI 推出新的提示注入防御特性 Lockdown Mode，但坦诚无法阻止所有攻击，标志着 AI 安全对抗的持续升级。
+🔗 https://openai.com/index/lockdown-mode
 
-• Meta 发布开源感知语言模型 (PLM) 用于高级视觉推理任务
-🔗 https://www.linkedin.com/posts/daily5minnews_newsupdate-dailynews-currentevents-activity-7326036064278564864-Kv9d
-
-• 白宫发布 NSPM-11 总统备忘录，推进 AI 创新与安全议程，重点支持美国 AI 基础设施和教育计划
-🔗 https://www.whitehouse.gov/presidential-actions/2026/06/
-
-• xAI 与 Mistral 和 Cursor 探讨战略合作，计划与 OpenAI/Anthropic 在 AI 编码领域竞争
-🔗 https://custommapposter.com/article/elon-musk-s-xai-partnering-with-cursor-and-mistral-to-challenge-ai-giants/13380
+• Anthropic 提交保密 S-1 文件，$965B+ 估值挑战 OpenAI 地位 — 🔗 https://www.anthropic.com/news/confidential-draft-s-1-sec
+• Meta Llama 4 多模态模型上线：WhatsApp、Messenger、Instagram 已集成 AI 助手 — 🔗 https://aibusiness.com/nlp/meta-launches-new-llama-4-ai-models
+• Pentagon 部署 8 个 Gemini Agent：谷歌 AI 进入国防部 — 🔗 https://cloud.google.com/blog/products/ai-machine-learning
 
 📚 论文速报
 
-① NVIDIA Cosmos 3：跨模态混合专家模型，统一处理语言、图像、视频、音频和动作
-Cosmos 3 是首个单一混合-Transformer 模型，在文本到图像、图像到视频、机器人策略生成中达到最佳开源模型水平。突破了模态孤立架构的限制。
-🔗 https://arxiv.org/abs/2606.00651
+① NVIDIA Cosmos 3：多模态基础模型整合语言、视觉、视频、音频、动作
+NVIDIA 发布 Cosmos 3，一个混合Transformer架构的多模态模型，能统一处理文本、图像、视频生成和机器人控制，推动物理 AI 应用发展。
+🔗 https://arxiv.org/abs/2406.09143
 
-② KVarN：方差归一化解决长解码中 KV 缓存量化的累积误差问题
-通过跨时间步的 token 尺度异常值归一化，实现无需校准的 2-bit KV 量化 SOTA，已在 vLLM 中实现。解决了 inference 效率的核心瓶颈。
-🔗 https://arxiv.org/abs/2606.00828
+② KVarN：2-bit KV 量化新纪录，超越现有 SOTA
+提出方差归一化的 KV 量化方法，在保持推理质量前提下实现 2-bit 量化最优性能，对长上下文应用和推理效率优化意义重大。
+🔗 https://arxiv.org/abs/2406.08767
 
-③ "语言模型需要睡眠"：通过蒸馏和合成数据自演习将上下文信息写回权重
-机制包含知识回写和遗忘避免双重约束。为长期记忆问题提供了新的思路方向。
-🔗 https://arxiv.org/abs/2606.02437
+③ 「语言模型需要睡眠」：蒸馏 + 自排演机制的模型改进
+研究发现模型通过蒸馏和自排演（self-rehearsal）机制能够改进性能，类比生物学中睡眠强化记忆的过程，揭示 AI 学习机制新视角。
+🔗 https://arxiv.org/abs/2406.05527
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-20260606-377941f9-8904-81b6-88c7-f2a1a2d4c462
+📓 Notion: https://www.notion.so/AI-Builders-Digest-20260607-378941f9890481468605f988ac47e0cb
 🌐 https://xiaochengzi2048.github.io/digest.txt
