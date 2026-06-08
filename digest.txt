@@ -1,36 +1,41 @@
-🗞 AI 日报 · 2026.06.07
+🗞 AI 日报 · 2026.06.08
 
 📰 今日速报
 
-① Apple at WWDC：Siri 大改版，或接入 Google Gemini
-苹果在全球开发者大会宣布重建 Siri，有传言表明可能集成 Google Gemini 模型，打破苹果自给自足的策略，迎合市场对多模态智能助手的需求。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-07-apple-siri
+① 苹果WWDC发布Gemini驱动的Siri 2.0，多AI供应商支持
+苹果在WWDC宣布重新设计Siri，采用定制的1.2万亿参数Google Gemini模型，年度费用10亿美元。新系统支持用户在ChatGPT、Gemini（默认）、Claude之间选择，终结OpenAI在iPhone上的独家地位，建立Apple作为中立AI平台的地位。
+🔗 https://www.buildfastwithai.com/blogs/ai-news-today-june-7-2026
 
-② S&P 500 拒绝 SpaceX 和 OpenAI：未盈利企业关闭 IPO 通道
-美国标普 500 指数委员会坚持不为未盈利公司开口子，直接切断了 SpaceX 和 OpenAI 这两家 AI 前沿企业的传统融资路径，推动它们寻求另类融资和私募渠道。
-🔗 https://www.cnbc.com/2026/06/07/sp500-blocks-spacex-openai-ipo
+② OpenAI发布GPT-Rosalind生命科学AI模型
+OpenAI于6月4日发布针对药物发现和生命科学领域的GPT-Rosalind，整合GPT-5.5智能体能力与药物化学、基因组学、蛋白质组学和空间分析领域知识，重点面向制药行业合作。
+🔗 https://www.buildfastwithai.com/blogs/ai-news-today-june-7-2026
 
-③ OpenAI 发布 Lockdown Mode：防注入攻击新防线
-OpenAI 推出新的提示注入防御特性 Lockdown Mode，但坦诚无法阻止所有攻击，标志着 AI 安全对抗的持续升级。
-🔗 https://openai.com/index/lockdown-mode
+③ xAI获得联邦政府合同，推出Grok Build编码智能体
+xAI与美国GSA签署18个月联邦政府合同（至2027年3月），价格为每机构0.42美元。同时推出Grok Build终端编码智能体（测试版），支持ACP协议、并行子智能体、无头模式，兼容MCP服务器与Claude。
+🔗 https://www.buildfastwithai.com/blogs/ai-news-today-june-7-2026
 
-• Anthropic 提交保密 S-1 文件，$965B+ 估值挑战 OpenAI 地位 — 🔗 https://www.anthropic.com/news/confidential-draft-s-1-sec
-• Meta Llama 4 多模态模型上线：WhatsApp、Messenger、Instagram 已集成 AI 助手 — 🔗 https://aibusiness.com/nlp/meta-launches-new-llama-4-ai-models
-• Pentagon 部署 8 个 Gemini Agent：谷歌 AI 进入国防部 — 🔗 https://cloud.google.com/blog/products/ai-machine-learning
+快讯摘要
+• Anthropic发布Claude Opus 4.8，增强不确定性标记和动态效能级别能力 — 🔗 https://www.anthropic.com/news
+• Microsoft Build 2026发布七个专有MAI模型系列，宣布策略性减少对OpenAI依赖 — 🔗 https://www.buildfastwithai.com/blogs/ai-news-today-june-7-2026
+• Google I/O宣布Gemini 3.5 Flash成为默认模型，新Gemini Omni支持多模态视频生成 — 🔗 https://www.bostonherald.com/2026/05/19/google-ai-showcase
+• Anthropic秘密提交S-1招股书，IPO估值约1万亿美元，抢先OpenAI上市 — 🔗 https://www.anthropic.com/news
+• 特朗普政府与Bernie Sanders提议美国政府对OpenAI、Anthropic、xAI等AI公司取得股权 — 🔗 https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security
 
 📚 论文速报
 
-① NVIDIA Cosmos 3：多模态基础模型整合语言、视觉、视频、音频、动作
-NVIDIA 发布 Cosmos 3，一个混合Transformer架构的多模态模型，能统一处理文本、图像、视频生成和机器人控制，推动物理 AI 应用发展。
-🔗 https://arxiv.org/abs/2406.09143
+① StreamMA：流式多智能体协作改进推理性能
+新型流式多智能体手中交接系统在推理基准上提升约7.3分，在HMMT 2026竞赛上提升22.4分，为长链推理任务带来显著性能提升。
 
-② KVarN：2-bit KV 量化新纪录，超越现有 SOTA
-提出方差归一化的 KV 量化方法，在保持推理质量前提下实现 2-bit 量化最优性能，对长上下文应用和推理效率优化意义重大。
-🔗 https://arxiv.org/abs/2406.08767
+② ZipSplat：高效3D高斯表示方法
+实现了高效3D高斯表示，使用token基础放置，相比基线方法仅需约1/6高斯数量即可达到可比质量，无需相机姿态。
+🔗 https://arxiv.org/
 
-③ 「语言模型需要睡眠」：蒸馏 + 自排演机制的模型改进
-研究发现模型通过蒸馏和自排演（self-rehearsal）机制能够改进性能，类比生物学中睡眠强化记忆的过程，揭示 AI 学习机制新视角。
-🔗 https://arxiv.org/abs/2406.05527
+③ MapAgent：生产级地图智能体
+百度地图部署的生产级智能体框架，覆盖360+城市，将地图规范和交通法规作为显式推理约束，已在生产环境验证。
+🔗 https://arxiv.org/
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-20260607-378941f9890481468605f988ac47e0cb
+④ CHERRL：可重现的奖励黑客检测
+将已知偏差注入强化学习环境，使奖励黑客在基于规则的RL系统中可重现且可检测。
+
+📓 Notion: https://www.notion.so/AI-Builders-Digest-379941f9-8904-81db-aff4-c78cd0a627b9
 🌐 https://xiaochengzi2048.github.io/digest.txt
