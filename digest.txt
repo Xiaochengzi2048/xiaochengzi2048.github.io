@@ -1,41 +1,34 @@
-🗞 AI 日报 · 2026.06.08
+🗞 AI 日报 · 2026.06.09
 
 📰 今日速报
+（来自 ai-digest.liziran.com）
 
-① 苹果WWDC发布Gemini驱动的Siri 2.0，多AI供应商支持
-苹果在WWDC宣布重新设计Siri，采用定制的1.2万亿参数Google Gemini模型，年度费用10亿美元。新系统支持用户在ChatGPT、Gemini（默认）、Claude之间选择，终结OpenAI在iPhone上的独家地位，建立Apple作为中立AI平台的地位。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-june-7-2026
+① ChatGPT 剧变：OpenAI 内部宣布"Chat已死"，计划将 ChatGPT 从免费聊天界面转变为高端产品入口。同时发布 Dreaming V3 记忆系统，实现自动后台合成，计算效率提升 5 倍。
 
-② OpenAI发布GPT-Rosalind生命科学AI模型
-OpenAI于6月4日发布针对药物发现和生命科学领域的GPT-Rosalind，整合GPT-5.5智能体能力与药物化学、基因组学、蛋白质组学和空间分析领域知识，重点面向制药行业合作。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-june-7-2026
+② 苹果与谷歌深度合作：iPhone 、iPad、Mac 新 AI 功能建基于谷歌 Gemini 技术。苹果虽标榜隐私与自主芯片，但底层依赖谷歌模型，显示科技巨头 AI 能力竞争激化。
 
-③ xAI获得联邦政府合同，推出Grok Build编码智能体
-xAI与美国GSA签署18个月联邦政府合同（至2027年3月），价格为每机构0.42美元。同时推出Grok Build终端编码智能体（测试版），支持ACP协议、并行子智能体、无头模式，兼容MCP服务器与Claude。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-june-7-2026
+③ Anthropic IPO 之路：以 9650 亿美元估值秘密提交 S-1 招股书，月均收入运行率达 470 亿美元（5 倍同比增长）。SpaceX 签下 15 个月 125 亿美元算力合约，成最大单一客户。
 
-快讯摘要
-• Anthropic发布Claude Opus 4.8，增强不确定性标记和动态效能级别能力 — 🔗 https://www.anthropic.com/news
-• Microsoft Build 2026发布七个专有MAI模型系列，宣布策略性减少对OpenAI依赖 — 🔗 https://www.buildfastwithai.com/blogs/ai-news-today-june-7-2026
-• Google I/O宣布Gemini 3.5 Flash成为默认模型，新Gemini Omni支持多模态视频生成 — 🔗 https://www.bostonherald.com/2026/05/19/google-ai-showcase
-• Anthropic秘密提交S-1招股书，IPO估值约1万亿美元，抢先OpenAI上市 — 🔗 https://www.anthropic.com/news
-• 特朗普政府与Bernie Sanders提议美国政府对OpenAI、Anthropic、xAI等AI公司取得股权 — 🔗 https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security
+• 谷歌推出 Lyria 3 音乐生成 API 全球开放，支持 Pro 版 3 分钟完整歌曲生成，含 SynthID 数字水印版权保护 — 🔗 https://ai-digest.liziran.com/zh/
+• OpenAI 发布行业首例安全漏洞赏金计划、模型规范文档、开源青少年保护工具三项安全举措 — 🔗 https://openai.com/news/
+• DeepSeek V4 Pro 新一代推理模型发布，竞争国内 AI 市场 — 🔗 https://www.deepseek.com/
+• NVIDIA 与 LG 宣布战略合作，推进显示屏与 AI 芯片整合 — 🔗 https://www.nvidia.com/
+• Meta 宣布移除老旧面部识别系统，改善用户隐私保护 — 🔗 https://www.meta.com/
 
 📚 论文速报
+（来自 ai-brief.liziran.com）
 
-① StreamMA：流式多智能体协作改进推理性能
-新型流式多智能体手中交接系统在推理基准上提升约7.3分，在HMMT 2026竞赛上提升22.4分，为长链推理任务带来显著性能提升。
+① dots.tts（字节跳动）：新一代 TTS 模型首包延迟仅 54 毫秒，中英文识别率达行业开源 SOTA，支持流式输出
+🔗 arxiv 2606.07080
 
-② ZipSplat：高效3D高斯表示方法
-实现了高效3D高斯表示，使用token基础放置，相比基线方法仅需约1/6高斯数量即可达到可比质量，无需相机姿态。
-🔗 https://arxiv.org/
+② Socratic-SWE（智谱）：自进化编程 Agent，通过执行轨迹挖掘可复用技能，SWE-bench 达成 50.4% 通过率
+🔗 arxiv 2606.07412
 
-③ MapAgent：生产级地图智能体
-百度地图部署的生产级智能体框架，覆盖360+城市，将地图规范和交通法规作为显式推理约束，已在生产环境验证。
-🔗 https://arxiv.org/
+③ StreamMA：多智能体流式协作，推理深度自适应问题难度，数学基准 HMMT 2026 提升 22.4 分
+🔗 arxiv 2606.05158
 
-④ CHERRL：可重现的奖励黑客检测
-将已知偏差注入强化学习环境，使奖励黑客在基于规则的RL系统中可重现且可检测。
+④ ZipSplat（北京大学）：高效 3D 高斯溅射，参数量仅需传统方法 1/6，PSNR 提升 2.1dB
+🔗 arxiv 2606.05102
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-379941f9-8904-81db-aff4-c78cd0a627b9
+📓 Notion: https://www.notion.so/AI-Builders-Digest-20260609-37a941f9-8904-81aa-943d-c79565cb7d28
 🌐 https://xiaochengzi2048.github.io/digest.txt
