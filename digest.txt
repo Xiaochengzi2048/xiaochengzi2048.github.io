@@ -1,34 +1,43 @@
-🗞 AI 日报 · 2026.06.09
+🗞 AI 日报 · 2026.06.10
 
 📰 今日速报
 （来自 ai-digest.liziran.com）
 
-① ChatGPT 剧变：OpenAI 内部宣布"Chat已死"，计划将 ChatGPT 从免费聊天界面转变为高端产品入口。同时发布 Dreaming V3 记忆系统，实现自动后台合成，计算效率提升 5 倍。
+① 法庭踢出两位用AI代笔的律师，Anthropic发布Claude Fable 5
+两位律师在法庭上双双提交AI生成的法律文件，其中包含虚构的判例和不存在的先例。法官随即驳回案件并将两人赶出法庭。这起案件突出了AI工具在法律领域使用中的严重风险——AI生成内容的虚构化趋势正在从文本扩展到专业工作流程。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-10-amazon-engineers-mock-their-ai-coder-sloppenheimer-judge.html
 
-② 苹果与谷歌深度合作：iPhone 、iPad、Mac 新 AI 功能建基于谷歌 Gemini 技术。苹果虽标榜隐私与自主芯片，但底层依赖谷歌模型，显示科技巨头 AI 能力竞争激化。
+② Amazon工程师嘲笑自家AI编码工具"Sloppenheimer"，与市场营销存严重脱节
+OpenAI推广Codex声称可解决复杂编程问题，但Amazon内部工程师在Slack频道讽刺自家AI编码工具的能力不足。开发者发现这些AI代码助手在边界条件下容易出错，逐行审查成本吃掉了省下的时间，暴露了营销声称与实际开发体验的巨大鸿沟。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-10-amazon-engineers-mock-their-ai-coder-sloppenheimer-judge.html
 
-③ Anthropic IPO 之路：以 9650 亿美元估值秘密提交 S-1 招股书，月均收入运行率达 470 亿美元（5 倍同比增长）。SpaceX 签下 15 个月 125 亿美元算力合约，成最大单一客户。
+③ Apple开放云AI接口费用豁免，小型开发者免费享用Apple Intelligence
+Apple宣布为首次下载量不超过200万的开发者免费提供云AI接口服务。此举优先考虑生态锁定而非API收入，体现了大科技公司在AI商业化初期的策略选择——以免费换用户，建立依赖。
+🔗 https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more
 
-• 谷歌推出 Lyria 3 音乐生成 API 全球开放，支持 Pro 版 3 分钟完整歌曲生成，含 SynthID 数字水印版权保护 — 🔗 https://ai-digest.liziran.com/zh/
-• OpenAI 发布行业首例安全漏洞赏金计划、模型规范文档、开源青少年保护工具三项安全举措 — 🔗 https://openai.com/news/
-• DeepSeek V4 Pro 新一代推理模型发布，竞争国内 AI 市场 — 🔗 https://www.deepseek.com/
-• NVIDIA 与 LG 宣布战略合作，推进显示屏与 AI 芯片整合 — 🔗 https://www.nvidia.com/
-• Meta 宣布移除老旧面部识别系统，改善用户隐私保护 — 🔗 https://www.meta.com/
+• OpenAI与Anthropic同步IPO进程；OpenAI估值$852B，Anthropic$900B
+• iPhone 17 Pro支持400B参数本地LLM，全程无需云端
+• xAI与Gopuff推出Go代理，用Grok驱动实时购物助手
+• Claude Fable 5发布，性能领先；Lovable营收达$700万
 
 📚 论文速报
 （来自 ai-brief.liziran.com）
 
-① dots.tts（字节跳动）：新一代 TTS 模型首包延迟仅 54 毫秒，中英文识别率达行业开源 SOTA，支持流式输出
-🔗 arxiv 2606.07080
+① dots.tts：开源连续隐空间文本转语音模型，首包延迟54ms
+2B连续自回归语音模型，Apache 2.0开源。中文识别准确率0.94%（普通话）、6.60%（复杂口音），英文1.30%。采用多目标AudioVAE损失、全历史流匹配抵消漂移、CFG感知MeanFlow蒸馏三项创新，实现业界最低端到端延迟。
+🔗 https://arxiv.org/abs/2606.07080v1
 
-② Socratic-SWE（智谱）：自进化编程 Agent，通过执行轨迹挖掘可复用技能，SWE-bench 达成 50.4% 通过率
-🔗 arxiv 2606.07412
+② Socratic-SWE：自进化编码代理，SWE-bench通过率50.40%
+从代理执行轨迹挖掘→蒸馏可复用技能→生成针对性修复任务，形成三层反馈循环。双层过滤器：执行验证+求解器梯度对齐奖励，实现自我优化的软件工程Agent。
+🔗 https://arxiv.org/abs/2606.07412v1
 
-③ StreamMA：多智能体流式协作，推理深度自适应问题难度，数学基准 HMMT 2026 提升 22.4 分
-🔗 arxiv 2606.05158
+③ StreamMA：流式多代理推理，数学基准+7.3分提升
+首次给出流式vs串行vs单体协议的闭形式分析。关键洞察：早期推理步骤可靠性高于后期。步骤级缩放律证明：为每个代理增加推理步骤既提升质量又改善效率，在HMMT 2026上提升+22.4分。
+🔗 https://arxiv.org/abs/2606.05158
 
-④ ZipSplat（北京大学）：高效 3D 高斯溅射，参数量仅需传统方法 1/6，PSNR 提升 2.1dB
-🔗 arxiv 2606.05102
+④ Cosmos 3（NVIDIA）：单一混合Transformer处理全模态
+语言+图像+视频+音频+动作统一架构，被Artificial Analysis评为最佳开源文图生成、图视转换及RoboArena机器人策略模型。OpenMDW许可开源，附代码权重及合成数据集。
+🔗 https://arxiv.org/abs/2606.02800
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-20260609-37a941f9-8904-81aa-943d-c79565cb7d28
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-06-10-37b941f98904812299e1c4f8da521f77
 🌐 https://xiaochengzi2048.github.io/digest.txt
