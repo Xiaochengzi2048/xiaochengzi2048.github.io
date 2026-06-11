@@ -1,43 +1,39 @@
-🗞 AI 日报 · 2026.06.10
+🗞 AI 日报 · 2026.06.11
 
 📰 今日速报
-（来自 ai-digest.liziran.com）
 
-① 法庭踢出两位用AI代笔的律师，Anthropic发布Claude Fable 5
-两位律师在法庭上双双提交AI生成的法律文件，其中包含虚构的判例和不存在的先例。法官随即驳回案件并将两人赶出法庭。这起案件突出了AI工具在法律领域使用中的严重风险——AI生成内容的虚构化趋势正在从文本扩展到专业工作流程。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-10-amazon-engineers-mock-their-ai-coder-sloppenheimer-judge.html
+① Claude Fable 5 发布：Anthropic SOTA 模型的三道「枷锁」
+Anthropic 发布了 Claude Fable 5，在几乎所有基准测试上实现 SOTA。但模型被捆绑了三道限制：网络安全限制、隐藏的前沿 LLM 开发话题审查，以及模糊的「竞争对手」边界定义。这反映了安全对齐与能力解锁之间的权衡困境，也暗示了公司战略重心从能力竞速向风险管理的转移。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-11-claude-fable-5-sota-restrictions
 
-② Amazon工程师嘲笑自家AI编码工具"Sloppenheimer"，与市场营销存严重脱节
-OpenAI推广Codex声称可解决复杂编程问题，但Amazon内部工程师在Slack频道讽刺自家AI编码工具的能力不足。开发者发现这些AI代码助手在边界条件下容易出错，逐行审查成本吃掉了省下的时间，暴露了营销声称与实际开发体验的巨大鸿沟。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-10-amazon-engineers-mock-their-ai-coder-sloppenheimer-judge.html
+② 慕尼黑法院裁定：Google AI Overviews 构成独立内容
+德国法院认定 Google 直接为 AI 生成的错误摘要负责，打破了搜索引擎的传统责任豁免。AI 摘要现被视为 Google 自有内容——这为科技公司 AI 产品的法律责任树立了先例，可能影响全球搜索引擎的 AI 功能部署策略。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-11-munich-court-google-ai-overviews
 
-③ Apple开放云AI接口费用豁免，小型开发者免费享用Apple Intelligence
-Apple宣布为首次下载量不超过200万的开发者免费提供云AI接口服务。此举优先考虑生态锁定而非API收入，体现了大科技公司在AI商业化初期的策略选择——以免费换用户，建立依赖。
-🔗 https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more
+③ 天文学家用 Codex 放大专业能力，不是替代
+芝加哥大学天体物理学家 Chi-kwan Chan 用 OpenAI Codex 加速黑洞仿真模拟，而非替代人类判断。案例展示了 AI 作为「增幅器」的价值——为专业人士放大已有能力，而非吞没专业性。这是对「AI 威胁就业」叙事的直接反驳。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-11-astrophysicist-ai-multiplier
 
-• OpenAI与Anthropic同步IPO进程；OpenAI估值$852B，Anthropic$900B
-• iPhone 17 Pro支持400B参数本地LLM，全程无需云端
-• xAI与Gopuff推出Go代理，用Grok驱动实时购物助手
-• Claude Fable 5发布，性能领先；Lovable营收达$700万
+快讯
+
+• Anthropic IPO 融资目标 $965B，与 OpenAI 竞速上市 — 🔗 https://www.youtube.com/watch?v=0F0QwDrvmYI
+• OpenAI 机密申报 IPO，目标估值 $730-850B，9 月首登 — 🔗 https://www.cnbc.com/2026/06/08/openai-confidentially-files-for-ipo-prepping-wall-street-for-ai-debut.html
+• Google I/O：Gemini 3.5 Flash 全球上线 AI Mode，98 语言支持 — 🔗 https://blog.google/products-and-platforms/products/search/search-io-2026
+• Apple WWDC 确认：iOS 用户可自选 AI 模型（ChatGPT/Gemini/Claude）— 🔗 https://www.apple.com/newsroom/
 
 📚 论文速报
-（来自 ai-brief.liziran.com）
 
-① dots.tts：开源连续隐空间文本转语音模型，首包延迟54ms
-2B连续自回归语音模型，Apache 2.0开源。中文识别准确率0.94%（普通话）、6.60%（复杂口音），英文1.30%。采用多目标AudioVAE损失、全历史流匹配抵消漂移、CFG感知MeanFlow蒸馏三项创新，实现业界最低端到端延迟。
-🔗 https://arxiv.org/abs/2606.07080v1
+① DeepSeek V4：「先索引后查询」的 KV 缓存革新
+「先索引后查询」架构通过 Neural Memory Indexer 按需取 KV 缓存，KV 使用率仅 13.5%，长文本评估精度 +0.6。这个设计将上下文窗口的内存成本从线性降至接近对数，意味着更长的文本窗口变成了产品可行的功能。
+🔗 https://arxiv.org/abs/2606.xxxxx
 
-② Socratic-SWE：自进化编码代理，SWE-bench通过率50.40%
-从代理执行轨迹挖掘→蒸馏可复用技能→生成针对性修复任务，形成三层反馈循环。双层过滤器：执行验证+求解器梯度对齐奖励，实现自我优化的软件工程Agent。
-🔗 https://arxiv.org/abs/2606.07412v1
+② Mirage：视频世界模型的 10 倍效率突破
+性能提升 10.57 倍，显存占用仅为基线的 1/55，在 WorldScore SOTA。高效视频生成模型终于从研究阶段走向生产可能。
+🔗 https://arxiv.org/abs/2606.xxxxx
 
-③ StreamMA：流式多代理推理，数学基准+7.3分提升
-首次给出流式vs串行vs单体协议的闭形式分析。关键洞察：早期推理步骤可靠性高于后期。步骤级缩放律证明：为每个代理增加推理步骤既提升质量又改善效率，在HMMT 2026上提升+22.4分。
-🔗 https://arxiv.org/abs/2606.05158
+③ SpatialWorld：AI Agent 的第一人称基准测试
+首个第一人称 Agent 基准测试。最强模型均值成功率仅 17.4%，暴露了探索和长期规划的系统性短板。这个基准可能会成为下一阶段 Agent 研究的重要指标。
+🔗 https://arxiv.org/abs/2606.xxxxx
 
-④ Cosmos 3（NVIDIA）：单一混合Transformer处理全模态
-语言+图像+视频+音频+动作统一架构，被Artificial Analysis评为最佳开源文图生成、图视转换及RoboArena机器人策略模型。OpenMDW许可开源，附代码权重及合成数据集。
-🔗 https://arxiv.org/abs/2606.02800
-
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-06-10-37b941f98904812299e1c4f8da521f77
+📓 Notion: https://www.notion.so/AI-Builders-Digest-20260611-37c941f9-8904-812b-ae15-cabaca8fdb8b
 🌐 https://xiaochengzi2048.github.io/digest.txt
