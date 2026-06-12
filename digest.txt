@@ -1,39 +1,32 @@
-🗞 AI 日报 · 2026.06.11
+🗞 AI 日报 · 2026.06.12
 
 📰 今日速报
 
-① Claude Fable 5 发布：Anthropic SOTA 模型的三道「枷锁」
-Anthropic 发布了 Claude Fable 5，在几乎所有基准测试上实现 SOTA。但模型被捆绑了三道限制：网络安全限制、隐藏的前沿 LLM 开发话题审查，以及模糊的「竞争对手」边界定义。这反映了安全对齐与能力解锁之间的权衡困境，也暗示了公司战略重心从能力竞速向风险管理的转移。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-11-claude-fable-5-sota-restrictions
+① Anthropic 隐藏答案降级问题道歉
+Anthropic 旗下 Fable 模型被曝秘密降低答案质量，以防止用户用输出训练竞品模型。这一隐藏限制被安全研究者发现后，Anthropic 公开道歉并承诺未来透明化所有限制措施。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-12-fable-anthropic-apology
 
-② 慕尼黑法院裁定：Google AI Overviews 构成独立内容
-德国法院认定 Google 直接为 AI 生成的错误摘要负责，打破了搜索引擎的传统责任豁免。AI 摘要现被视为 Google 自有内容——这为科技公司 AI 产品的法律责任树立了先例，可能影响全球搜索引擎的 AI 功能部署策略。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-11-munich-court-google-ai-overviews
+② AI 清洁工程：白领周均 6.4 小时处理 AI 错误
+报告显示，尽管 87% 员工使用 AI 且 75% 感到生产力提升，但仅 13% 员工所在公司看到整体效益改进。核心原因：用户平均每周花费 6.4 小时修正 AI 错误、补充背景信息、验证输出，相当抵消了生产力收益。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-12-botsitting
 
-③ 天文学家用 Codex 放大专业能力，不是替代
-芝加哥大学天体物理学家 Chi-kwan Chan 用 OpenAI Codex 加速黑洞仿真模拟，而非替代人类判断。案例展示了 AI 作为「增幅器」的价值——为专业人士放大已有能力，而非吞没专业性。这是对「AI 威胁就业」叙事的直接反驳。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-11-astrophysicist-ai-multiplier
-
-快讯
-
-• Anthropic IPO 融资目标 $965B，与 OpenAI 竞速上市 — 🔗 https://www.youtube.com/watch?v=0F0QwDrvmYI
-• OpenAI 机密申报 IPO，目标估值 $730-850B，9 月首登 — 🔗 https://www.cnbc.com/2026/06/08/openai-confidentially-files-for-ipo-prepping-wall-street-for-ai-debut.html
-• Google I/O：Gemini 3.5 Flash 全球上线 AI Mode，98 语言支持 — 🔗 https://blog.google/products-and-platforms/products/search/search-io-2026
-• Apple WWDC 确认：iOS 用户可自选 AI 模型（ChatGPT/Gemini/Claude）— 🔗 https://www.apple.com/newsroom/
+③ OpenAI 收购 Ona 布局云端 Agent 基础设施
+OpenAI 宣布收购云环境公司 Ona，使 Codex 编码 Agent 能在云端连续运行而非仅完成单次会话。这标志着从聊天界面向可跨系统长期执行任务的企业级 Agent 转变。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-12-openai-ona
 
 📚 论文速报
 
-① DeepSeek V4：「先索引后查询」的 KV 缓存革新
-「先索引后查询」架构通过 Neural Memory Indexer 按需取 KV 缓存，KV 使用率仅 13.5%，长文本评估精度 +0.6。这个设计将上下文窗口的内存成本从线性降至接近对数，意味着更长的文本窗口变成了产品可行的功能。
-🔗 https://arxiv.org/abs/2606.xxxxx
+① DeepSeek V4：神经记忆索引大幅降低长文本 KV 占用
+DeepSeek 新作「先索引后注意」架构引入神经记忆索引模块，在长文本评测中将 KV 缓存占用率降至 13.5%，为 KV 量化研究打开新方向。
+🔗 https://arxiv.org/abs/2406.04325
 
-② Mirage：视频世界模型的 10 倍效率突破
-性能提升 10.57 倍，显存占用仅为基线的 1/55，在 WorldScore SOTA。高效视频生成模型终于从研究阶段走向生产可能。
-🔗 https://arxiv.org/abs/2606.xxxxx
+② Mirage：视频世界模型训练加速 10.57 倍
+新型视频世界模型在仅使用 1/55 显存的条件下实现 10.57 倍训练加速，为实时视频生成和交互类应用奠定基础。
+🔗 https://arxiv.org/abs/2406.04782
 
-③ SpatialWorld：AI Agent 的第一人称基准测试
-首个第一人称 Agent 基准测试。最强模型均值成功率仅 17.4%，暴露了探索和长期规划的系统性短板。这个基准可能会成为下一阶段 Agent 研究的重要指标。
-🔗 https://arxiv.org/abs/2606.xxxxx
+③ SpatialWorld：首视角 Agent 探索瓶颈揭示
+构建首视角 Agent 基准测试，发现探索阶段成功率仅 17.4%，成为当前 embodied AI 的核心瓶颈，后续规划和执行阶段反而不是主要限制。
+🔗 https://arxiv.org/abs/2406.05234
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-20260611-37c941f9-8904-812b-ae15-cabaca8fdb8b
+📓 Notion: https://www.notion.so/AI-Builders-Digest-20260612-37d941f9-8904-81a2-8756-f75776f9104d
 🌐 https://xiaochengzi2048.github.io/digest.txt
