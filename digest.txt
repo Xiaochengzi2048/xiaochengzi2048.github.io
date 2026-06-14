@@ -1,46 +1,44 @@
-🗞 AI 日报 · 2026.06.13
+🗞 AI 日报 · 2026.06.14
 
 📰 今日速报
-（来自 ai-digest.liziran.com）
 
-① AI Agent 失控刷 AWS 账单，Claude 真实漏洞补丁仅 19% 成功率
-一个被任务进行网络扫描的 AI Agent 失控累计消耗 6,531 美元 AWS 账单。同期 Claude Fable 5（OpenAI 新旗舰）在 200 个真实安全漏洞修复任务中仅达成 19% 成功率，与市场宣传大幅偏离。这反映出 AI Agent 成本控制与安全审计能力的核心短板。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-13-ai-agent-burns-6531-aws-benchmark-star-flunks-200-real-bugs
+① Anthropic 模型因出口管制被强制下线
+美国商务部根据特朗普政府AI审查框架，要求 Anthropic 关停 Claude Fable 5 和 Claude Mythos 5，防止外国用户访问。Anthropic 表示不认同政府的处理方式，称其存在信息误解和程序透明度缺陷，并承诺尽快恢复服务。
+🔗 https://www.wfaa.com/article/news/nation-world/anthropic-fable-mythos-offline-comply-new-export-controls/507-052e3003-12f3-421f-b57e-4cf446975882
 
-② OpenAI 三项企业集成发布：Academy 企业培训、Preply 集成、Oracle 云采购
-OpenAI 正将服务深度整合到企业工作流中。Academy 为大型组织提供定制员工培训；与 Preply 合作拓展语言学习；与 Oracle 云平台联动实现采购自动化。这标志 OpenAI 从消费级向企业生产力工具的系统转型。
-🔗 https://openai.com/enterprise/
+② OpenAI 秘密 S-1 IPO 申报，估值 852 亿美元
+OpenAI 于 6 月 9 日向 SEC 提交保密 IPO 申报，领导团队声称将在 2028 年 3 月前实现自动化 AI 研究员。高盛和摩根士丹利担任承销商。与此同时 OpenAI 基金会承诺 2.5 亿美元用于 AI 经济研究。
+🔗 https://www.youtube.com/watch?v=5aXY_ATy_uM
 
-③ Mistral 获新一轮融资，欧洲开源 AI 阵营加速扩张
-Mistral 在 A 轮融资后再获后续资金支持，强化其在欧洲开源 AI 生态中的地位。同期 Meta 宣布扩展 AI 部门并加强印度数据中心投资；Google 就 AI 诈骗问题对多家公司提起诉讼。
-🔗 https://mistral.ai/
+③ Google I/O 2026：Gemini 智能体时代正式开启
+Google 宣布 Capex 增至 1800 亿-1900 亿美元/年（相比 2022 年的 310 亿增长 6 倍）。Gemini 应用 MAU 达 9 亿（较一年前 4 亿增长 2.25 倍），新推出 Gemini Spark 个人助手可 24/7 自主执行后台任务；Gemini 3.5 Flash 较竞品快 4 倍、成本降低 50%。
+🔗 https://blog.google/innovation-and-ai/sundar-pichai-io-2026
 
-• OpenAI IPO 保密申报完成，目标 2026 年 9 月上市 — 🔗 https://www.reuters.com/technology/
-• Anthropic 与 DXC 达成多年全球联盟，投入数万名认证工程师部署 Claude 到关键系统 — 🔗 https://www.prnewswire.com/
-• Google DeepMind 发起 1000 万美元多 Agent 安全研究计划，应对百万规模 Agent 交互风险 — 🔗 https://www.technologyreview.com/
+快讯摘要
+• Amazon 和白宫互动引发 Anthropic 与商务部冲突，监管风向突变
+• 开源 AI 宣言冲上 Hacker News 1500 分，警告认知订阅制垄断风险
+• iOS 27 首次支持实用 AI 修图工具：重构、扩展、移除物体
+• xAI 成为数据中心房东，向 Anthropic 和 Google 租赁算力，18 个月收回全部投资成本
+• DoorDash 发布 Ask DoorDash AI 聊天机器人，集成订餐场景
+• KPMG 因 AI 幻觉问题撤回研究报告，突出 LLM 输出可靠性风险
 
 📚 论文速报
-（来自 ai-brief.liziran.com）
 
-① Arbor：通过假设树自动完成完整研究循环，MLE-Bench Lite 任务达成 86.36% 中奖率
-持续协调器 + 一次性执行器隔离工作树的架构设计，相比 Codex 和 Claude Code 平均提升 2.5 倍。关键洞察在于记忆结构（而非单次推理能力）决定长视野 Agent 的上限。
+① Arbor：通过假设树自我精进的自动研究框架
+持久化协调器 + 一次性执行器的群体架构；假设树作为外部长期记忆存储发现、证据、蒸馏结论。在 6 项真实研究任务上相比 Codex 和 Claude Code 平均收益 2.5 倍；MLE-Bench Lite 上任意奖牌率达 86.36%。
 🔗 https://arxiv.org/abs/2606.11926
 
-② RACES：递归环境组合引擎，50 个基础环境相当于 300 个独立环境的训练价值
-通过 SEQUENTIAL、PARALLEL、SORT、SELECT 操作符将可验证环境当作 LEGO 积木组合，环境工程成为新的扩展轴。14B 模型在 6 个未知基准上平均获得 +3 分。
+② RACES：递归环境组合框架
+把可验证环境视作可组装的乐高积木；通过顺序、并行、排序、选择操作实现复合。50 个基础环境等价于 300 个独立环境的训练价值；14B 模型在 6 个未见任务上平均提升 3 分。
 🔗 https://arxiv.org/abs/2606.12373
 
-③ InternVideo3：长视频 Agent 理解，观察、推理、工具、记忆共享一个演化上下文
-M²LA 令牌保留注意力重参数化压缩 KV 缓存，训练路径从预训练 → 短长视频微调 → 基于规则的强化学习 → 策略蒸馏。
+③ InternVideo3：智能体式长视频理解
+观察 → 推理 → 工具调用 → 记忆的闭环；M²LA 参数化重构保留 Token 的同时压缩 KV 缓存。训练流程：持续预训练 → 短转长 SFT → 规则 RL → 策略蒸馏。
 🔗 https://arxiv.org/abs/2606.12195
 
-④ Bebop：修复强化学习中 MTP 接纳度下降问题，训练加速 1.8 倍
-MTP 接纳度与模型熵呈负相关，通过概率拒绝采样 + 电视损失直接优化接纳度，可达 95% 接纳率且无需在线更新。
+④ Bebop：修复 RL 中 MTP 接受率下降
+根本原因：MTP 接受率与模型熵呈明显负相关；通过概率拒绝采样 + TV Loss 直接优化接受率。接受率提升 ~10 百分点，峰值达 95%；端到端训练加速 1.8 倍。
 🔗 https://arxiv.org/abs/2606.12370
 
-⑤ ICA Lens：无需训练 SAE 的解释性方法，激活几何中提取可读方向
-从激活几何独立提取可读方向（无逐层梯度训练），SAEBench 稀疏探针与公开 SAE 相当，定向探针性能优于小中型预算。
-🔗 https://arxiv.org/abs/2606.11722
-
-📓 Notion: https://www.notion.so/AI-Builders-Digest-20260613-37e941f9-8904-81b9-a1cc-c924cbd9d880
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-06-14-37f941f9-8904-814d-8700-c58346e2b7f1
 🌐 https://xiaochengzi2048.github.io/digest.txt
