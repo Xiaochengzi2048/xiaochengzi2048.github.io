@@ -1,44 +1,43 @@
-🗞 AI 日报 · 2026.06.14
+🗞 AI 日报 · 2026.06.15
 
 📰 今日速报
+（来自 ai-digest.liziran.com）
 
-① Anthropic 模型因出口管制被强制下线
-美国商务部根据特朗普政府AI审查框架，要求 Anthropic 关停 Claude Fable 5 和 Claude Mythos 5，防止外国用户访问。Anthropic 表示不认同政府的处理方式，称其存在信息误解和程序透明度缺陷，并承诺尽快恢复服务。
-🔗 https://www.wfaa.com/article/news/nation-world/anthropic-fable-mythos-offline-comply-new-export-controls/507-052e3003-12f3-421f-b57e-4cf446975882
+① 亚马逊 CEO 安全顾虑促 Anthropic 模型下架
+白宫以中国访问风险为由对 Mythos 模型施加出口管制。Anthropic 因此调整战略，面临 IPO 前的监管压力。此举表明大型科技公司与 AI 厂商的安全合作正成为政策焦点。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-15-amazon-ceo-safety
 
-② OpenAI 秘密 S-1 IPO 申报，估值 852 亿美元
-OpenAI 于 6 月 9 日向 SEC 提交保密 IPO 申报，领导团队声称将在 2028 年 3 月前实现自动化 AI 研究员。高盛和摩根士丹利担任承销商。与此同时 OpenAI 基金会承诺 2.5 亿美元用于 AI 经济研究。
-🔗 https://www.youtube.com/watch?v=5aXY_ATy_uM
+② 从 FAANG 到 MANGOS：AI 新格局重塑
+SpaceX、OpenAI、Anthropic、Google、Meta、微软等新生力量重组科技格局。Mistral 估值 €20B，同期融资 €3B；多家 AI 企业争相 IPO 窗口期。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-15-faang-to-mangos
 
-③ Google I/O 2026：Gemini 智能体时代正式开启
-Google 宣布 Capex 增至 1800 亿-1900 亿美元/年（相比 2022 年的 310 亿增长 6 倍）。Gemini 应用 MAU 达 9 亿（较一年前 4 亿增长 2.25 倍），新推出 Gemini Spark 个人助手可 24/7 自主执行后台任务；Gemini 3.5 Flash 较竞品快 4 倍、成本降低 50%。
-🔗 https://blog.google/innovation-and-ai/sundar-pichai-io-2026
+③ Gemini 5 分钟快速应用生成
+Google Gemini 推出实时代码生成功能，应用开发周期大幅压缩。后续成本取决于硬件 vs 云基础设施选择。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-15-gemini-vibecoding
 
-快讯摘要
-• Amazon 和白宫互动引发 Anthropic 与商务部冲突，监管风向突变
-• 开源 AI 宣言冲上 Hacker News 1500 分，警告认知订阅制垄断风险
-• iOS 27 首次支持实用 AI 修图工具：重构、扩展、移除物体
-• xAI 成为数据中心房东，向 Anthropic 和 Google 租赁算力，18 个月收回全部投资成本
-• DoorDash 发布 Ask DoorDash AI 聊天机器人，集成订餐场景
-• KPMG 因 AI 幻觉问题撤回研究报告，突出 LLM 输出可靠性风险
+• Bezos 旗下 Prometheus AI 融资 120 亿美元、估值 410 亿，成全球融资最大
+• Meta 放弃 20 亿美元 Manus 收购，转向内部 AI 硬件研发
+• Google 起诉中国诈骗团伙滥用 Gemini 进行网络攻击
+• Meta 采纳特斯拉策略：帐篷式数据中心助力 5GW Hyperion 集群部署
 
 📚 论文速报
+（来自 ai-brief.liziran.com）
 
-① Arbor：通过假设树自我精进的自动研究框架
-持久化协调器 + 一次性执行器的群体架构；假设树作为外部长期记忆存储发现、证据、蒸馏结论。在 6 项真实研究任务上相比 Codex 和 Claude Code 平均收益 2.5 倍；MLE-Bench Lite 上任意奖牌率达 86.36%。
+① Arbor：自主研究循环突破 2.5 倍性能
+通过假设树（Hypothesis Tree）持续存储假设、产物、证据和蒸馏结论。架构融合持久化协调器与一次性执行器。在 6 项真实研究任务上表现最佳，相比 Codex 和 Claude Code 平均相对收益 2.5 倍；MLE-Bench Lite 达成 86.36% Any Medal（GPT-5.5）。
 🔗 https://arxiv.org/abs/2606.11926
 
-② RACES：递归环境组合框架
-把可验证环境视作可组装的乐高积木；通过顺序、并行、排序、选择操作实现复合。50 个基础环境等价于 300 个独立环境的训练价值；14B 模型在 6 个未见任务上平均提升 3 分。
+② RACES：递归环境组合成为新的扩展轴
+将可验证的环境视作 LEGO 积木，支持 SEQUENTIAL、PARALLEL、SORT、SELECT 操作。50 个基础环境的训练价值等于 300 个独立环境。14B 模型上 6 个未见基准均提升 3 分。
 🔗 https://arxiv.org/abs/2606.12373
 
-③ InternVideo3：智能体式长视频理解
-观察 → 推理 → 工具调用 → 记忆的闭环；M²LA 参数化重构保留 Token 的同时压缩 KV 缓存。训练流程：持续预训练 → 短转长 SFT → 规则 RL → 策略蒸馏。
-🔗 https://arxiv.org/abs/2606.12195
+③ FlowTracer：注意流量图信用分配（ICML）
+建模推理为 DAG；令牌作节点，注意权重作边容量。强制执行局部流守恒；提取信息骨架从问题到答案。
+🔗 https://arxiv.org/abs/2606.10646
 
-④ Bebop：修复 RL 中 MTP 接受率下降
-根本原因：MTP 接受率与模型熵呈明显负相关；通过概率拒绝采样 + TV Loss 直接优化接受率。接受率提升 ~10 百分点，峰值达 95%；端到端训练加速 1.8 倍。
-🔗 https://arxiv.org/abs/2606.12370
+④ Latent Memory：RAG 成本降低 10 倍以内
+将每段多模态证据压缩为单个高维潜在令牌。在 HotpotQA 及 6 个其他基准上匹配主流 RAG；在图像-文本 QA 任务 WebQA 上超越 SOTA。生成侧令牌使用减少 3-10 倍。
+🔗 https://arxiv.org/abs/2606.10572
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-06-14-37f941f9-8904-814d-8700-c58346e2b7f1
+📓 Notion: https://www.notion.so/AI-Builders-Digest-20260615-380941f9-8904-8180-89b7-ec6ed916b2e8
 🌐 https://xiaochengzi2048.github.io/digest.txt
