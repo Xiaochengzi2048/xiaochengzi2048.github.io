@@ -1,43 +1,42 @@
-🗞 AI 日报 · 2026.06.15
+🗞 AI 日报 · 2026.06.17
 
 📰 今日速报
-（来自 ai-digest.liziran.com）
+（来自 ai-digest.liziran.com 及最新行业新闻）
 
-① 亚马逊 CEO 安全顾虑促 Anthropic 模型下架
-白宫以中国访问风险为由对 Mythos 模型施加出口管制。Anthropic 因此调整战略，面临 IPO 前的监管压力。此举表明大型科技公司与 AI 厂商的安全合作正成为政策焦点。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-15-amazon-ceo-safety
+① ChatGPT 市场份额首次跌破 50%
+OpenAI 产品的主导地位出现裂缝，市场正朝多元化方向发展。Gemini 全球月活用户 6.62 亿，Claude 达 2.45 亿，竞争格局已从 ChatGPT 独占转向三足鼎立。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-17-spacex-pours-60-billion-fresh-stock-into-cursor-days-after.html
 
-② 从 FAANG 到 MANGOS：AI 新格局重塑
-SpaceX、OpenAI、Anthropic、Google、Meta、微软等新生力量重组科技格局。Mistral 估值 €20B，同期融资 €3B；多家 AI 企业争相 IPO 窗口期。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-15-faang-to-mangos
+② SpaceX 600 亿美元现股收购 Cursor
+Space X 在 IPO 后首笔大额收购，以全股票方式收购 AI 编程平台 Cursor，对标 OpenAI 在企业开发工具领域的布局。Cursor 年收入已达 26 亿美元，此举强化了 xAI 与 SpaceX 在企业 AI 生态中的地位。
+🔗 https://techstartups.com/2026/06/16/top-tech-news-today-june-16-2026
 
-③ Gemini 5 分钟快速应用生成
-Google Gemini 推出实时代码生成功能，应用开发周期大幅压缩。后续成本取决于硬件 vs 云基础设施选择。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-15-gemini-vibecoding
+③ 硬件升级：从手机到可穿戴设备
+Apple 计划 2027 年底推出内置摄像头的 AirPods，Qualcomm 开发新 AR 芯片推进开放生态。AI 计算密集度从云端向边缘设备转移，芯片形态正从"计算中心"向"感知端点"升级。
+🔗 https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more
 
-• Bezos 旗下 Prometheus AI 融资 120 亿美元、估值 410 亿，成全球融资最大
-• Meta 放弃 20 亿美元 Manus 收购，转向内部 AI 硬件研发
-• Google 起诉中国诈骗团伙滥用 Gemini 进行网络攻击
-• Meta 采纳特斯拉策略：帐篷式数据中心助力 5GW Hyperion 集群部署
+• Anthropic 旗舰模型被政府强制下线——Fable 5 与 Mythos 5 因安全风险遭禁用 — 🔗 https://www.youtube.com/watch?v=gVRlGg8WbXc
+
+• DeepSeek 获 74 亿美元融资，估值突破 500 亿美元，创中国 AI 初创公司融资最高纪录 — 🔗 https://techstartups.com/2026/06/16/top-tech-news-today-june-16-2026
+
+• Salesforce 36 亿美元收购 Fin，强化客服 AI 能力，标志企业 SaaS 向智能体中心制转型 — 🔗 https://techstartups.com/2026/06/16/top-tech-news-today-june-16-2026
+
+• Google 搜索历经 25 年最大改版，引入 AI Agent 功能可自动预订、拨号，Gemini 月活突破 10 亿 — 🔗 https://blog.google/products-and-platforms/products/search/search-io-2026
 
 📚 论文速报
 （来自 ai-brief.liziran.com）
 
-① Arbor：自主研究循环突破 2.5 倍性能
-通过假设树（Hypothesis Tree）持续存储假设、产物、证据和蒸馏结论。架构融合持久化协调器与一次性执行器。在 6 项真实研究任务上表现最佳，相比 Codex 和 Claude Code 平均相对收益 2.5 倍；MLE-Bench Lite 达成 86.36% Any Medal（GPT-5.5）。
-🔗 https://arxiv.org/abs/2606.11926
+① Agent 记忆架构突破：遗忘失败根源是设计位置而非提示词
+MIT 研究团队测试 13 种配置与 385 个对抗案例，发现只有"变异时挂钩"（mutation-time hook）才能达到 91.7%-93.2% 准确度。ForgetEval 评估框架已开源，预示生产级 Agent 需要重新审视内存管理架构。
+🔗 https://arxiv.org/abs/2606.15903
 
-② RACES：递归环境组合成为新的扩展轴
-将可验证的环境视作 LEGO 积木，支持 SEQUENTIAL、PARALLEL、SORT、SELECT 操作。50 个基础环境的训练价值等于 300 个独立环境。14B 模型上 6 个未见基准均提升 3 分。
-🔗 https://arxiv.org/abs/2606.12373
+② 诚实性在模型系谱中继承不变
+下游模型变体（包括多模态转换）从基础模型继承的诚实注意力头保持稳定，"头部诚实度评分"在 Vicuna、Qwen2.5、LLaMA2 等家族中一致。TruthProbe 方法可将幻觉削减 40% 以上。
+🔗 https://arxiv.org/abs/2606.15821
 
-③ FlowTracer：注意流量图信用分配（ICML）
-建模推理为 DAG；令牌作节点，注意权重作边容量。强制执行局部流守恒；提取信息骨架从问题到答案。
-🔗 https://arxiv.org/abs/2606.10646
+③ 多模态图像取证的深层表示路径
+多模态大模型的语义理解集中在中间层，取证信号微调易损伤表示质量。Deep-VRM 通过中间层残差路径注入取证信号，在多个基准上达 SOTA。
+🔗 https://arxiv.org/abs/2606.15880
 
-④ Latent Memory：RAG 成本降低 10 倍以内
-将每段多模态证据压缩为单个高维潜在令牌。在 HotpotQA 及 6 个其他基准上匹配主流 RAG；在图像-文本 QA 任务 WebQA 上超越 SOTA。生成侧令牌使用减少 3-10 倍。
-🔗 https://arxiv.org/abs/2606.10572
-
-📓 Notion: https://www.notion.so/AI-Builders-Digest-20260615-380941f9-8904-8180-89b7-ec6ed916b2e8
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-06-17-382941f9-8904-8138-95e7-fc679629dcf7
 🌐 https://xiaochengzi2048.github.io/digest.txt
