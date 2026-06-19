@@ -1,36 +1,38 @@
-🗞 AI 日报 · 2026.06.18
+🗞 AI 日报 · 2026.06.19
 
 📰 今日速报
 
-① OpenAI 2025 年亏损 3853 亿美元
-经审计账簿显示 OpenAI 去年净亏损高达 3853 亿美元，调整少数股东权益前总亏损为 6035 亿美元。上市前夕，公司仍处于严重亏损状态，揭示了行业商业模式的根本挑战。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-18-leaked-audited-books-show-openai-lost-385-billion-2025.html
+① 白宫对 Anthropic 实施出口管制，Mythos 5 和 Fable 5 暂停全球部署
+在 SK Telecom 因中国关联被列黑名单后，白宫进一步对 Anthropic 最先进的两个模型实施出口禁令。Amazon 研究人员发现 Fable 5 的越狱漏洞后，政府要求 Anthropic 消除所有安全隐患（技术专家认为这是不可能的）。与此同时，Anthropic 在首尔办公室于 6 月 17-18 日启动，标志着在韩国企业市场的重大扩张——NAVER、Nexon、Samsung SDS 等已开始 Claude Code 部署。
+🔗 https://www.buildfastwithai.com/blogs/ai-news-today-june-19-2026
 
-② Google Deep Research Max：自主 AI 研究助手
-DeepMind 发布全新 AI Agent，可在你睡觉时自主运行 160+ 次搜索并生成综合研究报告，标志着 agentic AI 在知识工作自动化的重大进步。
-🔗 https://www.edtechinnovationhub.com/news/googles-new-ai-agent-will-run-160-searches-while-you-sleep-and-hand-you-the-report-by-morning
+② Pentagon 已向 150 万用户部署 AI，研究称高级威胁模型「无法阻止」
+美国防部在 AI 安全问题未解决前已大规模应用。即使安全专家证明无法完全堵住高级对手的攻击，五角大楼已转向实时监控策略而非预防性部署冻结。
+🔗 https://www.latimes.com/business/story/2026-06-13/anthropic-shuts-down-mythos-access-after-sweeping-u-s-order
 
-③ Meta 推出 AI Mode：跨平台智能内容发现
-Facebook 新增 AI Mode 搜索标签，使用 Meta AI 从平台公开信息中提取文化观点，标志着 AI 从链接索引向社交智能演进。
-🔗 https://techcrunch.com/2026/06/15/metas-new-ai-mode-on-facebook-pulls-from-public-info-across-its-platforms
+③ Adobe 在 Creative Cloud 全线集成 AI 助手
+Photoshop、Premiere、Illustrator 等主力应用新增聊天界面。重设计的 Firefly Studio 现可记住用户的创意风格，跨项目延续一致性。
+🔗 https://www.adobe.com/news
 
-• Anthropic 加入前沿碳去除联盟 — 🔗 techcrunch.com
-• Google × SpaceX 11 万 GPU 租赁交易，年度支出 110 亿美元 — 🔗 linkedin.com
-• xAI Grok 新增 PowerPoint 插件与 Warp 终端集成 — 🔗 x.ai
+快讯摘要
+• Noam Shazeer（Transformer 共同创始人、Gemini 联席负责人）从 Google 离职加入 OpenAI，反映顶级 AI 人才的激烈竞争 — https://www.cnbc.com/2026/06/18/google-gemini-co-lead-noam-shazeer-leaves-for-openai.html
+• OpenAI 计划年底前翻倍员工数，筹备 IPO 融资 — https://www.staffingindustry.com/news/global-daily-news/openai-plans-to-double-headcount-this-year
+• Google DeepMind CEO Demis Hassabis 与 Trump 和两家 AI 领导者会面，推进美国主导的国际 AI 联盟 — https://www.cnbc.com/2026/06/17/anthropic-amodei-google-hassabis-us-ai-coalition-g7.html
+• Anthropic 完成 $35B 芯片融资（Apollo Global + Blackstone），使用 Google 定制 TPU — https://www.bloomberg.com/news/articles/2026-06-05/apollo-wraps-up-35-billion-debt-to-buy-ai-chips-for-anthropic
 
 📚 论文速报
 
-④ Agent 记忆架构：遗忘的根本是位置问题
-MIT 研究发现 Agent 记忆失败的根本原因是架构位置而非提示工程。仅位置特定 hook 达成 91.7%-93.2% 整体精度，开源 ForgetEval 工具已发布。
+① Agent 记忆架构决定遗忘模式（MIT）：扫描 385 个对抗性案例，发现 LLM 在记忆管道中的位置决定了错误的类别；开源 ForgetEval 工具
 🔗 https://arxiv.org/abs/2606.15903
 
-⑤ 继承的真实头部：基模型选择决定抗幻觉能力
-解释性研究证明反幻觉能力在基模型选择时已确定，不会通过微调改变。TruthProbe 方法通过放大诚实 head 将幻觉降低 30%+。
+② 模型诚实性在基础模型中被继承，微调后不变：跨越 Vicuna、Qwen、LLaMA、Mistral 四个系列验证，新工具 TruthProbe 改进幻觉评测
 🔗 https://arxiv.org/abs/2606.15821
 
-⑥ 多模态 LLM 与伪造检测：Deep-VRM 残差路径注入法
-多模态 LLM 缺乏像素级证据理解能力。Deep-VRM 将伪造信号作为残差路径注入中层，改进伪造检测准确率 15%+。
-🔗 https://arxiv.org/abs/2606.15880
+③ 1.5B 模型在事件预测上超越 Claude Sonnet 3.5（Oxford）：通过 RL 可训练目标与工具调用实现，使用维基百科修订历史和新闻查询
+🔗 https://arxiv.org/abs/2606.15917
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-06-18-383941f9-8904-81b9-9cf5-d958f8bb3122
+④ CODA-BENCH 评测代码与数据整合任务：1009 个任务覆盖 31 个领域，最佳系统达 61.1% 成功率，瓶颈在「找数据→写代码」的交接
+🔗 https://arxiv.org/abs/2606.15300
+
+📓 Notion: https://www.notion.so/AI-Builders-Digest-20260619-384941f9-8904-8171-8e62-fa47243ea1e6
 🌐 https://xiaochengzi2048.github.io/digest.txt
