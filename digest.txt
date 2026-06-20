@@ -1,38 +1,42 @@
-🗞 AI 日报 · 2026.06.19
+🗞 AI 日报 · 2026.06.20
 
 📰 今日速报
+（综合 ai-digest.liziran.com 和最新新闻报道）
 
-① 白宫对 Anthropic 实施出口管制，Mythos 5 和 Fable 5 暂停全球部署
-在 SK Telecom 因中国关联被列黑名单后，白宫进一步对 Anthropic 最先进的两个模型实施出口禁令。Amazon 研究人员发现 Fable 5 的越狱漏洞后，政府要求 Anthropic 消除所有安全隐患（技术专家认为这是不可能的）。与此同时，Anthropic 在首尔办公室于 6 月 17-18 日启动，标志着在韩国企业市场的重大扩张——NAVER、Nexon、Samsung SDS 等已开始 Claude Code 部署。
-🔗 https://www.buildfastwithai.com/blogs/ai-news-today-june-19-2026
+① Anthropic 遭美国政府强制关闭 Fable 与 Mythos 模型
+美国特朗普政府以国家安全名义下达禁令，要求 Anthropic 关闭 Fable 5 和 Mythos 5 模型，理由是发现了能绕过安全防护的漏洞。这是美国政府首次对主要 AI 公司采取如此直接的行动。Anthropic 遵令禁用这两个模型，当前与商务部长进行紧急谈判。
+🔗 https://www.pbs.org/newshour/show/anthropic-disables-new-ai-model-after-white-house-security-directive
 
-② Pentagon 已向 150 万用户部署 AI，研究称高级威胁模型「无法阻止」
-美国防部在 AI 安全问题未解决前已大规模应用。即使安全专家证明无法完全堵住高级对手的攻击，五角大楼已转向实时监控策略而非预防性部署冻结。
-🔗 https://www.latimes.com/business/story/2026-06-13/anthropic-shuts-down-mythos-access-after-sweeping-u-s-order
+② OpenAI 获得特朗普政府内部人士支持，同时挖角 Transformer 论文共同作者
+OpenAI 宣布招募 Noam Shazeer（Transformer 架构共同发明者）加入，同时任用 Dean Ball（特朗普白宫 AI 政策官员）领导战略未来团队。此举表明 OpenAI 在 IPO 前积极争取政府关系，与 Anthropic 的困境形成对比。
+🔗 https://techcrunch.com/2026/06/18/openai-is-bringing-on-some-big-guns-in-the-lead-up-to-its-ipo
 
-③ Adobe 在 Creative Cloud 全线集成 AI 助手
-Photoshop、Premiere、Illustrator 等主力应用新增聊天界面。重设计的 Firefly Studio 现可记住用户的创意风格，跨项目延续一致性。
-🔗 https://www.adobe.com/news
+③ OpenAI 推出医疗健康智能功能，医学精度获 260+ 医生认证
+ChatGPT 新增的医疗模块（GPT-5.5 Instant）在医学评测中表现接近前沿思维模型，虚假信息减少 71%。该功能已向全球 2.3 亿周度用户开放，由全球 260+ 医生跨 49 种语言、26 个医学专科进行评审。
+🔗 https://openai.com/index/improving-health-intelligence-in-chatgpt/
 
-快讯摘要
-• Noam Shazeer（Transformer 共同创始人、Gemini 联席负责人）从 Google 离职加入 OpenAI，反映顶级 AI 人才的激烈竞争 — https://www.cnbc.com/2026/06/18/google-gemini-co-lead-noam-shazeer-leaves-for-openai.html
-• OpenAI 计划年底前翻倍员工数，筹备 IPO 融资 — https://www.staffingindustry.com/news/global-daily-news/openai-plans-to-double-headcount-this-year
-• Google DeepMind CEO Demis Hassabis 与 Trump 和两家 AI 领导者会面，推进美国主导的国际 AI 联盟 — https://www.cnbc.com/2026/06/17/anthropic-amodei-google-hassabis-us-ai-coalition-g7.html
-• Anthropic 完成 $35B 芯片融资（Apollo Global + Blackstone），使用 Google 定制 TPU — https://www.bloomberg.com/news/articles/2026-06-05/apollo-wraps-up-35-billion-debt-to-buy-ai-chips-for-anthropic
+• xAI Grok 4.3 上线 AWS Bedrock，宣称参数效率领先业界 2-10 倍 — 🔗 https://x.ai/news/grok-amazon-bedrock
+• Meta 推出 AI Mode 搜索功能，直接从 Facebook 用户公开发帖中合成答案 — 🔗 https://about.fb.com/news/2026/06/new-ai-tools-to-help-you-make-things-happen-on-facebook
+• xAI 与 Databricks 达成合作，Grok 模型接入 Agent Bricks 开发平台 — 🔗 https://x.ai/news/grok-databricks
 
 📚 论文速报
+（来自 ai-brief.liziran.com）
 
-① Agent 记忆架构决定遗忘模式（MIT）：扫描 385 个对抗性案例，发现 LLM 在记忆管道中的位置决定了错误的类别；开源 ForgetEval 工具
-🔗 https://arxiv.org/abs/2606.15903
+① OmniAgent：7B 视频理解模型超越 72B 模型，通过选择性感知节省计算
+MIT 团队发现通过 POMDP 观察-思考-行动循环，7B 参数的 OmniAgent 在 LVBench 测试中达到 50.5%，超越 Qwen2.5-VL-72B 的 47.3%（参数量少 10 倍）。核心创新是只关注关键的视觉-听觉信号而非逐帧处理。
+🔗 https://arxiv.org/abs/2606.19341
 
-② 模型诚实性在基础模型中被继承，微调后不变：跨越 Vicuna、Qwen、LLaMA、Mistral 四个系列验证，新工具 TruthProbe 改进幻觉评测
-🔗 https://arxiv.org/abs/2606.15821
+② RNG-Bench：多模态记忆测试暴露视觉转换器遗忘问题
+新基准通过 3D 迷宫环境测试，发现大多数错误源于「遗忘之前看到的信息」而非「决策失误」，即使使用百万级上下文长度也未达到饱和。
+🔗 https://arxiv.org/abs/2606.19338
 
-③ 1.5B 模型在事件预测上超越 Claude Sonnet 3.5（Oxford）：通过 RL 可训练目标与工具调用实现，使用维基百科修订历史和新闻查询
-🔗 https://arxiv.org/abs/2606.15917
+③ LoopCoder-v2：双循环 Transformer 把代码生成从 43% 推向 64.4%
+论文发现两层循环可显著提升代码理解与生成，将 SWE-bench Verified 通过率从 43.0% 提至 64.4%，但三层及以上会衰退。
+🔗 https://arxiv.org/abs/2606.18023
 
-④ CODA-BENCH 评测代码与数据整合任务：1009 个任务覆盖 31 个领域，最佳系统达 61.1% 成功率，瓶颈在「找数据→写代码」的交接
-🔗 https://arxiv.org/abs/2606.15300
+④ Sumi：首个开源等宽扩散语言模型，性能媲美自回归模型
+中文团队发布全参数开放的 7B、1.5T tokens 等宽扩散模型，在知识、推理、代码任务上与自回归模型相当，开源了全部权重与训练配方。
+🔗 https://arxiv.org/abs/2606.19005
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-20260619-384941f9-8904-8171-8e62-fa47243ea1e6
+📓 Notion: https://www.notion.so/AI-Builders-Digest-20260620-385941f9890481b7ab8afcf3445dcdd4
 🌐 https://xiaochengzi2048.github.io/digest.txt
