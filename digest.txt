@@ -1,42 +1,36 @@
-🗞 AI 日报 · 2026.06.20
+🗞 AI 日报 · 2026.06.21
 
 📰 今日速报
-（综合 ai-digest.liziran.com 和最新新闻报道）
 
-① Anthropic 遭美国政府强制关闭 Fable 与 Mythos 模型
-美国特朗普政府以国家安全名义下达禁令，要求 Anthropic 关闭 Fable 5 和 Mythos 5 模型，理由是发现了能绕过安全防护的漏洞。这是美国政府首次对主要 AI 公司采取如此直接的行动。Anthropic 遵令禁用这两个模型，当前与商务部长进行紧急谈判。
-🔗 https://www.pbs.org/newshour/show/anthropic-disables-new-ai-model-after-white-house-security-directive
+① 谷歌 Lyria 3 音乐生成 API 全球开放
+谷歌向全球开发者开放 Lyria 3 音乐生成付费预览，通过 Gemini API 接入。支持 Pro 版本生成最长 3 分钟完整歌曲，Clip 版本生成 30 秒片段。用户可通过自然语言指定节奏、歌词、段落结构，支持多语言演唱和图像输入推断风格。训练数据来自 YouTube 授权素材，输出嵌入 SynthID 水印，不模仿特定艺术家。
+🔗 https://ai-digest.liziran.com/zh/
 
-② OpenAI 获得特朗普政府内部人士支持，同时挖角 Transformer 论文共同作者
-OpenAI 宣布招募 Noam Shazeer（Transformer 架构共同发明者）加入，同时任用 Dean Ball（特朗普白宫 AI 政策官员）领导战略未来团队。此举表明 OpenAI 在 IPO 前积极争取政府关系，与 Anthropic 的困境形成对比。
-🔗 https://techcrunch.com/2026/06/18/openai-is-bringing-on-some-big-guns-in-the-lead-up-to-its-ipo
+② OpenAI 公布 agent 漏洞赏金计划与安全工具
+OpenAI 单日发布三项安全举措：推出 Safety Bug Bounty 计划覆盖提示注入、数据外泄等 agent 漏洞，发布公开的 Model Spec 文档规定模型在安全与用户自由间的取舍原则，发布 gpt-oss-safeguard 开源工具供开发者调用年龄相关内容审核。这是业界首例专门针对 agent 漏洞的赏金计划。
+🔗 https://ai-digest.liziran.com/zh/
 
-③ OpenAI 推出医疗健康智能功能，医学精度获 260+ 医生认证
-ChatGPT 新增的医疗模块（GPT-5.5 Instant）在医学评测中表现接近前沿思维模型，虚假信息减少 71%。该功能已向全球 2.3 亿周度用户开放，由全球 260+ 医生跨 49 种语言、26 个医学专科进行评审。
-🔗 https://openai.com/index/improving-health-intelligence-in-chatgpt/
+③ 数学 AI 产品化新进展
+Axiom Math 推出免费模式发现工具脱胎于 2024 年学术项目。LongCat-Flash-Prover 开源 560B 参数 MoE 模型专攻 Lean4 形式化数学推理。数学领域的 AI 应用逐步从研究走向产品化。
+🔗 https://ai-digest.liziran.com/zh/
 
-• xAI Grok 4.3 上线 AWS Bedrock，宣称参数效率领先业界 2-10 倍 — 🔗 https://x.ai/news/grok-amazon-bedrock
-• Meta 推出 AI Mode 搜索功能，直接从 Facebook 用户公开发帖中合成答案 — 🔗 https://about.fb.com/news/2026/06/new-ai-tools-to-help-you-make-things-happen-on-facebook
-• xAI 与 Databricks 达成合作，Grok 模型接入 Agent Bricks 开发平台 — 🔗 https://x.ai/news/grok-databricks
+• MinerU-Diffusion：用扩散模型重建文档 OCR，替代自回归解码 — 🔗 https://ai-digest.liziran.com/zh/
+• SpecEyes：投机执行加速 agent 式多模态推理 — 🔗 https://ai-digest.liziran.com/zh/
+• PEARL：首个面向流式视频的个性化理解模型 — 🔗 https://ai-digest.liziran.com/zh/
 
 📚 论文速报
-（来自 ai-brief.liziran.com）
 
-① OmniAgent：7B 视频理解模型超越 72B 模型，通过选择性感知节省计算
-MIT 团队发现通过 POMDP 观察-思考-行动循环，7B 参数的 OmniAgent 在 LVBench 测试中达到 50.5%，超越 Qwen2.5-VL-72B 的 47.3%（参数量少 10 倍）。核心创新是只关注关键的视觉-听觉信号而非逐帧处理。
+① OmniAgent（arxiv 2606.19341）：将多模态感知建模为 POMDP 循环，选择性观看视频帧而非处理所有帧。7B 模型在 LVBench 上达 50.5%，超越 Qwen2.5-VL-72B 的 47.3%，展现推理的正向扩展性。
 🔗 https://arxiv.org/abs/2606.19341
 
-② RNG-Bench：多模态记忆测试暴露视觉转换器遗忘问题
-新基准通过 3D 迷宫环境测试，发现大多数错误源于「遗忘之前看到的信息」而非「决策失误」，即使使用百万级上下文长度也未达到饱和。
+② RNG-Bench：通过多轮感知任务发现记忆是多模态 agent 的瓶颈，而非决策能力。大多数失败源于遗忘之前的观测。提出记忆间隙度量分离"遗忘"与"决策失败"。
 🔗 https://arxiv.org/abs/2606.19338
 
-③ LoopCoder-v2：双循环 Transformer 把代码生成从 43% 推向 64.4%
-论文发现两层循环可显著提升代码理解与生成，将 SWE-bench Verified 通过率从 43.0% 提至 64.4%，但三层及以上会衰退。
-🔗 https://arxiv.org/abs/2606.18023
-
-④ Sumi：首个开源等宽扩散语言模型，性能媲美自回归模型
-中文团队发布全参数开放的 7B、1.5T tokens 等宽扩散模型，在知识、推理、代码任务上与自回归模型相当，开源了全部权重与训练配方。
+③ Sumi（arxiv 2606.19005）：首个大规模开放均匀扩散语言模型，7B 参数 1.5T token，完全开放权重、检查点、配方和数据混合。在知识、推理、编码上与自回归相当，展示扩散 LM 的可行性。
 🔗 https://arxiv.org/abs/2606.19005
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-20260620-385941f9890481b7ab8afcf3445dcdd4
+④ LoopCoder-v2：两层循环架构将 SWE-bench 成绩从 43% 提升至 64%，展现代码生成的新方向。
+🔗 https://arxiv.org/abs/2606.19
+
+📓 Notion: https://www.notion.so/AI-Builders-Digest-20260621-386941f9-8904-81ca-8fa6-c5a290157eea
 🌐 https://xiaochengzi2048.github.io/digest.txt
