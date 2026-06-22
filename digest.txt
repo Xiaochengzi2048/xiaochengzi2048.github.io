@@ -1,36 +1,40 @@
-🗞 AI 日报 · 2026.06.21
+🗞 AI 日报 · 2026.06.22
 
 📰 今日速报
 
-① 谷歌 Lyria 3 音乐生成 API 全球开放
-谷歌向全球开发者开放 Lyria 3 音乐生成付费预览，通过 Gemini API 接入。支持 Pro 版本生成最长 3 分钟完整歌曲，Clip 版本生成 30 秒片段。用户可通过自然语言指定节奏、歌词、段落结构，支持多语言演唱和图像输入推断风格。训练数据来自 YouTube 授权素材，输出嵌入 SynthID 水印，不模仿特定艺术家。
+① Google Lyria 3 音乐生成API全球开放
+Google宣布在Gemini API上线Lyria 3音乐生成API，面向全球开发者付费预览。支持Pro版完整歌曲（~3分钟）和Clip版30秒片段，支持自然语言指定节奏、歌词、编曲，输出内嵌SynthID水印。企业端通过Vertex AI和Google Vids集成，ProducerAI工具开放给音乐人。
+🔗 https://blog.google/technology/ai/rss/
+
+② OpenAI三项安全措施同日发布
+包括Safety Bug Bounty计划（涵盖提示注入、数据外泄等Agent漏洞的业界首例赏金计划）、Model Spec文档（规定模型在安全与自由间的权衡）、gpt-oss-safeguard工具（开源青少年保护策略）。三项同日恰逢IPO筹备期。
+🔗 https://openai.com/news/rss.xml
+
+③ Cursor编码模型源自月之暗面Kimi
+Cursor首次承认其编码模型构建于月之暗面Kimi之上，用户通过API响应中的技术标识发现后追问才公开。无任何公开文档曾披露此依赖，引发地缘政治敏感性讨论。
 🔗 https://ai-digest.liziran.com/zh/
 
-② OpenAI 公布 agent 漏洞赏金计划与安全工具
-OpenAI 单日发布三项安全举措：推出 Safety Bug Bounty 计划覆盖提示注入、数据外泄等 agent 漏洞，发布公开的 Model Spec 文档规定模型在安全与用户自由间的取舍原则，发布 gpt-oss-safeguard 开源工具供开发者调用年龄相关内容审核。这是业界首例专门针对 agent 漏洞的赏金计划。
-🔗 https://ai-digest.liziran.com/zh/
-
-③ 数学 AI 产品化新进展
-Axiom Math 推出免费模式发现工具脱胎于 2024 年学术项目。LongCat-Flash-Prover 开源 560B 参数 MoE 模型专攻 Lean4 形式化数学推理。数学领域的 AI 应用逐步从研究走向产品化。
-🔗 https://ai-digest.liziran.com/zh/
-
-• MinerU-Diffusion：用扩散模型重建文档 OCR，替代自回归解码 — 🔗 https://ai-digest.liziran.com/zh/
-• SpecEyes：投机执行加速 agent 式多模态推理 — 🔗 https://ai-digest.liziran.com/zh/
-• PEARL：首个面向流式视频的个性化理解模型 — 🔗 https://ai-digest.liziran.com/zh/
+• 数学AI产品化：Axiom Math免费版上线、LongCat-Flash-Prover 560B MoE模型开源
+• MinerU-Diffusion用扩散模型重建文档OCR，降低延迟和错误
+• SpecEyes针对Agent式多模态模型的投机加速方案发布
 
 📚 论文速报
 
-① OmniAgent（arxiv 2606.19341）：将多模态感知建模为 POMDP 循环，选择性观看视频帧而非处理所有帧。7B 模型在 LVBench 上达 50.5%，超越 Qwen2.5-VL-72B 的 47.3%，展现推理的正向扩展性。
+① Beyond Static Leaderboards - 排行榜排名不预测模型部署性能
+论文重建了MCP Agent基准14种方式，发现公开排行榜排名在分布外不稳定。关键指标改为预测有效性（样本内排名与样本外排名的相关性）。建议生产环节用自有数据小批量重新评测。
+🔗 https://arxiv.org/abs/2606.19704
+
+② Think Again or Think Longer - 推理时间是预算，非永不过时
+论文提出基于查询的controller决定保持初始答案还是触发验证。MATH上选择性验证达76.3%（vs恒定76.1%），同时减少26.8%后生成token。关键发现：调整初始预算到8192 token比加验证层更节省总token。
+🔗 https://arxiv.org/abs/2606.19808
+
+③ ENPIRE - 机器人策略自主改进在真实环境中达成99%成功率
+四模块系统（环境/改进/并行评估/进化）使机器人在分拣、束带、工具使用等任务上自主达到99%成功率。Robot集群进一步加速学习。
+🔗 https://arxiv.org/abs/2606.19980
+
+④ OmniAgent - 7B视频Agent超越72B模型
+通过主动感知和POMDP循环，7B模型在长视频理解上达50.5%（超Qwen2.5-VL-72B的47.3%）。展示正向test-time scaling，但多轮感知可能转移成本到推理轮。
 🔗 https://arxiv.org/abs/2606.19341
 
-② RNG-Bench：通过多轮感知任务发现记忆是多模态 agent 的瓶颈，而非决策能力。大多数失败源于遗忘之前的观测。提出记忆间隙度量分离"遗忘"与"决策失败"。
-🔗 https://arxiv.org/abs/2606.19338
-
-③ Sumi（arxiv 2606.19005）：首个大规模开放均匀扩散语言模型，7B 参数 1.5T token，完全开放权重、检查点、配方和数据混合。在知识、推理、编码上与自回归相当，展示扩散 LM 的可行性。
-🔗 https://arxiv.org/abs/2606.19005
-
-④ LoopCoder-v2：两层循环架构将 SWE-bench 成绩从 43% 提升至 64%，展现代码生成的新方向。
-🔗 https://arxiv.org/abs/2606.19
-
-📓 Notion: https://www.notion.so/AI-Builders-Digest-20260621-386941f9-8904-81ca-8fa6-c5a290157eea
+📓 Notion: https://www.notion.so/AI-Builders-Digest-·-2026-06-22-387941f9-8904-81bf-9a49-f94c332da1bb
 🌐 https://xiaochengzi2048.github.io/digest.txt
