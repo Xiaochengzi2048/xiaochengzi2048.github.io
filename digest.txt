@@ -1,40 +1,40 @@
-🗞 AI 日报 · 2026.06.22
+🗞 AI 日报 · 2026.06.23
 
 📰 今日速报
 
-① Google Lyria 3 音乐生成API全球开放
-Google宣布在Gemini API上线Lyria 3音乐生成API，面向全球开发者付费预览。支持Pro版完整歌曲（~3分钟）和Clip版30秒片段，支持自然语言指定节奏、歌词、编曲，输出内嵌SynthID水印。企业端通过Vertex AI和Google Vids集成，ProducerAI工具开放给音乐人。
-🔗 https://blog.google/technology/ai/rss/
+① ChatGPT 接手健康问答，GPT-5.5 遭独立测试
+新上线的 ChatGPT 医疗功能由 GPT-5.5 驱动，但一份独立评测发现其幻觉率是开源 GLM-5.2 的三倍，正面冲击 OpenAI 主打的「医疗级准确度」营销。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
 
-② OpenAI三项安全措施同日发布
-包括Safety Bug Bounty计划（涵盖提示注入、数据外泄等Agent漏洞的业界首例赏金计划）、Model Spec文档（规定模型在安全与自由间的权衡）、gpt-oss-safeguard工具（开源青少年保护策略）。三项同日恰逢IPO筹备期。
-🔗 https://openai.com/news/rss.xml
+② 亚马逊三名工程师举报数据中心扩张，遭报复指控
+三名亚马逊员工作证反对公司大规模扩建数据中心，随后遭到解雇威胁。他们以言论自由保护法反告，同周参议院提出 7 万亿美元方案争取 AI 产业主动权。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
 
-③ Cursor编码模型源自月之暗面Kimi
-Cursor首次承认其编码模型构建于月之暗面Kimi之上，用户通过API响应中的技术标识发现后追问才公开。无任何公开文档曾披露此依赖，引发地缘政治敏感性讨论。
-🔗 https://ai-digest.liziran.com/zh/
+③ 具身 AI 从被动执行向主动探索转变
+三篇高热论文指向同一趋势：机器人正从遵循指令转向自主玩耍、物理建模和持续学习。标志着体现智能向真正自适应系统的根本转向。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
 
-• 数学AI产品化：Axiom Math免费版上线、LongCat-Flash-Prover 560B MoE模型开源
-• MinerU-Diffusion用扩散模型重建文档OCR，降低延迟和错误
-• SpecEyes针对Agent式多模态模型的投机加速方案发布
+• **白宫数据中心竞争方案** — 参议院酝酿 7 万亿国家级 AI 基础设施投入，与科企计划平行推进。
+• **Barret Zoph 回归后五月离职** — OpenAI 研究主管去职，Transformer 作者 Noam Shazeer 同期从 Google 加盟，industry movement 加速。
+• **OpenAI 非医疗垂直细分扩张** — ChatGPT 新增健康、金融、教育等领域垂直 GPT，快速商业化 GPT-5.5。
 
 📚 论文速报
 
-① Beyond Static Leaderboards - 排行榜排名不预测模型部署性能
-论文重建了MCP Agent基准14种方式，发现公开排行榜排名在分布外不稳定。关键指标改为预测有效性（样本内排名与样本外排名的相关性）。建议生产环节用自有数据小批量重新评测。
-🔗 https://arxiv.org/abs/2606.19704
-
-② Think Again or Think Longer - 推理时间是预算，非永不过时
-论文提出基于查询的controller决定保持初始答案还是触发验证。MATH上选择性验证达76.3%（vs恒定76.1%），同时减少26.8%后生成token。关键发现：调整初始预算到8192 token比加验证层更节省总token。
-🔗 https://arxiv.org/abs/2606.19808
-
-③ ENPIRE - 机器人策略自主改进在真实环境中达成99%成功率
-四模块系统（环境/改进/并行评估/进化）使机器人在分拣、束带、工具使用等任务上自主达到99%成功率。Robot集群进一步加速学习。
-🔗 https://arxiv.org/abs/2606.19980
-
-④ OmniAgent - 7B视频Agent超越72B模型
-通过主动感知和POMDP循环，7B模型在长视频理解上达50.5%（超Qwen2.5-VL-72B的47.3%）。展示正向test-time scaling，但多轮感知可能转移成本到推理轮。
+① OmniAgent — 长视频理解的自主感知架构
+7B 参数模型通过自定向感知在 LVBench 达成 50.5%，超越 Qwen2.5-VL-72B（参数量多 10 倍）。关键创新是用 POMDP 框架让 AI 主动决定观看哪些关键帧，而非被动处理全量视频。
 🔗 https://arxiv.org/abs/2606.19341
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-·-2026-06-22-387941f9-8904-81bf-9a49-f94c332da1bb
+② RNG-Bench — 多模态 AI 的真正瓶颈不在决策
+全面测试揭示：前沿模型在非马尔可夫游戏中的失败根源是「遗忘早期观察」而非逻辑能力不足。记忆连续性压倒决策精度。
+🔗 https://arxiv.org/abs/2606.19704
+
+③ Sumi — 开源统一扩散语言模型
+首个 7B 参数、1.5 万亿 token 规模的完全开放扩散 LM。同步发布完整权重、训练代码和数据混合配方，打破闭源垄断。
+🔗 https://arxiv.org/abs/2606.20506
+
+④ Xcientist — AI 科学家系统中的可审计证据链
+首次给出「主张漂移」的正式定义：输出表面正确但依赖链条在中间环节脱离证据的失败。提出证据追踪框架，使 AI 科研流程可被重复验证。
+🔗 https://arxiv.org/abs/2606.19980
+
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-06-23-387941f9890481d8bffffd1d8d3428e3
 🌐 https://xiaochengzi2048.github.io/digest.txt
