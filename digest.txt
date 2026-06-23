@@ -2,39 +2,35 @@
 
 📰 今日速报
 
-① ChatGPT 接手健康问答，GPT-5.5 遭独立测试
-新上线的 ChatGPT 医疗功能由 GPT-5.5 驱动，但一份独立评测发现其幻觉率是开源 GLM-5.2 的三倍，正面冲击 OpenAI 主打的「医疗级准确度」营销。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
+① Google Lyria 3 音乐生成 API 全球开放
+谷歌在 Gemini API 中开放 Lyria 3 付费预览，支持生成完整歌曲（Pro版～3分钟）和30秒片段（Clip版）。核心创新是自然语言精细控制——用户可指定节奏、歌词、编曲结构，并支持多语言演唱和图像风格推断。格莱美获奖制作人 Yung Spielburg 已用于生产实际短片。版权处理通过 SynthID 水印追踪，训练数据来自 YouTube 授权素材。
+🔗 https://ai-digest.liziran.com/zh/
 
-② 亚马逊三名工程师举报数据中心扩张，遭报复指控
-三名亚马逊员工作证反对公司大规模扩建数据中心，随后遭到解雇威胁。他们以言论自由保护法反告，同周参议院提出 7 万亿美元方案争取 AI 产业主动权。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
+② OpenAI 同日三项安全发布
+OpenAI 在一天内公布 Safety Bug Bounty（覆盖提示注入、数据外泄等 agent 漏洞，业界首例）、Model Spec（规定模型在安全与用户自由间取舍的公开文档）和 gpt-oss-safeguard（青少年保护开源工具）。三项同日发布恰逢 IPO 筹备期。
+🔗 https://ai-digest.liziran.com/zh/
 
-③ 具身 AI 从被动执行向主动探索转变
-三篇高热论文指向同一趋势：机器人正从遵循指令转向自主玩耍、物理建模和持续学习。标志着体现智能向真正自适应系统的根本转向。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
+③ 数学 AI 产品化成果
+Axiom Math 免费发现工具脱胎于2024年学术项目 PatternBoost；LongCat-Flash-Prover 是560B 参数开源 MoE 模型，专攻 Lean4 形式化数学推理。
+🔗 https://ai-digest.liziran.com/zh/
 
-• **白宫数据中心竞争方案** — 参议院酝酿 7 万亿国家级 AI 基础设施投入，与科企计划平行推进。
-• **Barret Zoph 回归后五月离职** — OpenAI 研究主管去职，Transformer 作者 Noam Shazeer 同期从 Google 加盟，industry movement 加速。
-• **OpenAI 非医疗垂直细分扩张** — ChatGPT 新增健康、金融、教育等领域垂直 GPT，快速商业化 GPT-5.5。
+• MinerU-Diffusion：用扩散模型重建文档 OCR，替代自回归解码 — 🔗 https://ai-digest.liziran.com/zh/
+• SpecEyes：agent 式多模态推理投机加速 — 🔗 https://ai-digest.liziran.com/zh/
+• PEARL：首个面向流式视频的个性化理解模型 — 🔗 https://ai-digest.liziran.com/zh/
 
 📚 论文速报
 
-① OmniAgent — 长视频理解的自主感知架构
-7B 参数模型通过自定向感知在 LVBench 达成 50.5%，超越 Qwen2.5-VL-72B（参数量多 10 倍）。关键创新是用 POMDP 框架让 AI 主动决定观看哪些关键帧，而非被动处理全量视频。
-🔗 https://arxiv.org/abs/2606.19341
-
-② RNG-Bench — 多模态 AI 的真正瓶颈不在决策
-全面测试揭示：前沿模型在非马尔可夫游戏中的失败根源是「遗忘早期观察」而非逻辑能力不足。记忆连续性压倒决策精度。
+① Beyond Static Leaderboards: Predictive Validity for Evaluating LLM Agents
+研究发现排行榜排名在分布外不稳定——将一个 MCP agent 基准用14种方式重建后，聚合评分排名会无警告翻转。提出"预测有效性"指标衡量样本内排名与样本外排名的相关性。
 🔗 https://arxiv.org/abs/2606.19704
 
-③ Sumi — 开源统一扩散语言模型
-首个 7B 参数、1.5 万亿 token 规模的完全开放扩散 LM。同步发布完整权重、训练代码和数据混合配方，打破闭源垄断。
-🔗 https://arxiv.org/abs/2606.20506
+② Native Active Perception as Reasoning for Omni-Modal Understanding (OmniAgent)
+7B 视频 agent 通过主动感知（POMDP 观察-思考-行动循环）在 LVBench 达到 50.5% 准确率，超越 Qwen2.5-VL-72B 的 47.3%。关键在于将长视频理解重新框架为感知推理问题。
+🔗 https://arxiv.org/abs/2606.19341
 
-④ Xcientist — AI 科学家系统中的可审计证据链
-首次给出「主张漂移」的正式定义：输出表面正确但依赖链条在中间环节脱离证据的失败。提出证据追踪框架，使 AI 科研流程可被重复验证。
+③ ENPIRE: Agentic Robot Policy Self-Improvement in the Real World
+机器人手臂在钉插、拉链、工具使用等任务上自主达到 99% 成功率。系统包含环境（自动复位/评分）、改进（策略精化）、展开（并行评估）、演化（读日志、搜文献、修改训练）四个模块。
 🔗 https://arxiv.org/abs/2606.19980
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-06-23-387941f9890481d8bffffd1d8d3428e3
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-06-23-387941f9-8904-81d8-bfff-fd1d8d3428e3
 🌐 https://xiaochengzi2048.github.io/digest.txt
