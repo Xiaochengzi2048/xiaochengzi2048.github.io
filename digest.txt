@@ -1,36 +1,39 @@
-🗞 AI 日报 · 2026.06.24
+🗞 AI 日报 · 2026.06.21
 
 📰 今日速报
 
-① ChatGPT健康问答交给GPT-5.5，独立测试：幻觉是开源模型3倍
-OpenAI官方称GPT-5.5 Instant在健康养生问答更准、更清晰，已经医生参与评估。但独立测试发现GPT-5.5幻觉率是MIT授权开源模型GLM-5.2的3倍。当模型被灌入海量事实数据，反而学到了"永远给出一个答案"——不知道时也不肯承认，而是编一个听起来合理的说法。
+① 诺奖得主 John Jumper 离开 DeepMind 加入 Anthropic
+AlphaFold 获奖者跳槽竞争对手，DeepMind 人才持续流失，顶级研究团队正在分化。
 🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
 
-② 亚马逊工程师在市议会作证数据中心扩张后被指面临解雇
-三名亚马逊工程师在西雅图市议会作证反对数据中心扩张，事前援引当地法律禁止雇主因政治言论歧视员工。一周后三人声称遭纪律处分，反诉亚马逊违法报复。同周参议员Bernie Sanders提出7万亿美元AI财富基金方案，旨在让普通美国人掌控AI产业。对AI产业权力与基建过度集中的抵制正从多个方向同时升温。
+② ChatGPT 健康问答交由 GPT-5.5 处理，独立测试显示幻觉率是开源模型 3 倍
+OpenAI 称医生参与评估，但独立测试数据相悖。健康领域的"永远给出答案"风险凸显——不知道也要硬编理由。
 🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
 
-③ 诺奖得主John Jumper离开DeepMind加入Anthropic
-AlphaFold作者、诺贝尔化学奖得主John Jumper正式跳槽至Anthropic。报道指出他并非近期唯一离开DeepMind的重量级人物，DeepMind人才流失持续加剧。
+③ 三名亚马逊工程师市议会作证后被指面临解雇
+就数据中心扩张限制作证，援引禁止政治言论报复法，反过来被指纪律处分。AI 产业权力集中化正遭遇系统性阻力。
 🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
 
-• DeepSeek上线Vision视觉功能，网页版聊天加入图像理解能力 — 🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
-• 挪威近乎全面禁止小学使用AI工具 — 🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
-• 《大西洋月刊》公开AI训练音乐数据库，包含1200万+900万首曲目可检索 — 🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
+快讯：
+• DeepSeek 上线视觉功能，网页版聊天加入图像理解能力 — 🔗 https://www.deepseek.com/
+• 挪威近乎全面禁止小学使用 AI，出台正式规定 — 🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
+• Signal 总裁 Whittaker 警告：AI 聊天机器人不是你的朋友，不是有意识的存在 — 🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
+• 《大西洋月刊》公开 AI 训练音乐数据库，含 1200 万和 900 万首曲目可检索 — 🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
+• NVIDIA 戛纳创意节展示 AI 广告营销自动化方案 — 🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
 
 📚 论文速报
 
-① 机器人自主性转向：从指令执行到自探索物理世界
-同周三篇高热论文指向同一转变：DragMesh-2展示灵巧手与关节物体的物理交互；Playful Agentic Robot Learning让机器人自由探索积累可复用技能；S-Agent在持续演化的3D世界中累积证据。共同方向是从被给定任务的静态推断，转向自主探索、持续建模物理世界。
+① Leaderboards Don't Predict Deployment Performance：MCP agent 评测集重建 14 种方式，发现排行榜名次严重不稳定。正确做法是测量"预测效度"而非绝对得分。
 🔗 https://arxiv.org/abs/2606.19704
 
-② 测试时推理应作为可分配的资源：SEVRA选择性验证方案
-SEVRA在MATH基准上达到76.3%准确率（相比始终启用的75.5%），同时将生成后token削减26.8%。核心发现是调整初始求解预算比事后修复更能节省计算——应首先设定初始预算，再考虑选择性验证用于审计和回归控制。
+② SEVRA - Selective Verification for Budget-Aware Reasoning：按查询决定是否触发验证，76.3% 准确度但节省后处理 token 26.8%。初始预算优化比事后补救更省成本。
 🔗 https://arxiv.org/abs/2606.19808
 
-③ 机器人策略在真实世界自我改进：ENPIRE系统达99%成功率
-编码agent通过环境反馈自动训练针插、绑带扎带、工具使用等技能至99%成功率。4模块架构包括自动重置评分、策略优化、并行评估和演化。这标志着agent自改进从仿真环境迈向真实物理操作。
+③ ENPIRE - Robot Policy Self-Improvement in Real World：机器人物理反馈循环实现 99% 成功率，pin 插入、拉链绑定完全自主学习，无需人工干预。
 🔗 https://arxiv.org/abs/2606.19980
 
-📓 Notion: https://www.notion.so/ai-builders-digest--2026-06-24-389941f9-8904-81cb-a42d-ed926b2b71f3
+④ OmniAgent - Native Active Perception for Long Video：7B 参数模型在视频理解上击败 Qwen2.5-VL-72B（参数量 10 倍），通过智能跳帧和连续记忆实现。
+🔗 https://arxiv.org/abs/2606.19341
+
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-06-21-389941f9-8904-81cb-a42d-ed926b2b71f3
 🌐 https://xiaochengzi2048.github.io/digest.txt
