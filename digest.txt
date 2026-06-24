@@ -1,36 +1,43 @@
-🗞 AI 日报 · 2026.06.23
+🗞 AI 日报 · 2026.06.24
 
 📰 今日速报
+（来自 ai-digest.liziran.com，最新发布：2026.06.21）
 
-① Google Lyria 3 音乐生成 API 全球开放
-谷歌在 Gemini API 中开放 Lyria 3 付费预览，支持生成完整歌曲（Pro版～3分钟）和30秒片段（Clip版）。核心创新是自然语言精细控制——用户可指定节奏、歌词、编曲结构，并支持多语言演唱和图像风格推断。格莱美获奖制作人 Yung Spielburg 已用于生产实际短片。版权处理通过 SynthID 水印追踪，训练数据来自 YouTube 授权素材。
-🔗 https://ai-digest.liziran.com/zh/
+① 诺奖得主 John Jumper 离开 DeepMind 加入 Anthropic
+DeepMind 失去了 AlphaFold 作者、诺贝尔化学奖得主。这是 DeepMind 近期人才流失的最新信号，顶尖研究员持续向竞争对手转身。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
 
-② OpenAI 同日三项安全发布
-OpenAI 在一天内公布 Safety Bug Bounty（覆盖提示注入、数据外泄等 agent 漏洞，业界首例）、Model Spec（规定模型在安全与用户自由间取舍的公开文档）和 gpt-oss-safeguard（青少年保护开源工具）。三项同日发布恰逢 IPO 筹备期。
-🔗 https://ai-digest.liziran.com/zh/
+② ChatGPT 健康问答交由 GPT-5.5，但独立测试显示幻觉率是开源模型 3 倍
+OpenAI 声称经医生评估适合健康问答，然而独立测试发现 GPT-5.5 的幻觉率远高于开源 GLM-5.2。问题在于模型被训练得太"好说话"，不知道时也编答案。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
 
-③ 数学 AI 产品化成果
-Axiom Math 免费发现工具脱胎于2024年学术项目 PatternBoost；LongCat-Flash-Prover 是560B 参数开源 MoE 模型，专攻 Lean4 形式化数学推理。
-🔗 https://ai-digest.liziran.com/zh/
+③ 亚马逊工程师因作证后一周内面临解雇，援引法律反指公司报复
+三名工程师在西雅图市议会就数据中心扩张作证后被启动解雇程序。这反映了 AI 产业权力集中与反弹的激化——从企业内部到国会议员都开始抵触。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
 
-• MinerU-Diffusion：用扩散模型重建文档 OCR，替代自回归解码 — 🔗 https://ai-digest.liziran.com/zh/
-• SpecEyes：agent 式多模态推理投机加速 — 🔗 https://ai-digest.liziran.com/zh/
-• PEARL：首个面向流式视频的个性化理解模型 — 🔗 https://ai-digest.liziran.com/zh/
+• 机器人研究转向：从执行指令到自主探索物理世界，三篇高热论文指向同一转变方向 — 🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
+• Barret Zoph 五个月内二度离职 OpenAI，企业销售负责人频繁换人 — 🔗 https://ai-digest.liziran.com/zh/digest/2026-06-20-barret-zoph-exits-openai-five-months-engineers-say-ai.html
+• 0.2B 小模型达到 10B 级修图效果，Moebius 重构扩散骨干网络 — 🔗 https://ai-digest.liziran.com/zh/digest/2026-06-20-barret-zoph-exits-openai-five-months-engineers-say-ai.html
+• AI 工程要求更多纪律而非更少，成本治理成新课题 — 🔗 https://ai-digest.liziran.com/zh/digest/2026-06-20-barret-zoph-exits-openai-five-months-engineers-say-ai.html
 
 📚 论文速报
+（来自 ai-brief.liziran.com）
 
-① Beyond Static Leaderboards: Predictive Validity for Evaluating LLM Agents
-研究发现排行榜排名在分布外不稳定——将一个 MCP agent 基准用14种方式重建后，聚合评分排名会无警告翻转。提出"预测有效性"指标衡量样本内排名与样本外排名的相关性。
+① Leaderboard Rank ≠ Deployment Performance
+基准排名不能预测实际部署效果。MCP agent 基准改造 14 种方式后，发现聚合分数排名极不稳定，应改用"预测有效性"指标。
 🔗 https://arxiv.org/abs/2606.19704
 
-② Native Active Perception as Reasoning for Omni-Modal Understanding (OmniAgent)
-7B 视频 agent 通过主动感知（POMDP 观察-思考-行动循环）在 LVBench 达到 50.5% 准确率，超越 Qwen2.5-VL-72B 的 47.3%。关键在于将长视频理解重新框架为感知推理问题。
-🔗 https://arxiv.org/abs/2606.19341
+② Test-Time Reasoning 是预算而非开关
+SEVRA 框架表明选择性验证能省 26.8% 后生成 token，但调整初始推理预算能省更多。关键洞察：不要用后验修补，而要设好前期预算。
+🔗 https://arxiv.org/abs/2606.19808
 
-③ ENPIRE: Agentic Robot Policy Self-Improvement in the Real World
-机器人手臂在钉插、拉链、工具使用等任务上自主达到 99% 成功率。系统包含环境（自动复位/评分）、改进（策略精化）、展开（并行评估）、演化（读日志、搜文献、修改训练）四个模块。
+③ 机器人自我改进达 99% 成功率
+ENPIRE 给机器人物理反馈循环，pin 插入和 zip 扎紧等任务自主达到 99% 成功。从模拟转向真实世界的具身 AI 自我改进。
 🔗 https://arxiv.org/abs/2606.19980
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-06-23-387941f9-8904-81d8-bfff-fd1d8d3428e3
+④ 7B 模型击败 72B 模型的长视频理解
+OmniAgent 以 POMDP 观察-思考-行动循环处理长视频，7B 在长视频基准上达 50.5%，超越 Qwen2.5-VL-72B 的 47.3%。
+🔗 https://arxiv.org/abs/2606.19341
+
+📓 Notion: https://www.notion.so/AI-Builders-Digest-20260624-389941f9890481cba42ded926b2b71f3
 🌐 https://xiaochengzi2048.github.io/digest.txt
