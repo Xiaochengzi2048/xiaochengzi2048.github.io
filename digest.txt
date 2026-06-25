@@ -1,39 +1,37 @@
-🗞 AI 日报 · 2026.06.21
+🗞 AI 日报 · 2026.06.25
 
 📰 今日速报
 
-① 诺奖得主 John Jumper 离开 DeepMind 加入 Anthropic
-AlphaFold 获奖者跳槽竞争对手，DeepMind 人才持续流失，顶级研究团队正在分化。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
+① OpenAI & Anthropic 砸2700万干预纽约地方初选，打成平手
+在纽约州议员 Alex Bores 竞选联邦众议院第12选区民主党提名期间，两家立场对立的 AI 巨头各投入巨资。最终结果以 2700 万美元换来零收益，引发对科技企业政治影响力的反思。
+🔗 https://ai-digest.liziran.com/zh/
 
-② ChatGPT 健康问答交由 GPT-5.5 处理，独立测试显示幻觉率是开源模型 3 倍
-OpenAI 称医生参与评估，但独立测试数据相悖。健康领域的"永远给出答案"风险凸显——不知道也要硬编理由。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
+② 电脑操作能力进入 Gemini 3.5 Flash，降低企业自动化成本
+原本独立的 Gemini 2.5 电脑操作模型能力现已内置进更便宜的 Flash 版本。这一更新主打企业自动化应用，包括持续软件测试和跨专业知识工作，但长程多步任务仍需谨慎压测。
+🔗 https://ai-digest.liziran.com/zh/
 
-③ 三名亚马逊工程师市议会作证后被指面临解雇
-就数据中心扩张限制作证，援引禁止政治言论报复法，反过来被指纪律处分。AI 产业权力集中化正遭遇系统性阻力。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
+③ A24 收 Google 7500 万美元引发影迷抵制，创意工作者面临新挑战
+独立电影公司 A24 接受 Google DeepMind 大额投资后遭铁杆影迷反对。Cory Doctorow 新书《The Reverse Centaur's Guide to Life After AI》呼吁创意工作者为 AI 时代做准备。
+🔗 https://ai-digest.liziran.com/zh/
 
-快讯：
-• DeepSeek 上线视觉功能，网页版聊天加入图像理解能力 — 🔗 https://www.deepseek.com/
-• 挪威近乎全面禁止小学使用 AI，出台正式规定 — 🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
-• Signal 总裁 Whittaker 警告：AI 聊天机器人不是你的朋友，不是有意识的存在 — 🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
-• 《大西洋月刊》公开 AI 训练音乐数据库，含 1200 万和 900 万首曲目可检索 — 🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
-• NVIDIA 戛纳创意节展示 AI 广告营销自动化方案 — 🔗 https://ai-digest.liziran.com/zh/digest/2026-06-21-openai-hands-health-questions-gpt-55-days-after-test.html
+• SpaceX 以 600 亿美元全股票收购 Cursor，拯救掉队的 AI 部门——🔗 https://ai-digest.liziran.com/zh/
+• ChatGPT 市场份额首次跌破 50%，Gemini 和 Claude 蚕食市场——🔗 https://ai-digest.liziran.com/zh/
+• 随身耳机要装摄像头，苹果 AirPods 计划 2027 年底推出摄像头版本——🔗 https://ai-digest.liziran.com/zh/
 
 📚 论文速报
 
-① Leaderboards Don't Predict Deployment Performance：MCP agent 评测集重建 14 种方式，发现排行榜名次严重不稳定。正确做法是测量"预测效度"而非绝对得分。
-🔗 https://arxiv.org/abs/2606.19704
+① PANY：多视图几何方法实现无 CAD 模型的 6D 位姿估计
+用几张参考照片即可生成新物体的位姿。相比现有方法在 YCB-V 上提升 12%，在 LM-O 上提升 20%+，大幅降低工业应用门槛。
+🔗 https://arxiv.org/abs/2606.23634
 
-② SEVRA - Selective Verification for Budget-Aware Reasoning：按查询决定是否触发验证，76.3% 准确度但节省后处理 token 26.8%。初始预算优化比事后补救更省成本。
-🔗 https://arxiv.org/abs/2606.19808
+② Mat-Pref：8B 微调模型超越 235B 零样本模型在材料科学推理上的表现
+通过两阶段 RLVR 训练，在 10837 个离子替代问题上实现突破，展示小模型聚焦领域能力的威力。大模型零样本仅 33-54% 准确，但经过优化的小模型可达 73-74%。
+🔗 https://arxiv.org/abs/2606.21830
 
-③ ENPIRE - Robot Policy Self-Improvement in Real World：机器人物理反馈循环实现 99% 成功率，pin 插入、拉链绑定完全自主学习，无需人工干预。
-🔗 https://arxiv.org/abs/2606.19980
+③ EvoEmbedding：260M 参数有状态嵌入模型，上下文能力超越 8B 专用模型
+首创连续更新潜在记忆的检索方法，在上下文长度超过训练窗口 10 倍的情况下仍能泛化，挑战了"大即更强"的常规认知。
+🔗 https://arxiv.org/abs/2606.21649
 
-④ OmniAgent - Native Active Perception for Long Video：7B 参数模型在视频理解上击败 Qwen2.5-VL-72B（参数量 10 倍），通过智能跳帧和连续记忆实现。
-🔗 https://arxiv.org/abs/2606.19341
-
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-06-21-389941f9-8904-81cb-a42d-ed926b2b71f3
+📓 Notion: https://www.notion.so/AI-Builders-Digest-20260625-38a941f9-8904-8168-a5da-ce53e943418f
 🌐 https://xiaochengzi2048.github.io/digest.txt
+
