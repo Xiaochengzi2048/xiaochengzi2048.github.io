@@ -1,37 +1,34 @@
-🗞 AI 日报 · 2026.06.25
+🗞 AI 日报 · 2026.06.26
 
 📰 今日速报
+（来自 ai-digest.liziran.com）
 
-① OpenAI & Anthropic 砸2700万干预纽约地方初选，打成平手
-在纽约州议员 Alex Bores 竞选联邦众议院第12选区民主党提名期间，两家立场对立的 AI 巨头各投入巨资。最终结果以 2700 万美元换来零收益，引发对科技企业政治影响力的反思。
-🔗 https://ai-digest.liziran.com/zh/
+① 阿里巴巴被Anthropic指控蒸馏Claude，OpenAI下一代旗舰得先问白宫
+阿里巴巴因使用Anthropic模型进行蒸馏被指控违反服务条款。同时，OpenAI的下一代旗舰模型需要获得白宫批准才能发布，这反映了AI安全监管的升级趋势。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-26-white-house-dictated-gpt-56s-launch-ford-rehired-engineers.html
 
-② 电脑操作能力进入 Gemini 3.5 Flash，降低企业自动化成本
-原本独立的 Gemini 2.5 电脑操作模型能力现已内置进更便宜的 Flash 版本。这一更新主打企业自动化应用，包括持续软件测试和跨专业知识工作，但长程多步任务仍需谨慎压测。
-🔗 https://ai-digest.liziran.com/zh/
+② A24收Google七千五百万被影迷骂，OpenAI和Anthropic砸2700万干预地方选举打成平手
+谷歌与A24的合作引发争议，OpenAI和Anthropic各投入1350万美元参与地方选举政治游说，力度相当，显示AI公司政治影响力的扩大。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-25-openai-anthropic-burned-27-million-fighting-one-lawmaker.html
 
-③ A24 收 Google 7500 万美元引发影迷抵制，创意工作者面临新挑战
-独立电影公司 A24 接受 Google DeepMind 大额投资后遭铁杆影迷反对。Cory Doctorow 新书《The Reverse Centaur's Guide to Life After AI》呼吁创意工作者为 AI 时代做准备。
-🔗 https://ai-digest.liziran.com/zh/
-
-• SpaceX 以 600 亿美元全股票收购 Cursor，拯救掉队的 AI 部门——🔗 https://ai-digest.liziran.com/zh/
-• ChatGPT 市场份额首次跌破 50%，Gemini 和 Claude 蚕食市场——🔗 https://ai-digest.liziran.com/zh/
-• 随身耳机要装摄像头，苹果 AirPods 计划 2027 年底推出摄像头版本——🔗 https://ai-digest.liziran.com/zh/
+③ 平台每挣1美元倒贴14美元，Claude Code的「思考」日志你还根本打不开
+Claude Code应用的"思考"日志功能仍需完善，但一个更严峻的问题是——平台每赚1美元就要倒贴14美元，商业模式面临严峻挑战。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-24-critics-zero-math-where-1-ai-revenue-costs-platforms-14.html
 
 📚 论文速报
+（来自 ai-brief.liziran.com）
 
-① PANY：多视图几何方法实现无 CAD 模型的 6D 位姿估计
-用几张参考照片即可生成新物体的位姿。相比现有方法在 YCB-V 上提升 12%，在 LM-O 上提升 20%+，大幅降低工业应用门槛。
-🔗 https://arxiv.org/abs/2606.23634
+① Late Layers Quietly Rewrite Correct Answers：研究发现大模型在推理过程中会暗中修改已有的正确答案，揭示了对齐训练的盲点。
+🔗 https://ai-brief.liziran.com/en/daily/2026-06-26-confident-decoding-alignment-tax-early-layers.html
 
-② Mat-Pref：8B 微调模型超越 235B 零样本模型在材料科学推理上的表现
-通过两阶段 RLVR 训练，在 10837 个离子替代问题上实现突破，展示小模型聚焦领域能力的威力。大模型零样本仅 33-54% 准确，但经过优化的小模型可达 73-74%。
-🔗 https://arxiv.org/abs/2606.21830
+② Pose New Objects From a Few Reference Photos：少量参考图片即可生成新物体姿态，显著降低了3D建模的数据需求。
+🔗 https://ai-brief.liziran.com/en/daily/2026-06-25-pose-anything-reference-images-frozen-backbone-adapters.html
 
-③ EvoEmbedding：260M 参数有状态嵌入模型，上下文能力超越 8B 专用模型
-首创连续更新潜在记忆的检索方法，在上下文长度超过训练窗口 10 倍的情况下仍能泛化，挑战了"大即更强"的常规认知。
-🔗 https://arxiv.org/abs/2606.21649
+③ An 8B Model Beats a 235B One at Science Reasoning：8B小模型在科学推理任务上击败235B大模型，参数效率成为新的优化方向。
+🔗 https://ai-brief.liziran.com/en/daily/2026-06-23-decision-density-rlvr-science-protein-attribution.html
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-20260625-38a941f9-8904-8168-a5da-ce53e943418f
+④ A Stateful 260M Embedding Beats 8B Specialists：260M参数的有状态嵌入模型超越8B专用模型，稀疏架构前景广阔。
+🔗 https://ai-brief.liziran.com/en/daily/2026-06-22-stateful-embedding-evoembedding-retrieval-agent.html
+
+📓 Notion: https://www.notion.so/AI-Builders-Digest-20260626-38b941f9-8904-81fd-853a-d5f1eab08fd3
 🌐 https://xiaochengzi2048.github.io/digest.txt
-
