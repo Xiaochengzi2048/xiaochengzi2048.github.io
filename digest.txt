@@ -1,34 +1,41 @@
-🗞 AI 日报 · 2026.06.26
+🗞 AI 日报 · 2026.06.27
 
 📰 今日速报
-（来自 ai-digest.liziran.com）
 
-① 阿里巴巴被Anthropic指控蒸馏Claude，OpenAI下一代旗舰得先问白宫
-阿里巴巴因使用Anthropic模型进行蒸馏被指控违反服务条款。同时，OpenAI的下一代旗舰模型需要获得白宫批准才能发布，这反映了AI安全监管的升级趋势。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-26-white-house-dictated-gpt-56s-launch-ford-rehired-engineers.html
+① OpenAI 和 Anthropic 在纽约州议员初选中各投 1350 万美元
+两家公司为支持或反对纽约州议员 Alex Bores 的竞选而砸下 2700 万美元，尽管双方在 AI 监管立场上对立（OpenAI 支持较宽松政策，Anthropic 支持严格安全约束），最终形成平局。此举反映 AI 公司对政策制定的深度介入。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-25-political
 
-② A24收Google七千五百万被影迷骂，OpenAI和Anthropic砸2700万干预地方选举打成平手
-谷歌与A24的合作引发争议，OpenAI和Anthropic各投入1350万美元参与地方选举政治游说，力度相当，显示AI公司政治影响力的扩大。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-25-openai-anthropic-burned-27-million-fighting-one-lawmaker.html
+② Gemini 3.5 Flash 内置电脑操作能力，企业自动化迎来新工具
+Google 将原本独立的 Gemini 2.5 电脑操作模型能力集成到成本更低的 Flash 版本中，主打企业软件测试和跨专业应用知识工作的自动化。长程多步任务仍是技术瓶颈，需要压测后才能选型。
+🔗 https://ai-digest.liziran.com/zh/
 
-③ 平台每挣1美元倒贴14美元，Claude Code的「思考」日志你还根本打不开
-Claude Code应用的"思考"日志功能仍需完善，但一个更严峻的问题是——平台每赚1美元就要倒贴14美元，商业模式面临严峻挑战。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-24-critics-zero-math-where-1-ai-revenue-costs-platforms-14.html
+③ OpenAI 首颗自研推理芯片 Jalapeño 现身
+与博通合造的 ASIC 专为大模型推理优化，旨在摆脱外购芯片依赖。推理成本控制权从供应商转向 OpenAI，推理市场格局面临重塑。
+🔗 https://ai-digest.liziran.com/zh/digest/2026-06-23-chips
+
+快讯
+• OpenAI 2025 年净亏损 385 亿美元（已审计版本首次公开） — 研发与算力开销增速超营收增速
+• ChatGPT 月活 11 亿但市场份额首次跌破 50%，Gemini 和 Claude 等竞品蚕食份额
+• Anthropic 暂停 Claude Agent SDK 按 token 计费，重度用户成本将大幅上升
 
 📚 论文速报
-（来自 ai-brief.liziran.com）
 
-① Late Layers Quietly Rewrite Correct Answers：研究发现大模型在推理过程中会暗中修改已有的正确答案，揭示了对齐训练的盲点。
-🔗 https://ai-brief.liziran.com/en/daily/2026-06-26-confident-decoding-alignment-tax-early-layers.html
+① DiffusionBench：ImageNet-FID 与文生图质量呈负相关
+NanoGen 框架统一训练 21 个扩散模型，揭示 ImageNet 排名与文生图排名的皮尔逊相关系数为 -0.377 至 -0.580。单一基准选型易导致模型性能在实际应用中反向——需用 DiffusionBench 进行多维度评估。
+🔗 https://arxiv.org/abs/2606.24888
 
-② Pose New Objects From a Few Reference Photos：少量参考图片即可生成新物体姿态，显著降低了3D建模的数据需求。
-🔗 https://ai-brief.liziran.com/en/daily/2026-06-25-pose-anything-reference-images-frozen-backbone-adapters.html
+② FLAT：单张照片直接生成游戏引擎可用的 3D 场景
+从视频扩散潜在空间解码出可三角形剖分网格，单次前向推理完成转换。引入射线中心旋转参数化与乘积窗函数解决三角形 splatting 的方向敏感性，轻量级推理时优化实现实时渲染资产。
+🔗 https://arxiv.org/abs/2606.24876
 
-③ An 8B Model Beats a 235B One at Science Reasoning：8B小模型在科学推理任务上击败235B大模型，参数效率成为新的优化方向。
-🔗 https://ai-brief.liziran.com/en/daily/2026-06-23-decision-density-rlvr-science-protein-attribution.html
+③ DeepSeek V4：神经记忆索引实现 13.5% KV 缓存占用
+稀疏注意力与神经记忆索引（双编码器独立训练）按需获取关键 KV。500K 长度上下文下 VRAM 开销下降 >90%，长文本服务瓶颈从 KV 内存转向索引召回质量。
+🔗 https://arxiv.org/abs/2606.09079
 
-④ A Stateful 260M Embedding Beats 8B Specialists：260M参数的有状态嵌入模型超越8B专用模型，稀疏架构前景广阔。
-🔗 https://ai-brief.liziran.com/en/daily/2026-06-22-stateful-embedding-evoembedding-retrieval-agent.html
+④ LoopCoder-v2：平行循环推理加速代码补全
+并行循环训练配合交叉循环位置偏移与滑动窗口共享 KV，SWE-bench Verified 性能从 43.0% 提升至 64.4%。第二轮循环收益最大，三轮及以上循环反而下降。
+🔗 https://arxiv.org/abs/2606.18023
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-20260626-38b941f9-8904-81fd-853a-d5f1eab08fd3
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-06-27-38c941f989048146a9fcdf17e14fe7b4
 🌐 https://xiaochengzi2048.github.io/digest.txt
