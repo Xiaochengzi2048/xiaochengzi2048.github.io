@@ -1,41 +1,33 @@
-🗞 AI 日报 · 2026.06.27
+🗞 AI 日报 · 2026.06.28
 
 📰 今日速报
 
-① OpenAI 和 Anthropic 在纽约州议员初选中各投 1350 万美元
-两家公司为支持或反对纽约州议员 Alex Bores 的竞选而砸下 2700 万美元，尽管双方在 AI 监管立场上对立（OpenAI 支持较宽松政策，Anthropic 支持严格安全约束），最终形成平局。此举反映 AI 公司对政策制定的深度介入。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-25-political
-
-② Gemini 3.5 Flash 内置电脑操作能力，企业自动化迎来新工具
-Google 将原本独立的 Gemini 2.5 电脑操作模型能力集成到成本更低的 Flash 版本中，主打企业软件测试和跨专业应用知识工作的自动化。长程多步任务仍是技术瓶颈，需要压测后才能选型。
+① OpenAI发布自研推理芯片Jalapeño
+与博通合造ASIC，专为大模型推理优化设计。这是OpenAI进一步垂直整合算力、降低推理成本的重要举措。
 🔗 https://ai-digest.liziran.com/zh/
 
-③ OpenAI 首颗自研推理芯片 Jalapeño 现身
-与博通合造的 ASIC 专为大模型推理优化，旨在摆脱外购芯片依赖。推理成本控制权从供应商转向 OpenAI，推理市场格局面临重塑。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-23-chips
+② SpaceX完成史上最大规模IPO
+定价每股135美元；随即宣布以600亿美元全股票收购Cursor。太空与AI的融合加速。
+🔗 https://ai-digest.liziran.com/zh/
 
-快讯
-• OpenAI 2025 年净亏损 385 亿美元（已审计版本首次公开） — 研发与算力开销增速超营收增速
-• ChatGPT 月活 11 亿但市场份额首次跌破 50%，Gemini 和 Claude 等竞品蚕食份额
-• Anthropic 暂停 Claude Agent SDK 按 token 计费，重度用户成本将大幅上升
+③ Claude Fable 5发布
+Anthropic发布几乎所有基准SOTA的新模型，但装有3道能力限制以应对监管压力。
+🔗 https://ai-digest.liziran.com/zh/
+
+• 白宫以出口管制为由命令Anthropic切断SK Telecom对Claude Mythos的访问权限 — 🔗 https://ai-digest.liziran.com/zh/
+• OpenAI 2025年净亏损385.3亿美元，内部传出"Chat已死"，计划改造ChatGPT为高毛利入口 — 🔗 https://ai-digest.liziran.com/zh/
+• Qualcomm以近40亿美元收购芯片软件初创公司Modular — 🔗 https://ai-digest.liziran.com/zh/
 
 📚 论文速报
 
-① DiffusionBench：ImageNet-FID 与文生图质量呈负相关
-NanoGen 框架统一训练 21 个扩散模型，揭示 ImageNet 排名与文生图排名的皮尔逊相关系数为 -0.377 至 -0.580。单一基准选型易导致模型性能在实际应用中反向——需用 DiffusionBench 进行多维度评估。
+① DiffusionBench：ImageNet-FID与文生图性能负相关（Pearson系数至-0.58），揭示单一基准选模的不可靠性。
 🔗 https://arxiv.org/abs/2606.24888
 
-② FLAT：单张照片直接生成游戏引擎可用的 3D 场景
-从视频扩散潜在空间解码出可三角形剖分网格，单次前向推理完成转换。引入射线中心旋转参数化与乘积窗函数解决三角形 splatting 的方向敏感性，轻量级推理时优化实现实时渲染资产。
-🔗 https://arxiv.org/abs/2606.24876
+② EnterpriseClawBench：852个真实职场agent任务评测，最佳模型仅得0.663分，远未达部署就绪。
+🔗 https://arxiv.org/abs/2606.23654
 
-③ DeepSeek V4：神经记忆索引实现 13.5% KV 缓存占用
-稀疏注意力与神经记忆索引（双编码器独立训练）按需获取关键 KV。500K 长度上下文下 VRAM 开销下降 >90%，长文本服务瓶颈从 KV 内存转向索引召回质量。
-🔗 https://arxiv.org/abs/2606.09079
+③ Confident Decoding：通过更早置信层解码规避对齐税损害推理精度，零额外显存、<2%延迟开销。
+🔗 https://arxiv.org/abs/2606.21906
 
-④ LoopCoder-v2：平行循环推理加速代码补全
-并行循环训练配合交叉循环位置偏移与滑动窗口共享 KV，SWE-bench Verified 性能从 43.0% 提升至 64.4%。第二轮循环收益最大，三轮及以上循环反而下降。
-🔗 https://arxiv.org/abs/2606.18023
-
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-06-27-38c941f989048146a9fcdf17e14fe7b4
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-06-28-38d941f9890481b59f5fdce9b7da7a53
 🌐 https://xiaochengzi2048.github.io/digest.txt
