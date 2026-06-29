@@ -1,33 +1,32 @@
-🗞 AI 日报 · 2026.06.28
+🗞 AI 日报 · 2026.06.29
 
 📰 今日速报
 
-① OpenAI发布自研推理芯片Jalapeño
-与博通合造ASIC，专为大模型推理优化设计。这是OpenAI进一步垂直整合算力、降低推理成本的重要举措。
-🔗 https://ai-digest.liziran.com/zh/
+① OpenAI GPT-5.6 Sol 限量预览上线
+白宫以安全顾虑为由要求 OpenAI 分阶段推出新模型。GPT-5.6 Sol 目前仅向精选合作伙伴开放预览，计划逐步扩大访问范围。Sam Altman 宣布新的展开策略，平衡创新与安全监管需求。
+🔗 https://techcrunch.com/2026/06/25/the-white-house-is-asking-openai-to-slow-roll-the-release-of-its-new-model-over-safety-concerns
 
-② SpaceX完成史上最大规模IPO
-定价每股135美元；随即宣布以600亿美元全股票收购Cursor。太空与AI的融合加速。
-🔗 https://ai-digest.liziran.com/zh/
+② Google Gemini 3.5 Flash 新增计算机操作能力
+Google 在 I/O 2026 发布会上推出 Gemini 3.5 Flash 的计算机操作功能，扩展多模态 AI 的实用场景。新增 Interactions API 作为 Gemini 模型的主要开发者接口。
+🔗 https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/
 
-③ Claude Fable 5发布
-Anthropic发布几乎所有基准SOTA的新模型，但装有3道能力限制以应对监管压力。
-🔗 https://ai-digest.liziran.com/zh/
-
-• 白宫以出口管制为由命令Anthropic切断SK Telecom对Claude Mythos的访问权限 — 🔗 https://ai-digest.liziran.com/zh/
-• OpenAI 2025年净亏损385.3亿美元，内部传出"Chat已死"，计划改造ChatGPT为高毛利入口 — 🔗 https://ai-digest.liziran.com/zh/
-• Qualcomm以近40亿美元收购芯片软件初创公司Modular — 🔗 https://ai-digest.liziran.com/zh/
+③ Anthropic 暂停 Claude 代理 SDK 计费变更
+Anthropic 宣布暂停原定于 6 月 15 日执行的 Claude Code 和代理 SDK 计费模式调整，改为继续按现有方式计费，听取社区反馈后再决定后续政策。
+🔗 https://help.make.com/anthropic-claude-model-deprecations-on-june-15-2026
 
 📚 论文速报
 
-① DiffusionBench：ImageNet-FID与文生图性能负相关（Pearson系数至-0.58），揭示单一基准选模的不可靠性。
-🔗 https://arxiv.org/abs/2606.24888
+① ViQ：高效视觉 token 加速多模态训练
+提出文本对齐预训练加分割头量化方案，在保持 SOTA 连续编码器性能的同时，将多模态模型训练时间降低 20-70%。论文来自 Google DeepMind 团队。
+🔗 https://arxiv.org/abs/2606.27313
 
-② EnterpriseClawBench：852个真实职场agent任务评测，最佳模型仅得0.663分，远未达部署就绪。
-🔗 https://arxiv.org/abs/2606.23654
+② DanceOPD：统一图像生成与编辑的在线蒸馏
+解决了文本生成、局部编辑和全局编辑在训练中的冲突。采用在线策略场蒸馏，学生模型在自身生成轨迹上学习。可集成无分类器指导到模型中，消除推理开销。
+🔗 https://arxiv.org/abs/2606.27377
 
-③ Confident Decoding：通过更早置信层解码规避对齐税损害推理精度，零额外显存、<2%延迟开销。
-🔗 https://arxiv.org/abs/2606.21906
+③ OPID：从轨迹自动推导密集奖励
+解决多轮智能体强化学习中的稀疏轨迹级奖励问题。从完成的在线轨迹推断分层技能监督，支持 token 级自蒸馏。在 ALFWorld、WebShop 等任务中验证有效。
+🔗 https://arxiv.org/abs/2606.26790
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-06-28-38d941f9890481b59f5fdce9b7da7a53
+📓 Notion: https://www.notion.so/AI-Builders-Digest-20260629-38e941f9-8904-815b-ac22-c34b4d02b382
 🌐 https://xiaochengzi2048.github.io/digest.txt
