@@ -2,31 +2,31 @@
 
 📰 今日速报
 
-① OpenAI GPT-5.6 Sol 限量预览上线
-白宫以安全顾虑为由要求 OpenAI 分阶段推出新模型。GPT-5.6 Sol 目前仅向精选合作伙伴开放预览，计划逐步扩大访问范围。Sam Altman 宣布新的展开策略，平衡创新与安全监管需求。
-🔗 https://techcrunch.com/2026/06/25/the-white-house-is-asking-openai-to-slow-roll-the-release-of-its-new-model-over-safety-concerns
+① 白宫以国家安全为由强制切断 Anthropic 模型对外国用户的访问
+Fable 5 和 Mythos 5 按国籍而非地理位置限制，触发因素包括亚马逊 CEO 安全顾虑和网络安全研究报告。经谈判，Mythos 5 向部分美国机构恢复，Fable 5 仍限公众访问。
+🔗 https://ai-digest.liziran.com/zh/
 
-② Google Gemini 3.5 Flash 新增计算机操作能力
-Google 在 I/O 2026 发布会上推出 Gemini 3.5 Flash 的计算机操作功能，扩展多模态 AI 的实用场景。新增 Interactions API 作为 Gemini 模型的主要开发者接口。
-🔗 https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/
+① 特朗普政府要求 OpenAI 错峰发布 GPT-5.6，政府直接干预模型发布时间表首次出现
+GPT-5.6 以限量预览形式先开放给一小群人，政府逐个审批用户资格。OpenAI 公开声明这不应成为惯例。
+🔗 https://ai-digest.liziran.com/zh/
 
-③ Anthropic 暂停 Claude 代理 SDK 计费变更
-Anthropic 宣布暂停原定于 6 月 15 日执行的 Claude Code 和代理 SDK 计费模式调整，改为继续按现有方式计费，听取社区反馈后再决定后续政策。
-🔗 https://help.make.com/anthropic-claude-model-deprecations-on-june-15-2026
+① Anthropic 指控阿里巴巴大规模蒸馏 Claude
+阿里通过 2.5 万个账号、2880 万次对话提取 Claude 能力，创迄今最大规模模型克隆行为。
+🔗 https://ai-digest.liziran.com/zh/
 
 📚 论文速报
 
-① ViQ：高效视觉 token 加速多模态训练
-提出文本对齐预训练加分割头量化方案，在保持 SOTA 连续编码器性能的同时，将多模态模型训练时间降低 20-70%。论文来自 Google DeepMind 团队。
+① ViQ：文本对齐预训练加分割头量化，减少多模态训练时间 20–70%
 🔗 https://arxiv.org/abs/2606.27313
 
-② DanceOPD：统一图像生成与编辑的在线蒸馏
-解决了文本生成、局部编辑和全局编辑在训练中的冲突。采用在线策略场蒸馏，学生模型在自身生成轨迹上学习。可集成无分类器指导到模型中，消除推理开销。
+① DanceOPD：在线策略蒸馏统一图像生成和编辑，消除推理时分类器自由指导开销
 🔗 https://arxiv.org/abs/2606.27377
 
-③ OPID：从轨迹自动推导密集奖励
-解决多轮智能体强化学习中的稀疏轨迹级奖励问题。从完成的在线轨迹推断分层技能监督，支持 token 级自蒸馏。在 ALFWorld、WebShop 等任务中验证有效。
+① OPID：从在线轨迹推断分层技能监督，处理无外部技能库的多轮强化学习智能体
 🔗 https://arxiv.org/abs/2606.26790
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-20260629-38e941f9-8904-815b-ac22-c34b4d02b382
+① Confident Decoding：发现深层网络为对齐而篡改正确答案；从自信的早期层解码恢复准确性，无需重训
+🔗 https://arxiv.org/abs/2606.21906
+
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-06-29-38e941f9-8904-815b-ac22-c34b4d02b382
 🌐 https://xiaochengzi2048.github.io/digest.txt
