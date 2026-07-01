@@ -1,40 +1,36 @@
-🗞 AI 日报 · 2026.06.30
+🗞 AI 日报 · 2026.07.01
 
 📰 今日速报
 
-① Anthropic指控阿里巴巴大规模蒸馏Claude
-Anthropic指控阿里巴巴动用2.5万个账号、通过2880万次对话提取Claude能力，称这是迄今最大规模的Claude克隆行为。这反映了模型IP保护与跨境竞争的新边界。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-27-anthropic-alibaba-distillation
+① Agent 能力突破：参数量不再是上限
+任务链长度和自我搭脚手架能力才是 Agent 能力的决定因素。Agents-A1（35B MoE 模型）平均轨迹 45 步，表现已追平万亿参数级旗舰；Ornith-1.0 开源模型提供 9B/31B/397B 变体，可本地自托管。
+🔗 https://ai-digest.liziran.com/zh/
 
-② OpenAI自研推理芯片Jalapeño
-OpenAI与博通联手打造的ASIC专为大模型推理优化。平台每生成1美元收入要烧掉8-14美元算力，新芯片旨在改善推理成本和规模，打破对英伟达的依赖。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-23-openai-jalapeno-chip
+② Claude Sonnet 5 定价与新模型发布
+Claude Sonnet 5 发布，定价 $2/百万输入 token，$10/百万输出 token，能力逼近 Opus 4.8。Anthropic 同步发布 Claude Science，支持高层指令自主推进科研工作，首批服务药企和生物科技公司。
+🔗 https://ai-digest.liziran.com/zh/
 
-③ 白宫要求OpenAI错峰发布GPT-5.6
-特朗普政府要求OpenAI以限量预览形式先发布GPT-5.6，政府首次直接干预模型发布时间表。OpenAI公开表示\"这不该成为惯例\"，反映出政府与AI公司的新博弈。
-🔗 https://ai-digest.liziran.com/zh/digest/2026-06-26-gpt-56-timing
+③ AI 生成花卉种子骗局在 eBay/亚马逊/Etsy 蔓延
+eBay、亚马逊、Etsy 出现 AI 生成"奇异花卉"种子诈骗，现实中并不存在这些物种。造假边际成本趋近于零，平台人工审核已跟不上上架速度。识别方法：查不到学名的"奇花"基本是 AI 生成。
+🔗 https://ai-digest.liziran.com/zh/
 
-快讯：
-• Gemini 3.5 Flash内置Computer Use，企业安全开关新增敏感操作确认与prompt injection检测 — 🔗 https://ai-digest.liziran.com/zh/digest/2026-06-22-gemini-35-flash
-• 苹果Vision Pro负责人Paul Meade离职加入OpenAI硬件团队，同期MacBook Pro涨价300美元 — 🔗 https://ai-digest.liziran.com/zh/digest/2026-06-28-apple-price
+• Claude Code 隐写水印事件：在特定时区和域名下修改日期撇号和分隔符作隐藏标记 — 🔗 https://ai-digest.liziran.com/zh/
+• Etched 推理芯片公司估值达 50 亿美元，已锁定 10 亿美元订单 — 🔗 https://ai-digest.liziran.com/zh/
+• 亚马逊 FDE 部门投入 10 亿美元，工程师进驻客户公司部署定制 Agent — 🔗 https://ai-digest.liziran.com/zh/
 
 📚 论文速报
 
-① PhysisForcing：视频世界模型物理对齐
-机器人通过像素级轨迹对齐和语义关系对齐改进视频世界模型，R-Bench闭环成功率从16%提升至24%，标志着物理约束在世界模型中的关键作用。
-🔗 https://arxiv.org/abs/2606.28128v1
+① OSWorld 2.0 - 长时间序列计算机使用基准
+108 个端到端工作流，中位数 1.6 小时 / 318 个工具调用。Claude Opus 4.8 成功率 20.6%（500 步）、部分完成 54.8%；GPT-5.5 则为 13%。失败模式包括上下文丢失、任务中期信息缺失、猜测而非询问、跳过验证。
+🔗 https://ai-brief.liziran.com/
 
-② NormGuard：RL后训练质量损失修正
-研究发现强化学习会导致每步速度范数膨胀5-15%，通过启发式惩罚在训练阶段而非推理阶段修正，质量收益随推理步骤减少而增长。
-🔗 https://arxiv.org/abs/2606.27771v1
+② Agentic Abstention - 何时停止比是否停止更难
+对 13 个 Agent 系统在 28000+ 任务上的研究表明，何时应该放弃比是否放弃更难判断。CONVOLVE 方法从轨迹中蒸馏停止规则，将 Llama-3.3-70B 的及时放弃召回率从 26.7% 提升至 57.4%。
+🔗 https://ai-brief.liziran.com/
 
-③ 越狱机制研究：注意头特化
-越狱并非摧毁整个安全系统，而是抑制特定早期层的\"攻击易受性头\"(ACHs)，中层\"安全对齐头\"(SAHs)仍保持活跃，为防护设计提供新方向。
-🔗 https://arxiv.org/abs/2606.28153v1
+③ Confident Decoding - 解决对齐税问题
+研究发现后层倾向于将正确预测拖向"更安全、更对齐"的 token。Confident Decoding 从熵判断较小的前层解码，零额外内存、<2% 延迟开销，在 GPQA-Diamond、Omni-MATH 等基准上一致获利。
+🔗 https://ai-brief.liziran.com/
 
-④ DiffusionBench：图像生成基准对齐问题
-关键发现：ImageNet-FID排名与文本到图像排名呈负相关（-0.377至-0.580），单一基准选择方法是危险的，NanoGen框架实现快速基准切换。
-🔗 https://arxiv.org/abs/2606.24888
-
-📓 Notion: https://www.notion.so/AI-Builders-Digest-20260630-38f941f9-8904-811c-84ea-ed8f898388bd
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-01-390941f9-8904-81d5-89ed-ec72520209de
 🌐 https://xiaochengzi2048.github.io/digest.txt
