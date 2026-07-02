@@ -1,36 +1,34 @@
-🗞 AI 日报 · 2026.07.01
+🗞 AI 日报 · 2026.07.02
 
 📰 今日速报
 
-① Agent 能力突破：参数量不再是上限
-任务链长度和自我搭脚手架能力才是 Agent 能力的决定因素。Agents-A1（35B MoE 模型）平均轨迹 45 步，表现已追平万亿参数级旗舰；Ornith-1.0 开源模型提供 9B/31B/397B 变体，可本地自托管。
-🔗 https://ai-digest.liziran.com/zh/
+① 白宫撤销Anthropic出口管制，Claude模型恢复访问
+经两周谈判，美国商务部正式撤销对Anthropic的模型出口管制。Fable 5和Mythos 5恢复对外籍员工开放，Mythos 5向100+受信任美国机构开放，标志AI出口管制趋于理性。
+🔗 https://ai-digest.liziran.com
 
-② Claude Sonnet 5 定价与新模型发布
-Claude Sonnet 5 发布，定价 $2/百万输入 token，$10/百万输出 token，能力逼近 Opus 4.8。Anthropic 同步发布 Claude Science，支持高层指令自主推进科研工作，首批服务药企和生物科技公司。
-🔗 https://ai-digest.liziran.com/zh/
+② Claude Sonnet 5发布，性能逼近Opus 4.8
+Anthropic发布Claude Sonnet 5，推理能力接近Opus 4.8，定价$2/M输入token、$10/M输出，打破OpenAI高端模型垄断，企业用户成本大幅下降。
+🔗 https://ai-digest.liziran.com
 
-③ AI 生成花卉种子骗局在 eBay/亚马逊/Etsy 蔓延
-eBay、亚马逊、Etsy 出现 AI 生成"奇异花卉"种子诈骗，现实中并不存在这些物种。造假边际成本趋近于零，平台人工审核已跟不上上架速度。识别方法：查不到学名的"奇花"基本是 AI 生成。
-🔗 https://ai-digest.liziran.com/zh/
+③ 智谱Z.ai发布GLM-5.2，753B参数MoE开源模型
+智谱发布753B参数MoE模型GLM-5.2，采用MIT开源许可，代码漏洞挖掘F1指标达39%，超越Claude Code的32%，展现开源模型的技术突破。
+🔗 https://ai-digest.liziran.com
 
-• Claude Code 隐写水印事件：在特定时区和域名下修改日期撇号和分隔符作隐藏标记 — 🔗 https://ai-digest.liziran.com/zh/
-• Etched 推理芯片公司估值达 50 亿美元，已锁定 10 亿美元订单 — 🔗 https://ai-digest.liziran.com/zh/
-• 亚马逊 FDE 部门投入 10 亿美元，工程师进驻客户公司部署定制 Agent — 🔗 https://ai-digest.liziran.com/zh/
+快讯
+• OpenAI自研推理芯片Jalapeño与博通合造ASIC，专为大模型推理优化 — 🔗 https://ai-digest.liziran.com
+• SpaceX以600亿美元全股票收购Cursor，IPO后数天重组AI部门 — 🔗 https://ai-digest.liziran.com
+• Anthropic CEO Dario被白宫官员私下称作"weirdo"，谈判改由Tom Brown出席 — 🔗 https://ai-digest.liziran.com
 
 📚 论文速报
 
-① OSWorld 2.0 - 长时间序列计算机使用基准
-108 个端到端工作流，中位数 1.6 小时 / 318 个工具调用。Claude Opus 4.8 成功率 20.6%（500 步）、部分完成 54.8%；GPT-5.5 则为 13%。失败模式包括上下文丢失、任务中期信息缺失、猜测而非询问、跳过验证。
-🔗 https://ai-brief.liziran.com/
+① GBC: Multi-Agent Attribution — 通过梯度反向传播追踪多智能体管道中各步骤的失败原因，AgentChord实现高效归因机制，在MultiWOZ等基准上超越基线，为Agent系统调试提供新方法。
+🔗 https://arxiv.org/abs/2606.28187
 
-② Agentic Abstention - 何时停止比是否停止更难
-对 13 个 Agent 系统在 28000+ 任务上的研究表明，何时应该放弃比是否放弃更难判断。CONVOLVE 方法从轨迹中蒸馏停止规则，将 Llama-3.3-70B 的及时放弃召回率从 26.7% 提升至 57.4%。
-🔗 https://ai-brief.liziran.com/
+② PRA: 无Tokenizer自回归图像生成 — 135M参数模型在ImageNet 256×256达到FID 2.58，性能超越早期十亿级参数模型，通过预测低维中间表示映射到像素token的方法突破自回归图像生成的效率瓶颈。
+🔗 https://arxiv.org/abs/2606.27978
 
-③ Confident Decoding - 解决对齐税问题
-研究发现后层倾向于将正确预测拖向"更安全、更对齐"的 token。Confident Decoding 从熵判断较小的前层解码，零额外内存、<2% 延迟开销，在 GPQA-Diamond、Omni-MATH 等基准上一致获利。
-🔗 https://ai-brief.liziran.com/
+③ OSWorld 2.0: 长任务计算机使用基准 — 108个端到端工作流，平均任务时长1.6小时、318次工具调用，Claude Opus 4.8仅达20.6%完成率，深度揭示长任务规划、记忆管理和验证能力的系统性挑战。
+🔗 https://arxiv.org/abs/2606.29537
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-01-390941f9-8904-81d5-89ed-ec72520209de
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-02-391941f9-8904-8183-a268-f44df39014dd
 🌐 https://xiaochengzi2048.github.io/digest.txt
