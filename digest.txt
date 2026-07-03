@@ -1,34 +1,41 @@
-🗞 AI 日报 · 2026.07.02
+🗞 AI 日报 · 2026.07.03
 
 📰 今日速报
 
-① 白宫撤销Anthropic出口管制，Claude模型恢复访问
-经两周谈判，美国商务部正式撤销对Anthropic的模型出口管制。Fable 5和Mythos 5恢复对外籍员工开放，Mythos 5向100+受信任美国机构开放，标志AI出口管制趋于理性。
-🔗 https://ai-digest.liziran.com
+① Anthropic 模型出口管制风波落幕，商务部撤销 Claude 禁令
+白宫曾因国家安全原因命令 Anthropic 关闭 Claude Fable 5 与 Mythos 5，并禁止外籍员工访问。触发方为亚马逊 CEO Andy Jassy 提交的网络安全报告。最终商务部正式撤销出口管制，Fable 5 从 7 月 3 日起逐步恢复全球访问。
+🔗 https://ai-digest.liziran.com/zh/digest/
 
-② Claude Sonnet 5发布，性能逼近Opus 4.8
-Anthropic发布Claude Sonnet 5，推理能力接近Opus 4.8，定价$2/M输入token、$10/M输出，打破OpenAI高端模型垄断，企业用户成本大幅下降。
-🔗 https://ai-digest.liziran.com
+② Anthropic 指控阿里巴巴大规模蒸馏 Claude，动用 2.5 万账号
+阿里通过 2880 万次对话试图复现 Claude 能力，被称为"迄今最大规模的 Claude 克隆行为"。Anthropic 已对此提出正式指控。
+🔗 https://ai-digest.liziran.com/zh/digest/
 
-③ 智谱Z.ai发布GLM-5.2，753B参数MoE开源模型
-智谱发布753B参数MoE模型GLM-5.2，采用MIT开源许可，代码漏洞挖掘F1指标达39%，超越Claude Code的32%，展现开源模型的技术突破。
-🔗 https://ai-digest.liziran.com
+③ SpaceX 以 600 亿美元全股票收购 Cursor 救其 AI 部门
+这笔交易发生在 SpaceX IPO 后数天，被业界解读为 SpaceX 掉队 AI 赛道的紧急救市。
+🔗 https://ai-digest.liziran.com/zh/digest/
 
-快讯
-• OpenAI自研推理芯片Jalapeño与博通合造ASIC，专为大模型推理优化 — 🔗 https://ai-digest.liziran.com
-• SpaceX以600亿美元全股票收购Cursor，IPO后数天重组AI部门 — 🔗 https://ai-digest.liziran.com
-• Anthropic CEO Dario被白宫官员私下称作"weirdo"，谈判改由Tom Brown出席 — 🔗 https://ai-digest.liziran.com
+• OpenAI 2025 年净亏损 385.3 亿美元，月活 11 亿但市场份额跌破 50% — 🔗 https://ai-digest.liziran.com/zh/digest/
+• Google Gemini 3.5 Flash 内置 Computer Use 能力，降价更新 — 🔗 https://ai-digest.liziran.com/zh/digest/
+• Anthropic 发布 Claude Sonnet 5，定价 $2/$10 per 百万 token，主打廉价 Agent — 🔗 https://ai-digest.liziran.com/zh/digest/
+• 贝索斯旗下 Prometheus 融资 120 亿美元，估值 410 亿，目标通用工程师 — 🔗 https://ai-digest.liziran.com/zh/digest/
 
 📚 论文速报
 
-① GBC: Multi-Agent Attribution — 通过梯度反向传播追踪多智能体管道中各步骤的失败原因，AgentChord实现高效归因机制，在MultiWOZ等基准上超越基线，为Agent系统调试提供新方法。
-🔗 https://arxiv.org/abs/2606.28187
-
-② PRA: 无Tokenizer自回归图像生成 — 135M参数模型在ImageNet 256×256达到FID 2.58，性能超越早期十亿级参数模型，通过预测低维中间表示映射到像素token的方法突破自回归图像生成的效率瓶颈。
-🔗 https://arxiv.org/abs/2606.27978
-
-③ OSWorld 2.0: 长任务计算机使用基准 — 108个端到端工作流，平均任务时长1.6小时、318次工具调用，Claude Opus 4.8仅达20.6%完成率，深度揭示长任务规划、记忆管理和验证能力的系统性挑战。
+① OSWorld 2.0 长轨迹任务基准：中位数 1.6 小时/318 步，Claude Opus 4.8 仅 20.6% 成功率
+发现传统短任务基准完全隐藏了长轨迹失败模式。模型最大问题是丢失约束、跳过验证、盲目猜测。
 🔗 https://arxiv.org/abs/2606.29537
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-02-391941f9-8904-8183-a268-f44df39014dd
+② Arbor 自主研究 Agent：引入假设树外部记忆，超越单轮能力 2.5 倍
+持久化协调器+执行器群+结构化内存架构。在 MLE-Bench Lite 上 GPT-5.5 达成 86.36% Any Medal。
+🔗 https://arxiv.org/abs/2606.11926
+
+③ GBC 多 Agent 归因：梯度反向传播定位故障 Agent，超越基准
+通过可微权重实现任务链里的故障点精确定位，在 MultiWOZ 上胜出。
+🔗 https://arxiv.org/abs/2606.28187
+
+④ Agentic Abstention 研究：何时停止比是否停止更难
+统计 13 个 Agent 系统、28000+ 任务。发现大模型有时在"停止决策"上反而表现更差。
+🔗 https://arxiv.org/abs/2606.28733
+
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-03-392941f9-8904-81a2-b6e5-fc28e424e274
 🌐 https://xiaochengzi2048.github.io/digest.txt
