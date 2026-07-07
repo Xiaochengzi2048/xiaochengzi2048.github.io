@@ -1,41 +1,38 @@
-🗞 AI 日报 · 2026.07.03
+🗞 AI 日报 · 2026.07.07
 
 📰 今日速报
 
-① Anthropic 模型出口管制风波落幕，商务部撤销 Claude 禁令
-白宫曾因国家安全原因命令 Anthropic 关闭 Claude Fable 5 与 Mythos 5，并禁止外籍员工访问。触发方为亚马逊 CEO Andy Jassy 提交的网络安全报告。最终商务部正式撤销出口管制，Fable 5 从 7 月 3 日起逐步恢复全球访问。
-🔗 https://ai-digest.liziran.com/zh/digest/
+① 149.25美元，Claude Fable替他把一个开源库推到了4.0
+「AI写代码」开始能按美元/交付算账；开发者像采购元件一样挑模型，不看排名看价格性能；模型有保质期，别把产品焊死在单一模型上
+🔗 https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-everything
 
-② Anthropic 指控阿里巴巴大规模蒸馏 Claude，动用 2.5 万账号
-阿里通过 2880 万次对话试图复现 Claude 能力，被称为"迄今最大规模的 Claude 克隆行为"。Anthropic 已对此提出正式指控。
-🔗 https://ai-digest.liziran.com/zh/digest/
+② 微软再裁4800人的同一周，亚马逊关停了当年给AI打标签的零工工厂
+白领与数据标注零工同时收缩；「点名AI」的裁员清单仍在增加；早年喂养AI的人力基建正被关停
+🔗 https://techcrunch.com/2026/07/06/microsoft-lays-off-nearly-5000-employees-across-xbox-commercial-sales/
 
-③ SpaceX 以 600 亿美元全股票收购 Cursor 救其 AI 部门
-这笔交易发生在 SpaceX IPO 后数天，被业界解读为 SpaceX 掉队 AI 赛道的紧急救市。
-🔗 https://ai-digest.liziran.com/zh/digest/
+③ 一边帮政府堵安全漏洞，一边被指偷偷追踪中国用户，Anthropic撞上自己的人设
+中国用户或首当其冲，隐私风险未知；「反监控」表态与被指做法正面冲突；追踪范围、机制均未证实，看公司下一步是否正式回应
+🔗 https://arstechnica.com/tech-policy/2026/07/anthropic-outed-for-claude-tracker-that-secretly-monitored-chinese-users/
 
-• OpenAI 2025 年净亏损 385.3 亿美元，月活 11 亿但市场份额跌破 50% — 🔗 https://ai-digest.liziran.com/zh/digest/
-• Google Gemini 3.5 Flash 内置 Computer Use 能力，降价更新 — 🔗 https://ai-digest.liziran.com/zh/digest/
-• Anthropic 发布 Claude Sonnet 5，定价 $2/$10 per 百万 token，主打廉价 Agent — 🔗 https://ai-digest.liziran.com/zh/digest/
-• 贝索斯旗下 Prometheus 融资 120 亿美元，估值 410 亿，目标通用工程师 — 🔗 https://ai-digest.liziran.com/zh/digest/
+• OpenAI将GPT-5.6 Sol Ultra接入Codex — 🔗 https://twitter.com/thsottiaux/status/2073933490513752151
+• Google改隐私设置，默认用你的数据训练AI — 🔗 https://techcrunch.com/2026/07/06/if-you-use-google-youre-training-its-ai-heres-how-to-opt-out/
+• iOS 27 beta可自定义Siri语速和表现力 — 🔗 https://techcrunch.com/2026/07/06/you-can-now-customize-siris-pace-and-expressivity-in-the-latest-ios-27-beta/
+• Reddit用LLM清理LLM制造的垃圾内容 — 🔗 https://techcrunch.com/2026/07/06/reddit-is-using-llms-to-solve-a-problem-llms-largely-created/
+• 英国FCA称监管AI在金融业的使用已成「军备竞赛」 — 🔗 https://arstechnica.com/ai/2026/07/uk-regulator-warns-of-arms-race-to-keep-up-with-ai-use-in-financial-services/
 
 📚 论文速报
 
-① OSWorld 2.0 长轨迹任务基准：中位数 1.6 小时/318 步，Claude Opus 4.8 仅 20.6% 成功率
-发现传统短任务基准完全隐藏了长轨迹失败模式。模型最大问题是丢失约束、跳过验证、盲目猜测。
-🔗 https://arxiv.org/abs/2606.29537
+④ 视频生成 把「又快又好」拆成同一道题来解：偏好对齐与蒸馏加速的梯度冲突，本质是表征空间不匹配——统一到潜空间是条值得试的路子
+🔗 https://arxiv.org/abs/2607.03960v1
 
-② Arbor 自主研究 Agent：引入假设树外部记忆，超越单轮能力 2.5 倍
-持久化协调器+执行器群+结构化内存架构。在 MLE-Bench Lite 上 GPT-5.5 达成 86.36% Any Medal。
-🔗 https://arxiv.org/abs/2606.11926
+⑤ 安全对齐 抹掉有害概念，先选对提示再谈遗忘：提示类型选择本身是影响遗忘效果的旋钮，不只是微调的附属操作
+🔗 https://arxiv.org/abs/2607.03932v1
 
-③ GBC 多 Agent 归因：梯度反向传播定位故障 Agent，超越基准
-通过可微权重实现任务链里的故障点精确定位，在 MultiWOZ 上胜出。
-🔗 https://arxiv.org/abs/2606.28187
+⑥ 多模态 大模型few-shot很好用，可就是落不进工业质检：training-free路线避开了「早期没缺陷样本就没法微调」的死结，适合冷启动部署
+🔗 https://arxiv.org/abs/2607.03817v1
 
-④ Agentic Abstention 研究：何时停止比是否停止更难
-统计 13 个 Agent 系统、28000+ 任务。发现大模型有时在"停止决策"上反而表现更差。
-🔗 https://arxiv.org/abs/2606.28733
+⑦ 图像生成 高置信深度加法向先验，补掉稀疏视角重建的空洞与断裂：稀疏视角下新视角合成已成熟，几何表面重建才是当前真正的短板
+🔗 https://arxiv.org/abs/2607.03765v1
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-03-392941f9-8904-81a2-b6e5-fc28e424e274
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-07-396941f9-8904-8117-8d81-d1d875d25ff6
 🌐 https://xiaochengzi2048.github.io/digest.txt
