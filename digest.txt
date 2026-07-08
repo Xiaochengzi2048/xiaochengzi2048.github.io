@@ -15,25 +15,25 @@
 API采购方可自建同等模型，议价权反转；头部厂商九成推理毛利面临失守；被许诺的家庭回报仅三百美元
 🔗 https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2/
 
-• Anthropic把Claude Cowork搬上手机和网页 — 🔗 https://www.theverge.com/ai-artificial-intelligence/961978/anthropic-claude-cowork-mobile-web
-• 微软转向自研模型压缩AI开支 — 🔗 https://techcrunch.com/2026/07/07/microsoft-joins-ai-cost-cutting-trend-by-relying-more-on-its-own-models/
-• DeepSeek计划自研芯片绕开美国出口管制 — 🔗 https://arstechnica.com/ai/2026/07/facing-us-export-controls-chinas-deepseek-plans-to-make-its-own-chips/
-• OpenAI首席未来学家离职 — 🔗 https://www.wired.com/story/openai-chief-futurist-joshua-achiam-is-leaving-the-company/
-• SK海力士周五赴美IPO — 🔗 https://techcrunch.com/2026/07/06/us-investors-will-soon-get-access-to-sk-hynix-another-memory-maker-riding-the-ai-boom/
+④ Anthropic把Claude Cowork搬上手机和网页 — 🔗 https://www.theverge.com/ai-artificial-intelligence/961978/anthropic-claude-cowork-mobile-web
+⑤ 微软转向自研模型压缩AI开支 — 🔗 https://techcrunch.com/2026/07/07/microsoft-joins-ai-cost-cutting-trend-by-relying-more-on-its-own-models/
+⑥ DeepSeek计划自研芯片绕开美国出口管制 — 🔗 https://arstechnica.com/ai/2026/07/facing-us-export-controls-chinas-deepseek-plans-to-make-its-own-chips/
+⑦ OpenAI首席未来学家离职 — 🔗 https://www.wired.com/story/openai-chief-futurist-joshua-achiam-is-leaving-the-company/
+⑧ SK海力士周五赴美IPO — 🔗 https://techcrunch.com/2026/07/06/us-investors-will-soon-get-access-to-sk-hynix-another-memory-maker-riding-the-ai-boom/
 
 📚 论文速报
 📄 https://ai-brief.liziran.com/zh/daily/2026-07-08-skill-contracts-streaming-avatars-self-distillation.html
 
-④ Agent 同一批人把研究流程拆成了十几个skill，而不是训一个大模型：能力组织单位从「端到端模型」转向「thin、可组合、可编辑的skill contract」，这是比任何单个工具都值得关注的方向
+⑨ Agent 同一批人把研究流程拆成了十几个skill，而不是训一个大模型：能力组织单位从「端到端模型」转向「thin、可组合、可编辑的skill contract」，这是比任何单个工具都值得关注的方向
 🔗 https://arxiv.org/abs/2607.04439
 
-⑤ Agent 跨平台GUI agent卡住的，不是模型不够聪明：跨平台agent的真正瓶颈是可执行轨迹稀缺和平台惯例冲突，不是模型规模
+⑩ Agent 跨平台GUI agent卡住的，不是模型不够聪明：跨平台agent的真正瓶颈是可执行轨迹稀缺和平台惯例冲突，不是模型规模
 🔗 https://arxiv.org/abs/2607.04425
 
-⑥ 视频生成 实时数字人卡在分辨率这道坎上，这次跨过去了：延迟和帧率守住不变、只把分辨率拉上去，才是这次工作的真正难点，也是产品可用性的关键
+⑪ 视频生成 实时数字人卡在分辨率这道坎上，这次跨过去了：延迟和帧率守住不变、只把分辨率拉上去，才是这次工作的真正难点，也是产品可用性的关键
 🔗 https://arxiv.org/abs/2607.04443
 
-⑦ 训练优化 让扩散语言模型练出推理，为什么两条老路都走不通：dLLM后训练的SFT和RL两条路各有硬伤，on-policy自蒸馏是目前被押注的中间解
+⑫ 训练优化 让扩散语言模型练出推理，为什么两条老路都走不通：dLLM后训练的SFT和RL两条路各有硬伤，on-policy自蒸馏是目前被押注的中间解
 🔗 https://arxiv.org/abs/2607.04428
 
 📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-08-397941f9-8904-812d-b245-f1543eb608ad
