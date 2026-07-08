@@ -1,38 +1,38 @@
-🗞 AI 日报 · 2026.07.07
+🗞 AI 日报 · 2026.07.08
 
 📰 今日速报
 
-① 149.25美元，Claude Fable替他把一个开源库推到了4.0
-「AI写代码」开始能按美元/交付算账；开发者像采购元件一样挑模型，不看排名看价格性能；模型有保质期，别把产品焊死在单一模型上
-🔗 https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-everything
+① 在Instagram上，生成一张AI照片，再把陌生用户拉进画面——Meta超级智能实验室做到了
+你可能被生成进陌生人的AI照片；肖像同意权从被拍者转到生成者；Meta超级智能实验室首款模型即上线；无摄像头成智能眼镜隐私卖点
+🔗 https://www.theverge.com/tech/962485/meta-muse-image-ai-model-instagram
 
-② 微软再裁4800人的同一周，亚马逊关停了当年给AI打标签的零工工厂
-白领与数据标注零工同时收缩；「点名AI」的裁员清单仍在增加；早年喂养AI的人力基建正被关停
-🔗 https://techcrunch.com/2026/07/06/microsoft-lays-off-nearly-5000-employees-across-xbox-commercial-sales/
+② Gemini API新增后台任务和远程MCP，agent的重心从「能做什么」挪到「别在生产里崩」
+开发者选型标准从跑分转向生产可靠性；后台任务、远程MCP成部署刚需；企业落地看架构，不看模型能力
+🔗 https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/
 
-③ 一边帮政府堵安全漏洞，一边被指偷偷追踪中国用户，Anthropic撞上自己的人设
-中国用户或首当其冲，隐私风险未知；「反监控」表态与被指做法正面冲突；追踪范围、机制均未证实，看公司下一步是否正式回应
-🔗 https://arstechnica.com/tech-policy/2026/07/anthropic-outed-for-claude-tracker-that-secretly-monitored-chinese-users/
+③ 大模型真正的利润藏在推理里，开源GLM正把它抽走
+API采购方可自建同等模型，议价权反转；头部厂商九成推理毛利面临失守；被许诺的家庭回报仅三百美元
+🔗 https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2/
 
-• OpenAI将GPT-5.6 Sol Ultra接入Codex — 🔗 https://twitter.com/thsottiaux/status/2073933490513752151
-• Google改隐私设置，默认用你的数据训练AI — 🔗 https://techcrunch.com/2026/07/06/if-you-use-google-youre-training-its-ai-heres-how-to-opt-out/
-• iOS 27 beta可自定义Siri语速和表现力 — 🔗 https://techcrunch.com/2026/07/06/you-can-now-customize-siris-pace-and-expressivity-in-the-latest-ios-27-beta/
-• Reddit用LLM清理LLM制造的垃圾内容 — 🔗 https://techcrunch.com/2026/07/06/reddit-is-using-llms-to-solve-a-problem-llms-largely-created/
-• 英国FCA称监管AI在金融业的使用已成「军备竞赛」 — 🔗 https://arstechnica.com/ai/2026/07/uk-regulator-warns-of-arms-race-to-keep-up-with-ai-use-in-financial-services/
+• Anthropic把Claude Cowork搬上手机和网页 — 🔗 https://www.theverge.com/ai-artificial-intelligence/961978/anthropic-claude-cowork-mobile-web
+• 微软转向自研模型压缩AI开支 — 🔗 https://techcrunch.com/2026/07/07/microsoft-joins-ai-cost-cutting-trend-by-relying-more-on-its-own-models/
+• DeepSeek计划自研芯片绕开美国出口管制 — 🔗 https://arstechnica.com/ai/2026/07/facing-us-export-controls-chinas-deepseek-plans-to-make-its-own-chips/
+• OpenAI首席未来学家离职 — 🔗 https://www.wired.com/story/openai-chief-futurist-joshua-achiam-is-leaving-the-company/
+• SK海力士周五赴美IPO — 🔗 https://techcrunch.com/2026/07/06/us-investors-will-soon-get-access-to-sk-hynix-another-memory-maker-riding-the-ai-boom/
 
 📚 论文速报
 
-④ 视频生成 把「又快又好」拆成同一道题来解：偏好对齐与蒸馏加速的梯度冲突，本质是表征空间不匹配——统一到潜空间是条值得试的路子
-🔗 https://arxiv.org/abs/2607.03960v1
+④ Agent 同一批人把研究流程拆成了十几个skill，而不是训一个大模型：能力组织单位从「端到端模型」转向「thin、可组合、可编辑的skill contract」，这是比任何单个工具都值得关注的方向
+🔗 https://arxiv.org/abs/2607.04439
 
-⑤ 安全对齐 抹掉有害概念，先选对提示再谈遗忘：提示类型选择本身是影响遗忘效果的旋钮，不只是微调的附属操作
-🔗 https://arxiv.org/abs/2607.03932v1
+⑤ Agent 跨平台GUI agent卡住的，不是模型不够聪明：跨平台agent的真正瓶颈是可执行轨迹稀缺和平台惯例冲突，不是模型规模
+🔗 https://arxiv.org/abs/2607.04425
 
-⑥ 多模态 大模型few-shot很好用，可就是落不进工业质检：training-free路线避开了「早期没缺陷样本就没法微调」的死结，适合冷启动部署
-🔗 https://arxiv.org/abs/2607.03817v1
+⑥ 视频生成 实时数字人卡在分辨率这道坎上，这次跨过去了：延迟和帧率守住不变、只把分辨率拉上去，才是这次工作的真正难点，也是产品可用性的关键
+🔗 https://arxiv.org/abs/2607.04443
 
-⑦ 图像生成 高置信深度加法向先验，补掉稀疏视角重建的空洞与断裂：稀疏视角下新视角合成已成熟，几何表面重建才是当前真正的短板
-🔗 https://arxiv.org/abs/2607.03765v1
+⑦ 训练优化 让扩散语言模型练出推理，为什么两条老路都走不通：dLLM后训练的SFT和RL两条路各有硬伤，on-policy自蒸馏是目前被押注的中间解
+🔗 https://arxiv.org/abs/2607.04428
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-07-396941f9-8904-8117-8d81-d1d875d25ff6
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-08-397941f9-8904-812d-b245-f1543eb608ad
 🌐 https://xiaochengzi2048.github.io/digest.txt
