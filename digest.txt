@@ -1,6 +1,7 @@
 🗞 AI 日报 · 2026.07.08
 
 📰 今日速报
+📄 https://ai-digest.liziran.com/zh/digest/2026-07-08-metas-first-superintelligence-labs-image-model-drops-real.html
 
 ① 在Instagram上，生成一张AI照片，再把陌生用户拉进画面——Meta超级智能实验室做到了
 你可能被生成进陌生人的AI照片；肖像同意权从被拍者转到生成者；Meta超级智能实验室首款模型即上线；无摄像头成智能眼镜隐私卖点
@@ -21,6 +22,7 @@ API采购方可自建同等模型，议价权反转；头部厂商九成推理�
 • SK海力士周五赴美IPO — 🔗 https://techcrunch.com/2026/07/06/us-investors-will-soon-get-access-to-sk-hynix-another-memory-maker-riding-the-ai-boom/
 
 📚 论文速报
+📄 https://ai-brief.liziran.com/zh/daily/2026-07-08-skill-contracts-streaming-avatars-self-distillation.html
 
 ④ Agent 同一批人把研究流程拆成了十几个skill，而不是训一个大模型：能力组织单位从「端到端模型」转向「thin、可组合、可编辑的skill contract」，这是比任何单个工具都值得关注的方向
 🔗 https://arxiv.org/abs/2607.04439
