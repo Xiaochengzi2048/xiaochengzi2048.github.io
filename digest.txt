@@ -1,40 +1,40 @@
-🗞 AI 日报 · 2026.07.08
+🗞 AI 日报 · 2026.07.09
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-07-08-metas-first-superintelligence-labs-image-model-drops-real.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-07-09-ai-data-centers-bid-away-power-american-factories-deleting.html
 
-① 在Instagram上，生成一张AI照片，再把陌生用户拉进画面——Meta超级智能实验室做到了
-你可能被生成进陌生人的AI照片；肖像同意权从被拍者转到生成者；Meta超级智能实验室首款模型即上线；无摄像头成智能眼镜隐私卖点
-🔗 https://www.theverge.com/tech/962485/meta-muse-image-ai-model-instagram
+① 训练机器人最卡脖子的不是模型是数据，多方转向生成的「世界」绕开真实采集
+机器人数据采集慢且贵，成主瓶颈；合成世界让策略评估有望免去实机运行；下注者是创业公司，非头部大厂
+🔗 https://techcrunch.com/2026/07/08/this-startup-thinks-robotics-is-about-to-have-its-chatgpt-moment/
 
-② Gemini API新增后台任务和远程MCP，agent的重心从「能做什么」挪到「别在生产里崩」
-开发者选型标准从跑分转向生产可靠性；后台任务、远程MCP成部署刚需；企业落地看架构，不看模型能力
-🔗 https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/
+② 一边估值翻倍冲上132亿美元，另一边每周收一万美元帮你删掉AI写的代码
+vibecoding项目规模变大后维护成本陡增；跑分高≠代码可维护；选AI编码工具要算隐性清理成本
+🔗 https://techcrunch.com/2026/07/08/lovable-reportedly-in-talks-to-double-its-valuation-to-13-2b/
 
-③ 大模型真正的利润藏在推理里，开源GLM正把它抽走
-API采购方可自建同等模型，议价权反转；头部厂商九成推理毛利面临失守；被许诺的家庭回报仅三百美元
-🔗 https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2/
+③ 电费上涨压垮铁锈带工厂，AI数据中心的用电正动摇「美国制造」
+中小制造商先被电价挤压；「美国制造」政策目标与AI基建争电；agentic算力扩张推高用电无收敛迹象
+🔗 https://arstechnica.com/tech-policy/2026/07/us-manufacturers-energy-costs-soar-because-of-ai-data-center-demand/
 
-④ Anthropic把Claude Cowork搬上手机和网页 — 🔗 https://www.theverge.com/ai-artificial-intelligence/961978/anthropic-claude-cowork-mobile-web
-⑤ 微软转向自研模型压缩AI开支 — 🔗 https://techcrunch.com/2026/07/07/microsoft-joins-ai-cost-cutting-trend-by-relying-more-on-its-own-models/
-⑥ DeepSeek计划自研芯片绕开美国出口管制 — 🔗 https://arstechnica.com/ai/2026/07/facing-us-export-controls-chinas-deepseek-plans-to-make-its-own-chips/
-⑦ OpenAI首席未来学家离职 — 🔗 https://www.wired.com/story/openai-chief-futurist-joshua-achiam-is-leaving-the-company/
-⑧ SK海力士周五赴美IPO — 🔗 https://techcrunch.com/2026/07/06/us-investors-will-soon-get-access-to-sk-hynix-another-memory-maker-riding-the-ai-boom/
+④ OpenAI下周四公开发布GPT-5.6 Sol — 🔗 https://twitter.com/OpenAI/status/2074704958419792299
+⑤ SpaceXAI发布Grok 4.5 — 🔗 https://techcrunch.com/2026/07/08/spacexai-releases-grok-4-5-which-elon-describes-as-an-opus-class-model/
+⑥ OpenAI发布语音模型GPT-Live — 🔗 https://openai.com/index/introducing-gpt-live/
+⑦ AI芯片商SambaNova融资10亿美元，估值110亿 — 🔗 https://techcrunch.com/2026/07/08/sambanova-draws-1b-at-11b-valuation-in-series-f-first-close/
+⑧ Prime Intellect融资1.3亿美元帮企业自建agent — 🔗 https://techcrunch.com/2026/07/08/prime-intellect-raises-130m-series-a-to-help-enterprises-build-their-own-ai-agents/
 
 📚 论文速报
-📄 https://ai-brief.liziran.com/zh/daily/2026-07-08-skill-contracts-streaming-avatars-self-distillation.html
+📄 https://ai-brief.liziran.com/zh/daily/2026-07-09-verification-fourth-scaling-axis-pixworld-edgebench.html
 
-⑨ Agent 同一批人把研究流程拆成了十几个skill，而不是训一个大模型：能力组织单位从「端到端模型」转向「thin、可组合、可编辑的skill contract」，这是比任何单个工具都值得关注的方向
-🔗 https://arxiv.org/abs/2607.04439
+⑨ Agent 预训练、后训练、测试时算力之后，第四条scaling轴是「验证」？：已有强模型可外挂验证器做拒绝采样/重排,不必再训reward model就能再提一层能力;连续分数(对logits求期望)比离散打分更好区分好坏解,且可靠重复评估和标准拆解继续scaling;但验证器的误判会向下游传导,「通用」能覆盖哪些任务需看全文确认。
+🔗 https://arxiv.org/abs/2607.05391
 
-⑩ Agent 跨平台GUI agent卡住的，不是模型不够聪明：跨平台agent的真正瓶颈是可执行轨迹稀缺和平台惯例冲突，不是模型规模
-🔗 https://arxiv.org/abs/2607.04425
+⑩ 图像生成 3D建模不再背一个VAE，重建和生成都拉回像素空间：拆掉VAE中间件意味着少维护一个预训练组件、少一层编码损失，架构链路更短
+🔗 https://arxiv.org/abs/2607.05373
 
-⑪ 视频生成 实时数字人卡在分辨率这道坎上，这次跨过去了：延迟和帧率守住不变、只把分辨率拉上去，才是这次工作的真正难点，也是产品可用性的关键
-🔗 https://arxiv.org/abs/2607.04443
+⑪ 评测 模型上线之后还在偷偷变强，而且变强的曲线拟合到了R²=0.998：部署后的环境学习出现了可拟合的scaling law，意味着「上线后能涨多少」从拍脑袋变成可外推
+🔗 https://arxiv.org/abs/2607.05155
 
-⑫ 训练优化 让扩散语言模型练出推理，为什么两条老路都走不通：dLLM后训练的SFT和RL两条路各有硬伤，on-policy自蒸馏是目前被押注的中间解
-🔗 https://arxiv.org/abs/2607.04428
+⑫ 机器人 该在像素里学还是在几何里学，终于有把尺子了：可变形物体world model的2D像素派和3D几何派，第一次有了统一数据集能同台比较
+🔗 https://arxiv.org/abs/2607.05390v1
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-08-397941f9-8904-812d-b245-f1543eb608ad
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-09-398941f9-8904-81b6-b386-cf3bc365f82b
 🌐 https://xiaochengzi2048.github.io/digest.txt
