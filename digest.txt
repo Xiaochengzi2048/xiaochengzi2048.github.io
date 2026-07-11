@@ -1,40 +1,37 @@
-🗞 AI 日报 · 2026.07.10
+🗞 AI 日报 · 2026.07.11
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-07-10-openai-faked-search-limits-buried-billions-chatgpt-logs.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-07-11-apple-accuses-openais-leadership-running-theft-proctored.html
 
-① OpenAI被指假装搜不了自家训练数据、还删掉数十亿条ChatGPT日志
-争议从侵权转向毁证，OpenAI风险陡增；证据保全一旦被认定违反，可绕过侵权判定直接制裁；同类AI版权诉讼的原告都会盯这套打法。
-🔗 https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/
+① 起诉OpenAI窃取硬件机密，苹果这次直接把矛头对准了对方最高决策层
+前雇主可追责到接收方高管，跳槽风险抬升；硬件团队招募对手前员工的合规成本变高；OpenAI硬件计划面临诉讼拖累；Jony Ive的IO Products被列为共同被告
+🔗 https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/
 
-② 从信息流刷到社区传单，AI内容多到Google要给广告贴「AI制作」标签
-用户默认信任信息的成本被抬高；Google的AI标签只管自家广告；信息流污染仍无平台提示
-🔗 https://www.404media.co/linkedin-and-x-are-flooded-with-ai-spam-browsing-data-suggests/
+② 太阳能公司Sunrun不建数据中心，改成付钱把AI算力节点搬进客户家里
+AI算力开始外溢到住宅电网；巨头减排承诺被业务扩张持续拖垮；分布式算力把家庭变成新的机房节点
+🔗 https://www.theverge.com/ai-artificial-intelligence/963930/sunrun-distributed-ai-data-center
 
-③ 未认证攻击者发一条Issue，就能让GitHub的AI agent交出私有仓库
-开发者的私有仓库多一个未认证攻击面；agent权限越大，单次注入破坏越大；接入agent前需隔离不可信输入
-🔗 https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/
+③ 把期末改回线下闭卷，一个常春藤班的成绩当场掉了一半
+高校用线下闭卷反制AI作弊；长期依赖AI写代码，能力退化找上开发者；被外包的思考，代价记在人这一端
+🔗 https://arstechnica.com/ai/2026/07/we-cannot-choose-to-become-idiots-the-ai-cheating-scandal-roiling-brown-university/
 
-④ OpenAI公开发布GPT-5.6，同时推出ChatGPT Work — 🔗 https://www.theverge.com/ai-artificial-intelligence/963464/openai-gpt-5-6-codex-chatgpt-work
-⑤ OpenAI升级ChatGPT语音模式，发布GPT-Live — 🔗 https://simonwillison.net/2026/Jul/8/introducing-gptlive/#atom-everything
-⑥ GPT-5.6成为Microsoft 365 Copilot的首选模型 — 🔗 https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot
-⑦ OpenAI关停AI浏览器Atlas，上线不到一年 — 🔗 https://techcrunch.com/2026/07/09/openai-is-shutting-down-atlas-but-its-ai-browser-ambitions-are-still-growing/
-⑧ Meta发布Muse Spark 1.1编码模型，并开放Meta Model API — 🔗 https://www.theverge.com/ai-artificial-intelligence/963193/meta-muse-spark-model-api
+④ SK Hynix在美IPO募资265亿美元，创美国史上最大外国公司上市 — 🔗 https://techcrunch.com/2026/07/10/sk-hynix-raises-26-5b-in-the-biggest-foreign-ipo-in-us-history-is-urged-to-build-new-us-fabs/
+⑤ OpenAI二号人物Fidji Simo卸任全职职务 — 🔗 https://techcrunch.com/2026/07/09/fidji-simo-steps-down-from-openais-no-2-role/
+⑥ Anthropic用「Jacobian lens」窥见Claude思考概念的隐藏空间 — 🔗 https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/
+⑦ Musk承诺不会「切断」Anthropic，称其可放心托管模型 — 🔗 https://techcrunch.com/2026/07/09/elon-musk-praises-mythos-fable-promises-not-to-cut-off-anthropic/
+⑧ Hugging Face CEO：企业不再「租用」AI，转向自建开源模型 — 🔗 https://techcrunch.com/2026/07/10/hugging-faces-ceo-on-why-companies-are-done-renting-their-ai/
 
 📚 论文速报
-📄 https://ai-brief.liziran.com/zh/daily/2026-07-10-rl-image-generation-gemma-4-optimizer-map.html
+📄 https://ai-brief.liziran.com/zh/daily/2026-07-11-vla-latent-memory-realtime-world-model.html
 
-⑨ 训练优化 选优化器这件事，第一次有了一张可查的地图：大多数优化器只改动更新流程的一两个阶段，所谓创新的机制差异常被高估
-🔗 https://arxiv.org/abs/2607.04033
+⑨ 机器人 给VLA加记忆，关键不是记多少，而是记在哪一层：长程任务的瓶颈被重新定位——不是记忆容量，而是记忆放在推理链条的哪一层，这个视角本身值得借鉴
+🔗 https://arxiv.org/abs/2607.07608v1
 
-⑩ 模型架构 换掉你手里的自托管底座，够格了吗：别读参数表，按部署位置分档评估——2.3B看端侧、12B看多模态省不省预处理、MoE看激活成本
-🔗 https://arxiv.org/abs/2607.02770
+⑩ 视频生成 机器人的世界模型，宁可牺牲创意也要守住物理：视频模型做机器人世界先验的核心矛盾是「画得好看」和「符合物理」之间的取舍，这篇明确押物理
+🔗 https://arxiv.org/abs/2607.07675
 
-⑪ 视频生成 游戏世界不再靠人搭，改由模型现场一帧帧生成：视频世界模型要替换的是游戏内容生产管线，不只是拉长视频时长
-🔗 https://arxiv.org/abs/2607.06291
+⑪ 视频生成 交互式世界模型跨过了两道工程门槛：无界交互时长和实时高帧率同时成立，是交互式世界模型从「演示几秒」到「长时间实时跑」的分水岭
+🔗 https://arxiv.org/abs/2607.07534
 
-⑫ 多模态 RL终于训到了图像生成这一步：这是「RL训推理」范式第一次贯穿到图像生成步骤，信号意义大于单点分数
-🔗 https://arxiv.org/abs/2607.03748
-
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-10-399941f9-8904-81b4-b46b-c96be9bb6f3e
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-11-39a941f9-8904-81f8-bd91-dc2f5fbfcf16
 🌐 https://xiaochengzi2048.github.io/digest.txt
