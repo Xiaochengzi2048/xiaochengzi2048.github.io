@@ -1,27 +1,28 @@
-🗞 AI 日报 · 2026.07.11
+🗞 AI 日报 · 2026.07.12
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-07-11-apple-accuses-openais-leadership-running-theft-proctored.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-07-12-meta-kills-instagram-ai-feature-three-days-wont-flag-ai.html
 
-① 起诉OpenAI窃取硬件机密，苹果这次直接把矛头对准了对方最高决策层
-前雇主可追责到接收方高管，跳槽风险抬升；硬件团队招募对手前员工的合规成本变高；OpenAI硬件计划面临诉讼拖累；Jony Ive的IO Products被列为共同被告
-🔗 https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/
+① 每四条社交长帖就有一条是纯AI，LinkedIn最严重
+长帖每四条一条纯AI，LinkedIn最严重；平台拒绝过滤，甄别甩给用户；分辨真人内容得靠第三方外挂。
+🔗 https://www.pangram.com/blog/ai-in-your-feed
 
-② 太阳能公司Sunrun不建数据中心，改成付钱把AI算力节点搬进客户家里
-AI算力开始外溢到住宅电网；巨头减排承诺被业务扩张持续拖垮；分布式算力把家庭变成新的机房节点
-🔗 https://www.theverge.com/ai-artificial-intelligence/963930/sunrun-distributed-ai-data-center
+② 打标签就能拿公开账号的内容生成AI图像，Meta上线几天后撤回了这个功能
+公开账号肖像曾可被陌生人生成图像；Meta官方反转，功能上线数日即撤；撤回仅限该功能，信息流AI扩张未动
+🔗 https://www.theverge.com/tech/964416/meta-instagram-ai-muse-image-deepfakes
 
-③ 把期末改回线下闭卷，一个常春藤班的成绩当场掉了一半
-高校用线下闭卷反制AI作弊；长期依赖AI写代码，能力退化找上开发者；被外包的思考，代价记在人这一端
-🔗 https://arstechnica.com/ai/2026/07/we-cannot-choose-to-become-idiots-the-ai-cheating-scandal-roiling-brown-university/
+③ 发布前要先过政府这一关，OpenAI最新旗舰模型的上线不再自己说了算
+前沿模型上线时间由政府审批决定；发布前须过生物安全红队；厂商单方面定档期成为过去
+🔗 https://www.theverge.com/ai-artificial-intelligence/963464/openai-gpt-5-6-codex-chatgpt-work
 
-④ SK Hynix在美IPO募资265亿美元，创美国史上最大外国公司上市 — 🔗 https://techcrunch.com/2026/07/10/sk-hynix-raises-26-5b-in-the-biggest-foreign-ipo-in-us-history-is-urged-to-build-new-us-fabs/
-⑤ OpenAI二号人物Fidji Simo卸任全职职务 — 🔗 https://techcrunch.com/2026/07/09/fidji-simo-steps-down-from-openais-no-2-role/
-⑥ Anthropic用「Jacobian lens」窥见Claude思考概念的隐藏空间 — 🔗 https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/
-⑦ Musk承诺不会「切断」Anthropic，称其可放心托管模型 — 🔗 https://techcrunch.com/2026/07/09/elon-musk-praises-mythos-fable-promises-not-to-cut-off-anthropic/
-⑧ Hugging Face CEO：企业不再「租用」AI，转向自建开源模型 — 🔗 https://techcrunch.com/2026/07/10/hugging-faces-ceo-on-why-companies-are-done-renting-their-ai/
+④ OpenAI发布GPT-5.6模型系列 — 🔗 https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/
+⑤ 微软Copilot 365确定GPT-5.6为首选模型 — 🔗 https://techcrunch.com/2026/07/09/openai-says-gpt-5-6-is-the-preferred-model-for-microsoft-copilot-amid-breakup-chatter/
+⑥ OpenAI重塑Codex，可独立运行数小时 — 🔗 https://arstechnica.com/ai/2026/07/openai-wants-its-new-tool-to-do-your-work-for-you-and-with-you/
+⑦ Anthropic对Claude Fable 5改按用量收费 — 🔗 https://www.wired.com/story/model-behavior-anthropic-will-charge-consumers-extra-to-use-claude-fable-5/
+⑧ OpenAI安全负责人离职 — 🔗 https://www.wired.com/story/openai-head-of-safety-leaving/
 
 📚 论文速报
+（论文内容更新于 7月11日）
 📄 https://ai-brief.liziran.com/zh/daily/2026-07-11-vla-latent-memory-realtime-world-model.html
 
 ⑨ 机器人 给VLA加记忆，关键不是记多少，而是记在哪一层：长程任务的瓶颈被重新定位——不是记忆容量，而是记忆放在推理链条的哪一层，这个视角本身值得借鉴
@@ -33,5 +34,5 @@ AI算力开始外溢到住宅电网；巨头减排承诺被业务扩张持续拖
 ⑪ 视频生成 交互式世界模型跨过了两道工程门槛：无界交互时长和实时高帧率同时成立，是交互式世界模型从「演示几秒」到「长时间实时跑」的分水岭
 🔗 https://arxiv.org/abs/2607.07534
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-11-39a941f9-8904-81f8-bd91-dc2f5fbfcf16
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-12-39b941f9-8904-8188-a9dc-c9c1a77f19f6
 🌐 https://xiaochengzi2048.github.io/digest.txt
