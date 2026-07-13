@@ -1,38 +1,41 @@
-🗞 AI 日报 · 2026.07.12
+🗞 AI 日报 · 2026.07.13
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-07-12-meta-kills-instagram-ai-feature-three-days-wont-flag-ai.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-07-13-claude-code-burns-33000-tokens-before-your-prompt-apples.html
 
-① 每四条社交长帖就有一条是纯AI，LinkedIn最严重
-长帖每四条一条纯AI，LinkedIn最严重；平台拒绝过滤，甄别甩给用户；分辨真人内容得靠第三方外挂。
-🔗 https://www.pangram.com/blog/ai-in-your-feed
+① 读到用户的问题前，Claude Code已发出3.3万token，OpenCode只用7千
+同模型同任务，harness隐形开销差3到5倍；72KB配置每请求多烧2万token；选型前自己抓一次请求，实测你的工具浪费多少
+🔗 https://systima.ai/blog/claude-code-vs-opencode-token-overhead
 
-② 打标签就能拿公开账号的内容生成AI图像，Meta上线几天后撤回了这个功能
-公开账号肖像曾可被陌生人生成图像；Meta官方反转，功能上线数日即撤；撤回仅限该功能，信息流AI扩张未动
-🔗 https://www.theverge.com/tech/964416/meta-instagram-ai-muse-image-deepfakes
+② 265亿美元，刷新美国史上最大外国IPO纪录，SK海力士刚上市就被催着在美国建厂
+AI扩张瓶颈从模型转向产能与选址；建厂先过美国本土产能政治关；数据中心选址开始遭遇有组织抵制
+🔗 https://techcrunch.com/2026/07/10/sk-hynix-raises-26-5b-in-the-biggest-foreign-ipo-in-us-history-is-urged-to-build-new-us-fabs/
 
-③ 发布前要先过政府这一关，OpenAI最新旗舰模型的上线不再自己说了算
-前沿模型上线时间由政府审批决定；发布前须过生物安全红队；厂商单方面定档期成为过去
-🔗 https://www.theverge.com/ai-artificial-intelligence/963464/openai-gpt-5-6-codex-chatgpt-work
+③ 苹果最能打的AI芯片，是从那个流产的造车项目里长出来的
+端侧AI能力成苹果核心资产；硬件机密之争烧到OpenAI；前雇员跳槽带走的是芯片供应链底牌
+🔗 https://www.theverge.com/tech/964519/apple-silicon-self-driving-car-ai-m7-ultra
 
-④ OpenAI发布GPT-5.6模型系列 — 🔗 https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/
-⑤ 微软Copilot 365确定GPT-5.6为首选模型 — 🔗 https://techcrunch.com/2026/07/09/openai-says-gpt-5-6-is-the-preferred-model-for-microsoft-copilot-amid-breakup-chatter/
-⑥ OpenAI重塑Codex，可独立运行数小时 — 🔗 https://arstechnica.com/ai/2026/07/openai-wants-its-new-tool-to-do-your-work-for-you-and-with-you/
-⑦ Anthropic对Claude Fable 5改按用量收费 — 🔗 https://www.wired.com/story/model-behavior-anthropic-will-charge-consumers-extra-to-use-claude-fable-5/
-⑧ OpenAI安全负责人离职 — 🔗 https://www.wired.com/story/openai-head-of-safety-leaving/
+④ Hugging Face CEO：开源AI正被半数财富500强采用 — 🔗 https://techcrunch.com/podcast/open-source-ai-matters-more-than-ever-according-to-hugging-faces-clem-delangue/
+⑤ UN「AI for Good」峰会开幕，现场摆出机器狗和救援直升机 — 🔗 https://www.wired.com/story/robot-dogs-teslas-and-rescue-helicopters-the-un-ai-summit-was-alot/
+⑥ 研究者用AI加量子计算生成新肽段，瞄准罕见病药物 — 🔗 https://www.wired.com/story/scientists-using-ai-and-quantum-computing-to-generate-new-peptides/
+⑦ 号称「全球首家AI艺术博物馆」的Dataland开馆 — 🔗 https://www.wired.com/story/a-new-experiential-gallery-just-might-change-your-mind-about-ai-art/
+⑧ 歌手Lorde在演出中开炮，称AI眼镜「不性感」 — 🔗 https://www.theverge.com/ai-artificial-intelligence/964539/lorde-says-ray-ban-meta-ai-glasses-are-not-sexy
 
 📚 论文速报
-（论文内容更新于 7月11日）
-📄 https://ai-brief.liziran.com/zh/daily/2026-07-11-vla-latent-memory-realtime-world-model.html
+（论文内容更新于 7月12日）
+📄 https://ai-brief.liziran.com/zh/daily/2026-07-12-structural-reasoning-sota-async-rl-glm.html
 
-⑨ 机器人 给VLA加记忆，关键不是记多少，而是记在哪一层：长程任务的瓶颈被重新定位——不是记忆容量，而是记忆放在推理链条的哪一层，这个视角本身值得借鉴
-🔗 https://arxiv.org/abs/2607.07608v1
+⑨ AI for Science 让模型沿着物理约束一步步推，而不是直接回归出数值：把结构离散成可引用的token而非压成embedding，是让预测和解释在同一条推理链上共存的关键思路
+🔗 https://arxiv.org/abs/2607.07708
 
-⑩ 视频生成 机器人的世界模型，宁可牺牲创意也要守住物理：视频模型做机器人世界先验的核心矛盾是「画得好看」和「符合物理」之间的取舍，这篇明确押物理
-🔗 https://arxiv.org/abs/2607.07675
+⑩ 评测 你选coding agent，是在选谁半路上不把你带沟里：单一pass/fail掩盖了agent最要命的差异——犯错后能不能自己回头
+🔗 https://arxiv.org/abs/2607.06624
 
-⑪ 视频生成 交互式世界模型跨过了两道工程门槛：无界交互时长和实时高帧率同时成立，是交互式世界模型从「演示几秒」到「长时间实时跑」的分水岭
-🔗 https://arxiv.org/abs/2607.07534
+⑪ 模型架构 给线性注意力装个稀疏记忆库，能不能补上recall这块短板？：稀疏寻址是给线性RNN扩state同时压住FLOPs的一条具体解法，做长上下文/推理效率的团队值得对照自己的方案看
+🔗 https://arxiv.org/abs/2607.07386
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-12-39b941f9-8904-8188-a9dc-c9c1a77f19f6
+⑫ 训练优化 异步RL提了吞吐，却把稳定性晾在一边：GRPO的按组采样不适配异步agentic训练，SAO改用单rollout采样降低off-policy偏差
+🔗 https://arxiv.org/abs/2607.07508
+
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-13-39c941f9-8904-81a5-abb6-e30fe7125a70
 🌐 https://xiaochengzi2048.github.io/digest.txt
