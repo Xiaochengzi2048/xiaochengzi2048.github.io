@@ -1,41 +1,41 @@
-🗞 AI 日报 · 2026.07.13
+🗞 AI 日报 · 2026.07.14
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-07-13-claude-code-burns-33000-tokens-before-your-prompt-apples.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-07-14-apple-google-rebuilt-their-flagship-apps-around-ai-lorde.html
 
-① 读到用户的问题前，Claude Code已发出3.3万token，OpenCode只用7千
-同模型同任务，harness隐形开销差3到5倍；72KB配置每请求多烧2万token；选型前自己抓一次请求，实测你的工具浪费多少
-🔗 https://systima.ai/blog/claude-code-vs-opencode-token-overhead
+① 招聘时被要求带上自己正在做的元件和未发布样品，苹果起诉OpenAI窃密
+硬件工程师跳槽带样品面试风险陡增；企业内部越权访问需重新盯防；诉讼将检验商业机密边界
+🔗 https://arstechnica.com/tech-policy/2026/07/apple-sues-openai-after-ex-engineer-allegedly-used-bug-to-steal-trade-secrets/
 
-② 265亿美元，刷新美国史上最大外国IPO纪录，SK海力士刚上市就被催着在美国建厂
-AI扩张瓶颈从模型转向产能与选址；建厂先过美国本土产能政治关；数据中心选址开始遭遇有组织抵制
-🔗 https://techcrunch.com/2026/07/10/sk-hynix-raises-26-5b-in-the-biggest-foreign-ipo-in-us-history-is-urged-to-build-new-us-fabs/
+② Siri成了iPhone的操作骨干，Gemini钻进Waze，平台巨头把单一助手做成新入口
+iOS 27公测版已开放，可直接上手试;App入口逻辑正被单一助手接管;开发者的流量入口从App转向助手层
+🔗 https://www.theverge.com/tech/964714/siri-ai-public-beta-preview-ios-27-hands-on
 
-③ 苹果最能打的AI芯片，是从那个流产的造车项目里长出来的
-端侧AI能力成苹果核心资产；硬件机密之争烧到OpenAI；前雇员跳槽带走的是芯片供应链底牌
-🔗 https://www.theverge.com/tech/964519/apple-silicon-self-driving-car-ai-m7-ultra
+③ AI眼镜「不性感」，最烂ChatGPT传单被网友建档，大众对AI审美入侵翻脸
+可穿戴AI硬件撞上「不想被拍」的社交阻力；免费AI海报省了设计费，赔了口碑；生成式美学的大众接受度在下滑
+🔗 https://www.theverge.com/ai-artificial-intelligence/964539/lorde-says-ray-ban-meta-ai-glasses-are-not-sexy
 
-④ Hugging Face CEO：开源AI正被半数财富500强采用 — 🔗 https://techcrunch.com/podcast/open-source-ai-matters-more-than-ever-according-to-hugging-faces-clem-delangue/
-⑤ UN「AI for Good」峰会开幕，现场摆出机器狗和救援直升机 — 🔗 https://www.wired.com/story/robot-dogs-teslas-and-rescue-helicopters-the-un-ai-summit-was-alot/
-⑥ 研究者用AI加量子计算生成新肽段，瞄准罕见病药物 — 🔗 https://www.wired.com/story/scientists-using-ai-and-quantum-computing-to-generate-new-peptides/
-⑦ 号称「全球首家AI艺术博物馆」的Dataland开馆 — 🔗 https://www.wired.com/story/a-new-experiential-gallery-just-might-change-your-mind-about-ai-art/
-⑧ 歌手Lorde在演出中开炮，称AI眼镜「不性感」 — 🔗 https://www.theverge.com/ai-artificial-intelligence/964539/lorde-says-ray-ban-meta-ai-glasses-are-not-sexy
+④ Anthropic为印度市场推出本地化定价 — 🔗 https://techcrunch.com/2026/07/13/anthropic-starts-localizing-claude-pricing-for-india-its-biggest-market-after-the-us/
+⑤ Nadella警告企业：买闭源大模型可能是引狼入室 — 🔗 https://techcrunch.com/2026/07/13/satya-nadella-has-issued-a-shocking-warning-to-companies-using-ai/
+⑥ Altman回怼Musk：短期太空数据中心才是在忽悠散户 — 🔗 https://techcrunch.com/2026/07/13/sam-altmans-space-data-center-trash-talk-is-what-most-experts-already-believe/
+⑦ 防守方反用prompt injection，让攻击agent自己关机 — 🔗 https://arstechnica.com/security/2026/07/now-defenders-are-embracing-the-prompt-injection-too/
+⑧ 新基准Long-Horizon-Terminal-Bench专测agent长任务 — 🔗 https://huggingface.co/papers/2607.08964
 
 📚 论文速报
-（论文内容更新于 7月12日）
-📄 https://ai-brief.liziran.com/zh/daily/2026-07-12-structural-reasoning-sota-async-rl-glm.html
+（论文内容更新于 7月13日）
+📄 https://ai-brief.liziran.com/zh/daily/2026-07-13-idea-lineage-reasoning-jet-long-context.html
 
-⑨ AI for Science 让模型沿着物理约束一步步推，而不是直接回归出数值：把结构离散成可引用的token而非压成embedding，是让预测和解释在同一条推理链上共存的关键思路
-🔗 https://arxiv.org/abs/2607.07708
+⑨ AI for Science 一个想法的「血统」能不能被机器追溯？：想法生成的真瓶颈不是「够不够新」，而是能否说清继承与改动的结构——这是两种能力
+🔗 https://arxiv.org/abs/2607.08758
 
-⑩ 评测 你选coding agent，是在选谁半路上不把你带沟里：单一pass/fail掩盖了agent最要命的差异——犯错后能不能自己回头
-🔗 https://arxiv.org/abs/2607.06624
+⑩ 推理加速 免重训拉长上下文，难点不在能不能，而在短文本会不会跟着掉精度：长上下文外推已是开源权重的默认部署路径，值得当成一个独立工程环节来选型
+🔗 https://arxiv.org/abs/2607.07740
 
-⑪ 模型架构 给线性注意力装个稀疏记忆库，能不能补上recall这块短板？：稀疏寻址是给线性RNN扩state同时压住FLOPs的一条具体解法，做长上下文/推理效率的团队值得对照自己的方案看
-🔗 https://arxiv.org/abs/2607.07386
+⑪ Agent 主动帮你和被问才答,是两种能力：评测重心从「答得对不对」转向「该不该主动出手」,这是agent产品化绕不开的一道坎;把主动性拆成5种可测能力加活容器分步打分,给做agent的团队提供了定位失败根因的坐标系;闭环三agent、隐藏评分标准的设计值得借鉴,但基准能否成为公认标准仍要看社区检验
+🔗 https://arxiv.org/abs/2607.08768
 
-⑫ 训练优化 异步RL提了吞吐，却把稳定性晾在一边：GRPO的按组采样不适配异步agentic训练，SAO改用单rollout采样降低off-policy偏差
-🔗 https://arxiv.org/abs/2607.07508
+⑫ 视频生成 事件相机的稀疏信号，为什么这次不自己造模型？：事件相机重建正在从「专用模型」转向「微调通用视频扩散模型」，数据效率是主要卖点
+🔗 https://arxiv.org/abs/2607.08770
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-13-39c941f9-8904-81a5-abb6-e30fe7125a70
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-14-39d941f9-8904-8188-b251-e4b1d87c572e
 🌐 https://xiaochengzi2048.github.io/digest.txt
