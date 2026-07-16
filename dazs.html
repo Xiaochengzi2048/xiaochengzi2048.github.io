@@ -1,18 +1,304 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Your Answer</title>
-    <link rel="stylesheet" href="/dazs/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book of Answers · 答案之书</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Serif SC', Georgia, serif;
+      background: #fdf6ee;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      overflow-x: hidden;
+    }
+
+    /* subtle background texture */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background: radial-gradient(ellipse at 30% 20%, rgba(212,169,88,0.07) 0%, transparent 60%),
+                  radial-gradient(ellipse at 70% 80%, rgba(107,39,55,0.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .back-link {
+      position: fixed;
+      top: 1.2rem; left: 1.4rem;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 0.85rem;
+      color: #8c7060;
+      text-decoration: none;
+      display: flex; align-items: center; gap: 4px;
+      transition: color 0.15s;
+    }
+    .back-link:hover { color: #6b2737; }
+
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #3a2010;
+      letter-spacing: 2px;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 0.82rem;
+      color: #9c7860;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Book card (3D flip) ── */
+    .book-scene {
+      perspective: 1000px;
+      width: 260px;
+      height: 360px;
+      cursor: pointer;
+    }
+
+    .book-card {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .book-card.flipped {
+      transform: rotateY(180deg);
+    }
+
+    .book-face {
+      position: absolute; inset: 0;
+      border-radius: 4px 12px 12px 4px;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* spine shadow */
+    .book-face::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 14px;
+      background: rgba(0,0,0,0.18);
+      border-radius: 4px 0 0 4px;
+    }
+
+    /* Front cover */
+    .book-front {
+      background: linear-gradient(160deg, #7a2d40 0%, #4a1522 100%);
+      border: 2px solid rgba(212,169,88,0.4);
+      box-shadow:
+        4px 8px 32px rgba(60,20,10,0.35),
+        inset 0 0 60px rgba(0,0,0,0.2);
+    }
+
+    .book-front::after {
+      content: '';
+      position: absolute;
+      inset: 10px;
+      border: 1px solid rgba(212,169,88,0.25);
+      border-radius: 2px 10px 10px 2px;
+      pointer-events: none;
+    }
+
+    .front-ornament {
+      color: rgba(212,169,88,0.8);
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .front-title {
+      color: #e8d5a8;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    .front-subtitle {
+      color: rgba(212,169,88,0.6);
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      margin-top: 0.8rem;
+    }
+
+    .front-hint {
+      position: absolute;
+      bottom: 24px;
+      color: rgba(232,213,168,0.5);
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+    }
+
+    /* Back (answer side) */
+    .book-back {
+      background: #fffaf3;
+      transform: rotateY(180deg);
+      border: 1px solid #e8d5b8;
+      box-shadow:
+        4px 8px 32px rgba(60,20,10,0.2),
+        inset 0 0 40px rgba(212,169,88,0.05);
+      justify-content: flex-start;
+      padding: 2rem 1.6rem;
+    }
+
+    .answer-number {
+      font-size: 0.7rem;
+      color: #c4a070;
+      letter-spacing: 3px;
+      margin-bottom: 1.5rem;
+      align-self: flex-start;
+    }
+
+    .answer-divider {
+      width: 40px;
+      height: 1px;
+      background: rgba(196,160,112,0.4);
+      margin-bottom: 1.8rem;
+    }
+
+    .answer-text {
+      font-size: 1.25rem;
+      line-height: 2;
+      color: #3a2010;
+      text-align: center;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      font-weight: 400;
+    }
+
+    .answer-footer {
+      font-size: 0.65rem;
+      color: rgba(156,120,80,0.6);
+      letter-spacing: 2px;
+      margin-top: 1.5rem;
+    }
+
+    /* ── Buttons ── */
+    .btn-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.7rem;
+      margin-top: 2rem;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.4s 0.5s, transform 0.4s 0.5s;
+    }
+
+    .btn-row.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .again-btn {
+      background: none;
+      border: 1px solid rgba(107,39,55,0.35);
+      color: #7a2d40;
+      padding: 0.55rem 1.6rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-family: inherit;
+      cursor: pointer;
+      letter-spacing: 1px;
+      transition: all 0.15s;
+    }
+
+    .again-btn:hover {
+      background: #7a2d40;
+      color: #e8d5a8;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.72rem;
+      color: #c4a888;
+      letter-spacing: 1px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div id="answer" class="hidden"></div>
-        <button id="answer-btn">CLICK TO GET</button>
+
+<a class="back-link" href="/">← 返回</a>
+
+<header>
+  <h1>答案之书</h1>
+  <p>心中默念你的问题，点击书本翻开答案</p>
+</header>
+
+<div class="book-scene" id="scene" onclick="flipBook()">
+  <div class="book-card" id="card">
+
+    <!-- Front cover -->
+    <div class="book-face book-front">
+      <div class="front-ornament">✦</div>
+      <div class="front-title">BOOK<br>OF<br>ANSWERS</div>
+      <div class="front-subtitle">答案之书</div>
+      <div class="front-hint">点击翻开</div>
     </div>
-    <script src="/dazs/data.js"></script>
-    <script src="/dazs/script.js"></script>
+
+    <!-- Answer back -->
+    <div class="book-face book-back">
+      <div class="answer-number" id="answer-num">第 — 签</div>
+      <div class="answer-divider"></div>
+      <div class="answer-text" id="answer-text">——</div>
+      <div class="answer-footer">Book of Answers</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="btn-row" id="btn-row">
+  <button class="again-btn" onclick="resetBook()">再问一次</button>
+</div>
+
+<footer>共收录百余签 · 随缘而得</footer>
+
+<script src="/dazs/data.js"></script>
+<script>
+  let revealed = false;
+
+  function flipBook() {
+    if (revealed) return;
+    revealed = true;
+
+    const idx = Math.floor(Math.random() * answers.length);
+    const ans = answers[idx];
+    document.getElementById('answer-num').textContent = `第 ${ans.number} 签`;
+    document.getElementById('answer-text').textContent = ans.message;
+    document.getElementById('card').classList.add('flipped');
+    document.getElementById('btn-row').classList.add('visible');
+    document.getElementById('scene').style.cursor = 'default';
+  }
+
+  function resetBook() {
+    revealed = false;
+    const card = document.getElementById('card');
+    card.classList.remove('flipped');
+    document.getElementById('btn-row').classList.remove('visible');
+    document.getElementById('scene').style.cursor = 'pointer';
+  }
+</script>
 </body>
 </html>
-
