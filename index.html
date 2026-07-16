@@ -1,14 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Space</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>xiaochengzi2048</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: #f6f8fa;
+      color: #24292f;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+    header { text-align: center; margin-bottom: 2.5rem; }
+    header h1 { font-size: 1.5rem; font-weight: 600; color: #24292f; letter-spacing: -0.3px; }
+    header p { margin-top: 0.4rem; font-size: 0.9rem; color: #57606a; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      width: 100%;
+      max-width: 860px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #d0d7de;
+      border-radius: 10px;
+      padding: 1.4rem 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      transition: box-shadow 0.15s, transform 0.15s, border-color 0.15s;
+    }
+    .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); transform: translateY(-2px); border-color: #0969da; }
+    .card .icon { font-size: 1.6rem; line-height: 1; }
+    .card .title { font-size: 1rem; font-weight: 600; color: #0969da; }
+    .card .desc { font-size: 0.82rem; color: #57606a; line-height: 1.5; }
+    .card .tag { display: inline-block; margin-top: auto; padding-top: 0.6rem; font-size: 0.75rem; color: #8c959f; }
+    footer { margin-top: 3rem; font-size: 0.78rem; color: #8c959f; }
+    footer a { color: #0969da; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <button onclick="window.location.href='dazs.html';"  class="btn"> 📖 Book of Answers </button>
-        <button onclick="window.location.href='random_topic_generator.html';"  class="btn"> 💡日记话题生成器 </button>
-    </div>
+  <header>
+    <h1>xiaochengzi2048</h1>
+    <p>tools &amp; experiments</p>
+  </header>
+  <div class="grid">
+    <a class="card" href="https://github.com/Xiaochengzi2048/find-a-book-mcp" target="_blank" rel="noopener">
+      <span class="icon">🔖</span>
+      <span class="title">find-a-book-mcp</span>
+      <span class="desc">MCP server for searching and downloading books from Library Genesis.</span>
+      <span class="tag">JavaScript · ⭐ 6</span>
+    </a>
+    <a class="card" href="digest-setup.html">
+      <span class="icon">📰</span>
+      <span class="title">AI Builders Digest</span>
+      <span class="desc">每日双语 AI builder 动态，订阅后每早推送到微信。</span>
+      <span class="tag">RSS · 中/EN</span>
+    </a>
+    <a class="card" href="random_topic_generator.html">
+      <span class="icon">💡</span>
+      <span class="title">日记话题生成器</span>
+      <span class="desc">随机生成每日写作话题，消灭日记开头的空白。</span>
+      <span class="tag">小工具</span>
+    </a>
+    <a class="card" href="dazs.html">
+      <span class="icon">📖</span>
+      <span class="title">Book of Answers</span>
+      <span class="desc">向书提问，翻开就有答案。</span>
+      <span class="tag">interactive</span>
+    </a>
+  </div>
+  <footer>
+    <a href="https://github.com/Xiaochengzi2048" target="_blank" rel="noopener">GitHub ↗</a>
+  </footer>
 </body>
+</html>
