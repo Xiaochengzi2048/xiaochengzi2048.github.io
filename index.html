@@ -39,7 +39,13 @@
       gap: 0.5rem;
       transition: box-shadow 0.15s, transform 0.15s, border-color 0.15s;
     }
-    .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); transform: translateY(-2px); border-color: #0969da; }
+    .card:hover { box-shadow: 0 6px 20px rgba(9,105,218,0.12); transform: translateY(-3px); border-color: #0969da; }
+    .card { animation: fadeUp 0.4s ease both; }
+    .card:nth-child(1) { animation-delay: 0.05s; }
+    .card:nth-child(2) { animation-delay: 0.1s; }
+    .card:nth-child(3) { animation-delay: 0.15s; }
+    .card:nth-child(4) { animation-delay: 0.2s; }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
     .card .icon { font-size: 1.6rem; line-height: 1; }
     .card .title { font-size: 1rem; font-weight: 600; color: #0969da; }
     .card .desc { font-size: 0.82rem; color: #57606a; line-height: 1.5; }
