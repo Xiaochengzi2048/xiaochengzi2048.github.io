@@ -15,6 +15,20 @@
             flex-direction: column;
         }
 
+
+        /* ─── Back link ─── */
+        .back-home {
+            position: fixed;
+            top: 12px; left: 14px;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 0.8rem;
+            color: rgba(160, 112, 96, 0.85);
+            text-decoration: none;
+            z-index: 100;
+            transition: color 0.15s;
+        }
+        .back-home:hover { color: #e07060; }
+
         /* ─── Header ─── */
         .header {
             text-align: center;
@@ -59,7 +73,7 @@
         }
 
         /* ─── Sections ─── */
-        .section { display: none; flex: 1; padding: 0 20px 100px; }
+        .section { display: none; flex: 1; padding: 0 20px 32px; }
         .section.active { display: block; }
 
         /* ─── Topic Card ─── */
@@ -386,6 +400,7 @@
 </head>
 <body>
 
+<a class="back-home" href="/">← 返回主页</a>
 <div class="header">
     <h1>🌸 日记话题生成器</h1>
     <p>每天一个话题，让思绪自由流动</p>
