@@ -1,40 +1,40 @@
-🗞 AI 日报 · 2026.07.16
+🗞 AI 日报 · 2026.07.17
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-07-16-sunos-source-code-leaks-reveals-exactly-where-training.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-07-17-eu-orders-google-open-android-rival-ai-despite-safety.html
 
-① 源代码被扒出来的那天，Suno的训练素材清单藏不住了
-版权方首次拿到抓取行为的代码级证据；YouTube、Deezer、Genius均在被抓取之列；训练数据黑箱靠黑客而非官方披露被撬开
-🔗 https://www.404media.co/hack-reveals-suno-ai-music-generator-scraped-youtube-deezer-and-genius/
+① 强开Android入口逼Google交出搜索数据，欧盟给对手AI助手让路，Google说这会危及隐私
+对手AI助手首次能进Android入口、拿搜索数据；Google对两大平台的控制被撬松；隐私辩护成反监管新话术
+🔗 https://arstechnica.com/gadgets/2026/07/its-official-eu-will-force-google-to-share-search-data-and-open-up-ai-on-android/
 
-② 一段伪装对话就能让Claude把用户姓名、雇主、密保答案发给攻击者
-接入记忆/工具的AI应用，用户隐私可被对话诱导外泄；开发者接不可信输入前需做注入隔离；厂商防御从人工补洞转向AI自动红队
-🔗 https://www.ayush.digital/blog/the-memory-heist
+② Claude现在能替你调取1Password里存的用户名和密码
+助手从「读信息」变成「持凭据」；授权后被诱导可泄露整个账户；用户需先厘清助手能触达哪些已登录服务
+🔗 https://www.theverge.com/tech/966442/1password-anthropic-claude-browser-integration
 
-③ 一边告用户，一边被告，AI在法庭上成了双向甩责工具
-平台可援引条款把生成内容责任转嫁用户；企业用AI做裁员决策已进入诉讼；AI决策的责任归属尚无判例
-🔗 https://www.theverge.com/ai-artificial-intelligence/966293/xai-grok-user-lawsuit-csam
+③ 一个0.8B的开源模型端到端啃文档解析，新基准却揭出强VLM碰上真实版面就栽
+0.8B开源模型端到端输出Markdown；文档/OCR流水线开发者可直接选型；真实文档难点在版面和长上下文，不在文字量
+🔗 https://huggingface.co/papers/2607.13639
 
-④ 苹果Apple Intelligence获批在华上线，接入阿里巴巴Qwen — 🔗 https://techcrunch.com/2026/07/15/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/
-⑤ Thinking Machines发布首个开放模型Inkling — 🔗 https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/
-⑥ Anthropic、Blackstone押注AI下一门万亿生意是落地实施 — 🔗 https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/
-⑦ 印度AI编码公司Emergent完成1.3亿美元C轮，成立一年即成独角兽 — 🔗 https://techcrunch.com/2026/07/15/indian-ai-coding-startup-emergent-becomes-a-unicorn-just-over-a-year-after-launch/
-⑧ OpenAI研究员Miles Wang洽谈创办AI药物发现公司，估值20亿美元 — 🔗 https://techcrunch.com/2026/07/14/openai-researcher-miles-wang-in-talks-to-launch-ai-drug-discovery-startup-valued-at-2b/
+④ Moonshot下代模型Kimi K3据报将达2到3万亿参数 — 🔗 https://techcrunch.com/2026/07/16/moonshots-upcoming-kimi-3-is-expected-to-close-the-gap-with-anthropics-opus-4-8/
+⑤ 微软据报培训销售话术贬低OpenAI和Anthropic — 🔗 https://techcrunch.com/2026/07/15/microsoft-is-reportedly-training-salespeople-to-talk-down-openai-and-anthropic/
+⑥ Linus Torvalds回应反对AI写Linux代码的人：「fork，或者走人」 — 🔗 https://arstechnica.com/ai/2026/07/linus-torvalds-to-critics-of-ai-coding-in-linux-fork-it-or-just-walk-away/
+⑦ xAI起诉一名被控用Grok生成儿童性影像的用户 — 🔗 https://arstechnica.com/tech-policy/2026/07/xai-cant-deny-grok-makes-csam-anymore-so-its-suing-users/
+⑧ 现代汽车工厂工人因担忧人形机器人发起罢工 — 🔗 https://arstechnica.com/ai/2026/07/fear-of-humanoid-robots-spurs-human-workers-to-strike-at-hyundai-auto-factory/
 
 📚 论文速报
-📄 https://ai-brief.liziran.com/zh/daily/2026-07-16-governed-ai-scientist-gwas-cyclegrpo.html
+📄 https://ai-brief.liziran.com/zh/daily/2026-07-17-moe-embodied-vlm-adaptive-attention-quantization.html
 
-⑨ Agent AI Scientist能跑完科研闭环不算新鲜，跑在医院防火墙里才是难点：受监管领域的agentic研究，瓶颈从「模型能力」转向「数据治理与审计」,做医疗/金融AI的团队值得把治理层当成一等公民设计;人机协作不是摆设——正是人类审阅揪出了表型偏差,全自动跑出来的第一版结论是错的;这是单一案例、单机构内部部署,跨病种、跨机构的泛化还没被验证,别急着当成通用范式。
-🔗 https://arxiv.org/abs/2607.11084
+⑨ 机器人 3B激活参数追平上一代32B，具身VLM的「高效」这次落到哪了：MoE让3B激活参数追平上一代32B，对算力受限的具身部署是有意义的信号，但要确认激活量小是否真转化为端到端延迟低
+🔗 https://arxiv.org/abs/2607.12894
 
-⑩ 训练优化 让模型自己给自己打分，能省掉多少标注？：双向任务的自洽循环可以充当天然reward，省掉单独的奖励模型
-🔗 https://arxiv.org/abs/2607.11581
+⑩ 模型架构 注意力压缩进入「哪里该多花码本」的空间自适应阶段：注意力压缩已经过了「能不能降复杂度」，进入「码本容量该往哪儿花」的空间自适应阶段
+🔗 https://arxiv.org/abs/2607.12789
 
-⑪ 机器人 500美元的舵机，仿真里为什么总对不上：低成本平台上τ=K_t·I在动态指令下不可靠，神经actuator建模是绕过这个误差源的实用路径
-🔗 https://arxiv.org/abs/2607.11734v1
+⑪ 推理加速 基础模型下沉到手机，代价是掉了多少精度？：基础模型下沉端侧是明确趋势，SAM2也进了这条队
+🔗 https://arxiv.org/abs/2607.12297
 
-⑫ 多模态 同一个物体换个说法，CLIP就找不准了：同义表达导致grounding不一致是CLIP系开放词表感知的隐性可靠性bug，值得自查
-🔗 https://arxiv.org/abs/2607.11008
+⑫ 评测 你算出来的准确率，可能被答案长度悄悄扭曲了：如果你自己跑eval用log-prob给多选答案排序，这个准确率数字可能受答案长度影响，不完全反映模型能力
+🔗 https://arxiv.org/abs/2607.12767
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-16-39f941f9-8904-8179-bac5-e0cc8ba648fc
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-17-3a0941f9-8904-81da-8125-d298106c17af
 🌐 https://xiaochengzi2048.github.io/digest.txt
