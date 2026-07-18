@@ -1,27 +1,28 @@
-🗞 AI 日报 · 2026.07.17
+🗞 AI 日报 · 2026.07.18
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-07-17-eu-orders-google-open-android-rival-ai-despite-safety.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-07-18-cars24-recovers-12-dead-leads-wary-developers-keep-feeding.html
 
-① 强开Android入口逼Google交出搜索数据，欧盟给对手AI助手让路，Google说这会危及隐私
-对手AI助手首次能进Android入口、拿搜索数据；Google对两大平台的控制被撬松；隐私辩护成反监管新话术
-🔗 https://arstechnica.com/gadgets/2026/07/its-official-eu-will-force-google-to-share-search-data-and-open-up-ai-on-android/
+① 没有市场的毛利语正在训练自己的语音模型，同期开源视频模型追平闭源
+长尾语言和医疗场景不必再等商业公司；开源视频图像模型可本地部署，不按token付费；闭源的前沿能力优势在收窄
+🔗 https://stateofopensource.ai/
 
-② Claude现在能替你调取1Password里存的用户名和密码
-助手从「读信息」变成「持凭据」；授权后被诱导可泄露整个账户；用户需先厘清助手能触达哪些已登录服务
-🔗 https://www.theverge.com/tech/966442/1password-anthropic-claude-browser-integration
+② 衡量AI值不值，这家二手车平台盯的是每次成功任务的成本，不是模型跑分
+AI落地评估从「能不能做」转向「值不值」；每次成功任务的成本成为部署门槛；追回12%流失线索是可量化的回报
+🔗 https://openai.com/index/cars24
 
-③ 一个0.8B的开源模型端到端啃文档解析，新基准却揭出强VLM碰上真实版面就栽
-0.8B开源模型端到端输出Markdown；文档/OCR流水线开发者可直接选型；真实文档难点在版面和长上下文，不在文字量
-🔗 https://huggingface.co/papers/2607.13639
+③ 一边承认「LLM批评者说得都对」，一边把100美元和整套工具丢给模型自己拍视频
+做coding agent的团队被AI生成PR淹没；长任务已敢整包交模型自主完成；100美元预算就能跑通全自动产出
+🔗 https://www.theocharis.dev/blog/llm-critics-are-right-i-use-llms-anyway/
 
-④ Moonshot下代模型Kimi K3据报将达2到3万亿参数 — 🔗 https://techcrunch.com/2026/07/16/moonshots-upcoming-kimi-3-is-expected-to-close-the-gap-with-anthropics-opus-4-8/
-⑤ 微软据报培训销售话术贬低OpenAI和Anthropic — 🔗 https://techcrunch.com/2026/07/15/microsoft-is-reportedly-training-salespeople-to-talk-down-openai-and-anthropic/
-⑥ Linus Torvalds回应反对AI写Linux代码的人：「fork，或者走人」 — 🔗 https://arstechnica.com/ai/2026/07/linus-torvalds-to-critics-of-ai-coding-in-linux-fork-it-or-just-walk-away/
-⑦ xAI起诉一名被控用Grok生成儿童性影像的用户 — 🔗 https://arstechnica.com/tech-policy/2026/07/xai-cant-deny-grok-makes-csam-anymore-so-its-suing-users/
-⑧ 现代汽车工厂工人因担忧人形机器人发起罢工 — 🔗 https://arstechnica.com/ai/2026/07/fear-of-humanoid-robots-spurs-human-workers-to-strike-at-hyundai-auto-factory/
+④ Apple Intelligence获批在华上线，接入阿里Qwen和百度 — 🔗 https://techcrunch.com/2026/07/16/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/
+⑤ Databricks估值冲到1880亿美元 — 🔗 https://techcrunch.com/2026/07/17/databricks-hits-188b-valuation-extending-its-run-as-ais-favorite-second-act/
+⑥ 旧金山要求苹果、Google下架「一键脱衣」应用 — 🔗 https://arstechnica.com/tech-policy/2026/07/apple-google-must-stop-profiting-off-ai-nudify-apps-san-francisco-ag-says/
+⑦ 最早给GPU放贷的机构转投推理芯片 — 🔗 https://techcrunch.com/2026/07/17/why-the-first-gpu-financiers-are-turning-to-inference-chips-in-a-400-million-deal/
+⑧ AI抬高内存价格，冲击印度手机市场 — 🔗 https://techcrunch.com/2026/07/17/ai-driven-memory-crunch-jolts-indias-smartphone-market/
 
 📚 论文速报
+（论文内容更新于 7月17日）
 📄 https://ai-brief.liziran.com/zh/daily/2026-07-17-moe-embodied-vlm-adaptive-attention-quantization.html
 
 ⑨ 机器人 3B激活参数追平上一代32B，具身VLM的「高效」这次落到哪了：MoE让3B激活参数追平上一代32B，对算力受限的具身部署是有意义的信号，但要确认激活量小是否真转化为端到端延迟低
@@ -36,5 +37,5 @@
 ⑫ 评测 你算出来的准确率，可能被答案长度悄悄扭曲了：如果你自己跑eval用log-prob给多选答案排序，这个准确率数字可能受答案长度影响，不完全反映模型能力
 🔗 https://arxiv.org/abs/2607.12767
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-17-3a0941f9-8904-81da-8125-d298106c17af
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-18-3a1941f9-8904-81b3-9b3d-e453cf2de172
 🌐 https://xiaochengzi2048.github.io/digest.txt
