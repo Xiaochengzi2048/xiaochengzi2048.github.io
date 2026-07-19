@@ -1,25 +1,25 @@
-🗞 AI 日报 · 2026.07.18
+🗞 AI 日报 · 2026.07.19
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-07-18-cars24-recovers-12-dead-leads-wary-developers-keep-feeding.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-07-19-openais-own-invited-speaker-tells-200-employees-chatgpt.html
 
-① 没有市场的毛利语正在训练自己的语音模型，同期开源视频模型追平闭源
-长尾语言和医疗场景不必再等商业公司；开源视频图像模型可本地部署，不按token付费；闭源的前沿能力优势在收窄
-🔗 https://stateofopensource.ai/
+① 接一通电话超过15分钟，凯撒的分诊护士就要被叫去谈话
+呼叫中心护士绩效分与通话时长挂钩；AI给护士共情和语气打分；加州拟立法保护推翻AI建议的医护免遭报复
+🔗 https://localnewsmatters.org/2026/07/15/kaiser-nurses-say-ai-workplace-surveillance-are-making-their-jobs-and-patient-care-worse/
 
-② 衡量AI值不值，这家二手车平台盯的是每次成功任务的成本，不是模型跑分
-AI落地评估从「能不能做」转向「值不值」；每次成功任务的成本成为部署门槛；追回12%流失线索是可量化的回报
-🔗 https://openai.com/index/cars24
+② Databricks估值冲上1880亿美元，同一天Index Ventures创始人预言这笔钱终将被重新分配
+AI财富集中到极少数公司；投资人预判再分配路径「自愿或非自愿」；创业者与从业者是财富分配的直接相关方
+🔗 https://techcrunch.com/2026/07/17/neil-rimer-thinks-the-ai-money-is-coming-back-out/
 
-③ 一边承认「LLM批评者说得都对」，一边把100美元和整套工具丢给模型自己拍视频
-做coding agent的团队被AI生成PR淹没；长任务已敢整包交模型自主完成；100美元预算就能跑通全自动产出
-🔗 https://www.theocharis.dev/blog/llm-critics-are-right-i-use-llms-anyway/
+③ OpenAI请上台演讲的作家，当着约200名员工警告ChatGPT正在让一代人失声
+OpenAI对自家产品的内部分歧被公开；青少年用ChatGPT的风险仍无定论；批评来自公司亲自请上台的人
+🔗 https://openai.com/index/why-teens-deserve-access-safe-ai
 
-④ Apple Intelligence获批在华上线，接入阿里Qwen和百度 — 🔗 https://techcrunch.com/2026/07/16/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/
-⑤ Databricks估值冲到1880亿美元 — 🔗 https://techcrunch.com/2026/07/17/databricks-hits-188b-valuation-extending-its-run-as-ais-favorite-second-act/
-⑥ 旧金山要求苹果、Google下架「一键脱衣」应用 — 🔗 https://arstechnica.com/tech-policy/2026/07/apple-google-must-stop-profiting-off-ai-nudify-apps-san-francisco-ag-says/
-⑦ 最早给GPU放贷的机构转投推理芯片 — 🔗 https://techcrunch.com/2026/07/17/why-the-first-gpu-financiers-are-turning-to-inference-chips-in-a-400-million-deal/
-⑧ AI抬高内存价格，冲击印度手机市场 — 🔗 https://techcrunch.com/2026/07/17/ai-driven-memory-crunch-jolts-indias-smartphone-market/
+④ Moonshot发布新版Kimi模型 — 🔗 https://techcrunch.com/2026/07/18/kimi-threat-or-menace/
+⑤ Google DeepMind与Isomorphic Labs公布bioresilience方案 — 🔗 https://deepmind.google/blog/our-approach-to-bioresilience/
+⑥ Google投资的FireSat野火探测卫星升空 — 🔗 https://arstechnica.com/space/2026/07/google-backed-satellites-for-wildfire-detection-launch-as-smoke-chokes-us-canada/
+⑦ GPT-5.6被曝用一段prompt补上凸优化30年空缺 — 🔗 https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a/
+⑧ 纽约州长用AI审查全州每一条法规 — 🔗 https://www.theverge.com/ai-artificial-intelligence/966647/new-york-governor-kathy-hochul-ai-policies
 
 📚 论文速报
 （论文内容更新于 7月17日）
@@ -37,5 +37,5 @@ AI落地评估从「能不能做」转向「值不值」；每次成功任务的
 ⑫ 评测 你算出来的准确率，可能被答案长度悄悄扭曲了：如果你自己跑eval用log-prob给多选答案排序，这个准确率数字可能受答案长度影响，不完全反映模型能力
 🔗 https://arxiv.org/abs/2607.12767
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-18-3a1941f9-8904-81b3-9b3d-e453cf2de172
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-19-3a2941f9-8904-8183-84fd-f4478e7eb021
 🌐 https://xiaochengzi2048.github.io/digest.txt
