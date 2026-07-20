@@ -1,6 +1,7 @@
-🗞 AI 日报 · 2026.07.19
+🗞 AI 日报 · 2026.07.20
 
 📰 今日速报
+（速报内容更新于 7月19日）
 📄 https://ai-digest.liziran.com/zh/digest/2026-07-19-openais-own-invited-speaker-tells-200-employees-chatgpt.html
 
 ① 接一通电话超过15分钟，凯撒的分诊护士就要被叫去谈话
@@ -21,21 +22,5 @@ OpenAI对自家产品的内部分歧被公开；青少年用ChatGPT的风险仍�
 ⑦ GPT-5.6被曝用一段prompt补上凸优化30年空缺 — 🔗 https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a/
 ⑧ 纽约州长用AI审查全州每一条法规 — 🔗 https://www.theverge.com/ai-artificial-intelligence/966647/new-york-governor-kathy-hochul-ai-policies
 
-📚 论文速报
-（论文内容更新于 7月17日）
-📄 https://ai-brief.liziran.com/zh/daily/2026-07-17-moe-embodied-vlm-adaptive-attention-quantization.html
-
-⑨ 机器人 3B激活参数追平上一代32B，具身VLM的「高效」这次落到哪了：MoE让3B激活参数追平上一代32B，对算力受限的具身部署是有意义的信号，但要确认激活量小是否真转化为端到端延迟低
-🔗 https://arxiv.org/abs/2607.12894
-
-⑩ 模型架构 注意力压缩进入「哪里该多花码本」的空间自适应阶段：注意力压缩已经过了「能不能降复杂度」，进入「码本容量该往哪儿花」的空间自适应阶段
-🔗 https://arxiv.org/abs/2607.12789
-
-⑪ 推理加速 基础模型下沉到手机，代价是掉了多少精度？：基础模型下沉端侧是明确趋势，SAM2也进了这条队
-🔗 https://arxiv.org/abs/2607.12297
-
-⑫ 评测 你算出来的准确率，可能被答案长度悄悄扭曲了：如果你自己跑eval用log-prob给多选答案排序，这个准确率数字可能受答案长度影响，不完全反映模型能力
-🔗 https://arxiv.org/abs/2607.12767
-
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-19-3a2941f9-8904-8183-84fd-f4478e7eb021
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-20-3a3941f9-8904-8141-9df0-e653990cc1ac
 🌐 https://xiaochengzi2048.github.io/digest.txt
