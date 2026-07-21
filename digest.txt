@@ -1,26 +1,41 @@
-🗞 AI 日报 · 2026.07.20
+🗞 AI 日报 · 2026.07.21
 
 📰 今日速报
-（速报内容更新于 7月19日）
-📄 https://ai-digest.liziran.com/zh/digest/2026-07-19-openais-own-invited-speaker-tells-200-employees-chatgpt.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-07-21-kimi-k3-qwen-38-match-fable-5-then-give-weights-away.html
 
-① 接一通电话超过15分钟，凯撒的分诊护士就要被叫去谈话
-呼叫中心护士绩效分与通话时长挂钩；AI给护士共情和语气打分；加州拟立法保护推翻AI建议的医护免遭报复
-🔗 https://localnewsmatters.org/2026/07/15/kaiser-nurses-say-ai-workplace-surveillance-are-making-their-jobs-and-patient-care-worse/
+① 两款对标Fable 5、成本只有零头的中国开源模型同周上线，特朗普的AI顾问圈先内讧了
+开源权重撬动「闭源加高价」的收费逻辑；Anthropic产品差异化首当其冲；权重数周后公开，人人可自部署；美国AI顾问圈就应对路线分裂
+🔗 https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen
 
-② Databricks估值冲上1880亿美元，同一天Index Ventures创始人预言这笔钱终将被重新分配
-AI财富集中到极少数公司；投资人预判再分配路径「自愿或非自愿」；创业者与从业者是财富分配的直接相关方
-🔗 https://techcrunch.com/2026/07/17/neil-rimer-thinks-the-ai-money-is-coming-back-out/
+② 敢说「不知道」的人从44%掉到3%，机构却在加速把判断权交给AI
+AI筛简历比人类更容易生偏见；用AI建议后准确率降、信心升；高风险决策外包给AI，无人复核
+🔗 https://thenextweb.com/news/ai-advice-suppresses-critical-thinking-wrong-answers-study
 
-③ OpenAI请上台演讲的作家，当着约200名员工警告ChatGPT正在让一代人失声
-OpenAI对自家产品的内部分歧被公开；青少年用ChatGPT的风险仍无定论；批评来自公司亲自请上台的人
-🔗 https://openai.com/index/why-teens-deserve-access-safe-ai
+③ 换模型不如换上下文，Augment工程师论证AI编程的胜负手在模型之外
+harness与上下文，比换模型更影响产出；开发者精力该投工具层，不是追模型；MCP转无状态，harness接入更省事
+🔗 https://arstechnica.com/ai/2026/07/beyond-grep-the-case-for-a-context-rich-ai-coding-harness/
 
-④ Moonshot发布新版Kimi模型 — 🔗 https://techcrunch.com/2026/07/18/kimi-threat-or-menace/
-⑤ Google DeepMind与Isomorphic Labs公布bioresilience方案 — 🔗 https://deepmind.google/blog/our-approach-to-bioresilience/
-⑥ Google投资的FireSat野火探测卫星升空 — 🔗 https://arstechnica.com/space/2026/07/google-backed-satellites-for-wildfire-detection-launch-as-smoke-chokes-us-canada/
-⑦ GPT-5.6被曝用一段prompt补上凸优化30年空缺 — 🔗 https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a/
-⑧ 纽约州长用AI审查全州每一条法规 — 🔗 https://www.theverge.com/ai-artificial-intelligence/966647/new-york-governor-kathy-hochul-ai-policies
+④ Google自研新芯片专为Gemini提速 — 🔗 https://techcrunch.com/2026/07/20/google-is-working-on-a-new-ai-chip-designed-to-make-gemini-more-efficient/
+⑤ OpenAI公布长任务模型的安全教训 — 🔗 https://openai.com/index/safety-alignment-long-horizon-models
+⑥ 百时美施贵宝在NVIDIA Vera Rubin上建生命科学AI工厂 — 🔗 https://blogs.nvidia.com/blog/bristol-myers-squibb-building-life-science-industrys-most-advanced-ai-factory-on-nvidia-vera-rubin/
+⑦ Anthropic开放罕见病研究资助申请 — 🔗 https://www.anthropic.com/news/rare-disease-research-grants
+⑧ YouTube明确不给AI垃圾内容分广告钱 — 🔗 https://techcrunch.com/2026/07/20/youtube-clarifies-policies-around-ai-slop-and-upsetting-videos/
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-20-3a3941f9-8904-8141-9df0-e653990cc1ac
+📚 论文速报
+（论文内容更新于 7月20日）
+📄 https://ai-brief.liziran.com/zh/daily/2026-07-20-hindsight-teacher-external-agent-state-subgroup-polling.html
+
+⑨ 训练优化 这个teacher不比student强，它只是知道结局：SEED把后见之明变成了监督信号——同一个模型读完自己的轨迹总结成技能，再用「带技能/不带技能」的概率差去填结果奖励留下的空白，全程不需要外部更大的teacher
+🔗 https://arxiv.org/abs/2607.14777
+
+⑩ Agent 检索agent原地打转烧光预算，缺的不是更强的模型：打转的根因是进度只存在于对话历史里，把「已覆盖/已失败」外置成可查状态，是harness层就能落地的改动
+🔗 https://arxiv.org/abs/2607.15257
+
+⑪ 机器人 RxBrain把语言和视觉想象塞进了同一条计划序列：语言和视觉想象共用一条计划序列，每步计划天然对齐物理状态，省掉VLM和世界模型之间的对接工程
+🔗 https://arxiv.org/abs/2607.14187
+
+⑫ 可解释性 把人群拆开问再加起来，比直接问更准：用LLM估人群分布前先做一致性自检——换几种切分方式各自聚合，数对不上就别拿去做决策
+🔗 https://arxiv.org/abs/2607.15277
+
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-21-3a4941f9-8904-81c9-9375-ee0c85238bd3
 🌐 https://xiaochengzi2048.github.io/digest.txt
