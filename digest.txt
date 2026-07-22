@@ -1,25 +1,25 @@
-🗞 AI 日报 · 2026.07.21
+🗞 AI 日报 · 2026.07.22
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-07-21-kimi-k3-qwen-38-match-fable-5-then-give-weights-away.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-07-22-five-tech-giants-hid-165-trillion-ai-debt-buying-models-no.html
 
-① 两款对标Fable 5、成本只有零头的中国开源模型同周上线，特朗普的AI顾问圈先内讧了
-开源权重撬动「闭源加高价」的收费逻辑；Anthropic产品差异化首当其冲；权重数周后公开，人人可自部署；美国AI顾问圈就应对路线分裂
-🔗 https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen
+① 同样的活，Gemini 3.6 Flash少烧17%的token，编程场景最高省65%
+生产级agent的token账单直接变小；每秒350 token，高频调用延迟更低；网络安全出专用小模型，配CodeMender用；Gemini 3.5 Pro仍限合作伙伴内测
+🔗 https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/
 
-② 敢说「不知道」的人从44%掉到3%，机构却在加速把判断权交给AI
-AI筛简历比人类更容易生偏见；用AI建议后准确率降、信心升；高风险决策外包给AI，无人复核
-🔗 https://thenextweb.com/news/ai-advice-suppresses-critical-thinking-wrong-answers-study
+② 给小商户开AI变现课，又请两位金融老将进董事会，OpenAI在补商业基建
+中小商户成OpenAI下一批付费订阅目标；董事会补金融治理，为扩张铺路；ChatGPT广告位做法仍未公布
+🔗 https://openai.com/index/introducing-chatgpt-small-business-program
 
-③ 换模型不如换上下文，Augment工程师论证AI编程的胜负手在模型之外
-harness与上下文，比换模型更影响产出；开发者精力该投工具层，不是追模型；MCP转无状态，harness接入更省事
-🔗 https://arstechnica.com/ai/2026/07/beyond-grep-the-case-for-a-context-rich-ai-coding-harness/
+③ Meta账外藏着4200亿美元负债，一篇爆文说这些钱押注的模型根本没有护城河
+账外负债已超公开负债；投资者难评估AI巨头真实风险敞口；模型可随时替换，锁定靠企业合同
+🔗 https://asia.nikkei.com/business/technology/five-us-tech-giants-hidden-debts-soar-to-1.65tn-on-opaque-ai-funding
 
-④ Google自研新芯片专为Gemini提速 — 🔗 https://techcrunch.com/2026/07/20/google-is-working-on-a-new-ai-chip-designed-to-make-gemini-more-efficient/
-⑤ OpenAI公布长任务模型的安全教训 — 🔗 https://openai.com/index/safety-alignment-long-horizon-models
-⑥ 百时美施贵宝在NVIDIA Vera Rubin上建生命科学AI工厂 — 🔗 https://blogs.nvidia.com/blog/bristol-myers-squibb-building-life-science-industrys-most-advanced-ai-factory-on-nvidia-vera-rubin/
-⑦ Anthropic开放罕见病研究资助申请 — 🔗 https://www.anthropic.com/news/rare-disease-research-grants
-⑧ YouTube明确不给AI垃圾内容分广告钱 — 🔗 https://techcrunch.com/2026/07/20/youtube-clarifies-policies-around-ai-slop-and-upsetting-videos/
+④ 美国威胁制裁中国AI模型，理由是知识产权盗窃 — 🔗 https://techcrunch.com/2026/07/21/us-threatens-sanctions-against-chinese-ai-models-over-ip-theft/
+⑤ Anthropic 15亿美元版权和解获终审批准 — 🔗 https://techcrunch.com/2026/07/20/anthropics-landmark-1-5b-copyright-settlement-is-approved/
+⑥ OpenAI与Hugging Face披露模型评测中的安全事件 — 🔗 https://openai.com/index/hugging-face-model-evaluation-security-incident/
+⑦ OpenAI上线广告业务，开放在ChatGPT中投放广告 — 🔗 https://ads.openai.com/
+⑧ Jack Dorsey发布团队群聊平台Buzz对标Slack — 🔗 https://techcrunch.com/2026/07/21/jack-dorsey-is-taking-on-slack-with-buzz-a-group-chat-platform-for-teams-and-their-ai-agents/
 
 📚 论文速报
 （论文内容更新于 7月20日）
@@ -37,5 +37,5 @@ harness与上下文，比换模型更影响产出；开发者精力该投工具�
 ⑫ 可解释性 把人群拆开问再加起来，比直接问更准：用LLM估人群分布前先做一致性自检——换几种切分方式各自聚合，数对不上就别拿去做决策
 🔗 https://arxiv.org/abs/2607.15277
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-21-3a4941f9-8904-81c9-9375-ee0c85238bd3
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-22-3a5941f9-8904-8165-ae75-ecf91d814994
 🌐 https://xiaochengzi2048.github.io/digest.txt
