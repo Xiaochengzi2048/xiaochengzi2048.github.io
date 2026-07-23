@@ -1,41 +1,37 @@
-🗞 AI 日报 · 2026.07.22
+🗞 AI 日报 · 2026.07.23
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-07-22-five-tech-giants-hid-165-trillion-ai-debt-buying-models-no.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-07-23-new-game-pipelines-ditch-artists-animators-running-entirely.html
 
-① 同样的活，Gemini 3.6 Flash少烧17%的token，编程场景最高省65%
-生产级agent的token账单直接变小；每秒350 token，高频调用延迟更低；网络安全出专用小模型，配CodeMender用；Gemini 3.5 Pro仍限合作伙伴内测
-🔗 https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/
+① 一张桌面显卡跑出无限可交互世界，开源世界模型开始对着游戏引擎的活儿动手
+世界模型开始替代美术、动画、物理、编程流水线；单张桌面GPU即可实时生成可玩世界；生成派仍卡在实时部署的算力成本上
+🔗 https://huggingface.co/papers/2607.18367
 
-② 给小商户开AI变现课，又请两位金融老将进董事会，OpenAI在补商业基建
-中小商户成OpenAI下一批付费订阅目标；董事会补金融治理，为扩张铺路；ChatGPT广告位做法仍未公布
-🔗 https://openai.com/index/introducing-chatgpt-small-business-program
+② 号称「无限」的AI token，美军一年就把配额烧光了
+「无限」套餐有隐藏配额，上量方需自查用量；token预算成部署硬约束；上下文裁剪从外挂分类器转向agent自带，省token门槛降低
+🔗 https://arstechnica.com/ai/2026/07/us-army-faces-ai-use-limits-after-exhausting-years-supply-of-ai-tokens/
 
-③ Meta账外藏着4200亿美元负债，一篇爆文说这些钱押注的模型根本没有护城河
-账外负债已超公开负债；投资者难评估AI巨头真实风险敞口；模型可随时替换，锁定靠企业合同
-🔗 https://asia.nikkei.com/business/technology/five-us-tech-giants-hidden-debts-soar-to-1.65tn-on-opaque-ai-funding
+③ 一句「骑自行车的鹈鹕」玩笑测试，正被AI实验室认真对待
+出名的非正式基准也可能被刻意迎合；跑分优化后不再反映真实能力；评测只看输出，不查推理过程
+🔗 https://dylancastillo.co/posts/pelicanmaxxing.html
 
-④ 美国威胁制裁中国AI模型，理由是知识产权盗窃 — 🔗 https://techcrunch.com/2026/07/21/us-threatens-sanctions-against-chinese-ai-models-over-ip-theft/
-⑤ Anthropic 15亿美元版权和解获终审批准 — 🔗 https://techcrunch.com/2026/07/20/anthropics-landmark-1-5b-copyright-settlement-is-approved/
-⑥ OpenAI与Hugging Face披露模型评测中的安全事件 — 🔗 https://openai.com/index/hugging-face-model-evaluation-security-incident/
-⑦ OpenAI上线广告业务，开放在ChatGPT中投放广告 — 🔗 https://ads.openai.com/
-⑧ Jack Dorsey发布团队群聊平台Buzz对标Slack — 🔗 https://techcrunch.com/2026/07/21/jack-dorsey-is-taking-on-slack-with-buzz-a-group-chat-platform-for-teams-and-their-ai-agents/
+④ AMD向Anthropic投资至多50亿美元 — 🔗 https://www.theverge.com/ai-artificial-intelligence/969285/amd-anthropic-ai-infrastructure-deal
+⑤ Google靠云业务盈利为AI巨额支出正名 — 🔗 https://techcrunch.com/2026/07/22/google-justifies-its-massive-ai-spending-with-a-booming-cloud-business/
+⑥ OpenAI发布企业agent平台Presence — 🔗 https://openai.com/index/introducing-openai-presence
+⑦ Travis Kalanick的机器人公司Atoms融资17亿美元 — 🔗 https://techcrunch.com/2026/07/22/travis-kalanicks-robotics-company-raises-1-7b-led-by-a16z/
+⑧ Monday.com裁员20%转向AI — 🔗 https://techcrunch.com/2026/07/22/monday-com-lays-off-hundreds-to-focuses-on-ai/
 
 📚 论文速报
-（论文内容更新于 7月20日）
-📄 https://ai-brief.liziran.com/zh/daily/2026-07-20-hindsight-teacher-external-agent-state-subgroup-polling.html
+📄 https://ai-brief.liziran.com/zh/daily/2026-07-23-diffusion-filtering-egocentric-4d-reconstruction.html
 
-⑨ 训练优化 这个teacher不比student强，它只是知道结局：SEED把后见之明变成了监督信号——同一个模型读完自己的轨迹总结成技能，再用「带技能/不带技能」的概率差去填结果奖励留下的空白，全程不需要外部更大的teacher
-🔗 https://arxiv.org/abs/2607.14777
+⑨ 图像生成 把去噪当成滤波问题，能白捡多少质量？：「把采样当解ODE」这个默认视角丢掉了去噪的不确定性，DiFA用滤波思路把它补回来，且不用重训
+🔗 https://arxiv.org/abs/2607.17972
 
-⑩ Agent 检索agent原地打转烧光预算，缺的不是更强的模型：打转的根因是进度只存在于对话历史里，把「已覆盖/已失败」外置成可查状态，是harness层就能落地的改动
-🔗 https://arxiv.org/abs/2607.15257
+⑩ 训练优化 评审的rubric理由，本该当训练信号留下来：无ground truth的开放任务是RLHF最弱的一环，把评审的文字理由留下来当训练信号是个值得试的方向
+🔗 https://arxiv.org/abs/2607.18110
 
-⑪ 机器人 RxBrain把语言和视觉想象塞进了同一条计划序列：语言和视觉想象共用一条计划序列，每步计划天然对齐物理状态，省掉VLM和世界模型之间的对接工程
-🔗 https://arxiv.org/abs/2607.14187
+⑪ 多模态 一个可穿戴相机，同时拿到「看的人」和「被看的景」：单目第一视角视频一次性重建「人」（相机/注视/身体/手）加「景」（深度），省掉拼两套pipeline的工程量
+🔗 https://arxiv.org/abs/2607.17790
 
-⑫ 可解释性 把人群拆开问再加起来，比直接问更准：用LLM估人群分布前先做一致性自检——换几种切分方式各自聚合，数对不上就别拿去做决策
-🔗 https://arxiv.org/abs/2607.15277
-
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-22-3a5941f9-8904-8165-ae75-ecf91d814994
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-23-3a6941f9-8904-8125-8984-f1ce23c5fafc
 🌐 https://xiaochengzi2048.github.io/digest.txt
