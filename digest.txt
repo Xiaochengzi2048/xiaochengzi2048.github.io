@@ -1,27 +1,28 @@
-🗞 AI 日报 · 2026.07.23
+🗞 AI 日报 · 2026.07.24
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-07-23-new-game-pipelines-ditch-artists-animators-running-entirely.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-07-24-publishers-bill-ai-15-billion-other-newsrooms-invite-it.html
 
-① 一张桌面显卡跑出无限可交互世界，开源世界模型开始对着游戏引擎的活儿动手
-世界模型开始替代美术、动画、物理、编程流水线；单张桌面GPU即可实时生成可玩世界；生成派仍卡在实时部署的算力成本上
-🔗 https://huggingface.co/papers/2607.18367
+① 一盘认不出的adobo，逼出一个专挑非AI好书的工具
+AI slop已渗进菜单、书单等日常消费；普通人开始手搓工具反向筛选；「人写的」正在变成一种可标价的稀缺信号
+🔗 https://blog.fiddery.com/businesses-with-ugly-ai-menu-redesigns/
 
-② 号称「无限」的AI token，美军一年就把配额烧光了
-「无限」套餐有隐藏配额，上量方需自查用量；token预算成部署硬约束；上下文裁剪从外挂分类器转向agent自带，省token门槛降低
-🔗 https://arstechnica.com/ai/2026/07/us-army-faces-ai-use-limits-after-exhausting-years-supply-of-ai-tokens/
+② 9000名员工把重复工作交给AI，NTT DATA用Codex把事故分析从几小时压到30分钟
+企业买AI改看省下的人力工时；采购锚点从模型能力变成流程成本；OpenAI把省时能力打包成agent平台转卖
+🔗 https://openai.com/index/ntt-data
 
-③ 一句「骑自行车的鹈鹕」玩笑测试，正被AI实验室认真对待
-出名的非正式基准也可能被刻意迎合；跑分优化后不再反映真实能力；评测只看输出，不查推理过程
-🔗 https://dylancastillo.co/posts/pelicanmaxxing.html
+③ 作家靠诉讼拿到15亿美元和解，新闻机构却主动把AI用进了采编
+训练侵权赔付有了价签，每本书约3000美元；握不握分发渠道，决定创作者是索赔还是拥抱AI；下一步看还有哪类内容方跟进起诉
+🔗 https://apnews.com/article/ai-anthropic-copyright-settlement-claude-books-bartz-74b140444023898aeba8579b6e9f0d63
 
-④ AMD向Anthropic投资至多50亿美元 — 🔗 https://www.theverge.com/ai-artificial-intelligence/969285/amd-anthropic-ai-infrastructure-deal
-⑤ Google靠云业务盈利为AI巨额支出正名 — 🔗 https://techcrunch.com/2026/07/22/google-justifies-its-massive-ai-spending-with-a-booming-cloud-business/
-⑥ OpenAI发布企业agent平台Presence — 🔗 https://openai.com/index/introducing-openai-presence
-⑦ Travis Kalanick的机器人公司Atoms融资17亿美元 — 🔗 https://techcrunch.com/2026/07/22/travis-kalanicks-robotics-company-raises-1-7b-led-by-a16z/
-⑧ Monday.com裁员20%转向AI — 🔗 https://techcrunch.com/2026/07/22/monday-com-lays-off-hundreds-to-focuses-on-ai/
+④ AMD发布Helios机架级AI系统，年内出货对标Nvidia — 🔗 https://techcrunch.com/2026/07/23/amd-takes-on-nvidia-with-its-helios-ai-rack-scale-system/
+⑤ Gemini月活逼近10亿 — 🔗 https://techcrunch.com/2026/07/23/google-closes-in-on-another-billion-user-product-with-gemini/
+⑥ AI推理芯片startup Etched估值达103亿美元 — 🔗 https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/
+⑦ OpenAI向全美用户开放ChatGPT Health — 🔗 https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/
+⑧ Anthropic更新Claude语音模式 — 🔗 https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/
 
 📚 论文速报
+（论文内容更新于 7月23日）
 📄 https://ai-brief.liziran.com/zh/daily/2026-07-23-diffusion-filtering-egocentric-4d-reconstruction.html
 
 ⑨ 图像生成 把去噪当成滤波问题，能白捡多少质量？：「把采样当解ODE」这个默认视角丢掉了去噪的不确定性，DiFA用滤波思路把它补回来，且不用重训
@@ -33,5 +34,5 @@
 ⑪ 多模态 一个可穿戴相机，同时拿到「看的人」和「被看的景」：单目第一视角视频一次性重建「人」（相机/注视/身体/手）加「景」（深度），省掉拼两套pipeline的工程量
 🔗 https://arxiv.org/abs/2607.17790
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-23-3a6941f9-8904-8125-8984-f1ce23c5fafc
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-24-3a7941f9-8904-81ed-aa9d-f6b378ab9769
 🌐 https://xiaochengzi2048.github.io/digest.txt
