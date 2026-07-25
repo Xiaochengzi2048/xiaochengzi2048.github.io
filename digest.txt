@@ -1,6 +1,7 @@
-🗞 AI 日报 · 2026.07.24
+🗞 AI 日报 · 2026.07.25
 
 📰 今日速报
+（速报内容更新于 7月24日）
 📄 https://ai-digest.liziran.com/zh/digest/2026-07-24-publishers-bill-ai-15-billion-other-newsrooms-invite-it.html
 
 ① 一盘认不出的adobo，逼出一个专挑非AI好书的工具
@@ -22,17 +23,17 @@ AI slop已渗进菜单、书单等日常消费；普通人开始手搓工具反�
 ⑧ Anthropic更新Claude语音模式 — 🔗 https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/
 
 📚 论文速报
-（论文内容更新于 7月23日）
-📄 https://ai-brief.liziran.com/zh/daily/2026-07-23-diffusion-filtering-egocentric-4d-reconstruction.html
+（论文内容更新于 7月24日）
+📄 https://ai-brief.liziran.com/zh/daily/2026-07-24-mage-flow-visual-control-signals.html
 
-⑨ 图像生成 把去噪当成滤波问题，能白捡多少质量？：「把采样当解ODE」这个默认视角丢掉了去噪的不确定性，DiFA用滤波思路把它补回来，且不用重训
-🔗 https://arxiv.org/abs/2607.17972
+⑨ 图像生成 效率不是蒸馏挤出来的，是从接口处一起定的：效率来自tokenizer和backbone的协同设计，不是事后蒸馏，这个思路值得做自研栈的团队借鉴
+🔗 https://arxiv.org/abs/2607.19064
 
-⑩ 训练优化 评审的rubric理由，本该当训练信号留下来：无ground truth的开放任务是RLHF最弱的一环，把评审的文字理由留下来当训练信号是个值得试的方向
-🔗 https://arxiv.org/abs/2607.18110
+⑩ 机器人 怎么把「动作」说给一个只看过视频的模型听？：动作对齐到视觉空间，省掉外挂的动作编码器这层翻译
+🔗 https://arxiv.org/abs/2607.19343
 
-⑪ 多模态 一个可穿戴相机，同时拿到「看的人」和「被看的景」：单目第一视角视频一次性重建「人」（相机/注视/身体/手）加「景」（深度），省掉拼两套pipeline的工程量
-🔗 https://arxiv.org/abs/2607.17790
+⑪ 训练优化 成功和失败的样本，凭什么要用同一套监督方式？：self-distillation里teacher的角色可以按轨迹对错动态切换，而非固定单一职责，这是个值得记住的设计自由度
+🔗 https://arxiv.org/abs/2607.18955
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-24-3a7941f9-8904-81ed-aa9d-f6b378ab9769
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-25-3a8941f9-8904-81d4-9add-eb5c1c2170bb
 🌐 https://xiaochengzi2048.github.io/digest.txt
