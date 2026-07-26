@@ -1,4 +1,4 @@
-🗞 AI 日报 · 2026.07.25
+🗞 AI 日报 · 2026.07.26
 
 📰 今日速报
 （速报内容更新于 7月24日）
@@ -35,5 +35,5 @@ AI slop已渗进菜单、书单等日常消费；普通人开始手搓工具反�
 ⑪ 训练优化 成功和失败的样本，凭什么要用同一套监督方式？：self-distillation里teacher的角色可以按轨迹对错动态切换，而非固定单一职责，这是个值得记住的设计自由度
 🔗 https://arxiv.org/abs/2607.18955
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-25-3a8941f9-8904-81d4-9add-eb5c1c2170bb
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-26-3a9941f9-8904-81fb-8e6e-f05b76799ab7
 🌐 https://xiaochengzi2048.github.io/digest.txt
