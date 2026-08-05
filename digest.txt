@@ -1,39 +1,37 @@
-🗞 AI 日报 · 2026.07.26
+🗞 AI 日报 · 2026.08.05
 
 📰 今日速报
-（速报内容更新于 7月24日）
-📄 https://ai-digest.liziran.com/zh/digest/2026-07-24-publishers-bill-ai-15-billion-other-newsrooms-invite-it.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-08-05-officials-order-58000-exam-retakes-after-top-scores-jump.html
 
-① 一盘认不出的adobo，逼出一个专挑非AI好书的工具
-AI slop已渗进菜单、书单等日常消费；普通人开始手搓工具反向筛选；「人写的」正在变成一种可标价的稀缺信号
-🔗 https://blog.fiddery.com/businesses-with-ugly-ai-menu-redesigns/
+① 高分人数激增5倍，5.8万名学生被迫重考
+5.8万学生承担重考成本；考试部署前需透明审计；异常成绩需要人工复核；申诉机制成为上线门槛
+🔗 https://arstechnica.com/culture/2026/08/an-ai-supervised-remote-exam-went-so-badly-that-58000-students-must-retake-it/
 
-② 9000名员工把重复工作交给AI，NTT DATA用Codex把事故分析从几小时压到30分钟
-企业买AI改看省下的人力工时；采购锚点从模型能力变成流程成本；OpenAI把省时能力打包成agent平台转卖
-🔗 https://openai.com/index/ntt-data
+② 苹果要用禁令卡住OpenAI硬件，称另有11名前员工或涉案
+OpenAI硬件进度可能被卡；离职员工面临加速取证；法院先判断是否限制研发
+🔗 https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/
 
-③ 作家靠诉讼拿到15亿美元和解，新闻机构却主动把AI用进了采编
-训练侵权赔付有了价签，每本书约3000美元；握不握分发渠道，决定创作者是索赔还是拥抱AI；下一步看还有哪类内容方跟进起诉
-🔗 https://apnews.com/article/ai-anthropic-copyright-settlement-claude-books-bartz-74b140444023898aeba8579b6e9f0d63
+③ 看到AI配图就怀疑正文，整段生成代码也让开发者重新手敲
+内容团队少用装饰性AI配图；开发者需逐段重建理解；效率评估须计入人工复核
+🔗 https://nelson.cloud/ai-generated-images-discourage-me-from-reading-your-blog/
 
-④ AMD发布Helios机架级AI系统，年内出货对标Nvidia — 🔗 https://techcrunch.com/2026/07/23/amd-takes-on-nvidia-with-its-helios-ai-rack-scale-system/
-⑤ Gemini月活逼近10亿 — 🔗 https://techcrunch.com/2026/07/23/google-closes-in-on-another-billion-user-product-with-gemini/
-⑥ AI推理芯片startup Etched估值达103亿美元 — 🔗 https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/
-⑦ OpenAI向全美用户开放ChatGPT Health — 🔗 https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/
-⑧ Anthropic更新Claude语音模式 — 🔗 https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/
+④ Anthropic据报与AI云公司Volta签署100亿美元协议 — 🔗 https://techcrunch.com/2026/08/04/anthropic-signs-10-billion-deal-with-ai-cloud-startup-volta/
+⑤ 得州暂停新建数据中心并启动审计 — 🔗 https://techcrunch.com/2026/08/04/texas-halts-new-data-centers-as-governor-calls-for-audits/
+⑥ SpaceX的AI业务收入超过航天业务 — 🔗 https://www.theverge.com/science/975335/spacex-made-more-money-as-a-neocloud
+⑦ AMD数据中心季度收入同比增长107% — 🔗 https://www.theverge.com/tech/975381/amd-q2-2026-earnings-ai-gaming-ryzen
+⑧ 阿里巴巴发布Qwen3.8-Max — 🔗 https://www.theverge.com/ai-artificial-intelligence/974342/alibaba-qwen-max-open-weight-ai
 
 📚 论文速报
-（论文内容更新于 7月24日）
-📄 https://ai-brief.liziran.com/zh/daily/2026-07-24-mage-flow-visual-control-signals.html
+📄 https://ai-brief.liziran.com/zh/daily/2026-08-05-token-budgets-silent-failures.html
 
-⑨ 图像生成 效率不是蒸馏挤出来的，是从接口处一起定的：效率来自tokenizer和backbone的协同设计，不是事后蒸馏，这个思路值得做自研栈的团队借鉴
-🔗 https://arxiv.org/abs/2607.19064
+⑨ 推理加速 数千个空间token，正在拖住3D模型：部署3D视觉语言模型时，应优先检查场景token数量，而不只盯着参数规模
+🔗 https://arxiv.org/abs/2608.01185v1
 
-⑩ 机器人 怎么把「动作」说给一个只看过视频的模型听？：动作对齐到视觉空间，省掉外挂的动作编码器这层翻译
-🔗 https://arxiv.org/abs/2607.19343
+⑩ 评测 准确率下降不可怕，模型错得很自信才麻烦：上线多模态系统时，除准确率降幅外还应单独统计静默失败率
+🔗 https://arxiv.org/abs/2608.01462v1
 
-⑪ 训练优化 成功和失败的样本，凭什么要用同一套监督方式？：self-distillation里teacher的角色可以按轨迹对错动态切换，而非固定单一职责，这是个值得记住的设计自由度
-🔗 https://arxiv.org/abs/2607.18955
+⑪ Agent 越会纠错的具身Agent，为什么反而越容易卡住？：不要把频繁重规划默认视为更稳健，应把它纳入在线资源预算
+🔗 https://arxiv.org/abs/2608.01428v1
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-07-26-3a9941f9-8904-81fb-8e6e-f05b76799ab7
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-05-3b3941f9-8904-81e7-b700-d47efd416ac8
 🌐 https://xiaochengzi2048.github.io/digest.txt
