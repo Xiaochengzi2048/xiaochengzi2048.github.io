@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kiro Crew vs Hermes Agent · 产品对比</title>
+<style>
+  :root{
+    --ink:#14161a; --ink2:#3a3f47; --muted:#767c86;
+    --line:#e4e7ec; --line2:#eef0f3; --paper:#ffffff; --bg:#f5f6f8;
+    --crew:#232f3e; --crew-a:#ff9900;   /* AWS 深蓝 + 橙 */
+    --herm:#5b47e0; --herm-a:#8b7cf0;   /* Hermes 紫 */
+    --ok:#1a7f52; --warn:#b8860b; --bad:#c0392b;
+    --font:-apple-system,"SF Pro Text","Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.55;-webkit-font-smoothing:antialiased;padding:32px 20px}
+  .page{max-width:1080px;margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(20,22,26,.04),0 12px 40px rgba(20,22,26,.06)}
+  /* masthead */
+  .mast{padding:34px 40px 26px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+  .mast h1{font-size:27px;letter-spacing:-.02em;font-weight:700}
+  .mast .sub{color:var(--muted);font-size:13.5px;margin-top:6px}
+  .badge{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:5px 12px;white-space:nowrap}
+  /* vs strip */
+  .vs{display:grid;grid-template-columns:1fr 56px 1fr;align-items:stretch;border-bottom:1px solid var(--line)}
+  .vs .side{padding:22px 40px}
+  .vs .crew{background:linear-gradient(180deg,#232f3e,#2b3a4d);color:#fff}
+  .vs .herm{background:linear-gradient(180deg,#5b47e0,#6a58e8);color:#fff}
+  .vs .name{font-size:19px;font-weight:700;letter-spacing:-.01em}
+  .vs .who{font-size:12.5px;opacity:.82;margin-top:4px}
+  .vs .tag{display:inline-block;margin-top:12px;font-size:11.5px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.22);border-radius:6px;padding:4px 9px}
+  .vs .mid{display:flex;align-items:center;justify-content:center;background:#fff;font-weight:800;color:var(--muted);font-size:14px}
+  /* section */
+  .sec{padding:24px 40px 6px}
+  .sec h2{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;font-weight:700}
+  /* table */
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{text-align:left;padding:11px 14px;vertical-align:top;border-bottom:1px solid var(--line2)}
+  thead th{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--line)}
+  tbody tr:hover{background:#fafbfc}
+  td.dim{color:var(--ink2)}
+  .col-feat{width:20%;font-weight:600;color:var(--ink)}
+  .col-c,.col-h{width:34%}
+  .col-note{width:26%;color:var(--muted);font-size:12.5px}
+  th.hcrew{color:#cfd6df} th.hherm{color:#d3ccf7}
+  .pill{display:inline-block;font-size:10.5px;font-weight:700;border-radius:5px;padding:2px 7px;margin-left:2px}
+  .p-win{background:#eafaf1;color:var(--ok)}
+  .p-eq{background:#f2f3f5;color:var(--muted)}
+  .p-star{background:#fff5e0;color:var(--warn)}
+  /* verdict */
+  .verdict{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line);margin-top:18px}
+  .verdict .v{padding:22px 40px}
+  .verdict .v:first-child{border-right:1px solid var(--line)}
+  .verdict h3{font-size:13px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+  .dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+  .dot.c{background:var(--crew-a)} .dot.h{background:var(--herm)}
+  .verdict ul{list-style:none;font-size:13px;color:var(--ink2)}
+  .verdict li{padding-left:16px;position:relative;margin-bottom:6px}
+  .verdict li:before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;border-radius:50%;background:var(--line);}
+  .foot{padding:16px 40px 22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:11.5px;flex-wrap:wrap;gap:8px}
+  @media(max-width:720px){.vs{grid-template-columns:1fr}.vs .mid{display:none}.verdict{grid-template-columns:1fr}.verdict .v:first-child{border-right:0;border-bottom:1px solid var(--line)}.col-note{display:none}}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="mast">
+    <div>
+      <h1>Kiro Crew &nbsp;vs&nbsp; Hermes Agent</h1>
+      <div class="sub">自主 AI Agent 工作台 · 产品能力对比</div>
+    </div>
+    <div class="badge">Internal Reference · 2026-08</div>
+  </div>
+
+  <div class="vs">
+    <div class="side crew">
+      <div class="name">Kiro Crew</div>
+      <div class="who">AWS / Amazon · 2026-08 开源（前身 MeshClaw）</div>
+      <div class="tag">面向企业工程团队 · 底座 Kiro CLI</div>
+    </div>
+    <div class="mid">VS</div>
+    <div class="side herm">
+      <div class="name">Hermes Agent</div>
+      <div class="who">Nous Research 出品</div>
+      <div class="tag">面向个人 / 开发者 · 模型无关</div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>能力逐项对比</h2>
+    <table>
+      <thead>
+        <tr>
+          <th class="col-feat">能力维度</th>
+          <th class="col-c hcrew">Kiro Crew</th>
+          <th class="col-h hherm">Hermes Agent</th>
+          <th class="col-note">差异要点</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-feat">底座 / 模型</td>
+          <td class="dim">Kiro CLI（专有，按 credit 计费）<span class="pill p-star">★</span></td>
+          <td class="dim">模型无关，任意 provider</td>
+          <td class="col-note">Hermes 底层不锁供应商</td>
+        </tr>
+        <tr>
+          <td class="col-feat">持久记忆</td>
+          <td class="dim">Memory + 工作区级 lessons，向量+全文检索知识图谱</td>
+          <td class="dim">memory / user profile + skills，Markdown 可编辑</td>
+          <td class="col-note">对等 <span class="pill p-eq">=</span></td>
+        </tr>
+        <tr>
+          <td class="col-feat">技能 / 自进化</td>
+          <td class="dim">重复模式→可复用 skill（Markdown）</td>
+          <td class="dim">skill_manage / skill_view（Markdown+frontmatter）</td>
+          <td class="col-note">对等 <span class="pill p-eq">=</span></td>
+        </tr>
+        <tr>
+          <td class="col-feat">纠正→教训</td>
+          <td class="dim">corrections 变 durable lessons</td>
+          <td class="dim">教训写入 memory 教训段</td>
+          <td class="col-note">对等 <span class="pill p-eq">=</span></td>
+        </tr>
+        <tr>
+          <td class="col-feat">多 agent 编排</td>
+          <td class="dim">ACP 并行 subagent · Activity view 一 agent 一卡片<span class="pill p-win">强</span></td>
+          <td class="dim">delegate_task 并行/批量，结果回灌父对话</td>
+          <td class="col-note">Crew 实时可视化更强</td>
+        </tr>
+        <tr>
+          <td class="col-feat">定时 / 触发</td>
+          <td class="dim">cron + webhook + heartbeat + CI/CD 反应式<span class="pill p-win">多</span></td>
+          <td class="dim">cronjob（cron / 一次性 / watchdog）</td>
+          <td class="col-note">Crew 触发源更丰富</td>
+        </tr>
+        <tr>
+          <td class="col-feat">多渠道接入</td>
+          <td class="dim">Slack/Discord/Telegram/Teams/Webex/WeCom/微信</td>
+          <td class="dim">Telegram/Feishu/微信/Discord/Slack…</td>
+          <td class="col-note">几乎一致，Crew 多 Webex</td>
+        </tr>
+        <tr>
+          <td class="col-feat">安全 / 治理</td>
+          <td class="dim">7 层：沙箱·命令黑名单·bash 拦截·路径保护·凭证脱敏·<b>签名审计日志</b>·审批门<span class="pill p-win">重</span></td>
+          <td class="dim">沙箱 · 危险命令确认 · 敏感路径保护</td>
+          <td class="col-note">Crew 企业级更重</td>
+        </tr>
+        <tr>
+          <td class="col-feat">App / UI 层</td>
+          <td class="dim">App SDK（TS/Python+React）· app store · DevFleets / Issue Radar / Code Review Sage<span class="pill p-win">生态</span></td>
+          <td class="dim">TUI + 平台原生渲染，无独立 App 层</td>
+          <td class="col-note">最大结构性差异</td>
+        </tr>
+        <tr>
+          <td class="col-feat">协议标准</td>
+          <td class="dim">ACP + MCP（开放标准）</td>
+          <td class="dim">MCP（native + mcporter）+ ACP 子 agent</td>
+          <td class="col-note">对等 <span class="pill p-eq">=</span></td>
+        </tr>
+        <tr>
+          <td class="col-feat">部署 / 定价</td>
+          <td class="dim">自托管（Mac/容器/VM），Crew 本体免费；连接的 AI/工具付费</td>
+          <td class="dim">自托管，模型成本随所选 provider</td>
+          <td class="col-note">两者皆可留在企业边界内</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="verdict">
+    <div class="v">
+      <h3><span class="dot c"></span>Kiro Crew 更适合</h3>
+      <ul>
+        <li>企业工程团队：平台 / DevOps / SRE 场景</li>
+        <li>需要审批门 + 签名审计的合规环境</li>
+        <li>已在用 Kiro 生态（复用 .kiro 配置）</li>
+        <li>要把分散的"影子 agent"收编到统一工作台</li>
+        <li>看重可视化编排与开箱即用 App</li>
+      </ul>
+    </div>
+    <div class="v">
+      <h3><span class="dot h"></span>Hermes Agent 更适合</h3>
+      <ul>
+        <li>个人 / 小团队的贴身通用 agent</li>
+        <li>不想被单一 CLI / 模型供应商锁定</li>
+        <li>轻量、灵活、快速定制 skill 的场景</li>
+        <li>多模型自由切换与成本控制</li>
+        <li>开源可改、无独立重 UI 负担</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>图例：<b>★</b> 需注意的约束 · <b>=</b> 能力对等 · 彩色标签为该项相对优势</span>
+    <span>来源：kiro.dev 官方博客/文档/FAQ、InfoWorld（2026-08-04）</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kiro Crew · 车企客户卖点与风险对照</title>
+<style>
+  :root{
+    --ink:#14161a; --ink2:#3a3f47; --muted:#767c86;
+    --line:#e4e7ec; --line2:#eef0f3; --paper:#fff; --bg:#f5f6f8;
+    --aws:#232f3e; --aws-a:#ff9900;
+    --ok:#1a7f52; --ok-bg:#eafaf1;
+    --warn:#b8860b; --warn-bg:#fff7e6;
+    --risk:#c0392b; --risk-bg:#fdeeec;
+    --font:-apple-system,"SF Pro Text","Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.55;-webkit-font-smoothing:antialiased;padding:32px 20px}
+  .page{max-width:1080px;margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(20,22,26,.04),0 12px 40px rgba(20,22,26,.06)}
+  .mast{padding:32px 40px 24px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#232f3e,#2b3a4d);color:#fff}
+  .mast .kick{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--aws-a);font-weight:700}
+  .mast h1{font-size:25px;letter-spacing:-.02em;font-weight:700;margin-top:8px}
+  .mast .sub{color:#c7cdd6;font-size:13px;margin-top:7px;max-width:640px}
+  .mast .who{margin-top:14px;font-size:11.5px;color:#9aa2ad;border-top:1px solid rgba(255,255,255,.12);padding-top:12px}
+  .sec{padding:26px 40px 8px}
+  .sec-h{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+  .sec-h .n{width:22px;height:22px;border-radius:6px;background:var(--aws);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+  .sec-h h2{font-size:15px;font-weight:700;letter-spacing:-.01em}
+  /* card grid */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .card{border:1px solid var(--line);border-radius:11px;padding:16px 18px}
+  .card.sell{border-left:3px solid var(--ok)}
+  .card .ct{font-size:13.5px;font-weight:700;margin-bottom:6px;display:flex;gap:7px;align-items:center}
+  .card .cb{font-size:12.8px;color:var(--ink2);line-height:1.5}
+  .ic{font-size:12px;font-weight:800;width:18px;height:18px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex:none}
+  .ic.ok{background:var(--ok-bg);color:var(--ok)}
+  .ic.risk{background:var(--risk-bg);color:var(--risk)}
+  .talk{margin-top:8px;font-size:11.8px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px}
+  .talk b{color:var(--ok)}
+  /* risk rows */
+  .risk-tbl{display:flex;flex-direction:column;gap:12px}
+  .rrow{display:grid;grid-template-columns:auto 1fr 1.15fr;gap:16px;align-items:start;border:1px solid var(--line);border-left:3px solid var(--warn);border-radius:11px;padding:15px 18px}
+  .rrow.high{border-left-color:var(--risk)}
+  .rrow .lvl{font-size:10px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:4px 9px;border-radius:6px;white-space:nowrap;align-self:start}
+  .lvl.m{background:var(--warn-bg);color:var(--warn)}
+  .lvl.h{background:var(--risk-bg);color:var(--risk)}
+  .rrow .rt{font-size:13px}
+  .rrow .rt b{display:block;margin-bottom:4px;font-size:13.5px}
+  .rrow .rt span{color:var(--ink2)}
+  .rrow .mit{font-size:12.6px;color:var(--ink2)}
+  .rrow .mit b{color:var(--ok);font-weight:700}
+  /* checklist */
+  .check{padding:24px 40px 8px}
+  .check ul{list-style:none;columns:2;column-gap:28px}
+  .check li{font-size:13px;color:var(--ink2);padding:7px 0 7px 24px;position:relative;break-inside:avoid;border-bottom:1px solid var(--line2)}
+  .check li:before{content:"□";position:absolute;left:0;top:6px;color:var(--aws-a);font-weight:700}
+  .foot{padding:16px 40px 22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:11.5px;flex-wrap:wrap;gap:8px}
+  @media(max-width:720px){.cards{grid-template-columns:1fr}.rrow{grid-template-columns:1fr}.check ul{columns:1}}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="mast">
+    <div class="kick">AWS · Kiro Crew</div>
+    <h1>面向汽车行业客户的卖点与风险对照</h1>
+    <div class="sub">一页纸销售参考：自主 AI 工程工作台如何切入车企的平台 / DevOps / SRE 场景，以及落地前必须诚实说清的约束。</div>
+    <div class="who">适用对象：车企平台工程 / 研发效能 / 云与合规团队　·　销售视角速记</div>
+  </div>
+
+  <!-- 卖点 -->
+  <div class="sec">
+    <div class="sec-h"><span class="n">1</span><h2>核心卖点（Sales Angles）</h2></div>
+    <div class="cards">
+      <div class="card sell">
+        <div class="ct"><span class="ic ok">✓</span>数据主权：自托管，代码凭证不出边界</div>
+        <div class="cb">开源可自托管在客户自有基础设施（VM / 容器），代码和凭证留在企业内网，不发往黑盒 agent。</div>
+        <div class="talk">话术：<b>"车企最敏感的源码与产线凭证，全程留在你们的合规边界内。"</b></div>
+      </div>
+      <div class="card sell">
+        <div class="ct"><span class="ic ok">✓</span>把"影子 AI"收编成受治理工作台</div>
+        <div class="cb">当前开发者各自拿自己的凭证接 agent、无人追踪。Crew 提供统一入口 + 审批门 + 日志：什么跑了、碰了什么、谁授权的，一处可查。</div>
+        <div class="talk">话术：<b>"从失控的影子 IT，到可审计、可授权的统一队伍。"</b></div>
+      </div>
+      <div class="card sell">
+        <div class="ct"><span class="ic ok">✓</span>无人值守跑长任务</div>
+        <div class="cb">依赖升级、框架迁移、flaky 测试清理、工单三线分诊、首轮事故排查——跨会话、带 checkpoint 与重试，会中 / 下班 / 睡觉时照常推进。</div>
+        <div class="talk">话术：<b>"多小时的迁移任务，你开完会回来看结果，而不是盯着提示词。"</b></div>
+      </div>
+      <div class="card sell">
+        <div class="ct"><span class="ic ok">✓</span>合规友好：签名审计 + 人审门</div>
+        <div class="cb">7 层防御含签名审计日志、敏感路径保护、凭证脱敏、工具调用可要求人工审批——为车企功能安全 / 数据合规提供低风险的 agent 采纳路径。</div>
+        <div class="talk">话术：<b>"每一步都有签名留痕，审计和监管问得出、答得上。"</b></div>
+      </div>
+      <div class="card sell">
+        <div class="ct"><span class="ic ok">✓</span>Crew 本体免费 + 开放标准</div>
+        <div class="cb">软件本体开源免费，基于 ACP / MCP 开放标准，兼容既有 MCP server、IDE 插件、CI 管线——增量叠加，不推翻现有工具链。</div>
+        <div class="talk">话术：<b>"先叠加到现有研发流程试点，不用推倒重来。"</b></div>
+      </div>
+      <div class="card sell">
+        <div class="ct"><span class="ic ok">✓</span>已在 Amazon 内部大规模验证</div>
+        <div class="cb">前身 MeshClaw 在 Amazon 内部半年被 3.9 万+ 工程师采用、约 500 名贡献者——面对真实生产级安全要求打磨过。</div>
+        <div class="talk">话术：<b>"这是 Amazon 自己工程团队每天在用的东西。"</b></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 风险 -->
+  <div class="sec">
+    <div class="sec-h"><span class="n">2</span><h2>风险与需诚实说清的约束</h2></div>
+    <div class="risk-tbl">
+      <div class="rrow high">
+        <span class="lvl h">高</span>
+        <div class="rt"><b>底座 Kiro CLI 是专有且按 credit 计费</b><span>"开源"止于编排层。想换 Claude Code / Codex / Devin 跑，需自建并验证连接器，发稿时尚无公开成功案例。</span></div>
+        <div class="mit"><b>应对：</b>先明确客户是否接受 Kiro CLI 生态与其计费模型；把"开源"边界讲清，避免过度承诺。</div>
+      </div>
+      <div class="rrow high">
+        <span class="lvl h">高</span>
+        <div class="rt"><b>并行 agent 放大成本</b><span>成本不止 token——多 agent 会成倍放大 model call、compute、CI 活动、API 用量与人工复核。多数企业目前还难以度量单个 agent 的成本与价值。</span></div>
+        <div class="mit"><b>应对：</b>落地前建立成本度量口径；先小范围试点，设并发上限与预算护栏，再放量。</div>
+      </div>
+      <div class="rrow">
+        <span class="lvl m">中</span>
+        <div class="rt"><b>需先落地一套治理策略</b><span>最小权限、人工审批流、内存保留规则、代码来源追溯、可审计标准——这些是部署前提，不是部署后再补。</span></div>
+        <div class="mit"><b>应对：</b>把治理清单作为 POC 的一部分交付，帮客户把策略先立起来（见下方清单）。</div>
+      </div>
+      <div class="rrow">
+        <span class="lvl m">中</span>
+        <div class="rt"><b>运维成熟度门槛</b><span>自托管 + 多 agent 编排对客户平台团队的运维能力有要求；心跳监控、审计日志需要有人真正去看。</span></div>
+        <div class="mit"><b>应对：</b>评估客户平台团队现状；必要时配 AWS ProServe / 合作伙伴做落地陪跑。</div>
+      </div>
+      <div class="rrow">
+        <span class="lvl m">中</span>
+        <div class="rt"><b>发布仍处早期（2026-08）</b><span>刚开源，参考 App 与生态在快速迭代；企业级长期支持与路线图仍在演进（开放治理，社区共建）。</span></div>
+        <div class="mit"><b>应对：</b>定位为"前瞻试点"而非核心产线依赖；锁定用例后分阶段推进。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 落地前清单 -->
+  <div class="check">
+    <div class="sec-h"><span class="n">3</span><h2>部署前治理清单（POC 交付项）</h2></div>
+    <ul>
+      <li>最小权限访问（least-privilege）已定义</li>
+      <li>人工审批工作流已配置</li>
+      <li>内存 / 上下文保留规则已明确</li>
+      <li>代码来源与产出可追溯</li>
+      <li>签名审计日志接入客户 SIEM</li>
+      <li>并发 agent 上限与预算护栏</li>
+      <li>成本度量口径（超越 token）已建立</li>
+      <li>敏感路径 / 凭证脱敏规则校验</li>
+      <li>Kiro CLI 计费模型客户已接受</li>
+      <li>试点用例与成功指标已锁定</li>
+    </ul>
+  </div>
+
+  <div class="foot">
+    <span>销售参考，非官方定价文件。约束项以 kiro.dev 官方与客户实际合同为准。</span>
+    <span>来源：kiro.dev、InfoWorld（2026-08-04，含 IDC / Moor / HFS / HyperFRAME 分析师观点）</span>
+  </div>
+</div>
+</body>
+</html>
