@@ -1,37 +1,37 @@
-🗞 AI 日报 · 2026.08.05
+🗞 AI 日报 · 2026.08.06
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-08-05-officials-order-58000-exam-retakes-after-top-scores-jump.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-08-06-meta-removed-over-50-paid-ads-featuring-ai-generated-sexual.html
 
-① 高分人数激增5倍，5.8万名学生被迫重考
-5.8万学生承担重考成本；考试部署前需透明审计；异常成绩需要人工复核；申诉机制成为上线门槛
-🔗 https://arstechnica.com/culture/2026/08/an-ai-supervised-remote-exam-went-so-badly-that-58000-students-must-retake-it/
+① Meta下架逾50条含AI生成儿童性虐待图像的付费广告，部分曾触达数千账户
+Meta的付费广告审核未能拦住其政策明令禁止的严重内容；儿童和各平台用户面临生成式滥用被付费扩散的风险；下一步要看Meta能否解释审核失效路径，并阻止新广告继续上线。
+🔗 https://www.wired.com/story/meta-ran-ads-that-contained-ai-generated-child-sexual-abuse-imagery/
 
-② 苹果要用禁令卡住OpenAI硬件，称另有11名前员工或涉案
-OpenAI硬件进度可能被卡；离职员工面临加速取证；法院先判断是否限制研发
-🔗 https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/
+② 国际刑警组织称非洲36国记录的网络犯罪案件中55%涉及AI
+移动用户及企业面对更逼真的诈骗；跨机构信息共享不足增加追查赃款的难度；下一步要看新法和联合行动能否提升应对能力。
+🔗 https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/
 
-③ 看到AI配图就怀疑正文，整段生成代码也让开发者重新手敲
-内容团队少用装饰性AI配图；开发者需逐段重建理解；效率评估须计入人工复核
-🔗 https://nelson.cloud/ai-generated-images-discourage-me-from-reading-your-blog/
+③ Hassabis卸下Google DeepMind日常管理，Kavukcuoglu接掌Gemini与前沿研究
+Gemini模型、研究和产品团队获得统一的日常负责人；Hassabis可把更多精力投入AGI治理、科研顾问工作和AI药物研发；下一步要看Gemini 4细节及内部汇报关系是否继续调整。
+🔗 https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/
 
-④ Anthropic据报与AI云公司Volta签署100亿美元协议 — 🔗 https://techcrunch.com/2026/08/04/anthropic-signs-10-billion-deal-with-ai-cloud-startup-volta/
-⑤ 得州暂停新建数据中心并启动审计 — 🔗 https://techcrunch.com/2026/08/04/texas-halts-new-data-centers-as-governor-calls-for-audits/
-⑥ SpaceX的AI业务收入超过航天业务 — 🔗 https://www.theverge.com/science/975335/spacex-made-more-money-as-a-neocloud
-⑦ AMD数据中心季度收入同比增长107% — 🔗 https://www.theverge.com/tech/975381/amd-q2-2026-earnings-ai-gaming-ryzen
-⑧ 阿里巴巴发布Qwen3.8-Max — 🔗 https://www.theverge.com/ai-artificial-intelligence/974342/alibaba-qwen-max-open-weight-ai
+④ Anthropic组建自研AI芯片团队 — 🔗 https://techcrunch.com/2026/08/05/anthropic-is-hiring-an-ai-chip-design-team/
+⑤ Jeff Dean离开Google创办科学研究AI公司 — 🔗 https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/
+⑥ Meta推出面向大型代码库的Muse Code — 🔗 https://techcrunch.com/2026/08/05/meta-launches-muse-code-an-ai-agent-for-large-code-bases/
+⑦ 美国AI模型测试框架排除开放权重模型 — 🔗 https://www.theverge.com/ai-artificial-intelligence/975509/white-house-ai-framework-open-models-excluded
+⑧ Google Assistant将退出多数Android移动设备 — 🔗 https://www.theverge.com/tech/975516/google-assistant-android-phones-tablets-shutdown
 
 📚 论文速报
-📄 https://ai-brief.liziran.com/zh/daily/2026-08-05-token-budgets-silent-failures.html
+📄 https://ai-brief.liziran.com/zh/daily/2026-08-06-coding-agents-user-edits.html
 
-⑨ 推理加速 数千个空间token，正在拖住3D模型：部署3D视觉语言模型时，应优先检查场景token数量，而不只盯着参数规模
-🔗 https://arxiv.org/abs/2608.01185v1
+⑨ 代码智能 用户一改代码，Agent就可能跟不上了：评估编码Agent时应加入用户并行修改代码的场景，静态仓库成绩不足以代表协作能力
+🔗 https://arxiv.org/abs/2608.02499v1
 
-⑩ 评测 准确率下降不可怕，模型错得很自信才麻烦：上线多模态系统时，除准确率降幅外还应单独统计静默失败率
-🔗 https://arxiv.org/abs/2608.01462v1
+⑩ 推理 能看见梯度路径，就等于看懂模型推理了吗？：测试时优化开始具备直接的信用分配路径，不再只能靠输出结果间接调整
+🔗 https://arxiv.org/abs/2608.02585
 
-⑪ Agent 越会纠错的具身Agent，为什么反而越容易卡住？：不要把频繁重规划默认视为更稳健，应把它纳入在线资源预算
-🔗 https://arxiv.org/abs/2608.01428v1
+⑪ 检索 一套表示收拢词项匹配和跨模态召回：规划多模态检索时，可把统一稀疏与稠密表示纳入架构选项
+🔗 https://arxiv.org/abs/2608.02583
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-05-3b3941f9-8904-81e7-b700-d47efd416ac8
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-06-3b4941f9-8904-81cc-be99-fe1e3eab5be9
 🌐 https://xiaochengzi2048.github.io/digest.txt
