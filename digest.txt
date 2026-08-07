@@ -1,37 +1,40 @@
-🗞 AI 日报 · 2026.08.06
+🗞 AI 日报 · 2026.08.07
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-08-06-meta-removed-over-50-paid-ads-featuring-ai-generated-sexual.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-08-07-deepmind-opens-weathernext-models-claims-more-than-days.html
 
-① Meta下架逾50条含AI生成儿童性虐待图像的付费广告，部分曾触达数千账户
-Meta的付费广告审核未能拦住其政策明令禁止的严重内容；儿童和各平台用户面临生成式滥用被付费扩散的风险；下一步要看Meta能否解释审核失效路径，并阻止新广告继续上线。
-🔗 https://www.wired.com/story/meta-ran-ads-that-contained-ai-generated-child-sexual-abuse-imagery/
+① DeepMind开源WeatherNext气旋模型，称预报提前量增加逾一天
+更多机构可免费测试并本地化气旋模型；1000成员集合可能降低遗漏罕见快速增强情景的风险；下一步要看独立评测能否复现逾一天的提前量。
+🔗 https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/
 
-② 国际刑警组织称非洲36国记录的网络犯罪案件中55%涉及AI
-移动用户及企业面对更逼真的诈骗；跨机构信息共享不足增加追查赃款的难度；下一步要看新法和联合行动能否提升应对能力。
-🔗 https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/
+② SoftBank向特朗普总统图书馆捐款5000万美元，两个月后宣布联邦土地数据中心项目
+联邦土地与至少9.2吉瓦配套电力让项目规模受到审视；捐款时间使SoftBank面临国会议员的利益交换质疑；下一步要看租约和审批细节是否公开。
+🔗 https://www.theverge.com/policy/976138/softbank-trump-library-data-center-ohio
 
-③ Hassabis卸下Google DeepMind日常管理，Kavukcuoglu接掌Gemini与前沿研究
-Gemini模型、研究和产品团队获得统一的日常负责人；Hassabis可把更多精力投入AGI治理、科研顾问工作和AI药物研发；下一步要看Gemini 4细节及内部汇报关系是否继续调整。
-🔗 https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/
+③ ChatGPT下周取消免费及Go用户纯文本聊天次数限制
+免费及Go用户的日常文字问答不再受次数限制；文件和图片消息的额度成本仍未变化；下一步要看「Think」按钮的实际上限及新版Sol的可靠性表现。
+🔗 https://www.theverge.com/ai-artificial-intelligence/976239/openai-chatgpt-free-go-text-chats
 
-④ Anthropic组建自研AI芯片团队 — 🔗 https://techcrunch.com/2026/08/05/anthropic-is-hiring-an-ai-chip-design-team/
-⑤ Jeff Dean离开Google创办科学研究AI公司 — 🔗 https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/
-⑥ Meta推出面向大型代码库的Muse Code — 🔗 https://techcrunch.com/2026/08/05/meta-launches-muse-code-an-ai-agent-for-large-code-bases/
-⑦ 美国AI模型测试框架排除开放权重模型 — 🔗 https://www.theverge.com/ai-artificial-intelligence/975509/white-house-ai-framework-open-models-excluded
-⑧ Google Assistant将退出多数Android移动设备 — 🔗 https://www.theverge.com/tech/975516/google-assistant-android-phones-tablets-shutdown
+④ Google Maps新增订餐、酒店预订等agent功能 — 🔗 https://techcrunch.com/2026/08/06/google-maps-adds-agentic-features-including-food-ordering-and-hotel-bookings/
+⑤ Cloudflare开源面向非程序员的AI应用开发平台 — 🔗 https://arstechnica.com/ai/2026/08/cloudflare-open-sources-vibe-coding-platform-for-people-who-arent-coders/
+⑥ 企业运营自动化平台Naïve融资2850万美元 — 🔗 https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company/
+⑦ Mirendil签下逾1亿美元Google Cloud算力协议 — 🔗 https://techcrunch.com/2026/08/06/exclusive-mirendil-inks-100m-google-cloud-deal-to-scale-self-improving-ai/
+⑧ 客服自动化公司Omilia完成6700万美元B轮融资 — 🔗 https://techcrunch.com/2026/08/06/omilia-raises-67m-to-scale-its-customer-support-platform/
 
 📚 论文速报
-📄 https://ai-brief.liziran.com/zh/daily/2026-08-06-coding-agents-user-edits.html
+📄 https://ai-brief.liziran.com/zh/daily/2026-08-07-dapd-diffusion-layered-design.html
 
-⑨ 代码智能 用户一改代码，Agent就可能跟不上了：评估编码Agent时应加入用户并行修改代码的场景，静态仓库成绩不足以代表协作能力
-🔗 https://arxiv.org/abs/2608.02499v1
+⑨ 训练优化 特权信息越多，学生反而学得越差：设计蒸馏管线时，应把训练与推理的信息边界列为一等约束
+🔗 https://arxiv.org/abs/2608.01735
 
-⑩ 推理 能看见梯度路径，就等于看懂模型推理了吗？：测试时优化开始具备直接的信用分配路径，不再只能靠输出结果间接调整
-🔗 https://arxiv.org/abs/2608.02585
+⑩ 机器人 先看答案再写理由，自动驾驶模型真的学会决策了吗？：审计推理数据时，应检查未来信息是否泄漏进教师上下文
+🔗 https://arxiv.org/abs/2608.01755
 
-⑪ 检索 一套表示收拢词项匹配和跨模态召回：规划多模态检索时，可把统一稀疏与稠密表示纳入架构选项
-🔗 https://arxiv.org/abs/2608.02583
+⑪ 推理加速 DiffusionGemma从成熟模型迁移到扩散解码：成熟自回归模型可以低成本迁移到扩散解码，不必从零训练
+🔗 https://arxiv.org/abs/2608.00146
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-06-3b4941f9-8904-81cc-be99-fe1e3eab5be9
+⑫ 图像生成 生成模型的下一步，是交付可继续工作的设计稿吗？：评估图像模型时，把可编辑性和交付结构纳入画质之外的核心指标
+🔗 https://arxiv.org/abs/2608.03971
+
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-07-3b5941f9-8904-8183-8564-d4af1a161c3c
 🌐 https://xiaochengzi2048.github.io/digest.txt
