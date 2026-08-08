@@ -1,40 +1,37 @@
-🗞 AI 日报 · 2026.08.07
+🗞 AI 日报 · 2026.08.08
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-08-07-deepmind-opens-weathernext-models-claims-more-than-days.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-08-08-openai-slows-astra-critical-cyber-capability-cannot-be.html
 
-① DeepMind开源WeatherNext气旋模型，称预报提前量增加逾一天
-更多机构可免费测试并本地化气旋模型；1000成员集合可能降低遗漏罕见快速增强情景的风险；下一步要看独立评测能否复现逾一天的提前量。
-🔗 https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/
+① OpenAI因Astra可能达到「关键」网络能力门槛，暂停不符合新防护标准的内部活动
+OpenAI内部使用高能力模型的门槛被抬高，未达标活动将承担暂停成本；开发者和潜在用户暂时无法确认Astra的真实攻击能力与发布时间；下一步要看外部测试能否确认或排除「关键」能力等级。
+🔗 https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/
 
-② SoftBank向特朗普总统图书馆捐款5000万美元，两个月后宣布联邦土地数据中心项目
-联邦土地与至少9.2吉瓦配套电力让项目规模受到审视；捐款时间使SoftBank面临国会议员的利益交换质疑；下一步要看租约和审批细节是否公开。
-🔗 https://www.theverge.com/policy/976138/softbank-trump-library-data-center-ohio
+② Anthropic调整Fable 5生物安全分类器，称相关降级次数减少约85%
+普通用户和医护人员遭遇误降级的概率降低；高风险任务仍由能力较弱的模型处理；下一步要看受信任访问渠道及实际误触发率。
+🔗 https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards
 
-③ ChatGPT下周取消免费及Go用户纯文本聊天次数限制
-免费及Go用户的日常文字问答不再受次数限制；文件和图片消息的额度成本仍未变化；下一步要看「Think」按钮的实际上限及新版Sol的可靠性表现。
-🔗 https://www.theverge.com/ai-artificial-intelligence/976239/openai-chatgpt-free-go-text-chats
+③ Oracle禁止向OpenJDK提交AI生成代码，调试和代码审查仍可私下使用LLM
+OpenJDK贡献者需要自行确保提交内容并非AI生成；项目希望降低代码进入公共代码库后的安全和知识产权风险；下一步要看Oracle如何识别和处理违规贡献。
+🔗 https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code
 
-④ Google Maps新增订餐、酒店预订等agent功能 — 🔗 https://techcrunch.com/2026/08/06/google-maps-adds-agentic-features-including-food-ordering-and-hotel-bookings/
-⑤ Cloudflare开源面向非程序员的AI应用开发平台 — 🔗 https://arstechnica.com/ai/2026/08/cloudflare-open-sources-vibe-coding-platform-for-people-who-arent-coders/
-⑥ 企业运营自动化平台Naïve融资2850万美元 — 🔗 https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company/
-⑦ Mirendil签下逾1亿美元Google Cloud算力协议 — 🔗 https://techcrunch.com/2026/08/06/exclusive-mirendil-inks-100m-google-cloud-deal-to-scale-self-improving-ai/
-⑧ 客服自动化公司Omilia完成6700万美元B轮融资 — 🔗 https://techcrunch.com/2026/08/06/omilia-raises-67m-to-scale-its-customer-support-platform/
+④ Meta在新墨西哥州儿童安全案累计被罚9.42亿美元 — 🔗 https://techcrunch.com/2026/08/07/new-mexico-court-orders-meta-to-pay-additional-567m-in-child-safety-case/
+⑤ SpaceX单季AI资本支出近160亿美元 — 🔗 https://arstechnica.com/ai/2026/08/spacex-spooks-investors-with-debut-earnings-report/
+⑥ 字节跳动据报训练最多10万亿参数模型 — 🔗 https://arstechnica.com/ai/2026/08/bytedance-trains-massive-ai-model-in-bid-to-rival-anthropic/
+⑦ Cloudflare推出面向AI agent的云端浏览器Kitesurf — 🔗 https://techcrunch.com/2026/08/07/cloudflare-launches-kitesurf-a-browser-built-for-ai-agents/
+⑧ Rippling上线AI Spend Console控制企业token开支 — 🔗 https://techcrunch.com/2026/08/07/after-rippling-blew-millions-on-ai-in-months-it-built-an-employee-roi-tool/
 
 📚 论文速报
-📄 https://ai-brief.liziran.com/zh/daily/2026-08-07-dapd-diffusion-layered-design.html
+📄 https://ai-brief.liziran.com/zh/daily/2026-08-08-knowledge-refresh-agent-memory-3d.html
 
-⑨ 训练优化 特权信息越多，学生反而学得越差：设计蒸馏管线时，应把训练与推理的信息边界列为一等约束
-🔗 https://arxiv.org/abs/2608.01735
+⑨ 训练优化 KGD的知识—几何解耦刷新路径：持续预训练系统应把知识更新与下游表示适配分开，避免每次刷新都冲击已有任务
+🔗 https://arxiv.org/abs/2608.02738
 
-⑩ 机器人 先看答案再写理由，自动驾驶模型真的学会决策了吗？：审计推理数据时，应检查未来信息是否泄漏进教师上下文
-🔗 https://arxiv.org/abs/2608.01755
+⑩ 评测 记得更多，不代表个人Agent会越用越好：不要把持久记忆直接等同于自我改进
+🔗 https://arxiv.org/abs/2608.04003
 
-⑪ 推理加速 DiffusionGemma从成熟模型迁移到扩散解码：成熟自回归模型可以低成本迁移到扩散解码，不必从零训练
-🔗 https://arxiv.org/abs/2608.00146
+⑪ 多模态 Hunyuan3D-Buffalo：统一3D理解、生成与编辑：评估3D模型时，应同时检查理解、生成和局部编辑能力
+🔗 https://arxiv.org/abs/2608.02711
 
-⑫ 图像生成 生成模型的下一步，是交付可继续工作的设计稿吗？：评估图像模型时，把可编辑性和交付结构纳入画质之外的核心指标
-🔗 https://arxiv.org/abs/2608.03971
-
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-07-3b5941f9-8904-8183-8564-d4af1a161c3c
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-08-3b6941f9-8904-8198-994b-fd9e41440b45
 🌐 https://xiaochengzi2048.github.io/digest.txt
