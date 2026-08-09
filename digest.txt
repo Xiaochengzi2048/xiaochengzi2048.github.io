@@ -1,6 +1,7 @@
-🗞 AI 日报 · 2026.08.08
+🗞 AI 日报 · 2026.08.09
 
 📰 今日速报
+（速报内容更新于 8月8日）
 📄 https://ai-digest.liziran.com/zh/digest/2026-08-08-openai-slows-astra-critical-cyber-capability-cannot-be.html
 
 ① OpenAI因Astra可能达到「关键」网络能力门槛，暂停不符合新防护标准的内部活动
@@ -22,6 +23,7 @@ OpenJDK贡献者需要自行确保提交内容并非AI生成；项目希望降�
 ⑧ Rippling上线AI Spend Console控制企业token开支 — 🔗 https://techcrunch.com/2026/08/07/after-rippling-blew-millions-on-ai-in-months-it-built-an-employee-roi-tool/
 
 📚 论文速报
+（论文内容更新于 8月8日）
 📄 https://ai-brief.liziran.com/zh/daily/2026-08-08-knowledge-refresh-agent-memory-3d.html
 
 ⑨ 训练优化 KGD的知识—几何解耦刷新路径：持续预训练系统应把知识更新与下游表示适配分开，避免每次刷新都冲击已有任务
@@ -33,5 +35,5 @@ OpenJDK贡献者需要自行确保提交内容并非AI生成；项目希望降�
 ⑪ 多模态 Hunyuan3D-Buffalo：统一3D理解、生成与编辑：评估3D模型时，应同时检查理解、生成和局部编辑能力
 🔗 https://arxiv.org/abs/2608.02711
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-08-3b6941f9-8904-8198-994b-fd9e41440b45
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-09-3b7941f9-8904-81bd-b9fe-e5ad30279720
 🌐 https://xiaochengzi2048.github.io/digest.txt
