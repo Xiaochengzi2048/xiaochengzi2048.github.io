@@ -1,4 +1,4 @@
-🗞 AI 日报 · 2026.08.09
+🗞 AI 日报 · 2026.08.10
 
 📰 今日速报
 （速报内容更新于 8月8日）
@@ -23,17 +23,17 @@ OpenJDK贡献者需要自行确保提交内容并非AI生成；项目希望降�
 ⑧ Rippling上线AI Spend Console控制企业token开支 — 🔗 https://techcrunch.com/2026/08/07/after-rippling-blew-millions-on-ai-in-months-it-built-an-employee-roi-tool/
 
 📚 论文速报
-（论文内容更新于 8月8日）
-📄 https://ai-brief.liziran.com/zh/daily/2026-08-08-knowledge-refresh-agent-memory-3d.html
+（论文内容更新于 8月9日）
+📄 https://ai-brief.liziran.com/zh/daily/2026-08-09-skill-entropy-multimodal-user-profiling.html
 
-⑨ 训练优化 KGD的知识—几何解耦刷新路径：持续预训练系统应把知识更新与下游表示适配分开，避免每次刷新都冲击已有任务
-🔗 https://arxiv.org/abs/2608.02738
+⑨ 推理 模型会做数学也会规划，却可能输在切换那一刻：评估长链任务时应单独检查技能切换，而不只看最终答案
+🔗 https://arxiv.org/abs/2608.05139
 
-⑩ 评测 记得更多，不代表个人Agent会越用越好：不要把持久记忆直接等同于自我改进
-🔗 https://arxiv.org/abs/2608.04003
+⑩ 多模态 多模态预训练，该从「配方玄学」毕业了：设计多模态训练时，应先验证数据条件下是协同还是竞争
+🔗 https://arxiv.org/abs/2608.05000
 
-⑪ 多模态 Hunyuan3D-Buffalo：统一3D理解、生成与编辑：评估3D模型时，应同时检查理解、生成和局部编辑能力
-🔗 https://arxiv.org/abs/2608.02711
+⑪ 安全对齐 自称没乱猜的模型，可能猜得更多：用户画像中的推断项必须与明确事实分开存储
+🔗 https://arxiv.org/abs/2608.04570
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-09-3b7941f9-8904-81bd-b9fe-e5ad30279720
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-10-3b8941f9-8904-815f-b8d4-cab11af9538c
 🌐 https://xiaochengzi2048.github.io/digest.txt
