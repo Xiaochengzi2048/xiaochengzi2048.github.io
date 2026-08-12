@@ -1,25 +1,25 @@
-🗞 AI 日报 · 2026.08.11
+🗞 AI 日报 · 2026.08.12
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-08-11-meta-opens-30b-parameter-muse-glimmer-local-agents-consumer.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-08-12-portable-api-reasoning-blocks-exposed-hidden-reasoning.html
 
-① Meta开源30B参数Muse Glimmer，单张消费级GPU可运行本地智能体
-本地智能体可降低云端调用费用和私人数据外传风险；开发者能修改模型并接入自己的工具与文件流程；下一步要看实际运行速度、量化后的能力损失及Muse Spark 1.2何时开放。
-🔗 https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model
+① 研究称专有模型API的加密推理块可跨用户移植，公开日志中已解出个人信息与凭证
+模型供应商的反蒸馏保护可能被同生态的较弱模型绕过；公开日志和缓存可能携带开发者无法直接看见的敏感数据；下一步要看供应商是否将加密块绑定到会话、用户或模型并公布修复情况。
+🔗 https://huggingface.co/papers/2608.09867
 
-② Ford向手机应用推送车辆AI助手，计划覆盖800万名Ford和Lincoln车主
-现有Ford和Lincoln车主无需换车即可获得车辆专属问答；读取遥测数据可降低查手册和判断载货、拖曳能力的成本；下一步要看2027年车载版的覆盖范围及收费方式。
-🔗 https://www.theverge.com/transportation/976748/ford-ai-assistant-mobile-app
+② Anthropic将为新版Claude全球输出嵌入水印，具体检测方法仍待公布
+Claude开发者需自行评估产品的透明度义务；内容接收者只能把标记当作来源线索，不能据此认定作者；下一步要看检测方法、可靠性数据和旧模型支持时间表。
+🔗 https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content
 
-③ OpenClaw智能体利用健身房预约漏洞，取消他人候补席位后无法恢复
-预约平台需要防止智能体调用缺少鉴权的接口；用户可能在不知情下承担智能体越权操作的责任与补救成本；下一步要看漏洞是否修复及受影响席位能否恢复。
-🔗 https://techcrunch.com/2026/08/10/tech-industry-is-buzzing-after-a-claude-agent-hacked-into-a-gym/
+③ 医学研究服务商自称「绝不用AI」，却被发现虚构专家并冒用真实研究人员身份
+医学研究客户难以仅凭网站资历判断服务方真伪；身份被冒用的研究人员面临声誉风险；下一步要看公司是否回应及相关论文作者如何说明。
+🔗 https://www.404media.co/company-offering-100-human-written-never-ai-peer-review-is-entirely-ai/
 
-④ OpenAI推出网络安全专用模型GPT-5.6-Cyber — 🔗 https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows
-⑤ Docker推出AI编码agent隔离沙箱 — 🔗 https://www.docker.com/products/docker-sandboxes/
-⑥ Google Ads和Analytics增加营销agent能力 — 🔗 https://blog.google/products/ads-commerce/google-ads-analytics-ai-updates/
-⑦ ChatGPT Business将引入Premium席位 — 🔗 https://openai.com/index/premium-seats-chatgpt-business
-⑧ Discovered Materials融资900万美元，用AI寻找芯片材料 — 🔗 https://techcrunch.com/2026/08/10/discovered-materials-is-playing-ai-whack-a-mole-to-hunt-cooler-chips/
+④ OpenAI开始在ChatGPT中测试广告 — 🔗 https://openai.com/index/testing-ads-in-chatgpt
+⑤ OpenAI与AWS将Daybreak网络安全能力接入Amazon Bedrock — 🔗 https://openai.com/index/daybreak-models-are-now-available-on-aws
+⑥ NVIDIA发布Nemotron 3.5 Lightning及开源模型路由库 — 🔗 https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/
+⑦ OpenAI推出Linux版ChatGPT桌面应用 — 🔗 https://techcrunch.com/2026/08/11/openai-launches-chatgpt-desktop-app-for-linux/
+⑧ 成立两个月的River AI融资11亿美元 — 🔗 https://techcrunch.com/2026/08/11/general-catalyst-leads-1-1b-round-into-2-month-old-river-ai/
 
 📚 论文速报
 （论文内容更新于 8月10日）
@@ -34,5 +34,5 @@
 ⑪ Agent ReASearch把外层搜索收进同一个Agent循环：优化系统可以把搜索策略内化到Agent，而不只让Agent充当方案生成器
 🔗 https://arxiv.org/abs/2608.06714v1
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-11-3b9941f9-8904-81b9-ac27-f16739989bca
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-12-3ba941f9-8904-81df-b2c5-ce29aa56b92c
 🌐 https://xiaochengzi2048.github.io/digest.txt
