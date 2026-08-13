@@ -1,38 +1,25 @@
-🗞 AI 日报 · 2026.08.12
+🗞 AI 日报 · 2026.08.13
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-08-12-portable-api-reasoning-blocks-exposed-hidden-reasoning.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-08-13-twitch-defaults-streamers-into-amazons-generative-ai.html
 
-① 研究称专有模型API的加密推理块可跨用户移植，公开日志中已解出个人信息与凭证
-模型供应商的反蒸馏保护可能被同生态的较弱模型绕过；公开日志和缓存可能携带开发者无法直接看见的敏感数据；下一步要看供应商是否将加密块绑定到会话、用户或模型并公布修复情况。
-🔗 https://huggingface.co/papers/2608.09867
+① Twitch默认允许亚马逊用直播内容训练生成式AI，主播须主动退出
+主播必须主动操作才能阻止频道内容进入未来训练，未看到公告者承担默认同意风险；退出不会关闭AutoMod和自动字幕等功能；历史数据是否保留或已进入模型仍无答案。
+🔗 https://www.404media.co/twitch-training-amazon-ai-models-how-to-opt-out-setting/
 
-② Anthropic将为新版Claude全球输出嵌入水印，具体检测方法仍待公布
-Claude开发者需自行评估产品的透明度义务；内容接收者只能把标记当作来源线索，不能据此认定作者；下一步要看检测方法、可靠性数据和旧模型支持时间表。
-🔗 https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content
+② Google将美国手语输入带到Pixel 11，首批接入Gboard和Live Transcribe
+美国手语用户首次可直接在Pixel系统应用中免费使用这项输入技术；聋人组织能够参与产品优先级和影响评估；下一步要看更多设备与手语的支持时间，以及具体能力限制。
+🔗 https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/
 
-③ 医学研究服务商自称「绝不用AI」，却被发现虚构专家并冒用真实研究人员身份
-医学研究客户难以仅凭网站资历判断服务方真伪；身份被冒用的研究人员面临声誉风险；下一步要看公司是否回应及相关论文作者如何说明。
-🔗 https://www.404media.co/company-offering-100-human-written-never-ai-peer-review-is-entirely-ai/
+③ Google披露Gemini使用画像：63%活跃用户使用语音，Gemini Live用户中20%共享镜头或屏幕
+语音和实时视觉的高采用率将影响Gemini的交互设计；学生上传附件的行为促使Google增加学习工具；下一步要看新工具的具体功能及统计口径是否进一步公开。
+🔗 https://arstechnica.com/ai/2026/08/google-says-gemini-has-reached-1b-users-faster-than-any-other-google-product/
 
-④ OpenAI开始在ChatGPT中测试广告 — 🔗 https://openai.com/index/testing-ads-in-chatgpt
-⑤ OpenAI与AWS将Daybreak网络安全能力接入Amazon Bedrock — 🔗 https://openai.com/index/daybreak-models-are-now-available-on-aws
-⑥ NVIDIA发布Nemotron 3.5 Lightning及开源模型路由库 — 🔗 https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/
-⑦ OpenAI推出Linux版ChatGPT桌面应用 — 🔗 https://techcrunch.com/2026/08/11/openai-launches-chatgpt-desktop-app-for-linux/
-⑧ 成立两个月的River AI融资11亿美元 — 🔗 https://techcrunch.com/2026/08/11/general-catalyst-leads-1-1b-round-into-2-month-old-river-ai/
+④ Grok Bot开放测试，可独立执行多步骤工作 — 🔗 https://www.theverge.com/ai-artificial-intelligence/978666/spacexai-grok-bot-ai-agent-beta-launch
+⑤ Thrive Holdings融资20亿美元，将AI引入传统企业 — 🔗 https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/
+⑥ Lovable以133亿美元估值完成4亿美元融资 — 🔗 https://techcrunch.com/2026/08/12/lovable-confirms-new-13-3b-valuation-raises-another-400m/
+⑦ Cognition据报寻求至少400亿美元估值 — 🔗 https://techcrunch.com/2026/08/12/ai-coding-startup-cognition-reportedly-already-in-talks-to-raise-at-40b-valuation/
+⑧ Meta据报重返开放模型路线 — 🔗 https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878
 
-📚 论文速报
-（论文内容更新于 8月10日）
-📄 https://ai-brief.liziran.com/zh/daily/2026-08-10-runtime-memory-agent-search.html
-
-⑨ 视频生成 走出训练时域，世界模型为什么突然「认不出」旧场景？：长期视频一致性的瓶颈可能是记忆寻址，而不只是缓存容量
-🔗 https://arxiv.org/abs/2608.07408v1
-
-⑩ 模型架构 别再把每个TTT变体都写成一套新架构：评估TTT方法时应拆开快速权重与内部学习规则，避免只比较整套架构
-🔗 https://arxiv.org/abs/2608.07110v1
-
-⑪ Agent ReASearch把外层搜索收进同一个Agent循环：优化系统可以把搜索策略内化到Agent，而不只让Agent充当方案生成器
-🔗 https://arxiv.org/abs/2608.06714v1
-
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-12-3ba941f9-8904-81df-b2c5-ce29aa56b92c
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-13-3bb941f9-8904-8177-a696-c98a549d582f
 🌐 https://xiaochengzi2048.github.io/digest.txt
