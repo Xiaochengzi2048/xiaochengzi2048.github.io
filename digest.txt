@@ -1,25 +1,37 @@
-🗞 AI 日报 · 2026.08.13
+🗞 AI 日报 · 2026.08.14
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-08-13-twitch-defaults-streamers-into-amazons-generative-ai.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-08-14-flock-mandates-case-numbers-automated-audits-after-police.html
 
-① Twitch默认允许亚马逊用直播内容训练生成式AI，主播须主动退出
-主播必须主动操作才能阻止频道内容进入未来训练，未看到公告者承担默认同意风险；退出不会关闭AutoMod和自动字幕等功能；历史数据是否保留或已进入模型仍无答案。
-🔗 https://www.404media.co/twitch-training-amazon-ai-models-how-to-opt-out-setting/
+① Flock强制警方搜索填写案号并接受自动审计，回应车牌监控滥用争议
+警员搜索将留下案号并接受自动筛查，但虚假填写仍可能绕过限制；地方机构可缩短数据保留期并限制跨部门用途，但是否采纳由其自行决定；下一步要看Flock是否开放审计工具接受独立评估。
+🔗 https://www.technologyreview.com/2026/08/13/1141904/flock-is-tightening-its-rules-in-response-to-a-growing-surveillance-backlash/
 
-② Google将美国手语输入带到Pixel 11，首批接入Gboard和Live Transcribe
-美国手语用户首次可直接在Pixel系统应用中免费使用这项输入技术；聋人组织能够参与产品优先级和影响评估；下一步要看更多设备与手语的支持时间，以及具体能力限制。
-🔗 https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/
+② Google发布Gemini 3.7 Flash：三周再迭代，年内价格降至3.6 Flash原价一半
+开发者短期内可用更低token成本测试编码和agent工作流；Spark订阅者立即获得模型升级；年底后的定价及真实业务收益仍待观察。
+🔗 https://deepmind.google/blog/introducing-gemini-3-7-flash/
 
-③ Google披露Gemini使用画像：63%活跃用户使用语音，Gemini Live用户中20%共享镜头或屏幕
-语音和实时视觉的高采用率将影响Gemini的交互设计；学生上传附件的行为促使Google增加学习工具；下一步要看新工具的具体功能及统计口径是否进一步公开。
-🔗 https://arstechnica.com/ai/2026/08/google-says-gemini-has-reached-1b-users-faster-than-any-other-google-product/
+③ CGTrader称AI生成模型占近期上传量六分之一，却只贡献平台九十分之一收入
+3D创作者面临更激烈的曝光竞争；买家仍需承担筛选和返工成本；下一步要看质量排序能否压低低质内容的可见度。
+🔗 https://www.404media.co/ai-generated-3d-models-flood-market-but-almost-no-one-is-buying-them/
 
-④ Grok Bot开放测试，可独立执行多步骤工作 — 🔗 https://www.theverge.com/ai-artificial-intelligence/978666/spacexai-grok-bot-ai-agent-beta-launch
-⑤ Thrive Holdings融资20亿美元，将AI引入传统企业 — 🔗 https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/
-⑥ Lovable以133亿美元估值完成4亿美元融资 — 🔗 https://techcrunch.com/2026/08/12/lovable-confirms-new-13-3b-valuation-raises-another-400m/
-⑦ Cognition据报寻求至少400亿美元估值 — 🔗 https://techcrunch.com/2026/08/12/ai-coding-startup-cognition-reportedly-already-in-talks-to-raise-at-40b-valuation/
-⑧ Meta据报重返开放模型路线 — 🔗 https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878
+④ Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed — 🔗 https://openai.com/index/previewing-ultrafast
+⑤ DeepSeek V4 Pro 0813 — 🔗 https://openrouter.ai/deepseek/deepseek-v4-pro-0813
+⑥ Microsoft is combining its Copilot apps ahead of a ‘super app’ — 🔗 https://www.theverge.com/tech/979466/microsoft-copilot-365-app-unified-experience
+⑦ Nvidia’s new $500B plan is risky but brilliant, especially for aging GPUs — 🔗 https://techcrunch.com/2026/08/13/nvidias-new-500b-plan-is-risky-but-brilliant-especially-for-aging-gpus/
+⑧ Databricks wanted to raise $1B, investors wanted $15B. It settled on $5B at a $190B valuation. — 🔗 https://techcrunch.com/2026/08/13/databricks-wanted-to-raise-1b-investors-wanted-15b-it-settled-on-5b-at-a-190b-valuation/
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-13-3bb941f9-8904-8177-a696-c98a549d582f
+📚 论文速报
+📄 https://ai-brief.liziran.com/zh/daily/2026-08-14-life-agents-4d-video-domain-updates.html
+
+⑨ Agent：用户沉默之后，个人Agent才真正开始接受考验：评估个人Agent时，应加入用户沉默期间的自主巡检，而不只测试单次回答
+🔗 https://arxiv.org/abs/2608.10875
+
+⑩ 视频生成：动态世界没必要先被压成一段视频：直接从视频潜变量生成4D，可减少RGB重建链路中的分布错位与误差传播
+🔗 https://arxiv.org/abs/2608.10744
+
+⑪ 训练优化：模型学会代码，权重的「强弱排序」却几乎没变？：奇异值几乎不变不代表模型没有适配，应重点观察表示方向和注意力头的变化
+🔗 https://arxiv.org/abs/2608.10850
+
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-14-3bc941f9-8904-8132-8cb6-c7b8fae64ff3
 🌐 https://xiaochengzi2048.github.io/digest.txt
