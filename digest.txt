@@ -1,37 +1,40 @@
-🗞 AI 日报 · 2026.08.14
+🗞 AI 日报 · 2026.08.15
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-08-14-flock-mandates-case-numbers-automated-audits-after-police.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-08-15-anthropic-explains-claudes-text-watermark-through.html
 
-① Flock强制警方搜索填写案号并接受自动审计，回应车牌监控滥用争议
-警员搜索将留下案号并接受自动筛查，但虚假填写仍可能绕过限制；地方机构可缩短数据保留期并限制跨部门用途，但是否采纳由其自行决定；下一步要看Flock是否开放审计工具接受独立评估。
-🔗 https://www.technologyreview.com/2026/08/13/1141904/flock-is-tightening-its-rules-in-response-to-a-growing-surveillance-backlash/
+① Anthropic详解Claude文本水印：不加隐藏字符，靠选词随机性留下可检测模式
+Claude用户无需为水印支付更多token成本；平台和监管者可获得一种概率性识别线索，但不能据此确认作者；下一步要看检测密钥、工具及误报和改写可靠性数据如何开放。
+🔗 https://www.anthropic.com/news/claude-text-watermark
 
-② Google发布Gemini 3.7 Flash：三周再迭代，年内价格降至3.6 Flash原价一半
-开发者短期内可用更低token成本测试编码和agent工作流；Spark订阅者立即获得模型升级；年底后的定价及真实业务收益仍待观察。
-🔗 https://deepmind.google/blog/introducing-gemini-3-7-flash/
+② 苹果据报与阿里巴巴训练中国版自有AI模型，Apple Intelligence已跨过一项监管门槛
+中国用户可能获得苹果定制的生成式AI功能；苹果可减少对国内现成模型的依赖并增强产品控制；下一步要看最终许可和iOS更新时间。
+🔗 https://www.theverge.com/ai-artificial-intelligence/980160/apple-intelligence-china-custom-ai-model-alibaba
 
-③ CGTrader称AI生成模型占近期上传量六分之一，却只贡献平台九十分之一收入
-3D创作者面临更激烈的曝光竞争；买家仍需承担筛选和返工成本；下一步要看质量排序能否压低低质内容的可见度。
-🔗 https://www.404media.co/ai-generated-3d-models-flood-market-but-almost-no-one-is-buying-them/
+③ Cerebras与OpenAI预览GPT-5.6 Sol超高速服务，宣称输出速度最高达每秒750 token
+开发者可把前沿模型用于生产故障定位和网络攻击响应等时间敏感任务；晶圆级推理可能降低等待成本；下一步要看扩容、定价及独立测试结果。
+🔗 https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai
 
-④ Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed — 🔗 https://openai.com/index/previewing-ultrafast
-⑤ DeepSeek V4 Pro 0813 — 🔗 https://openrouter.ai/deepseek/deepseek-v4-pro-0813
-⑥ Microsoft is combining its Copilot apps ahead of a ‘super app’ — 🔗 https://www.theverge.com/tech/979466/microsoft-copilot-365-app-unified-experience
-⑦ Nvidia’s new $500B plan is risky but brilliant, especially for aging GPUs — 🔗 https://techcrunch.com/2026/08/13/nvidias-new-500b-plan-is-risky-but-brilliant-especially-for-aging-gpus/
-⑧ Databricks wanted to raise $1B, investors wanted $15B. It settled on $5B at a $190B valuation. — 🔗 https://techcrunch.com/2026/08/13/databricks-wanted-to-raise-1b-investors-wanted-15b-it-settled-on-5b-at-a-190b-valuation/
+④ LiteLLM供应链攻击泄露逾2500家机构凭证 — 🔗 https://arstechnica.com/security/2026/08/terabytes-of-credentials-leaked-in-massive-supply-chain-attack/
+⑤ OpenAI与Anthropic下调模型价格应对低价竞争 — 🔗 https://arstechnica.com/ai/2026/08/openai-and-anthropic-in-price-war-as-chinese-ai-rivals-gain-ground/
+⑥ 微软合并两款Copilot应用并下线多项功能 — 🔗 https://techcrunch.com/2026/08/13/microsoft-kills-off-unsuccessful-ai-features-while-merging-its-separate-copilot-apps/
+⑦ Google允许关闭AI生成内容的可见水印 — 🔗 https://techcrunch.com/2026/08/14/google-will-now-allow-users-to-remove-visible-watermark-from-its-ai-generations/
+⑧ OpenAI任命Dali Rajic为首席营收官 — 🔗 https://openai.com/index/dali-rajic-chief-revenue-officer
 
 📚 论文速报
-📄 https://ai-brief.liziran.com/zh/daily/2026-08-14-life-agents-4d-video-domain-updates.html
+📄 https://ai-brief.liziran.com/zh/daily/2026-08-15-evidence-first-research-agents.html
 
-⑨ Agent：用户沉默之后，个人Agent才真正开始接受考验：评估个人Agent时，应加入用户沉默期间的自主巡检，而不只测试单次回答
-🔗 https://arxiv.org/abs/2608.10875
+⑨ Agent｜13项技能让自动写论文留下证据：评估论文Agent时优先检查证据链和局部错误发现能力
+🔗 https://arxiv.org/abs/2608.11924
 
-⑩ 视频生成：动态世界没必要先被压成一段视频：直接从视频潜变量生成4D，可减少RGB重建链路中的分布错位与误差传播
-🔗 https://arxiv.org/abs/2608.10744
+⑩ 推理｜不改参数，弱模型的表现也能接近翻倍：模型升级未必需要改参数，先优化推理环境可能获得更高投入产出比
+🔗 https://arxiv.org/abs/2608.12307
 
-⑪ 训练优化：模型学会代码，权重的「强弱排序」却几乎没变？：奇异值几乎不变不代表模型没有适配，应重点观察表示方向和注意力头的变化
-🔗 https://arxiv.org/abs/2608.10850
+⑪ 安全对齐｜自动生成攻击场景成为新流水线：将对抗环境合成接入持续测试，比维护少量固定攻击样例更容易扩展
+🔗 https://arxiv.org/abs/2608.11878v1
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-14-3bc941f9-8904-8132-8cb6-c7b8fae64ff3
+⑫ 多模态｜StateFlow用渲染反馈访问3D世界状态：评估生成式预演工具时，应分别检查世界状态演化、相机访问和最终画质
+🔗 https://arxiv.org/abs/2608.12314
+
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-15-3bd941f9-8904-818f-93c8-ecb7fcb3beb3
 🌐 https://xiaochengzi2048.github.io/digest.txt
