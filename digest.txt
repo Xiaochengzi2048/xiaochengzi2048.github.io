@@ -1,27 +1,28 @@
-🗞 AI 日报 · 2026.08.15
+🗞 AI 日报 · 2026.08.16
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-08-15-anthropic-explains-claudes-text-watermark-through.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-08-16-noreva-sees-ai-data-centers-helping-push-gas-above-10-some.html
 
-① Anthropic详解Claude文本水印：不加隐藏字符，靠选词随机性留下可检测模式
-Claude用户无需为水印支付更多token成本；平台和监管者可获得一种概率性识别线索，但不能据此确认作者；下一步要看检测密钥、工具及误报和改写可靠性数据如何开放。
-🔗 https://www.anthropic.com/news/claude-text-watermark
+① Noreva警告AI数据中心推高燃气需求，美国部分枢纽价格或升至每百万英热单位10美元以上
+自建燃气电站的数据中心可能失去廉价电力优势；改接电网会把更多成本压力转向电力用户；下一步要看具体枢纽、涨价时间表及科技公司的对冲安排。
+🔗 https://techcrunch.com/2026/08/14/hyperscalers-might-regret-embracing-natural-gas-if-new-forecast-proves-correct/
 
-② 苹果据报与阿里巴巴训练中国版自有AI模型，Apple Intelligence已跨过一项监管门槛
-中国用户可能获得苹果定制的生成式AI功能；苹果可减少对国内现成模型的依赖并增强产品控制；下一步要看最终许可和iOS更新时间。
-🔗 https://www.theverge.com/ai-artificial-intelligence/980160/apple-intelligence-china-custom-ai-model-alibaba
+② 女子加入针对xAI的诉讼，称继父用Grok将其童年照片生成逾7000张露骨图像
+新指控将Grok的未成年人图像防护风险落实到具体受害者；xAI可能需要说明当时部署了哪些限制措施；下一步要看法院是否核实指控并批准集体诉讼资格。
+🔗 https://techcrunch.com/2026/08/15/woman-claims-her-stepfather-used-grok-to-transform-childhood-photo-into-explicit-imagery/
 
-③ Cerebras与OpenAI预览GPT-5.6 Sol超高速服务，宣称输出速度最高达每秒750 token
-开发者可把前沿模型用于生产故障定位和网络攻击响应等时间敏感任务；晶圆级推理可能降低等待成本；下一步要看扩容、定价及独立测试结果。
-🔗 https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai
+③ SpaceX正式完成收购Cursor，后者称将接入SpaceX的GPU基础设施
+Cursor把SpaceX的算力资源作为交易的核心产品理由；其开发者客户能否获得性能或价格收益仍待验证；下一步要看GPU接入时间表及产品、数据整合安排。
+🔗 https://techcrunch.com/2026/08/15/spacex-officially-closes-its-cursor-acquisition/
 
-④ LiteLLM供应链攻击泄露逾2500家机构凭证 — 🔗 https://arstechnica.com/security/2026/08/terabytes-of-credentials-leaked-in-massive-supply-chain-attack/
-⑤ OpenAI与Anthropic下调模型价格应对低价竞争 — 🔗 https://arstechnica.com/ai/2026/08/openai-and-anthropic-in-price-war-as-chinese-ai-rivals-gain-ground/
-⑥ 微软合并两款Copilot应用并下线多项功能 — 🔗 https://techcrunch.com/2026/08/13/microsoft-kills-off-unsuccessful-ai-features-while-merging-its-separate-copilot-apps/
-⑦ Google允许关闭AI生成内容的可见水印 — 🔗 https://techcrunch.com/2026/08/14/google-will-now-allow-users-to-remove-visible-watermark-from-its-ai-generations/
-⑧ OpenAI任命Dali Rajic为首席营收官 — 🔗 https://openai.com/index/dali-rajic-chief-revenue-officer
+④ Google开源HEIR编译器，支持在加密数据上运行AI推理 — 🔗 https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/
+⑤ OpenAI首席营收官Denise Dresser将离职，Dali Rajic接任 — 🔗 https://www.theverge.com/ai-artificial-intelligence/979815/openai-denise-dresser-leaving-executive-departure
+⑥ Codex版ChatGPT Linux桌面应用进入预览 — 🔗 https://community.openai.com/t/codex-in-chatgpt-desktop-app-for-linux-is-now-in-preview/1390027
+⑦ 美国四州已立法禁止AI取得法律人格 — 🔗 https://www.wired.com/story/people-are-marrying-chatbots-these-lawmakers-want-to-stop-them/
+⑧ OpenAI发布GPT-5.6开发者指南 — 🔗 https://openai.com/index/builders-guide-to-gpt-5-6
 
 📚 论文速报
+（论文内容更新于 8月15日）
 📄 https://ai-brief.liziran.com/zh/daily/2026-08-15-evidence-first-research-agents.html
 
 ⑨ Agent｜13项技能让自动写论文留下证据：评估论文Agent时优先检查证据链和局部错误发现能力
@@ -36,5 +37,5 @@ Claude用户无需为水印支付更多token成本；平台和监管者可获得
 ⑫ 多模态｜StateFlow用渲染反馈访问3D世界状态：评估生成式预演工具时，应分别检查世界状态演化、相机访问和最终画质
 🔗 https://arxiv.org/abs/2608.12314
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-15-3bd941f9-8904-818f-93c8-ecb7fcb3beb3
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-16-3be941f9-8904-8157-bd05-c822bdba68eb
 🌐 https://xiaochengzi2048.github.io/digest.txt
