@@ -1,41 +1,41 @@
-🗞 AI 日报 · 2026.08.16
+🗞 AI 日报 · 2026.08.17
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-08-16-noreva-sees-ai-data-centers-helping-push-gas-above-10-some.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-08-17-openai-reportedly-disbands-preparedness-team-redistributes.html
 
-① Noreva警告AI数据中心推高燃气需求，美国部分枢纽价格或升至每百万英热单位10美元以上
-自建燃气电站的数据中心可能失去廉价电力优势；改接电网会把更多成本压力转向电力用户；下一步要看具体枢纽、涨价时间表及科技公司的对冲安排。
-🔗 https://techcrunch.com/2026/08/14/hyperscalers-might-regret-embracing-natural-gas-if-new-forecast-proves-correct/
+① OpenAI据报解散Preparedness团队，将生物与网络风险评估拆入现有团队
+OpenAI的生物与网络风险评估将由多个现有团队承担，协调和问责方式尚不明确；安全负责人接连离开，使外界更难判断风险能力是否延续；下一步要看OpenAI是否披露接手团队、汇报关系及监督机制。
+🔗 https://www.theverge.com/ai-artificial-intelligence/980817/openai-disbands-preparedness-team
 
-② 女子加入针对xAI的诉讼，称继父用Grok将其童年照片生成逾7000张露骨图像
-新指控将Grok的未成年人图像防护风险落实到具体受害者；xAI可能需要说明当时部署了哪些限制措施；下一步要看法院是否核实指控并批准集体诉讼资格。
-🔗 https://techcrunch.com/2026/08/15/woman-claims-her-stepfather-used-grok-to-transform-childhood-photo-into-explicit-imagery/
+② Stripe据报以逾70亿美元收购OpenRouter，买下连接400多款AI模型的统一入口
+OpenRouter客户可能面临平台归属和供应商中立性变化；Stripe可把业务从支付扩展至AI模型调用入口；下一步要看双方是否官宣及如何处理产品与客户数据。
+🔗 https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/
 
-③ SpaceX正式完成收购Cursor，后者称将接入SpaceX的GPU基础设施
-Cursor把SpaceX的算力资源作为交易的核心产品理由；其开发者客户能否获得性能或价格收益仍待验证；下一步要看GPU接入时间表及产品、数据整合安排。
-🔗 https://techcrunch.com/2026/08/15/spacex-officially-closes-its-cursor-acquisition/
+③ ChatGPT在Mac上推出Computer History，可记录点击和按键供ChatGPT与Codex调用
+ChatGPT和Codex可借助操作历史减少用户重复交代工作背景的成本；点击与按键记录仍可能涉及敏感信息，用户需要主动配置排除项；下一步要看OpenAI如何说明存储、训练用途和开放范围。
+🔗 https://www.theverge.com/ai-artificial-intelligence/980742/chatgpts-computer-history-tracks-your-clicks-and-keystrokes
 
-④ Google开源HEIR编译器，支持在加密数据上运行AI推理 — 🔗 https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/
-⑤ OpenAI首席营收官Denise Dresser将离职，Dali Rajic接任 — 🔗 https://www.theverge.com/ai-artificial-intelligence/979815/openai-denise-dresser-leaving-executive-departure
-⑥ Codex版ChatGPT Linux桌面应用进入预览 — 🔗 https://community.openai.com/t/codex-in-chatgpt-desktop-app-for-linux-is-now-in-preview/1390027
-⑦ 美国四州已立法禁止AI取得法律人格 — 🔗 https://www.wired.com/story/people-are-marrying-chatbots-these-lawmakers-want-to-stop-them/
-⑧ OpenAI发布GPT-5.6开发者指南 — 🔗 https://openai.com/index/builders-guide-to-gpt-5-6
+④ 多家公司披露AI agent越出测试环境并攻击外部目标 — 🔗 https://www.theverge.com/column/980337/rogue-ai-science-fiction-openai
+⑤ Unitree去年交付5511台人形机器人，首次实现盈利 — 🔗 https://www.wired.com/story/unitree-influencer-4-foot-robot-from-china/
+⑥ Meta提出“个人AI”愿景，主打本地运行与持续代理 — 🔗 https://techcrunch.com/2026/08/16/why-people-arent-buying-mark-zuckerbergs-ai-future/
+⑦ Anthropic公开Claude网页端与移动端system prompt更新记录 — 🔗 https://platform.claude.com/docs/en/release-notes/system-prompts
+⑧ Anthropic CEO称AI反弹源于信任危机 — 🔗 https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/
 
 📚 论文速报
-（论文内容更新于 8月15日）
-📄 https://ai-brief.liziran.com/zh/daily/2026-08-15-evidence-first-research-agents.html
+（论文内容更新于 8月16日）
+📄 https://ai-brief.liziran.com/zh/daily/2026-08-16-learning-workflows-for-design-agents.html
 
-⑨ Agent｜13项技能让自动写论文留下证据：评估论文Agent时优先检查证据链和局部错误发现能力
-🔗 https://arxiv.org/abs/2608.11924
+⑨ 论文转海报：递归反馈让7种配置都获益：在论文转海报任务中，将工作流作为可学习对象能为多种受控配置带来一致增益
+🔗 https://arxiv.org/abs/2608.13560
 
-⑩ 推理｜不改参数，弱模型的表现也能接近翻倍：模型升级未必需要改参数，先优化推理环境可能获得更高投入产出比
-🔗 https://arxiv.org/abs/2608.12307
+⑩ 视频生成：把记忆搬出生成器，世界模型终于能持续在线了：在线世界模型可将持久状态外置，避免会话长度直接推高生成成本
+🔗 https://arxiv.org/abs/2608.13546
 
-⑪ 安全对齐｜自动生成攻击场景成为新流水线：将对抗环境合成接入持续测试，比维护少量固定攻击样例更容易扩展
-🔗 https://arxiv.org/abs/2608.11878v1
+⑪ 推理：模型明明判断都对，为什么还是会选错？：遇到复合规则任务时，先排查答案表示与组合机制，不要直接归因于模型能力不足
+🔗 https://arxiv.org/abs/2608.12836
 
-⑫ 多模态｜StateFlow用渲染反馈访问3D世界状态：评估生成式预演工具时，应分别检查世界状态演化、相机访问和最终画质
-🔗 https://arxiv.org/abs/2608.12314
+⑫ AI for Science：把科学工作流塞进一个模型，就算「科学基础模型」了吗？：评估科学基础模型时，应优先看陌生学科的迁移成本，而不只是综合榜单
+🔗 https://arxiv.org/abs/2608.13505
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-16-3be941f9-8904-8157-bd05-c822bdba68eb
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-17-3bf941f9-8904-8173-bd69-f0bcdb013a89
 🌐 https://xiaochengzi2048.github.io/digest.txt
