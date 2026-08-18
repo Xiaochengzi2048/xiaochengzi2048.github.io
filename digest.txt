@@ -1,6 +1,7 @@
-🗞 AI 日报 · 2026.08.17
+🗞 AI 日报 · 2026.08.18
 
 📰 今日速报
+（速报内容更新于 8月17日）
 📄 https://ai-digest.liziran.com/zh/digest/2026-08-17-openai-reportedly-disbands-preparedness-team-redistributes.html
 
 ① OpenAI据报解散Preparedness团队，将生物与网络风险评估拆入现有团队
@@ -37,5 +38,5 @@ ChatGPT和Codex可借助操作历史减少用户重复交代工作背景的成�
 ⑫ AI for Science：把科学工作流塞进一个模型，就算「科学基础模型」了吗？：评估科学基础模型时，应优先看陌生学科的迁移成本，而不只是综合榜单
 🔗 https://arxiv.org/abs/2608.13505
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-17-3bf941f9-8904-8173-bd69-f0bcdb013a89
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-18-3c0941f9-8904-81f0-89d2-c0cb0c6b7b9f
 🌐 https://xiaochengzi2048.github.io/digest.txt
