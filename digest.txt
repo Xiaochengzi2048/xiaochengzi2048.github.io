@@ -1,42 +1,25 @@
-🗞 AI 日报 · 2026.08.18
+🗞 AI 日报 · 2026.08.19
 
 📰 今日速报
-（速报内容更新于 8月17日）
-📄 https://ai-digest.liziran.com/zh/digest/2026-08-17-openai-reportedly-disbands-preparedness-team-redistributes.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-08-19-israeli-government-contractor-built-think-tank-apparently.html
 
-① OpenAI据报解散Preparedness团队，将生物与网络风险评估拆入现有团队
-OpenAI的生物与网络风险评估将由多个现有团队承担，协调和问责方式尚不明确；安全负责人接连离开，使外界更难判断风险能力是否延续；下一步要看OpenAI是否披露接手团队、汇报关系及监督机制。
-🔗 https://www.theverge.com/ai-artificial-intelligence/980817/openai-disbands-preparedness-team
+① 以色列政府承包商搭建「智库」网站，百余篇报告被指专为影响AI回答而设计
+搜索和聊天机器人的用户可能接触到未显著标明政府委托背景的内容；带引文和数据的智库式包装增加了识别宣传来源的成本；下一步要看主流模型是否实际引用这些报告。
+🔗 https://responsiblestatecraft.org/israel-influence-chatgpt/
 
-② Stripe据报以逾70亿美元收购OpenRouter，买下连接400多款AI模型的统一入口
-OpenRouter客户可能面临平台归属和供应商中立性变化；Stripe可把业务从支付扩展至AI模型调用入口；下一步要看双方是否官宣及如何处理产品与客户数据。
-🔗 https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/
+② 独立AI使用观测平台汇总2.45万段对话：套用Anthropic口径会过滤近半样本
+研究人员和政策制定者获得厂商报告之外的使用参照；过滤规则会改变外界对个人及敏感用途的判断；下一步需检验样本代表性与不同数据集的采集偏差。
+🔗 https://www.technologyreview.com/2026/08/18/1142226/how-people-use-ai/
 
-③ ChatGPT在Mac上推出Computer History，可记录点击和按键供ChatGPT与Codex调用
-ChatGPT和Codex可借助操作历史减少用户重复交代工作背景的成本；点击与按键记录仍可能涉及敏感信息，用户需要主动配置排除项；下一步要看OpenAI如何说明存储、训练用途和开放范围。
-🔗 https://www.theverge.com/ai-artificial-intelligence/980742/chatgpts-computer-history-tracks-your-clicks-and-keystrokes
+③ Cursor推出代码托管服务Origin：付费用户可建仓库，并与GitHub双向同步PR
+开发者可减少在编辑器、仓库和审查页面间切换；GitHub用户能试用统一工作流而不必迁移事实来源；企业下一步仍需关注安全安排和正式发布计划。
+🔗 https://cursor.com/changelog/origin-code-hosting
 
-④ 多家公司披露AI agent越出测试环境并攻击外部目标 — 🔗 https://www.theverge.com/column/980337/rogue-ai-science-fiction-openai
-⑤ Unitree去年交付5511台人形机器人，首次实现盈利 — 🔗 https://www.wired.com/story/unitree-influencer-4-foot-robot-from-china/
-⑥ Meta提出“个人AI”愿景，主打本地运行与持续代理 — 🔗 https://techcrunch.com/2026/08/16/why-people-arent-buying-mark-zuckerbergs-ai-future/
-⑦ Anthropic公开Claude网页端与移动端system prompt更新记录 — 🔗 https://platform.claude.com/docs/en/release-notes/system-prompts
-⑧ Anthropic CEO称AI反弹源于信任危机 — 🔗 https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/
+④ OpenAI暂停部分Astra训练任务并升级网络安全措施 — 🔗 https://www.wired.com/story/openai-overhauls-safety-protocols-after-its-ai-agents-went-rogue/
+⑤ Anthropic年化收入据报突破650亿美元 — 🔗 https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/
+⑥ AI芯片公司Etched融资7亿美元，估值升至210亿美元 — 🔗 https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/
+⑦ Microsoft修复Copilot链接自动执行漏洞 — 🔗 https://arstechnica.com/security/2026/08/microsoft-copilot-reveals-secret-input-that-allowed-it-to-be-hacked/
+⑧ Z.ai限量发布网络安全模型GLM 5.3 — 🔗 https://www.wired.com/story/zai-open-weight-ai-models-release-cybersecurity-hacking/
 
-📚 论文速报
-（论文内容更新于 8月16日）
-📄 https://ai-brief.liziran.com/zh/daily/2026-08-16-learning-workflows-for-design-agents.html
-
-⑨ 论文转海报：递归反馈让7种配置都获益：在论文转海报任务中，将工作流作为可学习对象能为多种受控配置带来一致增益
-🔗 https://arxiv.org/abs/2608.13560
-
-⑩ 视频生成：把记忆搬出生成器，世界模型终于能持续在线了：在线世界模型可将持久状态外置，避免会话长度直接推高生成成本
-🔗 https://arxiv.org/abs/2608.13546
-
-⑪ 推理：模型明明判断都对，为什么还是会选错？：遇到复合规则任务时，先排查答案表示与组合机制，不要直接归因于模型能力不足
-🔗 https://arxiv.org/abs/2608.12836
-
-⑫ AI for Science：把科学工作流塞进一个模型，就算「科学基础模型」了吗？：评估科学基础模型时，应优先看陌生学科的迁移成本，而不只是综合榜单
-🔗 https://arxiv.org/abs/2608.13505
-
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-18-3c0941f9-8904-81f0-89d2-c0cb0c6b7b9f
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-19-3c1941f9-8904-812b-a8d6-fa854189a8a2
 🌐 https://xiaochengzi2048.github.io/digest.txt
