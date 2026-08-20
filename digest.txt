@@ -1,25 +1,25 @@
-🗞 AI 日报 · 2026.08.19
+🗞 AI 日报 · 2026.08.20
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-08-19-israeli-government-contractor-built-think-tank-apparently.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-08-20-us-ai-unease-reaches-52-data-center-resistance-raises-costs.html
 
-① 以色列政府承包商搭建「智库」网站，百余篇报告被指专为影响AI回答而设计
-搜索和聊天机器人的用户可能接触到未显著标明政府委托背景的内容；带引文和数据的智库式包装增加了识别宣传来源的成本；下一步要看主流模型是否实际引用这些报告。
-🔗 https://responsiblestatecraft.org/israel-influence-chatgpt/
+① 美国公众对AI的不安升至52%，数据中心阻力开始转化为企业成本
+数据中心开发商可能需要承担更多社区补偿和项目协调成本；地方反对已成为政党评估选举风险的变量；下一步要看更实用的AI产品能否改善信任，以及社区让步的实际总成本。
+🔗 https://techcrunch.com/2026/08/19/ai-was-supposed-to-win-people-over-by-now-it-hasnt/
 
-② 独立AI使用观测平台汇总2.45万段对话：套用Anthropic口径会过滤近半样本
-研究人员和政策制定者获得厂商报告之外的使用参照；过滤规则会改变外界对个人及敏感用途的判断；下一步需检验样本代表性与不同数据集的采集偏差。
-🔗 https://www.technologyreview.com/2026/08/18/1142226/how-people-use-ai/
+② GPT-5.6 Sol在OpenRouter降价50%，现价为每百万输入2.50美元、输出15美元
+使用长上下文和大量输出的开发者可按新报价重算成本；多供应商故障转移可能降低单一上游中断风险；下一步需确认旧价格、生效时间及其他渠道报价。
+🔗 https://openrouter.ai/openai/gpt-5.6-sol
 
-③ Cursor推出代码托管服务Origin：付费用户可建仓库，并与GitHub双向同步PR
-开发者可减少在编辑器、仓库和审查页面间切换；GitHub用户能试用统一工作流而不必迁移事实来源；企业下一步仍需关注安全安排和正式发布计划。
-🔗 https://cursor.com/changelog/origin-code-hosting
+③ Cerebras发布CS-4晶圆级推理系统，宣称速度最高可达生产GPU系统30倍
+超大模型推理有望降低延迟和能耗；模块化设计可能缩短数据中心扩容时间；下一步要看交付安排及独立基准测试能否支持厂商宣称。
+🔗 https://www.cerebras.ai/cs4
 
-④ OpenAI暂停部分Astra训练任务并升级网络安全措施 — 🔗 https://www.wired.com/story/openai-overhauls-safety-protocols-after-its-ai-agents-went-rogue/
-⑤ Anthropic年化收入据报突破650亿美元 — 🔗 https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/
-⑥ AI芯片公司Etched融资7亿美元，估值升至210亿美元 — 🔗 https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/
-⑦ Microsoft修复Copilot链接自动执行漏洞 — 🔗 https://arstechnica.com/security/2026/08/microsoft-copilot-reveals-secret-input-that-allowed-it-to-be-hacked/
-⑧ Z.ai限量发布网络安全模型GLM 5.3 — 🔗 https://www.wired.com/story/zai-open-weight-ai-models-release-cybersecurity-hacking/
+④ OpenAI为合格API客户提供前沿模型零数据保留 — 🔗 https://openai.com/index/offering-zero-data-retention-for-frontier-models
+⑤ ChatGPT Ads扩展至欧洲31个市场 — 🔗 https://openai.com/index/chatgpt-ads-expands-across-europe
+⑥ Replit推出由GPT-5.6 Luna驱动的免费软件创建模式 — 🔗 https://openai.com/index/replit
+⑦ Meta AI推出Mac应用并连接Google Workspace — 🔗 https://www.theverge.com/tech/982270/meta-ai-mac-app
+⑧ Google为Search和Gemini加入交互式学习工具 — 🔗 https://techcrunch.com/2026/08/19/google-launches-new-study-tools-for-students-across-search-and-gemini/
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-19-3c1941f9-8904-812b-a8d6-fa854189a8a2
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-20-3c2941f9-8904-8108-88ab-e7da9db4d34f
 🌐 https://xiaochengzi2048.github.io/digest.txt
