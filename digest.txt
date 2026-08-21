@@ -1,25 +1,25 @@
-🗞 AI 日报 · 2026.08.20
+🗞 AI 日报 · 2026.08.21
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-08-20-us-ai-unease-reaches-52-data-center-resistance-raises-costs.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-08-21-flock-tests-police-ai-turns-driving-patterns-into-names.html
 
-① 美国公众对AI的不安升至52%，数据中心阻力开始转化为企业成本
-数据中心开发商可能需要承担更多社区补偿和项目协调成本；地方反对已成为政党评估选举风险的变量；下一步要看更实用的AI产品能否改善信任，以及社区让步的实际总成本。
-🔗 https://techcrunch.com/2026/08/19/ai-was-supposed-to-win-people-over-by-now-it-hasnt/
+① Flock测试警用AI，可凭行车规律锁定司机并关联姓名住址
+警员无需先有明确嫌疑人即可从出行模式反向筛人，普通司机被纳入调查的风险上升；身份、住址与案件资料可被集中关联，扩大误判和滥用的后果；下一步要看正式版本保留哪些能力及是否设置搜查门槛。
+🔗 https://www.wired.com/story/flock-safety-os-investigate/
 
-② GPT-5.6 Sol在OpenRouter降价50%，现价为每百万输入2.50美元、输出15美元
-使用长上下文和大量输出的开发者可按新报价重算成本；多供应商故障转移可能降低单一上游中断风险；下一步需确认旧价格、生效时间及其他渠道报价。
-🔗 https://openrouter.ai/openai/gpt-5.6-sol
+② Google Discover将允许用户用聊天指令重调推荐信息流
+Discover用户能更直接控制推荐内容，减少系统猜测兴趣的偏差；出版商新增引导读者设为首选来源的入口；下一步要看功能覆盖范围及偏好管理机制。
+🔗 https://www.theverge.com/tech/983088/google-discover-ai-chatbot-feed
 
-③ Cerebras发布CS-4晶圆级推理系统，宣称速度最高可达生产GPU系统30倍
-超大模型推理有望降低延迟和能耗；模块化设计可能缩短数据中心扩容时间；下一步要看交付安排及独立基准测试能否支持厂商宣称。
-🔗 https://www.cerebras.ai/cs4
+③ 两次六天限时测试中，AI代理完成研究工程却未产出顶会水平成果
+自动化AI研究仍需要人类判断研究方向；机构不能把完成实验等同于产出可靠成果；团队正用另一模型继续测试，但结果尚未公布。
+🔗 https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/
 
-④ OpenAI为合格API客户提供前沿模型零数据保留 — 🔗 https://openai.com/index/offering-zero-data-retention-for-frontier-models
-⑤ ChatGPT Ads扩展至欧洲31个市场 — 🔗 https://openai.com/index/chatgpt-ads-expands-across-europe
-⑥ Replit推出由GPT-5.6 Luna驱动的免费软件创建模式 — 🔗 https://openai.com/index/replit
-⑦ Meta AI推出Mac应用并连接Google Workspace — 🔗 https://www.theverge.com/tech/982270/meta-ai-mac-app
-⑧ Google为Search和Gemini加入交互式学习工具 — 🔗 https://techcrunch.com/2026/08/19/google-launches-new-study-tools-for-students-across-search-and-gemini/
+④ Stripe didn’t really buy OpenRouter because of the ‘singularity’ — 🔗 https://techcrunch.com/2026/08/19/stripe-didnt-really-buy-openrouter-because-of-the-singularity/
+⑤ It’s Greg Brockman’s OpenAI now — 🔗 https://www.theverge.com/ai-artificial-intelligence/982774/greg-brockman-openai-role-expansion
+⑥ ChatGPT can now send texts for you with new Apple Messages plug-in — 🔗 https://techcrunch.com/2026/08/20/chatgpt-can-now-send-texts-for-you-with-new-apple-messages-plugin/
+⑦ Slack is launching collaborative vibe-coding channels — 🔗 https://www.theverge.com/tech/982628/slack-code-vibe-coding-channels-launch
+⑧ Ramp launches its own AI model router, called Router — 🔗 https://techcrunch.com/2026/08/20/ramp-launches-its-own-ai-model-router-called-router/
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-20-3c2941f9-8904-8108-88ab-e7da9db4d34f
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-21-3c3941f9-8904-8190-a2b1-fda715aa8d67
 🌐 https://xiaochengzi2048.github.io/digest.txt
