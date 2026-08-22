@@ -1,6 +1,7 @@
-🗞 AI 日报 · 2026.08.21
+🗞 AI 日报 · 2026.08.22
 
 📰 今日速报
+（速报内容更新于 8月21日）
 📄 https://ai-digest.liziran.com/zh/digest/2026-08-21-flock-tests-police-ai-turns-driving-patterns-into-names.html
 
 ① Flock测试警用AI，可凭行车规律锁定司机并关联姓名住址
@@ -21,5 +22,5 @@ Discover用户能更直接控制推荐内容，减少系统猜测兴趣的偏差
 ⑦ Slack is launching collaborative vibe-coding channels — 🔗 https://www.theverge.com/tech/982628/slack-code-vibe-coding-channels-launch
 ⑧ Ramp launches its own AI model router, called Router — 🔗 https://techcrunch.com/2026/08/20/ramp-launches-its-own-ai-model-router-called-router/
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-21-3c3941f9-8904-8190-a2b1-fda715aa8d67
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-22-3c4941f9-8904-8119-92f0-d0d293f22f8e
 🌐 https://xiaochengzi2048.github.io/digest.txt
