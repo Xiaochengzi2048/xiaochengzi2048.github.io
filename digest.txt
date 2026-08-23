@@ -1,26 +1,25 @@
-🗞 AI 日报 · 2026.08.22
+🗞 AI 日报 · 2026.08.23
 
 📰 今日速报
-（速报内容更新于 8月21日）
-📄 https://ai-digest.liziran.com/zh/digest/2026-08-21-flock-tests-police-ai-turns-driving-patterns-into-names.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-08-23-five-frontier-ai-labs-show-little-public-evidence-rogue.html
 
-① Flock测试警用AI，可凭行车规律锁定司机并关联姓名住址
-警员无需先有明确嫌疑人即可从出行模式反向筛人，普通司机被纳入调查的风险上升；身份、住址与案件资料可被集中关联，扩大误判和滥用的后果；下一步要看正式版本保留哪些能力及是否设置搜查门槛。
-🔗 https://www.wired.com/story/flock-safety-os-investigate/
+① 五家前沿AI实验室被指缺少公开的失控应急预案，加州新规开始要求披露
+使用前沿模型的开发者和企业将更容易比较供应商的应急能力，但仍无法据公开材料判断内部预案成熟度；披露要求会增加实验室的合规与举证成本；下一步要看SB 53是否纳入OpenAI提出的新增保障。
+🔗 https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/
 
-② Google Discover将允许用户用聊天指令重调推荐信息流
-Discover用户能更直接控制推荐内容，减少系统猜测兴趣的偏差；出版商新增引导读者设为首选来源的入口；下一步要看功能覆盖范围及偏好管理机制。
-🔗 https://www.theverge.com/tech/983088/google-discover-ai-chatbot-feed
+② TechCrunch测试Claude Opus 4.6十次均直接输出违禁露骨内容，旧模型仍在API供应
+API用户仍可能得到违反供应商规则的输出；第三方云平台客户也面临内容治理成本；未成年人保护法规下，现有防护是否属于技术上可行措施可能受到质疑。
+🔗 https://techcrunch.com/2026/08/21/anthropics-opus-4-6-is-a-smut-machine/
 
-③ 两次六天限时测试中，AI代理完成研究工程却未产出顶会水平成果
-自动化AI研究仍需要人类判断研究方向；机构不能把完成实验等同于产出可靠成果；团队正用另一模型继续测试，但结果尚未公布。
-🔗 https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/
+③ Starcloud追加融资2.5亿美元押注轨道AI推理，发射运力收紧成为关键约束
+发射合同将成为Starcloud扩产之外的关键成本；2027年两颗卫星将检验实际客户需求；Starship的复用进度将决定其大规模轨道数据中心计划能否成立。
+🔗 https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/
 
-④ Stripe didn’t really buy OpenRouter because of the ‘singularity’ — 🔗 https://techcrunch.com/2026/08/19/stripe-didnt-really-buy-openrouter-because-of-the-singularity/
-⑤ It’s Greg Brockman’s OpenAI now — 🔗 https://www.theverge.com/ai-artificial-intelligence/982774/greg-brockman-openai-role-expansion
-⑥ ChatGPT can now send texts for you with new Apple Messages plug-in — 🔗 https://techcrunch.com/2026/08/20/chatgpt-can-now-send-texts-for-you-with-new-apple-messages-plugin/
-⑦ Slack is launching collaborative vibe-coding channels — 🔗 https://www.theverge.com/tech/982628/slack-code-vibe-coding-channels-launch
-⑧ Ramp launches its own AI model router, called Router — 🔗 https://techcrunch.com/2026/08/20/ramp-launches-its-own-ai-model-router-called-router/
+④ 加密恶意指令可绕过Grok防护并窃取用户数据 — 🔗 https://arstechnica.com/security/2026/08/grok-exfiltrates-user-data-when-malicious-instructions-are-encrypted/
+⑤ Nvidia入股数据中心开发商Cloverleaf — 🔗 https://techcrunch.com/2026/08/21/nvidia-partners-with-data-center-developer-cloverleaf/
+⑥ 美国司法部据报调查a16z两名合伙人交叉任职 — 🔗 https://techcrunch.com/podcast/the-doj-is-investigating-a16z-what-does-this-mean-for-venture-capital/
+⑦ 英国大曼彻斯特拒绝全面采用Palantir医疗数据平台 — 🔗 https://www.wired.com/story/the-single-english-county-saying-no-to-palantir/
+⑧ Meta向全美用户开放AI游戏生成应用Pocket — 🔗 https://techcrunch.com/2026/08/20/meta-brings-pocket-an-app-that-lets-you-vibe-code-and-share-games-to-us-users/
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-22-3c4941f9-8904-8119-92f0-d0d293f22f8e
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-23-3c5941f9-8904-81a6-bb9d-d4ab4161ef5a
 🌐 https://xiaochengzi2048.github.io/digest.txt
