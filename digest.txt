@@ -1,6 +1,7 @@
-🗞 AI 日报 · 2026.08.24
+🗞 AI 日报 · 2026.08.25
 
 📰 今日速报
+（速报内容更新于 8月24日）
 📄 https://ai-digest.liziran.com/zh/digest/2026-08-24-flock-cuts-default-data-retention-after-46-unauthorized-use.html
 
 ① 46起违规使用指控引发反弹，Flock将监控数据默认留存期从30天缩至7天
@@ -21,5 +22,5 @@ AI代理可把固件核对、利用开发和调试串成连续流程；设备所
 ⑦ Google DeepMind与游戏工作室测试通用游戏agent — 🔗 https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/
 ⑧ 哈佛商学院用AI讲师分身点评创业者演练 — 🔗 https://techcrunch.com/2026/08/22/harvards-699-startup-bootcamp-offers-ai-avatars-of-its-instructors/
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-24-3c6941f9-8904-812c-a36e-dc7a8b069dce
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-25-3c7941f9-8904-81a4-8ee7-d51351b9d2b8
 🌐 https://xiaochengzi2048.github.io/digest.txt
