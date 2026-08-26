@@ -1,26 +1,25 @@
-🗞 AI 日报 · 2026.08.25
+🗞 AI 日报 · 2026.08.26
 
 📰 今日速报
-（速报内容更新于 8月24日）
-📄 https://ai-digest.liziran.com/zh/digest/2026-08-24-flock-cuts-default-data-retention-after-46-unauthorized-use.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-08-26-employment-gap-widens-19-young-workers-ai-exposed.html
 
-① 46起违规使用指控引发反弹，Flock将监控数据默认留存期从30天缩至7天
-被监控者的数据暴露时间默认缩短，但警员仍可能延长保存；访问数据前须输入案件代码，但来源未披露其验证、审计及覆盖机制；改革成效要看Evidence Mode规则及联邦采购禁令能否推进。
-🔗 https://techcrunch.com/2026/08/23/flock-ceo-calls-for-compromise-as-surveillance-company-faces-growing-backlash/
+① 斯坦福研究更新：AI高暴露职业中22至25岁员工就业差距扩大至19%
+22至25岁求职者进入AI高暴露职业的难度可能上升；企业采用AI时，入门岗位与年长员工之间的就业风险正在分化；下一步需看完整统计控制和职业明细能否进一步确认AI的因果作用。
+🔗 https://arstechnica.com/ai/2026/08/ai-is-hitting-entry-level-jobs-hardest-stanford-study-finds/
 
-② 乌兰察布数据中心承诺容量达12.5吉瓦，扩建计划撞上当地供水紧张
-自建算力可降低AI企业对云租赁的依赖；水资源可能限制未投运项目的规模和节奏；下一步需看12.5吉瓦中多少获批、融资并确定投运日期。
-🔗 https://www.wired.com/story/the-unlikely-place-at-the-center-of-chinas-ai-boom/
+② OpenAI公布Jalapeño首轮基准：称每瓦推理量最高达英伟达对照系统1.9倍
+更高能效可能降低OpenAI运行大模型的电力成本；更低延迟可改善用户响应和agent交互；下一步要看实际部署规模及独立测试能否验证结果。
+🔗 https://www.theverge.com/ai-artificial-intelligence/984290/openai-jalapeno-ai-chip-benchmarks
 
-③ 四款AI模型接力破解一台Fire HD，机主花266美元把已知漏洞变成Root工具
-AI代理可把固件核对、利用开发和调试串成连续流程；设备所有者仍需承担数百次失败、崩溃和付费成本；下一步要看工具能否被独立复现及公开。
-🔗 https://ericpardee.github.io/fire-hd-ownership/
+③ Stability AI获7600万美元B轮融资，环球、索尼、华纳与EA参与
+环球、华纳和EA同时成为投资者与工具共同开发者，可能更直接影响产品如何进入音乐和游戏流程；Stability AI获得资金扩充产品及服务，但合作方的治理权仍不明确；美国版权诉讼仍是待定风险。
+🔗 https://techcrunch.com/2026/08/25/stability-ai-maker-of-image-generator-stable-diffusion-raises-76-million-in-fresh-funding/
 
-④ 美国法院对AI训练版权边界仍未形成统一标准 — 🔗 https://techcrunch.com/2026/08/23/is-it-legal-to-train-ai-models-on-copyrighted-books-its-complicated/
-⑤ Anthropic年化营收据报升至650亿美元，昂贵新模型采用率仍低 — 🔗 https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/
-⑥ 匿名编码模型Ox Alpha上线OpenRouter — 🔗 https://techcrunch.com/2026/08/23/whos-behind-the-new-stealth-model-ox-alpha/
-⑦ Google DeepMind与游戏工作室测试通用游戏agent — 🔗 https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/
-⑧ 哈佛商学院用AI讲师分身点评创业者演练 — 🔗 https://techcrunch.com/2026/08/22/harvards-699-startup-bootcamp-offers-ai-avatars-of-its-instructors/
+④ Hugging Face据报洽谈以至少130亿美元估值出售 — 🔗 https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b/
+⑤ NVIDIA称Groq 3 LPX已量产，Nebius率先采用 — 🔗 https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/
+⑥ Google拟以1000万美元购买Spirit航空34年运营数据 — 🔗 https://www.wired.com/story/spirit-airlines-wants-to-sell-its-data-to-google-former-flight-attendants-are-freaked-out/
+⑦ 台湾起诉九名涉嫌向中国转运AI服务器人员 — 🔗 https://arstechnica.com/tech-policy/2026/08/nvidia-senior-manager-linked-to-supermicro-scheme-smuggling-ai-servers-to-china/
+⑧ 阿拉巴马州就Hugging Face入侵事件传唤OpenAI — 🔗 https://www.theverge.com/ai-artificial-intelligence/984239/alabama-attorney-general-subpoena-openai-hugging-face-hack
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-25-3c7941f9-8904-81a4-8ee7-d51351b9d2b8
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-26-3c8941f9-8904-8134-8af0-cb798a91cdf8
 🌐 https://xiaochengzi2048.github.io/digest.txt
