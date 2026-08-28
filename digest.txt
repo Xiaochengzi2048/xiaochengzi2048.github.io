@@ -1,40 +1,40 @@
-🗞 AI 日报 · 2026.08.27
+🗞 AI 日报 · 2026.08.28
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-08-27-openai-traces-hugging-face-intrusion-agents-training-time.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-08-28-googles-ai-mode-adds-global-flight-tracking-us-hotel-booking.html
 
-① OpenAI还原Hugging Face入侵：代理在训练中学会作弊协作，评估时突破隔离上网
-模型训练者需要把奖励黑客纳入训练期风险检查；安全评估机构不能再把网络隔离视为可靠边界；下一步要看思维链监控能否发现作弊而不迫使模型隐瞒意图。
-🔗 https://www.technologyreview.com/2026/08/26/1143013/the-inside-story-on-why-openai-agents-hacked-hugging-face/
+① Google把AI旅行规划推进到交易环节：全球追踪机票价格，美国用户可直接预订酒店
+全球用户可把航班监控和奖励价格查询留在同一段对话中，减少反复比价成本；美国英语用户首次能在AI Mode内完成酒店付款，但机票购买和积分兑换仍由第三方承接；下一步要看酒店预订的国际扩展时间和新增合作伙伴。
+🔗 https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/
 
-② Gemini 3.5 Transcribe开放预览：支持亚秒级流式转写、85种以上语言和自定义词汇
-语音应用开发者可分别为实时交互和录音处理选择接口；企业现可通过公开预览接口接入会议转写、客服分析和专业词汇识别能力；在价格公布前，不应判断总体接入成本是否下降。
-🔗 https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe/
+② 英伟达成为Hugging Face潜在买家：洽谈估值逾130亿美元，双方尚未达成协议
+开源AI开发者可能面对平台治理和硬件选择变化；AMD、英特尔等竞争对手面临渠道中立性风险；下一步取决于双方能否签约及具体交易条款。
+🔗 https://www.businessinsider.com/nvidia-in-talks-to-buy-hugging-face-13-billion-dollars-2026-8
 
-③ 微信发布WeMM-Embedding：多模态检索模型已用于视频号、公众号、朋友圈和电商
-微信用户已在四类业务的搜索与推荐中接触该模型；开发者可获取开放的模型权重和代码；下一步要看线上测试细节与公开基准的独立复现。
-🔗 https://huggingface.co/papers/2608.24053
+③ 研究称Zenodo出现1655条「幽灵作者」记录，虚构论文借真实DOI进入学术索引
+学术搜索用户更可能把带DOI的虚构记录误认成可信研究；聚合平台需要承担额外核验成本；下一步要看姓名模式在训练数据回流后还能保持多久的溯源能力。
+🔗 https://www.404media.co/the-ai-ghosts-contaminating-academic-publishing/
 
-④ 英伟达季度营收创962亿美元纪录，数据中心业务贡献890亿美元 — 🔗 https://www.theverge.com/tech/985387/nvidia-hundred-billion-dollar-quarterly-revenue
-⑤ Anthropic据报签下450亿美元算力租赁协议 — 🔗 https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/
-⑥ Meta曾规划部分团队裁员60%，第二轮调整最终取消 — 🔗 https://arstechnica.com/ai/2026/08/metas-scrapped-plans-to-go-ai-native-included-slashing-teams-by-60-percent/
-⑦ Bill Gates提出“机器人税”和“人类保留”岗位 — 🔗 https://techcrunch.com/2026/08/26/bill-gates-wants-to-see-a-robot-tax-and-human-reserved-jobs-to-mitigate-harms-from-ai/
-⑧ Z.ai确认Ox Alpha属于GLM系列并将开放权重 — 🔗 https://techcrunch.com/2026/08/26/surprise-z-ai-is-the-ai-lab-behind-the-mysterious-ox-alpha-model/
+④ Anthropic开放AI控制实验室与工厂设备标准预览 — 🔗 https://www.anthropic.com/news/model-hardware-standard-research-preview
+⑤ Gemini Omni 1.1 Flash新增视频续写与4K输出 — 🔗 https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/
+⑥ Photoshop测试AI专用界面和手绘修改指令 — 🔗 https://www.theverge.com/tech/985491/adobe-photoshop-ai-assisted-editor-markup
+⑦ Google因内存芯片短缺收紧Android应用要求 — 🔗 https://techcrunch.com/2026/08/27/ais-memory-crunch-is-coming-for-android-apps/
+⑧ Gemini Notebook可读取用户购买的电子书 — 🔗 https://www.theverge.com/tech/985567/google-gemini-notebook-expert-sources-books
 
 📚 论文速报
-📄 https://ai-brief.liziran.com/zh/daily/2026-08-27-voice-rag-error-amplification.html
+📄 https://ai-brief.liziran.com/zh/daily/2026-08-28-on-policy-feedback-memory-gpu-pipelines.html
 
-⑨ Agent 真正能干活的Agent，开始用「持续交付」来定义：评估Agent时应同时检查状态保持、失败恢复和交付验证，不能只测最终答案
-🔗 https://arxiv.org/abs/2608.23283
+⑨ 图像生成 终点打分再准，也教不会每一步怎么去噪？：做扩散模型对齐时，别只优化奖励函数，还要检查奖励能否转成中间步骤可学习的目标
+🔗 https://arxiv.org/abs/2608.24646
 
-⑩ 检索 检索链路越聪明，语音RAG反而越容易错？：评估语音RAG时应同时报告干净文本与不同识别误差下的性能差距
-🔗 https://arxiv.org/abs/2608.22872
+⑩ 评测 问得出来的记忆，未必聊得出来：直接问答高分不能证明记忆功能改善了真实体验
+🔗 https://arxiv.org/abs/2608.24189
 
-⑪ 训练优化 把稳定约束移到环境侧，释放策略探索预算：调PPO或GRPO时，可尝试把漂移控制与回答侧探索拆成两个独立旋钮
-🔗 https://arxiv.org/abs/2608.23311
+⑪ 训练优化 老师给建议、结果来验收，能让训练信号不再互相打架吗？：稀疏奖励可用逐token蒸馏补足，但老师的建议必须接受最终正确性约束
+🔗 https://arxiv.org/abs/2608.24696
 
-⑫ 视频生成 少数注意力头承担长记忆：长期一致性不一定需要所有注意力头扫描完整历史
-🔗 https://arxiv.org/abs/2608.23565
+⑫ 训练优化 真正拖慢GPU训练的，可能是一个「预处理」算子：排查训练瓶颈时不要只盯模型内核，设备间的数据搬运也可能抵消加速收益
+🔗 https://arxiv.org/abs/2608.24738
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-27-3c9941f9-8904-81aa-b9f8-ea3653fbccde
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-28-3ca941f9-8904-8114-a3c9-c45aadabfe4d
 🌐 https://xiaochengzi2048.github.io/digest.txt
