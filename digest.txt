@@ -1,40 +1,37 @@
-🗞 AI 日报 · 2026.08.28
+🗞 AI 日报 · 2026.08.29
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-08-28-googles-ai-mode-adds-global-flight-tracking-us-hotel-booking.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-08-29-taobao-live-trains-digital-avatar-agents-adapt-tools.html
 
-① Google把AI旅行规划推进到交易环节：全球追踪机票价格，美国用户可直接预订酒店
-全球用户可把航班监控和奖励价格查询留在同一段对话中，减少反复比价成本；美国英语用户首次能在AI Mode内完成酒店付款，但机票购买和积分兑换仍由第三方承接；下一步要看酒店预订的国际扩展时间和新增合作伙伴。
-🔗 https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/
+① 淘宝直播数字人代理采用「配置感知」训练，团队称线上测试提升GMV与商品页浏览
+淘宝直播可在更新营销策略和工具时减少重新适配小模型的风险；数字人服务同时面对准确率与实时响应成本；线上业务效果仍需等待完整A/B测试数据验证。
+🔗 https://huggingface.co/papers/2608.15763
 
-② 英伟达成为Hugging Face潜在买家：洽谈估值逾130亿美元，双方尚未达成协议
-开源AI开发者可能面对平台治理和硬件选择变化；AMD、英特尔等竞争对手面临渠道中立性风险；下一步取决于双方能否签约及具体交易条款。
-🔗 https://www.businessinsider.com/nvidia-in-talks-to-buy-hugging-face-13-billion-dollars-2026-8
+② OpenExecutive开源虚拟高管系统：八个专业代理共享企业资料、决策记忆与任务日程
+企业可自行检查并部署代理架构，但上传资料和历史决策会进入本地数据组件；开发者需承担模型调用、依赖安装与单实例运行约束；下一步要看独立评测和真实企业使用结果。
+🔗 https://github.com/SenteLabsAI/OpenExecutive
 
-③ 研究称Zenodo出现1655条「幽灵作者」记录，虚构论文借真实DOI进入学术索引
-学术搜索用户更可能把带DOI的虚构记录误认成可信研究；聚合平台需要承担额外核验成本；下一步要看姓名模式在训练数据回流后还能保持多久的溯源能力。
-🔗 https://www.404media.co/the-ai-ghosts-contaminating-academic-publishing/
+③ PAWBench测试11个视频生成系统：没有模型能稳定复现物理行为的概率分布
+世界模型评估需从检查单条成片扩展到重复采样与分布比较；开发者需同时提高有效结果覆盖率和概率匹配度；三种干预方法的实际改善幅度仍待明确。
+🔗 https://huggingface.co/papers/2608.27345
 
-④ Anthropic开放AI控制实验室与工厂设备标准预览 — 🔗 https://www.anthropic.com/news/model-hardware-standard-research-preview
-⑤ Gemini Omni 1.1 Flash新增视频续写与4K输出 — 🔗 https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/
-⑥ Photoshop测试AI专用界面和手绘修改指令 — 🔗 https://www.theverge.com/tech/985491/adobe-photoshop-ai-assisted-editor-markup
-⑦ Google因内存芯片短缺收紧Android应用要求 — 🔗 https://techcrunch.com/2026/08/27/ais-memory-crunch-is-coming-for-android-apps/
-⑧ Gemini Notebook可读取用户购买的电子书 — 🔗 https://www.theverge.com/tech/985567/google-gemini-notebook-expert-sources-books
+④ Amazon追加采购200万颗Nvidia GPU — 🔗 https://techcrunch.com/2026/08/26/amazon-just-tripled-its-order-of-nvidia-chips-over-surging-demand/
+⑤ 美国法院裁定五角大楼封禁Anthropic违法 — 🔗 https://www.theverge.com/ai-artificial-intelligence/985947/anthropic-supply-chain-risk-lawsuit-judge-ruling
+⑥ OpenAI将在印度ChatGPT免费版和Go版投放广告 — 🔗 https://techcrunch.com/2026/08/27/openai-to-start-showing-ads-on-chatgpts-free-and-go-tiers-in-india/
+⑦ 美国环保署拟取消部分数据中心排放许可的联邦公众参与要求 — 🔗 https://www.theverge.com/ai-artificial-intelligence/986176/data-center-pollution-epa-rule-change-air-permit
+⑧ AI云服务商Lambda举债10亿美元采购Nvidia芯片 — 🔗 https://techcrunch.com/2026/08/28/neocloud-lambda-secures-1b-in-debt-to-buy-more-chips/
 
 📚 论文速报
-📄 https://ai-brief.liziran.com/zh/daily/2026-08-28-on-policy-feedback-memory-gpu-pipelines.html
+📄 https://ai-brief.liziran.com/zh/daily/2026-08-29-visual-reasoning-retrieval-routing.html
 
-⑨ 图像生成 终点打分再准，也教不会每一步怎么去噪？：做扩散模型对齐时，别只优化奖励函数，还要检查奖励能否转成中间步骤可学习的目标
-🔗 https://arxiv.org/abs/2608.24646
+⑨ 评测 当图像和视频变成推理草稿纸：评估视觉推理系统时，应检查它是否能验证推理过程中的视觉状态，而不只看最终生成结果
+🔗 https://arxiv.org/abs/2608.26105
 
-⑩ 评测 问得出来的记忆，未必聊得出来：直接问答高分不能证明记忆功能改善了真实体验
-🔗 https://arxiv.org/abs/2608.24189
+⑩ 检索 文档检索不必为所有查询支付同一笔成本：检索管线应从静态选型转向逐查询调度
+🔗 https://arxiv.org/abs/2608.25625
 
-⑪ 训练优化 老师给建议、结果来验收，能让训练信号不再互相打架吗？：稀疏奖励可用逐token蒸馏补足，但老师的建议必须接受最终正确性约束
-🔗 https://arxiv.org/abs/2608.24696
+⑪ 模型架构 世界模型不只要会「拍下一帧」，还得记住规则：需要长期维护状态时，可执行代码比纯视觉预测更容易约束和调试
+🔗 https://arxiv.org/abs/2608.25927
 
-⑫ 训练优化 真正拖慢GPU训练的，可能是一个「预处理」算子：排查训练瓶颈时不要只盯模型内核，设备间的数据搬运也可能抵消加速收益
-🔗 https://arxiv.org/abs/2608.24738
-
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-28-3ca941f9-8904-8114-a3c9-c45aadabfe4d
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-29-3cb941f9-8904-81ba-8332-f656236696e2
 🌐 https://xiaochengzi2048.github.io/digest.txt
