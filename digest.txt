@@ -1,6 +1,7 @@
-🗞 AI 日报 · 2026.08.29
+🗞 AI 日报 · 2026.08.30
 
 📰 今日速报
+（速报内容更新于 8月29日）
 📄 https://ai-digest.liziran.com/zh/digest/2026-08-29-taobao-live-trains-digital-avatar-agents-adapt-tools.html
 
 ① 淘宝直播数字人代理采用「配置感知」训练，团队称线上测试提升GMV与商品页浏览
@@ -22,6 +23,7 @@
 ⑧ AI云服务商Lambda举债10亿美元采购Nvidia芯片 — 🔗 https://techcrunch.com/2026/08/28/neocloud-lambda-secures-1b-in-debt-to-buy-more-chips/
 
 📚 论文速报
+（论文内容更新于 8月29日）
 📄 https://ai-brief.liziran.com/zh/daily/2026-08-29-visual-reasoning-retrieval-routing.html
 
 ⑨ 评测 当图像和视频变成推理草稿纸：评估视觉推理系统时，应检查它是否能验证推理过程中的视觉状态，而不只看最终生成结果
@@ -33,5 +35,5 @@
 ⑪ 模型架构 世界模型不只要会「拍下一帧」，还得记住规则：需要长期维护状态时，可执行代码比纯视觉预测更容易约束和调试
 🔗 https://arxiv.org/abs/2608.25927
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-29-3cb941f9-8904-81ba-8332-f656236696e2
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-30-3cb941f9-8904-81bd-89fb-eb6d5fc634e3
 🌐 https://xiaochengzi2048.github.io/digest.txt
