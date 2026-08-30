@@ -1,26 +1,25 @@
 🗞 AI 日报 · 2026.08.30
 
 📰 今日速报
-（速报内容更新于 8月29日）
-📄 https://ai-digest.liziran.com/zh/digest/2026-08-29-taobao-live-trains-digital-avatar-agents-adapt-tools.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-08-30-music-publishers-sue-anthropic-over-allegedly-pirated.html
 
-① 淘宝直播数字人代理采用「配置感知」训练，团队称线上测试提升GMV与商品页浏览
-淘宝直播可在更新营销策略和工具时减少重新适配小模型的风险；数字人服务同时面对准确率与实时响应成本；线上业务效果仍需等待完整A/B测试数据验证。
-🔗 https://huggingface.co/papers/2608.15763
+① 索尼音乐出版与华纳Chappell起诉Anthropic：指控其盗版获取作品训练Claude
+Anthropic面临的风险不只来自模型如何使用作品，也来自训练材料的获取渠道；数万件作品及版权信息删除指控可能把潜在赔偿推至数十亿美元；下一步要看法院是否认定下载、抓取和删除版权信息的指控成立。
+🔗 https://www.theverge.com/ai-artificial-intelligence/986438/sony-music-warner-chappell-anthropic-lawsuit-copyright
 
-② OpenExecutive开源虚拟高管系统：八个专业代理共享企业资料、决策记忆与任务日程
-企业可自行检查并部署代理架构，但上传资料和历史决策会进入本地数据组件；开发者需承担模型调用、依赖安装与单实例运行约束；下一步要看独立评测和真实企业使用结果。
-🔗 https://github.com/SenteLabsAI/OpenExecutive
+② Tracer.AI代表微软发出版权通知，Luanti应用被Google Play下架
+Android用户暂时失去Google Play这一下载入口；未指明具体资产的通知也能先触发下架，增加开源项目的申诉与分发成本；下一步取决于Google的申诉处理结果。
+🔗 https://blog.luanti.org/2026/08/27/luanti-dmca-tracer-ai/
 
-③ PAWBench测试11个视频生成系统：没有模型能稳定复现物理行为的概率分布
-世界模型评估需从检查单条成片扩展到重复采样与分布比较；开发者需同时提高有效结果覆盖率和概率匹配度；三种干预方法的实际改善幅度仍待明确。
-🔗 https://huggingface.co/papers/2608.27345
+③ Debian表决不禁用也不背书生成式AI：贡献者仍须理解、审查和测试输出
+Debian贡献者可以继续使用生成式AI辅助工作，但必须自行承担核验成本；维护者无需因制作工具不同而采用另一套质量标准；下一步要看项目如何认定和处理不合规贡献。
+🔗 https://lwn.net/Articles/1091231/
 
-④ Amazon追加采购200万颗Nvidia GPU — 🔗 https://techcrunch.com/2026/08/26/amazon-just-tripled-its-order-of-nvidia-chips-over-surging-demand/
-⑤ 美国法院裁定五角大楼封禁Anthropic违法 — 🔗 https://www.theverge.com/ai-artificial-intelligence/985947/anthropic-supply-chain-risk-lawsuit-judge-ruling
-⑥ OpenAI将在印度ChatGPT免费版和Go版投放广告 — 🔗 https://techcrunch.com/2026/08/27/openai-to-start-showing-ads-on-chatgpts-free-and-go-tiers-in-india/
-⑦ 美国环保署拟取消部分数据中心排放许可的联邦公众参与要求 — 🔗 https://www.theverge.com/ai-artificial-intelligence/986176/data-center-pollution-epa-rule-change-air-permit
-⑧ AI云服务商Lambda举债10亿美元采购Nvidia芯片 — 🔗 https://techcrunch.com/2026/08/28/neocloud-lambda-secures-1b-in-debt-to-buy-more-chips/
+④ OpenAI回应Cursor被SpaceX收购 — 🔗 https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/
+⑤ 芯片关税方案被指可能推迟美国数据中心项目 — 🔗 https://arstechnica.com/tech-policy/2026/08/ai-industry-says-trump-plans-to-tax-chips-in-the-single-dumbest-way-imaginable/
+⑥ 诉讼指控xAI使用儿童性虐待材料训练Grok — 🔗 https://arstechnica.com/tech-policy/2026/08/elon-musks-xai-used-child-porn-to-train-grok-models-lawsuit-says/
+⑦ 研究者发现AI编码代理会安装文档引用的无人维护代码 — 🔗 https://arstechnica.com/security/2026/08/claude-codex-and-hermes-installed-unowned-code-inside-corporate-networks/
+⑧ Meta测试机器人为数据中心插线和重启服务器 — 🔗 https://www.wired.com/story/inside-metas-experiments-with-data-center-robots/
 
 📚 论文速报
 （论文内容更新于 8月29日）
