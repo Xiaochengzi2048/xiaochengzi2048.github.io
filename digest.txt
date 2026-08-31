@@ -1,38 +1,39 @@
-🗞 AI 日报 · 2026.08.30
+🗞 AI 日报 · 2026.08.31
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-08-30-music-publishers-sue-anthropic-over-allegedly-pirated.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-08-31-texas-freezes-new-funding-flock-cameras-after-spending-30.html
 
-① 索尼音乐出版与华纳Chappell起诉Anthropic：指控其盗版获取作品训练Claude
-Anthropic面临的风险不只来自模型如何使用作品，也来自训练材料的获取渠道；数万件作品及版权信息删除指控可能把潜在赔偿推至数十亿美元；下一步要看法院是否认定下载、抓取和删除版权信息的指控成立。
-🔗 https://www.theverge.com/ai-artificial-intelligence/986438/sony-music-warner-chappell-anthropic-lawsuit-copyright
+① 得州州长冻结Flock摄像头新增拨款，此前全州投入已超3000万美元
+依赖州政府资金的新增摄像头部署将直接受阻；保险保单附加费用如何使用面临进一步审视；下一步要看冻结期限、覆盖项目及既有合同是否被纳入。
+🔗 https://www.theverge.com/ai-artificial-intelligence/986541/texas-governor-abbott-flock-cameras
 
-② Tracer.AI代表微软发出版权通知，Luanti应用被Google Play下架
-Android用户暂时失去Google Play这一下载入口；未指明具体资产的通知也能先触发下架，增加开源项目的申诉与分发成本；下一步取决于Google的申诉处理结果。
-🔗 https://blog.luanti.org/2026/08/27/luanti-dmca-tracer-ai/
+② SpaceX在得州自建燃气轮机叶片铸造能力，马斯克称可把投运时间提前最多18个月
+SpaceX若掌握单晶叶片量产能力，可减少对四家供应商的依赖；数据中心可能更快获得电力，但周边社区承受的污染与健康风险也会上升；下一步要看工厂何时投产、能否稳定达到所需良率。
+🔗 https://techcrunch.com/2026/08/30/musks-faster-path-to-more-gas-turbines-comes-with-pollution-problem/
 
-③ Debian表决不禁用也不背书生成式AI：贡献者仍须理解、审查和测试输出
-Debian贡献者可以继续使用生成式AI辅助工作，但必须自行承担核验成本；维护者无需因制作工具不同而采用另一套质量标准；下一步要看项目如何认定和处理不合规贡献。
-🔗 https://lwn.net/Articles/1091231/
+③ Caterpillar把矿山自动化经验带入工地AI，并计划五年投入1亿美元培训员工
+维修人员获取程序和零件信息的方式正在改变；资深操作员的经验将直接影响系统部署；下一步要看培训能否支撑一人监管多机的新流程。
+🔗 https://techcrunch.com/2026/08/30/caterpillar-is-bringing-to-ai-deployment-what-it-learned-from-automating-mining/
 
-④ OpenAI回应Cursor被SpaceX收购 — 🔗 https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/
-⑤ 芯片关税方案被指可能推迟美国数据中心项目 — 🔗 https://arstechnica.com/tech-policy/2026/08/ai-industry-says-trump-plans-to-tax-chips-in-the-single-dumbest-way-imaginable/
-⑥ 诉讼指控xAI使用儿童性虐待材料训练Grok — 🔗 https://arstechnica.com/tech-policy/2026/08/elon-musks-xai-used-child-porn-to-train-grok-models-lawsuit-says/
-⑦ 研究者发现AI编码代理会安装文档引用的无人维护代码 — 🔗 https://arstechnica.com/security/2026/08/claude-codex-and-hermes-installed-unowned-code-inside-corporate-networks/
-⑧ Meta测试机器人为数据中心插线和重启服务器 — 🔗 https://www.wired.com/story/inside-metas-experiments-with-data-center-robots/
+④ 医学专家就自主AI能否取代医生产生分歧 — 🔗 https://www.wired.com/story/ai-has-human-doctors-asking-whats-left-for-us/
+⑤ Vijay Pande创办小型风投VZVC，用AI支撑日常运营 — 🔗 https://techcrunch.com/2026/08/29/were-not-doing-30-bets-a-year-vijay-pande-on-betting-small-after-running-4-billion-at-a16z/
+⑥ 无屏健康手环增加AI解读订阅服务 — 🔗 https://www.wired.com/story/why-the-hottest-new-wearables-want-to-be-ignored/
 
 📚 论文速报
-（论文内容更新于 8月29日）
-📄 https://ai-brief.liziran.com/zh/daily/2026-08-29-visual-reasoning-retrieval-routing.html
+（论文内容更新于 8月30日）
+📄 https://ai-brief.liziran.com/zh/daily/2026-08-30-probabilistic-world-models-urban-agents-es.html
 
-⑨ 评测 当图像和视频变成推理草稿纸：评估视觉推理系统时，应检查它是否能验证推理过程中的视觉状态，而不只看最终生成结果
-🔗 https://arxiv.org/abs/2608.26105
+⑦ 评测 同一初态重复生成，才看得见概率偏差：评测世界模型时应重复生成并检查结果频率，单个漂亮样本不足以证明可靠
+🔗 https://arxiv.org/abs/2608.27345
 
-⑩ 检索 文档检索不必为所有查询支付同一笔成本：检索管线应从静态选型转向逐查询调度
-🔗 https://arxiv.org/abs/2608.25625
+⑧ Agent 看懂眼前的路，为什么还是走不到目的地？：静态街景能力不能直接代表连续导航能力
+🔗 https://arxiv.org/abs/2608.27456
 
-⑪ 模型架构 世界模型不只要会「拍下一帧」，还得记住规则：需要长期维护状态时，可执行代码比纯视觉预测更容易约束和调试
-🔗 https://arxiv.org/abs/2608.25927
+⑨ 训练优化 从环境到成功信号，轨迹必须首尾一致：抽查成功轨迹时要验证完整因果链，而不只是最终奖励
+🔗 https://arxiv.org/abs/2608.27260
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-30-3cb941f9-8904-81bd-89fb-eb6d5fc634e3
+⑩ 推理 省显存只是表象，后训练真正争的是推理覆盖面：评估推理后训练不能只看Pass@1，Pass@K更能暴露路径覆盖差异
+🔗 https://arxiv.org/abs/2608.27351
+
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-31-3cd941f9-8904-8183-b785-e74b5fbc7ee9
 🌐 https://xiaochengzi2048.github.io/digest.txt
