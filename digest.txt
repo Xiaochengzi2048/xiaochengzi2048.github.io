@@ -1,39 +1,38 @@
-🗞 AI 日报 · 2026.08.31
+🗞 AI 日报 · 2026.09.01
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-08-31-texas-freezes-new-funding-flock-cameras-after-spending-30.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-09-01-eu-places-chatgpt-under-strictest-dsa-oversight-december.html
 
-① 得州州长冻结Flock摄像头新增拨款，此前全州投入已超3000万美元
-依赖州政府资金的新增摄像头部署将直接受阻；保险保单附加费用如何使用面临进一步审视；下一步要看冻结期限、覆盖项目及既有合同是否被纳入。
-🔗 https://www.theverge.com/ai-artificial-intelligence/986541/texas-governor-abbott-flock-cameras
+① 欧盟将ChatGPT列为「超大型在线搜索引擎」，要求其在2026年底前遵守最严格DSA规则
+OpenAI需为未成年人、心理健康和非法内容风险投入更多评估与治理资源；欧盟用户可能看到广告、推荐透明度或审核机制调整，但具体形式仍未知；下一步要看OpenAI在2026年12月底前公布哪些合规措施。
+🔗 https://www.theverge.com/ai-artificial-intelligence/986682/openai-chatgpt-eu-dsa
 
-② SpaceX在得州自建燃气轮机叶片铸造能力，马斯克称可把投运时间提前最多18个月
-SpaceX若掌握单晶叶片量产能力，可减少对四家供应商的依赖；数据中心可能更快获得电力，但周边社区承受的污染与健康风险也会上升；下一步要看工厂何时投产、能否稳定达到所需良率。
-🔗 https://techcrunch.com/2026/08/30/musks-faster-path-to-more-gas-turbines-comes-with-pollution-problem/
+② 美国收紧外国无人机和机器人准入，9月生效的关税难以消除中国制造规模优势
+美国买家采购外国无人机和机器人的成本与合规门槛上升；中国厂商可能把更多产能投向其他区域；下一步要看2027年零部件关税及美国扩产能力。
+🔗 https://techcrunch.com/2026/08/30/the-u-s-is-building-barriers-around-drones-and-robots-china-still-has-scale/
 
-③ Caterpillar把矿山自动化经验带入工地AI，并计划五年投入1亿美元培训员工
-维修人员获取程序和零件信息的方式正在改变；资深操作员的经验将直接影响系统部署；下一步要看培训能否支撑一人监管多机的新流程。
-🔗 https://techcrunch.com/2026/08/30/caterpillar-is-bringing-to-ai-deployment-what-it-learned-from-automating-mining/
+③ 理赔员提及AI的职场评价98%为负：错误分类和幻觉正在把自动化变成返工
+理赔员要承担系统错误带来的返工和客户冲突；投保人面临错误信息及错误赔付风险；下一步需观察各保险公司的实际错误率和岗位变化。
+🔗 https://www.wired.com/story/insurance-claims-adjusters-really-hate-ai/
 
-④ 医学专家就自主AI能否取代医生产生分歧 — 🔗 https://www.wired.com/story/ai-has-human-doctors-asking-whats-left-for-us/
-⑤ Vijay Pande创办小型风投VZVC，用AI支撑日常运营 — 🔗 https://techcrunch.com/2026/08/29/were-not-doing-30-bets-a-year-vijay-pande-on-betting-small-after-running-4-billion-at-a16z/
-⑥ 无屏健康手环增加AI解读订阅服务 — 🔗 https://www.wired.com/story/why-the-hottest-new-wearables-want-to-be-ignored/
+④ 英伟达向联发科投资35亿美元，推动定制AI芯片接入NVLink — 🔗 https://techcrunch.com/2026/08/31/nvidias-3-5b-mediatek-bet-reveals-its-plan-for-tackling-big-techs-ai-chip-buildout/
+⑤ 五角大楼向300万人员开放军用版ChatGPT和Grok — 🔗 https://techcrunch.com/2026/08/31/the-pentagon-now-has-its-own-version-of-chatgpt-and-grok/
+⑥ OpenAI称ChatGPT广告年化收入运行率达到10亿美元 — 🔗 https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads
+⑦ Instagram将限制未标注AI虚拟人物账号的传播 — 🔗 https://www.theverge.com/tech/986593/instagram-addresses-fake-ai-profile-slop
+⑧ 报道称企业AI硬件需求促使苹果提前更新Mac mini和Mac Studio — 🔗 https://www.macrumors.com/2026/08/30/apple-unexpected-mac-mini-and-studio-demand/
 
 📚 论文速报
-（论文内容更新于 8月30日）
-📄 https://ai-brief.liziran.com/zh/daily/2026-08-30-probabilistic-world-models-urban-agents-es.html
+（论文内容更新于 8月31日）
+📄 https://ai-brief.liziran.com/zh/daily/2026-08-31-agent-context-credit-assignment.html
 
-⑦ 评测 同一初态重复生成，才看得见概率偏差：评测世界模型时应重复生成并检查结果频率，单个漂亮样本不足以证明可靠
-🔗 https://arxiv.org/abs/2608.27345
+⑨ Agent Agent能不能学会「整理思路」，而不只是压缩历史？：把上下文管理视为可学习的动作策略，而非固定的压缩管线
+🔗 https://arxiv.org/abs/2608.28476v1
 
-⑧ Agent 看懂眼前的路，为什么还是走不到目的地？：静态街景能力不能直接代表连续导航能力
-🔗 https://arxiv.org/abs/2608.27456
+⑩ 评测 答对事实的模型，可能只看见了半只大象：单答案准确率可能高估模型的知识完整性，争议事实应按多来源版本评测
+🔗 https://arxiv.org/abs/2608.28478v1
 
-⑨ 训练优化 从环境到成功信号，轨迹必须首尾一致：抽查成功轨迹时要验证完整因果链，而不只是最终奖励
-🔗 https://arxiv.org/abs/2608.27260
+⑪ 训练优化 奖励该落到失灵按钮对应的代码：训练前端Agent时，应优先把功能反馈映射到责任代码，而不是只优化整段输出
+🔗 https://arxiv.org/abs/2608.27906v1
 
-⑩ 推理 省显存只是表象，后训练真正争的是推理覆盖面：评估推理后训练不能只看Pass@1，Pass@K更能暴露路径覆盖差异
-🔗 https://arxiv.org/abs/2608.27351
-
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-08-31-3cd941f9-8904-8183-b785-e74b5fbc7ee9
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-09-01-3ce941f9-8904-81b0-8f39-e1a220682f14
 🌐 https://xiaochengzi2048.github.io/digest.txt
