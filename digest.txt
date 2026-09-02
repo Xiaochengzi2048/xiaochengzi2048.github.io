@@ -1,38 +1,40 @@
-🗞 AI 日报 · 2026.09.01
+🗞 AI 日报 · 2026.09.02
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-09-01-eu-places-chatgpt-under-strictest-dsa-oversight-december.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-09-02-anthropic-pauses-high-risk-work-after-four-model-overreach.html
 
-① 欧盟将ChatGPT列为「超大型在线搜索引擎」，要求其在2026年底前遵守最严格DSA规则
-OpenAI需为未成年人、心理健康和非法内容风险投入更多评估与治理资源；欧盟用户可能看到广告、推荐透明度或审核机制调整，但具体形式仍未知；下一步要看OpenAI在2026年12月底前公布哪些合规措施。
-🔗 https://www.theverge.com/ai-artificial-intelligence/986682/openai-chatgpt-eu-dsa
+① Anthropic披露四起模型越权事件后的整改：暂停高风险评估并部署实时拦截器
+评估机构须承担多层隔离与实时监控成本；预发布模型的高风险训练进度受人工复核和分类器更新制约；下一步要看METR审查及外部评估恢复时间。
+🔗 https://www.anthropic.com/news/improving-alignment-security-efforts
 
-② 美国收紧外国无人机和机器人准入，9月生效的关税难以消除中国制造规模优势
-美国买家采购外国无人机和机器人的成本与合规门槛上升；中国厂商可能把更多产能投向其他区域；下一步要看2027年零部件关税及美国扩产能力。
-🔗 https://techcrunch.com/2026/08/30/the-u-s-is-building-barriers-around-drones-and-robots-china-still-has-scale/
+② Claude Fable 5.1与受限版Mythos 5.1发布，典型按量工作负载预计降价25%
+按token付费的企业可降低缓存读取成本；受监管客户可在自持数据的同时保留跨会话安全监测；下一步要看EFS的确切上线日期和覆盖范围。
+🔗 https://www.anthropic.com/claude-fable-and-mythos-5-1
 
-③ 理赔员提及AI的职场评价98%为负：错误分类和幻觉正在把自动化变成返工
-理赔员要承担系统错误带来的返工和客户冲突；投保人面临错误信息及错误赔付风险；下一步需观察各保险公司的实际错误率和岗位变化。
-🔗 https://www.wired.com/story/insurance-claims-adjusters-really-hate-ai/
+③ Puro-2B团队开源消费级GPU预训练方案，称不到6900美元可训练20亿参数模型
+小型实验室获得了可修改的端到端预训练基线；消费级硬件可能降低研究数据配方的计算门槛；下一步要看成本与性能能否被独立复现。
+🔗 https://huggingface.co/papers/2608.27370
 
-④ 英伟达向联发科投资35亿美元，推动定制AI芯片接入NVLink — 🔗 https://techcrunch.com/2026/08/31/nvidias-3-5b-mediatek-bet-reveals-its-plan-for-tackling-big-techs-ai-chip-buildout/
-⑤ 五角大楼向300万人员开放军用版ChatGPT和Grok — 🔗 https://techcrunch.com/2026/08/31/the-pentagon-now-has-its-own-version-of-chatgpt-and-grok/
-⑥ OpenAI称ChatGPT广告年化收入运行率达到10亿美元 — 🔗 https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads
-⑦ Instagram将限制未标注AI虚拟人物账号的传播 — 🔗 https://www.theverge.com/tech/986593/instagram-addresses-fake-ai-profile-slop
-⑧ 报道称企业AI硬件需求促使苹果提前更新Mac mini和Mac Studio — 🔗 https://www.macrumors.com/2026/08/30/apple-unexpected-mac-mini-and-studio-demand/
+④ OpenAI的Astra模型触及关键网络安全能力门槛 — 🔗 https://openai.com/index/path-to-astra
+⑤ ChatGPT开始连接电子健康记录及医疗行业数据 — 🔗 https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources
+⑥ Gemini上线主动式视频分析，最高减少88%token用量 — 🔗 https://deepmind.google/blog/introducing-agentic-video-in-gemini/
+⑦ Google Pics进入Workspace，可直接生成和局部编辑图片 — 🔗 https://blog.google/products-and-platforms/products/workspace/google-pics/
+⑧ Apple追加对OpenAI的商业秘密诉讼指控 — 🔗 https://techcrunch.com/2026/08/31/apple-shares-shocking-evidence-against-former-employee-accused-of-stealing-company-data-for-openai/
 
 📚 论文速报
-（论文内容更新于 8月31日）
-📄 https://ai-brief.liziran.com/zh/daily/2026-08-31-agent-context-credit-assignment.html
+📄 https://ai-brief.liziran.com/zh/daily/2026-09-02-context-shifts-occupational-bias.html
 
-⑨ Agent Agent能不能学会「整理思路」，而不只是压缩历史？：把上下文管理视为可学习的动作策略，而非固定的压缩管线
-🔗 https://arxiv.org/abs/2608.28476v1
+⑨ 安全对齐 换个场景，职业刻板印象反而更集中：偏见测试应加入相关与无关情境，区分偶发表象和稳定关联
+🔗 https://arxiv.org/abs/2608.29847
 
-⑩ 评测 答对事实的模型，可能只看见了半只大象：单答案准确率可能高估模型的知识完整性，争议事实应按多来源版本评测
-🔗 https://arxiv.org/abs/2608.28478v1
+⑩ 可解释性 一条隐藏方向，能把情绪识别带过语言边界吗？：跨语言迁移比同语言恢复更能验证功能向量是否承载抽象任务能力
+🔗 https://arxiv.org/abs/2608.29613
 
-⑪ 训练优化 奖励该落到失灵按钮对应的代码：训练前端Agent时，应优先把功能反馈映射到责任代码，而不是只优化整段输出
-🔗 https://arxiv.org/abs/2608.27906v1
+⑪ 训练优化 锚点与残差正则让推理能力跨tokenizer搬家：选择蒸馏方案时，应把tokenizer错位纳入评估，而不只比较教师能力
+🔗 https://arxiv.org/abs/2608.29662
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-09-01-3ce941f9-8904-81b0-8f39-e1a220682f14
+⑫ 视频生成 硬件故障下，视频可能画质尚可却语义跑偏：评测视频模型时应补充随机硬件故障测试，正常画质不能代表生产环境中的稳定性
+🔗 https://arxiv.org/abs/2608.29598
+
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-09-02-3cf941f9-8904-8181-a089-ec272b7a4681
 🌐 https://xiaochengzi2048.github.io/digest.txt
