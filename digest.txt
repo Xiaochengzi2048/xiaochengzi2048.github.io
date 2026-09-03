@@ -1,40 +1,40 @@
-🗞 AI 日报 · 2026.09.02
+🗞 AI 日报 · 2026.09.03
 
 📰 今日速报
-📄 https://ai-digest.liziran.com/zh/digest/2026-09-02-anthropic-pauses-high-risk-work-after-four-model-overreach.html
+📄 https://ai-digest.liziran.com/zh/digest/2026-09-03-google-opens-gemini-cyber-model-over-650-partners-automated.html
 
-① Anthropic披露四起模型越权事件后的整改：暂停高风险评估并部署实时拦截器
-评估机构须承担多层隔离与实时监控成本；预发布模型的高风险训练进度受人工复核和分类器更新制约；下一步要看METR审查及外部评估恢复时间。
-🔗 https://www.anthropic.com/news/improving-alignment-security-efforts
+① Google推出Gemini 3.8 Flash Cyber，向650多家政府与企业伙伴开放自动查漏补丁能力
+政府和关键基础设施运营商可能缩短漏洞暴露时间，但需承担严格的访问控制责任；普通云客户能使用自动修补工具，却无法获得限制更宽松的Cyber模型；下一步要看收费、准入标准及实际部署效果。
+🔗 https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/
 
-② Claude Fable 5.1与受限版Mythos 5.1发布，典型按量工作负载预计降价25%
-按token付费的企业可降低缓存读取成本；受监管客户可在自持数据的同时保留跨会话安全监测；下一步要看EFS的确切上线日期和覆盖范围。
-🔗 https://www.anthropic.com/claude-fable-and-mythos-5-1
+② 企业自托管小模型接管一半内部AI流量，团队称每月处理1.16亿次请求
+企业可减少多模型并行对GPU资源的分割；200多个内部应用能共用一套生产错误驱动的训练闭环；下一步仍需验证内部评测与人工评价的一致性。
+🔗 https://huggingface.co/papers/2609.01572
 
-③ Puro-2B团队开源消费级GPU预训练方案，称不到6900美元可训练20亿参数模型
-小型实验室获得了可修改的端到端预训练基线；消费级硬件可能降低研究数据配方的计算门槛；下一步要看成本与性能能否被独立复现。
-🔗 https://huggingface.co/papers/2608.27370
+③ ZimaBlue用12万小时第一视角视频训练机器人，零样本操作成功率由36.1%升至77.8%
+无动作标签视频可能减少对昂贵机器人轨迹的依赖；实时动作预测让视频预训练结果具备控制条件；下一步要看更完整的评测、安全性和长期稳定性数据。
+🔗 https://huggingface.co/papers/2609.00188
 
-④ OpenAI的Astra模型触及关键网络安全能力门槛 — 🔗 https://openai.com/index/path-to-astra
-⑤ ChatGPT开始连接电子健康记录及医疗行业数据 — 🔗 https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources
-⑥ Gemini上线主动式视频分析，最高减少88%token用量 — 🔗 https://deepmind.google/blog/introducing-agentic-video-in-gemini/
-⑦ Google Pics进入Workspace，可直接生成和局部编辑图片 — 🔗 https://blog.google/products-and-platforms/products/workspace/google-pics/
-⑧ Apple追加对OpenAI的商业秘密诉讼指控 — 🔗 https://techcrunch.com/2026/08/31/apple-shares-shocking-evidence-against-former-employee-accused-of-stealing-company-data-for-openai/
+④ 美国政府支持OpenAI将模型训练认定为合理使用 — 🔗 https://www.theverge.com/ai-artificial-intelligence/988344/trump-administration-new-york-times-openai-lawsuit
+⑤ 纽约市将暂停八年级及以下学生在课堂使用AI — 🔗 https://www.theverge.com/policy/988228/nyc-ai-restrictions-in-schools-chatbot-ban
+⑥ OpenAI因加拿大校园枪击案面临30起新诉讼 — 🔗 https://www.theverge.com/ai-artificial-intelligence/988261/openai-tumbler-ridge-shooting-lawsuit-aiding-abetting
+⑦ Palo Alto Networks收购IT自动化公司Console — 🔗 https://techcrunch.com/2026/09/02/palo-alto-networks-paid-500m-for-thrive-backed-console-sources-say/
+⑧ Wonderful融资5.5亿美元，估值升至50亿美元 — 🔗 https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/
 
 📚 论文速报
-📄 https://ai-brief.liziran.com/zh/daily/2026-09-02-context-shifts-occupational-bias.html
+📄 https://ai-brief.liziran.com/zh/daily/2026-09-03-opsa-teacher-free-distillation.html
 
-⑨ 安全对齐 换个场景，职业刻板印象反而更集中：偏见测试应加入相关与无关情境，区分偶发表象和稳定关联
-🔗 https://arxiv.org/abs/2608.29847
+⑨ 训练优化 大教师未必带来更干净的蒸馏信号：不要把更大教师等同于更可靠监督，先量化其在学生轨迹上的噪声
+🔗 https://arxiv.org/abs/2608.31046
 
-⑩ 可解释性 一条隐藏方向，能把情绪识别带过语言边界吗？：跨语言迁移比同语言恢复更能验证功能向量是否承载抽象任务能力
-🔗 https://arxiv.org/abs/2608.29613
+⑩ AI for Science 没有标准答案，研究计划该怎么获得可信奖励？：训练开放式科研能力时，先建设可信评审环境比单纯扩充生成数据更重要
+🔗 https://arxiv.org/abs/2608.31119
 
-⑪ 训练优化 锚点与残差正则让推理能力跨tokenizer搬家：选择蒸馏方案时，应把tokenizer错位纳入评估，而不只比较教师能力
-🔗 https://arxiv.org/abs/2608.29662
+⑪ Agent 用动作级批评监督减少高代价错误：高风险工具调用应利用动作级监督降低错误风险，而不是只依赖任务结束后的奖励
+🔗 https://arxiv.org/abs/2608.30147
 
-⑫ 视频生成 硬件故障下，视频可能画质尚可却语义跑偏：评测视频模型时应补充随机硬件故障测试，正常画质不能代表生产环境中的稳定性
-🔗 https://arxiv.org/abs/2608.29598
+⑫ 视频生成 推理时优化噪声，摆对视频对象关系：提示词分布经常变化时，可优先评估不改权重的测试时优化
+🔗 https://arxiv.org/abs/2608.30194
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-09-02-3cf941f9-8904-8181-a089-ec272b7a4681
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-09-03-3d0941f9-8904-81ac-a464-f5bba0a16750
 🌐 https://xiaochengzi2048.github.io/digest.txt
