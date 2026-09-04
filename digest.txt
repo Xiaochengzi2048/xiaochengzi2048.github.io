@@ -1,6 +1,7 @@
-🗞 AI 日报 · 2026.09.03
+🗞 AI 日报 · 2026.09.04
 
 📰 今日速报
+（速报内容更新于 9月3日）
 📄 https://ai-digest.liziran.com/zh/digest/2026-09-03-google-opens-gemini-cyber-model-over-650-partners-automated.html
 
 ① Google推出Gemini 3.8 Flash Cyber，向650多家政府与企业伙伴开放自动查漏补丁能力
@@ -22,19 +23,19 @@
 ⑧ Wonderful融资5.5亿美元，估值升至50亿美元 — 🔗 https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/
 
 📚 论文速报
-📄 https://ai-brief.liziran.com/zh/daily/2026-09-03-opsa-teacher-free-distillation.html
+📄 https://ai-brief.liziran.com/zh/daily/2026-09-04-stable-agent-protocols-cheaper-loops.html
 
-⑨ 训练优化 大教师未必带来更干净的蒸馏信号：不要把更大教师等同于更可靠监督，先量化其在学生轨迹上的噪声
-🔗 https://arxiv.org/abs/2608.31046
+⑨ Agent提示词越优化，系统反而越容易崩？：不要让提示词优化器接触路由、格式和终止信号等执行契约
+🔗 https://arxiv.org/abs/2609.00621
 
-⑩ AI for Science 没有标准答案，研究计划该怎么获得可信奖励？：训练开放式科研能力时，先建设可信评审环境比单纯扩充生成数据更重要
-🔗 https://arxiv.org/abs/2608.31119
+⑩ 视频生成：会听指令的视频生成器，正在变成世界运行时：做交互视频的团队可以优先验证语言控制层，而非从零开发专用动作模块
+🔗 https://arxiv.org/abs/2609.01560
 
-⑪ Agent 用动作级批评监督减少高代价错误：高风险工具调用应利用动作级监督降低错误风险，而不是只依赖任务结束后的奖励
-🔗 https://arxiv.org/abs/2608.30147
+⑪ 机器人：无人机飞得对，却可能败在一句「我到了」：评估无人机智能体时，应把终止判断和协议遵循纳入核心指标
+🔗 https://arxiv.org/abs/2609.01404v1
 
-⑫ 视频生成 推理时优化噪声，摆对视频对象关系：提示词分布经常变化时，可优先评估不改权重的测试时优化
-🔗 https://arxiv.org/abs/2608.30194
+⑫ 评测：会演学生，不等于真的像学生：评估学生模拟器时，先测能力与错误分布是否校准，别被流畅的角色扮演迷惑
+🔗 https://arxiv.org/abs/2609.01591
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-09-03-3d0941f9-8904-81ac-a464-f5bba0a16750
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-09-04-3d1941f9-8904-817e-b4f9-e9cde0b3cc10
 🌐 https://xiaochengzi2048.github.io/digest.txt
