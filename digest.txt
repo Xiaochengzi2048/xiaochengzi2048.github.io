@@ -1,41 +1,41 @@
-🗞 AI 日报 · 2026.09.04
+🗞 AI 日报 · 2026.09.05
 
 📰 今日速报
-（速报内容更新于 9月3日）
-📄 https://ai-digest.liziran.com/zh/digest/2026-09-03-google-opens-gemini-cyber-model-over-650-partners-automated.html
+（速报内容更新于 9月4日）
+📄 https://ai-digest.liziran.com/zh/digest/2026-09-04-nvidia-agrees-buy-hugging-face-129303-billion-promises.html
 
-① Google推出Gemini 3.8 Flash Cyber，向650多家政府与企业伙伴开放自动查漏补丁能力
-政府和关键基础设施运营商可能缩短漏洞暴露时间，但需承担严格的访问控制责任；普通云客户能使用自动修补工具，却无法获得限制更宽松的Cyber模型；下一步要看收费、准入标准及实际部署效果。
-🔗 https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/
+① 英伟达同意以129.303亿美元收购Hugging Face，承诺平台不绑定其算力
+逾1800万用户和20万家公司暂获继续自由选择模型、云与硬件的承诺；竞争对手面临的平台准入风险取决于承诺能否落实；下一步需关注监管条件、完成时间及治理约束。
+🔗 https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/
 
-② 企业自托管小模型接管一半内部AI流量，团队称每月处理1.16亿次请求
-企业可减少多模型并行对GPU资源的分割；200多个内部应用能共用一套生产错误驱动的训练闭环；下一步仍需验证内部评测与人工评价的一致性。
-🔗 https://huggingface.co/papers/2609.01572
+② GPT-6 Astra开始分阶段上线，关键网络安全能力先向获批机构开放
+企业须经过受限计划才能使用最高风险网络安全能力；普通付费用户和开发者还需等待数日；下一步要看能力限制细则及大规模真实使用结果。
+🔗 https://www.cnbc.com/2026/09/03/open-ai-astra-gpt-6-cyber.html
 
-③ ZimaBlue用12万小时第一视角视频训练机器人，零样本操作成功率由36.1%升至77.8%
-无动作标签视频可能减少对昂贵机器人轨迹的依赖；实时动作预测让视频预训练结果具备控制条件；下一步要看更完整的评测、安全性和长期稳定性数据。
-🔗 https://huggingface.co/papers/2609.00188
+③ 760次软件推荐测试发现，Perplexity大量引用低排名网站及批量生成购买指南
+软件买家可能把批量营销内容误当成独立证据；厂商可通过大规模内容生产进入推荐链；下一步需检验引用是否真正影响排名和购买决定。
+🔗 https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/
 
-④ 美国政府支持OpenAI将模型训练认定为合理使用 — 🔗 https://www.theverge.com/ai-artificial-intelligence/988344/trump-administration-new-york-times-openai-lawsuit
-⑤ 纽约市将暂停八年级及以下学生在课堂使用AI — 🔗 https://www.theverge.com/policy/988228/nyc-ai-restrictions-in-schools-chatbot-ban
-⑥ OpenAI因加拿大校园枪击案面临30起新诉讼 — 🔗 https://www.theverge.com/ai-artificial-intelligence/988261/openai-tumbler-ridge-shooting-lawsuit-aiding-abetting
-⑦ Palo Alto Networks收购IT自动化公司Console — 🔗 https://techcrunch.com/2026/09/02/palo-alto-networks-paid-500m-for-thrive-backed-console-sources-say/
-⑧ Wonderful融资5.5亿美元，估值升至50亿美元 — 🔗 https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/
+④ Thinking Machines洽谈10亿美元融资，估值至少400亿美元 — 🔗 https://techcrunch.com/2026/09/03/accel-reportedly-in-talks-to-lead-1b-round-for-thinking-machines-at-40b-valuation/
+⑤ Google为Gmail、Docs和Keep推出实时语音助手 — 🔗 https://www.theverge.com/tech/989508/google-gmail-docs-keep-live-voice-modes-gemini
+⑥ Nvidia用PAIR整合闲置电脑运行本地AI — 🔗 https://www.theverge.com/ai-artificial-intelligence/989435/nvidia-pair-personal-ai-router-home-local-llm-compute-tool-rtx-macbook
+⑦ Meta以约95%折扣换取Muse Spark使用数据 — 🔗 https://techcrunch.com/2026/09/03/meta-is-paying-to-peek-at-how-you-use-their-latest-ai-model/
+⑧ Google推出每小时更新的WeatherNext 3天气模型 — 🔗 https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/
 
 📚 论文速报
-📄 https://ai-brief.liziran.com/zh/daily/2026-09-04-stable-agent-protocols-cheaper-loops.html
+📄 https://ai-brief.liziran.com/zh/daily/2026-09-05-production-traffic-video-pretraining-distillation.html
 
-⑨ Agent提示词越优化，系统反而越容易崩？：不要让提示词优化器接触路由、格式和终止信号等执行契约
-🔗 https://arxiv.org/abs/2609.00621
+⑨ 训练优化 与其追逐新模型，不如先让旧模型真正退役：先按生产流量分层评测，再决定补哪些能力，比追逐最新基座更有利于收缩模型舰队
+🔗 https://arxiv.org/abs/2609.01572
 
-⑩ 视频生成：会听指令的视频生成器，正在变成世界运行时：做交互视频的团队可以优先验证语言控制层，而非从零开发专用动作模块
-🔗 https://arxiv.org/abs/2609.01560
+⑩ 机器人 机器人的数据瓶颈，可能不在动作标注：机器人团队可以先扩展第一视角视频规模，不必把数据预算全部押在动作采集上
+🔗 https://arxiv.org/abs/2609.00188
 
-⑪ 机器人：无人机飞得对，却可能败在一句「我到了」：评估无人机智能体时，应把终止判断和协议遵循纳入核心指标
-🔗 https://arxiv.org/abs/2609.01404v1
+⑪ 多模态 四项协同设计支撑像素文本泛化：训练像素文本编码器时，应同时覆盖分辨率、真实图像、版式和多语言，单补一项很难解决泛化问题
+🔗 https://arxiv.org/abs/2609.01147
 
-⑫ 评测：会演学生，不等于真的像学生：评估学生模拟器时，先测能力与错误分布是否校准，别被流畅的角色扮演迷惑
-🔗 https://arxiv.org/abs/2609.01591
+⑫ 训练优化 同一种蒸馏，为何会教会推理却拖慢记忆？：不要把预训练阶段的蒸馏收益直接外推到中期训练
+🔗 https://arxiv.org/abs/2609.01532
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-09-04-3d1941f9-8904-817e-b4f9-e9cde0b3cc10
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-09-05-3d2941f9-8904-8160-a7e8-eca94f61d8c3
 🌐 https://xiaochengzi2048.github.io/digest.txt
