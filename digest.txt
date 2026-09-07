@@ -1,4 +1,4 @@
-🗞 AI 日报 · 2026.09.06
+🗞 AI 日报 · 2026.09.07
 
 📰 今日速报
 （速报内容更新于 9月5日）
@@ -23,20 +23,20 @@ ChatGPT、Claude和Grok用户面对的是三条不同的故障线索；Anthropic
 ⑧ Corporate America is getting hooked on open-source AI — 🔗 https://www.nytimes.com/2026/09/04/technology/open-source-ai-anthropic-openai.html
 
 📚 论文速报
-（论文内容更新于 9月5日）
-📄 https://ai-brief.liziran.com/zh/daily/2026-09-05-production-traffic-video-pretraining-distillation.html
+（论文内容更新于 9月6日）
+📄 https://ai-brief.liziran.com/zh/daily/2026-09-06-repository-skills-self-managed-context.html
 
-⑨ 训练优化 与其追逐新模型，不如先让旧模型真正退役：先按生产流量分层评测，再决定补哪些能力，比追逐最新基座更有利于收缩模型舰队
-🔗 https://arxiv.org/abs/2609.01572
+⑨ Agent｜代码仓库读完就丢？更值钱的是把经验炼成技能：将仓库经验提炼成技能，有望减少Agent反复摸索环境、参数和执行流程的成本
+🔗 https://arxiv.org/abs/2609.02749
 
-⑩ 机器人 机器人的数据瓶颈，可能不在动作标注：机器人团队可以先扩展第一视角视频规模，不必把数据预算全部押在动作采集上
-🔗 https://arxiv.org/abs/2609.00188
+⑩ 推理加速｜模型开始自己决定该看哪里了：长上下文模型可以兼任自己的检索控制器，减少对外部逐步扫描的依赖
+🔗 https://arxiv.org/abs/2609.02737
 
-⑪ 多模态 四项协同设计支撑像素文本泛化：训练像素文本编码器时，应同时覆盖分辨率、真实图像、版式和多语言，单补一项很难解决泛化问题
-🔗 https://arxiv.org/abs/2609.01147
+⑪ 评测｜轨迹未完，EarlyEval已开始判定成败：提前停止能与缩减评测集叠加，进一步压低Agent评测成本
+🔗 https://arxiv.org/abs/2609.02783
 
-⑫ 训练优化 同一种蒸馏，为何会教会推理却拖慢记忆？：不要把预训练阶段的蒸馏收益直接外推到中期训练
-🔗 https://arxiv.org/abs/2609.01532
+⑫ 安全对齐｜剪掉权重，也会改变模型对不同人设的态度：剪枝并非价值中立，删权重也可能重新分配人设线索对输出的影响
+🔗 https://arxiv.org/abs/2609.02496
 
-📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-09-06-3d3941f9-8904-81e1-8edd-e26fd6238111
+📓 Notion: https://www.notion.so/AI-Builders-Digest-2026-09-07-3d4941f9-8904-8150-8e09-c3e80ffe7922
 🌐 https://xiaochengzi2048.github.io/digest.txt
